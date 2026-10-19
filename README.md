@@ -1,6 +1,6 @@
 # What Do Counterexamples Prove? — Artifacts
 
-Artifacts of the paper *"What Do Counterexamples Prove? Certified, Data-Grounded Witnesses for Auditing Text-to-SQL Execution Accuracy"* (Hongsheng Wang, Fei Wu), submitted to PVLDB Vol. 20 (2027).
+Artifacts of the paper *"What Do Counterexamples Prove? Certified, Data-Grounded Witnesses for Auditing Text-to-SQL Execution Accuracy"* (Hongsheng Wang, Dazhen Deng), submitted to the journal *Information Systems* (Elsevier).
 
 The repository contains:
 - **Code:** CaliberGraph and CaliberGraph-R, the independent certifier, the data-profile miner and checker, and the baseline harnesses.
