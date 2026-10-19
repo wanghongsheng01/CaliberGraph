@@ -184,18 +184,19 @@ M['hvThreePFour'] = f"{hy['H-R3-4']['p_two_sided']:.4f}"
 M['hvThreeKappaBCbin'] = f2(h3['sensitivity_without_A']['kappa2_B_C'])
 M['hvThreeImpAI'] = h3['labels']['ai'].get('implausible_data', 0)
 M['hvThreeImpA'], M['hvThreeImpB'], M['hvThreeImpC'] = (h3['labels'][w].get('implausible_data', 0) for w in 'ABC')
+_ps = json.load(open(os.path.join(ROOT, 'results', 'test_r', 'icde_posthoc.json')))['per_system']
+_cnt = {'Onef': [x['count_1f'] for x in _ps], 'R': [x['count_R'] for x in _ps]}  # unrounded count-based points
 for st, tier in ((1, 'Onef'), (2, 'R')):
     sh = h3['M_R3_4'][f'stage{st}']
-    hm, am = sh['majority']['pred_error'], sh['ai']['pred_error']
+    hm, asame = sh['majority']['pred_error'], sh['ai_same_items']['pred_error']
+    n_all = h3['n_stage'][str(st)] if str(st) in h3['n_stage'] else h3['n_stage'][st]
     M[f'humThreeErrPct{tier}'] = f"{100 * hm['share']:.0f}"
     M[f'humThreeErrPct{tier}Lo'], M[f'humThreeErrPct{tier}Hi'] = (f"{100 * x:.0f}" for x in hm['ci'])
-    M[f'aiThreeErrPct{tier}'] = f"{100 * am['share']:.0f}"
-    M[f'aiThreeErrPct{tier}Lo'], M[f'aiThreeErrPct{tier}Hi'] = (f"{100 * x:.0f}" for x in am['ci'])
-    for nm, share in (('ptsHumThree', hm['share']), ('ptsAIThree', am['share'])):
-        M[f'{nm}{tier}Min'] = f"{_v(f'ptsCount{tier}Min') * share:.1f}"
-        M[f'{nm}{tier}Max'] = f"{_v(f'ptsCount{tier}Max') * share:.1f}"
-    M[f'ptsHumThree{tier}MinLo'] = f"{_v(f'ptsCount{tier}Min') * hm['ci'][0]:.1f}"
-    M[f'ptsHumThree{tier}MaxHi'] = f"{_v(f'ptsCount{tier}Max') * hm['ci'][1]:.1f}"
+    M[f'humThreeErrAllPct{tier}'] = f"{100 * hm['k'] / n_all:.0f}"  # items without a majority counted as non-errors
+    M[f'aiThreeErrPct{tier}'] = f"{100 * asame['share']:.0f}"  # AI on the same (majority) items
+    lo, hi = min(_cnt[tier]), max(_cnt[tier])
+    M[f'ptsHumThree{tier}Min'], M[f'ptsHumThree{tier}Max'] = f"{lo * hm['share']:.1f}", f"{hi * hm['share']:.1f}"
+    M[f'ptsHumThree{tier}MinLo'], M[f'ptsHumThree{tier}MaxHi'] = f"{lo * hm['ci'][0]:.1f}", f"{hi * hm['ci'][1]:.1f}"
 # SpotIt re-run (docs/en/17d)
 sg = json.load(open(os.path.join(R, 'spotit', 's3g_spotit.json')))
 rr = sg['counts']['SpotIt (re-run)']
@@ -215,6 +216,8 @@ dt = sg['describe']['test']
 M['srKilledPct'] = pct(dt['killed'], dt['n'])
 M['srErr'] = dt['verdicts'].get('error', 0)
 M['srMedCE'] = f"{dt['time_to_ce']['median']:.1f}"
+M['srLossPct'] = f"{100 - 100 * ag['test']['released_ce_found_again'][0] / ag['test']['released_ce_found_again'][1]:.0f}"
+M['srRecased'] = sg['counts']['SpotIt (re-run, re-cased, diagnostic)']['L0']
 fam = json.load(open(os.path.join(R, 's3f_family.json')))
 
 

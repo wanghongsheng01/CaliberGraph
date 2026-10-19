@@ -227,3 +227,9 @@ No Spider dev EX label, witness or count had been seen when these were written.
   - B: a data analyst for Amazon e-commerce.
   - C: a social-media data analyst.
 - **Use in the paper.** The paper describes them as "unpaid volunteers, data analysts in e-commerce and social media".
+
+## E17 (2026-10-19 16:40) Corrections after the third internal review
+- **AI error rate in the error-weighted EX comparison.** In RQ4, the AI's round-3 prediction-error rate is now computed on the same items as the human majority: 15% and 16% at the two tiers. The previous version took it over all 75 items per stage (13% and 15%).
+- **Human error rate.** The human-majority rate is reported as before. The paper now also reports it with items that have no majority counted as non-errors: 15% and 24%.
+- **Count-based EX points.** The interval endpoints are now computed from the unrounded per-system points; the upper end changes from 5.0 to 5.1.
+- **Outcomes.** No pre-registered outcome changes.
