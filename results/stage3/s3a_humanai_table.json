@@ -1,0 +1,65 @@
+{
+ "r1s1": {
+  "n": 30,
+  "ai": {
+   "gold_wrong": 8,
+   "implausible_data": 14,
+   "ambiguous": 8
+  },
+  "human": {
+   "gold_wrong": 18,
+   "disagree": 3,
+   "pred_wrong": 8,
+   "ambiguous": 1
+  }
+ },
+ "r1s2": {
+  "n": 30,
+  "ai": {
+   "pred_wrong": 4,
+   "ambiguous": 12,
+   "implausible_data": 7,
+   "gold_wrong": 7
+  },
+  "human": {
+   "pred_wrong": 11,
+   "ambiguous": 1,
+   "gold_wrong": 11,
+   "disagree": 6,
+   "both_wrong": 1
+  }
+ },
+ "r2s1": {
+  "n": 30,
+  "ai": {
+   "implausible_data": 16,
+   "ambiguous": 6,
+   "gold_wrong": 4,
+   "pred_wrong": 3,
+   "both_wrong": 1
+  },
+  "human": {
+   "disagree": 5,
+   "pred_wrong": 4,
+   "implausible_data": 20,
+   "gold_wrong": 1
+  }
+ },
+ "r2s2": {
+  "n": 30,
+  "ai": {
+   "ambiguous": 12,
+   "gold_wrong": 3,
+   "implausible_data": 11,
+   "pred_wrong": 3,
+   "both_wrong": 1
+  },
+  "human": {
+   "disagree": 4,
+   "pred_wrong": 14,
+   "ambiguous": 1,
+   "implausible_data": 9,
+   "gold_wrong": 2
+  }
+ }
+}
