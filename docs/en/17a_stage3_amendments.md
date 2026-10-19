@@ -233,3 +233,13 @@ No Spider dev EX label, witness or count had been seen when these were written.
 - **Human error rate.** The human-majority rate is reported as before. The paper now also reports it with items that have no majority counted as non-errors: 15% and 24%.
 - **Count-based EX points.** The interval endpoints are now computed from the unrounded per-system points; the upper end changes from 5.0 to 5.1.
 - **Outcomes.** No pre-registered outcome changes.
+
+## E18 (2026-10-19 16:15) Round 3: authors' account after checking with the annotators
+- **Statement.** The authors checked with the three annotators and report the following:
+  - all three started at 11:00 and finished at 14:00 on 2026-10-19;
+  - the annotation was done by hand.
+- **Comparison with the sheets.** This account differs from the times recorded on all three sheets: A 14:30–16:15, B 10:00–14:42, C 11:30–13:59.
+- **Released files.** The sheets are released unchanged; neither record is corrected.
+- **Implied pace.** Three hours for 150 items is about 1.2 minutes per item, against the estimate of seven to nine hours.
+- **What the account does not address.** It says nothing about the templated reasons on sheet A or the editor changes on sheet B. Both remain reported.
+- **Use in the paper.** The paper reports both the recorded times and the authors' account.
