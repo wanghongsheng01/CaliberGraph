@@ -1,0 +1,202 @@
+[
+ {
+  "idx": 75,
+  "pair_id": "slm:983",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred reads per-race constructorResults while gold reads standings; they differ only because the witness gives Ferrari standings but no constructorResults rows.",
+  "implausible_fact": "Constructor with standings rows but no race results"
+ },
+ {
+  "idx": 76,
+  "pair_id": "gsr:1142",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two League rows share the name Italy Serie A, so the scalar subquery picks the id with no matches and returns 0.",
+  "implausible_fact": "Duplicate league name with two different ids"
+ },
+ {
+  "idx": 77,
+  "pair_id": "rsl:396",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Evidence says availability = paper (gold exact match) but a card listed as arena,paper is also available on paper (pred LIKE).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 78,
+  "pair_id": "rsl:926",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No Hamilton rows in witness; gold returns an empty set, pred returns a single NULL row from the aggregate; both defensible empty-set handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 79,
+  "pair_id": "csc-32b:1367",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "All colleges have exactly one member so the result is a pure tie decided by arbitrary ordering (gold also groups by major rather than college).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 80,
+  "pair_id": "chess:1075",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only potential-61 row has NULL balance; gold returns that player via ORDER BY, pred returns nothing since MAX is NULL; NULL treatment.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 81,
+  "pair_id": "csc-32b:1013",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Gold uses results.fastestLapTime (all NULL here) while pred uses lapTimes.time; both are defensible sources for lap record and only the witness separates them.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 82,
+  "pair_id": "rsl:1079",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two players tie for tallest; gold LIMIT 1 returns one, pred returns both; tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 83,
+  "pair_id": "rsl:173",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Gold sums orders per purpose (in total) while pred matches a single order of 3539; witness has a second LEASING order making the sum differ.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 84,
+  "pair_id": "omni-32-majority:867",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The only driver in the race has NULL fastest lap speed; pred returns him as the fastest-lap setter, while gold correctly returns nothing.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 85,
+  "pair_id": "alpha:556",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness has two users with identical DisplayName and all attributes; in the real data display names of users with Views>200 are unique, so gold distinct-name division gives 4 vs per-user 2.",
+  "implausible_fact": "Two distinct users with identical DisplayName"
+ },
+ {
+  "idx": 86,
+  "pair_id": "chess:818",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness lookup tables have alignment id 2 = N/A and gender id 2 = Male, contradicting the evidence ids (Bad/Female) so name-based gold and id-based pred diverge.",
+  "implausible_fact": "Lookup ids carry wrong labels (alignment 2 = N/A, gender 2 = Male)"
+ },
+ {
+  "idx": 87,
+  "pair_id": "slm:1025",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two leagues tie at 2 total goals, so the winner depends on arbitrary tie ordering.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 88,
+  "pair_id": "omni-32-majority:926",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No Hamilton rows in witness; gold empty set vs pred NULL aggregate row; empty-set handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 89,
+  "pair_id": "slm:1055",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Several players tie at the highest overall rating 80 and the two queries pick different ones.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 90,
+  "pair_id": "alpha:1194",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred omits the CRP and LDH conditions from the question, so it returns a patient who does not satisfy them.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 91,
+  "pair_id": "rsl:668",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two users each have one badge, a tie; the queries differ only in arbitrary tie ordering.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 92,
+  "pair_id": "csc-32b:1109",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Same team_api_id appears with different or NULL team_fifa_api_id values in Team_Attributes, which never happens in reality, and pred filters on the fifa id.",
+  "implausible_fact": "Same team has inconsistent/NULL fifa ids across attribute rows"
+ },
+ {
+  "idx": 93,
+  "pair_id": "gsr:668",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Users have NULL DisplayName and a badge has NULL Name; this makes gold merge users and pred count fewer badges, producing different winners.",
+  "implausible_fact": "NULL DisplayName and NULL badge name"
+ },
+ {
+  "idx": 94,
+  "pair_id": "omni-32-majority:674",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Four users tie at the maximum reputation; gold returns all, pred only one; tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 95,
+  "pair_id": "csc-32b:73",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "School with EdOpsName Youth Authority School has SOCType Preschool in the witness, whereas in reality it is Youth Authority Facilities, so gold SOCType filter fails.",
+  "implausible_fact": "Youth Authority School with SOCType Preschool"
+ },
+ {
+  "idx": 96,
+  "pair_id": "gsr:303",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Molecule TR006 does not exist; gold gives empty set, pred gives 0 and NULL from the ungrouped aggregate.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 97,
+  "pair_id": "slm:91",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Single district with NULL 1995 rate; comparison with NULL falls to different ELSE branches in each query, so neither answer is meaningful.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 98,
+  "pair_id": "omni-32-majority:24",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Percent eligible free column (0.25) is inconsistent with Free Meal Count/Enrollment (16/427), so evidence-based gold and column-based pred diverge.",
+  "implausible_fact": "Percent column inconsistent with count/enrollment"
+ },
+ {
+  "idx": 99,
+  "pair_id": "gsr:173",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Gold sums amounts per purpose while pred matches a single order of 3539; the extra POJISTNE order changes the sum.",
+  "implausible_fact": null
+ }
+]

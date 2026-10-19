@@ -1,0 +1,10280 @@
+[
+ {
+  "pair_id": "gsr:477",
+  "db_id": "card_games",
+  "labels": [
+   "duplicates_distinct",
+   "filter_predicate",
+   "grouping",
+   "join_path"
+  ],
+  "gold": "SELECT T1.artist FROM cards AS T1 INNER JOIN sets AS T2 ON T2.code = T1.setCode WHERE (T2.name = 'Coldsnap' AND T1.artist = 'Chippy') OR (T2.name = 'Coldsnap' AND T1.artist = 'Aaron Miller') OR (T2.name = 'Coldsnap' AND T1.artist = 'Jeremy Jarvis') GROUP BY T1.artist",
+  "pred": "SELECT DISTINCT artist FROM cards WHERE artist IN ('Jeremy Jarvis', 'Aaron Miller', 'Chippy') AND setCode = (SELECT code FROM sets WHERE name = 'Coldsnap');",
+  "gold_rows": [
+   [
+    "Jeremy Jarvis"
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "cards": [
+    [
+     1005,
+     "AARON MILLER",
+     "Junun Efreet",
+     "mtgo",
+     "black",
+     null,
+     "A",
+     null,
+     null,
+     "a",
+     null,
+     "b",
+     null,
+     null,
+     null,
+     "Mothra, Supersonic Queen",
+     null,
+     null,
+     "1997",
+     "0",
+     0,
+     1,
+     5,
+     100,
+     0,
+     10,
+     5,
+     3,
+     10,
+     1,
+     100,
+     0,
+     -1,
+     1,
+     0,
+     null,
+     "transform",
+     "{'brawl': True, 'commander': False, 'oathbreaker': True}",
+     "5",
+     "A",
+     null,
+     null,
+     null,
+     "A",
+     null,
+     "A",
+     "y2",
+     null,
+     "Coldsnap",
+     null,
+     null,
+     null,
+     null,
+     "c",
+     "3",
+     null,
+     "x1",
+     null,
+     "mythic",
+     null,
+     null,
+     null,
+     "x1",
+     "a",
+     null,
+     "Snow",
+     null,
+     "c",
+     "b",
+     "A",
+     "x1",
+     "x1",
+     null,
+     null
+    ],
+    [
+     1021,
+     "Jeremy Jarvis",
+     "b",
+     "shandalar",
+     "gold",
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     "Destoroyah, Perfect Lifeform",
+     "x1",
+     "y2",
+     "2015",
+     "1",
+     2,
+     1,
+     3,
+     100,
+     5,
+     3,
+     -1,
+     2,
+     0,
+     3,
+     100,
+     -1,
+     -1,
+     1,
+     2,
+     null,
+     "transform",
+     "{'brawl': False, 'commander': True, 'oathbreaker': True}",
+     null,
+     "A",
+     null,
+     "a",
+     "A",
+     null,
+     "y2",
+     "y2",
+     null,
+     null,
+     "A",
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     "1",
+     null,
+     null,
+     "c",
+     "common",
+     null,
+     "A",
+     null,
+     "A",
+     null,
+     null,
+     "Basic,Snow",
+     null,
+     null,
+     "a",
+     null,
+     null,
+     "c",
+     "a",
+     "y2"
+    ],
+    [
+     1231,
+     "Jeremy Jarvis",
+     "Juzam Djinn",
+     "paper",
+     "gold",
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     "Godzilla, King of the Monsters",
+     "x1",
+     "y2",
+     "a",
+     null,
+     2,
+     -1,
+     10,
+     100,
+     5,
+     3,
+     -1,
+     -1,
+     0,
+     3,
+     100,
+     -1,
+     -1,
+     1,
+     100,
+     null,
+     "normal",
+     "{'brawl': False, 'commander': True, 'oathbreaker': True}",
+     "-4",
+     "2",
+     null,
+     null,
+     "A",
+     null,
+     "y2",
+     null,
+     null,
+     null,
+     "A",
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     "6",
+     null,
+     null,
+     null,
+     "common",
+     null,
+     "A",
+     null,
+     "b",
+     "e",
+     null,
+     "Basic,Snow",
+     null,
+     null,
+     "a",
+     null,
+     null,
+     "a",
+     null,
+     "y2"
+    ]
+   ],
+   "sets": [
+    [
+     1006,
+     null,
+     "x1",
+     "y2",
+     "x1",
+     0,
+     -1,
+     100,
+     -1,
+     0,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     "Coldsnap",
+     null,
+     null,
+     -1,
+     null,
+     "expansion"
+    ],
+    [
+     1022,
+     null,
+     null,
+     null,
+     "A",
+     -1,
+     3,
+     5,
+     3,
+     10,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Coldsnap",
+     null,
+     "2015-03-20",
+     null,
+     3,
+     "draft_innovation"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-32b:619",
+  "db_id": "codebase_community",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "gold": "SELECT COUNT(T1.Id) FROM users AS T1 INNER JOIN badges AS T2 ON T1.Id = T2.UserId WHERE T2.Name = 'Supporter' AND T1.Age BETWEEN 19 AND 65",
+  "pred": "SELECT COUNT(DISTINCT u.Id) FROM badges b JOIN users u ON b.UserId = u.Id WHERE b.Name = 'Supporter' AND u.Age BETWEEN 19 AND 65",
+  "gold_rows": [
+   [
+    2
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "badges": [
+    [
+     1001,
+     1002,
+     "Supporter",
+     "2020-02-29 23:59:59"
+    ],
+    [
+     1033,
+     1002,
+     "Supporter",
+     "2020-02-29 23:59:59"
+    ]
+   ],
+   "users": [
+    [
+     1002,
+     null,
+     "2020-02-29 23:59:59",
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     null,
+     19,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "omni-32-majority:578",
+  "db_id": "codebase_community",
+  "labels": [
+   "filter_predicate",
+   "null_semantics"
+  ],
+  "gold": "SELECT T1.DisplayName, T1.Reputation FROM users AS T1 INNER JOIN posts AS T2 ON T1.Id = T2.OwnerUserId WHERE T2.Title = 'Understanding what Dassault iSight is doing?'",
+  "pred": "SELECT users.DisplayName, users.Reputation FROM posts INNER JOIN users ON posts.OwnerUserId = users.Id WHERE LOWER(posts.Title) = 'understanding what dassault isight is doing?';",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null,
+    0
+   ]
+  ],
+  "witness": {
+   "posts": [
+    [
+     1005,
+     null,
+     1,
+     "2020-02-29 23:59:59",
+     5,
+     null,
+     null,
+     1006,
+     null,
+     "understanding what dassault isight is doing?",
+     null,
+     -1,
+     null,
+     null,
+     1006,
+     null,
+     "2015-03-20 08:00:00",
+     null,
+     null,
+     null,
+     null
+    ]
+   ],
+   "users": [
+    [
+     1006,
+     0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     "x1"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:1146",
+  "db_id": "european_football_2",
+  "labels": [
+   "empty_aggregate",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT t2.team_long_name FROM Match AS t1 INNER JOIN Team AS t2 ON t1.away_team_api_id = t2.team_api_id ORDER BY t1.away_team_goal DESC LIMIT 1",
+  "pred": "SELECT t1.team_long_name FROM team AS t1 INNER JOIN match AS t2 ON t1.team_api_id = t2.away_team_api_id WHERE t2.away_team_goal = (SELECT MAX(away_team_goal) FROM match)",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "Match": [
+    [
+     1003,
+     10,
+     null,
+     "2015/2016",
+     null,
+     null,
+     null,
+     5,
+     5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     -1,
+     null,
+     -1,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1,
+     100,
+     null,
+     1,
+     -1,
+     null,
+     2,
+     3,
+     -1,
+     -1,
+     null,
+     null,
+     null,
+     null,
+     2,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     2,
+     null,
+     2,
+     3,
+     null,
+     10,
+     null,
+     null,
+     1,
+     null,
+     null,
+     null,
+     "x1",
+     "a",
+     "y2",
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     3.25,
+     null,
+     1.5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     100.0,
+     null,
+     null
+    ]
+   ],
+   "Team": [
+    [
+     1004,
+     5,
+     2,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "chess:19",
+  "db_id": "california_schools",
+  "labels": [
+   "null_semantics"
+  ],
+  "gold": "SELECT T1.Phone FROM schools AS T1 INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds ORDER BY T2.AvgScrMath DESC LIMIT 1",
+  "pred": "SELECT T2.Phone FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode WHERE T1.AvgScrMath IS NOT NULL ORDER BY T1.AvgScrMath DESC LIMIT 1",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "satscores": [
+    [
+     "v1002",
+     "D",
+     null,
+     "x1",
+     null,
+     0,
+     -1,
+     null,
+     null,
+     null,
+     10
+    ]
+   ],
+   "schools": [
+    [
+     "v1002",
+     null,
+     null,
+     "Merged",
+     "b",
+     "c",
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     "b",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "2000-01-01",
+     null,
+     null,
+     "a",
+     "Directly funded",
+     "00",
+     "Community College District",
+     "65",
+     "a",
+     "JUV",
+     "a",
+     "PS",
+     "Ungraded",
+     null,
+     null,
+     "P",
+     null,
+     null,
+     null,
+     "A",
+     "x1",
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     "1995-12-31"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "chess:1030",
+  "db_id": "european_football_2",
+  "labels": [
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT t2.name FROM Match AS t1 INNER JOIN League AS t2 ON t1.league_id = t2.id WHERE t1.season = '2015/2016' AND t1.home_team_goal = t1.away_team_goal GROUP BY t2.name ORDER BY COUNT(t1.id) DESC LIMIT 1",
+  "pred": "SELECT T2.name FROM Match AS T1 INNER JOIN League AS T2 ON T1.league_id = T2.id WHERE T1.season = '2015/2016' AND T1.home_team_goal = T1.away_team_goal GROUP BY T2.name ORDER BY COUNT(T2.name) DESC LIMIT 1",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [
+   [
+    "England Premier League"
+   ]
+  ],
+  "witness": {
+   "Country": [
+    [
+     17194,
+     "Poland"
+    ],
+    [
+     17202,
+     "c"
+    ]
+   ],
+   "League": [
+    [
+     17203,
+     17202,
+     "England Premier League"
+    ],
+    [
+     17195,
+     17194,
+     null
+    ],
+    [
+     17224,
+     17202,
+     "England Premier League"
+    ]
+   ],
+   "Match": [
+    [
+     17244,
+     null,
+     17195,
+     "2015/2016",
+     null,
+     null,
+     null,
+     null,
+     null,
+     5,
+     5,
+     null,
+     null,
+     100,
+     null,
+     2,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     null,
+     null,
+     2,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     2,
+     null,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     -1.5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     100.0,
+     null,
+     null,
+     1.0,
+     null
+    ],
+    [
+     17204,
+     null,
+     17203,
+     "2015/2016",
+     null,
+     null,
+     null,
+     null,
+     null,
+     10,
+     10,
+     5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     5,
+     null,
+     null,
+     null,
+     2,
+     null,
+     null,
+     3,
+     null,
+     3,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     10,
+     100,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     -1.5,
+     null,
+     null,
+     1.5,
+     0.0,
+     null,
+     1.5,
+     null,
+     null,
+     null,
+     2.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     10.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     -1.5,
+     null
+    ],
+    [
+     17245,
+     null,
+     17195,
+     "2015/2016",
+     null,
+     null,
+     null,
+     null,
+     null,
+     5,
+     5,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1,
+     null,
+     null,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     100,
+     null,
+     2,
+     3,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     2,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     "y2",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     -1.5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.5,
+     0.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     100.0,
+     null,
+     100.0,
+     1.0,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gsr:1474",
+  "db_id": "debit_card_specializing",
+  "labels": [
+   "grouping",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT T1.CustomerID FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Currency = 'CZK' AND T2.Date BETWEEN 201101 AND 201112 GROUP BY T1.CustomerID ORDER BY SUM(T2.Consumption) DESC LIMIT 1",
+  "pred": "SELECT c.CustomerID FROM customers c JOIN yearmonth ym ON c.CustomerID = ym.CustomerID WHERE c.Currency = 'CZK' AND ym.Date BETWEEN 201101 AND 201112 ORDER BY ym.Consumption DESC LIMIT 1;",
+  "gold_rows": [
+   [
+    1009
+   ]
+  ],
+  "pred_rows": [
+   [
+    1002
+   ]
+  ],
+  "witness": {
+   "customers": [
+    [
+     1002,
+     "A",
+     "CZK"
+    ],
+    [
+     1009,
+     "A",
+     "CZK"
+    ]
+   ],
+   "yearmonth": [
+    [
+     1002,
+     "201101",
+     null
+    ],
+    [
+     1009,
+     "201102",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:1324",
+  "db_id": "student_club",
+  "labels": [
+   "filter_predicate",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT CAST(COUNT(T2.link_to_event) AS REAL) / COUNT(DISTINCT T2.link_to_event) FROM event AS T1 INNER JOIN attendance AS T2 ON T1.event_id = T2.link_to_event WHERE SUBSTR(T1.event_date, 1, 4) = '2020' AND T1.type = 'Meeting'",
+  "pred": "SELECT CAST(COUNT(event_id) AS REAL) / COUNT(DISTINCT event_name) AS average_attendance FROM event INNER JOIN attendance ON event.event_id = attendance.link_to_event WHERE event.type = 'Meeting' AND STRFTIME('%Y', event.event_date) = '2020'",
+  "gold_rows": [
+   [
+    1.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "attendance": [
+    [
+     "rec2N69DMcrqN9PJC",
+     "recWh2lJVOT6HjChK"
+    ]
+   ],
+   "event": [
+    [
+     "rec2N69DMcrqN9PJC",
+     null,
+     "2020-01-01",
+     "Meeting",
+     "Attend school football game as a group.",
+     "258 S. Maple St.",
+     "Planning"
+    ]
+   ],
+   "major": [
+    [
+     "rec7BxKpjJ7bNph3O",
+     null,
+     "a",
+     "College of Education & Human Services"
+    ]
+   ],
+   "member": [
+    [
+     "recWh2lJVOT6HjChK",
+     "c",
+     null,
+     null,
+     "Secretary",
+     "c",
+     "c",
+     1187,
+     "rec7BxKpjJ7bNph3O"
+    ]
+   ],
+   "zip_code": [
+    [
+     1187,
+     "Unique",
+     null,
+     null,
+     null,
+     "x1"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:1050",
+  "db_id": "european_football_2",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "gold": "SELECT t2.preferred_foot FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_api_id = t2.player_api_id ORDER BY t1.birthday DESC LIMIT 1",
+  "pred": "SELECT PA.preferred_foot FROM Player_Attributes AS PA JOIN Player AS P ON PA.player_api_id = P.player_api_id ORDER BY P.birthday DESC LIMIT 1",
+  "gold_rows": [
+   [
+    "left"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "right"
+   ]
+  ],
+  "witness": {
+   "Player": [
+    [
+     1005,
+     null,
+     null,
+     3,
+     null,
+     null,
+     null
+    ],
+    [
+     1019,
+     -1,
+     null,
+     100,
+     null,
+     null,
+     null
+    ],
+    [
+     1045,
+     1046,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     1048,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     1110,
+     1046,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ],
+   "Player_Attributes": [
+    [
+     1006,
+     3,
+     null,
+     null,
+     null,
+     null,
+     "left",
+     "high",
+     "ean",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     100,
+     3,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     1020,
+     100,
+     -1,
+     null,
+     null,
+     3,
+     "right",
+     "le",
+     "4",
+     3,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1,
+     5,
+     10,
+     null,
+     null,
+     0,
+     0,
+     null,
+     100,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     0,
+     5,
+     null,
+     null
+    ],
+    [
+     1098,
+     100,
+     -1,
+     null,
+     null,
+     null,
+     "right",
+     "norm",
+     "1",
+     3,
+     null,
+     3,
+     10,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     100,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     null
+    ],
+    [
+     1099,
+     3,
+     null,
+     null,
+     null,
+     null,
+     "left",
+     "high",
+     "ean",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     100,
+     3,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     1109,
+     null,
+     -1,
+     null,
+     null,
+     -1,
+     "left",
+     "norm",
+     "1",
+     3,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     -1,
+     1,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     -1,
+     null,
+     1,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-7b:1311",
+  "db_id": "thrombosis_prediction",
+  "labels": [
+   "filter_predicate",
+   "join_path",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID INNER JOIN Examination AS T3 ON T1.ID = T3.ID WHERE T2.PT < 14 AND T3.Thrombosis < 3 AND T3.Thrombosis > 0",
+  "pred": "SELECT COUNT(T1.ID) FROM Examination AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T1.Thrombosis = 1 AND T2.PT < 14",
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "witness": {
+   "Examination": [
+    [
+     1001,
+     "1995-12-31",
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     null,
+     "-",
+     "+",
+     "-",
+     null,
+     2
+    ]
+   ],
+   "Laboratory": [
+    [
+     1001,
+     "2002-07-23",
+     null,
+     3,
+     null,
+     null,
+     10.0,
+     null,
+     null,
+     null,
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1.0,
+     null,
+     10.0,
+     null,
+     13.0,
+     null,
+     0.0,
+     0,
+     null,
+     100,
+     "30",
+     100,
+     null,
+     null,
+     null,
+     "7-",
+     null,
+     null,
+     null,
+     "1",
+     "2",
+     "1",
+     "negative",
+     "a",
+     "negative",
+     null,
+     null
+    ]
+   ],
+   "Patient": [
+    [
+     1001,
+     null,
+     "2000-01-01",
+     "2020-02-29",
+     null,
+     "+(",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:1020",
+  "db_id": "european_football_2",
+  "labels": [
+   "empty_aggregate",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT player_api_id FROM Player_Attributes ORDER BY overall_rating DESC LIMIT 1",
+  "pred": "SELECT player_api_id FROM player_attributes WHERE overall_rating = (SELECT MAX(overall_rating) FROM player_attributes)",
+  "gold_rows": [
+   [
+    5
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "Player_Attributes": [
+    [
+     1005,
+     null,
+     5,
+     null,
+     null,
+     null,
+     "left",
+     "y",
+     "ean",
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     2,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1,
+     null,
+     null,
+     2,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "chess:479",
+  "db_id": "card_games",
+  "labels": [
+   "filter_predicate",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT SUM(CASE WHEN T1.power LIKE '*' OR T1.power IS NULL THEN 1 ELSE 0 END) FROM cards AS T1 INNER JOIN sets AS T2 ON T2.code = T1.setCode WHERE T2.name = 'Coldsnap' AND T1.convertedManaCost > 5",
+  "pred": "SELECT COUNT(T1.id) FROM cards AS T1 INNER JOIN sets AS T2 ON T1.setCode = T2.code WHERE T2.name = 'Coldsnap' AND T1.convertedManaCost > 5 AND (T1.power = '*' OR T1.power IS NULL)",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "witness": {
+   "cards": [
+    [
+     1031,
+     null,
+     "Juzam Djinn",
+     "mtgo",
+     "gold",
+     null,
+     "A",
+     null,
+     "B,G",
+     "a",
+     5.0,
+     "a",
+     null,
+     null,
+     null,
+     "Spacegodzilla, Void Invader",
+     null,
+     null,
+     "2003",
+     "1",
+     0,
+     -1,
+     2,
+     -1,
+     2,
+     2,
+     3,
+     1,
+     -1,
+     1,
+     10,
+     2,
+     2,
+     1,
+     3,
+     null,
+     "c",
+     "{'brawl': False, 'commander': False, 'oathbreaker': True}",
+     "5",
+     "3",
+     null,
+     null,
+     null,
+     "b",
+     "b",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "c",
+     "x1",
+     "0.5",
+     null,
+     null,
+     "a",
+     "rare",
+     null,
+     "b",
+     "c",
+     "b",
+     null,
+     null,
+     "Legendary",
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "y2",
+     "x1",
+     null
+    ]
+   ],
+   "sets": [
+    [
+     1032,
+     null,
+     null,
+     null,
+     "b",
+     1,
+     1,
+     10,
+     10,
+     100,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "c",
+     null,
+     null,
+     3,
+     null,
+     "starter"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "rsl:134",
+  "db_id": "financial",
+  "labels": [
+   "grouping",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT COUNT(T2.account_id) FROM district AS T1 INNER JOIN account AS T2 ON T1.district_id = T2.district_id GROUP BY T1.A16 ORDER BY T1.A16 DESC LIMIT 1",
+  "pred": "SELECT COUNT(`account`.`account_id`) FROM `account` INNER JOIN `district` ON `account`.`district_id` = `district`.`district_id` WHERE `district`.`A16` = (SELECT MAX(`A16`) FROM `district`)",
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "witness": {
+   "account": [
+    [
+     1031,
+     1046,
+     "POPLATEK MESICNE",
+     "1995-12-31"
+    ]
+   ],
+   "district": [
+    [
+     1032,
+     "a",
+     "a",
+     "x1",
+     "c",
+     "a",
+     "9",
+     1,
+     1,
+     -1.5,
+     10,
+     100.0,
+     1.5,
+     0,
+     1,
+     3
+    ],
+    [
+     1048,
+     "x1",
+     "Prague",
+     "y2",
+     "x1",
+     "a",
+     "5",
+     -1,
+     100,
+     -1.5,
+     0,
+     1.0,
+     1.0,
+     5,
+     null,
+     2
+    ],
+    [
+     1046,
+     "c",
+     "c",
+     "A",
+     "a",
+     "b",
+     "9",
+     1,
+     3,
+     2.0,
+     3,
+     10.0,
+     100.0,
+     1,
+     null,
+     1
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "omni-32-majority:1457",
+  "db_id": "student_club",
+  "labels": [
+   "empty_aggregate",
+   "join_path"
+  ],
+  "gold": "SELECT DISTINCT T3.first_name, T3.last_name, T3.phone FROM expense AS T1 INNER JOIN budget AS T2 ON T1.link_to_budget = T2.budget_id INNER JOIN member AS T3 ON T3.member_id = T1.link_to_member WHERE T1.cost > ( SELECT AVG(T1.cost) FROM expense AS T1 INNER JOIN budget AS T2 ON T1.link_to_budget = T2.budget_id INNER JOIN member AS T3 ON T3.member_id = T1.link_to_member )",
+  "pred": "SELECT DISTINCT m.first_name, m.last_name, m.phone FROM expense e INNER JOIN member m ON e.link_to_member = m.member_id WHERE e.cost > (SELECT AVG(cost) FROM expense);",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null,
+    null,
+    null
+   ]
+  ],
+  "witness": {
+   "budget": [
+    [
+     "v1001",
+     "A",
+     null,
+     100.0,
+     null,
+     null,
+     "recY3Yesu24bRK7tr"
+    ],
+    [
+     "v1052",
+     "Parking",
+     1.0,
+     100.0,
+     null,
+     "a",
+     "reciRZdAqNIKuMC96"
+    ],
+    [
+     "rec5V70sIuIgpOzDT",
+     "Parking",
+     null,
+     null,
+     -1,
+     "Closed",
+     "recHaMmaKyfktt5fW"
+    ],
+    [
+     "recRQdaiKCxFAlPCy",
+     "Club T-Shirts",
+     null,
+     10.0,
+     3,
+     "a",
+     "rec180D2MI4EpckHy"
+    ]
+   ],
+   "event": [
+    [
+     "recY3Yesu24bRK7tr",
+     null,
+     null,
+     "c",
+     "Monthly officers meeting",
+     "Various locations",
+     "Open"
+    ],
+    [
+     "reciRZdAqNIKuMC96",
+     null,
+     null,
+     "Game",
+     null,
+     "Conference Room BA 452",
+     "Planning"
+    ],
+    [
+     "recHaMmaKyfktt5fW",
+     null,
+     null,
+     "Guest Speaker",
+     "Volunteer opportunity to help paint new home.",
+     "MU 215",
+     "a"
+    ],
+    [
+     "recmbOVHSyzXQZpQr",
+     null,
+     null,
+     "Community Service",
+     "All active members can vote for new officers between 4pm-8pm.",
+     "MU 215",
+     "Closed"
+    ],
+    [
+     "rec180D2MI4EpckHy",
+     null,
+     "2010-06-15 00:00:00",
+     null,
+     "Volunteer opportunity to remove graffiti in town.",
+     "Conference Room BA 452",
+     "c"
+    ]
+   ],
+   "expense": [
+    [
+     "v1003",
+     "Water, chips, cookies",
+     "2019-09-10",
+     3.25,
+     null,
+     "rec4BLdZHS2Blfp4v",
+     null
+    ],
+    [
+     "v1054",
+     "Post Cards, Posters",
+     "2019-08-20",
+     2.0,
+     null,
+     "recD078PnS3x2doBe",
+     "recRQdaiKCxFAlPCy"
+    ]
+   ],
+   "major": [
+    [
+     "recT9LoDnC8ZvdPqM",
+     null,
+     null,
+     "College of Natural Resources"
+    ],
+    [
+     "rec7BxKpjJ7bNph3O",
+     null,
+     null,
+     "College of Humanities and Social Sciences"
+    ],
+    [
+     "recf3mPmWq4JXKf4L",
+     null,
+     null,
+     "College of the Arts"
+    ],
+    [
+     "recCk8lCDOTRp6rKN",
+     null,
+     null,
+     "College of Agriculture and Applied Sciences"
+    ]
+   ],
+   "member": [
+    [
+     "v1004",
+     null,
+     null,
+     null,
+     "Treasurer",
+     "Large",
+     null,
+     1006,
+     "recT9LoDnC8ZvdPqM"
+    ],
+    [
+     "v1055",
+     null,
+     "A",
+     null,
+     "Vice President",
+     null,
+     null,
+     1057,
+     "rec7BxKpjJ7bNph3O"
+    ],
+    [
+     "rec4BLdZHS2Blfp4v",
+     null,
+     null,
+     null,
+     "b",
+     "Medium",
+     null,
+     1058,
+     "recf3mPmWq4JXKf4L"
+    ],
+    [
+     "recD078PnS3x2doBe",
+     null,
+     "A",
+     null,
+     "President",
+     "Large",
+     null,
+     1060,
+     "recCk8lCDOTRp6rKN"
+    ]
+   ],
+   "zip_code": [
+    [
+     1006,
+     "PO Box",
+     "x1",
+     null,
+     null,
+     null
+    ],
+    [
+     1057,
+     "Unique",
+     null,
+     null,
+     "b",
+     null
+    ],
+    [
+     1058,
+     "c",
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     1060,
+     "PO Box",
+     null,
+     null,
+     "c",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:1532",
+  "db_id": "debit_card_specializing",
+  "labels": [
+   "duplicates_distinct",
+   "empty_aggregate",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT T2.Country FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID WHERE T1.ProductID = 2 ORDER BY T1.Price DESC LIMIT 1",
+  "pred": "SELECT DISTINCT gs.country FROM gasstations AS gs INNER JOIN transactions_1k AS t ON gs.gasstationid = t.gasstationid WHERE t.productid = 2 AND t.price = (SELECT MAX(price) FROM transactions_1k WHERE productid = 2)",
+  "gold_rows": [
+   [
+    "SVK"
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "gasstations": [
+    [
+     1001,
+     -1,
+     "SVK",
+     "Other"
+    ]
+   ],
+   "transactions_1k": [
+    [
+     1002,
+     "2015-03-20",
+     null,
+     3,
+     null,
+     1001,
+     2,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_1:449",
+  "db_id": "card_games",
+  "labels": [
+   "duplicates_distinct",
+   "filter_predicate",
+   "null_semantics"
+  ],
+  "gold": "SELECT DISTINCT T2.language, T1.type FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T2.uuid = T1.uuid WHERE T1.watermark = 'azorius'",
+  "pred": "SELECT T2.language, T1.type FROM cards AS T1 INNER JOIN foreign_data AS T2 ON T1.uuid = T2.uuid WHERE T1.watermark LIKE '%azorius%'",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "Hebrew",
+    null
+   ]
+  ],
+  "witness": {
+   "cards": [
+    [
+     1001,
+     "A",
+     "Juzam Djinn",
+     "arena,paper",
+     "c",
+     null,
+     "x1",
+     null,
+     "G",
+     null,
+     null,
+     "a",
+     3,
+     null,
+     null,
+     "King Caesar, Awoken Titan",
+     null,
+     null,
+     "2015",
+     "-1",
+     100,
+     5,
+     1,
+     -1,
+     1,
+     10,
+     10,
+     2,
+     0,
+     3,
+     100,
+     10,
+     100,
+     5,
+     10,
+     "x1",
+     "leveler",
+     "{'brawl': True, 'commander': False, 'oathbreaker': True}",
+     null,
+     "5",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     "y2",
+     "2012-02-22 00:00:00",
+     "x1",
+     null,
+     "b",
+     "7",
+     "A",
+     null,
+     null,
+     "rare",
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     "World",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     "AZORIUS"
+    ]
+   ],
+   "foreign_data": [
+    [
+     1002,
+     null,
+     "Hebrew",
+     null,
+     null,
+     null,
+     null,
+     "b"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "chess:550",
+  "db_id": "codebase_community",
+  "labels": [
+   "join_path",
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT Body FROM posts WHERE id = ( SELECT ExcerptPostId FROM tags ORDER BY Count DESC LIMIT 1 )",
+  "pred": "SELECT T2.Body FROM tags AS T1 INNER JOIN posts AS T2 ON T1.ExcerptPostId = T2.Id ORDER BY T1.Count DESC LIMIT 1",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "posts": [
+    [
+     1001,
+     -1,
+     null,
+     "2020-02-29 23:59:59",
+     null,
+     null,
+     null,
+     1002,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     1002,
+     null,
+     "2010-06-15 12:30:00",
+     null,
+     null,
+     "y2",
+     null
+    ],
+    [
+     1016,
+     null,
+     1,
+     null,
+     null,
+     2,
+     null,
+     1017,
+     null,
+     null,
+     null,
+     null,
+     null,
+     2,
+     1017,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ],
+   "tags": [
+    [
+     1003,
+     null,
+     null,
+     1001,
+     null
+    ],
+    [
+     1018,
+     null,
+     0,
+     null,
+     null
+    ]
+   ],
+   "users": [
+    [
+     1002,
+     10,
+     null,
+     null,
+     "2000-01-01 00:00:00",
+     null,
+     null,
+     null,
+     1,
+     100,
+     null,
+     -1,
+     null,
+     null
+    ],
+    [
+     1017,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     5,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "rsl:9",
+  "db_id": "california_schools",
+  "labels": [
+   "duplicates_distinct",
+   "join_path",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(T2.`School Code`) FROM satscores AS T1 INNER JOIN frpm AS T2 ON T1.cds = T2.CDSCode WHERE T1.AvgScrMath > 560 AND T2.`Charter Funding Type` = 'Directly funded'",
+  "pred": "SELECT COUNT(DISTINCT `schools`.`cdscode`) FROM `schools` INNER JOIN `satscores` ON `schools`.`cdscode` = `satscores`.`cds` INNER JOIN `frpm` ON `schools`.`cdscode` = `frpm`.`cdscode` WHERE `satscores`.`avgscrmath` > 560 AND `frpm`.`charter funding type` = 'Directly funded'",
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1001",
+     "A",
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     "Elementary School District",
+     "County Community",
+     "Juvenile Court School",
+     "CEP",
+     3,
+     null,
+     "Directly funded",
+     null,
+     "11",
+     "8",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.0,
+     null,
+     1
+    ]
+   ],
+   "satscores": [
+    [
+     "v1001",
+     "S",
+     null,
+     null,
+     "b",
+     0,
+     3,
+     100,
+     561,
+     null,
+     100
+    ]
+   ],
+   "schools": [
+    [
+     "v1001",
+     null,
+     null,
+     "Active",
+     "x1",
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     "2020-02-29",
+     null,
+     5,
+     null,
+     "Directly funded",
+     "00",
+     "State Board of Education",
+     "70",
+     "Opportunity Schools",
+     "JUV",
+     "State Special School",
+     "b",
+     "Elementary",
+     null,
+     null,
+     null,
+     null,
+     2.0,
+     null,
+     "b",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "a",
+     "2015-03-20"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:1332",
+  "db_id": "student_club",
+  "labels": [
+   "filter_predicate",
+   "null_semantics"
+  ],
+  "gold": "SELECT T2.spent FROM event AS T1 INNER JOIN budget AS T2 ON T1.event_id = T2.link_to_event WHERE T1.event_name = 'September Meeting' AND T2.category = 'Food' AND SUBSTR(T1.event_date, 6, 2) = '09'",
+  "pred": "SELECT budget.spent FROM budget INNER JOIN event ON budget.link_to_event = event.event_id WHERE event.event_name = 'September Meeting' AND budget.category = 'Food'",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "budget": [
+    [
+     "v1001",
+     "Food",
+     -1.5,
+     null,
+     100,
+     "Open",
+     "recI43CzsZ0Q625ma"
+    ],
+    [
+     "v1009",
+     "Food",
+     null,
+     100.0,
+     null,
+     "Closed",
+     "recmbOVHSyzXQZpQr"
+    ]
+   ],
+   "event": [
+    [
+     "v1002",
+     "September Meeting",
+     "2015-03-20",
+     "Guest Speaker",
+     "Students can stop by the table to get information on the club and register.",
+     "Campus Soccer/Lacrosse stadium",
+     "Planning"
+    ],
+    [
+     "v1010",
+     "September Meeting",
+     "2000-01-01",
+     "Community Service",
+     null,
+     null,
+     "Closed"
+    ],
+    [
+     "recI43CzsZ0Q625ma",
+     "september meeting",
+     null,
+     "Community Service",
+     "Members and alumni can attend a community theater play at a reduced price. Active membership required.",
+     "Campus Football stadium",
+     "Closed"
+    ],
+    [
+     "recmbOVHSyzXQZpQr",
+     "September Meeting",
+     null,
+     "Election",
+     "Monthly officers meeting",
+     "MU 215",
+     "Open"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-32b:9",
+  "db_id": "california_schools",
+  "labels": [
+   "filter_predicate",
+   "join_path",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(T2.`School Code`) FROM satscores AS T1 INNER JOIN frpm AS T2 ON T1.cds = T2.CDSCode WHERE T1.AvgScrMath > 560 AND T2.`Charter Funding Type` = 'Directly funded'",
+  "pred": "SELECT COUNT(*) FROM satscores ss JOIN schools s ON ss.cds = s.CDSCode WHERE ss.AvgScrMath > 560 AND s.FundingType = 'Directly funded'",
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1001",
+     "A",
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     "Elementary School District",
+     "County Community",
+     "Juvenile Court School",
+     "CEP",
+     3,
+     null,
+     "Directly funded",
+     null,
+     "9",
+     "8",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.0,
+     null,
+     1
+    ]
+   ],
+   "satscores": [
+    [
+     "v1001",
+     "S",
+     null,
+     null,
+     "b",
+     0,
+     3,
+     100,
+     561,
+     null,
+     100
+    ]
+   ],
+   "schools": [
+    [
+     "v1001",
+     null,
+     null,
+     "Pending",
+     "x1",
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     "2020-02-29",
+     null,
+     5,
+     null,
+     "Directly funded",
+     "42",
+     "State Special Schools",
+     "63",
+     "Adult Education Centers",
+     "SSS",
+     "Juvenile Court School",
+     "PS",
+     "High School",
+     null,
+     null,
+     "P",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     "2020-02-29"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-7b:1514",
+  "db_id": "debit_card_specializing",
+  "labels": [
+   "duplicates_distinct",
+   "join_path"
+  ],
+  "gold": "SELECT DISTINCT T3.Currency FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID INNER JOIN customers AS T3 ON T1.CustomerID = T3.CustomerID WHERE T1.Date = '2012-08-24' AND T1.Time = '16:25:00'",
+  "pred": "SELECT T2.Currency FROM transactions_1k AS T1 INNER JOIN customers AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.`Date` = '2012-08-24' AND T1.`Time` = '16:25:00'",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "EUR"
+   ]
+  ],
+  "witness": {
+   "customers": [
+    [
+     1045,
+     "A",
+     "EUR"
+    ],
+    [
+     1007,
+     "A",
+     "CZK"
+    ]
+   ],
+   "gasstations": [
+    [
+     1008,
+     null,
+     "a",
+     "Noname"
+    ]
+   ],
+   "transactions_1k": [
+    [
+     1048,
+     "2012-08-24",
+     "16:25:00",
+     1045,
+     null,
+     1047,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:1362",
+  "db_id": "student_club",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "gold": "SELECT COUNT(city) FROM zip_code WHERE county = 'Orange County' AND state = 'Virginia'",
+  "pred": "SELECT COUNT(DISTINCT city) FROM zip_code WHERE county = 'Orange County' AND state = 'Virginia'",
+  "gold_rows": [
+   [
+    2
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "zip_code": [
+    [
+     1002,
+     "Standard",
+     "c",
+     "Orange County",
+     "Virginia",
+     null
+    ],
+    [
+     1008,
+     "Standard",
+     "c",
+     "Orange County",
+     "Virginia",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "omni-32-majority:619",
+  "db_id": "codebase_community",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "gold": "SELECT COUNT(T1.Id) FROM users AS T1 INNER JOIN badges AS T2 ON T1.Id = T2.UserId WHERE T2.Name = 'Supporter' AND T1.Age BETWEEN 19 AND 65",
+  "pred": "SELECT COUNT(DISTINCT u.Id) AS AdultSupporterCount FROM badges b INNER JOIN users u ON b.UserId = u.Id WHERE b.Name = 'Supporter' AND u.Age BETWEEN 19 AND 65;",
+  "gold_rows": [
+   [
+    2
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "badges": [
+    [
+     1001,
+     1002,
+     "Supporter",
+     "2020-02-29 23:59:59"
+    ],
+    [
+     1033,
+     1002,
+     "Supporter",
+     "2020-02-29 23:59:59"
+    ]
+   ],
+   "users": [
+    [
+     1002,
+     null,
+     "2020-02-29 23:59:59",
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     null,
+     19,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:1171",
+  "db_id": "thrombosis_prediction",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "gold": "SELECT COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Examination AS T2 ON T1.ID = T2.ID WHERE STRFTIME('%Y', T2.`Examination Date`) BETWEEN '1990' AND '1993' AND STRFTIME('%Y', T2.`Examination Date`) - STRFTIME('%Y', T1.Birthday) < 18",
+  "pred": "SELECT COUNT(DISTINCT patient.id) FROM patient INNER JOIN examination ON patient.id = examination.id WHERE STRFTIME('%Y', examination.\"Examination Date\") BETWEEN '1990' AND '1993' AND (STRFTIME('%Y', examination.\"Examination Date\") - STRFTIME('%Y', patient.birthday)) - (STRFTIME('%m%d', examination.\"Examination Date\") < STRFTIME('%m%d', patient.birthday)) < 18",
+  "gold_rows": [
+   [
+    2
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "Examination": [
+    [
+     1001,
+     "1990-01-01",
+     -1.5,
+     null,
+     100,
+     "P.S",
+     10,
+     null,
+     "+",
+     "-",
+     null,
+     null,
+     null
+    ],
+    [
+     1001,
+     "1990-01-01",
+     -1.5,
+     null,
+     100,
+     "P.S",
+     10,
+     null,
+     "+",
+     "-",
+     null,
+     null,
+     null
+    ]
+   ],
+   "Patient": [
+    [
+     1001,
+     "M",
+     "2010-06-15",
+     null,
+     null,
+     "+",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-7b:1474",
+  "db_id": "debit_card_specializing",
+  "labels": [
+   "filter_predicate",
+   "grouping",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT T1.CustomerID FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Currency = 'CZK' AND T2.Date BETWEEN 201101 AND 201112 GROUP BY T1.CustomerID ORDER BY SUM(T2.Consumption) DESC LIMIT 1",
+  "pred": "SELECT T1.CustomerID FROM customers AS T1 JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Currency = 'CZK' AND T2.Date BETWEEN '201101' AND '201112' ORDER BY T2.Consumption DESC LIMIT 1",
+  "gold_rows": [
+   [
+    1009
+   ]
+  ],
+  "pred_rows": [
+   [
+    1002
+   ]
+  ],
+  "witness": {
+   "customers": [
+    [
+     1002,
+     "A",
+     "CZK"
+    ],
+    [
+     1009,
+     "A",
+     "CZK"
+    ]
+   ],
+   "yearmonth": [
+    [
+     1002,
+     "201101",
+     null
+    ],
+    [
+     1009,
+     "201102",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:1116",
+  "db_id": "european_football_2",
+  "labels": [
+   "empty_aggregate"
+  ],
+  "gold": "SELECT player_name FROM (SELECT player_name, height, DENSE_RANK() OVER (ORDER BY height DESC) as rank FROM Player) WHERE rank = 1",
+  "pred": "SELECT player.player_name FROM player WHERE player.height = (SELECT MAX(player.height) FROM player)",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "Player": [
+    [
+     1001,
+     -1,
+     null,
+     100,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-32b:81",
+  "db_id": "california_schools",
+  "labels": [
+   "order_limit_ties",
+   "projection"
+  ],
+  "gold": "SELECT T2.City, T1.`Low Grade`, T1.`School Name` FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.State = 'CA' ORDER BY T2.Latitude ASC LIMIT 1",
+  "pred": "SELECT s.City, f.\"Low Grade\", s.School FROM schools s JOIN frpm f ON s.CDSCode = f.CDSCode WHERE s.State = 'CA' ORDER BY s.Latitude ASC LIMIT 1",
+  "gold_rows": [
+   [
+    "v1017",
+    "11",
+    "v1014"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "v1017",
+    "11",
+    "v1016"
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1013",
+     "A",
+     null,
+     100,
+     null,
+     null,
+     null,
+     "v1014",
+     "Elementary School District",
+     "County Community",
+     "Juvenile Court School",
+     "CEP",
+     3,
+     null,
+     null,
+     10,
+     "11",
+     "3",
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     1.0,
+     null,
+     1.0,
+     null,
+     10.0,
+     null
+    ],
+    [
+     "v1001",
+     "A",
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     "Elementary School District",
+     "County Community",
+     "Juvenile Court School",
+     "CEP",
+     3,
+     null,
+     null,
+     10,
+     "9",
+     "3",
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     1.0,
+     null,
+     1.0,
+     null,
+     10.0,
+     null
+    ]
+   ],
+   "schools": [
+    [
+     "v1013",
+     null,
+     "b",
+     "b",
+     "b",
+     "A",
+     "v1016",
+     "x1",
+     "A",
+     "v1017",
+     null,
+     "CA",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Locally funded",
+     "54",
+     "State Special Schools",
+     "60",
+     "a",
+     "TRAD",
+     "Community Day School",
+     "A",
+     null,
+     null,
+     "b",
+     "P",
+     -1,
+     null,
+     null,
+     null,
+     "c",
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     "2015-03-20"
+    ],
+    [
+     "v1001",
+     null,
+     "b",
+     "b",
+     "b",
+     "A",
+     null,
+     "x1",
+     "A",
+     null,
+     null,
+     "CA",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Locally funded",
+     "54",
+     "State Special Schools",
+     "60",
+     "a",
+     "HOMHOS",
+     "District Special Education Consortia School",
+     "A",
+     null,
+     null,
+     "b",
+     "P",
+     -1,
+     null,
+     null,
+     null,
+     "c",
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     "2015-03-20"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_2:1115",
+  "db_id": "european_football_2",
+  "labels": [
+   "filter_predicate",
+   "join_path",
+   "null_semantics",
+   "numeric_type_division"
+  ],
+  "gold": "SELECT (SUM(CASE WHEN t1.player_name = 'Landon Donovan' THEN t2.overall_rating ELSE 0 END) * 1.0 - SUM(CASE WHEN t1.player_name = 'Jordan Bowery' THEN t2.overall_rating ELSE 0 END)) * 100 / SUM(CASE WHEN t1.player_name = 'Landon Donovan' THEN t2.overall_rating ELSE 0 END) LvsJ_percent FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_fifa_api_id = t2.player_fifa_api_id WHERE SUBSTR(t2.`date`, 1, 10) = '2013-07-12'",
+  "pred": "SELECT CAST((SUM(CASE WHEN T2.player_name = 'Landon Donovan' THEN T1.overall_rating ELSE 0 END) - SUM(CASE WHEN T2.player_name = 'Jordan Bowery' THEN T1.overall_rating ELSE 0 END)) AS REAL) * 100 / SUM(CASE WHEN T2.player_name = 'Landon Donovan' THEN T1.overall_rating ELSE 0 END) FROM Player_Attributes AS T1 INNER JOIN Player AS T2 ON T1.player_api_id = T2.player_api_id WHERE T1.date LIKE '2013-07-12%'",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [
+   [
+    100.0
+   ]
+  ],
+  "witness": {
+   "Player": [
+    [
+     1001,
+     -1,
+     "Landon Donovan",
+     null,
+     "2012-02-22 00:00:00",
+     null,
+     null
+    ],
+    [
+     1025,
+     -1,
+     "Landon Donovan",
+     null,
+     "2012-02-22 00:00:00",
+     null,
+     null
+    ]
+   ],
+   "Player_Attributes": [
+    [
+     1002,
+     null,
+     -1,
+     "2013-07-12",
+     null,
+     null,
+     "right",
+     "le",
+     "high",
+     null,
+     null,
+     3,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1,
+     null,
+     10,
+     null,
+     null,
+     0,
+     0,
+     null,
+     100,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     0,
+     5
+    ],
+    [
+     1026,
+     null,
+     -1,
+     "2013-07-12",
+     1027,
+     null,
+     "right",
+     "le",
+     "high",
+     null,
+     null,
+     3,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1,
+     null,
+     10,
+     null,
+     null,
+     0,
+     0,
+     null,
+     100,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     0,
+     5
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "omni-32-majority:1484",
+  "db_id": "debit_card_specializing",
+  "labels": [
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT SUM(IIF(Country = 'CZE', 1, 0)) - SUM(IIF(Country = 'SVK', 1, 0)) FROM gasstations WHERE Segment = 'Discount'",
+  "pred": "SELECT (SELECT COUNT(GasStationID) FROM gasstations WHERE Country = 'CZE' AND Segment = 'Discount') - (SELECT COUNT(GasStationID) FROM gasstations WHERE Country = 'SVK' AND Segment = 'Discount') AS MoreDiscountGasStationsInCZE;",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "witness": {
+   "gasstations": [
+    [
+     1016,
+     null,
+     "cze",
+     "Value for money"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-32b:457",
+  "db_id": "card_games",
+  "labels": [
+   "duplicates_distinct",
+   "filter_predicate",
+   "null_semantics"
+  ],
+  "gold": "SELECT DISTINCT purchaseUrls FROM cards WHERE promoTypes = 'bundle'",
+  "pred": "SELECT purchaseUrls FROM cards WHERE promoTypes LIKE '%bundle%'",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "cards": [
+    [
+     1001,
+     "A",
+     "Juzam Djinn",
+     "arena,paper",
+     "c",
+     null,
+     "x1",
+     null,
+     "G",
+     null,
+     null,
+     "b",
+     3,
+     null,
+     null,
+     "Mothra, Supersonic Queen",
+     null,
+     null,
+     "2015",
+     "-1",
+     100,
+     5,
+     1,
+     -1,
+     1,
+     10,
+     10,
+     2,
+     0,
+     3,
+     100,
+     10,
+     100,
+     5,
+     10,
+     "x1",
+     "leveler",
+     "{'brawl': True, 'commander': False, 'oathbreaker': True}",
+     null,
+     "5",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     "y2",
+     "2012-02-22 00:00:00",
+     "x1",
+     null,
+     "b",
+     "16",
+     "A",
+     "BUNDLE",
+     null,
+     "rare",
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     "World",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "chess:1474",
+  "db_id": "debit_card_specializing",
+  "labels": [
+   "grouping",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT T1.CustomerID FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Currency = 'CZK' AND T2.Date BETWEEN 201101 AND 201112 GROUP BY T1.CustomerID ORDER BY SUM(T2.Consumption) DESC LIMIT 1",
+  "pred": "SELECT T1.CustomerID FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE T2.Date BETWEEN 201101 AND 201112 AND T1.Currency = 'CZK' ORDER BY T2.Consumption DESC LIMIT 1",
+  "gold_rows": [
+   [
+    1009
+   ]
+  ],
+  "pred_rows": [
+   [
+    1002
+   ]
+  ],
+  "witness": {
+   "customers": [
+    [
+     1002,
+     "A",
+     "CZK"
+    ],
+    [
+     1009,
+     "A",
+     "CZK"
+    ]
+   ],
+   "yearmonth": [
+    [
+     1002,
+     "201101",
+     null
+    ],
+    [
+     1009,
+     "201102",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gsr:19",
+  "db_id": "california_schools",
+  "labels": [
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT T1.Phone FROM schools AS T1 INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds ORDER BY T2.AvgScrMath DESC LIMIT 1",
+  "pred": "SELECT s.Phone FROM satscores AS ss JOIN schools AS s ON ss.cds = s.CDSCode ORDER BY ss.AvgScrMath DESC LIMIT 1;",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [
+   [
+    "x1"
+   ]
+  ],
+  "witness": {
+   "satscores": [
+    [
+     "v1009",
+     "S",
+     "x1",
+     "y2",
+     null,
+     5,
+     1,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     "v1002",
+     "S",
+     null,
+     null,
+     null,
+     -1,
+     100,
+     null,
+     null,
+     null,
+     10
+    ]
+   ],
+   "schools": [
+    [
+     "v1030",
+     null,
+     null,
+     "Merged",
+     "x1",
+     "y2",
+     "b",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Locally funded",
+     "03",
+     "Community College District",
+     "67",
+     null,
+     "A",
+     "Continuation School",
+     "A",
+     "A",
+     null,
+     "y2",
+     "F",
+     null,
+     null,
+     -1.5,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "2010-06-15"
+    ],
+    [
+     "v1002",
+     null,
+     null,
+     "Merged",
+     "b",
+     "c",
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     "b",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "2000-01-01",
+     null,
+     null,
+     "a",
+     "Directly funded",
+     "00",
+     "Statewide Benefit Charter",
+     "65",
+     "a",
+     "JUV",
+     "a",
+     "PS",
+     "Ungraded",
+     null,
+     null,
+     "P",
+     null,
+     null,
+     null,
+     "A",
+     "x1",
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     "1995-12-31"
+    ],
+    [
+     "v1009",
+     null,
+     null,
+     "Merged",
+     "x1",
+     "y2",
+     "b",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Locally funded",
+     "03",
+     "Community College District",
+     "67",
+     null,
+     "A",
+     "Continuation School",
+     "A",
+     "A",
+     null,
+     "y2",
+     "F",
+     null,
+     null,
+     -1.5,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "2010-06-15"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-7b:36",
+  "db_id": "california_schools",
+  "labels": [
+   "filter_predicate",
+   "null_semantics"
+  ],
+  "gold": "SELECT T2.AdmFName1, T2.AdmLName1, T2.AdmFName2, T2.AdmLName2, T2.AdmFName3, T2.AdmLName3 FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode ORDER BY T1.NumGE1500 DESC LIMIT 1",
+  "pred": "SELECT T2.AdmFName1, T2.AdmLName1, T2.AdmFName2, T2.AdmLName2, T2.AdmFName3, T2.AdmLName3 FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode WHERE T1.NumGE1500 >= 1500 ORDER BY T1.NumGE1500 DESC LIMIT 1",
+  "gold_rows": [
+   [
+    "A",
+    "x1",
+    null,
+    "a",
+    null,
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "satscores": [
+    [
+     "v1002",
+     "D",
+     null,
+     "x1",
+     null,
+     0,
+     -1,
+     null,
+     null,
+     null,
+     10
+    ]
+   ],
+   "schools": [
+    [
+     "v1002",
+     null,
+     null,
+     "Merged",
+     "b",
+     "c",
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     "b",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "2000-01-01",
+     null,
+     null,
+     "a",
+     "Directly funded",
+     "00",
+     "Community College District",
+     "65",
+     "a",
+     "JUV",
+     "a",
+     "PS",
+     "Ungraded",
+     null,
+     null,
+     "P",
+     null,
+     null,
+     null,
+     "A",
+     "x1",
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     "1995-12-31"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "chess:1106",
+  "db_id": "european_football_2",
+  "labels": [
+   "filter_predicate"
+  ],
+  "gold": "SELECT t2.defensive_work_rate FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_fifa_api_id = t2.player_fifa_api_id WHERE SUBSTR(t2.`date`, 1, 10) = '2013-02-22' AND t1.player_name = 'Kevin Berigaud'",
+  "pred": "SELECT T2.defensive_work_rate FROM Player AS T1 INNER JOIN Player_Attributes AS T2 ON T1.player_fifa_api_id = T2.player_fifa_api_id WHERE T1.player_name = 'Kevin Berigaud' AND T2.date = '2013-02-22 00:00:00'",
+  "gold_rows": [
+   [
+    "high"
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "Player": [
+    [
+     1005,
+     null,
+     "Kevin Berigaud",
+     1,
+     null,
+     null,
+     2
+    ]
+   ],
+   "Player_Attributes": [
+    [
+     1006,
+     1,
+     null,
+     "2013-02-22",
+     null,
+     null,
+     "left",
+     "le",
+     "high",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     100,
+     3,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-7b:146",
+  "db_id": "financial",
+  "labels": [
+   "filter_predicate"
+  ],
+  "gold": "SELECT T1.client_id FROM client AS T1 INNER JOIN disp AS T2 ON T1.client_id = T2.client_id INNER JOIN account AS T5 ON T2.account_id = T5.account_id INNER JOIN loan AS T3 ON T5.account_id = T3.account_id INNER JOIN card AS T4 ON T2.disp_id = T4.disp_id WHERE T1.gender = 'F'",
+  "pred": "SELECT T1.client_id FROM client AS T1 INNER JOIN disp AS T2 ON T1.client_id = T2.client_id INNER JOIN account AS T3 ON T2.account_id = T3.account_id INNER JOIN card AS T4 ON T2.disp_id = T4.disp_id INNER JOIN loan AS T5 ON T3.account_id = T5.account_id WHERE T1.gender = 'F' AND T2.type = 'OWNER'",
+  "gold_rows": [
+   [
+    1011
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "account": [
+    [
+     1007,
+     1008,
+     "POPLATEK MESICNE",
+     "2010-06-15"
+    ]
+   ],
+   "card": [
+    [
+     1009,
+     1010,
+     "a",
+     "2020-02-29"
+    ]
+   ],
+   "client": [
+    [
+     1011,
+     "F",
+     "2020-02-29",
+     1008
+    ]
+   ],
+   "disp": [
+    [
+     1010,
+     1011,
+     1007,
+     "owner"
+    ]
+   ],
+   "district": [
+    [
+     1008,
+     "a",
+     "Prague",
+     "b",
+     "A",
+     "a",
+     "20",
+     5,
+     2,
+     10.0,
+     1,
+     null,
+     2.0,
+     -1,
+     null,
+     100
+    ]
+   ],
+   "loan": [
+    [
+     1012,
+     1007,
+     "2020-02-29",
+     2,
+     0,
+     2.0,
+     "D"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "omni-32-majority:9",
+  "db_id": "california_schools",
+  "labels": [
+   "filter_predicate",
+   "join_path",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(T2.`School Code`) FROM satscores AS T1 INNER JOIN frpm AS T2 ON T1.cds = T2.CDSCode WHERE T1.AvgScrMath > 560 AND T2.`Charter Funding Type` = 'Directly funded'",
+  "pred": "SELECT COUNT(*) FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode WHERE T1.AvgScrMath > 560 AND T2.FundingType = 'Directly funded';",
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1001",
+     "A",
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     "Elementary School District",
+     "County Community",
+     "Juvenile Court School",
+     "CEP",
+     3,
+     null,
+     "Directly funded",
+     null,
+     "9",
+     "8",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.0,
+     null,
+     1
+    ]
+   ],
+   "satscores": [
+    [
+     "v1001",
+     "S",
+     null,
+     null,
+     "b",
+     0,
+     3,
+     100,
+     561,
+     null,
+     100
+    ]
+   ],
+   "schools": [
+    [
+     "v1001",
+     null,
+     null,
+     "Pending",
+     "x1",
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     "2020-02-29",
+     null,
+     5,
+     null,
+     "Directly funded",
+     "42",
+     "State Special Schools",
+     "63",
+     "Adult Education Centers",
+     "SSS",
+     "Juvenile Court School",
+     "PS",
+     "High School",
+     null,
+     null,
+     "P",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     "2020-02-29"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "chess:1048",
+  "db_id": "european_football_2",
+  "labels": [
+   "join_path",
+   "null_semantics"
+  ],
+  "gold": "SELECT t2.overall_rating FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_api_id = t2.player_api_id WHERE t1.player_name = 'Gabriel Tamas' AND strftime('%Y', t2.date) = '2011'",
+  "pred": "SELECT T2.overall_rating FROM Player AS T1 INNER JOIN Player_Attributes AS T2 ON T1.player_fifa_api_id = T2.player_fifa_api_id WHERE T1.player_name = 'Gabriel Tamas' AND STRFTIME('%Y', T2.`date`) = '2011'",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "Player": [
+    [
+     1001,
+     -1,
+     "Gabriel Tamas",
+     null,
+     "2012-02-22 00:00:00",
+     null,
+     null
+    ]
+   ],
+   "Player_Attributes": [
+    [
+     1002,
+     null,
+     -1,
+     "2011-01-01",
+     null,
+     null,
+     "right",
+     "le",
+     "high",
+     null,
+     null,
+     3,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1,
+     null,
+     10,
+     null,
+     null,
+     0,
+     0,
+     null,
+     100,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     0,
+     5
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:1390",
+  "db_id": "student_club",
+  "labels": [
+   "null_semantics",
+   "numeric_type_division",
+   "projection"
+  ],
+  "gold": "SELECT CAST(SUM(CASE WHEN T1.event_name = 'Yearly Kickoff' THEN T3.cost ELSE 0 END) AS REAL) * 100 / SUM(T3.cost) FROM event AS T1 INNER JOIN budget AS T2 ON T1.event_id = T2.link_to_event INNER JOIN expense AS T3 ON T2.budget_id = T3.link_to_budget",
+  "pred": "SELECT (SELECT SUM(cost) FROM expense INNER JOIN budget ON expense.link_to_budget = budget.budget_id INNER JOIN event ON budget.link_to_event = event.event_id WHERE event.event_name = 'Yearly Kickoff') * 100.0 / (SELECT SUM(cost) FROM expense) AS yearly_kickoff_percentage",
+  "gold_rows": [
+   [
+    0.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "budget": [
+    [
+     "v1001",
+     "A",
+     null,
+     100.0,
+     null,
+     null,
+     "recWJFyajeK4jCNYz"
+    ],
+    [
+     "recZdw5TjWrRTj4kp",
+     "Parking",
+     null,
+     null,
+     null,
+     "Closed",
+     "rec2mJrCofveboaz6"
+    ]
+   ],
+   "event": [
+    [
+     "v1002",
+     "Yearly Kickoff",
+     null,
+     "Guest Speaker",
+     "Students can stop by the table to get information on the club and register.",
+     "Campus Soccer/Lacrosse stadium",
+     "Planning"
+    ],
+    [
+     "recWJFyajeK4jCNYz",
+     "Yearly Kickoff",
+     null,
+     "Guest Speaker",
+     "Members and alumni can attend a community theater play at a reduced price. Active membership required.",
+     "Campus Soccer/Lacrosse stadium",
+     "Planning"
+    ],
+    [
+     "rec2mJrCofveboaz6",
+     "x1",
+     null,
+     "b",
+     "Volunteer opportunity to sort donations for distribution.",
+     "Campus Common",
+     "Closed"
+    ]
+   ],
+   "expense": [
+    [
+     "v1003",
+     "Travel Mug",
+     "2019-11-04",
+     3.25,
+     null,
+     "rec4BLdZHS2Blfp4v",
+     "recZdw5TjWrRTj4kp"
+    ]
+   ],
+   "major": [
+    [
+     "recIzqYuV3wMONTgB",
+     null,
+     "a",
+     "College of Education & Human Services"
+    ]
+   ],
+   "member": [
+    [
+     "rec4BLdZHS2Blfp4v",
+     "A",
+     null,
+     null,
+     null,
+     "X-Large",
+     "x1",
+     1007,
+     "recIzqYuV3wMONTgB"
+    ]
+   ],
+   "zip_code": [
+    [
+     1007,
+     "a",
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_2:578",
+  "db_id": "codebase_community",
+  "labels": [
+   "filter_predicate",
+   "null_semantics"
+  ],
+  "gold": "SELECT T1.DisplayName, T1.Reputation FROM users AS T1 INNER JOIN posts AS T2 ON T1.Id = T2.OwnerUserId WHERE T2.Title = 'Understanding what Dassault iSight is doing?'",
+  "pred": "SELECT T2.DisplayName, T2.Reputation FROM posts AS T1 INNER JOIN users AS T2 ON T1.OwnerUserId = T2.Id WHERE T1.Title LIKE 'Understanding what Dassault iSight is doing?'",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null,
+    null
+   ]
+  ],
+  "witness": {
+   "posts": [
+    [
+     1001,
+     -1,
+     null,
+     "2020-02-29 23:59:59",
+     null,
+     null,
+     null,
+     1002,
+     null,
+     "understanding what dassault isight is doing?",
+     null,
+     3,
+     null,
+     null,
+     1002,
+     null,
+     null,
+     3,
+     null,
+     null,
+     "y2"
+    ]
+   ],
+   "users": [
+    [
+     1002,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1,
+     null,
+     "y2"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:492",
+  "db_id": "card_games",
+  "labels": [
+   "filter_predicate"
+  ],
+  "gold": "SELECT type FROM sets WHERE name LIKE '%FROM the Vault: Lore%'",
+  "pred": "SELECT sets.type FROM sets WHERE sets.name = 'From the Vault: Lore'",
+  "gold_rows": [
+   [
+    "a"
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "sets": [
+    [
+     1002,
+     100,
+     null,
+     null,
+     "x1",
+     2,
+     -1,
+     1,
+     10,
+     10,
+     null,
+     null,
+     0,
+     null,
+     "x1",
+     "FROM the Vault: Lore",
+     null,
+     null,
+     null,
+     null,
+     "a"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gsr:21",
+  "db_id": "california_schools",
+  "labels": [
+   "filter_predicate",
+   "join_path",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(CDSCode) FROM frpm WHERE `County Name` = 'Los Angeles' AND `Free Meal Count (K-12)` > 500 AND `FRPM Count (K-12)`< 700",
+  "pred": "SELECT COUNT(*) FROM frpm JOIN schools ON frpm.CDSCode = schools.CDSCode WHERE schools.County = 'Los Angeles' AND frpm.`Free Meal Count (K-12)` > 500 AND frpm.`FRPM Count (K-12)` < 700;",
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1002",
+     null,
+     "a",
+     null,
+     "b",
+     "Los Angeles",
+     null,
+     null,
+     "Unified School District",
+     "High Schools (Public)",
+     "State Special School",
+     "Provision 1",
+     null,
+     null,
+     "Locally funded",
+     null,
+     "1",
+     null,
+     null,
+     501.0,
+     null,
+     699.0,
+     null,
+     null,
+     null,
+     null,
+     2.0,
+     null,
+     null
+    ]
+   ],
+   "schools": [
+    [
+     "v1002",
+     null,
+     null,
+     "Active",
+     "Los Angeles ",
+     "c",
+     "A",
+     "x1",
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "y2",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Directly funded",
+     "00",
+     "State Special Schools",
+     "65",
+     "Elementary Schools (Public)",
+     "CON",
+     "Special Education School",
+     "INTMIDJR",
+     "Elementary",
+     "b",
+     null,
+     "N",
+     2,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     "a",
+     null,
+     null,
+     null,
+     "2000-01-01"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:550",
+  "db_id": "codebase_community",
+  "labels": [
+   "empty_aggregate"
+  ],
+  "gold": "SELECT Body FROM posts WHERE id = ( SELECT ExcerptPostId FROM tags ORDER BY Count DESC LIMIT 1 )",
+  "pred": "SELECT Body FROM posts WHERE Id = (SELECT ExcerptPostId FROM tags WHERE `Count` = (SELECT MAX(`Count`) FROM tags) )",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "posts": [
+    [
+     1001,
+     -1,
+     null,
+     "2020-02-29 23:59:59",
+     null,
+     null,
+     null,
+     1002,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     1002,
+     null,
+     "2010-06-15 12:30:00",
+     null,
+     null,
+     "y2",
+     null
+    ]
+   ],
+   "tags": [
+    [
+     1003,
+     null,
+     null,
+     1001,
+     null
+    ]
+   ],
+   "users": [
+    [
+     1002,
+     0,
+     "2010-06-15 12:30:00",
+     null,
+     "2020-02-29 23:59:59",
+     null,
+     "x1",
+     "A",
+     null,
+     null,
+     null,
+     null,
+     0,
+     "x1"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_1:1033",
+  "db_id": "european_football_2",
+  "labels": [
+   "filter_predicate",
+   "null_semantics",
+   "numeric_type_division"
+  ],
+  "gold": "SELECT SUM(height) / COUNT(id) FROM Player WHERE SUBSTR(birthday, 1, 4) BETWEEN '1990' AND '1995'",
+  "pred": "SELECT CAST(SUM(height) AS REAL) / COUNT(id) FROM Player WHERE birthday >= '1990-01-01 00:00:00' AND birthday < '1996-01-01 00:00:00'",
+  "gold_rows": [
+   [
+    3
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Player": [
+    [
+     1002,
+     null,
+     null,
+     null,
+     "1990-01-01",
+     3,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gsr:1069",
+  "db_id": "european_football_2",
+  "labels": [
+   "empty_aggregate",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT player_name FROM player ORDER BY height ASC LIMIT 1",
+  "pred": "SELECT player_name FROM Player WHERE height = (SELECT MIN(height) FROM Player);",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "Player": [
+    [
+     1001,
+     -1,
+     null,
+     100,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_1:1514",
+  "db_id": "debit_card_specializing",
+  "labels": [
+   "duplicates_distinct",
+   "join_path"
+  ],
+  "gold": "SELECT DISTINCT T3.Currency FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID INNER JOIN customers AS T3 ON T1.CustomerID = T3.CustomerID WHERE T1.Date = '2012-08-24' AND T1.Time = '16:25:00'",
+  "pred": "SELECT T1.Currency FROM customers AS T1 INNER JOIN transactions_1k AS T2 ON T1.CustomerID = T2.CustomerID WHERE T2.Date = '2012-08-24' AND T2.Time = '16:25:00'",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "EUR"
+   ]
+  ],
+  "witness": {
+   "customers": [
+    [
+     1045,
+     "A",
+     "EUR"
+    ],
+    [
+     1007,
+     "A",
+     "CZK"
+    ]
+   ],
+   "gasstations": [
+    [
+     1008,
+     null,
+     "a",
+     "Noname"
+    ]
+   ],
+   "transactions_1k": [
+    [
+     1048,
+     "2012-08-24",
+     "16:25:00",
+     1045,
+     null,
+     1047,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-7b:1259",
+  "db_id": "thrombosis_prediction",
+  "labels": [
+   "duplicates_distinct",
+   "filter_predicate",
+   "null_semantics"
+  ],
+  "gold": "SELECT T1.Diagnosis FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE (T2.RA = '-' OR T2.RA = '+-') AND T1.Birthday > '1985-01-01'",
+  "pred": "SELECT DISTINCT T1.Diagnosis FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE STRFTIME('%Y', T1.Birthday) >= '1985' AND T2.RA IN ('-', '+-')",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Laboratory": [
+    [
+     1003,
+     "2004-09-25",
+     null,
+     null,
+     null,
+     1,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.0,
+     -1,
+     5,
+     null,
+     null,
+     null,
+     null,
+     -1.5,
+     null,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     null,
+     null,
+     "-",
+     null,
+     null,
+     null,
+     null,
+     "b",
+     "4",
+     "256",
+     "0",
+     "0",
+     null,
+     null
+    ]
+   ],
+   "Patient": [
+    [
+     1003,
+     "M",
+     "1985-01-01",
+     "2000-01-01",
+     null,
+     "+",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "omni-32-majority:345",
+  "db_id": "card_games",
+  "labels": [
+   "duplicates_distinct",
+   "filter_predicate"
+  ],
+  "gold": "SELECT DISTINCT T2.status FROM cards AS T1 INNER JOIN legalities AS T2 ON T1.uuid = T2.uuid WHERE T1.type = 'Artifact' AND T2.format = 'vintage' AND T1.side IS NULL",
+  "pred": "SELECT legalities.status FROM cards INNER JOIN legalities ON cards.uuid = legalities.uuid WHERE cards.types = 'Artifact' AND cards.side IS NULL AND legalities.format = 'vintage';",
+  "gold_rows": [
+   [
+    "Restricted"
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "cards": [
+    [
+     1003,
+     null,
+     "Junun Efreet",
+     "mtgo",
+     "a",
+     null,
+     null,
+     "b",
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     "a",
+     "Spacegodzilla, Death Corona",
+     null,
+     null,
+     "2003",
+     "-4",
+     10,
+     100,
+     3,
+     0,
+     1,
+     3,
+     10,
+     2,
+     100,
+     1,
+     -1,
+     5,
+     -1,
+     5,
+     1,
+     null,
+     "normal",
+     "{'brawl': False, 'commander': False, 'oathbreaker': True}",
+     "9",
+     "X",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     "12",
+     null,
+     null,
+     null,
+     "uncommon",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     "Legendary",
+     "A",
+     null,
+     "a",
+     "Artifact",
+     "A",
+     "y2",
+     "y2",
+     null
+    ]
+   ],
+   "legalities": [
+    [
+     1004,
+     "vintage",
+     "Restricted",
+     "y2"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-32b:1033",
+  "db_id": "european_football_2",
+  "labels": [
+   "filter_predicate",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT SUM(height) / COUNT(id) FROM Player WHERE SUBSTR(birthday, 1, 4) BETWEEN '1990' AND '1995'",
+  "pred": "SELECT AVG(height) FROM Player WHERE birthday >= '1990-01-01 00:00:00' AND birthday < '1996-01-01 00:00:00'",
+  "gold_rows": [
+   [
+    3
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Player": [
+    [
+     1002,
+     null,
+     null,
+     null,
+     "1990-01-01",
+     3,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_1:81",
+  "db_id": "california_schools",
+  "labels": [
+   "order_limit_ties",
+   "projection"
+  ],
+  "gold": "SELECT T2.City, T1.`Low Grade`, T1.`School Name` FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.State = 'CA' ORDER BY T2.Latitude ASC LIMIT 1",
+  "pred": "SELECT T1.City, T2.\"Low Grade\", T1.School FROM schools AS T1 INNER JOIN frpm AS T2 ON T1.CDSCode = T2.CDSCode WHERE T1.State = 'CA' ORDER BY T1.Latitude ASC LIMIT 1",
+  "gold_rows": [
+   [
+    "v1017",
+    "11",
+    "v1014"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "v1017",
+    "11",
+    "v1016"
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1013",
+     "A",
+     null,
+     100,
+     null,
+     null,
+     null,
+     "v1014",
+     "Elementary School District",
+     "County Community",
+     "Juvenile Court School",
+     "CEP",
+     3,
+     null,
+     null,
+     10,
+     "11",
+     "3",
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     1.0,
+     null,
+     1.0,
+     null,
+     10.0,
+     null
+    ],
+    [
+     "v1001",
+     "A",
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     "Elementary School District",
+     "County Community",
+     "Juvenile Court School",
+     "CEP",
+     3,
+     null,
+     null,
+     10,
+     "9",
+     "3",
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     1.0,
+     null,
+     1.0,
+     null,
+     10.0,
+     null
+    ]
+   ],
+   "schools": [
+    [
+     "v1013",
+     null,
+     "b",
+     "b",
+     "b",
+     "A",
+     "v1016",
+     "x1",
+     "A",
+     "v1017",
+     null,
+     "CA",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Locally funded",
+     "54",
+     "State Special Schools",
+     "60",
+     "a",
+     "TRAD",
+     "Community Day School",
+     "A",
+     null,
+     null,
+     "b",
+     "P",
+     -1,
+     null,
+     null,
+     null,
+     "c",
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     "2015-03-20"
+    ],
+    [
+     "v1001",
+     null,
+     "b",
+     "b",
+     "b",
+     "A",
+     null,
+     "x1",
+     "A",
+     null,
+     null,
+     "CA",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Locally funded",
+     "54",
+     "State Special Schools",
+     "60",
+     "a",
+     "HOMHOS",
+     "District Special Education Consortia School",
+     "A",
+     null,
+     null,
+     "b",
+     "P",
+     -1,
+     null,
+     null,
+     null,
+     "c",
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     "2015-03-20"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_2:1171",
+  "db_id": "thrombosis_prediction",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "gold": "SELECT COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Examination AS T2 ON T1.ID = T2.ID WHERE STRFTIME('%Y', T2.`Examination Date`) BETWEEN '1990' AND '1993' AND STRFTIME('%Y', T2.`Examination Date`) - STRFTIME('%Y', T1.Birthday) < 18",
+  "pred": "SELECT COUNT(DISTINCT T1.ID) \nFROM Patient AS T1 \nINNER JOIN Examination AS T2 ON T1.ID = T2.ID \nWHERE STRFTIME('%Y', T2.\"Examination Date\") BETWEEN '1990' AND '1993' \n  AND (STRFTIME('%Y', T2.\"Examination Date\") - STRFTIME('%Y', T1.Birthday)) < 18;",
+  "gold_rows": [
+   [
+    2
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "Examination": [
+    [
+     1001,
+     "1990-01-01",
+     -1.5,
+     null,
+     100,
+     "P.S",
+     10,
+     null,
+     "+",
+     "-",
+     null,
+     null,
+     null
+    ],
+    [
+     1001,
+     "1990-01-01",
+     -1.5,
+     null,
+     100,
+     "P.S",
+     10,
+     null,
+     "+",
+     "-",
+     null,
+     null,
+     null
+    ]
+   ],
+   "Patient": [
+    [
+     1001,
+     "M",
+     "2010-06-15",
+     null,
+     null,
+     "+",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "rsl:1116",
+  "db_id": "european_football_2",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "gold": "SELECT player_name FROM (SELECT player_name, height, DENSE_RANK() OVER (ORDER BY height DESC) as rank FROM Player) WHERE rank = 1",
+  "pred": "SELECT `player_name` FROM `player` ORDER BY `height` DESC LIMIT 1",
+  "gold_rows": [
+   [
+    null
+   ],
+   [
+    "y2"
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Player": [
+    [
+     1001,
+     -1,
+     null,
+     100,
+     null,
+     null,
+     null
+    ],
+    [
+     1006,
+     null,
+     "y2",
+     3,
+     null,
+     null,
+     10
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_1:20",
+  "db_id": "california_schools",
+  "labels": [
+   "filter_predicate",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(T1.`School Name`) FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.County = 'Amador' AND T1.`Low Grade` = 9 AND T1.`High Grade` = 12",
+  "pred": "SELECT COUNT(*) FROM schools AS T1 INNER JOIN frpm AS T2 ON T1.CDSCode = T2.CDSCode WHERE T1.County = 'Amador' AND T2.\"Low Grade\" = '9' AND T2.\"High Grade\" = '12'",
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1001",
+     "A",
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     "Elementary School District",
+     "County Community",
+     "Juvenile Court School",
+     "CEP",
+     3,
+     null,
+     null,
+     10,
+     "9",
+     "12",
+     null,
+     null,
+     null,
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     1.0,
+     null,
+     1
+    ]
+   ],
+   "schools": [
+    [
+     "v1001",
+     null,
+     "c",
+     "Merged",
+     "Amador",
+     "a",
+     null,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     "b",
+     "2020-02-29",
+     null,
+     null,
+     null,
+     null,
+     "42",
+     "Joint Powers Authority (JPA)",
+     "10",
+     "Juvenile Court Schools",
+     "JUV",
+     "County Community School",
+     "a",
+     "Preschool",
+     "x1",
+     null,
+     "P",
+     null,
+     0.0,
+     -1.5,
+     null,
+     null,
+     null,
+     "c",
+     null,
+     null,
+     null,
+     null,
+     "b",
+     "2015-03-20"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:591",
+  "db_id": "codebase_community",
+  "labels": [
+   "duplicates_distinct",
+   "join_path",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(Id) FROM badges WHERE STRFTIME('%Y', Date) = '2011' AND Name = 'Supporter'",
+  "pred": "SELECT COUNT(DISTINCT b.UserId) FROM badges AS b INNER JOIN users AS u ON b.UserId = u.Id WHERE b.Name = 'Supporter' AND STRFTIME('%Y', b.Date) = '2011'",
+  "gold_rows": [
+   [
+    2
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "badges": [
+    [
+     1001,
+     1002,
+     "Supporter",
+     "2011-01-01"
+    ],
+    [
+     1033,
+     1002,
+     "Supporter",
+     "2011-01-01"
+    ]
+   ],
+   "users": [
+    [
+     1002,
+     -1,
+     null,
+     "A",
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-32b:591",
+  "db_id": "codebase_community",
+  "labels": [
+   "duplicates_distinct",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(Id) FROM badges WHERE STRFTIME('%Y', Date) = '2011' AND Name = 'Supporter'",
+  "pred": "SELECT COUNT(DISTINCT UserId) FROM badges WHERE Name = 'Supporter' AND STRFTIME('%Y', Date) = '2011'",
+  "gold_rows": [
+   [
+    2
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "badges": [
+    [
+     1001,
+     1002,
+     "Supporter",
+     "2011-01-01"
+    ],
+    [
+     1033,
+     1002,
+     "Supporter",
+     "2011-01-01"
+    ]
+   ],
+   "users": [
+    [
+     1002,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-32b:18",
+  "db_id": "california_schools",
+  "labels": [
+   "filter_predicate",
+   "join_path",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(T1.CDSCode) FROM frpm AS T1 INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds WHERE T1.`Charter Funding Type` = 'Directly funded' AND T1.`County Name` = 'Fresno' AND T2.NumTstTakr <= 250",
+  "pred": "SELECT COUNT(*) FROM schools JOIN satscores ON schools.CDSCode = satscores.cds WHERE schools.County = 'Fresno' AND schools.FundingType = 'Directly funded' AND satscores.NumTstTakr <= 250",
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1003",
+     "A",
+     null,
+     null,
+     "a",
+     "b",
+     null,
+     "y2",
+     "Unified School District",
+     "K-12 Schools (Public)",
+     "State Special School",
+     "Provision 1",
+     null,
+     null,
+     "Directly funded",
+     100,
+     null,
+     "13",
+     null,
+     1.5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ],
+   "satscores": [
+    [
+     "v1003",
+     "D",
+     null,
+     null,
+     null,
+     3,
+     250,
+     null,
+     null,
+     null,
+     null
+    ]
+   ],
+   "schools": [
+    [
+     "v1003",
+     null,
+     null,
+     "Pending",
+     "Fresno",
+     "c",
+     null,
+     null,
+     "A",
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     "2000-01-01",
+     null,
+     null,
+     null,
+     "Directly funded",
+     "00",
+     "Unified School District",
+     "70",
+     null,
+     null,
+     "Juvenile Court School",
+     "ELEM",
+     "High School",
+     null,
+     null,
+     "F",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     null,
+     null,
+     "2000-01-01"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:1173",
+  "db_id": "thrombosis_prediction",
+  "labels": [
+   "empty_aggregate",
+   "filter_predicate",
+   "grouping",
+   "join_path",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT T2.Diagnosis FROM Examination AS T1 INNER JOIN Patient AS T2 ON T1.ID = T2.ID WHERE T1.`Examination Date` BETWEEN '1985-01-01' AND '1995-12-31' GROUP BY T2.Diagnosis ORDER BY COUNT(T2.Diagnosis) DESC LIMIT 1",
+  "pred": "SELECT Examination.Diagnosis FROM Examination INNER JOIN Laboratory ON Examination.ID = Laboratory.ID WHERE Laboratory.`Date` BETWEEN '1985-01-01' AND '1995-12-31' GROUP BY Examination.Diagnosis ORDER BY COUNT(*) DESC LIMIT 1",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Examination": [
+    [
+     1003,
+     null,
+     null,
+     null,
+     null,
+     "D,P",
+     null,
+     null,
+     "-",
+     null,
+     "+",
+     "a",
+     null
+    ]
+   ],
+   "Laboratory": [
+    [
+     1003,
+     "1985-01-01",
+     null,
+     null,
+     null,
+     null,
+     null,
+     -1.5,
+     null,
+     -1,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.0,
+     100.0,
+     null,
+     1.0,
+     -1,
+     null,
+     2,
+     1.5,
+     -1,
+     -1,
+     null,
+     "-",
+     2,
+     null,
+     null,
+     null,
+     "+",
+     null,
+     -1,
+     null,
+     "15",
+     null,
+     "0",
+     "256",
+     "32",
+     "0",
+     null,
+     null
+    ]
+   ],
+   "Patient": [
+    [
+     1003,
+     "M",
+     null,
+     "2020-02-29",
+     "2000-01-01",
+     "+(",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:1293",
+  "db_id": "thrombosis_prediction",
+  "labels": [
+   "empty_aggregate",
+   "join_path",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT T2.ANA FROM Patient AS T1 INNER JOIN Examination AS T2 ON T1.ID = T2.ID INNER JOIN Laboratory AS T3 ON T1.ID = T3.ID WHERE T3.CRE < 1.5 ORDER BY T2.ANA DESC LIMIT 1",
+  "pred": "SELECT MAX(E.ANA) AS highest_ana FROM Examination E INNER JOIN Laboratory L ON E.ID = L.ID WHERE L.CRE < 1.5",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Examination": [
+    [
+     1031,
+     null,
+     null,
+     1.5,
+     null,
+     "P,S",
+     null,
+     null,
+     null,
+     "-",
+     "+",
+     null,
+     null
+    ]
+   ],
+   "Laboratory": [
+    [
+     1031,
+     "2002-01-25",
+     null,
+     null,
+     null,
+     null,
+     3.25,
+     null,
+     null,
+     null,
+     1.5,
+     null,
+     1,
+     100,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0.0,
+     null,
+     null,
+     null,
+     null,
+     2,
+     100,
+     null,
+     "100",
+     100,
+     null,
+     100,
+     "y2",
+     "+",
+     null,
+     1,
+     null,
+     "c",
+     "a",
+     "0",
+     "negative",
+     "2",
+     "negative",
+     null,
+     null
+    ]
+   ],
+   "Patient": [
+    [
+     1031,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gsr:1191",
+  "db_id": "thrombosis_prediction",
+  "labels": [
+   "null_semantics",
+   "numeric_type_division",
+   "projection"
+  ],
+  "gold": "SELECT CAST(SUM(CASE WHEN Diagnosis = 'BEHCET' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(ID) FROM Patient WHERE STRFTIME('%Y', `First Date`) = '1981' AND SEX = 'M'",
+  "pred": "SELECT (CAST(SUM(DIAGNOSIS = 'BEHCET') AS FLOAT) * 100.0 / CAST(COUNT(*) AS FLOAT)) AS percentage FROM Patient WHERE SEX = 'M' AND strftime('%Y', `First Date`) = '1981';",
+  "gold_rows": [
+   [
+    0.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Patient": [
+    [
+     1092,
+     "M",
+     "1995-12-31",
+     null,
+     "1981-01-01",
+     "-",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "omni-32-majority:401",
+  "db_id": "card_games",
+  "labels": [
+   "null_semantics",
+   "numeric_type_division",
+   "projection"
+  ],
+  "gold": "SELECT SUM(CASE WHEN isOnlineOnly = 1 THEN 1.0 ELSE 0 END) / COUNT(id) * 100 FROM cards WHERE frameEffects = 'legendary'",
+  "pred": "SELECT (CAST(SUM(CASE WHEN isOnlineOnly = 1 THEN 1 ELSE 0 END) AS REAL) * 100.0) / COUNT(*) AS percentage FROM cards WHERE frameEffects = 'legendary';",
+  "gold_rows": [
+   [
+    66.66666666666666
+   ]
+  ],
+  "pred_rows": [
+   [
+    66.66666666666667
+   ]
+  ],
+  "witness": {
+   "cards": [
+    [
+     1003,
+     "b",
+     "A",
+     "A",
+     "white",
+     null,
+     null,
+     "y2",
+     "G",
+     null,
+     null,
+     "b",
+     null,
+     2.0,
+     null,
+     "Spacegodzilla, Death Corona",
+     null,
+     "legendary",
+     "1997",
+     null,
+     5,
+     10,
+     3,
+     1,
+     0,
+     10,
+     1,
+     1,
+     100,
+     100,
+     10,
+     3,
+     5,
+     3,
+     10,
+     null,
+     null,
+     "{'brawl': True, 'commander': False, 'oathbreaker': True}",
+     "-4",
+     "X",
+     null,
+     "b",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "A",
+     "11",
+     null,
+     null,
+     null,
+     "rare",
+     null,
+     "b",
+     null,
+     null,
+     "a",
+     null,
+     "b",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "A",
+     null,
+     null
+    ],
+    [
+     1010,
+     "A",
+     "Juzam Djinn",
+     "arena,paper",
+     "c",
+     null,
+     "x1",
+     null,
+     "G",
+     null,
+     null,
+     "b",
+     3,
+     null,
+     null,
+     "Spacegodzilla, Death Corona",
+     null,
+     "legendary",
+     "2015",
+     "-1",
+     100,
+     5,
+     1,
+     -1,
+     1,
+     10,
+     1,
+     10,
+     2,
+     0,
+     3,
+     100,
+     10,
+     100,
+     5,
+     null,
+     "flip",
+     "{'brawl': True, 'commander': False, 'oathbreaker': True}",
+     "-4",
+     "2",
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     "2012-02-22 00:00:00",
+     "x1",
+     null,
+     "b",
+     "13",
+     "A",
+     null,
+     null,
+     "rare",
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     "World",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null
+    ],
+    [
+     1026,
+     null,
+     "Dandan",
+     "paper",
+     "gold",
+     null,
+     null,
+     null,
+     "G,R,W",
+     null,
+     null,
+     "b",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "legendary",
+     "1997",
+     "0",
+     2,
+     -1,
+     1,
+     1,
+     5,
+     0,
+     0,
+     2,
+     10,
+     10,
+     -1,
+     3,
+     3,
+     3,
+     -1,
+     null,
+     "flip",
+     null,
+     "5",
+     "6",
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "c",
+     null,
+     "6",
+     null,
+     null,
+     null,
+     "rare",
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     "Ongoing",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "c",
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-32b:0",
+  "db_id": "california_schools",
+  "labels": [
+   "empty_aggregate",
+   "numeric_type_division",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT `Free Meal Count (K-12)` / `Enrollment (K-12)` FROM frpm WHERE `County Name` = 'Alameda' ORDER BY (CAST(`Free Meal Count (K-12)` AS REAL) / `Enrollment (K-12)`) DESC LIMIT 1",
+  "pred": "SELECT MAX(`Free Meal Count (K-12)` / `Enrollment (K-12)`) AS HighestEligibleFreeRate FROM frpm WHERE `County Name` = 'Alameda'",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1016",
+     null,
+     null,
+     null,
+     null,
+     "c",
+     null,
+     null,
+     "Unified School District",
+     "Intermediate/Middle Schools (Public)",
+     "County Community School",
+     "A",
+     null,
+     null,
+     "Directly funded",
+     null,
+     "A",
+     "a",
+     null,
+     null,
+     null,
+     null,
+     2.0,
+     null,
+     null,
+     null,
+     null,
+     2.0,
+     null
+    ]
+   ],
+   "schools": [
+    [
+     "v1016",
+     null,
+     null,
+     "Pending",
+     "c",
+     "A",
+     null,
+     "y2",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     null,
+     null,
+     "Directly funded",
+     "56",
+     "Joint Powers Authority (JPA)",
+     "60",
+     "a",
+     "CON",
+     "State Special School",
+     "UG",
+     "Intermediate/Middle/Junior High",
+     null,
+     null,
+     "b",
+     null,
+     -1.5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "2010-06-15"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:1026",
+  "db_id": "european_football_2",
+  "labels": [
+   "grouping",
+   "join_path",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT teamDetails.team_long_name FROM Match AS matchData INNER JOIN Team AS teamDetails ON matchData.home_team_api_id = teamDetails.team_api_id WHERE matchData.season = '2015/2016' AND matchData.home_team_goal - matchData.away_team_goal < 0 GROUP BY matchData.home_team_api_id ORDER BY COUNT(*) ASC LIMIT 1",
+  "pred": "SELECT team.team_long_name FROM team INNER JOIN (SELECT home_team_api_id, COUNT(*) AS losses FROM match WHERE season = '2015/2016' AND home_team_goal - away_team_goal < 0 GROUP BY home_team_api_id ORDER BY losses ASC LIMIT 1) AS losses ON team.team_api_id = losses.home_team_api_id",
+  "gold_rows": [
+   [
+    "x1"
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "Match": [
+    [
+     5826,
+     null,
+     100,
+     "2015/2016",
+     null,
+     null,
+     null,
+     3,
+     3,
+     -1,
+     5,
+     null,
+     null,
+     1,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     2,
+     null,
+     5,
+     null,
+     null,
+     -1,
+     null,
+     null,
+     -1,
+     null,
+     -1,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1,
+     null,
+     null,
+     1,
+     -1,
+     null,
+     null,
+     3,
+     -1,
+     -1,
+     null,
+     null,
+     0,
+     null,
+     2,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     2,
+     null,
+     null,
+     3,
+     10,
+     null,
+     null,
+     null,
+     1,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     -1.5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.5,
+     null,
+     null,
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     100.0
+    ],
+    [
+     5881,
+     null,
+     100,
+     "2015/2016",
+     null,
+     null,
+     null,
+     null,
+     3,
+     -1,
+     5,
+     null,
+     null,
+     1,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     2,
+     null,
+     5,
+     null,
+     null,
+     -1,
+     null,
+     null,
+     -1,
+     null,
+     -1,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1,
+     null,
+     null,
+     1,
+     -1,
+     null,
+     null,
+     3,
+     -1,
+     -1,
+     null,
+     null,
+     0,
+     null,
+     2,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     2,
+     null,
+     null,
+     3,
+     10,
+     null,
+     null,
+     null,
+     1,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     -1.5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.5,
+     null,
+     null,
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     100.0
+    ]
+   ],
+   "Team": [
+    [
+     1002,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     5880,
+     100,
+     null,
+     null,
+     "a"
+    ],
+    [
+     5828,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     5915,
+     3,
+     null,
+     "x1",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_2:1034",
+  "db_id": "european_football_2",
+  "labels": [
+   "empty_aggregate"
+  ],
+  "gold": "SELECT player_api_id FROM Player_Attributes WHERE SUBSTR(`date`, 1, 4) = '2010' ORDER BY overall_rating DESC LIMIT 1",
+  "pred": "SELECT T1.player_api_id FROM Player_Attributes AS T1 WHERE SUBSTR(T1.date, 1, 4) = '2010' AND T1.overall_rating > ( SELECT AVG(overall_rating) FROM Player_Attributes WHERE SUBSTR(date, 1, 4) = '2010' ) ORDER BY T1.overall_rating DESC LIMIT 1",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "Player": [
+    [
+     1003,
+     null,
+     null,
+     100,
+     null,
+     1,
+     null
+    ]
+   ],
+   "Player_Attributes": [
+    [
+     1002,
+     100,
+     null,
+     "2010-01-01",
+     null,
+     3,
+     "right",
+     "le",
+     "4",
+     3,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1,
+     null,
+     10,
+     null,
+     null,
+     0,
+     0,
+     null,
+     100,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     0,
+     5,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:9",
+  "db_id": "california_schools",
+  "labels": [
+   "filter_predicate",
+   "join_path",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(T2.`School Code`) FROM satscores AS T1 INNER JOIN frpm AS T2 ON T1.cds = T2.CDSCode WHERE T1.AvgScrMath > 560 AND T2.`Charter Funding Type` = 'Directly funded'",
+  "pred": "SELECT COUNT(T2.CDSCode) AS filtered_school_count FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode WHERE T1.AvgScrMath > 560 AND T2.FundingType = 'Directly funded'",
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1001",
+     "A",
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     "Elementary School District",
+     "County Community",
+     "Juvenile Court School",
+     "CEP",
+     3,
+     null,
+     "Directly funded",
+     null,
+     "9",
+     "8",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.0,
+     null,
+     1
+    ]
+   ],
+   "satscores": [
+    [
+     "v1001",
+     "S",
+     null,
+     null,
+     "b",
+     0,
+     3,
+     100,
+     561,
+     null,
+     100
+    ]
+   ],
+   "schools": [
+    [
+     "v1001",
+     null,
+     null,
+     "Pending",
+     "x1",
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     "2020-02-29",
+     null,
+     5,
+     null,
+     "Directly funded",
+     "42",
+     "State Special Schools",
+     "63",
+     "Adult Education Centers",
+     "SSS",
+     "Juvenile Court School",
+     "PS",
+     "High School",
+     null,
+     null,
+     "P",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     "2020-02-29"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_1:1452",
+  "db_id": "student_club",
+  "labels": [
+   "numeric_type_division",
+   "projection"
+  ],
+  "gold": "SELECT AVG(T1.cost) FROM expense AS T1 INNER JOIN member as T2 ON T1.link_to_member = T2.member_id WHERE T2.position != 'Member'",
+  "pred": "SELECT CAST(SUM(T1.cost) AS REAL) / COUNT(T1.link_to_member) FROM expense AS T1 INNER JOIN member AS T2 ON T1.link_to_member = T2.member_id WHERE T2.position != 'Member'",
+  "gold_rows": [
+   [
+    3.25
+   ]
+  ],
+  "pred_rows": [
+   [
+    1.625
+   ]
+  ],
+  "witness": {
+   "budget": [
+    [
+     "recexNBMuCY9emh6y",
+     "Club T-Shirts",
+     null,
+     null,
+     null,
+     "Open",
+     "recs4x1BYWAsU2SKg"
+    ],
+    [
+     "recr60T1tLsfdICV8",
+     null,
+     null,
+     null,
+     null,
+     "Open",
+     "recmbOVHSyzXQZpQr"
+    ]
+   ],
+   "event": [
+    [
+     "recs4x1BYWAsU2SKg",
+     null,
+     null,
+     "Meeting",
+     "All active members can vote for new officers between 4pm-8pm.",
+     "Campus Soccer/Lacrosse stadium",
+     "Planning"
+    ],
+    [
+     "recmbOVHSyzXQZpQr",
+     null,
+     null,
+     "Community Service",
+     "Monthly officers meeting",
+     "Various locations",
+     "Closed"
+    ]
+   ],
+   "expense": [
+    [
+     "v1003",
+     "Alumni Glass",
+     "2019-09-01",
+     3.25,
+     null,
+     "rec4BLdZHS2Blfp4v",
+     "recexNBMuCY9emh6y"
+    ],
+    [
+     "v1052",
+     "Travel Mug",
+     "2019-09-01",
+     null,
+     "x1",
+     "recro8T1MPMwRadVH",
+     "recr60T1tLsfdICV8"
+    ]
+   ],
+   "major": [
+    [
+     "recXLfKqMqRArcKNg",
+     null,
+     null,
+     "College of Science"
+    ],
+    [
+     "recAiT3yTABWypvHu",
+     null,
+     null,
+     "College of Science"
+    ],
+    [
+     "recB3VldnYdFtttTk",
+     null,
+     "a",
+     "College of Humanities and Social Sciences"
+    ],
+    [
+     "recaJdSK83k6ekRJL",
+     null,
+     "b",
+     "College of Engineering"
+    ]
+   ],
+   "member": [
+    [
+     "v1004",
+     null,
+     null,
+     null,
+     "a",
+     "Small",
+     null,
+     1006,
+     "recXLfKqMqRArcKNg"
+    ],
+    [
+     "v1053",
+     null,
+     null,
+     null,
+     "a",
+     "Small",
+     null,
+     1055,
+     "recAiT3yTABWypvHu"
+    ],
+    [
+     "rec4BLdZHS2Blfp4v",
+     null,
+     null,
+     null,
+     "A",
+     "Medium",
+     "y2",
+     1056,
+     "recB3VldnYdFtttTk"
+    ],
+    [
+     "recro8T1MPMwRadVH",
+     null,
+     null,
+     null,
+     "Treasurer",
+     "Small",
+     null,
+     1058,
+     "recaJdSK83k6ekRJL"
+    ]
+   ],
+   "zip_code": [
+    [
+     1006,
+     "Unique",
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     1055,
+     "b",
+     "a",
+     null,
+     null,
+     null
+    ],
+    [
+     1056,
+     "PO Box",
+     "a",
+     null,
+     null,
+     null
+    ],
+    [
+     1058,
+     "b",
+     "b",
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_1:1030",
+  "db_id": "european_football_2",
+  "labels": [
+   "other"
+  ],
+  "gold": "SELECT t2.name FROM Match AS t1 INNER JOIN League AS t2 ON t1.league_id = t2.id WHERE t1.season = '2015/2016' AND t1.home_team_goal = t1.away_team_goal GROUP BY t2.name ORDER BY COUNT(t1.id) DESC LIMIT 1",
+  "pred": "SELECT T1.name FROM League AS T1 INNER JOIN Match AS T2 ON T1.id = T2.league_id WHERE T2.season = '2015/2016' GROUP BY T1.name ORDER BY SUM(T2.home_team_goal = T2.away_team_goal) DESC LIMIT 1",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "Portugal Liga ZON Sagres"
+   ]
+  ],
+  "witness": {
+   "Country": [
+    [
+     1001,
+     "France"
+    ]
+   ],
+   "League": [
+    [
+     1002,
+     1001,
+     "Portugal Liga ZON Sagres"
+    ]
+   ],
+   "Match": [
+    [
+     1003,
+     null,
+     1002,
+     "2015/2016",
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1,
+     null,
+     10,
+     null,
+     null,
+     0,
+     0,
+     null,
+     100,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     0,
+     5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1,
+     -1,
+     5,
+     null,
+     null,
+     null,
+     null,
+     -1,
+     null,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     2.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.0,
+     null,
+     null,
+     2.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     2.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0.0,
+     null,
+     100.0,
+     1.5,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "rsl:184",
+  "db_id": "financial",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "gold": "SELECT COUNT(T1.client_id) FROM client AS T1 INNER JOIN disp AS T2 ON T1.client_id = T2.client_id INNER JOIN card AS T3 ON T2.disp_id = T3.disp_id WHERE T1.gender = 'F' AND T3.type = 'junior'",
+  "pred": "SELECT COUNT(DISTINCT `client`.`client_id`) FROM `client` INNER JOIN `disp` ON `client`.`client_id` = `disp`.`client_id` INNER JOIN `card` ON `disp`.`disp_id` = `card`.`disp_id` WHERE `client`.`gender` = 'F' AND `card`.`type` = 'junior'",
+  "gold_rows": [
+   [
+    2
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "account": [
+    [
+     1001,
+     1115,
+     "POPLATEK MESICNE",
+     "2000-01-01"
+    ]
+   ],
+   "card": [
+    [
+     1003,
+     1004,
+     "junior",
+     "2015-03-20"
+    ],
+    [
+     1116,
+     1004,
+     "junior",
+     "2015-03-20"
+    ]
+   ],
+   "client": [
+    [
+     1005,
+     "F",
+     "2015-03-20",
+     1002
+    ]
+   ],
+   "disp": [
+    [
+     1004,
+     1005,
+     1001,
+     "OWNER"
+    ]
+   ],
+   "district": [
+    [
+     1002,
+     "A",
+     "south Moravia",
+     "x1",
+     "a",
+     "b",
+     "9",
+     2,
+     1,
+     2.0,
+     5,
+     null,
+     100.0,
+     10,
+     null,
+     100
+    ],
+    [
+     1115,
+     "c",
+     "Prague",
+     "a",
+     "c",
+     "x1",
+     "0",
+     2,
+     10,
+     10.0,
+     5,
+     null,
+     -1.5,
+     0,
+     null,
+     10
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-32b:1389",
+  "db_id": "student_club",
+  "labels": [
+   "grouping",
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT T1.event_name FROM event AS T1 INNER JOIN budget AS T2 ON T1.event_id = T2.link_to_event INNER JOIN expense AS T3 ON T2.budget_id = T3.link_to_budget ORDER BY T3.cost LIMIT 1",
+  "pred": "SELECT e.event_name FROM event e JOIN budget b ON e.event_id = b.link_to_event JOIN expense ex ON b.budget_id = ex.link_to_budget GROUP BY e.event_name ORDER BY MIN(ex.cost) ASC LIMIT 1",
+  "gold_rows": [
+   [
+    "A"
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "budget": [
+    [
+     "v1001",
+     "A",
+     null,
+     100.0,
+     null,
+     null,
+     "recc8dizaKrSz3GmH"
+    ],
+    [
+     "v1130",
+     "A",
+     null,
+     100.0,
+     null,
+     null,
+     "recggMW2eyCYceNcy"
+    ],
+    [
+     "rec5V70sIuIgpOzDT",
+     "Parking",
+     null,
+     null,
+     null,
+     "Closed",
+     "rec0akZnLLpGUloLH"
+    ],
+    [
+     "recutlCwBNym7tS12",
+     "Club T-Shirts",
+     null,
+     null,
+     null,
+     "Open",
+     "recMKjJbWRgSQqf4Y"
+    ]
+   ],
+   "event": [
+    [
+     "v1002",
+     null,
+     null,
+     "Guest Speaker",
+     "Students can stop by the table to get information on the club and register.",
+     "Campus Soccer/Lacrosse stadium",
+     "Planning"
+    ],
+    [
+     "v1131",
+     "v1132",
+     null,
+     "Guest Speaker",
+     "Students can stop by the table to get information on the club and register.",
+     "Campus Soccer/Lacrosse stadium",
+     "Planning"
+    ],
+    [
+     "recc8dizaKrSz3GmH",
+     null,
+     null,
+     "c",
+     "Semester social event. Optional attendance.",
+     "258 S. Maple St.",
+     "Planning"
+    ],
+    [
+     "recggMW2eyCYceNcy",
+     null,
+     null,
+     "Guest Speaker",
+     "Attend school Woman's Lacrosse game as a group.",
+     "Various locations",
+     "Closed"
+    ],
+    [
+     "rec0akZnLLpGUloLH",
+     "A",
+     null,
+     null,
+     null,
+     null,
+     "Closed"
+    ],
+    [
+     "recMKjJbWRgSQqf4Y",
+     null,
+     null,
+     "Game",
+     "Attend Women's soccer game as a group.",
+     "900 E. Washington St.",
+     "b"
+    ]
+   ],
+   "expense": [
+    [
+     "v1003",
+     "Bakery - Donuts, muffins",
+     "2019-09-18",
+     3.25,
+     null,
+     "recro8T1MPMwRadVH",
+     "rec5V70sIuIgpOzDT"
+    ],
+    [
+     "v1133",
+     "Alumni Glass",
+     "2019-09-15",
+     3.25,
+     null,
+     "recD078PnS3x2doBe",
+     "recutlCwBNym7tS12"
+    ]
+   ],
+   "major": [
+    [
+     "recObV24Ass2ouQHK",
+     "y2",
+     null,
+     "School of Business"
+    ],
+    [
+     "rectez0Ce1okUhv8w",
+     null,
+     null,
+     "School of Business"
+    ]
+   ],
+   "member": [
+    [
+     "recro8T1MPMwRadVH",
+     null,
+     null,
+     "y2",
+     "Inactive",
+     "Medium",
+     "y2",
+     1137,
+     "recObV24Ass2ouQHK"
+    ],
+    [
+     "recD078PnS3x2doBe",
+     "c",
+     null,
+     null,
+     "President",
+     "Medium",
+     null,
+     1139,
+     "rectez0Ce1okUhv8w"
+    ]
+   ],
+   "zip_code": [
+    [
+     1137,
+     "Unique",
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     1139,
+     "PO Box",
+     null,
+     null,
+     "a",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gsr:1457",
+  "db_id": "student_club",
+  "labels": [
+   "empty_aggregate",
+   "join_path"
+  ],
+  "gold": "SELECT DISTINCT T3.first_name, T3.last_name, T3.phone FROM expense AS T1 INNER JOIN budget AS T2 ON T1.link_to_budget = T2.budget_id INNER JOIN member AS T3 ON T3.member_id = T1.link_to_member WHERE T1.cost > ( SELECT AVG(T1.cost) FROM expense AS T1 INNER JOIN budget AS T2 ON T1.link_to_budget = T2.budget_id INNER JOIN member AS T3 ON T3.member_id = T1.link_to_member )",
+  "pred": "SELECT DISTINCT m.first_name, m.last_name, m.phone FROM member m JOIN expense e ON m.member_id = e.link_to_member WHERE e.cost > (SELECT AVG(cost) FROM expense);",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null,
+    null,
+    null
+   ]
+  ],
+  "witness": {
+   "budget": [
+    [
+     "v1001",
+     "A",
+     null,
+     100.0,
+     null,
+     null,
+     "recY3Yesu24bRK7tr"
+    ],
+    [
+     "v1052",
+     "Parking",
+     1.0,
+     100.0,
+     null,
+     "a",
+     "reciRZdAqNIKuMC96"
+    ],
+    [
+     "rec5V70sIuIgpOzDT",
+     "Parking",
+     null,
+     null,
+     -1,
+     "Closed",
+     "recHaMmaKyfktt5fW"
+    ],
+    [
+     "recRQdaiKCxFAlPCy",
+     "Club T-Shirts",
+     null,
+     10.0,
+     3,
+     "a",
+     "rec180D2MI4EpckHy"
+    ]
+   ],
+   "event": [
+    [
+     "recY3Yesu24bRK7tr",
+     null,
+     null,
+     "c",
+     "Monthly officers meeting",
+     "Various locations",
+     "Open"
+    ],
+    [
+     "reciRZdAqNIKuMC96",
+     null,
+     null,
+     "Game",
+     null,
+     "Conference Room BA 452",
+     "Planning"
+    ],
+    [
+     "recHaMmaKyfktt5fW",
+     null,
+     null,
+     "Guest Speaker",
+     "Volunteer opportunity to help paint new home.",
+     "MU 215",
+     "a"
+    ],
+    [
+     "recmbOVHSyzXQZpQr",
+     null,
+     null,
+     "Community Service",
+     "All active members can vote for new officers between 4pm-8pm.",
+     "MU 215",
+     "Closed"
+    ],
+    [
+     "rec180D2MI4EpckHy",
+     null,
+     "2010-06-15 00:00:00",
+     null,
+     "Volunteer opportunity to remove graffiti in town.",
+     "Conference Room BA 452",
+     "c"
+    ]
+   ],
+   "expense": [
+    [
+     "v1003",
+     "Water, chips, cookies",
+     "2019-09-10",
+     3.25,
+     null,
+     "rec4BLdZHS2Blfp4v",
+     null
+    ],
+    [
+     "v1054",
+     "Post Cards, Posters",
+     "2019-08-20",
+     2.0,
+     null,
+     "recD078PnS3x2doBe",
+     "recRQdaiKCxFAlPCy"
+    ]
+   ],
+   "major": [
+    [
+     "recT9LoDnC8ZvdPqM",
+     null,
+     null,
+     "College of Natural Resources"
+    ],
+    [
+     "rec7BxKpjJ7bNph3O",
+     null,
+     null,
+     "College of Humanities and Social Sciences"
+    ],
+    [
+     "recf3mPmWq4JXKf4L",
+     null,
+     null,
+     "College of the Arts"
+    ],
+    [
+     "recCk8lCDOTRp6rKN",
+     null,
+     null,
+     "College of Agriculture and Applied Sciences"
+    ]
+   ],
+   "member": [
+    [
+     "v1004",
+     null,
+     null,
+     null,
+     "Treasurer",
+     "Large",
+     null,
+     1006,
+     "recT9LoDnC8ZvdPqM"
+    ],
+    [
+     "v1055",
+     null,
+     "A",
+     null,
+     "Vice President",
+     null,
+     null,
+     1057,
+     "rec7BxKpjJ7bNph3O"
+    ],
+    [
+     "rec4BLdZHS2Blfp4v",
+     null,
+     null,
+     null,
+     "b",
+     "Medium",
+     null,
+     1058,
+     "recf3mPmWq4JXKf4L"
+    ],
+    [
+     "recD078PnS3x2doBe",
+     null,
+     "A",
+     null,
+     "President",
+     "Large",
+     null,
+     1060,
+     "recCk8lCDOTRp6rKN"
+    ]
+   ],
+   "zip_code": [
+    [
+     1006,
+     "PO Box",
+     "x1",
+     null,
+     null,
+     null
+    ],
+    [
+     1057,
+     "Unique",
+     null,
+     null,
+     "b",
+     null
+    ],
+    [
+     1058,
+     "c",
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     1060,
+     "PO Box",
+     null,
+     null,
+     "c",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-7b:1532",
+  "db_id": "debit_card_specializing",
+  "labels": [
+   "filter_predicate",
+   "join_path"
+  ],
+  "gold": "SELECT T2.Country FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID WHERE T1.ProductID = 2 ORDER BY T1.Price DESC LIMIT 1",
+  "pred": "SELECT T3.Country FROM transactions_1k AS T1 JOIN products AS T2 ON T1.ProductID = T2.ProductID JOIN gasstations AS T3 ON T1.GasStationID = T3.GasStationID WHERE T2.ProductID = 2 ORDER BY T1.Price DESC LIMIT 1",
+  "gold_rows": [
+   [
+    "SVK"
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "gasstations": [
+    [
+     1001,
+     -1,
+     "SVK",
+     "Other"
+    ],
+    [
+     1007,
+     -1,
+     "SVK",
+     "Other"
+    ]
+   ],
+   "products": [
+    [
+     1,
+     "c"
+    ],
+    [
+     1008,
+     "c"
+    ]
+   ],
+   "transactions_1k": [
+    [
+     1002,
+     null,
+     "2010-06-15 00:00:00",
+     null,
+     null,
+     1001,
+     2,
+     null,
+     null
+    ],
+    [
+     1009,
+     null,
+     "2010-06-15 00:00:00",
+     null,
+     null,
+     1007,
+     1008,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:1389",
+  "db_id": "student_club",
+  "labels": [
+   "empty_aggregate"
+  ],
+  "gold": "SELECT T1.event_name FROM event AS T1 INNER JOIN budget AS T2 ON T1.event_id = T2.link_to_event INNER JOIN expense AS T3 ON T2.budget_id = T3.link_to_budget ORDER BY T3.cost LIMIT 1",
+  "pred": "SELECT event.event_name FROM expense INNER JOIN budget ON expense.link_to_budget = budget.budget_id INNER JOIN event ON budget.link_to_event = event.event_id WHERE expense.cost = (SELECT MIN(cost) FROM expense) ORDER BY expense.cost ASC LIMIT 1",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "budget": [
+    [
+     "v1010",
+     "Speaker Gifts",
+     null,
+     null,
+     null,
+     "Closed",
+     "recmbOVHSyzXQZpQr"
+    ],
+    [
+     "reczf4LoOK6z7oOec",
+     "Speaker Gifts",
+     null,
+     1.5,
+     null,
+     "Planning",
+     "recMKjJbWRgSQqf4Y"
+    ]
+   ],
+   "event": [
+    [
+     "v1011",
+     null,
+     null,
+     "Guest Speaker",
+     "Semester social event. Optional attendance.",
+     "MU 215",
+     "Open"
+    ],
+    [
+     "recmbOVHSyzXQZpQr",
+     null,
+     null,
+     "Meeting",
+     "All active members can vote for new officers between 4pm-8pm.",
+     "Conference Room BA 452",
+     "Planning"
+    ],
+    [
+     "recMKjJbWRgSQqf4Y",
+     null,
+     null,
+     null,
+     "Students can stop by the table to get information on the club and register.",
+     "900 E. Washington St.",
+     null
+    ]
+   ],
+   "expense": [
+    [
+     "v1012",
+     "b",
+     "2019-10-08",
+     null,
+     null,
+     "rec4BLdZHS2Blfp4v",
+     "reczf4LoOK6z7oOec"
+    ]
+   ],
+   "major": [
+    [
+     "rectOU2QnznthfWv7",
+     null,
+     null,
+     null
+    ]
+   ],
+   "member": [
+    [
+     "rec4BLdZHS2Blfp4v",
+     "A",
+     "x1",
+     null,
+     "Member",
+     null,
+     null,
+     1016,
+     "rectOU2QnznthfWv7"
+    ]
+   ],
+   "zip_code": [
+    [
+     1016,
+     "Standard",
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gsr:0",
+  "db_id": "california_schools",
+  "labels": [
+   "empty_aggregate",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT `Free Meal Count (K-12)` / `Enrollment (K-12)` FROM frpm WHERE `County Name` = 'Alameda' ORDER BY (CAST(`Free Meal Count (K-12)` AS REAL) / `Enrollment (K-12)`) DESC LIMIT 1",
+  "pred": "SELECT MAX(CAST(\"Free Meal Count (K-12)\" AS FLOAT) / CAST(\"Enrollment (K-12)\" AS FLOAT)) AS highest_eligible_free_rate FROM frpm WHERE \"County Name\" = 'Alameda';",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1016",
+     null,
+     null,
+     null,
+     null,
+     "c",
+     null,
+     null,
+     "Unified School District",
+     "Intermediate/Middle Schools (Public)",
+     "County Community School",
+     "A",
+     null,
+     null,
+     "Directly funded",
+     null,
+     "A",
+     "a",
+     null,
+     null,
+     null,
+     null,
+     2.0,
+     null,
+     null,
+     null,
+     null,
+     2.0,
+     null
+    ]
+   ],
+   "schools": [
+    [
+     "v1016",
+     null,
+     null,
+     "Pending",
+     "c",
+     "A",
+     null,
+     "y2",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     null,
+     null,
+     "Directly funded",
+     "56",
+     "Joint Powers Authority (JPA)",
+     "60",
+     "a",
+     "CON",
+     "State Special School",
+     "UG",
+     "Intermediate/Middle/Junior High",
+     null,
+     null,
+     "b",
+     null,
+     -1.5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "2010-06-15"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:677",
+  "db_id": "codebase_community",
+  "labels": [
+   "filter_predicate",
+   "join_path",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(T1.Id) FROM users AS T1 INNER JOIN posts AS T2 ON T1.Id = T2.OwnerUserId WHERE STRFTIME('%Y', T2.CreaionDate) = '2010' AND T1.DisplayName = 'Jay Stevens'",
+  "pred": "SELECT COUNT(*) FROM posts WHERE owneruserid = (SELECT id FROM users WHERE displayname = 'Jay Stevens')",
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "posts": [
+    [
+     1005,
+     null,
+     null,
+     "2000-01-01 00:00:00",
+     -1,
+     5,
+     null,
+     1006,
+     null,
+     null,
+     null,
+     -1,
+     null,
+     null,
+     1006,
+     null,
+     "2015-03-20 08:00:00",
+     null,
+     null,
+     null,
+     null
+    ]
+   ],
+   "users": [
+    [
+     1006,
+     0,
+     null,
+     "Jay Stevens",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:1270",
+  "db_id": "thrombosis_prediction",
+  "labels": [
+   "duplicates_distinct",
+   "filter_predicate",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(DISTINCT T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID INNER JOIN Examination AS T3 ON T3.ID = T2.ID WHERE (T2.SC170 = 'negative' OR T2.SC170 = '0') AND T1.SEX = 'F' AND T3.Symptoms IS NULL",
+  "pred": "SELECT COUNT(*) FROM Laboratory AS Lab INNER JOIN Patient AS Pat ON Lab.ID = Pat.ID INNER JOIN Examination AS Exam ON Lab.ID = Exam.ID WHERE Lab.SC170 IN('negative', '0') AND Pat.Sex = 'F' AND Exam.Symptoms IS NULL",
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    2
+   ]
+  ],
+  "witness": {
+   "Examination": [
+    [
+     1001,
+     "1995-12-31",
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     null,
+     "-",
+     "+",
+     "-",
+     null,
+     null
+    ],
+    [
+     1001,
+     "1995-12-31",
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     null,
+     "-",
+     "+",
+     "-",
+     null,
+     null
+    ]
+   ],
+   "Laboratory": [
+    [
+     1001,
+     "2002-07-23",
+     null,
+     3,
+     null,
+     null,
+     10.0,
+     null,
+     null,
+     null,
+     null,
+     100.0,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1.0,
+     null,
+     10.0,
+     null,
+     null,
+     0,
+     0.0,
+     null,
+     100,
+     null,
+     "2",
+     100,
+     null,
+     null,
+     null,
+     "7-",
+     null,
+     null,
+     null,
+     "1",
+     "2",
+     "negative",
+     "negative",
+     "negative",
+     "a",
+     null,
+     null
+    ]
+   ],
+   "Patient": [
+    [
+     1001,
+     "F",
+     null,
+     null,
+     null,
+     "+",
+     "y2"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_1:1324",
+  "db_id": "student_club",
+  "labels": [
+   "filter_predicate",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT CAST(COUNT(T2.link_to_event) AS REAL) / COUNT(DISTINCT T2.link_to_event) FROM event AS T1 INNER JOIN attendance AS T2 ON T1.event_id = T2.link_to_event WHERE SUBSTR(T1.event_date, 1, 4) = '2020' AND T1.type = 'Meeting'",
+  "pred": "SELECT CAST(COUNT(T1.link_to_event) AS REAL) / COUNT(DISTINCT T2.event_name) FROM attendance AS T1 INNER JOIN event AS T2 ON T1.link_to_event = T2.event_id WHERE T2.type = 'Meeting' AND STRFTIME('%Y', T2.event_date) = '2020'",
+  "gold_rows": [
+   [
+    1.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "attendance": [
+    [
+     "recykdvf4LgsyA3wZ",
+     "recEFd8s6pkrTt4Pz"
+    ],
+    [
+     "reciRZdAqNIKuMC96",
+     "recttfySfQnYb68u3"
+    ]
+   ],
+   "event": [
+    [
+     "v1001",
+     null,
+     "2020-01-01",
+     "Meeting",
+     "Volunteer opportunity to help paint new home.",
+     "Campus Common",
+     "c"
+    ],
+    [
+     "recykdvf4LgsyA3wZ",
+     null,
+     "2000-01-01",
+     "Meeting",
+     "Volunteer opportunity to help paint new home.",
+     "Campus Football stadium",
+     "Planning"
+    ],
+    [
+     "reciRZdAqNIKuMC96",
+     null,
+     "2020-01-01",
+     "Meeting",
+     "Volunteer opportunity to remove graffiti in town.",
+     "MU 215",
+     "Closed"
+    ]
+   ],
+   "major": [
+    [
+     "recAiT3yTABWypvHu",
+     null,
+     null,
+     "College of Natural Resources"
+    ],
+    [
+     "recuN6taqCVkaZMZS",
+     null,
+     null,
+     "College of Engineering"
+    ]
+   ],
+   "member": [
+    [
+     "recEFd8s6pkrTt4Pz",
+     null,
+     null,
+     null,
+     "Treasurer",
+     "X-Large",
+     null,
+     1169,
+     "recAiT3yTABWypvHu"
+    ],
+    [
+     "recttfySfQnYb68u3",
+     null,
+     null,
+     null,
+     "President",
+     null,
+     null,
+     1427,
+     "recuN6taqCVkaZMZS"
+    ]
+   ],
+   "zip_code": [
+    [
+     1169,
+     "Standard",
+     null,
+     null,
+     null,
+     "x1"
+    ],
+    [
+     1427,
+     "Standard",
+     null,
+     null,
+     "x1",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-7b:1076",
+  "db_id": "european_football_2",
+  "labels": [
+   "null_semantics",
+   "numeric_type_division",
+   "projection"
+  ],
+  "gold": "SELECT CAST(SUM(CASE WHEN t1.player_name = 'Abdou Diallo' THEN t2.ball_control ELSE 0 END) AS REAL) / COUNT(CASE WHEN t1.player_name = 'Abdou Diallo' THEN t2.id ELSE NULL END) - CAST(SUM(CASE WHEN t1.player_name = 'Aaron Appindangoye' THEN t2.ball_control ELSE 0 END) AS REAL) / COUNT(CASE WHEN t1.player_name = 'Aaron Appindangoye' THEN t2.id ELSE NULL END) FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_api_id = t2.player_api_id",
+  "pred": "SELECT (AVG(CASE WHEN T1.player_name = 'Abdou Diallo' THEN T2.ball_control ELSE NULL END) - AVG(CASE WHEN T1.player_name = 'Aaron Appindangoye' THEN T2.ball_control ELSE NULL END)) AS difference FROM Player AS T1 INNER JOIN Player_Attributes AS T2 ON T1.player_api_id = T2.player_api_id",
+  "gold_rows": [
+   [
+    0.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Player": [
+    [
+     1001,
+     -1,
+     "Abdou Diallo",
+     null,
+     "2012-02-22 00:00:00",
+     null,
+     null
+    ],
+    [
+     1036,
+     -1,
+     "Aaron Appindangoye",
+     null,
+     "2012-02-22 00:00:00",
+     null,
+     null
+    ]
+   ],
+   "Player_Attributes": [
+    [
+     1002,
+     null,
+     -1,
+     null,
+     null,
+     null,
+     "left",
+     "low",
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1,
+     null,
+     10,
+     null,
+     null,
+     0,
+     0,
+     null,
+     100,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     0,
+     5
+    ],
+    [
+     1335,
+     null,
+     -1,
+     null,
+     null,
+     null,
+     "left",
+     "low",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1,
+     null,
+     null,
+     null,
+     null,
+     0,
+     0,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "chess:134",
+  "db_id": "financial",
+  "labels": [
+   "grouping",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT COUNT(T2.account_id) FROM district AS T1 INNER JOIN account AS T2 ON T1.district_id = T2.district_id GROUP BY T1.A16 ORDER BY T1.A16 DESC LIMIT 1",
+  "pred": "SELECT COUNT(T2.account_id) FROM district AS T1 INNER JOIN account AS T2 ON T1.district_id = T2.district_id WHERE T1.A16 = ( SELECT MAX(A16) FROM district )",
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "witness": {
+   "account": [
+    [
+     1031,
+     1046,
+     "POPLATEK MESICNE",
+     "1995-12-31"
+    ]
+   ],
+   "district": [
+    [
+     1032,
+     "a",
+     "a",
+     "x1",
+     "c",
+     "a",
+     "9",
+     1,
+     1,
+     -1.5,
+     10,
+     100.0,
+     1.5,
+     0,
+     1,
+     3
+    ],
+    [
+     1048,
+     "x1",
+     "Prague",
+     "y2",
+     "x1",
+     "a",
+     "5",
+     -1,
+     100,
+     -1.5,
+     0,
+     1.0,
+     1.0,
+     5,
+     null,
+     2
+    ],
+    [
+     1046,
+     "c",
+     "c",
+     "A",
+     "a",
+     "b",
+     "9",
+     1,
+     3,
+     2.0,
+     3,
+     10.0,
+     100.0,
+     1,
+     null,
+     1
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "omni-32-majority:70",
+  "db_id": "california_schools",
+  "labels": [
+   "filter_predicate",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(School) FROM schools WHERE (StatusType = 'Closed' OR StatusType = 'Active') AND SOC = 69 AND County = 'Alpine'",
+  "pred": "SELECT COUNT(*) AS SchoolCount FROM schools WHERE StatusType IN ('Active', 'Closed') AND County = 'Alpine' AND SOCType = 'District Community Day Schools';",
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "schools": [
+    [
+     "v1001",
+     "A",
+     null,
+     "Closed",
+     "Alpine",
+     "A",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     "x1",
+     "c",
+     null,
+     null,
+     "2015-03-20",
+     null,
+     null,
+     "Not in CS funding model",
+     "42",
+     "Regional Occupation Center/Program (ROC/P)",
+     "69",
+     "District Community Day Schools",
+     "SPEC",
+     "Traditional",
+     "A",
+     "Adult",
+     null,
+     null,
+     "N",
+     null,
+     null,
+     0.0,
+     "b",
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     "2000-01-01"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "rsl:1332",
+  "db_id": "student_club",
+  "labels": [
+   "empty_aggregate",
+   "filter_predicate"
+  ],
+  "gold": "SELECT T2.spent FROM event AS T1 INNER JOIN budget AS T2 ON T1.event_id = T2.link_to_event WHERE T1.event_name = 'September Meeting' AND T2.category = 'Food' AND SUBSTR(T1.event_date, 6, 2) = '09'",
+  "pred": "SELECT SUM(`budget`.`spent`) FROM `event` INNER JOIN `budget` ON `event`.`event_id` = `budget`.`link_to_event` WHERE `event`.`event_name` = 'September Meeting' AND `budget`.`category` = 'Food'",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "budget": [
+    [
+     "v1001",
+     "Food",
+     -1.5,
+     null,
+     100,
+     "Open",
+     "recykdvf4LgsyA3wZ"
+    ]
+   ],
+   "event": [
+    [
+     "v1002",
+     "September Meeting",
+     "2015-03-20",
+     "Guest Speaker",
+     "Students can stop by the table to get information on the club and register.",
+     "Campus Soccer/Lacrosse stadium",
+     "Planning"
+    ],
+    [
+     "recykdvf4LgsyA3wZ",
+     "x1",
+     "2015-03-20",
+     "Election",
+     "Monthly officers meeting",
+     "Campus Soccer/Lacrosse stadium",
+     "Planning"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "chess:36",
+  "db_id": "california_schools",
+  "labels": [
+   "null_semantics"
+  ],
+  "gold": "SELECT T2.AdmFName1, T2.AdmLName1, T2.AdmFName2, T2.AdmLName2, T2.AdmFName3, T2.AdmLName3 FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode ORDER BY T1.NumGE1500 DESC LIMIT 1",
+  "pred": "SELECT T2.AdmFName1, T2.AdmLName1, T2.AdmFName2, T2.AdmLName2, T2.AdmFName3, T2.AdmLName3 FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode WHERE T1.NumGE1500 IS NOT NULL ORDER BY T1.NumGE1500 DESC LIMIT 1",
+  "gold_rows": [
+   [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "satscores": [
+    [
+     "v1001",
+     "A",
+     null,
+     "A",
+     null,
+     5,
+     10,
+     null,
+     3,
+     null,
+     null
+    ]
+   ],
+   "schools": [
+    [
+     "v1001",
+     null,
+     null,
+     "Closed",
+     "y2",
+     "y2",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null,
+     "y2",
+     "y2",
+     null,
+     null,
+     10,
+     null,
+     "Directly funded",
+     "42",
+     "Non-School Locations",
+     "66",
+     "Opportunity Schools",
+     "A",
+     "Special Education School",
+     null,
+     "Adult",
+     "b",
+     "x1",
+     "N",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "2000-01-01"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_1:591",
+  "db_id": "codebase_community",
+  "labels": [
+   "duplicates_distinct",
+   "join_path",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(Id) FROM badges WHERE STRFTIME('%Y', Date) = '2011' AND Name = 'Supporter'",
+  "pred": "SELECT COUNT(DISTINCT T1.UserId) FROM badges AS T1 INNER JOIN users AS T2 ON T1.UserId = T2.Id WHERE T1.Name = 'Supporter' AND STRFTIME('%Y', T1.Date) = '2011'",
+  "gold_rows": [
+   [
+    2
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "badges": [
+    [
+     1001,
+     1002,
+     "Supporter",
+     "2011-01-01"
+    ],
+    [
+     1033,
+     1002,
+     "Supporter",
+     "2011-01-01"
+    ]
+   ],
+   "users": [
+    [
+     1002,
+     -1,
+     null,
+     "A",
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-7b:1106",
+  "db_id": "european_football_2",
+  "labels": [
+   "filter_predicate",
+   "join_path"
+  ],
+  "gold": "SELECT t2.defensive_work_rate FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_fifa_api_id = t2.player_fifa_api_id WHERE SUBSTR(t2.`date`, 1, 10) = '2013-02-22' AND t1.player_name = 'Kevin Berigaud'",
+  "pred": "SELECT T2.defensive_work_rate FROM Player AS T1 INNER JOIN Player_Attributes AS T2 ON T1.player_api_id = T2.player_api_id WHERE T1.player_name = 'Kevin Berigaud' AND T2.date = '2013-02-22 00:00:00'",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "high"
+   ]
+  ],
+  "witness": {
+   "Player": [
+    [
+     1001,
+     -1,
+     "Kevin Berigaud",
+     null,
+     "2012-02-22 00:00:00",
+     null,
+     null
+    ]
+   ],
+   "Player_Attributes": [
+    [
+     1002,
+     null,
+     -1,
+     "2013-02-22 00:00:00",
+     null,
+     null,
+     "right",
+     "le",
+     "high",
+     null,
+     null,
+     3,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1,
+     null,
+     10,
+     null,
+     null,
+     0,
+     0,
+     null,
+     100,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     0,
+     5
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:185",
+  "db_id": "financial",
+  "labels": [
+   "join_path",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT CAST(SUM(T2.gender = 'F') AS REAL) / COUNT(T2.client_id) * 100 FROM district AS T1 INNER JOIN client AS T2 ON T1.district_id = T2.district_id WHERE T1.A3 = 'Prague'",
+  "pred": "SELECT CAST(SUM(CASE WHEN t1.gender = 'F' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(*) FROM client AS t1 INNER JOIN disp AS t2 ON t1.client_id = t2.client_id INNER JOIN district AS t3 ON t1.district_id = t3.district_id WHERE t3.a3 = 'Prague'",
+  "gold_rows": [
+   [
+    50.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    100.0
+   ]
+  ],
+  "witness": {
+   "account": [
+    [
+     1011,
+     1015,
+     "POPLATEK MESICNE",
+     "2000-01-01"
+    ]
+   ],
+   "client": [
+    [
+     1013,
+     "F",
+     "2000-01-01",
+     1012
+    ],
+    [
+     1112,
+     "c",
+     "2020-02-29",
+     1012
+    ]
+   ],
+   "disp": [
+    [
+     1014,
+     1013,
+     1011,
+     "OWNER"
+    ],
+    [
+     1111,
+     1013,
+     1011,
+     "OWNER"
+    ]
+   ],
+   "district": [
+    [
+     1012,
+     "y2",
+     "Prague",
+     "b",
+     "y2",
+     "x1",
+     "1",
+     1,
+     3,
+     10.0,
+     2,
+     null,
+     1.5,
+     -1,
+     5,
+     -1
+    ],
+    [
+     1015,
+     "a",
+     "Prague",
+     "b",
+     "A",
+     "c",
+     "4",
+     -1,
+     2,
+     0.0,
+     3,
+     null,
+     -1.5,
+     -1,
+     null,
+     -1
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gsr:633",
+  "db_id": "codebase_community",
+  "labels": [
+   "join_path",
+   "order_limit_ties",
+   "projection"
+  ],
+  "gold": "SELECT T2.PostId FROM users AS T1 INNER JOIN postHistory AS T2 ON T1.Id = T2.UserId INNER JOIN posts AS T3 ON T2.PostId = T3.Id WHERE T1.DisplayName = 'slashnick' ORDER BY T3.AnswerCount DESC LIMIT 1",
+  "pred": "SELECT Id FROM posts WHERE OwnerUserId = (SELECT Id FROM users WHERE DisplayName = 'slashnick') ORDER BY AnswerCount DESC LIMIT 1;",
+  "gold_rows": [
+   [
+    1017
+   ]
+  ],
+  "pred_rows": [
+   [
+    1002
+   ]
+  ],
+  "witness": {
+   "postHistory": [
+    [
+     1001,
+     -1,
+     1002,
+     null,
+     "2020-02-29 23:59:59",
+     1003,
+     null,
+     null,
+     null
+    ],
+    [
+     1016,
+     null,
+     1017,
+     null,
+     null,
+     1018,
+     "b",
+     null,
+     null
+    ]
+   ],
+   "posts": [
+    [
+     1002,
+     null,
+     null,
+     "2010-06-15 12:30:00",
+     null,
+     null,
+     null,
+     1003,
+     null,
+     "y2",
+     "b",
+     null,
+     null,
+     10,
+     1003,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     null
+    ],
+    [
+     1017,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1018,
+     "2010-06-15 12:30:00",
+     null,
+     null,
+     2,
+     null,
+     null,
+     1018,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null
+    ]
+   ],
+   "users": [
+    [
+     1003,
+     5,
+     null,
+     "slashnick",
+     "2000-01-01 00:00:00",
+     null,
+     "y2",
+     "y2",
+     null,
+     null,
+     10,
+     null,
+     null,
+     "b"
+    ],
+    [
+     1018,
+     null,
+     "2000-01-01 00:00:00",
+     "slashnick",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     2,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:1030",
+  "db_id": "european_football_2",
+  "labels": [
+   "other"
+  ],
+  "gold": "SELECT t2.name FROM Match AS t1 INNER JOIN League AS t2 ON t1.league_id = t2.id WHERE t1.season = '2015/2016' AND t1.home_team_goal = t1.away_team_goal GROUP BY t2.name ORDER BY COUNT(t1.id) DESC LIMIT 1",
+  "pred": "SELECT t2.name FROM match AS t1 INNER JOIN league AS t2 ON t1.league_id = t2.id WHERE t1.season = '2015/2016' GROUP BY t2.name ORDER BY SUM(CASE WHEN t1.home_team_goal = t1.away_team_goal THEN 1 ELSE 0 END) DESC LIMIT 1",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "Portugal Liga ZON Sagres"
+   ]
+  ],
+  "witness": {
+   "Country": [
+    [
+     1001,
+     "France"
+    ]
+   ],
+   "League": [
+    [
+     1002,
+     1001,
+     "Portugal Liga ZON Sagres"
+    ]
+   ],
+   "Match": [
+    [
+     1003,
+     null,
+     1002,
+     "2015/2016",
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1,
+     null,
+     10,
+     null,
+     null,
+     0,
+     0,
+     null,
+     100,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     0,
+     5,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1,
+     -1,
+     5,
+     null,
+     null,
+     null,
+     null,
+     -1,
+     null,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     2.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.0,
+     null,
+     null,
+     2.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     2.0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0.0,
+     null,
+     100.0,
+     1.5,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "omni-32-majority:134",
+  "db_id": "financial",
+  "labels": [
+   "grouping",
+   "join_path",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT COUNT(T2.account_id) FROM district AS T1 INNER JOIN account AS T2 ON T1.district_id = T2.district_id GROUP BY T1.A16 ORDER BY T1.A16 DESC LIMIT 1",
+  "pred": "SELECT COUNT(account_id) FROM account WHERE district_id = ( SELECT district_id FROM district ORDER BY A16 DESC LIMIT 1 );",
+  "gold_rows": [
+   [
+    2
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "account": [
+    [
+     1001,
+     1002,
+     "POPLATEK MESICNE",
+     "2020-02-29"
+    ],
+    [
+     1007,
+     1008,
+     "POPLATEK PO OBRATU",
+     "2020-02-29"
+    ]
+   ],
+   "district": [
+    [
+     1002,
+     "c",
+     "c",
+     "b",
+     "c",
+     "a",
+     "7",
+     3,
+     2,
+     10.0,
+     2,
+     null,
+     0.0,
+     100,
+     null,
+     1
+    ],
+    [
+     1008,
+     "c",
+     "c",
+     "b",
+     "c",
+     "a",
+     "7",
+     3,
+     2,
+     10.0,
+     2,
+     null,
+     0.0,
+     100,
+     null,
+     1
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_2:134",
+  "db_id": "financial",
+  "labels": [
+   "grouping",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT COUNT(T2.account_id) FROM district AS T1 INNER JOIN account AS T2 ON T1.district_id = T2.district_id GROUP BY T1.A16 ORDER BY T1.A16 DESC LIMIT 1",
+  "pred": "SELECT COUNT(T1.account_id) FROM account AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T2.A16 = ( SELECT MAX(A16) FROM district )",
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "witness": {
+   "account": [
+    [
+     1031,
+     1046,
+     "POPLATEK MESICNE",
+     "1995-12-31"
+    ]
+   ],
+   "district": [
+    [
+     1032,
+     "a",
+     "a",
+     "x1",
+     "c",
+     "a",
+     "9",
+     1,
+     1,
+     -1.5,
+     10,
+     100.0,
+     1.5,
+     0,
+     1,
+     3
+    ],
+    [
+     1048,
+     "x1",
+     "Prague",
+     "y2",
+     "x1",
+     "a",
+     "5",
+     -1,
+     100,
+     -1.5,
+     0,
+     1.0,
+     1.0,
+     5,
+     null,
+     2
+    ],
+    [
+     1046,
+     "c",
+     "c",
+     "A",
+     "a",
+     "b",
+     "9",
+     1,
+     3,
+     2.0,
+     3,
+     10.0,
+     100.0,
+     1,
+     null,
+     1
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_2:1033",
+  "db_id": "european_football_2",
+  "labels": [
+   "filter_predicate",
+   "null_semantics",
+   "numeric_type_division",
+   "projection"
+  ],
+  "gold": "SELECT SUM(height) / COUNT(id) FROM Player WHERE SUBSTR(birthday, 1, 4) BETWEEN '1990' AND '1995'",
+  "pred": "SELECT CAST(SUM(height) AS REAL) / COUNT(*) FROM Player WHERE birthday >= '1990-01-01 00:00:00' AND birthday < '1996-01-01 00:00:00'",
+  "gold_rows": [
+   [
+    3
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Player": [
+    [
+     1002,
+     null,
+     null,
+     null,
+     "1990-01-01",
+     3,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:1509",
+  "db_id": "debit_card_specializing",
+  "labels": [
+   "filter_predicate",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(T1.TransactionID) FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID WHERE T2.Country = 'CZE' AND STRFTIME('%Y', T1.Date) >= '2012'",
+  "pred": "SELECT COUNT(*) AS TotalTransactions FROM transactions_1k AS T INNER JOIN gasstations AS G ON T.GasStationID = G.GasStationID WHERE G.Country = 'CZE' AND T.Date > '2012-01-01'",
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "witness": {
+   "gasstations": [
+    [
+     1003,
+     null,
+     "CZE",
+     "Other"
+    ]
+   ],
+   "transactions_1k": [
+    [
+     1004,
+     "2012-01-01",
+     "2010-06-15 00:00:00",
+     null,
+     null,
+     1003,
+     10,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "rsl:1345",
+  "db_id": "student_club",
+  "labels": [
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(major_name) FROM major WHERE college = 'College of Humanities and Social Sciences'",
+  "pred": "SELECT COUNT(*) FROM `major` WHERE `college` = 'College of Humanities and Social Sciences'",
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "witness": {
+   "major": [
+    [
+     "v1003",
+     null,
+     null,
+     "College of Humanities and Social Sciences"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "omni-32-majority:1259",
+  "db_id": "thrombosis_prediction",
+  "labels": [
+   "filter_predicate",
+   "null_semantics"
+  ],
+  "gold": "SELECT T1.Diagnosis FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE (T2.RA = '-' OR T2.RA = '+-') AND T1.Birthday > '1985-01-01'",
+  "pred": "SELECT Patient.Diagnosis FROM Patient INNER JOIN Laboratory ON Patient.ID = Laboratory.ID WHERE STRFTIME('%Y', Patient.Birthday) >= '1985' AND Laboratory.RA IN ('-', '+-');",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Laboratory": [
+    [
+     1003,
+     "2004-09-25",
+     null,
+     null,
+     null,
+     1,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1.0,
+     -1,
+     5,
+     null,
+     null,
+     null,
+     null,
+     -1.5,
+     null,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     "b",
+     null,
+     null,
+     null,
+     null,
+     "-",
+     null,
+     null,
+     null,
+     null,
+     "b",
+     "4",
+     "256",
+     "0",
+     "0",
+     null,
+     null
+    ]
+   ],
+   "Patient": [
+    [
+     1003,
+     "M",
+     "1985-01-01",
+     "2000-01-01",
+     null,
+     "+",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:76",
+  "db_id": "california_schools",
+  "labels": [
+   "filter_predicate",
+   "null_semantics"
+  ],
+  "gold": "SELECT T2.City FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T1.`NSLP Provision Status` = 'Lunch Provision 2' AND T2.County = 'Merced' AND T1.`Low Grade` = 9 AND T1.`High Grade` = 12 AND T2.EILCode = 'HS'",
+  "pred": "SELECT s.City FROM frpm AS f INNER JOIN schools AS s ON f.CDSCode = s.CDSCode WHERE f.`County Name` = 'Merced' AND f.`NSLP Provision Status` = 'Lunch Provision 2' AND f.`Low Grade` = '9' AND f.`High Grade` = '12'",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "witness": {
+   "frpm": [
+    [
+     "v1002",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "County Office of Education (COE)",
+     "Elementary Schools (Public)",
+     "b",
+     "Lunch Provision 2",
+     null,
+     null,
+     "Not in CS funding model",
+     null,
+     "9",
+     "12",
+     null,
+     null,
+     null,
+     2.0,
+     null,
+     null,
+     1.0,
+     null,
+     null,
+     2.0,
+     null
+    ]
+   ],
+   "schools": [
+    [
+     "v1002",
+     null,
+     null,
+     "Pending",
+     "Merced",
+     "c",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "A",
+     "x1",
+     null,
+     null,
+     "2000-01-01",
+     null,
+     null,
+     null,
+     "Directly funded",
+     "58",
+     "County Office of Education (COE)",
+     "62",
+     "Preschool",
+     "COMM",
+     "Special Education School",
+     "HS",
+     "Preschool",
+     null,
+     null,
+     "P",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     null,
+     null,
+     null,
+     "a",
+     "2010-06-15"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-32b:1339",
+  "db_id": "student_club",
+  "labels": [
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT AVG(T2.cost) FROM member AS T1 INNER JOIN expense AS T2 ON T1.member_id = T2.link_to_member WHERE T1.last_name = 'Allen' AND T1.first_name = 'Elijah' AND (SUBSTR(T2.expense_date, 6, 2) = '09' OR SUBSTR(T2.expense_date, 6, 2) = '10')",
+  "pred": "SELECT SUM(e.cost) / COUNT(e.expense_id) AS average_cost FROM member m JOIN expense e ON m.member_id = e.link_to_member WHERE m.member_id = (SELECT member_id FROM member WHERE first_name = 'Elijah' AND last_name = 'Allen') AND (SUBSTR(e.expense_date, 6, 2) = '09' OR SUBSTR(e.expense_date, 6, 2) = '10')",
+  "gold_rows": [
+   [
+    0.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "budget": [
+    [
+     "recZAjcliIUo4BCKW",
+     "Speaker Gifts",
+     0.0,
+     null,
+     null,
+     "Closed",
+     "recykdvf4LgsyA3wZ"
+    ],
+    [
+     "recZuCiQzCDAs4zDQ",
+     "Speaker Gifts",
+     null,
+     null,
+     -1,
+     "Open",
+     "rec0akZnLLpGUloLH"
+    ]
+   ],
+   "event": [
+    [
+     "recykdvf4LgsyA3wZ",
+     null,
+     null,
+     "Meeting",
+     "All active members can vote for new officers between 4pm-8pm.",
+     null,
+     null
+    ],
+    [
+     "rec0akZnLLpGUloLH",
+     null,
+     null,
+     null,
+     "Students can stop by the table to get information on the club and register.",
+     "Campus Football stadium",
+     "Open"
+    ]
+   ],
+   "expense": [
+    [
+     "v2944",
+     "Parking",
+     "2019-09-18",
+     0.0,
+     null,
+     "recro8T1MPMwRadVH",
+     "recZAjcliIUo4BCKW"
+    ],
+    [
+     "v2956",
+     "Posters",
+     "2019-09-24",
+     null,
+     "y2",
+     "rec4BLdZHS2Blfp4v",
+     "recZuCiQzCDAs4zDQ"
+    ]
+   ],
+   "major": [
+    [
+     "recVYIFAwjT91pnv7",
+     "b",
+     null,
+     "College of the Arts"
+    ],
+    [
+     "rectez0Ce1okUhv8w",
+     null,
+     null,
+     "College of the Arts"
+    ],
+    [
+     "recAiT3yTABWypvHu",
+     null,
+     null,
+     "College of the Arts"
+    ]
+   ],
+   "member": [
+    [
+     "v2945",
+     "Elijah",
+     "Allen",
+     null,
+     null,
+     "A",
+     "b",
+     2947,
+     "recVYIFAwjT91pnv7"
+    ],
+    [
+     "v2957",
+     "Elijah",
+     "Allen",
+     null,
+     "President",
+     "Large",
+     null,
+     2959,
+     "rectez0Ce1okUhv8w"
+    ],
+    [
+     "recro8T1MPMwRadVH",
+     "Elijah",
+     "Allen",
+     null,
+     "President",
+     "X-Large",
+     "a",
+     2960,
+     "rectez0Ce1okUhv8w"
+    ],
+    [
+     "rec4BLdZHS2Blfp4v",
+     "a",
+     "Allen",
+     null,
+     "Member",
+     "b",
+     null,
+     2962,
+     "recAiT3yTABWypvHu"
+    ]
+   ],
+   "zip_code": [
+    [
+     2947,
+     "PO Box",
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     2959,
+     "PO Box",
+     "b",
+     null,
+     null,
+     null
+    ],
+    [
+     2960,
+     "Standard",
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     2962,
+     "Unique",
+     null,
+     null,
+     "y2",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gsr:1173",
+  "db_id": "thrombosis_prediction",
+  "labels": [
+   "grouping",
+   "join_path",
+   "null_semantics",
+   "order_limit_ties",
+   "projection"
+  ],
+  "gold": "SELECT T2.Diagnosis FROM Examination AS T1 INNER JOIN Patient AS T2 ON T1.ID = T2.ID WHERE T1.`Examination Date` BETWEEN '1985-01-01' AND '1995-12-31' GROUP BY T2.Diagnosis ORDER BY COUNT(T2.Diagnosis) DESC LIMIT 1",
+  "pred": "SELECT Diagnosis FROM Examination WHERE `Examination Date` BETWEEN '1985-01-01' AND '1995-12-31' GROUP BY Diagnosis ORDER BY COUNT(Diagnosis) DESC LIMIT 1;",
+  "gold_rows": [
+   [
+    "a"
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Examination": [
+    [
+     1019,
+     "1985-01-01",
+     null,
+     null,
+     null,
+     "D,P",
+     5,
+     null,
+     "+",
+     "+",
+     null,
+     null,
+     null
+    ],
+    [
+     1007,
+     "1985-01-01",
+     -1.5,
+     null,
+     100,
+     "P.S",
+     10,
+     null,
+     "+",
+     "-",
+     null,
+     null,
+     null
+    ],
+    [
+     1018,
+     "1985-01-01",
+     null,
+     null,
+     null,
+     "P",
+     100,
+     null,
+     "+",
+     "-",
+     "-",
+     null,
+     null
+    ]
+   ],
+   "Patient": [
+    [
+     1002,
+     "M",
+     null,
+     null,
+     "2010-06-15",
+     "-",
+     null
+    ],
+    [
+     1007,
+     "M",
+     "2010-06-15",
+     null,
+     null,
+     "+",
+     null
+    ],
+    [
+     1019,
+     "F",
+     null,
+     null,
+     null,
+     "+(",
+     "a"
+    ],
+    [
+     1018,
+     "M",
+     null,
+     null,
+     "2000-01-01",
+     "+(",
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "csc-32b:1484",
+  "db_id": "debit_card_specializing",
+  "labels": [
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT SUM(IIF(Country = 'CZE', 1, 0)) - SUM(IIF(Country = 'SVK', 1, 0)) FROM gasstations WHERE Segment = 'Discount'",
+  "pred": "SELECT COUNT(CASE WHEN Country = 'CZE' AND Segment = 'Discount' THEN 1 END) - COUNT(CASE WHEN Country = 'SVK' AND Segment = 'Discount' THEN 1 END) AS Difference FROM gasstations",
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "witness": {
+   "gasstations": [
+    [
+     1016,
+     null,
+     "cze",
+     "DISCOUNT"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_2:1324",
+  "db_id": "student_club",
+  "labels": [
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT CAST(COUNT(T2.link_to_event) AS REAL) / COUNT(DISTINCT T2.link_to_event) FROM event AS T1 INNER JOIN attendance AS T2 ON T1.event_id = T2.link_to_event WHERE SUBSTR(T1.event_date, 1, 4) = '2020' AND T1.type = 'Meeting'",
+  "pred": "SELECT CAST(COUNT(T1.event_id) AS REAL) / COUNT(DISTINCT T1.event_name) FROM event AS T1 INNER JOIN attendance AS T2 ON T1.event_id = T2.link_to_event WHERE T1.type = 'Meeting' AND SUBSTR(T1.event_date, 1, 4) = '2020'",
+  "gold_rows": [
+   [
+    1.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "attendance": [
+    [
+     "rec2N69DMcrqN9PJC",
+     "recWh2lJVOT6HjChK"
+    ]
+   ],
+   "event": [
+    [
+     "rec2N69DMcrqN9PJC",
+     null,
+     "2020-01-01",
+     "Meeting",
+     "Attend school football game as a group.",
+     "Campus Football stadium",
+     "Planning"
+    ]
+   ],
+   "major": [
+    [
+     "recObV24Ass2ouQHK",
+     null,
+     null,
+     "School of Business"
+    ]
+   ],
+   "member": [
+    [
+     "recWh2lJVOT6HjChK",
+     null,
+     null,
+     null,
+     "Vice President",
+     null,
+     null,
+     1175,
+     "recObV24Ass2ouQHK"
+    ]
+   ],
+   "zip_code": [
+    [
+     1175,
+     "A",
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:185",
+  "db_id": "financial",
+  "labels": [
+   "null_semantics",
+   "numeric_type_division",
+   "projection"
+  ],
+  "gold": "SELECT CAST(SUM(T2.gender = 'F') AS REAL) / COUNT(T2.client_id) * 100 FROM district AS T1 INNER JOIN client AS T2 ON T1.district_id = T2.district_id WHERE T1.A3 = 'Prague'",
+  "pred": "SELECT CAST(SUM(CASE WHEN client.gender = 'F' THEN 1 ELSE 0 END) AS REAL) * 100.0 / COUNT(*) FROM client JOIN district ON client.district_id = district.district_id WHERE district.A3 = 'Prague'",
+  "gold_rows": [
+   [
+    66.66666666666666
+   ]
+  ],
+  "pred_rows": [
+   [
+    66.66666666666667
+   ]
+  ],
+  "witness": {
+   "client": [
+    [
+     1005,
+     "F",
+     "2020-02-29",
+     1006
+    ],
+    [
+     1023,
+     "F",
+     "2020-02-29",
+     1024
+    ],
+    [
+     1043,
+     "f",
+     "2020-02-29",
+     1006
+    ]
+   ],
+   "district": [
+    [
+     1006,
+     "x1",
+     "Prague",
+     "x1",
+     "c",
+     "x1",
+     "13",
+     5,
+     3,
+     3.25,
+     2,
+     null,
+     1.5,
+     2,
+     -1,
+     5
+    ],
+    [
+     1024,
+     "x1",
+     "Prague",
+     "x1",
+     "c",
+     "x1",
+     "11",
+     5,
+     3,
+     3.25,
+     2,
+     null,
+     1.5,
+     2,
+     -1,
+     5
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "slm:1076",
+  "db_id": "european_football_2",
+  "labels": [
+   "filter_predicate",
+   "null_semantics",
+   "numeric_type_division",
+   "projection"
+  ],
+  "gold": "SELECT CAST(SUM(CASE WHEN t1.player_name = 'Abdou Diallo' THEN t2.ball_control ELSE 0 END) AS REAL) / COUNT(CASE WHEN t1.player_name = 'Abdou Diallo' THEN t2.id ELSE NULL END) - CAST(SUM(CASE WHEN t1.player_name = 'Aaron Appindangoye' THEN t2.ball_control ELSE 0 END) AS REAL) / COUNT(CASE WHEN t1.player_name = 'Aaron Appindangoye' THEN t2.id ELSE NULL END) FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_api_id = t2.player_api_id",
+  "pred": "SELECT AVG(CASE WHEN P.player_name = 'Abdou Diallo' THEN PA.ball_control END) - AVG(CASE WHEN P.player_name = 'Aaron Appindangoye' THEN PA.ball_control END) AS control_difference FROM Player AS P INNER JOIN Player_Attributes AS PA ON P.player_api_id = PA.player_api_id WHERE P.player_name IN('Abdou Diallo', 'Aaron Appindangoye')",
+  "gold_rows": [
+   [
+    0.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "Player": [
+    [
+     1001,
+     -1,
+     "Aaron Appindangoye",
+     null,
+     "2012-02-22 00:00:00",
+     null,
+     null
+    ],
+    [
+     1045,
+     -1,
+     "Abdou Diallo",
+     null,
+     "2012-02-22 00:00:00",
+     null,
+     null
+    ],
+    [
+     1760,
+     1761,
+     "Aaron Appindangoye",
+     1762,
+     null,
+     null,
+     null
+    ]
+   ],
+   "Player_Attributes": [
+    [
+     1002,
+     null,
+     -1,
+     null,
+     null,
+     null,
+     "left",
+     "low",
+     null,
+     null,
+     null,
+     3,
+     null,
+     null,
+     10,
+     null,
+     null,
+     null,
+     null,
+     100,
+     null,
+     null,
+     null,
+     1,
+     null,
+     1,
+     null,
+     10,
+     null,
+     null,
+     0,
+     0,
+     null,
+     100,
+     null,
+     100,
+     null,
+     null,
+     null,
+     null,
+     0,
+     5
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "omni-32-majority:670",
+  "db_id": "codebase_community",
+  "labels": [
+   "empty_aggregate",
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "gold": "SELECT T2.CreaionDate FROM users AS T1 INNER JOIN posts AS T2 ON T1.Id = T2.OwnerUserId WHERE T1.Age IS NOT NULL ORDER BY T1.Age, T2.CreaionDate LIMIT 1",
+  "pred": "SELECT MIN(posts.CreaionDate) AS FirstPostDate FROM users INNER JOIN posts ON users.Id = posts.OwnerUserId WHERE users.Age = (SELECT MIN(Age) FROM users);",
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "witness": {
+   "posts": [
+    [
+     1005,
+     null,
+     null,
+     "2000-01-01 00:00:00",
+     -1,
+     5,
+     null,
+     1006,
+     null,
+     null,
+     null,
+     -1,
+     null,
+     null,
+     1006,
+     null,
+     "2015-03-20 08:00:00",
+     null,
+     null,
+     null,
+     null
+    ]
+   ],
+   "users": [
+    [
+     1006,
+     0,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     0,
+     null,
+     null,
+     "x1"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "gena_submission_1:21",
+  "db_id": "california_schools",
+  "labels": [
+   "filter_predicate",
+   "join_path",
+   "null_semantics",
+   "projection"
+  ],
+  "gold": "SELECT COUNT(CDSCode) FROM frpm WHERE `County Name` = 'Los Angeles' AND `Free Meal Count (K-12)` > 500 AND `FRPM Count (K-12)`< 700",
+  "pred": "SELECT COUNT(*) FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.County = 'Los Angeles' AND T1.`Free Meal Count (K-12)` > 500 AND T1.`FRPM Count (K-12)` < 700",
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "witness": {
+   "frpm": [
+    [
+     "v1002",
+     null,
+     "a",
+     null,
+     "b",
+     "Los Angeles",
+     null,
+     null,
+     "Unified School District",
+     "High Schools (Public)",
+     "State Special School",
+     "Provision 1",
+     null,
+     null,
+     "Locally funded",
+     null,
+     "1",
+     null,
+     null,
+     501.0,
+     null,
+     699.0,
+     null,
+     null,
+     null,
+     null,
+     2.0,
+     null,
+     null
+    ]
+   ],
+   "schools": [
+    [
+     "v1002",
+     null,
+     null,
+     "Active",
+     "Los Angeles ",
+     "c",
+     "A",
+     "x1",
+     null,
+     null,
+     "a",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "y2",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Directly funded",
+     "00",
+     "State Special Schools",
+     "65",
+     "Elementary Schools (Public)",
+     "CON",
+     "Special Education School",
+     "INTMIDJR",
+     "Elementary",
+     "b",
+     null,
+     "N",
+     2,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "x1",
+     "a",
+     null,
+     null,
+     null,
+     "2000-01-01"
+    ]
+   ]
+  }
+ },
+ {
+  "pair_id": "alpha:633",
+  "db_id": "codebase_community",
+  "labels": [
+   "join_path",
+   "order_limit_ties",
+   "projection"
+  ],
+  "gold": "SELECT T2.PostId FROM users AS T1 INNER JOIN postHistory AS T2 ON T1.Id = T2.UserId INNER JOIN posts AS T3 ON T2.PostId = T3.Id WHERE T1.DisplayName = 'slashnick' ORDER BY T3.AnswerCount DESC LIMIT 1",
+  "pred": "SELECT posts.id FROM posts INNER JOIN users ON posts.owneruserid = users.id WHERE users.displayname = 'slashnick' ORDER BY posts.answercount DESC LIMIT 1",
+  "gold_rows": [
+   [
+    1005
+   ]
+  ],
+  "pred_rows": [
+   [
+    1026
+   ]
+  ],
+  "witness": {
+   "postHistory": [
+    [
+     1004,
+     0,
+     1005,
+     null,
+     "2020-02-29 23:59:59",
+     1006,
+     null,
+     "x1",
+     "A"
+    ],
+    [
+     1025,
+     null,
+     1052,
+     null,
+     null,
+     1027,
+     "b",
+     null,
+     null
+    ]
+   ],
+   "posts": [
+    [
+     1005,
+     null,
+     null,
+     null,
+     null,
+     0,
+     "x1",
+     1006,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1006,
+     null,
+     "2000-01-01 00:00:00",
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     1026,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1027,
+     "2010-06-15 12:30:00",
+     null,
+     null,
+     2,
+     null,
+     null,
+     1027,
+     null,
+     null,
+     null,
+     null,
+     "a",
+     null
+    ],
+    [
+     1052,
+     null,
+     null,
+     "2020-02-29 23:59:59",
+     null,
+     -1,
+     null,
+     1053,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1,
+     1054,
+     "2020-02-29 23:59:59",
+     null,
+     1,
+     "2020-02-29 23:59:59",
+     null,
+     "y2"
+    ]
+   ],
+   "users": [
+    [
+     1006,
+     null,
+     "2000-01-01 00:00:00",
+     "slashnick",
+     "2020-02-29 23:59:59",
+     "x1",
+     null,
+     "b",
+     -1,
+     null,
+     null,
+     null,
+     10,
+     null
+    ],
+    [
+     1027,
+     null,
+     "2000-01-01 00:00:00",
+     "slashnick",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     2,
+     null,
+     null,
+     null
+    ],
+    [
+     1053,
+     3,
+     "2020-02-29 23:59:59",
+     "A",
+     null,
+     null,
+     null,
+     null,
+     2,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     1054,
+     null,
+     null,
+     "y2",
+     null,
+     null,
+     null,
+     null,
+     3,
+     null,
+     10,
+     null,
+     null,
+     "a"
+    ]
+   ]
+  }
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "idx": 17,
+  "pair_id": "gpt4_fewshot:558",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The only student has NULL date_left (has not left/graduated), so there is no graduate and the prediction's empty result is right while gold's ORDER BY returns a non-graduate.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 42,
+  "pair_id": "gpt4_fewshot:31",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Stadiums 1004 and 1016 have no 2014 concert, so their names belong in the answer; gold's EXCEPT on names wrongly removes them because they share a name with stadium 9.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 52,
+  "pair_id": "graphix_t5:990",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Two charges share the type 'Daily Accommodation' with different amounts; gold lists both while the prediction's GROUP BY arbitrarily drops one amount.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 57,
+  "pair_id": "dinsql_gpt4:785",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The difference arises only because GBR's official language is stored as 'ENGLISH' while RUS uses 'English', so gold's case-sensitive filter treats the UK as non-English-official; with consistent spelling both return empty.",
+  "implausible_fact": "language name stored in inconsistent case 'ENGLISH'"
+ },
+ {
+  "idx": 111,
+  "pair_id": "dailsql_gpt4:465",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only Australian Open match has NULL winner_rank_points, so whether its winner counts as having the highest rank points (gold) or no one qualifies (pred) depends on NULL treatment.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 121,
+  "pair_id": "dailsql_gpt4:60",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No student actually has both a cat and a dog; gold's INTERSECT on first names conflates two different students (both with NULL Fname), whereas the prediction intersects on StuID and correctly returns nothing.",
+  "implausible_fact": null
+ }
+]

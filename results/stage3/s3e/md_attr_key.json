@@ -1,0 +1,202 @@
+[
+ {
+  "idx": 0,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-o_cot:959"
+ },
+ {
+  "idx": 1,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:397"
+ },
+ {
+  "idx": 2,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-4:1057"
+ },
+ {
+  "idx": 3,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-35-turbo:894"
+ },
+ {
+  "idx": 4,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:1252"
+ },
+ {
+  "idx": 5,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-35-turbo-instruct:990"
+ },
+ {
+  "idx": 6,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-4-turbo:1003"
+ },
+ {
+  "idx": 7,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-35-turbo:786"
+ },
+ {
+  "idx": 8,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-turbo_cot:100"
+ },
+ {
+  "idx": 9,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-turbo_cot:1078"
+ },
+ {
+  "idx": 10,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_meta-llama-3-70b-instruct-2:994"
+ },
+ {
+  "idx": 11,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-4:128"
+ },
+ {
+  "idx": 12,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-4:138"
+ },
+ {
+  "idx": 13,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-turbo_cot:62"
+ },
+ {
+  "idx": 14,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-4:1003"
+ },
+ {
+  "idx": 15,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-o_cot:1331"
+ },
+ {
+  "idx": 16,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-turbo_cot:990"
+ },
+ {
+  "idx": 17,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-35-turbo:959"
+ },
+ {
+  "idx": 18,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-o_cot:1057"
+ },
+ {
+  "idx": 19,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-o_cot:212"
+ },
+ {
+  "idx": 20,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_meta-llama-3-70b-instruct-2:138"
+ },
+ {
+  "idx": 21,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-turbo_cot:1114"
+ },
+ {
+  "idx": 22,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-35-turbo-instruct:879"
+ },
+ {
+  "idx": 23,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-4-turbo:206"
+ },
+ {
+  "idx": 24,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_mistralai-mixtral-8x7b-instru-4:1398"
+ },
+ {
+  "idx": 25,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:1078"
+ },
+ {
+  "idx": 26,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-4:1331"
+ },
+ {
+  "idx": 27,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_mistralai-mixtral-8x7b-instru-4:1331"
+ },
+ {
+  "idx": 28,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-4-turbo:1114"
+ },
+ {
+  "idx": 29,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-35-turbo_cot:212"
+ },
+ {
+  "idx": 30,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-o_cot:977"
+ },
+ {
+  "idx": 31,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-35-turbo:779"
+ },
+ {
+  "idx": 32,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-o_cot:1084"
+ },
+ {
+  "idx": 33,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-o_cot:880"
+ },
+ {
+  "idx": 34,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-turbo_cot:897"
+ },
+ {
+  "idx": 35,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-4-turbo_cot:138"
+ },
+ {
+  "idx": 36,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-4:206"
+ },
+ {
+  "idx": 37,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_gpt-35-turbo_cot:669"
+ },
+ {
+  "idx": 38,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_kg_gpt-4:1486"
+ },
+ {
+  "idx": 39,
+  "source": "CaliberGraph-R",
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:1476"
+ }
+]

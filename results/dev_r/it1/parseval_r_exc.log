@@ -1,0 +1,16 @@
+600 to run
+50 119s
+100 233s
+150 309s
+200 405s
+250 522s
+300 616s
+350 737s
+400 838s
+450 943s
+500 1076s
+550 1184s
+600 1309s
+done 1309.3483700752258
+certified 0
+../results/dev_r/it1/parseval_r_exc.jsonl checked 0 R-ok 0

@@ -1,0 +1,269 @@
+{
+ "split": "test",
+ "n_exc": 7995,
+ "n_exi": 3664,
+ "main": {
+  "CaliberGraph-R": {
+   "L0": 1308,
+   "L1f": 1308,
+   "L2": 1010,
+   "Rq": 1308,
+   "R": 1308,
+   "R2": 1010
+  },
+  "Fuzz-R": {
+   "L0": 1047,
+   "L1f": 1047,
+   "L2": 807,
+   "Rq": 1047,
+   "R": 1047,
+   "R2": 807
+  }
+ },
+ "tests": [
+  {
+   "a": "CaliberGraph-R",
+   "b": "Fuzz-R",
+   "tier": "R",
+   "count_a": 1308,
+   "count_b": 1047,
+   "a_only": 285,
+   "b_only": 24,
+   "diff": 261,
+   "ci95": [
+    185,
+    340
+   ],
+   "p": 7.741451525388785e-58
+  },
+  {
+   "a": "CaliberGraph-R",
+   "b": "Fuzz-R",
+   "tier": "Rq",
+   "count_a": 1308,
+   "count_b": 1047,
+   "a_only": 285,
+   "b_only": 24,
+   "diff": 261,
+   "ci95": [
+    185,
+    340
+   ],
+   "p": 7.741451525388785e-58
+  }
+ ],
+ "per_system_R": {
+  "alpha": {
+   "name": "Alpha-SQL",
+   "n": 1174,
+   "ex": 0.6976149914821125,
+   "r_witnesses": 150,
+   "r_share": 0.18315018315018314
+  },
+  "chess": {
+   "name": "CHESS",
+   "n": 1174,
+   "ex": 0.6405451448040886,
+   "r_witnesses": 112,
+   "r_share": 0.14893617021276595
+  },
+  "csc-32b": {
+   "name": "CSC-SQL-32B",
+   "n": 1174,
+   "ex": 0.721465076660988,
+   "r_witnesses": 141,
+   "r_share": 0.16646989374262103
+  },
+  "csc-7b": {
+   "name": "CSC-SQL-7B",
+   "n": 1174,
+   "ex": 0.6942078364565588,
+   "r_witnesses": 128,
+   "r_share": 0.1570552147239264
+  },
+  "gena_submission_1": {
+   "name": "GenaSQL-1",
+   "n": 1174,
+   "ex": 0.6916524701873935,
+   "r_witnesses": 114,
+   "r_share": 0.14039408866995073
+  },
+  "gena_submission_2": {
+   "name": "GenaSQL-2",
+   "n": 1174,
+   "ex": 0.7052810902896082,
+   "r_witnesses": 124,
+   "r_share": 0.1497584541062802
+  },
+  "gsr": {
+   "name": "GSR",
+   "n": 1174,
+   "ex": 0.666098807495741,
+   "r_witnesses": 152,
+   "r_share": 0.19437340153452684
+  },
+  "omni-32-majority": {
+   "name": "OmniSQL-32B",
+   "n": 1174,
+   "ex": 0.676320272572402,
+   "r_witnesses": 135,
+   "r_share": 0.17002518891687657
+  },
+  "rsl": {
+   "name": "RSL-SQL",
+   "n": 1174,
+   "ex": 0.676320272572402,
+   "r_witnesses": 127,
+   "r_share": 0.15994962216624686
+  },
+  "slm": {
+   "name": "SLM-SQL",
+   "n": 1174,
+   "ex": 0.6405451448040886,
+   "r_witnesses": 125,
+   "r_share": 0.16622340425531915
+  }
+ },
+ "known_positive_recall": {
+  "CaliberGraph-R": {
+   "L0": 0.9683406113537117,
+   "L1f": 0.9683406113537117,
+   "L2": 0.7614628820960698,
+   "Rq": 0.9683406113537117,
+   "R": 0.9683406113537117,
+   "R2": 0.7614628820960698
+  },
+  "Fuzz-R": {
+   "L0": 0.8621724890829694,
+   "L1f": 0.8621724890829694,
+   "L2": 0.670032751091703,
+   "Rq": 0.8621724890829694,
+   "R": 0.8621724890829694,
+   "R2": 0.670032751091703
+  }
+ },
+ "attribution": {
+  "Fuzz-R@R": {
+   "n": 100,
+   "counts": {
+    "implausible_data": 20,
+    "pred_wrong": 21,
+    "gold_wrong": 19,
+    "ambiguous": 39,
+    "both_wrong": 1
+   },
+   "meaningful": 80,
+   "meaningful_share": 0.8,
+   "meaningful_ci": [
+    0.7111690380734976,
+    0.8666340774409013
+   ],
+   "implausible_share": 0.2,
+   "implausible_ci": [
+    0.1333659225590988,
+    0.28883096192650237
+   ],
+   "errors": 22,
+   "benchmark_issues": 58
+  },
+  "CaliberGraph-R@R": {
+   "n": 100,
+   "counts": {
+    "ambiguous": 41,
+    "gold_wrong": 23,
+    "implausible_data": 25,
+    "pred_wrong": 11
+   },
+   "meaningful": 75,
+   "meaningful_share": 0.75,
+   "meaningful_ci": [
+    0.6569535362992417,
+    0.8245490599627574
+   ],
+   "implausible_share": 0.25,
+   "implausible_ci": [
+    0.17545094003724265,
+    0.3430464637007583
+   ],
+   "errors": 11,
+   "benchmark_issues": 64
+  },
+  "calib:CaliberGraph@L1f": {
+   "n": 50,
+   "counts": {
+    "implausible_data": 33,
+    "pred_wrong": 3,
+    "gold_wrong": 6,
+    "ambiguous": 7,
+    "both_wrong": 1
+   },
+   "meaningful": 17,
+   "meaningful_share": 0.34,
+   "meaningful_ci": [
+    0.2243676963506106,
+    0.47846431458517147
+   ],
+   "implausible_share": 0.66,
+   "implausible_ci": [
+    0.5215356854148286,
+    0.7756323036493894
+   ],
+   "errors": 4,
+   "benchmark_issues": 13
+  },
+  "_agreement": {
+   "n": 250,
+   "agree": 224,
+   "kappa": 0.8574342552584827
+  }
+ },
+ "estimated_meaningful": {
+  "Fuzz-R@R": {
+   "count": 1047,
+   "estimate": 837.6,
+   "ci95": [
+    743.37,
+    910.89
+   ],
+   "errors_estimate": 230.34,
+   "errors_ci95": [
+    157.06229705327627,
+    325.30849846605315
+   ]
+  },
+  "CaliberGraph-R@R": {
+   "count": 1308,
+   "estimate": 981.0,
+   "ci95": [
+    863.28,
+    1085.64
+   ],
+   "errors_estimate": 143.88,
+   "errors_ci95": [
+    81.80404597434463,
+    243.69953640497158
+   ]
+  }
+ },
+ "h6": {
+  "a": "CaliberGraph-R@R",
+  "b": "Fuzz-R@R",
+  "diff": 143.39999999999998,
+  "ci95": [
+   4.710000000000036,
+   284.70000000000005
+  ],
+  "p_one_sided": 0.0222
+ },
+ "h7": {
+  "share": 0.25,
+  "ref_share": 0.66,
+  "z": 5.8219022510817995,
+  "p_one_sided": 2.909078812623633e-09
+ },
+ "calibration": {
+  "n": 50,
+  "same": 46,
+  "same_implausible": 47
+ }
+}

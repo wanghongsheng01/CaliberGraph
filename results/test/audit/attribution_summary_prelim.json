@@ -1,0 +1,124 @@
+{
+ "CaliberGraph L1f (pass A)": {
+  "n": 100,
+  "counts": {
+   "implausible_data": 70,
+   "pred_wrong": 9,
+   "gold_wrong": 12,
+   "ambiguous": 9
+  },
+  "meaningful": 30,
+  "meaningful_ci": [
+   0.219,
+   0.396
+  ],
+  "pool": 1979,
+  "est_meaningful": 594,
+  "est_ci": [
+   433,
+   784
+  ]
+ },
+ "CaliberGraph L1f (pass B)": {
+  "n": 100,
+  "counts": {
+   "implausible_data": 62,
+   "pred_wrong": 10,
+   "gold_wrong": 16,
+   "ambiguous": 12
+  },
+  "meaningful": 38,
+  "meaningful_ci": [
+   0.291,
+   0.478
+  ],
+  "pool": 1979,
+  "est_meaningful": 752,
+  "est_ci": [
+   576,
+   946
+  ]
+ },
+ "SpotIt recert L0": {
+  "n": 100,
+  "counts": {
+   "implausible_data": 53,
+   "pred_wrong": 12,
+   "gold_wrong": 18,
+   "ambiguous": 17
+  },
+  "meaningful": 47,
+  "meaningful_ci": [
+   0.375,
+   0.567
+  ],
+  "pool": 749,
+  "est_meaningful": 352,
+  "est_ci": [
+   281,
+   425
+  ]
+ },
+ "SpotIt+ recert L0 (*consulted official DB)": {
+  "n": 100,
+  "counts": {
+   "ambiguous": 30,
+   "gold_wrong": 19,
+   "implausible_data": 40,
+   "pred_wrong": 11
+  },
+  "meaningful": 60,
+  "meaningful_ci": [
+   0.502,
+   0.691
+  ],
+  "pool": 512,
+  "est_meaningful": 307,
+  "est_ci": [
+   257,
+   354
+  ]
+ },
+ "ParSEval-L1 L1f": {
+  "n": 100,
+  "counts": {
+   "ambiguous": 11,
+   "implausible_data": 65,
+   "gold_wrong": 17,
+   "both_wrong": 2,
+   "pred_wrong": 5
+  },
+  "meaningful": 35,
+  "meaningful_ci": [
+   0.264,
+   0.447
+  ],
+  "pool": 1342,
+  "est_meaningful": 470,
+  "est_ci": [
+   354,
+   600
+  ]
+ },
+ "Fuzz L1f": {
+  "n": 100,
+  "counts": {
+   "ambiguous": 19,
+   "implausible_data": 61,
+   "pred_wrong": 8,
+   "gold_wrong": 10,
+   "both_wrong": 2
+  },
+  "meaningful": 39,
+  "meaningful_ci": [
+   0.3,
+   0.488
+  ],
+  "pool": 1562,
+  "est_meaningful": 609,
+  "est_ci": [
+   469,
+   762
+  ]
+ }
+}

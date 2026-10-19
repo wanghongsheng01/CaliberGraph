@@ -1,0 +1,1118 @@
+{
+ "n": 700,
+ "K": 20,
+ "outcome_by_stage": {
+  "1": {
+   "vanishes": 279,
+   "unrepairable": 28,
+   "survives": 193
+  },
+  "2": {
+   "realistic_as_is": 200
+  }
+ },
+ "outcome_by_ai": {
+  "ambiguous": {
+   "survives": 55,
+   "vanishes": 34,
+   "unrepairable": 2,
+   "realistic_as_is": 80
+  },
+  "both_wrong": {
+   "survives": 4,
+   "vanishes": 1,
+   "realistic_as_is": 1
+  },
+  "gold_wrong": {
+   "survives": 32,
+   "vanishes": 20,
+   "unrepairable": 2,
+   "realistic_as_is": 42
+  },
+  "implausible_data": {
+   "vanishes": 212,
+   "unrepairable": 19,
+   "survives": 73,
+   "realistic_as_is": 45
+  },
+  "pred_wrong": {
+   "survives": 29,
+   "vanishes": 12,
+   "unrepairable": 5,
+   "realistic_as_is": 32
+  }
+ },
+ "outcome_by_stage_ai": {
+  "1|ambiguous": {
+   "survives": 55,
+   "vanishes": 34,
+   "unrepairable": 2
+  },
+  "1|both_wrong": {
+   "survives": 4,
+   "vanishes": 1
+  },
+  "1|gold_wrong": {
+   "survives": 32,
+   "vanishes": 20,
+   "unrepairable": 2
+  },
+  "1|implausible_data": {
+   "vanishes": 212,
+   "unrepairable": 19,
+   "survives": 73
+  },
+  "1|pred_wrong": {
+   "survives": 29,
+   "vanishes": 12,
+   "unrepairable": 5
+  },
+  "2|ambiguous": {
+   "realistic_as_is": 80
+  },
+  "2|both_wrong": {
+   "realistic_as_is": 1
+  },
+  "2|gold_wrong": {
+   "realistic_as_is": 42
+  },
+  "2|implausible_data": {
+   "realistic_as_is": 45
+  },
+  "2|pred_wrong": {
+   "realistic_as_is": 32
+  }
+ },
+ "outcome_by_tool": {
+  "CaliberGraph-R@R": {
+   "realistic_as_is": 100
+  },
+  "CaliberGraph@L1f": {
+   "vanishes": 56,
+   "survives": 40,
+   "unrepairable": 4
+  },
+  "Fuzz-R@R": {
+   "realistic_as_is": 100
+  },
+  "Fuzz@L1f": {
+   "survives": 42,
+   "vanishes": 58
+  },
+  "ParSEval-L1@L1f": {
+   "unrepairable": 10,
+   "vanishes": 53,
+   "survives": 37
+  },
+  "SpotIt+@L0": {
+   "vanishes": 49,
+   "survives": 45,
+   "unrepairable": 6
+  },
+  "SpotIt@L0": {
+   "vanishes": 63,
+   "survives": 29,
+   "unrepairable": 8
+  }
+ },
+ "pairAR_by_ai": {
+  "ambiguous": {
+   "True": 169,
+   "False": 2
+  },
+  "both_wrong": {
+   "True": 5,
+   "False": 1
+  },
+  "gold_wrong": {
+   "True": 87,
+   "False": 9
+  },
+  "implausible_data": {
+   "False": 144,
+   "True": 205
+  },
+  "pred_wrong": {
+   "True": 77,
+   "False": 1
+  }
+ },
+ "pairAR_by_stage": {
+  "1": {
+   "False": 157,
+   "True": 343
+  },
+  "2": {
+   "True": 200
+  }
+ },
+ "hv_outcome_by_ai": {
+  "ambiguous": {
+   "vanishes": 3,
+   "survives": 5,
+   "realistic_as_is": 12
+  },
+  "gold_wrong": {
+   "vanishes": 3,
+   "survives": 5,
+   "realistic_as_is": 7
+  },
+  "implausible_data": {
+   "survives": 4,
+   "vanishes": 7,
+   "unrepairable": 3,
+   "realistic_as_is": 7
+  },
+  "pred_wrong": {
+   "realistic_as_is": 4
+  }
+ },
+ "hv_outcome_by_human_consensus": {
+  "ambiguous": {
+   "vanishes": 1,
+   "realistic_as_is": 1
+  },
+  "both_wrong": {
+   "realistic_as_is": 1
+  },
+  "disagree": {
+   "survives": 1,
+   "vanishes": 2,
+   "realistic_as_is": 6
+  },
+  "gold_wrong": {
+   "vanishes": 7,
+   "survives": 9,
+   "unrepairable": 2,
+   "realistic_as_is": 11
+  },
+  "pred_wrong": {
+   "vanishes": 3,
+   "survives": 4,
+   "unrepairable": 1,
+   "realistic_as_is": 11
+  }
+ },
+ "hv_outcome_by_h1": {
+  "ambiguous": {
+   "vanishes": 1,
+   "realistic_as_is": 1
+  },
+  "both_wrong": {
+   "realistic_as_is": 1
+  },
+  "gold_wrong": {
+   "vanishes": 8,
+   "survives": 9,
+   "unrepairable": 2,
+   "realistic_as_is": 12
+  },
+  "implausible_data": {
+   "realistic_as_is": 3
+  },
+  "pred_wrong": {
+   "vanishes": 4,
+   "survives": 5,
+   "unrepairable": 1,
+   "realistic_as_is": 13
+  }
+ },
+ "hv_outcome_by_h2": {
+  "ambiguous": {
+   "vanishes": 1,
+   "realistic_as_is": 1
+  },
+  "both_wrong": {
+   "realistic_as_is": 1
+  },
+  "gold_wrong": {
+   "vanishes": 7,
+   "survives": 10,
+   "unrepairable": 2,
+   "realistic_as_is": 14
+  },
+  "implausible_data": {
+   "vanishes": 2,
+   "realistic_as_is": 1
+  },
+  "pred_wrong": {
+   "vanishes": 3,
+   "survives": 4,
+   "unrepairable": 1,
+   "realistic_as_is": 13
+  }
+ },
+ "hv_pairAR_by_ai": {
+  "ambiguous": {
+   "True": 20
+  },
+  "gold_wrong": {
+   "False": 2,
+   "True": 13
+  },
+  "implausible_data": {
+   "True": 13,
+   "False": 8
+  },
+  "pred_wrong": {
+   "True": 4
+  }
+ },
+ "hv_pairAR_by_human_consensus": {
+  "ambiguous": {
+   "True": 2
+  },
+  "both_wrong": {
+   "True": 1
+  },
+  "disagree": {
+   "True": 8,
+   "False": 1
+  },
+  "gold_wrong": {
+   "False": 7,
+   "True": 22
+  },
+  "pred_wrong": {
+   "True": 17,
+   "False": 2
+  }
+ },
+ "hv_items": [
+  {
+   "hv_no": 1,
+   "source": "CaliberGraph@L1f",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 19,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "total",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 2,
+   "source": "Fuzz@L1f",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "vanishes",
+   "n_repaired": 18,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "lookup",
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 3,
+   "source": "Fuzz-R@R",
+   "ai": "pred_wrong",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 4,
+   "source": "Fuzz-R@R",
+   "ai": "ambiguous",
+   "h1": "ambiguous",
+   "h2": "ambiguous",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 5,
+   "source": "SpotIt+@L0",
+   "ai": "implausible_data",
+   "h1": "gold_wrong",
+   "h2": "implausible_data",
+   "outcome": "vanishes",
+   "n_repaired": 20,
+   "n_survive": 0,
+   "pair_AR_any": false,
+   "violation_kinds_initial": [
+    "fd",
+    "lookup",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 6,
+   "source": "Fuzz-R@R",
+   "ai": "ambiguous",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 7,
+   "source": "CaliberGraph-R@R",
+   "ai": "implausible_data",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 8,
+   "source": "CaliberGraph-R@R",
+   "ai": "pred_wrong",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 9,
+   "source": "ParSEval-L1@L1f",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 20,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 10,
+   "source": "SpotIt+@L0",
+   "ai": "implausible_data",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "vanishes",
+   "n_repaired": 20,
+   "n_survive": 0,
+   "pair_AR_any": false,
+   "violation_kinds_initial": [
+    "fd",
+    "fk",
+    "total",
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 11,
+   "source": "CaliberGraph-R@R",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 12,
+   "source": "CaliberGraph-R@R",
+   "ai": "ambiguous",
+   "h1": "implausible_data",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 13,
+   "source": "CaliberGraph-R@R",
+   "ai": "ambiguous",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 14,
+   "source": "Fuzz-R@R",
+   "ai": "ambiguous",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 15,
+   "source": "SpotIt+@L0",
+   "ai": "ambiguous",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 18,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "irreflexive",
+    "total",
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 16,
+   "source": "Fuzz-R@R",
+   "ai": "ambiguous",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 17,
+   "source": "Fuzz-R@R",
+   "ai": "ambiguous",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 18,
+   "source": "CaliberGraph-R@R",
+   "ai": "implausible_data",
+   "h1": "implausible_data",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 19,
+   "source": "Fuzz-R@R",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 20,
+   "source": "ParSEval-L1@L1f",
+   "ai": "implausible_data",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "vanishes",
+   "n_repaired": 2,
+   "n_survive": 0,
+   "pair_AR_any": false,
+   "violation_kinds_initial": [
+    "fd",
+    "lookup",
+    "total",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 21,
+   "source": "Fuzz-R@R",
+   "ai": "ambiguous",
+   "h1": "both_wrong",
+   "h2": "both_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 22,
+   "source": "SpotIt+@L0",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "vanishes",
+   "n_repaired": 20,
+   "n_survive": 0,
+   "pair_AR_any": false,
+   "violation_kinds_initial": [
+    "fd",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 23,
+   "source": "SpotIt+@L0",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 20,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 24,
+   "source": "Fuzz-R@R",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 25,
+   "source": "CaliberGraph-R@R",
+   "ai": "pred_wrong",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 26,
+   "source": "ParSEval-L1@L1f",
+   "ai": "implausible_data",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "survives",
+   "n_repaired": 13,
+   "n_survive": 2,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "lookup",
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 27,
+   "source": "Fuzz-R@R",
+   "ai": "ambiguous",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 28,
+   "source": "SpotIt@L0",
+   "ai": "implausible_data",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "unrepairable",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": false,
+   "violation_kinds_initial": [
+    "value"
+   ]
+  },
+  {
+   "hv_no": 29,
+   "source": "ParSEval-L1@L1f",
+   "ai": "ambiguous",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "vanishes",
+   "n_repaired": 20,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "total",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 30,
+   "source": "Fuzz@L1f",
+   "ai": "implausible_data",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "vanishes",
+   "n_repaired": 19,
+   "n_survive": 0,
+   "pair_AR_any": false,
+   "violation_kinds_initial": [
+    "fd",
+    "lookup",
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 31,
+   "source": "SpotIt+@L0",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "vanishes",
+   "n_repaired": 20,
+   "n_survive": 0,
+   "pair_AR_any": false,
+   "violation_kinds_initial": [
+    "fd",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 32,
+   "source": "Fuzz-R@R",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 33,
+   "source": "Fuzz-R@R",
+   "ai": "ambiguous",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 34,
+   "source": "CaliberGraph-R@R",
+   "ai": "ambiguous",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 35,
+   "source": "SpotIt@L0",
+   "ai": "implausible_data",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "vanishes",
+   "n_repaired": 20,
+   "n_survive": 0,
+   "pair_AR_any": false,
+   "violation_kinds_initial": [
+    "irreflexive",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 36,
+   "source": "SpotIt+@L0",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 20,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 37,
+   "source": "SpotIt@L0",
+   "ai": "implausible_data",
+   "h1": "pred_wrong",
+   "h2": "implausible_data",
+   "outcome": "vanishes",
+   "n_repaired": 15,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 38,
+   "source": "CaliberGraph-R@R",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 39,
+   "source": "Fuzz@L1f",
+   "ai": "implausible_data",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 20,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "value"
+   ]
+  },
+  {
+   "hv_no": 40,
+   "source": "ParSEval-L1@L1f",
+   "ai": "implausible_data",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 2,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 41,
+   "source": "ParSEval-L1@L1f",
+   "ai": "ambiguous",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "survives",
+   "n_repaired": 8,
+   "n_survive": 8,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 42,
+   "source": "SpotIt+@L0",
+   "ai": "implausible_data",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "unrepairable",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "cross",
+    "fd",
+    "lookup",
+    "total",
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 43,
+   "source": "CaliberGraph-R@R",
+   "ai": "implausible_data",
+   "h1": "pred_wrong",
+   "h2": "implausible_data",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 44,
+   "source": "SpotIt+@L0",
+   "ai": "ambiguous",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 20,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 45,
+   "source": "ParSEval-L1@L1f",
+   "ai": "implausible_data",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "vanishes",
+   "n_repaired": 20,
+   "n_survive": 0,
+   "pair_AR_any": false,
+   "violation_kinds_initial": [
+    "fd",
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 46,
+   "source": "Fuzz-R@R",
+   "ai": "implausible_data",
+   "h1": "gold_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 47,
+   "source": "CaliberGraph@L1f",
+   "ai": "implausible_data",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 20,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 48,
+   "source": "SpotIt+@L0",
+   "ai": "ambiguous",
+   "h1": "ambiguous",
+   "h2": "ambiguous",
+   "outcome": "vanishes",
+   "n_repaired": 20,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 49,
+   "source": "CaliberGraph@L1f",
+   "ai": "implausible_data",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "unrepairable",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": false,
+   "violation_kinds_initial": [
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 50,
+   "source": "Fuzz-R@R",
+   "ai": "pred_wrong",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 51,
+   "source": "CaliberGraph-R@R",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 52,
+   "source": "CaliberGraph-R@R",
+   "ai": "implausible_data",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 53,
+   "source": "CaliberGraph-R@R",
+   "ai": "gold_wrong",
+   "h1": "implausible_data",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 54,
+   "source": "SpotIt@L0",
+   "ai": "ambiguous",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 15,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "irreflexive",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 55,
+   "source": "SpotIt@L0",
+   "ai": "gold_wrong",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 20,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "value"
+   ]
+  },
+  {
+   "hv_no": 56,
+   "source": "CaliberGraph-R@R",
+   "ai": "implausible_data",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 57,
+   "source": "Fuzz@L1f",
+   "ai": "ambiguous",
+   "h1": "pred_wrong",
+   "h2": "gold_wrong",
+   "outcome": "survives",
+   "n_repaired": 20,
+   "n_survive": 20,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "fd",
+    "total",
+    "ucc",
+    "value"
+   ]
+  },
+  {
+   "hv_no": 58,
+   "source": "CaliberGraph-R@R",
+   "ai": "ambiguous",
+   "h1": "pred_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  },
+  {
+   "hv_no": 59,
+   "source": "SpotIt@L0",
+   "ai": "ambiguous",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong",
+   "outcome": "vanishes",
+   "n_repaired": 20,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": [
+    "lookup",
+    "value",
+    "year_date"
+   ]
+  },
+  {
+   "hv_no": 60,
+   "source": "Fuzz-R@R",
+   "ai": "implausible_data",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong",
+   "outcome": "realistic_as_is",
+   "n_repaired": 0,
+   "n_survive": 0,
+   "pair_AR_any": true,
+   "violation_kinds_initial": []
+  }
+ ],
+ "not_differing_initially": 0
+}

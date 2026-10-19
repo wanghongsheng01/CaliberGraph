@@ -1,0 +1,202 @@
+[
+ {
+  "idx": 175,
+  "pair_id": "gsr:1123",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Question says 'players with the highest potential'; two players tie on max potential, gold keeps one via LIMIT 1, pred returns all ties.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 176,
+  "pair_id": "csc-32b:1367",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because majors have NULL college (pred groups NULL college as the biggest group); in the real database college is never NULL.",
+  "implausible_fact": "NULL college in major"
+ },
+ {
+  "idx": 177,
+  "pair_id": "slm:1434",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The question constrains type, county and state only; pred adds an unrequested city='San Juan' filter and misses a PO Box zip in another city.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 178,
+  "pair_id": "alpha:815",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Lookup tables mislabeled: alignment id 1 is 'N/A' and gender id 2 is 'Male', so id-based and name-based filters diverge; in reality id 1=Good and id 2=Female.",
+  "implausible_fact": "alignment/gender ids do not match their labels"
+ },
+ {
+  "idx": 179,
+  "pair_id": "omni-32-majority:1193",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Question asks how many patients; pred counts joined rows and double-counts a patient with two examinations, gold counts distinct IDs.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 180,
+  "pair_id": "omni-32-majority:789",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Average weight should skip unknown weights (evidence AVG(weight_kg)); gold divides by count of all aliens including one with NULL weight, giving 50 instead of 100.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 181,
+  "pair_id": "omni-32-majority:1309",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines the normal range as PLT > 100 and < 400 (strict); gold uses inclusive BETWEEN and returns PLT=100, pred follows the evidence.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 182,
+  "pair_id": "rsl:662",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Question asks how many posts; gold counts joined vote rows and double-counts a post with two qualifying votes, pred counts distinct posts.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 183,
+  "pair_id": "slm:1019",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "SUM/COUNT(lap) and AVG differ only because a lap has NULL milliseconds, which never happens in the real lapTimes table.",
+  "implausible_fact": "NULL milliseconds in lapTimes"
+ },
+ {
+  "idx": 184,
+  "pair_id": "gena_submission_2:1196",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Evidence only says 'SLE refers to diagnosis'; gold uses Examination.Diagnosis, pred uses Patient.Diagnosis, both defensible and the witness has them disagreeing.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 185,
+  "pair_id": "omni-32-majority:112",
+  "verdict": "both_wrong",
+  "confidence": "low",
+  "reason": "Neither follows client->disp->account->district: gold uses the client's own district (includes a client with no account), pred joins account to client only via shared district_id and duplicates rows.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 186,
+  "pair_id": "omni-32-majority:541",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two posts tie on max FavoriteCount with different owners; gold's LIMIT 1 returns one, pred returns all tied owners.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 187,
+  "pair_id": "slm:1434",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred's city='San Juan' filter fails only because the witness city is 'San Juan ' with a trailing space, which does not occur in the real zip_code table.",
+  "implausible_fact": "trailing space in city name"
+ },
+ {
+  "idx": 188,
+  "pair_id": "chess:506",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred multiplies a set by its number of Japanese translation rows; the witness has two Japanese translations for the same set, which never occurs in real set_translations.",
+  "implausible_fact": "duplicate Japanese translation for one set"
+ },
+ {
+  "idx": 189,
+  "pair_id": "alpha:188",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two qualifying accounts tie on the lowest loan amount; question says 'list out the accounts' (pred returns all ties) while gold's LIMIT 1 returns one.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 190,
+  "pair_id": "gena_submission_2:459",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Result differs because Shrine Keeper's convertedManaCost is NULL and the same card name has several inconsistent cost rows, which does not occur in reality (each name has one cost).",
+  "implausible_fact": "NULL/inconsistent convertedManaCost for a named card"
+ },
+ {
+  "idx": 191,
+  "pair_id": "slm:703",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Evidence says Count <= 20 but pred uses Count < 20, missing the tag with Count exactly 20.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 192,
+  "pair_id": "slm:695",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold and pred differ only because one user holds two identical 'Citizen Patrol' badges, which is impossible for this one-time badge (no duplicates in the real data).",
+  "implausible_fact": "duplicate Citizen Patrol badge for one user"
+ },
+ {
+  "idx": 193,
+  "pair_id": "alpha:378",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred's extra hasFoil/hasNonFoil filter excludes a card that has both Card Kingdom ids but hasFoil=0 and hasNonFoil=0; in the real data every such card has both flags set.",
+  "implausible_fact": "cardKingdom ids set but hasFoil/hasNonFoil=0"
+ },
+ {
+  "idx": 194,
+  "pair_id": "rsl:114",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred returns nothing only because the Prague account has no disposition/client, whereas every real account has one.",
+  "implausible_fact": "account without any disp/client"
+ },
+ {
+  "idx": 195,
+  "pair_id": "omni-32-majority:290",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred's element whitelist drops the row only because the witness element is a nonsense numeric string, not a real chemical symbol.",
+  "implausible_fact": "atom element is not a chemical symbol"
+ },
+ {
+  "idx": 196,
+  "pair_id": "csc-32b:1025",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred's top league_id (24558) has no row in League because the Match row references a nonexistent league; real matches always have a league.",
+  "implausible_fact": "Match.league_id with no League row"
+ },
+ {
+  "idx": 197,
+  "pair_id": "rsl:1122",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two players tie on the max overall_rating; gold returns all ties, pred's LIMIT 1 returns one, and the singular question does not decide.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 198,
+  "pair_id": "slm:459",
+  "verdict": "implausible_data",
+  "confidence": "low",
+  "reason": "The witness contains no cards named 'Serra Angel' or 'Shrine Keeper' (only upper-case variants), so gold is empty and pred's ELSE branch emits a name; the question presupposes both cards exist.",
+  "implausible_fact": "neither named card exists in cards"
+ },
+ {
+  "idx": 199,
+  "pair_id": "gsr:751",
+  "verdict": "gold_wrong",
+  "confidence": "low",
+  "reason": "Question asks for five superpowers; gold returns a repeated power (Super Strength twice) while pred's DISTINCT lists five different powers.",
+  "implausible_fact": null
+ }
+]

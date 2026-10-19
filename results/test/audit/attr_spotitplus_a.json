@@ -1,0 +1,702 @@
+[
+ {
+  "idx": 0,
+  "pair_id": "gena_submission_1:1367",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Each college has exactly one member, so the most-common college is a tie and the two queries just break it differently."
+ },
+ {
+  "idx": 1,
+  "pair_id": "slm:1513",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Gold sorts Time DESC (last customer) while the question asks for the first; pred's result is the earliest transaction's country."
+ },
+ {
+  "idx": 2,
+  "pair_id": "gsr:813",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness alignment/gender id-to-name mapping contradicts the evidence's fixed id definitions (e.g., id 3 not named 'Neutral'), which never happens in the real lookup table."
+ },
+ {
+  "idx": 3,
+  "pair_id": "slm:1278",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "IGG=900 is excluded by the evidence's strict 900 < IGG < 2000, but pred's BETWEEN includes it."
+ },
+ {
+  "idx": 4,
+  "pair_id": "slm:5",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness has a school record with NULL School name yet Virtual='F' (NULL-name rows are district records with NULL Virtual in reality); the NULL name alone causes COUNT(DISTINCT School) to differ."
+ },
+ {
+  "idx": 5,
+  "pair_id": "gena_submission_2:44",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 6,
+  "pair_id": "slm:1527",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Transaction references a GasStationID absent from gasstations (dangling FK), which is the only reason the join with gasstations changes the result."
+ },
+ {
+  "idx": 7,
+  "pair_id": "gsr:86",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Same CDSCode has CharterNum differing between schools ('2147483648') and frpm ('0040'), an inconsistent record that alone causes the difference."
+ },
+ {
+  "idx": 8,
+  "pair_id": "gsr:1272",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines first patient via MIN(First Date); the only abnormal-SSA patient has NULL First Date, which SQLite sorts first, so pred returns a patient whose first date is unknown."
+ },
+ {
+  "idx": 9,
+  "pair_id": "chess:1128",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Gold only considers home_player_1, ignoring all other players of the country's matches; pred averages over all players as the question asks."
+ },
+ {
+  "idx": 10,
+  "pair_id": "chess:1051",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Two players tie at the max potential and the question says 'list all', so gold's two names are correct while pred's LIMIT 1 drops one."
+ },
+ {
+  "idx": 11,
+  "pair_id": "slm:426",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Evidence explicitly defines not-on-MTGO as mtgoCode IS NULL OR mtgoCode = ''; gold omits the empty-string case."
+ },
+ {
+  "idx": 12,
+  "pair_id": "gsr:112",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The question asks where she opened her account (account.district_id); gold returns the client's own district instead."
+ },
+ {
+  "idx": 13,
+  "pair_id": "gena_submission_2:815",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness alignment/gender id-to-name mapping contradicts the evidence's fixed id definitions (e.g., id 3 not named 'Neutral'), which never happens in the real lookup table."
+ },
+ {
+  "idx": 14,
+  "pair_id": "omni-32-majority:290",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Element 'y' really occurs in the database; pred filters to the evidence's partial list and drops it, while gold returns the molecule's elements."
+ },
+ {
+  "idx": 15,
+  "pair_id": "omni-32-majority:107",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred joins client.client_id = account.account_id, a genuine join bug, losing the only client."
+ },
+ {
+  "idx": 16,
+  "pair_id": "slm:156",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The account has only a DISPONENT and no OWNER, which never happens in the real data; that is the only reason gold (OWNER filter) and pred differ."
+ },
+ {
+  "idx": 17,
+  "pair_id": "chess:1055",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Player_Attributes row's player_api_id and player_fifa_api_id point to two different Player rows, an inconsistent record that alone separates the two join keys."
+ },
+ {
+  "idx": 18,
+  "pair_id": "alpha:1183",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Original diagnosis is Patient.Diagnosis; gold's extra requirement of an examination dated exactly on First Date is an artifact, so pred's result answers the question."
+ },
+ {
+  "idx": 19,
+  "pair_id": "gena_submission_1:1272",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines first patient via MIN(First Date); the only abnormal-SSA patient has NULL First Date, which SQLite sorts first, so pred returns a patient whose first date is unknown."
+ },
+ {
+  "idx": 20,
+  "pair_id": "csc-32b:1272",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines first patient via MIN(First Date); the only abnormal-SSA patient has NULL First Date, which SQLite sorts first, so pred returns a patient whose first date is unknown."
+ },
+ {
+  "idx": 21,
+  "pair_id": "chess:324",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The single bond has no connected rows and the other bond's connected rows include a self-loop; with real symmetric connected data both formulas give the same ratio."
+ },
+ {
+  "idx": 22,
+  "pair_id": "alpha:1079",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 23,
+  "pair_id": "gsr:534",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 24,
+  "pair_id": "slm:564",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Post's denormalized CommentCount=2 disagrees with the single actual comment row, an inconsistency that alone causes the difference."
+ },
+ {
+  "idx": 25,
+  "pair_id": "rsl:91",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "AVG(A12) equals AVG(A13) exactly; the question gives no tie rule so '1995' and '1996' are equally (in)defensible."
+ },
+ {
+  "idx": 26,
+  "pair_id": "omni-32-majority:312",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Bond TR001_2_4 belongs to a molecule with no atoms (impossible in real data); gold's atom join drops it."
+ },
+ {
+  "idx": 27,
+  "pair_id": "alpha:318",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "bond table assigns TR001_1_7 to a different molecule than its connected atoms (plus a self-loop), an inconsistent record."
+ },
+ {
+  "idx": 28,
+  "pair_id": "gsr:1513",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Gold sorts Time DESC (last customer) while the question asks for the first; pred's result is the earliest transaction's country."
+ },
+ {
+  "idx": 29,
+  "pair_id": "gena_submission_1:5",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness has a school record with NULL School name yet Virtual='F' (NULL-name rows are district records with NULL Virtual in reality); the NULL name alone causes COUNT(DISTINCT School) to differ."
+ },
+ {
+  "idx": 30,
+  "pair_id": "slm:1367",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Each college has exactly one member, so the most-common college is a tie broken differently by the two queries."
+ },
+ {
+  "idx": 31,
+  "pair_id": "omni-32-majority:759",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 32,
+  "pair_id": "rsl:813",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness alignment/gender id-to-name mapping contradicts the evidence's fixed id definitions (e.g., id 3 not named 'Neutral'), which never happens in the real lookup table."
+ },
+ {
+  "idx": 33,
+  "pair_id": "omni-32-majority:108",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both loans tie at the maximum amount; gold merges tied accounts and pred picks one, both defensible."
+ },
+ {
+  "idx": 34,
+  "pair_id": "omni-32-majority:657",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 35,
+  "pair_id": "chess:643",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 36,
+  "pair_id": "omni-32-majority:214",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness contains a molecule with no atoms (never occurs in real data); gold's atom join drops it, which is the sole cause of the extra label."
+ },
+ {
+  "idx": 37,
+  "pair_id": "alpha:74",
+  "verdict": "implausible_data",
+  "confidence": "low",
+  "reason": "Two SPECON schools share one NCES district (unique in reality) and one has Low Grade 12 > High Grade 7; the question presupposes a single school."
+ },
+ {
+  "idx": 38,
+  "pair_id": "gsr:307",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness stores the bond in connected in only one direction; real data always stores both directions, which is the only reason gold (atom_id only) and pred (both atoms) differ."
+ },
+ {
+  "idx": 39,
+  "pair_id": "alpha:657",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 40,
+  "pair_id": "alpha:562",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No post has 1910 views; returning count 0 versus no row are both reasonable answers to a question about a nonexistent post."
+ },
+ {
+  "idx": 41,
+  "pair_id": "alpha:302",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness stores the bond in connected in only one direction; real data always stores both directions, which is the only reason gold (atom_id only) and pred (both atoms) differ."
+ },
+ {
+  "idx": 42,
+  "pair_id": "slm:1252",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "IGG=900 is excluded by the evidence's strict 900 < IGG < 2000, but gold's BETWEEN includes it."
+ },
+ {
+  "idx": 43,
+  "pair_id": "csc-32b:564",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two answer posts share ParentId 107829 and each has one comment; the question presupposes one post, so returning one or both is defensible."
+ },
+ {
+  "idx": 44,
+  "pair_id": "omni-32-majority:13",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only candidate has an undefined ranking value (NULL / division by zero); whether such an entity counts as 'highest' is a NULL-treatment choice."
+ },
+ {
+  "idx": 45,
+  "pair_id": "alpha:214",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness contains a molecule with no atoms (never occurs in real data); gold's atom join drops it, which is the sole cause of the extra label."
+ },
+ {
+  "idx": 46,
+  "pair_id": "rsl:1513",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Gold sorts Time DESC (last customer) while the question asks for the first; pred's result is the earliest transaction's country."
+ },
+ {
+  "idx": 47,
+  "pair_id": "gena_submission_2:10",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 48,
+  "pair_id": "csc-7b:103",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred joins client_id = card.disp_id instead of going through disp, a genuine join bug."
+ },
+ {
+  "idx": 49,
+  "pair_id": "gena_submission_1:1252",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "IGG=2000 is excluded by the evidence's strict IGG < 2000, but gold's BETWEEN includes it."
+ },
+ {
+  "idx": 50,
+  "pair_id": "gsr:1384",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No row matches the named entity (case differs); the difference is only an empty result versus an aggregate NULL row, both meaning no data."
+ },
+ {
+  "idx": 51,
+  "pair_id": "chess:1238",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "HGB=10 is excluded by the evidence's strict 10 < HGB < 17, but pred's BETWEEN includes it."
+ },
+ {
+  "idx": 52,
+  "pair_id": "gsr:214",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness contains a molecule with no atoms (never occurs in real data); gold's atom join drops it, which is the sole cause of the extra label."
+ },
+ {
+  "idx": 53,
+  "pair_id": "csc-32b:426",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Evidence explicitly defines not-on-MTGO as mtgoCode IS NULL OR mtgoCode = ''; gold omits the empty-string case."
+ },
+ {
+  "idx": 54,
+  "pair_id": "omni-32-majority:426",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Evidence explicitly defines not-on-MTGO as mtgoCode IS NULL OR mtgoCode = ''; gold omits the empty-string case."
+ },
+ {
+  "idx": 55,
+  "pair_id": "csc-32b:1196",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Patient.Diagnosis is SLE but Examination.Diagnosis is not; 'patients with SLE disease' can refer to either diagnosis column."
+ },
+ {
+  "idx": 56,
+  "pair_id": "gsr:5",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness has a school record with NULL School name yet Virtual='F' (NULL-name rows are district records with NULL Virtual in reality); the NULL name alone causes COUNT(DISTINCT School) to differ."
+ },
+ {
+  "idx": 57,
+  "pair_id": "alpha:8",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only candidate has an undefined ranking value (NULL / division by zero); whether such an entity counts as 'highest' is a NULL-treatment choice."
+ },
+ {
+  "idx": 58,
+  "pair_id": "omni-32-majority:879",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only candidate has an undefined ranking value (NULL / division by zero); whether such an entity counts as 'highest' is a NULL-treatment choice."
+ },
+ {
+  "idx": 59,
+  "pair_id": "alpha:977",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No rows qualify; a 'how many' question should answer 0, but gold's SUM over an empty set yields NULL."
+ },
+ {
+  "idx": 60,
+  "pair_id": "gena_submission_1:1511",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Transaction references a GasStationID absent from gasstations (dangling FK), which is the only reason the join with gasstations changes the result."
+ },
+ {
+  "idx": 61,
+  "pair_id": "omni-32-majority:813",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness alignment/gender id-to-name mapping contradicts the evidence's fixed id definitions (e.g., id 3 not named 'Neutral'), which never happens in the real lookup table."
+ },
+ {
+  "idx": 62,
+  "pair_id": "csc-32b:977",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No rows qualify; a 'how many' question should answer 0, but gold's SUM over an empty set yields NULL."
+ },
+ {
+  "idx": 63,
+  "pair_id": "gena_submission_1:128",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two different districts share the same A2 name (district names are unique in reality), which alone makes grouping by id vs name differ."
+ },
+ {
+  "idx": 64,
+  "pair_id": "gsr:657",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 65,
+  "pair_id": "alpha:927",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Result has fastestLapSpeed but NULL fastestLapTime, which never co-occurs in real data; gold's fastestLapTime filter drops it."
+ },
+ {
+  "idx": 66,
+  "pair_id": "rsl:233",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "bond table assigns the bonds to another molecule while connected links them to a TR006 atom, an inconsistent record."
+ },
+ {
+  "idx": 67,
+  "pair_id": "csc-32b:759",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 68,
+  "pair_id": "csc-7b:5",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness has a school record with NULL School name yet Virtual='F' (NULL-name rows are district records with NULL Virtual in reality); the NULL name alone causes COUNT(DISTINCT School) to differ."
+ },
+ {
+  "idx": 69,
+  "pair_id": "csc-32b:285",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness stores the bond in connected in only one direction; real data always stores both directions, which is the only reason gold (atom_id only) and pred (both atoms) differ."
+ },
+ {
+  "idx": 70,
+  "pair_id": "slm:1183",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Original diagnosis is Patient.Diagnosis; gold's extra requirement of an examination dated exactly on First Date is an artifact, so pred's result answers the question."
+ },
+ {
+  "idx": 71,
+  "pair_id": "csc-32b:1178",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only AORTITIS patient has NULL First Date; whether that patient counts as 'first' is a NULL-treatment choice."
+ },
+ {
+  "idx": 72,
+  "pair_id": "slm:1348",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "No November Meeting budget exists; a 'how many' question should give 0, but pred's SUM over empty input yields NULL."
+ },
+ {
+  "idx": 73,
+  "pair_id": "alpha:813",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness alignment/gender id-to-name mapping contradicts the evidence's fixed id definitions (e.g., id 3 not named 'Neutral'), which never happens in the real lookup table."
+ },
+ {
+  "idx": 74,
+  "pair_id": "gsr:818",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness alignment/gender id-to-name mapping contradicts the evidence's fixed id definitions (e.g., id 3 not named 'Neutral'), which never happens in the real lookup table."
+ },
+ {
+  "idx": 75,
+  "pair_id": "alpha:1495",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 76,
+  "pair_id": "gena_submission_1:29",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Enrollment (K-12) is NULL for every row (never NULL in real frpm), so the 'largest' pick is arbitrary row order."
+ },
+ {
+  "idx": 77,
+  "pair_id": "rsl:318",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "bond table assigns TR001_1_7 to a different molecule than its connected atoms, an inconsistent record."
+ },
+ {
+  "idx": 78,
+  "pair_id": "csc-32b:1183",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Original diagnosis is Patient.Diagnosis; gold's extra requirement of an examination dated exactly on First Date is an artifact, so pred's result answers the question."
+ },
+ {
+  "idx": 79,
+  "pair_id": "csc-7b:1309",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "PLT=100 is excluded by the evidence's strict 100 < PLT < 400, but gold's BETWEEN includes it."
+ },
+ {
+  "idx": 80,
+  "pair_id": "alpha:795",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness alignment/gender id-to-name mapping contradicts the evidence's fixed id definitions (e.g., id 3 not named 'Neutral'), which never happens in the real lookup table."
+ },
+ {
+  "idx": 81,
+  "pair_id": "alpha:91",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "AVG(A12) equals AVG(A13) exactly; the question gives no tie rule so either year is defensible."
+ },
+ {
+  "idx": 82,
+  "pair_id": "omni-32-majority:1325",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 83,
+  "pair_id": "alpha:5",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness has a school record with NULL School name yet Virtual='F' (NULL-name rows are district records with NULL Virtual in reality); the NULL name alone causes COUNT(DISTINCT School) to differ."
+ },
+ {
+  "idx": 84,
+  "pair_id": "csc-32b:108",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The biggest-loan account has no transactions (every real account has some), so gold falls through to another account's transaction."
+ },
+ {
+  "idx": 85,
+  "pair_id": "csc-32b:80",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Same CDSCode has different school names in frpm and schools, an inconsistent record that alone causes the difference."
+ },
+ {
+  "idx": 86,
+  "pair_id": "alpha:512",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No rows qualify; a 'how many' question should answer 0, but gold's SUM over an empty set yields NULL."
+ },
+ {
+  "idx": 87,
+  "pair_id": "gena_submission_2:321",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Atom TR000_2 sits in a molecule not matching its id prefix, TR000_4 does not exist and connected has a self-loop; the presupposed bond is missing only due to unrealistic data."
+ },
+ {
+  "idx": 88,
+  "pair_id": "csc-7b:1183",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Original diagnosis is Patient.Diagnosis; gold's extra requirement of an examination dated exactly on First Date is an artifact, so pred's result answers the question."
+ },
+ {
+  "idx": 89,
+  "pair_id": "gena_submission_1:7",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 90,
+  "pair_id": "gena_submission_1:583",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No row matches the named entity (case differs); the difference is only an empty result versus an aggregate NULL row, both meaning no data."
+ },
+ {
+  "idx": 91,
+  "pair_id": "alpha:818",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness alignment/gender id-to-name mapping contradicts the evidence's fixed id definitions (e.g., id 3 not named 'Neutral'), which never happens in the real lookup table."
+ },
+ {
+  "idx": 92,
+  "pair_id": "gsr:867",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Result has fastestLapSpeed but NULL fastestLapTime, which never co-occurs in real data; gold's fastestLapTime filter drops it."
+ },
+ {
+  "idx": 93,
+  "pair_id": "slm:1134",
+  "verdict": "gold_wrong",
+  "confidence": "low",
+  "reason": "Player_Attributes id 6 does not exist, so the difference is undefined; gold silently treats the missing score as 0 while pred returns nothing."
+ },
+ {
+  "idx": 94,
+  "pair_id": "chess:1263",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "HCT=29 is abnormal under the evidence's 29 < N < 52 normal range, but pred's strict < 29 excludes it."
+ },
+ {
+  "idx": 95,
+  "pair_id": "omni-32-majority:1194",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Question text says CRP '2+' while evidence says CRP > 2; gold follows the text, pred the evidence, and the witness CRP satisfies only the latter."
+ },
+ {
+  "idx": 96,
+  "pair_id": "csc-32b:880",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No row matches the named entity (case differs); the difference is only an empty result versus an aggregate NULL row, both meaning no data."
+ },
+ {
+  "idx": 97,
+  "pair_id": "csc-7b:135",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Account 2 has no disp row at all (every real account has an OWNER), which is the only reason pred's disp join drops it."
+ },
+ {
+  "idx": 98,
+  "pair_id": "alpha:1022",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Tie on the ranking value; question does not specify whether to return one or all tied rows, so both results are defensible."
+ },
+ {
+  "idx": 99,
+  "pair_id": "csc-32b:1511",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Transaction references a GasStationID absent from gasstations (dangling FK), which is the only reason the join with gasstations changes the result."
+ }
+]

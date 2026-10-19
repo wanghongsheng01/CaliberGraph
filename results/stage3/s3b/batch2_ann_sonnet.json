@@ -1,0 +1,202 @@
+[
+ {
+  "idx": 50,
+  "pair_id": "gena_submission_1:977",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines the range as raceId > 50 and < 100 (exclusive); pred uses inclusive BETWEEN and counts the boundary race 50.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 51,
+  "pair_id": "alpha:982",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The question asks how many drivers; gold counts joined result rows so a driver with two Puncture results is counted twice, pred counts distinct drivers.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 52,
+  "pair_id": "alpha:630",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "'Tags used by' the user can mean tags of posts he owns (pred) or of posts he has history entries for (gold); both are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 53,
+  "pair_id": "alpha:1101",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only because a match has NULL away_team_goal (AVG skips it, gold's COUNT(id) does not); goals are never NULL in the real data.",
+  "implausible_fact": "NULL away_team_goal in a match"
+ },
+ {
+  "idx": 54,
+  "pair_id": "chess:786",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference comes solely from a hero_attribute row with NULL hero_id (COUNT(*) counts it, COUNT(hero_id) does not); real data has no NULL hero_id.",
+  "implausible_fact": "NULL hero_id in hero_attribute"
+ },
+ {
+  "idx": 55,
+  "pair_id": "alpha:1263",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Max aCL IgA among qualifying patients is patient 3 (7); gold's SELECT DISTINCT ID ... ORDER BY non-selected column returns patient 2 arbitrarily, pred returns the right patient.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 56,
+  "pair_id": "alpha:1331",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "'The amount of funds received' may be listed per income record (gold) or totalled (pred); both are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 57,
+  "pair_id": "gsr:49",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred adds ClosedDate IS NOT NULL, dropping closed schools of the county whose closure date is unknown (such schools exist in real data); the question asks for every closed school in the county.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 58,
+  "pair_id": "alpha:1038",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only from NULL goal values (SUM(a)+SUM(b) skips NULLs, SUM(a+b) drops the whole row); goals are never NULL in real data.",
+  "implausible_fact": "NULL home/away goal in a match"
+ },
+ {
+  "idx": 59,
+  "pair_id": "rsl:931",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Witness has no 2009 Spanish GP; gold returns no row and pred returns a single NULL, an empty-set aggregate convention difference.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 60,
+  "pair_id": "csc-32b:942",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Both compute the same average lap time; the difference is only a floating-point artifact (74.55799999999999 vs 74.558).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 61,
+  "pair_id": "csc-7b:554",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "All four users have exactly one badge, so the 'most badges' user is a tie and the returned name depends on arbitrary tie-breaking.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 62,
+  "pair_id": "csc-7b:416",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because foreign_data.language is NULL (pred's COUNT(language) gives 0 and NULL result, gold divides by count of cards); language is always filled in reality.",
+  "implausible_fact": "NULL language in foreign_data"
+ },
+ {
+  "idx": 63,
+  "pair_id": "csc-32b:906",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises from a results row placing Hamilton (born 1985) in a 1952 race with no matching standings row; inconsistent records.",
+  "implausible_fact": "Hamilton has a result in a 1952 race"
+ },
+ {
+  "idx": 64,
+  "pair_id": "slm:1071",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Team_Attributes row carries team_api_id and team_fifa_api_id belonging to two different teams, so the two join keys disagree; in real data they are consistent.",
+  "implausible_fact": "attribute row's api id and fifa id point to different teams"
+ },
+ {
+  "idx": 65,
+  "pair_id": "gsr:318",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Bond's molecule_id differs from the molecule of the atoms it connects, so the bond-table and atom-route answers diverge; real data is consistent.",
+  "implausible_fact": "bond and its atoms belong to different molecules"
+ },
+ {
+  "idx": 66,
+  "pair_id": "csc-7b:74",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Witness has no matching school; gold's MIN returns a NULL row while pred returns an empty set, an empty-aggregate convention difference.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 67,
+  "pair_id": "gena_submission_1:1039",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because Player_Attributes.date is NULL (gold's COUNT(date)=0 gives NULL); date is always filled in real data.",
+  "implausible_fact": "NULL date in Player_Attributes"
+ },
+ {
+  "idx": 68,
+  "pair_id": "gena_submission_2:1367",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises because most majors have NULL college (pred's top group is NULL, gold counts non-null colleges); college is never NULL in real data.",
+  "implausible_fact": "NULL college in major"
+ },
+ {
+  "idx": 69,
+  "pair_id": "omni-32-majority:1134",
+  "verdict": "gold_wrong",
+  "confidence": "low",
+  "reason": "Witness lacks player id 6; gold silently treats the missing value as 0 and returns -23, while pred correctly yields NULL as no difference can be computed.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 70,
+  "pair_id": "slm:1196",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "'Patients with SLE' can be read via Examination.Diagnosis (gold) or Patient.Diagnosis (pred); both are defensible and the witness data separate them.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 71,
+  "pair_id": "rsl:1164",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The question asks how many patients; gold counts examination rows so one patient with two qualifying exams is counted twice, pred counts distinct patients.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 72,
+  "pair_id": "gena_submission_1:1331",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Witness has no Vice President; gold returns no rows while pred's SUM returns NULL, and the list-vs-total reading is itself open.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 73,
+  "pair_id": "rsl:212",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines least numerous as MIN(COUNT(element)), i.e. atom count; pred does this (h with 2 atoms), gold counts distinct molecules, ending in a tie decided arbitrarily.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 74,
+  "pair_id": "alpha:272",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises because a triple bond recorded for molecule TR060 connects atoms of other molecules; real bonds link atoms of their own molecule.",
+  "implausible_fact": "bond's atoms belong to different molecules than the bond"
+ }
+]

@@ -1,0 +1,30 @@
+2026-10-13T18:52:19+08:00 START python3 run_method.py --method cgx --split test --subset exc --dedup --budget 5 --procs 2 --out ../results/test/cgx_exc.jsonl
+2026-10-13T21:53:19+08:00 END python3 run_method.py --method
+2026-10-13T21:53:19+08:00 START ./baselines/parseval_env.sh baselines/parseval_run.py --variant l1 --split test --subset exc --budget 5 --procs 2 --out ../results/test/parseval_l1_exc.jsonl
+2026-10-14T01:42:42+08:00 END ./baselines/parseval_env.sh baselines/parseval_run.py --variant
+2026-10-14T01:42:51+08:00 START python3 run_method.py --method fuzz --split test --subset exc --dedup --budget 5 --procs 2 --out ../results/test/fuzz_exc.jsonl
+2026-10-14T04:54:50+08:00 END python3 run_method.py --method
+2026-10-14T04:54:50+08:00 START python3 run_method.py --method cgx_sc --split test --subset exc --dedup --budget 5 --procs 2 --out ../results/test/cgx_sc_exc.jsonl
+2026-10-14T20:36:08+08:00 resuming frozen v4 queue (pid 1823)
+2026-10-14T20:36:08+08:00 END python3 run_method.py --method
+2026-10-14T20:36:08+08:00 START python3 run_method.py --method cgx --split test --subset exi --dedup --budget 5 --procs 2 --out ../results/test/cgx_exi.jsonl
+2026-10-14T20:44:32+08:00 END python3 run_method.py --method
+2026-10-14T20:44:32+08:00 START ./baselines/parseval_env.sh baselines/parseval_run.py --variant l1 --split test --subset exi --budget 5 --procs 2 --out ../results/test/parseval_l1_exi.jsonl
+2026-10-14T21:42:44+08:00 END ./baselines/parseval_env.sh baselines/parseval_run.py --variant
+2026-10-14T21:43:01+08:00 START python3 run_method.py --method fuzz --split test --subset exi --dedup --budget 5 --procs 2 --out ../results/test/fuzz_exi.jsonl
+2026-10-14T22:01:21+08:00 END python3 run_method.py --method
+2026-10-14T22:01:21+08:00 START ./baselines/parseval_env.sh baselines/parseval_run.py --variant official --split test --subset exc --budget 5 --procs 2 --out ../results/test/parseval_official_exc.jsonl
+2026-10-14T23:01:33+08:00 END ./baselines/parseval_env.sh baselines/parseval_run.py --variant
+2026-10-14T23:01:43+08:00 START python3 run_method.py --method cgx_noanchor --split test --subset exc --dedup --ids ../data/test_subsample.json --budget 5 --procs 2 --out ../results/test/abl_cgx_noanchor.jsonl
+2026-10-14T23:31:33+08:00 END python3 run_method.py --method
+2026-10-14T23:31:33+08:00 START python3 run_method.py --method cgx_noiso --split test --subset exc --dedup --ids ../data/test_subsample.json --budget 5 --procs 2 --out ../results/test/abl_cgx_noiso.jsonl
+2026-10-15T00:01:18+08:00 END python3 run_method.py --method
+2026-10-15T00:01:18+08:00 START python3 run_method.py --method cgx_nojoin --split test --subset exc --dedup --ids ../data/test_subsample.json --budget 5 --procs 2 --out ../results/test/abl_cgx_nojoin.jsonl
+2026-10-15T00:31:34+08:00 END python3 run_method.py --method
+2026-10-15T00:31:34+08:00 START python3 run_method.py --method cgx_nodomain --split test --subset exc --dedup --ids ../data/test_subsample.json --budget 5 --procs 2 --out ../results/test/abl_cgx_nodomain.jsonl
+2026-10-15T01:01:20+08:00 END python3 run_method.py --method
+2026-10-15T01:01:20+08:00 START python3 run_method.py --method cgx --split test --subset exc --dedup --ids ../data/test_subsample.json --budget 10 --procs 2 --out ../results/test/budget10_cgx.jsonl
+2026-10-15T02:00:55+08:00 END python3 run_method.py --method
+2026-10-15T02:00:55+08:00 START ./baselines/parseval_env.sh baselines/parseval_run.py --variant l1 --split test --subset exc --ids ../data/test_subsample.json --budget 10 --procs 2 --out ../results/test/budget10_parseval_l1.jsonl
+2026-10-15T03:11:32+08:00 END ./baselines/parseval_env.sh baselines/parseval_run.py --variant
+2026-10-15T03:11:34+08:00 ALL_DONE

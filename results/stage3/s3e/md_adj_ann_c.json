@@ -1,0 +1,34 @@
+[
+ {
+  "idx": 1,
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:397",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "A card with availability 'arena,mtgo,paper' is available in paper and mtgo per the question, but the evidence pins availability = 'mtgo,paper' exactly, so both exact-match and containment readings are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 9,
+  "pair_id": "md_ta_gpt-4-turbo_cot:1078",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Abdelaziz Barrada is absent from the witness, so the comparison presupposition fails; returning Aaron Lennon or returning nothing are both defensible responses.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 25,
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:1078",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Abdelaziz Barrada is absent from the witness, so the comparison presupposition fails; returning Aaron Lennon or returning nothing are both defensible responses.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 34,
+  "pair_id": "md_ta_gpt-4-turbo_cot:897",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The difference arises only because no driver in the witness has any win (gold filters wins>=1, pred ranks a zero-win driver first), whereas real F1 standings always contain race winners.",
+  "implausible_fact": "no driver standing with any wins"
+ }
+]

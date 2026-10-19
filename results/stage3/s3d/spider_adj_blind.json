@@ -1,0 +1,576 @@
+[
+ {
+  "pair_id": "gpt4_fewshot:558",
+  "db_id": "student_transcripts_tracking",
+  "question": "What is the first, middle, and last name of the earliest school graduate?",
+  "evidence": "",
+  "gold": "SELECT first_name ,  middle_name ,  last_name FROM Students ORDER BY date_left ASC LIMIT 1",
+  "pred": "SELECT first_name, middle_name, last_name FROM Students WHERE date_left = (SELECT MIN(date_left) FROM Students)",
+  "witness": {
+   "Addresses": {
+    "columns": [
+     "address_id",
+     "line_1",
+     "line_2",
+     "line_3",
+     "city",
+     "zip_postcode",
+     "state_province_county",
+     "country",
+     "other_address_details"
+    ],
+    "rows": [
+     [
+      1001,
+      "202 Hessel Views Apt. 468",
+      "Apt. 370",
+      "x1",
+      "a",
+      null,
+      "Kentucky",
+      "Gibraltar",
+      null
+     ]
+    ]
+   },
+   "Students": {
+    "columns": [
+     "student_id",
+     "current_address_id",
+     "permanent_address_id",
+     "first_name",
+     "middle_name",
+     "last_name",
+     "cell_mobile_number",
+     "email_address",
+     "ssn",
+     "date_first_registered",
+     "date_left",
+     "other_student_details"
+    ],
+    "rows": [
+     [
+      1002,
+      1001,
+      1001,
+      "Milton",
+      "Cleve",
+      "Schuppe",
+      "877.549.9067x8723",
+      "swift.kolby@example.com",
+      "141072406",
+      null,
+      null,
+      "laborum"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Milton",
+    "Cleve",
+    "Schuppe"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 17
+ },
+ {
+  "pair_id": "gpt4_fewshot:31",
+  "db_id": "concert_singer",
+  "question": "Show names for all stadiums except for stadiums having a concert in year 2014.",
+  "evidence": "",
+  "gold": "SELECT name FROM stadium EXCEPT SELECT T2.name FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  =  2014",
+  "pred": "SELECT Name FROM stadium WHERE Stadium_ID NOT IN (SELECT Stadium_ID FROM concert WHERE Year = 2014)",
+  "witness": {
+   "concert": {
+    "columns": [
+     "concert_ID",
+     "concert_Name",
+     "Theme",
+     "Stadium_ID",
+     "Year"
+    ],
+    "rows": [
+     [
+      1003,
+      "Home Visits",
+      "Party All Night",
+      "2",
+      "2014"
+     ],
+     [
+      1015,
+      "Home Visits",
+      "Party All Night",
+      "9",
+      "2014"
+     ]
+    ]
+   },
+   "stadium": {
+    "columns": [
+     "Stadium_ID",
+     "Location",
+     "Name",
+     "Capacity",
+     "Highest",
+     "Lowest",
+     "Average"
+    ],
+    "rows": [
+     [
+      1004,
+      "Ayr United",
+      "Forthbank Stadium",
+      null,
+      1,
+      null,
+      1
+     ],
+     [
+      1016,
+      "Queen's Park",
+      "Forthbank Stadium",
+      null,
+      1,
+      null,
+      1
+     ],
+     [
+      "2",
+      "Peterhead",
+      "Bayview Stadium",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "9",
+      "East Fife",
+      "Forthbank Stadium",
+      null,
+      3,
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "Forthbank Stadium"
+   ],
+   [
+    "Forthbank Stadium"
+   ]
+  ],
+  "idx": 42
+ },
+ {
+  "pair_id": "graphix_t5:990",
+  "db_id": "dog_kennels",
+  "question": "How much does each charge type costs? List both charge type and amount.",
+  "evidence": "",
+  "gold": "SELECT charge_type ,  charge_amount FROM Charges",
+  "pred": "select charge_type, charge_amount from charges group by charge_type",
+  "witness": {
+   "Charges": {
+    "columns": [
+     "charge_id",
+     "charge_type",
+     "charge_amount"
+    ],
+    "rows": [
+     [
+      1005,
+      "Daily Accommodation",
+      98
+     ],
+     [
+      1017,
+      "Daily Accommodation",
+      640
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Daily Accommodation",
+    98
+   ],
+   [
+    "Daily Accommodation",
+    640
+   ]
+  ],
+  "pred_rows": [
+   [
+    "Daily Accommodation",
+    98
+   ]
+  ],
+  "idx": 52
+ },
+ {
+  "pair_id": "dinsql_gpt4:785",
+  "db_id": "world_1",
+  "question": "What are the names of cities in Europe for which English is not the official language?",
+  "evidence": "",
+  "gold": "SELECT DISTINCT T2.Name FROM country AS T1 JOIN city AS T2 ON T2.CountryCode  =  T1.Code WHERE T1.Continent  =  'Europe' AND T1.Name NOT IN (SELECT T3.Name FROM country AS T3 JOIN countrylanguage AS T4 ON T3.Code  =  T4.CountryCode WHERE T4.IsOfficial  =  'T' AND T4.Language  =  'English')",
+  "pred": "SELECT T1.Name FROM city AS T1 JOIN country AS T2 ON T1.CountryCode  =  T2.Code WHERE T2.Continent  =  'Europe' AND T1.Name NOT IN (SELECT T1.Name FROM city AS T1 JOIN country AS T2 ON T1.CountryCode  =  T2.Code JOIN countrylanguage AS T3 ON T2.Code  =  T3.CountryCode WHERE T2.Continent  =  'Europe' AND T3.Language  =  'English' AND T3.IsOfficial  =  'T')",
+  "witness": {
+   "city": {
+    "columns": [
+     "ID",
+     "Name",
+     "CountryCode",
+     "District",
+     "Population"
+    ],
+    "rows": [
+     [
+      1011,
+      "La Paz",
+      "RUS",
+      "Texas",
+      215768
+     ],
+     [
+      1016,
+      "La Paz",
+      "GBR",
+      "Andalusia",
+      103106
+     ]
+    ]
+   },
+   "country": {
+    "columns": [
+     "Code",
+     "Name",
+     "Continent",
+     "Region",
+     "SurfaceArea",
+     "IndepYear",
+     "Population",
+     "LifeExpectancy",
+     "GNP",
+     "GNPOld",
+     "LocalName",
+     "GovernmentForm",
+     "HeadOfState",
+     "Capital",
+     "Code2"
+    ],
+    "rows": [
+     [
+      "RUS",
+      "Russian Federation",
+      "Europe",
+      "Southern Europe",
+      118484.0,
+      1964,
+      10925000,
+      37.6,
+      1687.0,
+      2527.0,
+      "Rossija",
+      "Republic",
+      "Bakili Muluzi",
+      3580,
+      "RU"
+     ],
+     [
+      "GBR",
+      "United Kingdom",
+      "Europe",
+      "Southern Europe",
+      475442.0,
+      1960,
+      15085000,
+      54.8,
+      9174.0,
+      8596.0,
+      "United Kingdom",
+      "Republic",
+      "Paul Biya",
+      456,
+      "GB"
+     ]
+    ]
+   },
+   "countrylanguage": {
+    "columns": [
+     "CountryCode",
+     "Language",
+     "IsOfficial",
+     "Percentage"
+    ],
+    "rows": [
+     [
+      "RUS",
+      "English",
+      "T",
+      0.0
+     ],
+     [
+      "GBR",
+      "ENGLISH",
+      "T",
+      74.1
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "La Paz"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 57
+ },
+ {
+  "pair_id": "dailsql_gpt4:465",
+  "db_id": "wta_1",
+  "question": "Find the name of the winner who has the highest rank points and participated in the Australian Open tourney.",
+  "evidence": "",
+  "gold": "SELECT winner_name FROM matches WHERE tourney_name  =  'Australian Open' ORDER BY winner_rank_points DESC LIMIT 1",
+  "pred": "SELECT winner_name FROM matches WHERE winner_rank_points = (SELECT max(winner_rank_points) FROM matches WHERE tourney_name = 'Australian Open')",
+  "witness": {
+   "matches": {
+    "columns": [
+     "best_of",
+     "draw_size",
+     "loser_age",
+     "loser_entry",
+     "loser_hand",
+     "loser_ht",
+     "loser_id",
+     "loser_ioc",
+     "loser_name",
+     "loser_rank",
+     "loser_rank_points",
+     "loser_seed",
+     "match_num",
+     "minutes",
+     "round",
+     "score",
+     "surface",
+     "tourney_date",
+     "tourney_id",
+     "tourney_level",
+     "tourney_name",
+     "winner_age",
+     "winner_entry",
+     "winner_hand",
+     "winner_ht",
+     "winner_id",
+     "winner_ioc",
+     "winner_name",
+     "winner_rank",
+     "winner_rank_points",
+     "winner_seed",
+     "year"
+    ],
+    "rows": [
+     [
+      null,
+      null,
+      null,
+      "",
+      "R",
+      null,
+      1002,
+      "c",
+      "Angelique Kerber",
+      null,
+      null,
+      null,
+      null,
+      null,
+      "BR",
+      "6-4 6-3",
+      "Hard",
+      null,
+      "2016-540",
+      "G",
+      "Australian Open",
+      -1.5,
+      "",
+      "L",
+      null,
+      1002,
+      "SVK",
+      "Elina Svitolina",
+      0,
+      null,
+      null,
+      null
+     ]
+    ]
+   },
+   "players": {
+    "columns": [
+     "player_id",
+     "first_name",
+     "last_name",
+     "hand",
+     "birth_date",
+     "country_code"
+    ],
+    "rows": [
+     [
+      1002,
+      "Maria",
+      "Chen",
+      "a",
+      null,
+      "ESP"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Elina Svitolina"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 111
+ },
+ {
+  "pair_id": "dailsql_gpt4:60",
+  "db_id": "pets_1",
+  "question": "What are the students' first names who have both cats and dogs as pets?",
+  "evidence": "",
+  "gold": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'",
+  "pred": "SELECT Fname FROM Student WHERE StuID IN (SELECT StuID FROM Has_Pet WHERE PetID IN (SELECT PetID FROM Pets WHERE PetType = 'cat') INTERSECT SELECT StuID FROM Has_Pet WHERE PetID IN (SELECT PetID FROM Pets WHERE PetType = 'dog'))",
+  "witness": {
+   "Has_Pet": {
+    "columns": [
+     "StuID",
+     "PetID"
+    ],
+    "rows": [
+     [
+      1064,
+      1029
+     ],
+     [
+      1003,
+      1004
+     ],
+     [
+      1003,
+      1004
+     ],
+     [
+      1067,
+      1068
+     ]
+    ]
+   },
+   "Pets": {
+    "columns": [
+     "PetID",
+     "PetType",
+     "pet_age",
+     "weight"
+    ],
+    "rows": [
+     [
+      1029,
+      "cat",
+      null,
+      null
+     ],
+     [
+      1004,
+      "cat",
+      null,
+      null
+     ],
+     [
+      1069,
+      "cat",
+      null,
+      null
+     ],
+     [
+      1068,
+      "dog",
+      null,
+      null
+     ]
+    ]
+   },
+   "Student": {
+    "columns": [
+     "StuID",
+     "LName",
+     "Fname",
+     "Age",
+     "Sex",
+     "Major",
+     "Advisor",
+     "city_code"
+    ],
+    "rows": [
+     [
+      1028,
+      "Thornton",
+      "Dinesh",
+      null,
+      null,
+      10,
+      null,
+      "YYZ"
+     ],
+     [
+      1003,
+      "Thornton",
+      "b",
+      null,
+      null,
+      10,
+      null,
+      "YYZ"
+     ],
+     [
+      1064,
+      "A",
+      null,
+      null,
+      "F",
+      null,
+      null,
+      "b"
+     ],
+     [
+      1067,
+      "Nelson",
+      null,
+      2,
+      null,
+      null,
+      2,
+      "BAL"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 121
+ }
+]

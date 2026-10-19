@@ -1,0 +1,322 @@
+[
+ {
+  "idx": 40,
+  "pair_id": "dailsql_gpt4_sc:1023",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold groups by name and pred by singer id; the difference only arises because two singer records are identical in name, birth year, net worth and citizenship (a duplicated person), each with one identical song.",
+  "implausible_fact": "two singers with identical name/birth year/net worth/citizenship"
+ },
+ {
+  "idx": 41,
+  "pair_id": "gpt4_zeroshot:147",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Car models are in model_list (2 for this maker); pred wrongly counts car_names by joining MakeId (a car id) to car_makers.Id.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 42,
+  "pair_id": "gpt4_fewshot:31",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold removes by name and pred by stadium id; the difference arises only because three distinct stadiums at different locations all carry the name 'Forthbank Stadium'.",
+  "implausible_fact": "three different stadiums share the same name"
+ },
+ {
+  "idx": 43,
+  "pair_id": "dinsql_gpt4:25",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two stadiums tie with one post-2013 concert each, and the question does not say which to return; each query picks a different one.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 44,
+  "pair_id": "graphix_t5:43",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two stadiums tie for the highest capacity (4000); gold arbitrarily picks one with no concerts while pred counts concerts across all tied stadiums.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 45,
+  "pair_id": "gpt4_zeroshot:36",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Two different singers (different ids, countries, songs) share the name Rose White; the question asks per person, which gold does, while pred merges them by name.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 46,
+  "pair_id": "gpt4_zeroshot:407",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold groups by name and pred by teacher id; the difference arises only because two teacher records are identical (same name, age, hometown), i.e. a duplicated person each teaching one course.",
+  "implausible_fact": "duplicate teacher records with identical name/age/hometown"
+ },
+ {
+  "idx": 47,
+  "pair_id": "dailsql_gpt4:77",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Two students have last name Smith (plausible), and pred's scalar '=' subquery arbitrarily keeps only one student's pet whereas gold returns pets of all Smiths.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 48,
+  "pair_id": "graphix_t5:43",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two stadiums tie for the maximum capacity 11998; gold picks one with no concerts, pred counts concerts across all tied stadiums.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 49,
+  "pair_id": "gpt4_zeroshot:629",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two cartoons share the latest air date; returning one (gold) or all tied (pred) are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 50,
+  "pair_id": "gpt4_zeroshot:132",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two 3-cylinder cars tie at horsepower 90 with different makes; each query returns a different arbitrary one of the tied cars.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 51,
+  "pair_id": "dailsql_gpt4_sc:363",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Two documents share the name 'Welcome to NY' (plausible); gold returns paragraphs of all such documents while pred's scalar subquery arbitrarily keeps one.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 52,
+  "pair_id": "graphix_t5:990",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The charge type has two different amounts; gold lists all charges while pred's GROUP BY returns one arbitrary amount, hiding the other.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 53,
+  "pair_id": "graphix_t5:167",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The difference arises only because cylinders is NULL (and horsepower is the nonsense text 'c' that passes the > min comparison), which never occurs for real cars.",
+  "implausible_fact": "NULL cylinders and non-numeric horsepower 'c'"
+ },
+ {
+  "idx": 54,
+  "pair_id": "dinsql_gpt4:277",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "All three employees tie with one award each, so any single employee is a defensible answer; gold and pred each return a different one of the tied employees.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 55,
+  "pair_id": "dinsql_gpt4:976",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two treatments share the most recent date; returning one cost or both are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 56,
+  "pair_id": "dinsql_gpt4:408",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold groups by name and pred by teacher id; the difference arises only because two teacher records are identical (same name, age, hometown), each teaching one course.",
+  "implausible_fact": "duplicate teacher records with identical name/age/hometown"
+ },
+ {
+  "idx": 57,
+  "pair_id": "dinsql_gpt4:785",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred excludes cities by name, so the La Paz in the UK (whose official-language row does not match 'English') is dropped because a same-named city in another country has English official; gold filters by country correctly.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 58,
+  "pair_id": "dinsql_gpt4:346",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Template type CV exists in Ref_Template_Types but is used by no document; the question asks for template types not used, which pred includes and gold misses by considering only types that have templates.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 59,
+  "pair_id": "graphix_t5:25",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two stadiums tie with one post-2013 concert each; each query returns a different arbitrary one.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 60,
+  "pair_id": "dinsql_gpt4:521",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "The department name in the database is 'engineer' (as in the official DB); pred filters on the nonexistent value 'engineering'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 61,
+  "pair_id": "gpt4_fewshot:147",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Models belong to model_list (AMC has 1); pred counts car_names by joining car ids to maker ids, which is a wrong join.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 62,
+  "pair_id": "dailsql_gpt4:379",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The question asks for a document having both 'Brazil' and 'Ireland' paragraphs (none here); pred's IN returns a document that has only 'Ireland'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 63,
+  "pair_id": "dinsql_gpt4:423",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two visits tie at 20 tickets; returning one visitor or both tied visitors are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 64,
+  "pair_id": "dinsql_gpt4:720",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The only Asian country has NULL (unknown) life expectancy; gold sorts NULL first and reports it as shortest, while pred correctly returns no country with a known minimum.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 65,
+  "pair_id": "graphix_t5:1023",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two distinct singers named Susanne Klatten (different birth years, net worths) each have one song; gold merges them by name and wrongly reports a singer with more than one song.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 66,
+  "pair_id": "graphix_t5:843",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Two distinct conductors named Antal Brown (different ages, nationalities) each conduct one orchestra; pred merges them by name and wrongly reports one conducting two.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 67,
+  "pair_id": "dailsql_gpt4:7",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only singer has a NULL age, so gold (NULL sorted first) returns him and pred returns nothing; singer age is never NULL in the real database.",
+  "implausible_fact": "singer age is NULL"
+ },
+ {
+  "idx": 68,
+  "pair_id": "gpt4_zeroshot:504",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "The question asks for the battle that lost both ships; only Lettice was lost, so gold's empty result is right and pred's OR-style IN is wrong.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 69,
+  "pair_id": "dailsql_gpt4_sc:392",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two teachers tie as youngest (age 39); returning one hometown or both is defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 70,
+  "pair_id": "gpt4_fewshot:537",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Master and Bachelor programs tie with two enrolments each; each query returns a different arbitrary one.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 71,
+  "pair_id": "gpt4_fewshot:108",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred's subquery picks the NULL country group (two makers without a country) as the top and returns nothing; car makers always have a country in reality.",
+  "implausible_fact": "car makers with NULL country"
+ },
+ {
+  "idx": 72,
+  "pair_id": "dailsql_gpt4:62",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred compares PetType to 'Cat' while values are lowercase 'cat' (as in the official DB), so it fails to exclude cat owners.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 73,
+  "pair_id": "dailsql_gpt4:408",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold groups by name and pred by teacher id; the difference arises only because two teacher records are identical (same name, age, hometown), each teaching one course.",
+  "implausible_fact": "duplicate teacher records with identical name/age/hometown"
+ },
+ {
+  "idx": 74,
+  "pair_id": "gpt4_fewshot:556",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two students share the earliest registration timestamp; returning one or both is defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 75,
+  "pair_id": "dailsql_gpt4:47",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "There is no dog, only a cat; gold ignores the pet type and returns the cat's weight while pred correctly returns nothing.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 76,
+  "pair_id": "dinsql_gpt4:976",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two treatments share the most recent date; returning one cost or both is defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 77,
+  "pair_id": "gpt4_zeroshot:41",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The difference arises only because the same stadium (Balmoor, Raith Rovers) appears as two records with different ids, one hosting 2014 and the other 2015 concerts.",
+  "implausible_fact": "duplicate stadium records with same name and location"
+ },
+ {
+  "idx": 78,
+  "pair_id": "dailsql_gpt4_sc:392",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both teachers tie at age 45; returning one hometown or both is defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 79,
+  "pair_id": "dinsql_gpt4:374",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Three documents tie with one paragraph each; each query returns a different arbitrary one.",
+  "implausible_fact": null
+ }
+]

@@ -1,0 +1,322 @@
+[
+ {
+  "idx": 80,
+  "pair_id": "gpt4_fewshot:30",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Both singers have NULL country; gold's INTERSECT returns NULL as a 'country' while the join drops it, a difference only due to missing country values.",
+  "implausible_fact": "singer country is NULL"
+ },
+ {
+  "idx": 81,
+  "pair_id": "graphix_t5:154",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "A car weighing exactly 3000 is not 'more than 3000', so no year qualifies; gold's inclusive BETWEEN wrongly returns its year.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 82,
+  "pair_id": "dailsql_gpt4_sc:346",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Template type CV has no templates and hence is used by no document; gold only considers types present in Templates and misses it.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 83,
+  "pair_id": "gpt4_zeroshot:19",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two stadiums tie on the highest average attendance; LIMIT 1 vs returning all ties are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 84,
+  "pair_id": "dinsql_gpt4:936",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both owners have 2 treatments, a tie; which one (or both) to return is unspecified and LIMIT 1 picks arbitrarily.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 85,
+  "pair_id": "dailsql_gpt4:131",
+  "verdict": "pred_wrong",
+  "confidence": "low",
+  "reason": "No car has 3 cylinders, so the answer should be empty; pred's ungrouped MAX returns a meaningless NULL row.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 86,
+  "pair_id": "graphix_t5:557",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Earliest graduate should be ordered by date_left; pred orders by date_first_registered.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 87,
+  "pair_id": "gpt4_zeroshot:408",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Two teacher rows identical in name, age and hometown (differing only in id) look like a duplicate of one person; gold merges them by name, pred keeps them apart.",
+  "implausible_fact": "duplicate teacher record with identical attributes"
+ },
+ {
+  "idx": 88,
+  "pair_id": "graphix_t5:107",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "usa and france each have one car maker, a tie; LIMIT 1 picks arbitrarily.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 89,
+  "pair_id": "graphix_t5:555",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "The first registered student (Hobart) has no enrolment record; pred's needless join to Student_Enrolment excludes him.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 90,
+  "pair_id": "graphix_t5:408",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Two teacher rows identical in name, age and hometown (differing only in id) look like a duplicate of one person; gold merges them by name, pred keeps them apart.",
+  "implausible_fact": "duplicate teacher record with identical attributes"
+ },
+ {
+  "idx": 91,
+  "pair_id": "gpt4_zeroshot:408",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Two different teachers named Joseph Huts (different ages/hometowns) each teach one course; gold groups by name and wrongly counts them as one teacher with two courses.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 92,
+  "pair_id": "gpt4_zeroshot:667",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "The tallest person overall is not a poker player; pred takes MAX height over all people and returns nothing instead of the tallest poker player's rank.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 93,
+  "pair_id": "gpt4_fewshot:558",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two students tie on the earliest date_left; returning one or both is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 94,
+  "pair_id": "gpt4_zeroshot:407",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Two distinct teachers named Lucy Wong (different ages) each teach one course; gold groups by name and wrongly reports a teacher with two courses.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 95,
+  "pair_id": "gpt4_fewshot:59",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred compares PetType to 'Cat'/'Dog' while the data uses lowercase 'cat'/'dog', so it misses Arthur who has both.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 96,
+  "pair_id": "dinsql_gpt4:522",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "The engineering department is stored as 'engineer' (as in the real DB); pred filters on the nonexistent 'engineering' and returns 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 97,
+  "pair_id": "dinsql_gpt4:157",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only volvo car has NULL Accelerate (and Cylinders), making pred's = MIN comparison fail while gold still returns a row; real data never has NULL acceleration.",
+  "implausible_fact": "cars_data Accelerate is NULL"
+ },
+ {
+  "idx": 98,
+  "pair_id": "dinsql_gpt4:47",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Gold does not restrict to dogs and returns a cat's weight; pred correctly finds the youngest dog.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 99,
+  "pair_id": "dailsql_gpt4_sc:842",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Two conductor rows named Igor Stravinsky with identical age/nationality/years and identical orchestras are a duplicate of a unique person; the difference arises only from this duplication.",
+  "implausible_fact": "duplicated conductor and orchestra records"
+ },
+ {
+  "idx": 100,
+  "pair_id": "dailsql_gpt4:744",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two different country codes share the name 'Angola', so gold's name-based INTERSECT counts a country speaking both languages; country names are unique in reality.",
+  "implausible_fact": "two countries named Angola"
+ },
+ {
+  "idx": 101,
+  "pair_id": "graphix_t5:843",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Two conductor rows named Igor Stravinsky with identical attributes and identical orchestras are a duplicate of a unique person; the difference arises only from this duplication.",
+  "implausible_fact": "duplicated conductor and orchestra records"
+ },
+ {
+  "idx": 102,
+  "pair_id": "gpt4_fewshot:1022",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two distinct singers with the same name (different birth years, net worth) each have one song; gold groups by name and wrongly returns the name.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 103,
+  "pair_id": "dailsql_gpt4:897",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Students with NULL names cause the difference: gold's EXCEPT removes the NULL name because another NULL-named student has a friend.",
+  "implausible_fact": "Highschooler names are NULL"
+ },
+ {
+  "idx": 104,
+  "pair_id": "dailsql_gpt4:107",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "usa and france each have two car makers, a tie; LIMIT 1 picks arbitrarily.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 105,
+  "pair_id": "dailsql_gpt4:277",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Employees 1 and 10 each have one evaluation, a tie; LIMIT 1 picks arbitrarily.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 106,
+  "pair_id": "gpt4_fewshot:60",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Two different students named Eric each own only one pet (one cat, one dog); gold's name-based INTERSECT wrongly reports Eric as having both.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 107,
+  "pair_id": "dailsql_gpt4:897",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Student Jordan (1304) has no friend rows but shares a name with a Jordan who does; gold's name-based EXCEPT wrongly drops him (duplicate names occur in the real DB).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 108,
+  "pair_id": "dailsql_gpt4:912",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "'How many likes does Kyle have' can mean likes Kyle gives (gold) or likes Kyle receives (pred).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 109,
+  "pair_id": "gpt4_fewshot:32",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two different stadiums are named Bayview Stadium and only one had a 2014 concert; gold's name-based EXCEPT wrongly removes the other.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 110,
+  "pair_id": "gpt4_zeroshot:1022",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two distinct singers with the same name (different birth years, net worth) each have one song; gold groups by name and wrongly returns the name.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 111,
+  "pair_id": "dailsql_gpt4:465",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only Australian Open match has NULL winner_rank_points, so pred's = MAX comparison fails; winner rank points are never NULL in the real data.",
+  "implausible_fact": "winner_rank_points is NULL"
+ },
+ {
+  "idx": 112,
+  "pair_id": "dinsql_gpt4:931",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both owners have one dog each, a tie; LIMIT 1 picks arbitrarily.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 113,
+  "pair_id": "gpt4_zeroshot:655",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only poker player has NULL Earnings and NULL Money_Rank; gold returns a NULL row, pred nothing, purely due to the missing earnings.",
+  "implausible_fact": "poker_player Earnings is NULL"
+ },
+ {
+  "idx": 114,
+  "pair_id": "dailsql_gpt4:408",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Two distinct teachers named Lucy Wong (different ages) each teach one course; gold groups by name and wrongly reports a teacher with two courses.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 115,
+  "pair_id": "gpt4_zeroshot:855",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "A performance row with NULL Orchestra_ID makes gold's NOT IN return nothing; performances always belong to an orchestra (and orchestra names are NULL too).",
+  "implausible_fact": "performance with NULL Orchestra_ID"
+ },
+ {
+  "idx": 116,
+  "pair_id": "dailsql_gpt4_sc:1023",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Two singer rows identical in name, birth year, net worth and citizenship, each with an identical song, are a duplicate of one person; the difference arises only from this duplication.",
+  "implausible_fact": "duplicate singer record with identical attributes"
+ },
+ {
+  "idx": 117,
+  "pair_id": "gpt4_zeroshot:558",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two students tie on the earliest date_left; returning one or both is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 118,
+  "pair_id": "graphix_t5:896",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Students with NULL names cause the difference: gold's EXCEPT removes the NULL name because another NULL-named student has a friend.",
+  "implausible_fact": "Highschooler names are NULL"
+ },
+ {
+  "idx": 119,
+  "pair_id": "dinsql_gpt4:665",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two poker players tie on the lowest earnings; returning one or both is unspecified.",
+  "implausible_fact": null
+ }
+]

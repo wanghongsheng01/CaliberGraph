@@ -1,0 +1,86 @@
+\documentclass[sigconf, nonacm]{acmart}
+
+%%% do not modify the following VLDB block %%
+%%% VLDB block start %%%
+\usepackage{pvldb}% VLDB/PVLDB formatting overrides, see pvldb.sty for details.
+                      % Do not remove -- required for consistent proceedings
+                      % formatting across all VLDB submissions.
+%%% VLDB block end %%%
+
+\renewcommand\vldbdoi{XX.XX/XXX.XX}
+\renewcommand\vldbpages{XXX-XXX}
+\renewcommand\vldbavailabilityurl{https://github.com/wanghongsheng01/CaliberGraph}
+
+\usepackage{booktabs,array,tabularx,multirow}
+\usepackage{xspace}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{tcolorbox}
+\newtheorem{proposition}{Proposition}
+\setlength{\emergencystretch}{2em}
+\newcommand{\tbd}[1]{\textcolor{red}{#1}}
+\input{numbers}
+\input{numbers_icde}
+\input{numbers_s3}
+\xspaceaddexceptions{\,}
+% \V{name}: experimental number from numbers.tex / numbers_icde.tex (generated); red placeholder if missing
+\newcommand{\Tab}[1]{\IfFileExists{tables/#1.tex}{\input{tables/#1}}{\tbd{[table #1 pending]}}}
+\newcommand{\V}[1]{\ifcsname #1\endcsname\csname #1\endcsname\else\tbd{[#1]}\fi}
+\newtcolorbox{finding}[1]{colback=black!3,colframe=black!55,boxrule=0.5pt,arc=1pt,
+  left=3pt,right=3pt,top=2pt,bottom=2pt,fontupper=\small,
+  title={\small\bfseries Finding #1},coltitle=black,colbacktitle=black!10,toptitle=1pt,bottomtitle=1pt}
+\newcommand{\artifacturl}{\url{https://github.com/wanghongsheng01/CaliberGraph}}
+
+\begin{document}
+\title{What Do Counterexamples Prove? Certified, Data-Grounded Witnesses for Auditing Text-to-SQL Execution Accuracy [Experiment, Analysis \& Benchmark]}
+
+\author{Hongsheng Wang}
+\affiliation{%
+  \institution{College of Computer Science and Technology, Zhejiang University}
+  \city{Hangzhou}
+  \country{China}
+}
+\affiliation{%
+  \institution{Artificial Intelligence Department, Loctek Ergonomic Technology Corp.}
+  \city{Ningbo}
+  \country{China}
+}
+\email{wanghongsheng@zju.edu.cn}
+
+\author{Fei Wu}
+\affiliation{%
+  \institution{College of Computer Science and Technology, Zhejiang University}
+  \city{Hangzhou}
+  \country{China}
+}
+\email{wufei@zju.edu.cn}
+
+\input{sections/abstract}
+
+\maketitle
+
+%%% do not modify the following VLDB block %%
+%%% VLDB block start %%%
+\vldbtopmatter
+%%% VLDB block end %%%
+
+\input{sections/intro}
+\input{sections/problem}
+\input{sections/protocol}
+\input{sections/method}
+\input{sections/setup}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/related}
+\input{sections/conclusion}
+
+\begin{acks}
+This work was supported by Zhejiang University. We thank the two annotators of the human validation. \emph{Use of generative AI.} Claude Opus~5.5 (Anthropic; \texttt{claude-opus-5-5}) drafted the pre-registrations and the text, wrote all code, ran all experiments and produced all AI attribution labels; Claude Sonnet~5.5 was the second annotator of Section~\ref{sec:attrresults}. The authors directed the study, reviewed code, results and text, and take full responsibility for the content; the human annotators worked without AI tools. Tools, versions, prompts and the editing process are documented in \texttt{AI\_USE.md} in the artifact repository.
+\end{acks}
+\label{lastbodypage}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references_verified}
+\end{document}

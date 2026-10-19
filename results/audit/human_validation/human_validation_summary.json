@@ -1,0 +1,43 @@
+{
+ "annotator_1_vs_ai": {
+  "n": 60,
+  "agree": 21,
+  "kappa": 0.20408163265306123,
+  "agree_implausible_vs_not": 38,
+  "first_stage": {
+   "n": 30,
+   "agree": 9,
+   "human_implausible": 0,
+   "ai_implausible": 14
+  },
+  "second_stage": {
+   "n": 30,
+   "agree": 12,
+   "human_implausible": 3,
+   "ai_implausible": 7
+  }
+ },
+ "annotator_2_vs_ai": {
+  "n": 60,
+  "agree": 24,
+  "kappa": 0.2597669636737492,
+  "agree_implausible_vs_not": 42,
+  "first_stage": {
+   "n": 30,
+   "agree": 11,
+   "human_implausible": 2,
+   "ai_implausible": 14
+  },
+  "second_stage": {
+   "n": 30,
+   "agree": 13,
+   "human_implausible": 1,
+   "ai_implausible": 7
+  }
+ },
+ "annotator_1_vs_2": {
+  "n": 60,
+  "agree": 51,
+  "kappa": 0.7403846153846154
+ }
+}

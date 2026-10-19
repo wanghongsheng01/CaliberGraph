@@ -1,0 +1,198 @@
+{
+ "n": 100,
+ "source": "random sample (seed 7) of distinct CaliberGraph L1f witnesses; two blind LLM-assisted annotation passes; disagreements adjudicated (1 case, annotator A kept)",
+ "primary": {
+  "null_semantics": {
+   "n": 30,
+   "share": 0.3,
+   "ci95": [
+    0.21894753866228117,
+    0.3958503843281196
+   ]
+  },
+  "filter_predicate": {
+   "n": 18,
+   "share": 0.18,
+   "ci95": [
+    0.11700131654251038,
+    0.26667536024213084
+   ]
+  },
+  "join_path": {
+   "n": 17,
+   "share": 0.17,
+   "ci95": [
+    0.10893476059773155,
+    0.25548181233642975
+   ]
+  },
+  "order_limit_ties": {
+   "n": 12,
+   "share": 0.12,
+   "ci95": [
+    0.06999337365267776,
+    0.1981226800290837
+   ]
+  },
+  "duplicates_distinct": {
+   "n": 9,
+   "share": 0.09,
+   "ci95": [
+    0.048071995163884884,
+    0.16226374696643667
+   ]
+  },
+  "empty_aggregate": {
+   "n": 8,
+   "share": 0.08,
+   "ci95": [
+    0.04109296948581091,
+    0.1499826687940307
+   ]
+  },
+  "projection": {
+   "n": 4,
+   "share": 0.04,
+   "ci95": [
+    0.015663050551848013,
+    0.09837217232607373
+   ]
+  },
+  "numeric_type_division": {
+   "n": 1,
+   "share": 0.01,
+   "ci95": [
+    0.0017673865655472639,
+    0.05448752476093461
+   ]
+  },
+  "grouping": {
+   "n": 1,
+   "share": 0.01,
+   "ci95": [
+    0.0017673865655472639,
+    0.05448752476093461
+   ]
+  }
+ },
+ "any_label": {
+  "null_semantics": {
+   "n": 37,
+   "share": 0.37
+  },
+  "order_limit_ties": {
+   "n": 22,
+   "share": 0.22
+  },
+  "join_path": {
+   "n": 21,
+   "share": 0.21
+  },
+  "filter_predicate": {
+   "n": 18,
+   "share": 0.18
+  },
+  "duplicates_distinct": {
+   "n": 9,
+   "share": 0.09
+  },
+  "empty_aggregate": {
+   "n": 9,
+   "share": 0.09
+  },
+  "projection": {
+   "n": 8,
+   "share": 0.08
+  },
+  "numeric_type_division": {
+   "n": 1,
+   "share": 0.01
+  },
+  "grouping": {
+   "n": 1,
+   "share": 0.01
+  }
+ },
+ "interannotator": {
+  "primary_agree": 99,
+  "kappa": 0.9877944586842426,
+  "mean_jaccard": 0.885
+ },
+ "rule_vs_manual": {
+  "primary_in_rule_labels": 77,
+  "mean_rule_labels": 2.17,
+  "mean_manual_labels": 1.26,
+  "per_label": {
+   "empty_aggregate": {
+    "tp": 5,
+    "fp": 9,
+    "fn": 4,
+    "prec": 0.35714285714285715,
+    "rec": 0.5555555555555556
+   },
+   "null_semantics": {
+    "tp": 20,
+    "fp": 21,
+    "fn": 17,
+    "prec": 0.4878048780487805,
+    "rec": 0.5405405405405406
+   },
+   "duplicates_distinct": {
+    "tp": 8,
+    "fp": 12,
+    "fn": 1,
+    "prec": 0.4,
+    "rec": 0.8888888888888888
+   },
+   "order_limit_ties": {
+    "tp": 21,
+    "fp": 8,
+    "fn": 1,
+    "prec": 0.7241379310344828,
+    "rec": 0.9545454545454546
+   },
+   "numeric_type_division": {
+    "tp": 1,
+    "fp": 15,
+    "fn": 0,
+    "prec": 0.0625,
+    "rec": 1.0
+   },
+   "filter_predicate": {
+    "tp": 17,
+    "fp": 12,
+    "fn": 1,
+    "prec": 0.5862068965517241,
+    "rec": 0.9444444444444444
+   },
+   "join_path": {
+    "tp": 20,
+    "fp": 9,
+    "fn": 1,
+    "prec": 0.6896551724137931,
+    "rec": 0.9523809523809523
+   },
+   "projection": {
+    "tp": 8,
+    "fp": 26,
+    "fn": 0,
+    "prec": 0.23529411764705882,
+    "rec": 1.0
+   },
+   "grouping": {
+    "tp": 1,
+    "fp": 4,
+    "fn": 0,
+    "prec": 0.2,
+    "rec": 1.0
+   },
+   "other": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "prec": null,
+    "rec": null
+   }
+  }
+ }
+}

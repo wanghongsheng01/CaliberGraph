@@ -1,0 +1,4002 @@
+[
+ {
+  "idx": 0,
+  "pair_id": "alpha:1038",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred's SUM(home+away) drops a match whose home_team_goal is NULL while gold sums each column separately; in reality goals are never NULL.",
+  "implausible_fact": "NULL home_team_goal in a match"
+ },
+ {
+  "idx": 1,
+  "pair_id": "slm:1112",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold joins Team_Attributes by team_api_id and pred by team_fifa_api_id; they differ only because attribute rows carry a fifa id of Hull City but an api id of another team.",
+  "implausible_fact": "Team_Attributes fifa id and api id point to different teams"
+ },
+ {
+  "idx": 2,
+  "pair_id": "gsr:478",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two sets are both named 'Coldsnap' so pred's scalar subquery picks the wrong code; set names are unique in the real database.",
+  "implausible_fact": "duplicate set name 'Coldsnap'"
+ },
+ {
+  "idx": 3,
+  "pair_id": "alpha:1400",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only 2019 event has NULL type so COUNT(type)=0 gives NULL vs COUNT(event_id) gives 0; event type is never NULL in reality.",
+  "implausible_fact": "NULL event type"
+ },
+ {
+  "idx": 4,
+  "pair_id": "chess:813",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Alignment id 3 is labelled 'N/A' instead of 'Neutral', so gold's name filter and pred's id filter (per evidence) diverge; in reality id 3 is 'Neutral'.",
+  "implausible_fact": "alignment id 3 named 'N/A'"
+ },
+ {
+  "idx": 5,
+  "pair_id": "omni-32-majority:655",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Two posts share the title (which does occur in the real data); gold returns related posts of all posts with that title while pred's scalar subquery arbitrarily picks one that has no links.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 6,
+  "pair_id": "csc-7b:810",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only hero_attribute row has NULL attribute_value, making MAX NULL so pred returns nothing; attribute_value is never NULL in reality.",
+  "implausible_fact": "NULL attribute_value"
+ },
+ {
+  "idx": 7,
+  "pair_id": "slm:1045",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold joins by player_api_id, pred by player_fifa_api_id; they diverge only because attribute rows' fifa ids belong to Franco Zennaro but their api ids do not.",
+  "implausible_fact": "Player_Attributes fifa id and api id point to different players"
+ },
+ {
+  "idx": 8,
+  "pair_id": "csc-7b:74",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The school has EdOpsCode 'SPECON' but EdOpsName 'Continuation School'; in reality the code and name always correspond.",
+  "implausible_fact": "EdOpsCode/EdOpsName mismatch"
+ },
+ {
+  "idx": 9,
+  "pair_id": "slm:1167",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines the monthly average as COUNT/12; pred averages only over months that have tests, giving 1.0 instead of 1/12.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 10,
+  "pair_id": "csc-7b:135",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred additionally joins disp, and the monthly account with the negative card withdrawal has no disposition row; every real account has at least one disp.",
+  "implausible_fact": "account without any disp (owner) row"
+ },
+ {
+  "idx": 11,
+  "pair_id": "slm:1101",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold divides SUM by COUNT(id) and pred uses AVG; they diverge only because one Parma away match has NULL away_team_goal, which never occurs in reality.",
+  "implausible_fact": "NULL away_team_goal"
+ },
+ {
+  "idx": 12,
+  "pair_id": "omni-32-majority:583",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No user named Yevgeny exists; gold's GROUP BY yields no rows while pred's ungrouped aggregate yields (0, NULL), and both are defensible answers for a non-existent editor.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 13,
+  "pair_id": "alpha:1255",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The evidence defines abnormal IgM as IGM <= 40 OR >= 400; the lab value is exactly 40, which pred includes and gold's NOT BETWEEN 40 AND 400 wrongly excludes.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 14,
+  "pair_id": "omni-32-majority:719",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts the duplicated hero_power row (hero 1, power 2) twice while pred counts distinct heroes; hero_power has no duplicate pairs in reality.",
+  "implausible_fact": "duplicate hero_power (hero, power) rows"
+ },
+ {
+  "idx": 15,
+  "pair_id": "omni-32-majority:867",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only result has fastestLapSpeed but NULL fastestLapTime, so gold's IS NOT NULL filter drops it; in reality speed and time are always both present or both absent.",
+  "implausible_fact": "fastestLapSpeed present with NULL fastestLapTime"
+ },
+ {
+  "idx": 16,
+  "pair_id": "omni-32-majority:8",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The only frpm row has a NULL FRPM count; gold's ORDER BY ... LIMIT 1 still returns that school as 'highest' whereas pred's MAX-based filter correctly finds no school with a known highest count.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 17,
+  "pair_id": "alpha:112",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The question asks for the district where she opened her account, i.e. account.district_id (pred), while gold returns the client's own district, which differs in reality too.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 18,
+  "pair_id": "alpha:509",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two sets tie on the maximum baseSetSize; gold returns one, pred both, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 19,
+  "pair_id": "chess:561",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only comment has NULL Score, which gold's ORDER BY still selects while pred filters it out; comment scores are never NULL in reality.",
+  "implausible_fact": "NULL comment Score"
+ },
+ {
+  "idx": 20,
+  "pair_id": "gena_submission_1:1403",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "The evidence requires remaining < 0 (cost exceeded budget); no closed event overspent, so gold correctly returns nothing while pred ignores the overspend condition and returns the event with the smallest positive remaining.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 21,
+  "pair_id": "chess:273",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only atom has NULL element, so COUNT(element)=0 gives NULL in gold vs 0.0 in pred; atom elements are never NULL in reality.",
+  "implausible_fact": "NULL atom element"
+ },
+ {
+  "idx": 22,
+  "pair_id": "chess:1096",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold joins attributes by player_api_id, pred by player_fifa_api_id; they diverge because one attribute row has Pietro Marino's fifa id but a different api id.",
+  "implausible_fact": "Player_Attributes fifa id and api id point to different players"
+ },
+ {
+  "idx": 23,
+  "pair_id": "csc-32b:471",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The German translation 'Hauptset Zehnte Edition' is attached to three different sets, so pred's scalar subquery picks one; in reality each translation belongs to a single set.",
+  "implausible_fact": "same set translation for several sets"
+ },
+ {
+  "idx": 24,
+  "pair_id": "gsr:1384",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No member matches 'Grant'/'Gilmour' (stored in upper case), so gold returns no rows while pred's SUM returns a single NULL; both are defensible for a non-existent member.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 25,
+  "pair_id": "alpha:826",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two DC Comics heroes tie on the maximum weight; gold returns one and pred returns both, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 26,
+  "pair_id": "chess:867",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only result has fastestLapSpeed but NULL fastestLapTime, so gold's IS NOT NULL filter drops it; in reality speed and time are always both present or both absent.",
+  "implausible_fact": "fastestLapSpeed present with NULL fastestLapTime"
+ },
+ {
+  "idx": 27,
+  "pair_id": "rsl:876",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The single result has a recorded finishing time but a nonsensical status string, so gold (time IS NULL) and pred (status != 'Finished') disagree; in reality a recorded time essentially always goes with status 'Finished'.",
+  "implausible_fact": "nonsense status value for a driver with a finish time"
+ },
+ {
+  "idx": 28,
+  "pair_id": "csc-32b:1183",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence says the original diagnosis is Patient.Diagnosis; gold additionally requires an examination on the patient's First Date, which filters out the correct patient, whereas pred returns that patient's diagnosis.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 29,
+  "pair_id": "gsr:86",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "schools.CharterNum and frpm 'Charter School Number' disagree for the same CDSCodes (swapped '0040'), so gold and pred pick different schools; in reality these fields agree (one exception).",
+  "implausible_fact": "schools and frpm charter numbers disagree for same school"
+ },
+ {
+  "idx": 30,
+  "pair_id": "slm:91",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "All A12 values are NULL so AVG(A12) is NULL and the two CASE/IIF orientations fall to different defaults; in reality only one district lacks A12.",
+  "implausible_fact": "A12 NULL for every district"
+ },
+ {
+  "idx": 31,
+  "pair_id": "gena_submission_2:321",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The question (\"atom id ... and atom id 2 ...\") asks for the molecule of the connection TR000_2-TR000_4, which does not exist here; pred's UNION returns TR000_2's molecule even though TR000_4 is absent.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 32,
+  "pair_id": "gena_submission_2:931",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only 2009 Spanish GP result has NULL fastestLapSpeed; gold returns no row while pred returns a NULL row, both of which say no speed is known.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 33,
+  "pair_id": "rsl:61",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold uses COUNT(School) and pred COUNT(*); they differ only because the charter school record has a NULL School name, which in reality occurs only for non-charter district records.",
+  "implausible_fact": "charter school with NULL School name"
+ },
+ {
+  "idx": 34,
+  "pair_id": "omni-32-majority:1047",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The attribute date is stored as '2014-09-18' without time, so pred's exact '... 00:00:00' match fails while gold's SUBSTR works; real dates always have the full 'YYYY-MM-DD 00:00:00' format.",
+  "implausible_fact": "date stored without time part"
+ },
+ {
+  "idx": 35,
+  "pair_id": "omni-32-majority:657",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only VoteTypeId 8 vote has NULL BountyAmount, so MAX is NULL and pred returns nothing; bounty-start votes always have a BountyAmount in reality.",
+  "implausible_fact": "NULL BountyAmount on a bounty vote"
+ },
+ {
+  "idx": 36,
+  "pair_id": "alpha:541",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Three posts tie on the maximum FavoriteCount; gold returns one owner while pred returns all owners, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 37,
+  "pair_id": "gsr:188",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred's MIN(amount) subquery ignores the pre-1997 opening-date filter, so the global minimum belongs to an ineligible account and pred returns nothing; gold correctly returns the lowest-amount eligible account.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 38,
+  "pair_id": "alpha:982",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The question counts American drivers, but gold counts result rows and counts the same driver twice; pred's COUNT(DISTINCT driverId) is correct.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 39,
+  "pair_id": "gsr:1309",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The evidence defines normal as PLT > 100 and PLT < 400 (strict); the value is exactly 100, which gold's BETWEEN wrongly includes and pred correctly excludes.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 40,
+  "pair_id": "csc-32b:73",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold filters on SOCType 'Youth Authority Facilities' and pred on EdOpsName 'Youth Authority School'; they diverge because the witness Youth Authority facilities are labelled EdOpsName 'Traditional', a combination absent from the real data.",
+  "implausible_fact": "Youth Authority Facilities with EdOpsName 'Traditional'"
+ },
+ {
+  "idx": 41,
+  "pair_id": "alpha:137",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts loan rows and pred counts distinct accounts; they differ only because one account has two running loans, whereas each real account has at most one loan.",
+  "implausible_fact": "account with two loans"
+ },
+ {
+  "idx": 42,
+  "pair_id": "chess:1122",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred returns the top 10 attribute rows (LIMIT 10) via the fifa id, which includes players with lower ratings, instead of the player(s) with the maximum overall_rating as gold does.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 43,
+  "pair_id": "alpha:818",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Alignment id 2 is labelled 'Good' and gender id 2 'Male', so gold's name filters and pred's id filters (per evidence) diverge; in reality id 2 is 'Bad' and 'Female'.",
+  "implausible_fact": "alignment/gender lookup labels swapped for id 2"
+ },
+ {
+  "idx": 44,
+  "pair_id": "gena_submission_1:669",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No user has DisplayName exactly 'chl' ('chl ' and 'CHL' only), so gold's ORDER BY/LIMIT returns no row while pred's MIN returns NULL; both are defensible for a non-matching user.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 45,
+  "pair_id": "gsr:115",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No district in south Bohemia exists, so gold's grouped query returns no row while pred's ungrouped aggregate returns NULL; both are defensible empty answers.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 46,
+  "pair_id": "gena_submission_2:10",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two schools tie on the highest AvgScrRead and the two queries break the tie differently; the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 47,
+  "pair_id": "alpha:623",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts badge rows and pred counts distinct users; they differ only because one user holds the 'Supporter' badge three times, whereas it is awarded at most once per user in reality.",
+  "implausible_fact": "same user awarded 'Supporter' badge multiple times"
+ },
+ {
+  "idx": 48,
+  "pair_id": "gena_submission_1:1101",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold's SUM/COUNT(id) and pred's AVG diverge only because some Parma away matches have NULL away_team_goal, which never occurs in reality.",
+  "implausible_fact": "NULL away_team_goal"
+ },
+ {
+  "idx": 49,
+  "pair_id": "chess:1122",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold links attributes by player_api_id and pred by player_fifa_api_id; the attribute rows' fifa id belongs to a different player than their api id, so the two joins name different players.",
+  "implausible_fact": "Player_Attributes fifa id and api id point to different players"
+ },
+ {
+  "idx": 50,
+  "pair_id": "csc-32b:426",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The evidence defines sets not on MTGO as mtgoCode IS NULL or = ''; the only set has mtgoCode '', which pred includes and gold omits.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 51,
+  "pair_id": "gsr:284",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The carbon atom's '=' bond appears in connected only in one direction (from an atom of another molecule), so pred, which looks only at connected.atom_id, misses it; in reality connected is symmetric and bonds stay within a molecule.",
+  "implausible_fact": "connected not symmetric / bond across molecules"
+ },
+ {
+  "idx": 52,
+  "pair_id": "omni-32-majority:214",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred additionally returns the label of a molecule that has no atoms at all, which gold's join cannot see; every real molecule has atoms.",
+  "implausible_fact": "molecule without any atoms"
+ },
+ {
+  "idx": 53,
+  "pair_id": "alpha:245",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold divides join rows by join rows while pred divides by distinct atoms; they diverge only because the iodine atom has a second connected row bonding it to itself, which never occurs in reality.",
+  "implausible_fact": "atom bonded to itself"
+ },
+ {
+  "idx": 54,
+  "pair_id": "alpha:1183",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence says the original diagnosis is Patient.Diagnosis; gold additionally requires an examination on the patient's First Date, filtering out the matching patient, while pred returns that patient's diagnosis.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 55,
+  "pair_id": "alpha:1128",
+  "verdict": "gold_wrong",
+  "confidence": "low",
+  "reason": "Gold only considers each match's home_player_1, which here references no player, so it returns nothing, while pred averages over all players appearing in the country's matches, which better reflects 'country's players'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 56,
+  "pair_id": "chess:321",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The question (\"atom id ... and atom id 2 ...\") refers to the connection TR000_2-TR000_4, which does not exist here (TR000_2 is absent), yet pred returns the molecule of TR000_4 alone.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 57,
+  "pair_id": "slm:1180",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "One matching patient has unknown SEX; gold reports it as NULL while pred filters to M/F only, and both treatments of the unknown sex are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 58,
+  "pair_id": "gena_submission_1:700",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts vote ids and pred counts PostIds; they differ only because a bounty vote has NULL PostId, which never occurs in reality.",
+  "implausible_fact": "vote with NULL PostId"
+ },
+ {
+  "idx": 59,
+  "pair_id": "csc-32b:1038",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Goal values near +-2^31 overflow-like magnitudes and a NULL home_team_goal make SUM(a)+SUM(b) differ from SUM(a+b); real goal counts are small non-null integers.",
+  "implausible_fact": "NULL / absurd (~2^31) goal counts"
+ },
+ {
+  "idx": 60,
+  "pair_id": "csc-32b:1519",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold's inner join with gasstations drops the transaction whose GasStationID is NULL, which pred keeps; transactions always have a gas station in reality.",
+  "implausible_fact": "transaction with NULL GasStationID"
+ },
+ {
+  "idx": 61,
+  "pair_id": "rsl:1147",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The only attribute row has NULL overall_rating, so no player has a known greatest rating; gold correctly returns nothing while pred's ORDER BY ... LIMIT 1 still names that player.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 62,
+  "pair_id": "gena_submission_1:8",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The only frpm row has a NULL FRPM count; gold's ORDER BY ... LIMIT 1 still treats that school as the highest while pred's MAX-based filter correctly finds none.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 63,
+  "pair_id": "gena_submission_1:242",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The atom id 'DAEBC22' does not follow the real 'TRxxx_yy' format, so SUBSTR(atom_id,-2) and SUBSTR(atom_id,7,2) extract different numbers; with real ids both agree.",
+  "implausible_fact": "atom_id in non-TRxxx_yy format"
+ },
+ {
+  "idx": 64,
+  "pair_id": "chess:1528",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only SVK station has NULL Segment, so gold's row-count denominator gives 0.0 and pred's COUNT(Segment) gives NULL; Segment is never NULL in reality.",
+  "implausible_fact": "NULL gas station Segment"
+ },
+ {
+  "idx": 65,
+  "pair_id": "gena_submission_2:1183",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence says the original diagnosis is Patient.Diagnosis; gold additionally requires an examination on the patient's First Date, filtering out the matching patient, while pred returns that patient's diagnosis.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 66,
+  "pair_id": "rsl:1492",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only KAM customer has NULL Currency, so gold's SUM(Currency='EUR') is NULL while pred's IIF yields 0.0; Currency is never NULL in reality.",
+  "implausible_fact": "NULL customer Currency"
+ },
+ {
+  "idx": 67,
+  "pair_id": "gsr:1122",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two Player rows share player_api_id 1, so gold returns both names while pred's LIMIT 1 returns one; player_api_id is unique in reality.",
+  "implausible_fact": "duplicate player_api_id in Player"
+ },
+ {
+  "idx": 68,
+  "pair_id": "omni-32-majority:789",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "One alien has unknown (NULL) weight, which occurs in the real data; the evidence asks for AVG(weight_kg), which pred computes, whereas gold's SUM/COUNT(id) counts the unknown weight in the denominator.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 69,
+  "pair_id": "chess:663",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two users tie on the minimum Age; gold returns both ids while pred returns one, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 70,
+  "pair_id": "omni-32-majority:1263",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Patient 1 has the highest aCL IgA (52) among abnormal-HCT patients, which pred returns; gold's DISTINCT with ORDER BY on a non-selected column sorts by an arbitrary per-ID value (patients with several examinations exist in reality) and returns patient 3.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 71,
+  "pair_id": "gsr:695",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts badge rows while pred counts distinct users; they differ only because one user holds 'Citizen Patrol' twice and another badge has NULL UserId, neither of which occurs in reality.",
+  "implausible_fact": "duplicate 'Citizen Patrol' badge for a user / NULL UserId"
+ },
+ {
+  "idx": 72,
+  "pair_id": "rsl:5",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold counts DISTINCT School names and pred counts CDSCodes; they differ only because the virtual school with SAT scores has a NULL School name, which in reality only occurs for non-school (district) records with NULL Virtual.",
+  "implausible_fact": "school record with Virtual='F' but NULL School name"
+ },
+ {
+  "idx": 73,
+  "pair_id": "gsr:175",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts disp rows while pred counts distinct accounts; they differ only because one account has two OWNER dispositions, whereas each real account has exactly one owner.",
+  "implausible_fact": "account with two OWNER dispositions"
+ },
+ {
+  "idx": 74,
+  "pair_id": "rsl:556",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only user has NULL DisplayName, so gold's COUNT(DISTINCT DisplayName) is 0 and returns NULL while pred counts ids; DisplayName is never NULL in reality.",
+  "implausible_fact": "NULL user DisplayName"
+ },
+ {
+  "idx": 75,
+  "pair_id": "csc-32b:927",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only result has fastestLapSpeed but NULL fastestLapTime, so gold's IS NOT NULL filter drops it; in reality speed and time are always both present or both absent.",
+  "implausible_fact": "fastestLapSpeed present with NULL fastestLapTime"
+ },
+ {
+  "idx": 76,
+  "pair_id": "rsl:786",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The question asks for the maximum Strength value, but gold's subquery takes MAX over all attributes (a Durability value), so no Strength row matches; pred correctly restricts the MAX to Strength.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 77,
+  "pair_id": "csc-32b:1178",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "The only AORTITIS patient has an unknown (NULL) First Date, which occurs in reality; gold excludes such patients while pred returns her, and whether she counts as 'first' is a NULL-treatment choice.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 78,
+  "pair_id": "alpha:880",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No driver matches 'Paul'/'di Resta' (stored in upper case), so gold's aggregate returns a NULL row while pred's join returns no row; both are defensible empty answers.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 79,
+  "pair_id": "gena_submission_1:1072",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "One attribute row has NULL overall_rating (which occurs in reality); the evidence asks for AVG(overall_rating), which pred computes, while gold's SUM/COUNT(id) counts the missing rating in the denominator.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 80,
+  "pair_id": "gsr:273",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "One atom in the carcinogenic molecule has NULL element, so gold's COUNT(element) denominator excludes it and pred's COUNT(*) includes it; atom elements are never NULL in reality.",
+  "implausible_fact": "NULL atom element"
+ },
+ {
+  "idx": 81,
+  "pair_id": "gena_submission_1:128",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two districts share the same A2 name, so gold (grouping by district_id) and pred (grouping by A2) differ; district names are unique in reality.",
+  "implausible_fact": "duplicate district name A2"
+ },
+ {
+  "idx": 82,
+  "pair_id": "omni-32-majority:239",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The atom id '19' lacks the real 'TRxxx_yy' format, so gold's SUBSTR(atom_id,-2) matches it while pred's LIKE 'TR%_19' does not.",
+  "implausible_fact": "atom_id not in TRxxx_yy format"
+ },
+ {
+  "idx": 83,
+  "pair_id": "csc-32b:914",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold counts only NULL codes and pred also counts empty-string codes; they differ only because the driver's code is '', which never occurs in reality (missing codes are NULL).",
+  "implausible_fact": "empty-string driver code"
+ },
+ {
+  "idx": 84,
+  "pair_id": "gena_submission_1:668",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Both users have one badge, but one badge has NULL Name so pred's COUNT(Name) ranks it lower while gold's COUNT(Id) ties; badge names are never NULL in reality.",
+  "implausible_fact": "badge with NULL Name"
+ },
+ {
+  "idx": 85,
+  "pair_id": "slm:695",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts badge rows and pred distinct users; they differ only because one user holds 'Citizen Patrol' twice, which never happens in reality.",
+  "implausible_fact": "same user awarded 'Citizen Patrol' twice"
+ },
+ {
+  "idx": 86,
+  "pair_id": "gsr:214",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred additionally returns the label of a molecule that has no atoms at all, which gold's join cannot see; every real molecule has atoms.",
+  "implausible_fact": "molecule without any atoms"
+ },
+ {
+  "idx": 87,
+  "pair_id": "chess:556",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only user has NULL DisplayName, so gold's COUNT(DISTINCT DisplayName) is 0 and returns NULL while pred counts ids; DisplayName is never NULL in reality.",
+  "implausible_fact": "NULL user DisplayName"
+ },
+ {
+  "idx": 88,
+  "pair_id": "omni-32-majority:242",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The atom id 'ABCDE21' does not follow the real 'TRxxx_yy' format, so SUBSTR(atom_id,-2) and SUBSTR(atom_id,7,2) extract different numbers; with real ids both agree.",
+  "implausible_fact": "atom_id in non-TRxxx_yy format"
+ },
+ {
+  "idx": 89,
+  "pair_id": "alpha:1331",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Gold lists each income amount of Vice President members while pred returns their total; 'the amount of the funds received' admits both a per-record list and a sum (a member with several incomes would also trigger this).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 90,
+  "pair_id": "omni-32-majority:74",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No SPECON school with NCESDist 0613360 exists, so gold's MIN returns a single NULL row while pred's DISTINCT returns no rows; both are defensible empty answers.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 91,
+  "pair_id": "omni-32-majority:927",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Results with a fastestLapSpeed but NULL fastestLapTime (and non-numeric speeds) make gold's IS NOT NULL filter pick a different driver; in reality speed and time are present together.",
+  "implausible_fact": "fastestLapSpeed present with NULL fastestLapTime"
+ },
+ {
+  "idx": 92,
+  "pair_id": "gena_submission_1:1122",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two Player rows share player_api_id 1, so gold returns both names while pred's LIMIT 1 returns one; player_api_id is unique in reality.",
+  "implausible_fact": "duplicate player_api_id in Player"
+ },
+ {
+  "idx": 93,
+  "pair_id": "gena_submission_1:242",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Atom ids like '21', '25', '21a' lack the real 'TRxxx_yy' format, so SUBSTR(atom_id,-2) and SUBSTR(atom_id,7,2) disagree; with real ids both extract the same number.",
+  "implausible_fact": "atom_id not in TRxxx_yy format"
+ },
+ {
+  "idx": 94,
+  "pair_id": "gena_submission_1:1122",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The only attribute row has NULL overall_rating, so no player has a known maximum rating; gold correctly returns nothing while pred's ORDER BY ... LIMIT 1 still names that player.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 95,
+  "pair_id": "chess:303",
+  "verdict": "both_wrong",
+  "confidence": "medium",
+  "reason": "TR006 has no double bonds, so the correct answer is 0 plus TR006's label; gold returns no row at all and pred returns 0 but with a NULL label.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 96,
+  "pair_id": "alpha:14",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "All six schools tie on Enrollment (Ages 5-17), so the top-5 cut is arbitrary and each query picks a different five; the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 97,
+  "pair_id": "csc-7b:865",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "The only finisher has an unknown (NULL) dob, which occurs in reality; gold excludes him while pred returns him as the oldest, a NULL-treatment choice the question does not settle.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 98,
+  "pair_id": "chess:214",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred returns labels of all molecules without tin atoms, including a molecule with no atoms at all, which gold's join cannot see; every real molecule has atoms.",
+  "implausible_fact": "molecule without any atoms"
+ },
+ {
+  "idx": 99,
+  "pair_id": "slm:284",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The carbon atom's only connected bond belongs to a different molecule than the atom, so gold (bonds of the carbon's molecule) and pred (bonds attached to carbon) diverge; in reality bonds stay within the atom's molecule.",
+  "implausible_fact": "bond connecting atoms across molecules"
+ },
+ {
+  "idx": 100,
+  "pair_id": "slm:1391",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Gold uses integer division, yielding 0 instead of the requested ratio 0.5; the prediction computes the real ratio.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 101,
+  "pair_id": "gena_submission_1:1122",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold returns nothing because MAX(overall_rating) is NULL while the prediction returns the only (unrated, unnamed) player; this only happens when no player has a rating.",
+  "implausible_fact": "the only attribute row has NULL overall_rating (and the player NULL name)"
+ },
+ {
+  "idx": 102,
+  "pair_id": "csc-7b:1095",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Prediction joins via team_fifa_api_id, gold via team_api_id; they diverge only because the attribute rows' fifa id belongs to a different team than their api id.",
+  "implausible_fact": "Team_Attributes.team_fifa_api_id inconsistent with Team for the same team_api_id"
+ },
+ {
+  "idx": 103,
+  "pair_id": "csc-7b:1040",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold joins on player_api_id and prediction on player_fifa_api_id; the results differ only because the two id mappings point to different players.",
+  "implausible_fact": "Player_Attributes fifa id and api id refer to different Player rows"
+ },
+ {
+  "idx": 104,
+  "pair_id": "chess:753",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The prediction hardcodes eye_colour_id = 1, which is 'No Colour' in the real lookup table; here colour 1 is 'd' and no 'No Colour' exists.",
+  "implausible_fact": "colour lookup id 1 is 'd' instead of 'No Colour'"
+ },
+ {
+  "idx": 105,
+  "pair_id": "rsl:1007",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No driver named Lewis Hamilton exists; gold yields an empty result and the MAX aggregate yields a single NULL, both equivalent non-answers.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 106,
+  "pair_id": "csc-7b:1001",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Prediction uses position = 1 and gold the minimum q3 time; they diverge only because the sole qualifier has position 2008 and a nonsensical q3 value.",
+  "implausible_fact": "qualifying position = 2008 and q3 = ':'"
+ },
+ {
+  "idx": 107,
+  "pair_id": "omni-32-majority:214",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold's element != 'sn' drops the atom with NULL element while the prediction's NOT IN keeps its molecule; atoms always have an element in reality.",
+  "implausible_fact": "atom with NULL element"
+ },
+ {
+  "idx": 108,
+  "pair_id": "csc-32b:1104",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Prediction matches the full timestamp '2010-08-30 00:00:00' while the witness stores the date without the time part, a format never used in the real data.",
+  "implausible_fact": "date stored as '2010-08-30' without the time component"
+ },
+ {
+  "idx": 109,
+  "pair_id": "gsr:232",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Prediction additionally requires the bond to appear in connected; it loses a molecule only because one bond has no connected rows.",
+  "implausible_fact": "bond with no rows in connected"
+ },
+ {
+  "idx": 110,
+  "pair_id": "omni-32-majority:674",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Several users tie at the maximum reputation; gold returns all tied users and the prediction one, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 111,
+  "pair_id": "chess:753",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold matches by colour name and finds two 'No Colour' rows, while the prediction uses id 1 only; the colour lookup holds the name twice.",
+  "implausible_fact": "two colour rows named 'No Colour'"
+ },
+ {
+  "idx": 112,
+  "pair_id": "gsr:668",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts badge rows while prediction counts non-NULL badge names; they differ only because a badge has a NULL Name.",
+  "implausible_fact": "badge with NULL Name"
+ },
+ {
+  "idx": 113,
+  "pair_id": "slm:703",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "The question and evidence say Count <= 20, but the prediction uses Count < 20 and misses the tag with Count 20.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 114,
+  "pair_id": "alpha:512",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No cards match, and for a 'how many' question the answer is 0; gold's SUM returns NULL while the prediction's COUNT returns 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 115,
+  "pair_id": "csc-32b:583",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No user is named Yevgeny; gold's GROUP BY returns no rows while the prediction's aggregate returns a single NULL row, both equivalent non-answers.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 116,
+  "pair_id": "alpha:1084",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts distinct names and prediction distinct player_api_id; they differ because several Player rows share one player_api_id with different names.",
+  "implausible_fact": "multiple Player rows with the same player_api_id"
+ },
+ {
+  "idx": 117,
+  "pair_id": "rsl:1019",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold divides SUM by COUNT(lap) and the prediction uses AVG; they differ only because one lap time has NULL milliseconds.",
+  "implausible_fact": "lapTimes row with NULL milliseconds"
+ },
+ {
+  "idx": 118,
+  "pair_id": "alpha:657",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Several users tie at the maximum bounty; gold picks one arbitrarily and the prediction lists all of them, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 119,
+  "pair_id": "csc-32b:312",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold additionally joins atom and loses the molecule because it has bonds but no atoms.",
+  "implausible_fact": "molecule with bonds but no atoms"
+ },
+ {
+  "idx": 120,
+  "pair_id": "csc-7b:583",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Several users are named Yevgeny (plausible, since display names are not unique); the prediction sums across all of them with one arbitrary URL, while gold reports per URL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 121,
+  "pair_id": "gena_submission_2:1458",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Prediction divides by COUNT(position), gold by COUNT(member_id); they differ only because a member has NULL position.",
+  "implausible_fact": "member with NULL position"
+ },
+ {
+  "idx": 122,
+  "pair_id": "chess:73",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The two queries identify the Youth Authority school by different columns, and they diverge only because SOCType 'Youth Authority Facilities' is paired with EdOpsName 'Opportunity School' and MailStrAbr has a trailing space.",
+  "implausible_fact": "Youth Authority facility with EdOpsName 'Opportunity School' and MailStrAbr with a trailing space"
+ },
+ {
+  "idx": 123,
+  "pair_id": "gena_submission_2:1178",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold requires Diagnosis = 'AORTITIS' exactly while the prediction uses LIKE; they diverge only because the diagnoses are nonsensical strings like '%AORTITIS%' and 'aAORTITIS', with no plain 'AORTITIS'.",
+  "implausible_fact": "Diagnosis values '%AORTITIS%', 'aAORTITIS' and no exact 'AORTITIS'"
+ },
+ {
+  "idx": 124,
+  "pair_id": "rsl:66",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts School names and prediction counts CDSCode; they differ only because a directly funded school record has a NULL School name.",
+  "implausible_fact": "School NULL on a record with FundingType set"
+ },
+ {
+  "idx": 125,
+  "pair_id": "chess:506",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts sets and the prediction counts translation rows; they differ only because one set has two Japanese translations.",
+  "implausible_fact": "duplicate Japanese translation rows for the same set"
+ },
+ {
+  "idx": 126,
+  "pair_id": "csc-7b:5",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts distinct School names and prediction counts rows; they differ only because a Virtual='F' school record has a NULL School name.",
+  "implausible_fact": "School NULL on a record with Virtual = 'F'"
+ },
+ {
+  "idx": 127,
+  "pair_id": "csc-7b:977",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "The question says races 50 to 100 (inclusive) while the evidence says raceId > 50; the only result is in race 50, so the outcome depends on the boundary reading (and gold also returns NULL rather than 0).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 128,
+  "pair_id": "gena_submission_2:138",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two districts tie at the highest A15; gold takes the second row's value (the tied maximum) and the prediction takes the next distinct value, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 129,
+  "pair_id": "csc-32b:1511",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold additionally joins gasstations and drops a transaction whose GasStationID is NULL.",
+  "implausible_fact": "transaction with NULL GasStationID"
+ },
+ {
+  "idx": 130,
+  "pair_id": "slm:813",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The evidence defines neutral as alignment_id = 3 (as in the real data); the witness labels id 3 'Bad', so gold's name match finds nothing.",
+  "implausible_fact": "alignment id 3 labelled 'Bad' instead of 'Neutral'"
+ },
+ {
+  "idx": 131,
+  "pair_id": "chess:1051",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The question asks to list all players with the highest potential, but the prediction returns a single row with LIMIT 1 (and joins on fifa id, here yielding a different player); gold returns all tied players.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 132,
+  "pair_id": "csc-7b:1263",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Per the evidence, HCT 29 is not normal; the prediction's NOT BETWEEN 29 AND 52 wrongly treats 29 as normal and excludes the patient.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 133,
+  "pair_id": "csc-32b:977",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No result matches, and for a 'how many' question the answer is 0; gold's SUM returns NULL while the prediction's COUNT returns 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 134,
+  "pair_id": "gsr:426",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The evidence defines 'not on MTGO' as mtgoCode IS NULL or mtgoCode = ''; gold ignores the empty-string case that the prediction handles.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 135,
+  "pair_id": "csc-32b:1040",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold groups by Player.id and the prediction by player_api_id; they differ only because several Player rows share player_api_id 1.",
+  "implausible_fact": "multiple Player rows with the same player_api_id"
+ },
+ {
+  "idx": 136,
+  "pair_id": "alpha:813",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The evidence defines neutral as alignment_id = 3 (as in the real data); the witness labels id 3 'N/A', so gold's name match finds nothing.",
+  "implausible_fact": "alignment id 3 labelled 'N/A' instead of 'Neutral'"
+ },
+ {
+  "idx": 137,
+  "pair_id": "gena_submission_2:459",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The prediction compares the first rows of each card and gets NULL because of NULL convertedManaCost, while gold's ORDER BY skips the NULLs; convertedManaCost is never NULL in reality.",
+  "implausible_fact": "NULL convertedManaCost for card printings"
+ },
+ {
+  "idx": 138,
+  "pair_id": "csc-32b:828",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts superhero_name and the prediction counts hero ids; they differ only because the hero has a NULL name.",
+  "implausible_fact": "superhero with NULL superhero_name"
+ },
+ {
+  "idx": 139,
+  "pair_id": "chess:44",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two schools tie at the maximum NumGE1500; gold returns one arbitrarily and the prediction returns both, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 140,
+  "pair_id": "alpha:657",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only type-8 (bounty) vote has a NULL BountyAmount, so the prediction's MAX is NULL and it returns nothing, while gold still picks that vote's user; bounty votes always carry an amount.",
+  "implausible_fact": "VoteTypeId 8 vote with NULL BountyAmount"
+ },
+ {
+  "idx": 141,
+  "pair_id": "gsr:1485",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Neither customer 7 nor customer 5 has a record for 201304; gold's conditional sums give 0 and the prediction's scalar subqueries give NULL, and the difference for missing data is undefined.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 142,
+  "pair_id": "gsr:899",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Prediction filters on races.year and gold on the year of races.date; they differ only because races with year 1990 carry a 2015 date.",
+  "implausible_fact": "race year 1990 with date 2015-03-20"
+ },
+ {
+  "idx": 143,
+  "pair_id": "gsr:597",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Users have Location 'india' in lower case; gold follows the evidence literally (= 'India') and the prediction matches case-insensitively; both readings are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 144,
+  "pair_id": "gena_submission_1:583",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No user is named Yevgeny; gold's GROUP BY returns no rows while the prediction's aggregate returns a single NULL row, both equivalent non-answers.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 145,
+  "pair_id": "chess:1528",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Prediction divides by COUNT(Segment) and gold by the number of SVK stations; they differ only because the station's Segment is NULL.",
+  "implausible_fact": "gas station with NULL Segment"
+ },
+ {
+  "idx": 146,
+  "pair_id": "rsl:131",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "'Highest active loan' refers to loan amount (gold sums amount), but the prediction ranks by number of loans and here picks a tied district arbitrarily.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 147,
+  "pair_id": "chess:1238",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Per the evidence, normal hemoglobin is 10 < HGB < 17 (strict); the prediction's BETWEEN wrongly includes HGB = 10.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 148,
+  "pair_id": "slm:583",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No user is named Yevgeny; gold's GROUP BY returns no rows while the prediction's aggregate returns a single NULL row, both equivalent non-answers.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 149,
+  "pair_id": "gsr:589",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two users tie at the maximum reputation; gold returns both and the prediction one, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 150,
+  "pair_id": "csc-32b:1309",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The evidence defines normal as 100 < PLT < 400 (strict); gold's BETWEEN wrongly includes PLT = 100 while the prediction follows the evidence.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 151,
+  "pair_id": "gsr:475",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No card matches (only an upper-case 'COLDSNAP' set exists), and for a 'how many' question the answer is 0; gold's SUM returns NULL while the prediction's COUNT returns 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 152,
+  "pair_id": "slm:1071",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Prediction joins Team_Attributes on team_fifa_api_id and gold on team_api_id; they diverge only because the attribute row's fifa id belongs to a different team than its api id.",
+  "implausible_fact": "Team_Attributes.team_fifa_api_id inconsistent with Team for the same team_api_id"
+ },
+ {
+  "idx": 153,
+  "pair_id": "csc-32b:1523",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Prediction additionally joins customers and drops a transaction whose CustomerID has no customer record (an orphan foreign key).",
+  "implausible_fact": "transaction referencing a non-existent CustomerID"
+ },
+ {
+  "idx": 154,
+  "pair_id": "omni-32-majority:456",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold keeps a printing with NULL subtypes and supertypes that the prediction filters out; in reality all printings of a card share the same types.",
+  "implausible_fact": "printings of one card with differing / NULL subtypes and supertypes"
+ },
+ {
+  "idx": 155,
+  "pair_id": "gena_submission_2:815",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The evidence defines good as alignment.id = 1 (as in the real data); the witness labels id 1 'Bad', so gold's name match finds nothing.",
+  "implausible_fact": "alignment id 1 labelled 'Bad' instead of 'Good'"
+ },
+ {
+  "idx": 156,
+  "pair_id": "rsl:1123",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only attribute row has NULL potential, so the prediction's MAX is NULL and it returns nothing, while gold's ORDER BY still returns the player.",
+  "implausible_fact": "no non-NULL potential in Player_Attributes"
+ },
+ {
+  "idx": 157,
+  "pair_id": "slm:5",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts distinct School names and the prediction counts rows; they differ only because a Virtual='F' school record has a NULL School name.",
+  "implausible_fact": "School NULL on a record with Virtual = 'F'"
+ },
+ {
+  "idx": 158,
+  "pair_id": "rsl:268",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold reads only connected.atom_id and the prediction both atoms of the bond; they differ only because the bond lacks its symmetric connected row.",
+  "implausible_fact": "connected row for the bond present in only one direction"
+ },
+ {
+  "idx": 159,
+  "pair_id": "omni-32-majority:674",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only user has a NULL reputation, so gold's MAX-based filter returns nothing while the prediction's ORDER BY returns that user.",
+  "implausible_fact": "user with NULL Reputation (no non-NULL reputation at all)"
+ },
+ {
+  "idx": 160,
+  "pair_id": "csc-32b:865",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The only finisher has an unknown dob; the prediction's ORDER BY dob ASC puts the NULL first and wrongly reports that driver as the oldest, while gold excludes unknown birthdates (NULL dob occurs in the real data).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 161,
+  "pair_id": "rsl:718",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts hero_power rows and the prediction distinct heroes; they differ only because one hero has duplicate power rows and two powers are both named 'Super Strength'.",
+  "implausible_fact": "duplicate hero_power rows and duplicate power_name 'Super Strength'"
+ },
+ {
+  "idx": 162,
+  "pair_id": "gsr:285",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold reads only connected.atom_id while the prediction uses both atoms; they differ because the bond has a self-loop row and no symmetric row.",
+  "implausible_fact": "connected self-loop and missing reverse row for the bond"
+ },
+ {
+  "idx": 163,
+  "pair_id": "alpha:8",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only frpm row has a NULL FRPM Count, so the prediction's MAX is NULL and it returns nothing, while gold's ORDER BY still selects the row.",
+  "implausible_fact": "no non-NULL FRPM Count (K-12) value"
+ },
+ {
+  "idx": 164,
+  "pair_id": "omni-32-majority:1331",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No member has position 'Vice President' (only 'VICE PRESIDENT'); gold returns no rows and the prediction's SUM a single NULL, both equivalent non-answers.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 165,
+  "pair_id": "csc-7b:426",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The evidence defines 'not on MTGO' as mtgoCode IS NULL or mtgoCode = ''; gold ignores the empty-string case that the prediction handles.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 166,
+  "pair_id": "csc-32b:62",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts School names and the prediction counts CDSCode; they differ only because a Charter=0 school record with frpm data has a NULL School name.",
+  "implausible_fact": "School NULL on a non-charter record with frpm data"
+ },
+ {
+  "idx": 167,
+  "pair_id": "gsr:1038",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold groups by league name and the prediction by league id; they differ only because two leagues share the same name.",
+  "implausible_fact": "two leagues with the same name"
+ },
+ {
+  "idx": 168,
+  "pair_id": "gsr:318",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold derives the molecule from the connected atoms and the prediction from the bond; they differ because the bond's atoms belong to a different molecule than the bond.",
+  "implausible_fact": "bond's connected atoms belong to a different molecule than the bond"
+ },
+ {
+  "idx": 169,
+  "pair_id": "alpha:321",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold looks up the bond between TR000_2 and TR000_4 in connected while the prediction reads the atoms' molecules; they differ because the atoms sit in different, unrelated molecules with no connecting row.",
+  "implausible_fact": "atoms TR000_2/TR000_4 in different molecules with no connected row"
+ },
+ {
+  "idx": 170,
+  "pair_id": "gena_submission_1:114",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The prediction requires a disposition/client for the account and drops the earliest Prague account, which has none; in reality every account has an owner disposition.",
+  "implausible_fact": "account without any disp row"
+ },
+ {
+  "idx": 171,
+  "pair_id": "chess:1238",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Per the evidence, normal hemoglobin is 10 < HGB < 17 (strict); the prediction's BETWEEN wrongly includes HGB = 10.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 172,
+  "pair_id": "alpha:1272",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Both qualifying patients have an unknown First Date; the prediction's ORDER BY puts the NULL first and reports an undetermined patient as the first, while gold excludes NULL dates (NULL First Date is common in the real data).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 173,
+  "pair_id": "omni-32-majority:50",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "The evidence says postal street means mailing street; the prediction returns Street instead of MailStreet.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 174,
+  "pair_id": "alpha:795",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The evidence defines neutral as alignment_id = 3 (as in the real data); the witness gives id 3 a nonsense label, so gold's name match finds nothing.",
+  "implausible_fact": "alignment id 3 labelled '2147483648' instead of 'Neutral'"
+ },
+ {
+  "idx": 175,
+  "pair_id": "omni-32-majority:120",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The prediction reaches the account through disp/client and misses the east Bohemia account because that account has no disposition at all.",
+  "implausible_fact": "account without any disp row"
+ },
+ {
+  "idx": 176,
+  "pair_id": "gena_submission_2:1263",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Per the evidence, HCT 29 is not normal; the prediction's strict HCT < 29 wrongly excludes the patient with HCT = 29.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 177,
+  "pair_id": "gsr:583",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No user has DisplayName 'Yevgeny' (only 'YEVGENY'); gold returns no rows and the prediction's aggregate returns a single NULL row, both equivalent non-answers.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 178,
+  "pair_id": "alpha:131",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "'Highest active loan' refers to loan amount (gold sums amount), but the prediction ranks by number of loans and here picks a tied district arbitrarily.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 179,
+  "pair_id": "gsr:67",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts School and the prediction counts rows; they differ only because a Community College District record has a NULL School, which never happens in the real data.",
+  "implausible_fact": "Community College District record with NULL School"
+ },
+ {
+  "idx": 180,
+  "pair_id": "csc-32b:303",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "TR006 has no double bonds on this witness, so the answer is a count of 0 with its label; gold's GROUP BY returns no row at all while the prediction returns (0, label).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 181,
+  "pair_id": "gena_submission_1:501",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Several cards tie at the highest converted mana cost; gold and the prediction each pick an arbitrary one, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 182,
+  "pair_id": "csc-7b:669",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold's ORDER BY returns a vote with NULL CreationDate first while the prediction's MIN ignores it; votes always have a creation date.",
+  "implausible_fact": "vote with NULL CreationDate"
+ },
+ {
+  "idx": 183,
+  "pair_id": "omni-32-majority:924",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The prediction finds the circuit through circuitRef = 'catalunya' (its real value), but the witness gives the circuit circuitRef 'b'.",
+  "implausible_fact": "Circuit de Barcelona-Catalunya with circuitRef 'b' instead of 'catalunya'"
+ },
+ {
+  "idx": 184,
+  "pair_id": "csc-7b:426",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The evidence defines 'not on MTGO' as mtgoCode IS NULL or mtgoCode = ''; gold ignores the empty-string case that the prediction handles.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 185,
+  "pair_id": "csc-32b:1084",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts distinct names and the prediction distinct player_api_id; they differ because several Player rows share one player_api_id with different names.",
+  "implausible_fact": "multiple Player rows with the same player_api_id"
+ },
+ {
+  "idx": 186,
+  "pair_id": "slm:1055",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold joins on player_api_id and the prediction on player_fifa_api_id; they diverge because the attribute rows' fifa id belongs to a different player than their api ids.",
+  "implausible_fact": "Player_Attributes fifa id and api id refer to different Player rows"
+ },
+ {
+  "idx": 187,
+  "pair_id": "slm:297",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The prediction derives the label via the bond's molecule and gold via the atom's molecule; they differ because the atom is connected through a bond of a different molecule.",
+  "implausible_fact": "atom connected via a bond belonging to another molecule"
+ },
+ {
+  "idx": 188,
+  "pair_id": "chess:990",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold identifies the winner by a race-time format and the prediction by the lowest positionOrder; they diverge because the witness has three 2009 Singapore GPs, date-formatted times and no positionOrder 1.",
+  "implausible_fact": "result times in date format, duplicate 2009 Singapore GPs, no winner row"
+ },
+ {
+  "idx": 189,
+  "pair_id": "rsl:114",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The prediction reaches the account through disp/client and misses the only Prague account because it has no disposition.",
+  "implausible_fact": "account without any disp row"
+ },
+ {
+  "idx": 190,
+  "pair_id": "gsr:668",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold groups by DisplayName and merges several users whose DisplayName is NULL; display names are never NULL in reality.",
+  "implausible_fact": "users with NULL DisplayName"
+ },
+ {
+  "idx": 191,
+  "pair_id": "chess:1384",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Gold lists each income amount and the prediction sums them; 'how many income generated' admits both a per-income listing and a total.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 192,
+  "pair_id": "csc-32b:657",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only type-8 vote has a NULL BountyAmount, so the prediction's MAX is NULL and it returns nothing, while gold returns that vote's user.",
+  "implausible_fact": "VoteTypeId 8 vote with NULL BountyAmount"
+ },
+ {
+  "idx": 193,
+  "pair_id": "omni-32-majority:8",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only frpm row has a NULL FRPM Count, so the prediction's MAX is NULL and it returns nothing, while gold's ORDER BY still selects the row.",
+  "implausible_fact": "no non-NULL FRPM Count (K-12) value"
+ },
+ {
+  "idx": 194,
+  "pair_id": "chess:862",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The evidence defines finishing as time IS NOT NULL; the prediction counts status != 'Finished' instead, which disagrees with the evidence whenever status and time disagree (as in the real data).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 195,
+  "pair_id": "chess:589",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two users tie at the maximum reputation; gold returns both and the prediction one, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 196,
+  "pair_id": "slm:782",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold requires the same colour id for eyes and hair, the prediction only the same name; they differ because the colour table contains 'Black' several times.",
+  "implausible_fact": "duplicate 'Black' entries in colour"
+ },
+ {
+  "idx": 197,
+  "pair_id": "gena_submission_1:1511",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold additionally joins gasstations and loses the transaction because its GasStationID does not exist (an orphan foreign key).",
+  "implausible_fact": "transaction referencing a non-existent GasStationID"
+ },
+ {
+  "idx": 198,
+  "pair_id": "gena_submission_1:507",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts sets and the prediction counts translation rows; they differ only because one set has two Portuguese (Brazil) translations.",
+  "implausible_fact": "duplicate Portuguese (Brazil) translation rows for the same set"
+ },
+ {
+  "idx": 199,
+  "pair_id": "rsl:506",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts sets and the prediction counts translation rows; they differ only because one set has two Japanese translations.",
+  "implausible_fact": "duplicate Japanese translation rows for the same set"
+ },
+ {
+  "idx": 200,
+  "pair_id": "gena_submission_2:563",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Comment CreationDate lacks the '.0' suffix used throughout the real data, so gold's literal match fails while pred's strftime match succeeds.",
+  "implausible_fact": "comment CreationDate without '.0' suffix"
+ },
+ {
+  "idx": 201,
+  "pair_id": "csc-7b:103",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred joins client_id to card.disp_id, skipping the disp table; gold correctly links card->disp->client.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 202,
+  "pair_id": "gena_submission_2:1458",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred divides by COUNT(position), which is 0 only because the member's position is NULL, a field always filled in reality.",
+  "implausible_fact": "member.position is NULL"
+ },
+ {
+  "idx": 203,
+  "pair_id": "csc-7b:989",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only 2008 Canadian GP result has negative points and a datetime-formatted time, so no champion time in h:mm:ss.mmm format exists; real winners always have such a time.",
+  "implausible_fact": "race result time in datetime format with negative points"
+ },
+ {
+  "idx": 204,
+  "pair_id": "alpha:1109",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Team_Attributes rows have team_fifa_api_id/team_api_id pairs inconsistent with Team, so joining on fifa id vs api id gives different matches.",
+  "implausible_fact": "inconsistent team_api_id/team_fifa_api_id pairs"
+ },
+ {
+  "idx": 205,
+  "pair_id": "gena_submission_1:1084",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Several Player rows share player_api_id 1 with different names; distinct name vs distinct api id only differs due to this duplicate of a unique key.",
+  "implausible_fact": "duplicate player_api_id with different names"
+ },
+ {
+  "idx": 206,
+  "pair_id": "omni-32-majority:290",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The atom's element is a numeric string not a chemical symbol; pred's IN-list filter excludes it only because of that nonsensical value.",
+  "implausible_fact": "element value '350095316906841802'"
+ },
+ {
+  "idx": 207,
+  "pair_id": "gsr:906",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Cumulative driverStandings points (2) are lower than the points from the same, only race (10), an inconsistency that cannot occur for a driver's first race.",
+  "implausible_fact": "standings points less than race points for the only race"
+ },
+ {
+  "idx": 208,
+  "pair_id": "gena_submission_1:1527",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Revenue corresponds to SUM(Price); pred ranks stations by SUM(Amount) (quantity), a genuine misreading.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 209,
+  "pair_id": "chess:1114",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Player_Attributes date '2007-02-22' lacks the ' 00:00:00' time part present in all real rows, so pred's full-timestamp BETWEEN excludes it.",
+  "implausible_fact": "date without time component"
+ },
+ {
+  "idx": 210,
+  "pair_id": "csc-32b:637",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "'His posts' means posts he owns (pred); gold instead takes posts linked through his postHistory entries and misses an owned post he has no history row for (a situation that also occurs in the real data).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 211,
+  "pair_id": "alpha:270",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Molecules with NULL label make COUNT(label) and COUNT(*) rank groups differently; real molecules always have '+' or '-' labels.",
+  "implausible_fact": "molecule.label is NULL"
+ },
+ {
+  "idx": 212,
+  "pair_id": "gsr:312",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold's extra join to atom drops the bond's molecule only because that molecule has no atoms, which never happens in reality.",
+  "implausible_fact": "molecule with bonds but no atoms"
+ },
+ {
+  "idx": 213,
+  "pair_id": "alpha:1080",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "COUNT(player_api_id) vs COUNT(id) differ only because player_api_id is NULL, which never occurs in Player_Attributes.",
+  "implausible_fact": "Player_Attributes.player_api_id is NULL"
+ },
+ {
+  "idx": 214,
+  "pair_id": "gsr:318",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Bond TR001_1_7 is assigned to molecule k3 while its connected atom belongs to k1; bonds and their atoms always share a molecule.",
+  "implausible_fact": "bond molecule differs from its atoms' molecule"
+ },
+ {
+  "idx": 215,
+  "pair_id": "rsl:244",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Bonds with NULL molecule_id form the top group in gold's subquery; bond.molecule_id is never NULL in reality.",
+  "implausible_fact": "bond.molecule_id is NULL"
+ },
+ {
+  "idx": 216,
+  "pair_id": "gsr:506",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred's join double-counts set k2 only because it has two Japanese translations; each set has at most one translation per language in reality.",
+  "implausible_fact": "duplicate Japanese translation for one set"
+ },
+ {
+  "idx": 217,
+  "pair_id": "omni-32-majority:1194",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred compares the text CRP column with > 2, which is a lexicographic comparison matching non-'2+' values (as real values like '<0.3' also would); gold's CRP='2+' matches the question.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 218,
+  "pair_id": "omni-32-majority:516",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred counts join rows, which exceeds the card count only because one card has three French foreign_data rows; each card has at most one entry per language in reality.",
+  "implausible_fact": "multiple French translations for one card"
+ },
+ {
+  "idx": 219,
+  "pair_id": "rsl:273",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold divides by COUNT(element), which is 0 only because the atom's element is NULL, never the case in reality.",
+  "implausible_fact": "atom.element is NULL"
+ },
+ {
+  "idx": 220,
+  "pair_id": "chess:1202",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold uses the examination diagnosis 'Behcet' while pred uses Patient.Diagnosis; they differ only because the patient's own diagnosis is the nonsense value 'x1', whereas in reality patients with a Behcet examination are recorded as 'BEHCET'.",
+  "implausible_fact": "Patient.Diagnosis 'x1' inconsistent with examination diagnosis Behcet"
+ },
+ {
+  "idx": 221,
+  "pair_id": "csc-32b:131",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "'Highest active loan' refers to loan amount, which gold sums; pred ranks districts by number of loans (here tied) and picks the wrong district.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 222,
+  "pair_id": "gsr:173",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The question asks for the purpose whose orders total 3539; gold sums per k_symbol while pred matches a single order of 3539, ignoring 'in total'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 223,
+  "pair_id": "omni-32-majority:302",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Bond TR001_2_4 has only one connected row (no reverse row) and its first atom has NULL element, so gold sees only a NULL element; real bonds always appear in both directions with non-NULL elements.",
+  "implausible_fact": "connected row without reverse direction; NULL element"
+ },
+ {
+  "idx": 224,
+  "pair_id": "gena_submission_1:815",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold joins on names and pred on ids; they differ only because several alignment/gender rows duplicate 'Good'/'Female' under different ids, which the lookup tables never do.",
+  "implausible_fact": "duplicate 'Good'/'Female' labels in lookup tables"
+ },
+ {
+  "idx": 225,
+  "pair_id": "rsl:938",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The race winner's time is a datetime string rather than 'H:MM:SS.mmm', so gold's time-pattern filter finds no champion; real winners always have such a time.",
+  "implausible_fact": "winner time in datetime format"
+ },
+ {
+  "idx": 226,
+  "pair_id": "gsr:1104",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two Player rows named Francesco Parravicini, one with NULL player_api_id, make pred's scalar subquery pick NULL; player_api_id is never NULL and the name is unique in reality.",
+  "implausible_fact": "Player.player_api_id NULL with duplicate name"
+ },
+ {
+  "idx": 227,
+  "pair_id": "csc-32b:669",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No user 'chl' exists, so gold returns no rows and pred's MIN aggregate returns a NULL row; both are defensible encodings of 'no vote'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 228,
+  "pair_id": "chess:818",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Alignment id 2 is labelled 'N/A' and gender id 2 'Male', contradicting the fixed lookup (2='Bad', 2='Female') the evidence relies on, so name-based and id-based filters diverge.",
+  "implausible_fact": "alignment id 2='N/A', gender id 2='Male'"
+ },
+ {
+  "idx": 229,
+  "pair_id": "omni-32-majority:29",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred's GSoffered='K-12' filter excludes the school only because its value is lowercase 'k-12', a format never used in the real data.",
+  "implausible_fact": "GSoffered 'k-12' lowercase"
+ },
+ {
+  "idx": 230,
+  "pair_id": "alpha:512",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No card qualifies, so the correct count is 0; gold's SUM over an empty set returns NULL while pred's COUNT returns 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 231,
+  "pair_id": "csc-32b:767",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Colour id 1 (the evidence's 'No Colour') is missing while 'No Colour' appears twice under ids 0 and 2, so the id-based and name-based filters diverge.",
+  "implausible_fact": "'No Colour' duplicated under ids 0 and 2, id 1 missing"
+ },
+ {
+  "idx": 232,
+  "pair_id": "alpha:1123",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The only attribute row has NULL potential (NULL potentials do occur in reality); gold's ORDER BY DESC LIMIT 1 still returns that player as having the highest potential, while pred correctly returns no player.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 233,
+  "pair_id": "csc-7b:867",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The result has a fastestLapSpeed but NULL fastestLapTime, which never co-occurs in reality, so gold's IS NOT NULL filter removes the only driver.",
+  "implausible_fact": "fastestLapSpeed present with NULL fastestLapTime"
+ },
+ {
+  "idx": 234,
+  "pair_id": "gsr:562",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No post has 1910 views, so gold's COUNT returns 0 and pred returns no row; both are defensible answers for a non-existent post.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 235,
+  "pair_id": "gena_submission_2:44",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two schools tie on the maximum NumGE1500; gold's LIMIT 1 returns one and pred returns both, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 236,
+  "pair_id": "gena_submission_1:1492",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The KAM customer's Currency is NULL, making gold's SUM(Currency='EUR') NULL vs pred's 0; Currency is always CZK or EUR in reality.",
+  "implausible_fact": "customers.Currency is NULL"
+ },
+ {
+  "idx": 237,
+  "pair_id": "csc-32b:878",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only lap time is NULL, so gold's ORDER BY returns the driver while pred's MIN-equality returns nothing; lapTimes.time is never NULL in reality.",
+  "implausible_fact": "lapTimes.time is NULL"
+ },
+ {
+  "idx": 238,
+  "pair_id": "csc-7b:1067",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Team and Team_Attributes have inconsistent team_api_id/team_fifa_api_id pairings, so joining on fifa id vs api id matches different teams.",
+  "implausible_fact": "inconsistent team_api_id/team_fifa_api_id pairs"
+ },
+ {
+  "idx": 239,
+  "pair_id": "chess:242",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Atom id 'xxxxxx21z' does not follow the real 'TRxxx_N' format, so SUBSTR(atom_id,7,2) and the last two characters disagree.",
+  "implausible_fact": "atom_id 'xxxxxx21z' in non-standard format"
+ },
+ {
+  "idx": 240,
+  "pair_id": "gsr:927",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only result has fastestLapSpeed but NULL fastestLapTime, which never co-occurs in reality, so gold's IS NOT NULL filter drops it.",
+  "implausible_fact": "fastestLapSpeed present with NULL fastestLapTime"
+ },
+ {
+  "idx": 241,
+  "pair_id": "gsr:239",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Atom id 'T19' does not follow the real 'TRxxx_N' format, so pred's LIKE 'TR%_19' fails while gold's suffix check matches.",
+  "implausible_fact": "atom_id 'T19' in non-standard format"
+ },
+ {
+  "idx": 242,
+  "pair_id": "gena_submission_2:1038",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Matches with NULL home/away goals make SUM(home)+SUM(away) differ from SUM(home+away); goals are never NULL in reality.",
+  "implausible_fact": "Match goals are NULL"
+ },
+ {
+  "idx": 243,
+  "pair_id": "omni-32-majority:1134",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Player_Attributes id 6 does not exist, so the difference is undefined; gold silently treats the missing value as 0 and reports -23, while pred returns NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 244,
+  "pair_id": "gsr:209",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The chlorine atom appears only as atom_id2 because the bond's reverse connected row is missing; in reality every bond appears in both directions, so gold would find it.",
+  "implausible_fact": "connected row without reverse direction"
+ },
+ {
+  "idx": 245,
+  "pair_id": "csc-32b:782",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "'Black' appears under four different colour ids, so requiring eye and hair to share one colour id (gold) differs from comparing names (pred); colour names are unique in reality.",
+  "implausible_fact": "duplicate 'Black' entries in colour table"
+ },
+ {
+  "idx": 246,
+  "pair_id": "gsr:1122",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Several players tie on the maximum overall_rating; gold lists all and pred's LIMIT 1 picks one, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 247,
+  "pair_id": "slm:556",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The user's DisplayName is NULL, making gold's COUNT(DISTINCT DisplayName) zero and the result NULL; DisplayName is never NULL in reality.",
+  "implausible_fact": "users.DisplayName is NULL"
+ },
+ {
+  "idx": 248,
+  "pair_id": "chess:14",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The only school has NULL Enrollment (Ages 5-17) (NULLs occur in reality); gold still lists it among the top five by enrollment, while pred excludes schools with unknown enrollment.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 249,
+  "pair_id": "rsl:741",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "A hero_power row with NULL power_id counts as a power for gold but not for pred; power_id is never NULL in reality.",
+  "implausible_fact": "hero_power.power_id is NULL"
+ },
+ {
+  "idx": 250,
+  "pair_id": "csc-32b:932",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two driver rows are both named Lewis Hamilton, so pred's scalar subquery keeps only one while gold's join uses both; driver names are unique here in reality.",
+  "implausible_fact": "two drivers named Lewis Hamilton"
+ },
+ {
+  "idx": 251,
+  "pair_id": "rsl:1022",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two attribute rows tie on the minimum potential with different preferred feet; gold's LIMIT 1 returns one and pred returns both, and tie handling is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 252,
+  "pair_id": "slm:1272",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "The only patient with abnormal SSA has a NULL First Date (which occurs in reality); gold excludes him and returns nothing while pred returns him as the only candidate, and both are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 253,
+  "pair_id": "gsr:1084",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The qualifying player has NULL player_name (and a duplicated player_api_id), so COUNT(DISTINCT player_name) is 0 while counting ids gives 1; names are never NULL in reality.",
+  "implausible_fact": "Player.player_name is NULL"
+ },
+ {
+  "idx": 254,
+  "pair_id": "omni-32-majority:253",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The triple bond has only one connected row (no reverse direction), so gold sees only one of its atoms; real bonds always appear in both directions.",
+  "implausible_fact": "connected row without reverse direction"
+ },
+ {
+  "idx": 255,
+  "pair_id": "rsl:818",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Alignment id 2 is labelled 'BAD' and the only gender is 'FEMALE' at id 0, so name-based and id-based filters diverge; the real lookup has 'Bad' id 2 and 'Female' id 2.",
+  "implausible_fact": "uppercase/misnumbered lookup labels 'BAD', 'FEMALE'"
+ },
+ {
+  "idx": 256,
+  "pair_id": "gsr:175",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Account 0 has two OWNER dispositions, so COUNT vs COUNT(DISTINCT) differ; every account has exactly one owner in reality.",
+  "implausible_fact": "account with two OWNER dispositions"
+ },
+ {
+  "idx": 257,
+  "pair_id": "gena_submission_1:606",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Badge dates lack the '.0' suffix used in all real rows, so gold's literal match fails while pred's strftime match succeeds.",
+  "implausible_fact": "badge Date without '.0' suffix"
+ },
+ {
+  "idx": 258,
+  "pair_id": "alpha:541",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The only post has NULL FavoriteCount (common in reality); gold's ORDER BY DESC LIMIT 1 still returns its owner as having the most valuable post, while pred correctly returns nothing.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 259,
+  "pair_id": "rsl:258",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The tin atom appears only as atom_id2 because the reverse connected row is missing; in reality both directions exist, so gold would also find the bond.",
+  "implausible_fact": "connected row without reverse direction"
+ },
+ {
+  "idx": 260,
+  "pair_id": "slm:1183",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "'Diagnosed SLE on 1997/1/27' refers to the examination; pred instead requires Patient.Diagnosis = 'SLE', so it cannot return the original diagnosis when that differs.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 261,
+  "pair_id": "alpha:285",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Bond TR001_10_11 has a connected row in only one direction, so gold sees only the first atom and pred only the second; real bonds are stored in both directions, giving both elements to each query.",
+  "implausible_fact": "connected row without reverse direction"
+ },
+ {
+  "idx": 262,
+  "pair_id": "csc-32b:1109",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Team_Attributes rows pair team_api_id 1 with fifa ids that do not match the Team row, so joining on both ids vs api id alone differs; these id pairs are consistent in reality.",
+  "implausible_fact": "inconsistent team_api_id/team_fifa_api_id pairs"
+ },
+ {
+  "idx": 263,
+  "pair_id": "csc-32b:242",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Atom id '4444424' does not follow the real 'TRxxx_N' format, so SUBSTR(atom_id,7,2) and the last two characters disagree.",
+  "implausible_fact": "atom_id '4444424' in non-standard format"
+ },
+ {
+  "idx": 264,
+  "pair_id": "gena_submission_1:1367",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Both colleges have exactly one member, so the top college is a tie and gold and pred simply break it differently.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 265,
+  "pair_id": "slm:1047",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "One attribute row is dated '2014-09-18 00:00:01'; real dates always have a 00:00:00 time, so exact vs date-prefix matching differ only because of it.",
+  "implausible_fact": "date with non-zero time '00:00:01'"
+ },
+ {
+  "idx": 266,
+  "pair_id": "rsl:147",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The question counts female clients' accounts located in South Bohemia; gold filters on the client's own district instead of the account's, and client and account districts legitimately differ in real data.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 267,
+  "pair_id": "rsl:867",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only result has a fastestLapSpeed but NULL fastestLapTime, which never co-occurs in reality, so gold's IS NOT NULL filter drops it.",
+  "implausible_fact": "fastestLapSpeed present with NULL fastestLapTime"
+ },
+ {
+  "idx": 268,
+  "pair_id": "rsl:1335",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No Advertisement budget is linked to the September Meeting, so gold returns no rows and pred's SUM returns NULL; both encode 'no data'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 269,
+  "pair_id": "omni-32-majority:303",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Molecule TR006 does not exist, so gold returns no rows while pred's ungrouped aggregate returns (0, NULL); both are defensible for a non-existent molecule.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 270,
+  "pair_id": "slm:1309",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "PLT is exactly 400; the evidence calls 100<PLT<400 normal but also calls >400 abnormal, leaving the boundary undefined, so inclusive (gold) and strict (pred) bounds are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 271,
+  "pair_id": "gena_submission_2:1196",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "'Patients with SLE' can be read from the examination diagnosis (gold) or the patient's diagnosis (pred); here they disagree, and both columns hold diagnoses.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 272,
+  "pair_id": "omni-32-majority:1134",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Player_Attributes id 6 does not exist, so the difference is undefined; gold treats the missing value as 0 and reports 0, while pred returns NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 273,
+  "pair_id": "csc-7b:801",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gender ids are 3='Female' and 0='Male', contradicting the fixed lookup (1=Male, 2=Female) the evidence relies on, so id-based and name-based counts diverge.",
+  "implausible_fact": "gender ids 0='Male', 3='Female'"
+ },
+ {
+  "idx": 274,
+  "pair_id": "chess:233",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "A TR006 atom is connected via a bond belonging to another molecule, while TR006's own bond has no connections; bonds and their atoms always share a molecule in reality.",
+  "implausible_fact": "bond connects atoms of a different molecule"
+ },
+ {
+  "idx": 275,
+  "pair_id": "omni-32-majority:1164",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The question counts patients, and one woman has two qualifying 1997 examinations (repeat examinations occur in reality); gold counts examination rows (2) instead of patients (1).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 276,
+  "pair_id": "alpha:32",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred omits the required ownership-code filter SOC = 66 and returns a school that does not qualify.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 277,
+  "pair_id": "csc-32b:80",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "School type/name can be taken from frpm (gold) or schools (pred); these columns legitimately differ for some schools in the real data, and the question does not say which table to use.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 278,
+  "pair_id": "chess:815",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Alignment id 1 is labelled 'Bad' although the evidence (and real lookup) defines id 1 as Good, so name-based and id-based filters diverge.",
+  "implausible_fact": "alignment id 1 labelled 'Bad'"
+ },
+ {
+  "idx": 279,
+  "pair_id": "omni-32-majority:867",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only result has a fastestLapSpeed but NULL fastestLapTime, which never co-occurs in reality, so gold's IS NOT NULL filter drops it.",
+  "implausible_fact": "fastestLapSpeed present with NULL fastestLapTime"
+ },
+ {
+  "idx": 280,
+  "pair_id": "chess:1055",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Player_Attributes rows for player_api_id 2625 carry fifa ids belonging to different Player rows, so joining on fifa id vs api id picks different players; these id pairs are consistent in reality.",
+  "implausible_fact": "inconsistent player_api_id/player_fifa_api_id pairs"
+ },
+ {
+  "idx": 281,
+  "pair_id": "rsl:1272",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "The only patient with abnormal SSA has a NULL First Date (which occurs in reality); gold excludes him and returns nothing while pred returns him as the only candidate, and both are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 282,
+  "pair_id": "gsr:1340",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The 2020 budget row has NULL spent, so gold's difference becomes NULL while pred's COALESCE yields 0; budget.spent is never NULL in reality.",
+  "implausible_fact": "budget.spent is NULL"
+ },
+ {
+  "idx": 283,
+  "pair_id": "gena_submission_1:1309",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "PLT is exactly 100; the evidence calls 100<PLT<400 normal but also calls <100 abnormal, leaving the boundary undefined, so inclusive (gold) and strict (pred) bounds are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 284,
+  "pair_id": "gsr:1486",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The SME customer's Currency is NULL, making gold's SUM-based difference NULL vs pred's 0; Currency is always CZK or EUR in reality.",
+  "implausible_fact": "customers.Currency is NULL"
+ },
+ {
+  "idx": 285,
+  "pair_id": "gena_submission_1:321",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Atom TR000_2 is assigned to molecule 'TR000_4' and TR000_4 to 'k3', and connections link atoms across molecules; in reality both atoms belong to molecule TR000 and are connected by a TR000 bond.",
+  "implausible_fact": "atoms of TR000 assigned to different, mismatched molecules"
+ },
+ {
+  "idx": 286,
+  "pair_id": "csc-7b:29",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "'First-through-twelfth-grade school' can mean ranking by the K-12 enrollment column (gold) or restricting to K-12 schools (pred); the only school is a middle school, so the readings diverge.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 287,
+  "pair_id": "alpha:815",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Alignment id 1 is 'N/A' and gender id 2 is 'Male', contradicting the fixed lookup (1=Good, 2=Female) the evidence relies on, so name-based and id-based counts diverge.",
+  "implausible_fact": "alignment id 1='N/A', gender id 2='Male'"
+ },
+ {
+  "idx": 288,
+  "pair_id": "rsl:1095",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "A Team_Attributes row has NULL buildUpPlaySpeed, so SUM/COUNT(id) and AVG differ; buildUpPlaySpeed is never NULL in reality.",
+  "implausible_fact": "Team_Attributes.buildUpPlaySpeed is NULL"
+ },
+ {
+  "idx": 289,
+  "pair_id": "gena_submission_1:321",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The bond connecting TR000_2 and TR000_4 belongs to molecule 2147483649 while both atoms belong to 2147483648; bonds and their atoms always share a molecule.",
+  "implausible_fact": "bond molecule differs from its atoms' molecule"
+ },
+ {
+  "idx": 290,
+  "pair_id": "csc-32b:1272",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "The only patient with abnormal SSA has a NULL First Date (which occurs in reality); gold excludes her and returns nothing while pred returns her as the only candidate, and both are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 291,
+  "pair_id": "alpha:509",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Four sets tie on the maximum baseSetSize; gold's LIMIT 1 returns one and pred returns all, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 292,
+  "pair_id": "csc-7b:1238",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred's chained comparison '10 < HGB < 17' is always true in SQL, so it accepts HGB = 17, which the evidence defines as outside the normal range.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 293,
+  "pair_id": "csc-7b:758",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The race table has two 'Human' rows (ids 3 and 185), so pred's scalar subquery picks one id while gold's join matches both; race names are unique in reality.",
+  "implausible_fact": "duplicate 'Human' entries in race table"
+ },
+ {
+  "idx": 294,
+  "pair_id": "omni-32-majority:924",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The witness names the Catalunya circuit 'Barcelona-Catalunya' rather than its real name 'Circuit de Barcelona-Catalunya', so gold's exact official-name filter misses it while pred's alternative names match.",
+  "implausible_fact": "circuit name 'Barcelona-Catalunya' instead of official name"
+ },
+ {
+  "idx": 295,
+  "pair_id": "omni-32-majority:880",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No driver matches 'Paul di Resta', so gold's aggregate returns NULL and pred returns no rows; both encode 'no answer'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 296,
+  "pair_id": "slm:74",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "A qualifying SPECON school has NULL Low Grade, so MIN (ignoring NULL) and ORDER BY ASC LIMIT 1 (NULL first) differ; Low Grade is never NULL in reality.",
+  "implausible_fact": "frpm Low Grade is NULL"
+ },
+ {
+  "idx": 297,
+  "pair_id": "gena_submission_1:1072",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "One of Aaron Doran's attribute rows has NULL overall_rating (NULL ratings occur in reality); the average should ignore it as AVG does, but gold divides by all rows including the NULL one.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 298,
+  "pair_id": "chess:1319",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Positions are stored in lowercase ('vice president'), so gold's case-insensitive LIKE matches while pred's exact 'Vice President' does not; real positions are always capitalised.",
+  "implausible_fact": "position stored as lowercase 'vice president'"
+ },
+ {
+  "idx": 299,
+  "pair_id": "gena_submission_1:977",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No result qualifies, so the correct count is 0; gold's SUM over an empty set returns NULL while pred's COUNT returns 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 300,
+  "pair_id": "alpha:1101",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The difference comes only from a match with NULL away_team_goal (gold divides by all matches, AVG skips NULL); goals are never NULL in the real data.",
+  "implausible_fact": "Match with NULL away_team_goal"
+ },
+ {
+  "idx": 301,
+  "pair_id": "gsr:1079",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two players tie on max height; the question does not specify whether to return one or all tied players.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 302,
+  "pair_id": "gsr:303",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Molecule TR006 is absent from the witness, so empty result (gold) and count 0 with NULL label (pred) are both defensible renderings of 'no such double bonds'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 303,
+  "pair_id": "gena_submission_1:212",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only because atoms have NULL element (pred's COUNT(element) gives the NULL group 0); every real atom has an element.",
+  "implausible_fact": "atoms with NULL element"
+ },
+ {
+  "idx": 304,
+  "pair_id": "rsl:939",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts the same British driver twice because he has two result rows in the 2008 race; duplicate driver results per race do not occur after 1978 in real data.",
+  "implausible_fact": "driver with two results in the 2008 Australian GP"
+ },
+ {
+  "idx": 305,
+  "pair_id": "gena_submission_1:656",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two child posts tie at the top score (one with NULL owner); which tied post is chosen is unspecified, giving empty vs a NULL-name row.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 306,
+  "pair_id": "gena_submission_1:815",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Evidence defines good/female as alignment.id=1/gender.id=2, but the witness labels these ids with nonsense text, so gold's text filter fails only because of that.",
+  "implausible_fact": "alignment id 1 / gender id 2 not named Good/Female"
+ },
+ {
+  "idx": 307,
+  "pair_id": "gena_submission_1:128",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred merges districts because all districts share the same A2 name; district names are unique in reality (77/77).",
+  "implausible_fact": "different districts with identical A2 name"
+ },
+ {
+  "idx": 308,
+  "pair_id": "gsr:1528",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both compute the same 1/3*100 percentage; the results differ only in floating-point rounding from operation order.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 309,
+  "pair_id": "alpha:818",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Evidence defines bad/female via alignment.id=2/gender.id=2, but the witness gives id 2 a NULL alignment and 'Male' gender text, contradicting the real id-label mapping.",
+  "implausible_fact": "alignment/gender id-to-label mapping inconsistent with reality"
+ },
+ {
+  "idx": 310,
+  "pair_id": "alpha:292",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred additionally returns an atom of molecule 'TR050a', whose id breaks the fixed TRnnn format; with well-formed ids both range filters agree.",
+  "implausible_fact": "molecule_id 'TR050a' not in TRnnn format"
+ },
+ {
+  "idx": 311,
+  "pair_id": "omni-32-majority:303",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "TR006 exists but has no double bonds (plausible: 52 real molecules lack them); the correct answer is a count of 0, which pred returns while gold's GROUP BY yields no row at all.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 312,
+  "pair_id": "csc-7b:128",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred merges several districts that share the A2 name 'F'; district names are unique in reality.",
+  "implausible_fact": "different districts with identical A2 name"
+ },
+ {
+  "idx": 313,
+  "pair_id": "gena_submission_2:1263",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Although pred mishandles the HCT=29 boundary, under the correct filter patients 1 and 21 tie at the max aCL IgA (23), so either ID is a defensible answer.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 314,
+  "pair_id": "chess:112",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred finds nothing only because the client has no disp/account row; every real client has a disposition.",
+  "implausible_fact": "client without any disp/account"
+ },
+ {
+  "idx": 315,
+  "pair_id": "chess:44",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "All schools tie at the max NumGE1500, so returning one school (gold) or all tied schools (pred) are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 316,
+  "pair_id": "gsr:68",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Counties 'A' and 'a' tie at one closure each, so which county is returned is an unspecified tie-break.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 317,
+  "pair_id": "alpha:1504",
+  "verdict": "both_wrong",
+  "confidence": "medium",
+  "reason": "'Total price' is the Price column (real data: Price is about Amount times unit price), so gold's AVG(Amount) and pred's AVG(Amount*Price) are both wrong.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 318,
+  "pair_id": "gena_submission_2:1367",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The difference arises from majors with NULL college (pred's NULL group wins); college is always filled in reality (113/113).",
+  "implausible_fact": "majors with NULL college"
+ },
+ {
+  "idx": 319,
+  "pair_id": "rsl:927",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only result row has a fastestLapSpeed but NULL fastestLapTime; this inconsistent record never occurs in real data, and it alone makes gold empty.",
+  "implausible_fact": "fastestLapSpeed present with NULL fastestLapTime"
+ },
+ {
+  "idx": 320,
+  "pair_id": "slm:112",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Gold returns both matching clients' home districts (client-district reading); pred's rows coincide with the account district of the only matching client who has an account (account-district reading), so each result fits one reading.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 321,
+  "pair_id": "omni-32-majority:1309",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The evidence defines normal platelets strictly as PLT > 100 and PLT < 400, so a PLT of exactly 100 should be excluded; gold's inclusive BETWEEN keeps it.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 322,
+  "pair_id": "slm:1130",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Team_Attributes rows carry team_fifa_api_id/team_api_id pairs that contradict the Team table, so the two join keys pick different teams; in real data these are always consistent.",
+  "implausible_fact": "Team_Attributes fifa/api ids inconsistent with Team"
+ },
+ {
+  "idx": 323,
+  "pair_id": "csc-7b:112",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The question asks where she opened her account, i.e. the account's district (which differs from the client's home district in about 9% of real owners); pred returns the account district, gold the client's.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 324,
+  "pair_id": "rsl:1492",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only KAM customer has a NULL Currency, which makes gold's SUM NULL vs pred's 0; Currency is never NULL in reality.",
+  "implausible_fact": "customer with NULL Currency"
+ },
+ {
+  "idx": 325,
+  "pair_id": "rsl:285",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The connected table stores only one direction of bond TR001_10_11, so gold sees only the first atom; real connected rows are always stored symmetrically.",
+  "implausible_fact": "connected row without its symmetric counterpart"
+ },
+ {
+  "idx": 326,
+  "pair_id": "rsl:285",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Bond TR001_10_11 appears in connected in one direction only, so gold misses the second atom; real data always stores both directions.",
+  "implausible_fact": "connected row without its symmetric counterpart"
+ },
+ {
+  "idx": 327,
+  "pair_id": "gsr:303",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Molecule TR006 is absent, so empty result (gold) vs count 0 with NULL label (pred) are both defensible renderings of no answer.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 328,
+  "pair_id": "alpha:556",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold divides by COUNT(DISTINCT DisplayName), which is 0 only because all matching users have NULL DisplayName; DisplayName is never NULL in reality.",
+  "implausible_fact": "users with NULL DisplayName"
+ },
+ {
+  "idx": 329,
+  "pair_id": "slm:1434",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred's extra city='San Juan' filter fails only because the city is stored as 'San Juan ' with a trailing space; real San Juan Municipio rows are all exactly 'San Juan'.",
+  "implausible_fact": "city value with trailing space"
+ },
+ {
+  "idx": 330,
+  "pair_id": "gena_submission_2:1343",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only Food budget has a NULL amount, so gold's MAX is NULL and it returns nothing; budget.amount is always filled in reality.",
+  "implausible_fact": "budget row with NULL amount"
+ },
+ {
+  "idx": 331,
+  "pair_id": "gena_submission_1:72",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold matches only because Academic Year is stored as '2014'; the real column is always '2014-2015', which pred matches exactly.",
+  "implausible_fact": "Academic Year value '2014' instead of '2014-2015'"
+ },
+ {
+  "idx": 332,
+  "pair_id": "slm:801",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The witness maps gender id 2 to 'Male' while the evidence and real data map id 1 to Male and id 2 to Female, so the id-based and text-based counts diverge.",
+  "implausible_fact": "gender id 2 labelled 'Male'"
+ },
+ {
+  "idx": 333,
+  "pair_id": "chess:1134",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Player 6's jumping is NULL (plausible) and player 23 is absent, so the difference is unknown; pred correctly yields NULL while gold's SUM-with-0 fabricates a difference of 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 334,
+  "pair_id": "omni-32-majority:759",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only superhero has NULL weight, so 'heaviest' is undefined; returning that hero's eye colour (gold) or nothing (pred) depends on NULL treatment.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 335,
+  "pair_id": "csc-32b:1367",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The difference comes from majors with NULL college forming the largest group in pred; college is always filled in reality.",
+  "implausible_fact": "majors with NULL college"
+ },
+ {
+  "idx": 336,
+  "pair_id": "gena_submission_2:1513",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The first customer is the earliest Time, which leads to pred's country; gold orders Time DESC and returns the last transaction's station.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 337,
+  "pair_id": "chess:797",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred's hard-coded ids 7/9 are Blue/Brown in reality, but the witness gives those ids nonsense colour names, so gold's text filter fails.",
+  "implausible_fact": "colour ids 7/9 not named Blue/Brown"
+ },
+ {
+  "idx": 338,
+  "pair_id": "alpha:91",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "AVG(A12) equals AVG(A13) on this witness, and the question does not say how to report a tie, so each query's default label is arbitrary.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 339,
+  "pair_id": "gsr:1319",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred's exact match fails only because the position is stored lowercase 'vice president'; real positions are consistently 'Vice President'.",
+  "implausible_fact": "lowercase position 'vice president'"
+ },
+ {
+  "idx": 340,
+  "pair_id": "gena_submission_2:1196",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "'Patients with SLE' can mean the examination's Diagnosis (gold) or the patient's Diagnosis (pred); the two columns often differ in real data (44 of 70 joined rows).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 341,
+  "pair_id": "csc-7b:506",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred double-counts set k2 because it has two Japanese translation rows; (setCode, language) is unique in reality.",
+  "implausible_fact": "duplicate Japanese translations for one set"
+ },
+ {
+  "idx": 342,
+  "pair_id": "omni-32-majority:657",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only VoteTypeId=8 (bounty) vote has a NULL BountyAmount, so pred's MAX is NULL; bounty votes always carry an amount in reality.",
+  "implausible_fact": "bounty vote with NULL BountyAmount"
+ },
+ {
+  "idx": 343,
+  "pair_id": "csc-7b:1055",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "All players tie at the maximum overall_rating, so which birthday ORDER BY ... LIMIT 1 returns is an arbitrary tie-break.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 344,
+  "pair_id": "chess:1080",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold's COUNT(player_api_id) is lower only because some Player_Attributes rows have NULL player_api_id; it is never NULL in reality.",
+  "implausible_fact": "Player_Attributes with NULL player_api_id"
+ },
+ {
+  "idx": 345,
+  "pair_id": "gena_submission_2:840",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred drops the hero_attribute row whose attribute_id is NULL when joining attribute; attribute_id is never NULL in reality (also duplicated 'Aquababy' heroes).",
+  "implausible_fact": "hero_attribute with NULL attribute_id"
+ },
+ {
+  "idx": 346,
+  "pair_id": "omni-32-majority:498",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred's extra NULL row appears only because set 'a' has several French translation rows, one NULL beside non-NULL ones; (setCode, language) is unique in reality.",
+  "implausible_fact": "multiple French translation rows for one set"
+ },
+ {
+  "idx": 347,
+  "pair_id": "slm:1122",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Player and Player_Attributes carry contradictory fifa/api id pairs, so joining on player_api_id vs player_fifa_api_id picks different players; real ids are consistent.",
+  "implausible_fact": "inconsistent player_api_id/player_fifa_api_id pairs"
+ },
+ {
+  "idx": 348,
+  "pair_id": "gena_submission_1:1039",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold divides by COUNT(date), which is 0 only because the attribute rows have NULL date; date is never NULL in reality.",
+  "implausible_fact": "Player_Attributes rows with NULL date"
+ },
+ {
+  "idx": 349,
+  "pair_id": "omni-32-majority:564",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Two child posts of 107829 each have CommentCount=1 (plausible); gold returns both comments, while pred's LIMIT 1 arbitrarily drops one.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 350,
+  "pair_id": "csc-7b:583",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No user is named exactly 'Yevgeny' (only 'YEVGENY'), so gold's empty result and pred's single NULL row are both renderings of 'no data'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 351,
+  "pair_id": "alpha:1255",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The evidence defines abnormal IgM as IGM <= 40 OR IGM >= 400, but gold's NOT BETWEEN 40 AND 400 excludes the boundary values (here IGM=400), changing the most common diagnosis.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 352,
+  "pair_id": "rsl:253",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold misses the second atom's element only because the triple bond is stored in connected in one direction; real connected rows are always symmetric.",
+  "implausible_fact": "connected row without its symmetric counterpart"
+ },
+ {
+  "idx": 353,
+  "pair_id": "gena_submission_1:1384",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No member is named exactly 'Grant Gilmour' (only uppercase), so gold's empty result and pred's NULL sum are both renderings of 'no income found'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 354,
+  "pair_id": "gsr:1183",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The original diagnosis is Patient.Diagnosis, but gold also requires an examination dated on the First Date, which many real patients lack (44 of 69); pred returns the patient's diagnosis.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 355,
+  "pair_id": "rsl:990",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold finds nothing because no result time has the real winner format 'h:mm:ss.sss' (times are dates), and the race has several position-1 results; neither occurs in reality.",
+  "implausible_fact": "result times stored as dates / multiple winners"
+ },
+ {
+  "idx": 356,
+  "pair_id": "csc-7b:260",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Atoms are connected to triple bonds that belong to a different molecule than the atom's own, which separates gold's molecule-level join from pred's connected join; this never happens in real data.",
+  "implausible_fact": "atom connected to a bond of another molecule"
+ },
+ {
+  "idx": 357,
+  "pair_id": "csc-7b:1133",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The counts differ only because of the invalid birthday '1990-01-00', which falls between '1990' and '1990-01-01'.",
+  "implausible_fact": "invalid date '1990-01-00'"
+ },
+ {
+  "idx": 358,
+  "pair_id": "gsr:1319",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred's exact match fails only because the position is stored lowercase 'vice president'; real data uses 'Vice President'.",
+  "implausible_fact": "lowercase position 'vice president'"
+ },
+ {
+  "idx": 359,
+  "pair_id": "chess:32",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold returns a NULL rate and pred excludes the row only because Enrollment (K-12) is NULL; it is never NULL in reality.",
+  "implausible_fact": "frpm row with NULL Enrollment (K-12)"
+ },
+ {
+  "idx": 360,
+  "pair_id": "slm:1513",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The first customer is the earliest Time, whose station's country is what pred returns; gold orders Time DESC and so picks the last transaction.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 361,
+  "pair_id": "chess:1263",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Although pred mishandles the HCT=29 boundary, under the correct filter patients 1 and 21 tie at the max aCL IgA (23), so either ID is defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 362,
+  "pair_id": "chess:786",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The counts differ only because a Strength row has NULL hero_id (pred's COUNT(*) includes it, gold's COUNT(hero_id) does not); hero_id is never NULL in reality.",
+  "implausible_fact": "hero_attribute row with NULL hero_id"
+ },
+ {
+  "idx": 363,
+  "pair_id": "gena_submission_2:108",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The account with the biggest loan has no transactions, so pred returns nothing while gold falls through to another account; every real account (and loan account) has transactions.",
+  "implausible_fact": "loan account with no transactions"
+ },
+ {
+  "idx": 364,
+  "pair_id": "slm:1025",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two leagues tie on total 2015/2016 goals, so which name LIMIT 1 returns is an unspecified tie-break.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 365,
+  "pair_id": "slm:990",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold finds nothing because the winner's time is a date rather than the real 'h:mm:ss.sss' race-time format.",
+  "implausible_fact": "winner result time not in race-time format"
+ },
+ {
+  "idx": 366,
+  "pair_id": "gena_submission_1:1022",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two attribute rows tie at the minimum potential, so returning one foot (gold) or both (pred) are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 367,
+  "pair_id": "rsl:128",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred merges two districts that share the same A2 name; district names are unique in reality.",
+  "implausible_fact": "different districts with identical A2 name"
+ },
+ {
+  "idx": 368,
+  "pair_id": "alpha:5",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold's COUNT(DISTINCT School) is 0 only because the matching record has a NULL School name while being Virtual='F'; in reality NULL-School records are district entries and never have Virtual='F'.",
+  "implausible_fact": "record with NULL School name and Virtual='F'"
+ },
+ {
+  "idx": 369,
+  "pair_id": "slm:897",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "No driver has any wins, so there is no 'driver with the most winning' (gold: empty); pred counts standings rows instead of wins and returns an arbitrary driver.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 370,
+  "pair_id": "csc-7b:416",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only foreign_data row has a NULL language, so pred divides by COUNT(language)=0 (NULL) while gold gives 0; language is never NULL in reality.",
+  "implausible_fact": "foreign_data with NULL language"
+ },
+ {
+  "idx": 371,
+  "pair_id": "omni-32-majority:1266",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Per the evidence, RNP '+-' is normal, so no patient qualifies and pred's empty result is right; gold's malformed `RNP != '-' OR '+-'` wrongly includes '+-'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 372,
+  "pair_id": "omni-32-majority:112",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Gold returns both matching clients' home districts (client-district reading); pred's rows coincide with the account district of the only matching client who has an account (account-district reading).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 373,
+  "pair_id": "slm:1134",
+  "verdict": "gold_wrong",
+  "confidence": "low",
+  "reason": "Player_Attributes id 23 does not exist, so the difference is undefined; gold's SUM-with-0 fabricates 10, while pred correctly returns no value.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 374,
+  "pair_id": "gena_submission_2:120",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The evidence defines account holders as the owning persons, so 'holders from east Bohemia' means the owner's district (pred); gold filters on the account's branch district, which can differ in reality.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 375,
+  "pair_id": "csc-32b:108",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The account with the biggest loan has no transactions, so pred returns nothing while gold falls through to another account; every real loan account has transactions.",
+  "implausible_fact": "loan account with no transactions"
+ },
+ {
+  "idx": 376,
+  "pair_id": "csc-32b:24",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold's computed ratio divides by an Enrollment (K-12) of 0 (with Free Meal Count 32581), which yields NULL; real rows never have zero enrollment or more free meals than students.",
+  "implausible_fact": "Enrollment (K-12)=0 with Free Meal Count 32581"
+ },
+ {
+  "idx": 377,
+  "pair_id": "slm:539",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Only pred's case-insensitive LIKE matches the title, stored as lowercase 'eliciting priors from experts', and its owner then has a NULL DisplayName; the real title is capitalised and DisplayName is never NULL.",
+  "implausible_fact": "lowercase post title / owner with NULL DisplayName"
+ },
+ {
+  "idx": 378,
+  "pair_id": "slm:1263",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred filters on ALB with an impossible range instead of HCT, so it misses the patient with HCT=52 (abnormal); gold correctly returns that patient.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 379,
+  "pair_id": "omni-32-majority:867",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The race-933 result has a fastestLapSpeed but NULL fastestLapTime, which never occurs in real data, and this alone makes gold empty.",
+  "implausible_fact": "fastestLapSpeed present with NULL fastestLapTime"
+ },
+ {
+  "idx": 380,
+  "pair_id": "gsr:623",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold's count is higher only because user 1 holds the once-only 'Supporter' badge three times; no real user has it more than once.",
+  "implausible_fact": "user with multiple Supporter badges"
+ },
+ {
+  "idx": 381,
+  "pair_id": "gsr:91",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "AVG(A12) equals AVG(A13) (both 0), and the question does not say how to report a tie, so each query's default label is arbitrary.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 382,
+  "pair_id": "slm:1252",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The evidence defines normal IgG strictly as 900 < IGG < 2000, so IGG=2000 is not normal; gold's inclusive BETWEEN counts it.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 383,
+  "pair_id": "alpha:668",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold's NULL answer comes from a user with NULL DisplayName (and a badge with NULL Name affects pred's count); neither field is ever NULL in reality.",
+  "implausible_fact": "NULL DisplayName / NULL badge Name"
+ },
+ {
+  "idx": 384,
+  "pair_id": "omni-32-majority:1403",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The two queries diverge because budget.event_status says 'Closed' while the linked event.status is 'Open'; in real data the two always agree (52/52).",
+  "implausible_fact": "budget.event_status contradicts event.status"
+ },
+ {
+  "idx": 385,
+  "pair_id": "csc-7b:554",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Each user has exactly one badge, so all users tie for the most badges and the LIMIT 1 pick is an arbitrary tie-break.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 386,
+  "pair_id": "gena_submission_1:8",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only frpm row has a NULL FRPM Count, so the 'highest' count is undefined; returning that school's test takers (gold) or nothing (pred) depends on NULL treatment.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 387,
+  "pair_id": "chess:534",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only user has NULL Views, so gold's MAX-equality returns nothing while pred still returns him; Views is never NULL in reality.",
+  "implausible_fact": "user with NULL Views"
+ },
+ {
+  "idx": 388,
+  "pair_id": "gsr:364",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Two printings of 'Cloudchaser Eagle' have different legality statuses (one with NULL format); legalities are identical across printings in reality, so taking only the first printing would not change the answer.",
+  "implausible_fact": "printings of one card with differing legalities / NULL format"
+ },
+ {
+  "idx": 389,
+  "pair_id": "omni-32-majority:233",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "TR006's own bond has no connected rows, while a bond of another molecule connects a TR006 atom, so the atom-based and bond-based lookups disagree; real bonds connect atoms of their own molecule.",
+  "implausible_fact": "cross-molecule connected bond; bond without connected rows"
+ },
+ {
+  "idx": 390,
+  "pair_id": "rsl:1255",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The evidence defines abnormal IgM as IGM <= 40 OR >= 400, so IGM=400 qualifies; gold's NOT BETWEEN 40 AND 400 wrongly excludes it.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 391,
+  "pair_id": "slm:426",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The evidence explicitly counts mtgoCode = '' as not in MTGO, so pred's inclusion of the empty-code set is correct, while gold checks only IS NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 392,
+  "pair_id": "alpha:1319",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred's exact match fails only because the position is stored lowercase 'vice president'; real data uses 'Vice President'.",
+  "implausible_fact": "lowercase position 'vice president'"
+ },
+ {
+  "idx": 393,
+  "pair_id": "gena_submission_1:1361",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred's inner join to budget drops one Pizza expense only because its link_to_budget is NULL; every real expense is linked to a budget (32/32).",
+  "implausible_fact": "expense with NULL link_to_budget"
+ },
+ {
+  "idx": 394,
+  "pair_id": "rsl:819",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No superhero has missing weight, so the requested difference is 0-0=0 (pred), while gold's SUM over an empty set returns NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 395,
+  "pair_id": "chess:795",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Evidence and real data say alignment_id 3 is 'Neutral', but the witness names id 3 with nonsense text, so gold's text filter fails.",
+  "implausible_fact": "alignment id 3 not named 'Neutral'"
+ },
+ {
+  "idx": 396,
+  "pair_id": "gsr:288",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The molecule containing TR001_1 has label '-'; gold reports that label (not carcinogenic), while pred returns nothing because it filters on label='+'.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 397,
+  "pair_id": "chess:312",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Bond TR001_2_4's molecule has no atoms in the atom table, which empties gold's atom join; real molecules with bonds always have atoms.",
+  "implausible_fact": "molecule with bonds but no atoms"
+ },
+ {
+  "idx": 398,
+  "pair_id": "slm:459",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Neither card name matches (stored in uppercase), yet pred's CASE-without-data falls to ELSE and returns 'Shrine Keeper' once per cards row; gold correctly returns nothing.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 399,
+  "pair_id": "chess:13",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only school has NumTstTakr=0 (common in reality), so its excellence rate is undefined; listing it (gold) or excluding it (pred) depends on NULL treatment.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 400,
+  "pair_id": "gena_submission_1:1038",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only because a match has NULL home_team_goal, making SUM(a)+SUM(b) differ from SUM(a+b); goals are never NULL in the real data.",
+  "implausible_fact": "NULL home_team_goal in a match"
+ },
+ {
+  "idx": 401,
+  "pair_id": "gena_submission_1:867",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold excludes the result only because fastestLapTime is NULL while fastestLapSpeed is set, which never happens in real data.",
+  "implausible_fact": "fastestLapSpeed set with NULL fastestLapTime"
+ },
+ {
+  "idx": 402,
+  "pair_id": "omni-32-majority:391",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Extra gold row comes from a foreign_data row with NULL language (and a card with NULL name); language is always filled in reality.",
+  "implausible_fact": "foreign_data row with NULL language"
+ },
+ {
+  "idx": 403,
+  "pair_id": "chess:1403",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "No closed event has negative remaining, so no event exceeded its budget; pred ignores the remaining<0 condition and returns an event that did not overspend.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 404,
+  "pair_id": "omni-32-majority:554",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both users have one badge each (a tie), so either display name is a defensible answer for \"the most badges\".",
+  "implausible_fact": null
+ },
+ {
+  "idx": 405,
+  "pair_id": "chess:1335",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No event matches, so the only difference is empty result vs. NULL from SUM over no rows; both express \"no spending found\".",
+  "implausible_fact": null
+ },
+ {
+  "idx": 406,
+  "pair_id": "csc-32b:1492",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference only arises from a KAM customer with NULL Currency (SUM over boolean gives NULL vs 0); Currency is never NULL in the real data.",
+  "implausible_fact": "customer with NULL Currency"
+ },
+ {
+  "idx": 407,
+  "pair_id": "alpha:108",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The biggest-loan account has no transactions, so gold falls back to another account; in reality every account (with a loan) has transactions.",
+  "implausible_fact": "loan account without any transactions"
+ },
+ {
+  "idx": 408,
+  "pair_id": "slm:579",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Two posts share the title (which does occur in real data); pred arbitrarily keeps comments of only one post via scalar subquery while gold returns all comments on posts with that title.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 409,
+  "pair_id": "csc-7b:758",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Multiple race rows named Human make the scalar subquery pick only one id; race names are unique in reality.",
+  "implausible_fact": "duplicate Human rows in race table"
+ },
+ {
+  "idx": 410,
+  "pair_id": "omni-32-majority:1442",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference only arises because the budget row has NULL link_to_event, so pred join drops it; every budget is linked to an event in reality.",
+  "implausible_fact": "budget row with NULL link_to_event"
+ },
+ {
+  "idx": 411,
+  "pair_id": "csc-7b:1055",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two Player rows share the same player_api_id, so the join picks an arbitrary birthday; player_api_id is unique in reality.",
+  "implausible_fact": "duplicate player_api_id in Player"
+ },
+ {
+  "idx": 412,
+  "pair_id": "gena_submission_1:977",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines the range as raceId > 50 and < 100; pred uses BETWEEN 50 AND 100 and counts the finisher in race 50.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 413,
+  "pair_id": "omni-32-majority:1022",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two attribute rows tie on the lowest potential; gold returns one arbitrarily, pred returns all tied rows, both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 414,
+  "pair_id": "omni-32-majority:1255",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Evidence defines abnormal IgM as IGM <= 40, so IGM = 40 is abnormal; gold NOT BETWEEN 40 AND 400 wrongly excludes it.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 415,
+  "pair_id": "slm:1309",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines normal platelet level as PLT > 100 and < 400; gold BETWEEN includes PLT = 100, which is outside the stated normal range.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 416,
+  "pair_id": "omni-32-majority:1384",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No member matches the case-sensitive name, so the only difference is empty result vs NULL from SUM over no rows; both express no income.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 417,
+  "pair_id": "csc-32b:5",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises from a schools row with NULL School name but Virtual=F and SAT scores; in reality NULL-name rows are district records with NULL Virtual.",
+  "implausible_fact": "school with NULL name flagged Virtual=F"
+ },
+ {
+  "idx": 418,
+  "pair_id": "gena_submission_1:867",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold excludes the only result because fastestLapTime is NULL while fastestLapSpeed is set, which never occurs in real data.",
+  "implausible_fact": "fastestLapSpeed set with NULL fastestLapTime"
+ },
+ {
+  "idx": 419,
+  "pair_id": "gena_submission_1:1263",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Evidence says normal HCT is 29 < N < 52, so HCT = 29 is abnormal; pred uses HCT < 29 and wrongly excludes the patient.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 420,
+  "pair_id": "rsl:409",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts 2 only because the card has two identical premodern legalities rows; (uuid, format) is unique in the real data.",
+  "implausible_fact": "duplicate legalities row for same card and format"
+ },
+ {
+  "idx": 421,
+  "pair_id": "slm:1348",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "No budget matches, so the correct count is 0 as gold returns; pred SUM over no rows yields NULL instead of a count.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 422,
+  "pair_id": "alpha:378",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred excludes the card only because it has both Card Kingdom ids yet hasFoil=0 and hasNonFoil=0; in reality all such cards have hasFoil=1 and hasNonFoil=1.",
+  "implausible_fact": "card with foil/nonfoil Kingdom ids but hasFoil=hasNonFoil=0"
+ },
+ {
+  "idx": 423,
+  "pair_id": "chess:1123",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Two Player rows share player_api_id 0, so gold join matches both players; player_api_id is unique in reality.",
+  "implausible_fact": "duplicate player_api_id in Player"
+ },
+ {
+  "idx": 424,
+  "pair_id": "rsl:242",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only from atom_id xxxxxx21z with a trailing character; real atom ids have the form TRxxx_N.",
+  "implausible_fact": "nonsensical atom_id format"
+ },
+ {
+  "idx": 425,
+  "pair_id": "chess:1095",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Team_Attributes row has team_api_id of Hearts but a team_fifa_api_id of another team; the two ids are always consistent in reality.",
+  "implausible_fact": "inconsistent team_api_id/team_fifa_api_id"
+ },
+ {
+  "idx": 426,
+  "pair_id": "csc-7b:16",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "No school is in Alameda, so the correct count is 0 (gold result, though gold filters Lake); pred ignores the county entirely and counts a merged school elsewhere.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 427,
+  "pair_id": "slm:1067",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Team_Attributes rows share one team_fifa_api_id while pointing to different team_api_ids, so the two join keys disagree; they are always consistent in reality.",
+  "implausible_fact": "inconsistent team_api_id/team_fifa_api_id"
+ },
+ {
+  "idx": 428,
+  "pair_id": "omni-32-majority:1042",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only from a match with NULL away_team_goal (AVG skips it, SUM/COUNT does not); goals are never NULL in reality.",
+  "implausible_fact": "NULL away_team_goal in a match"
+ },
+ {
+  "idx": 429,
+  "pair_id": "csc-32b:880",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No driver matches the case-sensitive name, so the difference is only a NULL aggregate row vs an empty result; both mean no answer.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 430,
+  "pair_id": "omni-32-majority:1331",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Vice President rows have multiple incomes; the question admits listing each income amount (gold) or the total received (pred).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 431,
+  "pair_id": "gena_submission_2:74",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "A matching frpm row has NULL Low Grade, which ORDER BY puts first while MIN ignores it; Low Grade is never NULL in reality.",
+  "implausible_fact": "NULL Low Grade in frpm"
+ },
+ {
+  "idx": 432,
+  "pair_id": "slm:516",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred counts 2 only because one card has two French foreign_data rows; (uuid, language) is unique in the real data.",
+  "implausible_fact": "duplicate French translation rows for one card"
+ },
+ {
+  "idx": 433,
+  "pair_id": "gsr:1400",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference comes from a 2019 event with NULL type (gold divides by COUNT(type), pred by COUNT(event_id)); event type is never NULL in reality.",
+  "implausible_fact": "event with NULL type"
+ },
+ {
+  "idx": 434,
+  "pair_id": "omni-32-majority:541",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two posts tie on maximum FavoriteCount; gold returns one owner arbitrarily, pred returns both, both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 435,
+  "pair_id": "csc-32b:914",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference only arises from a driver with empty-string code, which never occurs in real data (missing codes are NULL).",
+  "implausible_fact": "driver code is empty string"
+ },
+ {
+  "idx": 436,
+  "pair_id": "gsr:718",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts 2 only because the same (hero_id, power_id) pair appears twice; such pairs are unique in reality.",
+  "implausible_fact": "duplicate hero_power row"
+ },
+ {
+  "idx": 437,
+  "pair_id": "alpha:302",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold misses an atom only because the bond is stored in one direction only (plus a self-loop); real connected rows always exist in both directions.",
+  "implausible_fact": "connected bond row without reverse direction"
+ },
+ {
+  "idx": 438,
+  "pair_id": "slm:564",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines one comment as CommentCount = 1; the post has CommentCount 0, so gold correctly returns nothing while pred counts comment rows instead.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 439,
+  "pair_id": "csc-7b:561",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The highest-score comment has NULL PostId, making gold scalar subquery return NULL; comments.PostId is never NULL in reality.",
+  "implausible_fact": "comment with NULL PostId"
+ },
+ {
+  "idx": 440,
+  "pair_id": "slm:592",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only from badges with NULL Name (COUNT(Name) vs COUNT(*)); badge names are never NULL in reality.",
+  "implausible_fact": "badges with NULL Name"
+ },
+ {
+  "idx": 441,
+  "pair_id": "gsr:232",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred drops a molecule only because its single bond has no rows in connected; every real bond has connected rows.",
+  "implausible_fact": "bond without any connected rows"
+ },
+ {
+  "idx": 442,
+  "pair_id": "csc-7b:303",
+  "verdict": "both_wrong",
+  "confidence": "medium",
+  "reason": "TR006 has no double bonds and label -, so the answer is 0 and non-carcinogenic; gold returns nothing and pred returns 0 with a NULL label.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 443,
+  "pair_id": "omni-32-majority:583",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No user is named Yevgeny, so the difference is only empty result vs a 0/NULL aggregate row; both convey no matching posts.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 444,
+  "pair_id": "omni-32-majority:1272",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only abnormal-SSA patient has an unknown (NULL) First Date, which occurs in real data; whether such a patient counts as first is a NULL-handling choice.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 445,
+  "pair_id": "slm:1194",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "The question requires the PSS diagnosis from a medical examination; the Examination diagnosis is not PSS, and pred uses Patient.Diagnosis instead.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 446,
+  "pair_id": "gena_submission_2:108",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two loans tie for the biggest amount; gold and pred pick different tied clients, both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 447,
+  "pair_id": "slm:74",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "A matching frpm row has NULL Low Grade, which ORDER BY puts first while MIN ignores it; Low Grade is never NULL in reality.",
+  "implausible_fact": "NULL Low Grade in frpm"
+ },
+ {
+  "idx": 448,
+  "pair_id": "alpha:944",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The 2008 Australian GP has no winner row and its result time is a date string, so neither computation is meaningful; real races always have a winner with H:MM:SS.mmm time.",
+  "implausible_fact": "race result time is a datetime string and no winner"
+ },
+ {
+  "idx": 449,
+  "pair_id": "csc-7b:561",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The top-scoring comment has NULL PostId, making gold scalar subquery return NULL; comments.PostId is never NULL in reality.",
+  "implausible_fact": "comment with NULL PostId"
+ },
+ {
+  "idx": 450,
+  "pair_id": "chess:1406",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Three Food budgets tie at the highest amount; gold returns all ties, pred returns one, both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 451,
+  "pair_id": "gena_submission_1:1001",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred finds nothing only because no qualifying row in the race has position 1 (positions inconsistent with q3, nonsense q3 values); real qualifying always has a pole sitter.",
+  "implausible_fact": "race qualifying without a position-1 entry"
+ },
+ {
+  "idx": 452,
+  "pair_id": "gsr:999",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two results tie on the minimum fastestLapTime; gold returns one race, pred returns both tied races.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 453,
+  "pair_id": "gsr:1095",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only from a Team_Attributes row with NULL buildUpPlaySpeed (SUM/COUNT vs AVG); this field is never NULL in reality.",
+  "implausible_fact": "NULL buildUpPlaySpeed"
+ },
+ {
+  "idx": 454,
+  "pair_id": "alpha:318",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold returns NULL only because the bond atoms have NULL molecule_id (and differ from the bond molecule); atom.molecule_id is never NULL in reality.",
+  "implausible_fact": "atoms with NULL molecule_id"
+ },
+ {
+  "idx": 455,
+  "pair_id": "csc-7b:1367",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Each college has exactly one member (a tie), so either college is a defensible answer.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 456,
+  "pair_id": "omni-32-majority:759",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only superhero has NULL weight, so there is no heaviest hero; real data always has heroes with known weights.",
+  "implausible_fact": "no superhero with a known weight"
+ },
+ {
+  "idx": 457,
+  "pair_id": "rsl:73",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "The only PO Box 1040 school is not a Youth Authority facility; pred drops the SOCType condition and returns its row.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 458,
+  "pair_id": "gsr:801",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Witness maps gender id 2 to Male, so id-based and name-based counts disagree; in the real gender table id 1 is Male and 2 is Female.",
+  "implausible_fact": "gender id 2 labelled Male"
+ },
+ {
+  "idx": 459,
+  "pair_id": "csc-32b:107",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred joins client_id to account_id, a genuine bug, and returns nothing although the client lives in a top-salary district (tied A11) as gold finds.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 460,
+  "pair_id": "gsr:882",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No race matches the case-sensitive name, so the difference is only an empty result vs a NULL MIN row; both mean no answer.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 461,
+  "pair_id": "slm:1083",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The top-rated attribute row belongs to player_api_id 2625 but carries a fifa id of another player (such mismatches exist in real data); pred joins on fifa id and names the wrong player.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 462,
+  "pair_id": "alpha:228",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only because the sole atom has NULL element (COUNT CASE gives 0, SUM(NULL) gives NULL); element is never NULL in reality.",
+  "implausible_fact": "atom with NULL element"
+ },
+ {
+  "idx": 463,
+  "pair_id": "alpha:303",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "TR006 has zero double bonds; pred correctly reports 0 with the molecule label while gold GROUP BY after filtering returns no row at all.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 464,
+  "pair_id": "slm:1084",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts 0 only because the matched player has NULL player_name (COUNT DISTINCT name); player names are never NULL in reality.",
+  "implausible_fact": "Player with NULL player_name"
+ },
+ {
+  "idx": 465,
+  "pair_id": "csc-32b:897",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "The only driver has zero wins; returning nobody (gold) or that driver as the trivial maximum (pred) are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 466,
+  "pair_id": "gsr:232",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred drops molecule af only because its single bond has no connected rows; every real bond has connected rows.",
+  "implausible_fact": "bond without any connected rows"
+ },
+ {
+  "idx": 467,
+  "pair_id": "gsr:1007",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No driver named Lewis Hamilton exists, so the difference is only empty result vs a NULL MAX row.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 468,
+  "pair_id": "gena_submission_2:10",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two SAT rows tie on the highest AvgScrRead; gold and pred return the FRPM count of different tied schools.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 469,
+  "pair_id": "gena_submission_2:1003",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred finds nothing only because status 3 is labelled 3 instead of Accident; in reality statusId 3 is Accident.",
+  "implausible_fact": "status 3 not labelled Accident"
+ },
+ {
+  "idx": 470,
+  "pair_id": "omni-32-majority:597",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts badge rows and pred counts users; they differ only because user 1 holds the Teacher badge three times, while in reality each user has at most one Teacher badge.",
+  "implausible_fact": "user with multiple Teacher badges"
+ },
+ {
+  "idx": 471,
+  "pair_id": "slm:312",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold returns nothing only because the bond molecule has no atoms; every real molecule has atoms.",
+  "implausible_fact": "molecule without any atoms"
+ },
+ {
+  "idx": 472,
+  "pair_id": "gsr:1046",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Team and Team_Attributes rows have mutually inconsistent team_api_id/team_fifa_api_id pairs, so the two join keys pick different rows; these ids are always consistent in reality.",
+  "implausible_fact": "inconsistent team_api_id/team_fifa_api_id"
+ },
+ {
+  "idx": 473,
+  "pair_id": "csc-7b:790",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "No superhero has full_name Charles Chandler, so the difference is undefined (gold NULL); pred silently treats the missing weight as 0 and reports 5.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 474,
+  "pair_id": "gsr:114",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred drops the Prague account only because it has no disp row; every real account has a disposition/owner.",
+  "implausible_fact": "account without any disp row"
+ },
+ {
+  "idx": 475,
+  "pair_id": "chess:80",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The frpm School Name and schools.School differ for the same CDSCode (which also occurs in real data); either name is a defensible answer.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 476,
+  "pair_id": "alpha:426",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Evidence defines not in MTGO as mtgoCode IS NULL or empty string; gold ignores the empty-string case and misses the set.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 477,
+  "pair_id": "gena_submission_1:1397",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Budget event_status is Closed while the linked event status is Open; in reality the two always agree.",
+  "implausible_fact": "budget event_status disagrees with event status"
+ },
+ {
+  "idx": 478,
+  "pair_id": "slm:934",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The 1989 races have date 2000-01-01, so pred date LIKE 1989% fails; race date always matches its year in reality.",
+  "implausible_fact": "race date year inconsistent with year column"
+ },
+ {
+  "idx": 479,
+  "pair_id": "alpha:188",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two qualifying accounts tie on the lowest loan amount; gold returns one, pred returns both, both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 480,
+  "pair_id": "omni-32-majority:786",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The question asks for the highest Strength value; gold compares against the maximum over all attributes (Durability 3) and counts 0, while pred correctly counts the hero with max Strength.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 481,
+  "pair_id": "csc-32b:927",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The faster speed belongs to a result with NULL fastestLapTime but non-NULL fastestLapSpeed (and speeds are letters), which never occurs in real data.",
+  "implausible_fact": "fastestLapSpeed set with NULL fastestLapTime"
+ },
+ {
+  "idx": 482,
+  "pair_id": "csc-32b:789",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "An alien with unknown (NULL) weight should not count as weight 0; AVG, as the evidence states, gives 10 while gold SUM/COUNT(id) dilutes it.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 483,
+  "pair_id": "slm:815",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Alignment id 1 is labelled A instead of Good, so id-based and name-based filters disagree; in reality id 1 is Good.",
+  "implausible_fact": "alignment id 1 not labelled Good"
+ },
+ {
+  "idx": 484,
+  "pair_id": "chess:556",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold divides by COUNT(DISTINCT DisplayName), which is 0 only because the user has a NULL DisplayName; display names are never NULL in reality.",
+  "implausible_fact": "user with NULL DisplayName"
+ },
+ {
+  "idx": 485,
+  "pair_id": "csc-7b:1456",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "All expense costs are NULL, so pred ordering is arbitrary and differs from gold ordering by budget spent; expense cost is never NULL in reality.",
+  "implausible_fact": "all expense costs NULL"
+ },
+ {
+  "idx": 486,
+  "pair_id": "chess:1055",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two Player rows share player_api_id 0, so gold join matches both players; player_api_id is unique in reality.",
+  "implausible_fact": "duplicate player_api_id in Player"
+ },
+ {
+  "idx": 487,
+  "pair_id": "rsl:214",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold returns nothing only because the sole atom has NULL element (excluded by != sn); element is never NULL in reality.",
+  "implausible_fact": "atom with NULL element"
+ },
+ {
+  "idx": 488,
+  "pair_id": "rsl:795",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Alignment id 3 is labelled Bad instead of Neutral, so id-based and name-based filters disagree; in reality id 3 is Neutral.",
+  "implausible_fact": "alignment id 3 labelled Bad"
+ },
+ {
+  "idx": 489,
+  "pair_id": "slm:1147",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only attribute row has NULL overall_rating, so there is no maximum; real data always has rated players.",
+  "implausible_fact": "no player with a non-NULL overall_rating"
+ },
+ {
+  "idx": 490,
+  "pair_id": "csc-32b:668",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only from a badge with NULL Name (COUNT(Name) vs COUNT(Id)); badge names are never NULL in reality.",
+  "implausible_fact": "badge with NULL Name"
+ },
+ {
+  "idx": 491,
+  "pair_id": "csc-32b:108",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The biggest-loan account has no transactions, so gold falls back to another account; every real loan account has transactions.",
+  "implausible_fact": "loan account without any transactions"
+ },
+ {
+  "idx": 492,
+  "pair_id": "gsr:506",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred double-counts set A because it has two Japanese set_translations rows; (setCode, language) is unique in the real data.",
+  "implausible_fact": "duplicate Japanese translation for one set"
+ },
+ {
+  "idx": 493,
+  "pair_id": "alpha:744",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The join is empty (no hero has a publisher), giving SUM NULL vs COUNT 0; the real data always has Marvel and DC heroes.",
+  "implausible_fact": "no superhero linked to any publisher"
+ },
+ {
+  "idx": 494,
+  "pair_id": "slm:1019",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only from a lap time with NULL milliseconds (SUM/COUNT(lap) vs AVG); milliseconds is never NULL in reality.",
+  "implausible_fact": "lapTimes row with NULL milliseconds"
+ },
+ {
+  "idx": 495,
+  "pair_id": "gena_submission_1:507",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred weights set a twice because it has two Portuguese (Brazil) translation rows; (setCode, language) is unique in the real data.",
+  "implausible_fact": "duplicate Portuguese (Brazil) translation for one set"
+ },
+ {
+  "idx": 496,
+  "pair_id": "csc-32b:719",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts hero 1 twice only because the same (hero_id, power_id) row appears twice; such pairs are unique in reality.",
+  "implausible_fact": "duplicate hero_power row"
+ },
+ {
+  "idx": 497,
+  "pair_id": "gsr:475",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two sets are named Coldsnap, so pred scalar subquery keeps only one; set names are unique in reality.",
+  "implausible_fact": "two sets named Coldsnap"
+ },
+ {
+  "idx": 498,
+  "pair_id": "rsl:1410",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The member id differs in case so nothing matches; the difference is only a NULL aggregate row vs an empty result.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 499,
+  "pair_id": "gsr:879",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only result has NULL fastestLapSpeed, so no fastest speed exists; real data always has results with recorded speeds.",
+  "implausible_fact": "no result with a non-NULL fastestLapSpeed"
+ }
+]

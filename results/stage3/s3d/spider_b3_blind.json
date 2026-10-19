@@ -1,0 +1,3863 @@
+[
+ {
+  "pair_id": "dailsql_gpt4_sc:32",
+  "db_id": "concert_singer",
+  "question": "What are the names of all stadiums that did not have a concert in 2014?",
+  "evidence": "",
+  "gold": "SELECT name FROM stadium EXCEPT SELECT T2.name FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  =  2014",
+  "pred": "SELECT Name FROM stadium WHERE Stadium_ID NOT IN (SELECT T1.Stadium_ID FROM concert AS T1 WHERE YEAR = '2014')",
+  "witness": {
+   "concert": {
+    "columns": [
+     "concert_ID",
+     "concert_Name",
+     "Theme",
+     "Stadium_ID",
+     "Year"
+    ],
+    "rows": [
+     [
+      1031,
+      "Auditions",
+      "Free choice",
+      "2",
+      "2014"
+     ]
+    ]
+   },
+   "stadium": {
+    "columns": [
+     "Stadium_ID",
+     "Location",
+     "Name",
+     "Capacity",
+     "Highest",
+     "Lowest",
+     "Average"
+    ],
+    "rows": [
+     [
+      1032,
+      "Peterhead",
+      "Recreation Park",
+      4000,
+      837,
+      400,
+      615
+     ],
+     [
+      "2",
+      "Stirling Albion",
+      "Recreation Park",
+      3808,
+      1125,
+      404,
+      642
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "Recreation Park"
+   ]
+  ],
+  "idx": 120
+ },
+ {
+  "pair_id": "dailsql_gpt4:60",
+  "db_id": "pets_1",
+  "question": "What are the students' first names who have both cats and dogs as pets?",
+  "evidence": "",
+  "gold": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'",
+  "pred": "SELECT Fname FROM Student WHERE StuID IN (SELECT StuID FROM Has_Pet WHERE PetID IN (SELECT PetID FROM Pets WHERE PetType = 'cat') INTERSECT SELECT StuID FROM Has_Pet WHERE PetID IN (SELECT PetID FROM Pets WHERE PetType = 'dog'))",
+  "witness": {
+   "Has_Pet": {
+    "columns": [
+     "StuID",
+     "PetID"
+    ],
+    "rows": [
+     [
+      1064,
+      1029
+     ],
+     [
+      1003,
+      1004
+     ],
+     [
+      1003,
+      1004
+     ],
+     [
+      1067,
+      1068
+     ]
+    ]
+   },
+   "Pets": {
+    "columns": [
+     "PetID",
+     "PetType",
+     "pet_age",
+     "weight"
+    ],
+    "rows": [
+     [
+      1029,
+      "cat",
+      null,
+      null
+     ],
+     [
+      1004,
+      "cat",
+      null,
+      null
+     ],
+     [
+      1069,
+      "cat",
+      null,
+      null
+     ],
+     [
+      1068,
+      "dog",
+      null,
+      null
+     ]
+    ]
+   },
+   "Student": {
+    "columns": [
+     "StuID",
+     "LName",
+     "Fname",
+     "Age",
+     "Sex",
+     "Major",
+     "Advisor",
+     "city_code"
+    ],
+    "rows": [
+     [
+      1028,
+      "Thornton",
+      "Dinesh",
+      null,
+      null,
+      10,
+      null,
+      "YYZ"
+     ],
+     [
+      1003,
+      "Thornton",
+      "b",
+      null,
+      null,
+      10,
+      null,
+      "YYZ"
+     ],
+     [
+      1064,
+      "A",
+      null,
+      null,
+      "F",
+      null,
+      null,
+      "b"
+     ],
+     [
+      1067,
+      "Nelson",
+      null,
+      2,
+      null,
+      null,
+      2,
+      "BAL"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 121
+ },
+ {
+  "pair_id": "dinsql_gpt4:48",
+  "db_id": "pets_1",
+  "question": "How much does the youngest dog weigh?",
+  "evidence": "",
+  "gold": "SELECT weight FROM pets ORDER BY pet_age LIMIT 1",
+  "pred": "SELECT weight FROM Pets WHERE pet_age = (SELECT min(pet_age) FROM Pets WHERE PetType = 'dog') AND PetType = 'dog'",
+  "witness": {
+   "Pets": {
+    "columns": [
+     "PetID",
+     "PetType",
+     "pet_age",
+     "weight"
+    ],
+    "rows": [
+     [
+      1002,
+      "A",
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 122
+ },
+ {
+  "pair_id": "graphix_t5:84",
+  "db_id": "pets_1",
+  "question": "What is the last name of the student who has a cat that is 3 years old?",
+  "evidence": "",
+  "gold": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  'cat'",
+  "pred": "select student.lname from student join has_pet on student.stuid = has_pet.stuid join pets on has_pet.petid = pets.petid where pets.pet_age = 3",
+  "witness": {
+   "Has_Pet": {
+    "columns": [
+     "StuID",
+     "PetID"
+    ],
+    "rows": [
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      1,
+      1
+     ]
+    ]
+   },
+   "Pets": {
+    "columns": [
+     "PetID",
+     "PetType",
+     "pet_age",
+     "weight"
+    ],
+    "rows": [
+     [
+      1,
+      "cat",
+      3,
+      9.3
+     ],
+     [
+      3,
+      "dog",
+      2,
+      13.4
+     ],
+     [
+      2,
+      "dog",
+      3,
+      13.4
+     ]
+    ]
+   },
+   "Student": {
+    "columns": [
+     "StuID",
+     "LName",
+     "Fname",
+     "Age",
+     "Sex",
+     "Major",
+     "Advisor",
+     "city_code"
+    ],
+    "rows": [
+     [
+      1,
+      "Nelson",
+      "Steven",
+      20,
+      "M",
+      600,
+      7723,
+      "PIT"
+     ],
+     [
+      2,
+      "Kumar",
+      "Lisa",
+      21,
+      "F",
+      550,
+      2311,
+      "SFO"
+     ],
+     [
+      3,
+      "Schmidt",
+      "Derek",
+      17,
+      "M",
+      600,
+      2192,
+      "HOU"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Nelson"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "Schmidt"
+   ],
+   [
+    "Nelson"
+   ]
+  ],
+  "idx": 123
+ },
+ {
+  "pair_id": "dailsql_gpt4:521",
+  "db_id": "student_transcripts_tracking",
+  "question": "How many degrees does the engineering department offer?",
+  "evidence": "",
+  "gold": "SELECT count(*) FROM Departments AS T1 JOIN Degree_Programs AS T2 ON T1.department_id  =  T2.department_id WHERE T1.department_name  =  'engineer'",
+  "pred": "SELECT count(*) FROM Degree_Programs WHERE department_id = (SELECT department_id FROM Departments WHERE department_name = 'engineering')",
+  "witness": {
+   "Degree_Programs": {
+    "columns": [
+     "degree_program_id",
+     "department_id",
+     "degree_summary_name",
+     "degree_summary_description",
+     "other_details"
+    ],
+    "rows": [
+     [
+      1019,
+      1020,
+      "PHD",
+      "esse",
+      null
+     ]
+    ]
+   },
+   "Departments": {
+    "columns": [
+     "department_id",
+     "department_name",
+     "department_description",
+     "other_details"
+    ],
+    "rows": [
+     [
+      1020,
+      "engineer",
+      "nihil",
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "idx": 124
+ },
+ {
+  "pair_id": "gpt4_zeroshot:1024",
+  "db_id": "singer",
+  "question": "Show the names of singers and the total sales of their songs.",
+  "evidence": "",
+  "gold": "SELECT T1.Name ,  sum(T2.Sales) FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID GROUP BY T1.Name",
+  "pred": "SELECT singer.Name, SUM(song.Sales) AS Total_Sales FROM singer JOIN song ON singer.Singer_ID = song.Singer_ID GROUP BY singer.Singer_ID, singer.Name;",
+  "witness": {
+   "singer": {
+    "columns": [
+     "Singer_ID",
+     "Name",
+     "Birth_Year",
+     "Net_Worth_Millions",
+     "Citizenship"
+    ],
+    "rows": [
+     [
+      2,
+      "Christy Walton",
+      1948.0,
+      28.8,
+      "United States"
+     ],
+     [
+      1001,
+      "Christy Walton",
+      1948.0,
+      28.8,
+      "United States"
+     ]
+    ]
+   },
+   "song": {
+    "columns": [
+     "Song_ID",
+     "Title",
+     "Singer_ID",
+     "Sales",
+     "Highest_Position"
+    ],
+    "rows": [
+     [
+      3,
+      "Cha Cha Slide",
+      2,
+      351421.0,
+      1.0
+     ],
+     [
+      5,
+      "Yeah",
+      2,
+      300000.0,
+      1.0
+     ],
+     [
+      1002,
+      "Cha Cha Slide",
+      1001,
+      351421.0,
+      1.0
+     ],
+     [
+      1003,
+      "Yeah",
+      1001,
+      300000.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Christy Walton",
+    1302842.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    "Christy Walton",
+    651421.0
+   ],
+   [
+    "Christy Walton",
+    651421.0
+   ]
+  ],
+  "idx": 125
+ },
+ {
+  "pair_id": "graphix_t5:407",
+  "db_id": "course_teach",
+  "question": "Show names of teachers that teach at least two courses.",
+  "evidence": "",
+  "gold": "SELECT T2.Name FROM course_arrange AS T1 JOIN teacher AS T2 ON T1.Teacher_ID  =  T2.Teacher_ID GROUP BY T2.Name HAVING COUNT(*)  >=  2",
+  "pred": "select teacher.name from course_arrange join teacher on course_arrange.teacher_id = teacher.teacher_id group by course_arrange.teacher_id having count(*) >= 2",
+  "witness": {
+   "course": {
+    "columns": [
+     "Course_ID",
+     "Staring_Date",
+     "Course"
+    ],
+    "rows": [
+     [
+      2,
+      "6 May",
+      "Math"
+     ]
+    ]
+   },
+   "course_arrange": {
+    "columns": [
+     "Course_ID",
+     "Teacher_ID",
+     "Grade"
+    ],
+    "rows": [
+     [
+      2,
+      3,
+      3
+     ],
+     [
+      2,
+      1007,
+      3
+     ]
+    ]
+   },
+   "teacher": {
+    "columns": [
+     "Teacher_ID",
+     "Name",
+     "Age",
+     "Hometown"
+    ],
+    "rows": [
+     [
+      3,
+      "Vicente Carretero",
+      "26",
+      "Farnworth Municipal Borough"
+     ],
+     [
+      1007,
+      "Vicente Carretero",
+      "26",
+      "Farnworth Municipal Borough"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Vicente Carretero"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 126
+ },
+ {
+  "pair_id": "graphix_t5:521",
+  "db_id": "student_transcripts_tracking",
+  "question": "How many degrees does the engineering department offer?",
+  "evidence": "",
+  "gold": "SELECT count(*) FROM Departments AS T1 JOIN Degree_Programs AS T2 ON T1.department_id  =  T2.department_id WHERE T1.department_name  =  'engineer'",
+  "pred": "select count(*) from departments join degree_programs on departments.department_id = degree_programs.department_id where departments.department_name = \"Engineering\"",
+  "witness": {
+   "Degree_Programs": {
+    "columns": [
+     "degree_program_id",
+     "department_id",
+     "degree_summary_name",
+     "degree_summary_description",
+     "other_details"
+    ],
+    "rows": [
+     [
+      1019,
+      1020,
+      "PHD",
+      "esse",
+      null
+     ]
+    ]
+   },
+   "Departments": {
+    "columns": [
+     "department_id",
+     "department_name",
+     "department_description",
+     "other_details"
+    ],
+    "rows": [
+     [
+      1020,
+      "engineer",
+      "nihil",
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "idx": 127
+ },
+ {
+  "pair_id": "dailsql_gpt4:154",
+  "db_id": "car_1",
+  "question": "What are the different years in which there were cars produced that weighed less than 4000 and also cars that weighted more than 3000 ?",
+  "evidence": "",
+  "gold": "select distinct year from cars_data where weight between 3000 and 4000;",
+  "pred": "SELECT Year FROM cars_data WHERE Weight < 4000 INTERSECT SELECT Year FROM cars_data WHERE Weight > 3000",
+  "witness": {
+   "car_makers": {
+    "columns": [
+     "Id",
+     "Maker",
+     "FullName",
+     "Country"
+    ],
+    "rows": [
+     [
+      4,
+      "gm",
+      "General Motors",
+      2
+     ],
+     [
+      5,
+      "ford",
+      "Ford Motor Company",
+      2
+     ]
+    ]
+   },
+   "car_names": {
+    "columns": [
+     "MakeId",
+     "Model",
+     "Make"
+    ],
+    "rows": [
+     [
+      2,
+      "buick",
+      "buick skylark 320"
+     ],
+     [
+      18,
+      "ford",
+      "ford mustang boss 302"
+     ],
+     [
+      200,
+      "chevrolet",
+      "chevrolet nova"
+     ]
+    ]
+   },
+   "cars_data": {
+    "columns": [
+     "Id",
+     "MPG",
+     "Cylinders",
+     "Edispl",
+     "Horsepower",
+     "Weight",
+     "Accelerate",
+     "Year"
+    ],
+    "rows": [
+     [
+      2,
+      "15",
+      8,
+      350.0,
+      "165",
+      3693,
+      11.5,
+      1970
+     ],
+     [
+      18,
+      "null",
+      8,
+      302.0,
+      "140",
+      3353,
+      8.0,
+      1970
+     ],
+     [
+      200,
+      "22",
+      5,
+      250.0,
+      "105",
+      4000,
+      14.5,
+      1976
+     ]
+    ]
+   },
+   "continents": {
+    "columns": [
+     "ContId",
+     "Continent"
+    ],
+    "rows": [
+     [
+      1,
+      "america"
+     ],
+     [
+      5,
+      "australia"
+     ],
+     [
+      2,
+      "europe"
+     ]
+    ]
+   },
+   "countries": {
+    "columns": [
+     "CountryId",
+     "CountryName",
+     "Continent"
+    ],
+    "rows": [
+     [
+      1,
+      "usa",
+      1
+     ],
+     [
+      2,
+      "germany",
+      2
+     ]
+    ]
+   },
+   "model_list": {
+    "columns": [
+     "ModelId",
+     "Maker",
+     "Model"
+    ],
+    "rows": [
+     [
+      4,
+      4,
+      "buick"
+     ],
+     [
+      13,
+      5,
+      "ford"
+     ],
+     [
+      7,
+      4,
+      "chevrolet"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    1970
+   ],
+   [
+    1976
+   ]
+  ],
+  "pred_rows": [
+   [
+    1970
+   ]
+  ],
+  "idx": 128
+ },
+ {
+  "pair_id": "dinsql_gpt4:931",
+  "db_id": "dog_kennels",
+  "question": "Return the owner id, first name and last name of the owner who has the most dogs.",
+  "evidence": "",
+  "gold": "SELECT T1.owner_id ,  T2.first_name ,  T2.last_name FROM Dogs AS T1 JOIN Owners AS T2 ON T1.owner_id  =  T2.owner_id GROUP BY T1.owner_id ORDER BY count(*) DESC LIMIT 1",
+  "pred": "SELECT T2.owner_id, T2.first_name, T2.last_name FROM Dogs AS T1 JOIN Owners AS T2 ON T1.owner_id = T2.owner_id GROUP BY T1.owner_id, T2.first_name, T2.last_name ORDER BY COUNT(*) DESC LIMIT 1",
+  "witness": {
+   "Breeds": {
+    "columns": [
+     "breed_code",
+     "breed_name"
+    ],
+    "rows": [
+     [
+      "ESK",
+      "Eskimo"
+     ],
+     [
+      "HUS",
+      "Husky"
+     ]
+    ]
+   },
+   "Dogs": {
+    "columns": [
+     "dog_id",
+     "owner_id",
+     "abandoned_yn",
+     "breed_code",
+     "size_code",
+     "name",
+     "age",
+     "date_of_birth",
+     "gender",
+     "weight",
+     "date_arrived",
+     "date_adopted",
+     "date_departed"
+    ],
+    "rows": [
+     [
+      4,
+      14,
+      "0",
+      "ESK",
+      "LGE",
+      "Houston",
+      "5",
+      "2008-10-09 22:38:53",
+      "0",
+      "2.18",
+      "2017-04-20 00:58:55",
+      "2018-03-18 15:12:50",
+      "2018-03-24 19:12:22"
+     ],
+     [
+      10,
+      6,
+      "0",
+      "HUS",
+      "MED",
+      "Troy",
+      "9",
+      "2012-07-11 17:15:10",
+      "0",
+      "8.96",
+      "2017-12-29 06:08:26",
+      "2018-03-18 07:47:40",
+      "2018-03-25 04:42:14"
+     ],
+     [
+      6,
+      5,
+      "0",
+      "HUS",
+      "MED",
+      "Merritt",
+      "9",
+      "2015-02-26 21:31:22",
+      "1",
+      "9.8",
+      "2017-04-15 09:25:31",
+      "2018-03-08 15:03:00",
+      "2018-03-25 13:07:04"
+     ]
+    ]
+   },
+   "Owners": {
+    "columns": [
+     "owner_id",
+     "first_name",
+     "last_name",
+     "street",
+     "city",
+     "state",
+     "zip_code",
+     "email_address",
+     "home_phone",
+     "cell_number"
+    ],
+    "rows": [
+     [
+      3,
+      "Jaclyn",
+      "Stoltenberg",
+      "2635 Caitlyn Plains",
+      "Barrettburgh",
+      "Vermont",
+      "02647",
+      "hudson.favian@example.com",
+      "916.976.9480x13851",
+      "481-483-9083x37986"
+     ],
+     [
+      11,
+      "Gay",
+      "Feil",
+      "60352 Kayleigh Crossing Suite 700",
+      "Port Zackery",
+      "Indiana",
+      "35747",
+      "pearlie18@example.com",
+      "130-796-4589x05454",
+      "762.589.6117x1328"
+     ],
+     [
+      14,
+      "Rachelle",
+      "Funk",
+      "15828 Spencer Extensions",
+      "West Leonard",
+      "Maryland",
+      "22731",
+      "edythe62@example.org",
+      "1-346-655-5842x768",
+      "(257)399-3116"
+     ],
+     [
+      6,
+      "Kade",
+      "Rippin",
+      "51934 Treutel Harbor",
+      "Lake Carleyborough",
+      "Arizona",
+      "25609",
+      "margaretta.runte@example.net",
+      "318-052-6573",
+      "+70(4)9217952551"
+     ],
+     [
+      5,
+      "Johann",
+      "Fisher",
+      "68118 Daniel Row",
+      "Lake Valentin",
+      "NorthDakota",
+      "61019",
+      "zboncak.madonna@example.net",
+      "(544)034-1670",
+      "1-626-264-7659x1697"
+     ]
+    ]
+   },
+   "Sizes": {
+    "columns": [
+     "size_code",
+     "size_description"
+    ],
+    "rows": [
+     [
+      "LGE",
+      "Large"
+     ],
+     [
+      "MED",
+      "Medium"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    14,
+    "Rachelle",
+    "Funk"
+   ]
+  ],
+  "pred_rows": [
+   [
+    5,
+    "Johann",
+    "Fisher"
+   ]
+  ],
+  "idx": 129
+ },
+ {
+  "pair_id": "dinsql_gpt4:1029",
+  "db_id": "singer",
+  "question": "What are the citizenships that are shared by singers with a birth year before 1945 and after 1955?",
+  "evidence": "",
+  "gold": "SELECT Citizenship FROM singer WHERE Birth_Year  <  1945 INTERSECT SELECT Citizenship FROM singer WHERE Birth_Year  >  1955",
+  "pred": "SELECT Citizenship FROM singer WHERE Citizenship IN (SELECT Citizenship FROM singer WHERE Birth_Year < 1945) AND Citizenship IN (SELECT Citizenship FROM singer WHERE Birth_Year > 1955)",
+  "witness": {
+   "singer": {
+    "columns": [
+     "Singer_ID",
+     "Name",
+     "Birth_Year",
+     "Net_Worth_Millions",
+     "Citizenship"
+    ],
+    "rows": [
+     [
+      1151,
+      "Abigail Johnson",
+      1944.0,
+      null,
+      null
+     ],
+     [
+      1017,
+      "Christy Walton",
+      null,
+      null,
+      null
+     ],
+     [
+      1003,
+      "Christy Walton",
+      1944.0,
+      null,
+      "Germany"
+     ],
+     [
+      1169,
+      "Christy Walton",
+      1956.0,
+      null,
+      null
+     ],
+     [
+      1195,
+      "Christy Walton",
+      1955.0,
+      null,
+      null
+     ],
+     [
+      1222,
+      "Christy Walton",
+      null,
+      null,
+      null
+     ],
+     [
+      1223,
+      "Abigail Johnson",
+      1944.0,
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 130
+ },
+ {
+  "pair_id": "gpt4_fewshot:744",
+  "db_id": "world_1",
+  "question": "How many countries speak both English and Dutch?",
+  "evidence": "",
+  "gold": "SELECT COUNT(*) FROM (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" INTERSECT SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Dutch\")",
+  "pred": "SELECT COUNT(*) FROM (SELECT CountryCode FROM countrylanguage WHERE Language = 'English' INTERSECT SELECT CountryCode FROM countrylanguage WHERE Language = 'Dutch')",
+  "witness": {
+   "country": {
+    "columns": [
+     "Code",
+     "Name",
+     "Continent",
+     "Region",
+     "SurfaceArea",
+     "IndepYear",
+     "Population",
+     "LifeExpectancy",
+     "GNP",
+     "GNPOld",
+     "LocalName",
+     "GovernmentForm",
+     "HeadOfState",
+     "Capital",
+     "Code2"
+    ],
+    "rows": [
+     [
+      "BEL",
+      "Anguilla",
+      "Europe",
+      "a",
+      10.0,
+      null,
+      -1,
+      null,
+      null,
+      null,
+      "Al-Imarat al-´Arabiya al-Muttahida",
+      "c",
+      "Elisabeth II",
+      null,
+      "AW"
+     ],
+     [
+      "AUT",
+      "United Arab Emirates",
+      "b",
+      "Southern Europe",
+      2.0,
+      null,
+      2,
+      null,
+      1.5,
+      null,
+      "Afganistan/Afqanestan",
+      "Republic",
+      "Elisabeth II",
+      null,
+      "AF"
+     ],
+     [
+      "UGA",
+      "United Arab Emirates",
+      "Antarctica",
+      "Eastern Africa",
+      3.25,
+      null,
+      0,
+      null,
+      null,
+      3.25,
+      "Nederlandse Antillen",
+      "Republic",
+      "Elisabeth II",
+      null,
+      "A"
+     ]
+    ]
+   },
+   "countrylanguage": {
+    "columns": [
+     "CountryCode",
+     "Language",
+     "IsOfficial",
+     "Percentage"
+    ],
+    "rows": [
+     [
+      "AUT",
+      "English",
+      "a",
+      10.0
+     ],
+     [
+      "UGA",
+      "Dutch",
+      "c",
+      -1.5
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "idx": 131
+ },
+ {
+  "pair_id": "gpt4_fewshot:1023",
+  "db_id": "singer",
+  "question": "What are the names of the singers that have more than one songs?",
+  "evidence": "",
+  "gold": "SELECT T1.Name FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID GROUP BY T1.Name HAVING COUNT(*)  >  1",
+  "pred": "SELECT T1.Name FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID = T2.Singer_ID GROUP BY T1.Singer_ID HAVING count(*) > 1",
+  "witness": {
+   "singer": {
+    "columns": [
+     "Singer_ID",
+     "Name",
+     "Birth_Year",
+     "Net_Worth_Millions",
+     "Citizenship"
+    ],
+    "rows": [
+     [
+      3,
+      "Susanne Klatten",
+      1948.0,
+      28.8,
+      "United States"
+     ],
+     [
+      2,
+      "Susanne Klatten",
+      1940.0,
+      17.8,
+      "United States"
+     ]
+    ]
+   },
+   "song": {
+    "columns": [
+     "Song_ID",
+     "Title",
+     "Singer_ID",
+     "Sales",
+     "Highest_Position"
+    ],
+    "rows": [
+     [
+      2,
+      "All This Time",
+      2,
+      292000.0,
+      1.0
+     ],
+     [
+      3,
+      "Mysterious Girl",
+      3,
+      261000.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Susanne Klatten"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 132
+ },
+ {
+  "pair_id": "dailsql_gpt4_sc:68",
+  "db_id": "pets_1",
+  "question": "What type of pet is the youngest animal, and how much does it weigh?",
+  "evidence": "",
+  "gold": "SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1",
+  "pred": "SELECT T2.PetType , T2.weight FROM Has_Pet AS T1 JOIN Pets AS T2 ON T1.PetID = T2.PetID ORDER BY T2.pet_age ASC LIMIT 1",
+  "witness": {
+   "Has_Pet": {
+    "columns": [
+     "StuID",
+     "PetID"
+    ],
+    "rows": [
+     [
+      1032,
+      1033
+     ],
+     [
+      1007,
+      1008
+     ]
+    ]
+   },
+   "Pets": {
+    "columns": [
+     "PetID",
+     "PetType",
+     "pet_age",
+     "weight"
+    ],
+    "rows": [
+     [
+      1033,
+      "cat",
+      3,
+      13.4
+     ],
+     [
+      1008,
+      "cat",
+      3,
+      12.0
+     ]
+    ]
+   },
+   "Student": {
+    "columns": [
+     "StuID",
+     "LName",
+     "Fname",
+     "Age",
+     "Sex",
+     "Major",
+     "Advisor",
+     "city_code"
+    ],
+    "rows": [
+     [
+      1032,
+      "Wilson",
+      "Bruce",
+      27,
+      "M",
+      600,
+      1148,
+      "LON"
+     ],
+     [
+      1007,
+      "Tai",
+      "Eric",
+      19,
+      "M",
+      600,
+      2192,
+      "YYZ"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "cat",
+    12.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    "cat",
+    13.4
+   ]
+  ],
+  "idx": 133
+ },
+ {
+  "pair_id": "dailsql_gpt4:485",
+  "db_id": "wta_1",
+  "question": "How many different winners both participated in the WTA Championships and were left handed?",
+  "evidence": "",
+  "gold": "SELECT count(DISTINCT winner_name) FROM matches WHERE tourney_name  =  'WTA Championships' AND winner_hand  =  'L'",
+  "pred": "SELECT count(DISTINCT winner_id) FROM matches WHERE tourney_name = \"WTA Championships\" AND winner_hand = \"L\"",
+  "witness": {
+   "matches": {
+    "columns": [
+     "best_of",
+     "draw_size",
+     "loser_age",
+     "loser_entry",
+     "loser_hand",
+     "loser_ht",
+     "loser_id",
+     "loser_ioc",
+     "loser_name",
+     "loser_rank",
+     "loser_rank_points",
+     "loser_seed",
+     "match_num",
+     "minutes",
+     "round",
+     "score",
+     "surface",
+     "tourney_date",
+     "tourney_id",
+     "tourney_level",
+     "tourney_name",
+     "winner_age",
+     "winner_entry",
+     "winner_hand",
+     "winner_ht",
+     "winner_id",
+     "winner_ioc",
+     "winner_name",
+     "winner_rank",
+     "winner_rank_points",
+     "winner_seed",
+     "year"
+    ],
+    "rows": [
+     [
+      -1,
+      null,
+      100.0,
+      "",
+      "c",
+      null,
+      1001,
+      "HUN",
+      "Karolina Pliskova",
+      null,
+      null,
+      null,
+      3,
+      null,
+      null,
+      "6-3 6-4",
+      "Grass",
+      null,
+      "2016-540",
+      "A",
+      "WTA Championships",
+      null,
+      "",
+      "L",
+      1,
+      1001,
+      "UKR",
+      null,
+      null,
+      null,
+      null,
+      10
+     ]
+    ]
+   },
+   "players": {
+    "columns": [
+     "player_id",
+     "first_name",
+     "last_name",
+     "hand",
+     "birth_date",
+     "country_code"
+    ],
+    "rows": [
+     [
+      1001,
+      "Julia",
+      "A",
+      "",
+      null,
+      "GER"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "idx": 134
+ },
+ {
+  "pair_id": "graphix_t5:484",
+  "db_id": "wta_1",
+  "question": "What are the names and ranks of the three youngest winners across all matches?",
+  "evidence": "",
+  "gold": "SELECT DISTINCT winner_name ,  winner_rank FROM matches ORDER BY winner_age LIMIT 3",
+  "pred": "select winner_name, winner_rank from matches order by winner_age asc limit 3",
+  "witness": {
+   "matches": {
+    "columns": [
+     "best_of",
+     "draw_size",
+     "loser_age",
+     "loser_entry",
+     "loser_hand",
+     "loser_ht",
+     "loser_id",
+     "loser_ioc",
+     "loser_name",
+     "loser_rank",
+     "loser_rank_points",
+     "loser_seed",
+     "match_num",
+     "minutes",
+     "round",
+     "score",
+     "surface",
+     "tourney_date",
+     "tourney_id",
+     "tourney_level",
+     "tourney_name",
+     "winner_age",
+     "winner_entry",
+     "winner_hand",
+     "winner_ht",
+     "winner_id",
+     "winner_ioc",
+     "winner_name",
+     "winner_rank",
+     "winner_rank_points",
+     "winner_seed",
+     "year"
+    ],
+    "rows": [
+     [
+      -1,
+      null,
+      100.0,
+      "",
+      "c",
+      null,
+      1001,
+      "ROU",
+      "Karolina Pliskova",
+      null,
+      null,
+      null,
+      3,
+      null,
+      null,
+      "6-3 6-4",
+      "Grass",
+      null,
+      "2016-540",
+      "A",
+      "Singapore",
+      null,
+      "",
+      "L",
+      null,
+      1001,
+      null,
+      "Madison Keys",
+      10,
+      null,
+      null,
+      0
+     ],
+     [
+      -1,
+      null,
+      100.0,
+      "",
+      "c",
+      null,
+      1001,
+      "ROU",
+      "Karolina Pliskova",
+      null,
+      null,
+      null,
+      3,
+      null,
+      null,
+      "6-3 6-4",
+      "Grass",
+      null,
+      "2016-540",
+      "A",
+      "Singapore",
+      null,
+      "",
+      "L",
+      null,
+      1001,
+      null,
+      "Madison Keys",
+      10,
+      null,
+      null,
+      0
+     ],
+     [
+      -1,
+      null,
+      100.0,
+      "",
+      "c",
+      null,
+      1001,
+      "ROU",
+      "Karolina Pliskova",
+      null,
+      null,
+      null,
+      3,
+      null,
+      null,
+      "6-3 6-4",
+      "Grass",
+      null,
+      "2016-540",
+      "A",
+      "Singapore",
+      null,
+      "",
+      "L",
+      null,
+      1001,
+      null,
+      "Madison Keys",
+      10,
+      null,
+      null,
+      0
+     ],
+     [
+      -1,
+      null,
+      100.0,
+      "",
+      "c",
+      null,
+      1001,
+      "ROU",
+      "Karolina Pliskova",
+      null,
+      null,
+      null,
+      3,
+      null,
+      null,
+      "6-3 6-4",
+      "Grass",
+      null,
+      "2016-540",
+      "A",
+      "Singapore",
+      null,
+      "",
+      "L",
+      null,
+      1001,
+      null,
+      "Madison Keys",
+      10,
+      null,
+      null,
+      0
+     ],
+     [
+      null,
+      null,
+      100.0,
+      "",
+      "c",
+      null,
+      1001,
+      "POL",
+      "Karolina Pliskova",
+      null,
+      null,
+      null,
+      null,
+      null,
+      "RR",
+      "6-3 6-4",
+      "Hard",
+      null,
+      "2016-540",
+      "A",
+      "Indian Wells",
+      null,
+      "",
+      "L",
+      null,
+      1001,
+      "A",
+      "Karolina Pliskova",
+      10,
+      null,
+      null,
+      null
+     ]
+    ]
+   },
+   "players": {
+    "columns": [
+     "player_id",
+     "first_name",
+     "last_name",
+     "hand",
+     "birth_date",
+     "country_code"
+    ],
+    "rows": [
+     [
+      1001,
+      "c",
+      "Wang",
+      "L",
+      "2020-02-29",
+      "JPN"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Madison Keys",
+    10
+   ],
+   [
+    "Karolina Pliskova",
+    10
+   ]
+  ],
+  "pred_rows": [
+   [
+    "Madison Keys",
+    10
+   ],
+   [
+    "Madison Keys",
+    10
+   ],
+   [
+    "Madison Keys",
+    10
+   ]
+  ],
+  "idx": 135
+ },
+ {
+  "pair_id": "dinsql_gpt4:373",
+  "db_id": "cre_Doc_Template_Mgt",
+  "question": "What is the document id and name with greatest number of paragraphs?",
+  "evidence": "",
+  "gold": "SELECT T1.document_id ,  T2.document_name FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id GROUP BY T1.document_id ORDER BY count(*) DESC LIMIT 1",
+  "pred": "SELECT T1.Document_ID, T1.Document_Name FROM Documents AS T1 JOIN Paragraphs AS T2 ON T1.Document_ID = T2.Document_ID GROUP BY T1.Document_ID, T1.Document_Name ORDER BY count(T2.Paragraph_ID) DESC LIMIT 1",
+  "witness": {
+   "Documents": {
+    "columns": [
+     "Document_ID",
+     "Template_ID",
+     "Document_Name",
+     "Document_Description",
+     "Other_Details"
+    ],
+    "rows": [
+     [
+      1001,
+      1002,
+      "About Korea",
+      "r",
+      null
+     ],
+     [
+      1016,
+      1017,
+      "Summer Show",
+      "r",
+      null
+     ]
+    ]
+   },
+   "Paragraphs": {
+    "columns": [
+     "Paragraph_ID",
+     "Document_ID",
+     "Paragraph_Text",
+     "Other_Details"
+    ],
+    "rows": [
+     [
+      1003,
+      1001,
+      null,
+      null
+     ],
+     [
+      1018,
+      1016,
+      null,
+      null
+     ]
+    ]
+   },
+   "Ref_Template_Types": {
+    "columns": [
+     "Template_Type_Code",
+     "Template_Type_Description"
+    ],
+    "rows": [
+     [
+      "CV",
+      "Book"
+     ]
+    ]
+   },
+   "Templates": {
+    "columns": [
+     "Template_ID",
+     "Version_Number",
+     "Template_Type_Code",
+     "Date_Effective_From",
+     "Date_Effective_To",
+     "Template_Details"
+    ],
+    "rows": [
+     [
+      1002,
+      2,
+      "CV",
+      null,
+      "2015-03-20 08:00:00",
+      ""
+     ],
+     [
+      1017,
+      -1,
+      "CV",
+      null,
+      null,
+      ""
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    1016,
+    "Summer Show"
+   ]
+  ],
+  "pred_rows": [
+   [
+    1001,
+    "About Korea"
+   ]
+  ],
+  "idx": 136
+ },
+ {
+  "pair_id": "gpt4_zeroshot:901",
+  "db_id": "network_1",
+  "question": "What are the names of high schoolers who both have friends and are liked?",
+  "evidence": "",
+  "gold": "SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id INTERSECT SELECT T2.name FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.liked_id  =  T2.id",
+  "pred": "SELECT Highschooler.name FROM Highschooler JOIN Friend ON Highschooler.ID = Friend.student_id JOIN Likes ON Highschooler.ID = Likes.liked_id GROUP BY Highschooler.ID;",
+  "witness": {
+   "Friend": {
+    "columns": [
+     "student_id",
+     "friend_id"
+    ],
+    "rows": [
+     [
+      1001,
+      1001
+     ],
+     [
+      1104,
+      1105
+     ]
+    ]
+   },
+   "Highschooler": {
+    "columns": [
+     "ID",
+     "name",
+     "grade"
+    ],
+    "rows": [
+     [
+      1001,
+      "A",
+      null
+     ],
+     [
+      1105,
+      null,
+      null
+     ],
+     [
+      1104,
+      "Cassandra",
+      3
+     ],
+     [
+      1102,
+      "Haley",
+      null
+     ],
+     [
+      1103,
+      "Cassandra",
+      null
+     ]
+    ]
+   },
+   "Likes": {
+    "columns": [
+     "student_id",
+     "liked_id"
+    ],
+    "rows": [
+     [
+      1001,
+      1001
+     ],
+     [
+      1102,
+      1103
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "A"
+   ],
+   [
+    "Cassandra"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "A"
+   ]
+  ],
+  "idx": 137
+ },
+ {
+  "pair_id": "graphix_t5:277",
+  "db_id": "employee_hire_evaluation",
+  "question": "find the name of employee who was awarded the most times in the evaluation.",
+  "evidence": "",
+  "gold": "SELECT t1.name FROM employee AS t1 JOIN evaluation AS t2 ON t1.Employee_ID  =  t2.Employee_ID GROUP BY t2.Employee_ID ORDER BY count(*) DESC LIMIT 1",
+  "pred": "select employee.name from employee join evaluation on employee.employee_id = evaluation.employee_id group by employee.employee_id order by count(*) desc limit 1",
+  "witness": {
+   "employee": {
+    "columns": [
+     "Employee_ID",
+     "Name",
+     "Age",
+     "City"
+    ],
+    "rows": [
+     [
+      1001,
+      "Louis Deacon",
+      null,
+      "A"
+     ],
+     [
+      1009,
+      "Tim Payne",
+      3,
+      "Bristol"
+     ],
+     [
+      "7",
+      "Matt Stevens",
+      null,
+      "Bath"
+     ],
+     [
+      "2",
+      "Mark Regan",
+      null,
+      "c"
+     ]
+    ]
+   },
+   "evaluation": {
+    "columns": [
+     "Employee_ID",
+     "Year_awarded",
+     "Bonus"
+    ],
+    "rows": [
+     [
+      "7",
+      "2018",
+      null
+     ],
+     [
+      "2",
+      "2017",
+      10.0
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Mark Regan"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "Matt Stevens"
+   ]
+  ],
+  "idx": 138
+ },
+ {
+  "pair_id": "gpt4_zeroshot:41",
+  "db_id": "concert_singer",
+  "question": "Find the name and location of the stadiums which some concerts happened in the years of both 2014 and 2015.",
+  "evidence": "",
+  "gold": "SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2014 INTERSECT SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2015",
+  "pred": "SELECT stadium.Name, stadium.Location FROM stadium JOIN concert ON stadium.Stadium_ID = concert.Stadium_ID WHERE concert.Year IN (2014, 2015) GROUP BY stadium.Stadium_ID HAVING COUNT(DISTINCT concert.Year) = 2;",
+  "witness": {
+   "concert": {
+    "columns": [
+     "concert_ID",
+     "concert_Name",
+     "Theme",
+     "Stadium_ID",
+     "Year"
+    ],
+    "rows": [
+     [
+      2772,
+      "Auditions",
+      "Free choice",
+      "10",
+      "2015"
+     ],
+     [
+      2776,
+      "Week 1",
+      "Wide Awake",
+      "9",
+      "2014"
+     ]
+    ]
+   },
+   "stadium": {
+    "columns": [
+     "Stadium_ID",
+     "Location",
+     "Name",
+     "Capacity",
+     "Highest",
+     "Lowest",
+     "Average"
+    ],
+    "rows": [
+     [
+      2773,
+      "Stirling Albion",
+      "Recreation Park",
+      4000,
+      837,
+      400,
+      615
+     ],
+     [
+      2777,
+      "Stirling Albion",
+      "Bayview Stadium",
+      11998,
+      2363,
+      1057,
+      1477
+     ],
+     [
+      "10",
+      "East Fife",
+      "Recreation Park",
+      2000,
+      1980,
+      533,
+      864
+     ],
+     [
+      "9",
+      "East Fife",
+      "Recreation Park",
+      4000,
+      837,
+      400,
+      615
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Recreation Park",
+    "East Fife"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 139
+ },
+ {
+  "pair_id": "dinsql_gpt4:522",
+  "db_id": "student_transcripts_tracking",
+  "question": "How many degrees does the engineering department have?",
+  "evidence": "",
+  "gold": "SELECT count(*) FROM Departments AS T1 JOIN Degree_Programs AS T2 ON T1.department_id  =  T2.department_id WHERE T1.department_name  =  'engineer'",
+  "pred": "SELECT count(degree_program_id) FROM Degree_Programs AS T1 JOIN Departments AS T2 ON T1.department_id = T2.department_id WHERE T2.department_name = 'engineering'",
+  "witness": {
+   "Degree_Programs": {
+    "columns": [
+     "degree_program_id",
+     "department_id",
+     "degree_summary_name",
+     "degree_summary_description",
+     "other_details"
+    ],
+    "rows": [
+     [
+      1001,
+      1002,
+      "A",
+      "assumenda",
+      null
+     ]
+    ]
+   },
+   "Departments": {
+    "columns": [
+     "department_id",
+     "department_name",
+     "department_description",
+     "other_details"
+    ],
+    "rows": [
+     [
+      1002,
+      "engineer",
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "idx": 140
+ },
+ {
+  "pair_id": "dailsql_gpt4:23",
+  "db_id": "concert_singer",
+  "question": "For each stadium, how many concerts play there?",
+  "evidence": "",
+  "gold": "SELECT T2.name ,  count(*) FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id GROUP BY T1.stadium_id",
+  "pred": "SELECT T1.Name , count(*) FROM stadium AS T1 JOIN concert AS T2 ON T1.Stadium_ID = T2.Stadium_ID GROUP BY T1.Name",
+  "witness": {
+   "concert": {
+    "columns": [
+     "concert_ID",
+     "concert_Name",
+     "Theme",
+     "Stadium_ID",
+     "Year"
+    ],
+    "rows": [
+     [
+      1005,
+      "Super bootcamp",
+      "Party All Night",
+      "2",
+      "2015"
+     ],
+     [
+      1019,
+      "A",
+      "Happy Tonight",
+      "7",
+      "2015"
+     ]
+    ]
+   },
+   "stadium": {
+    "columns": [
+     "Stadium_ID",
+     "Location",
+     "Name",
+     "Capacity",
+     "Highest",
+     "Lowest",
+     "Average"
+    ],
+    "rows": [
+     [
+      1006,
+      null,
+      "Hampden Park",
+      5,
+      null,
+      null,
+      null
+     ],
+     [
+      1020,
+      "c",
+      "Hampden Park",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "2",
+      "Queen's Park",
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "7",
+      "East Fife",
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null,
+    1
+   ],
+   [
+    null,
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    null,
+    2
+   ]
+  ],
+  "idx": 141
+ },
+ {
+  "pair_id": "gpt4_zeroshot:1011",
+  "db_id": "singer",
+  "question": "What is the name of the singer who is worth the most?",
+  "evidence": "",
+  "gold": "SELECT Name FROM singer ORDER BY Net_Worth_Millions DESC LIMIT 1",
+  "pred": "SELECT Name FROM singer WHERE Net_Worth_Millions = (SELECT MAX(Net_Worth_Millions) FROM singer);",
+  "witness": {
+   "singer": {
+    "columns": [
+     "Singer_ID",
+     "Name",
+     "Birth_Year",
+     "Net_Worth_Millions",
+     "Citizenship"
+    ],
+    "rows": [
+     [
+      1005,
+      "Liliane Bettencourt",
+      1944.0,
+      17.8,
+      "France"
+     ],
+     [
+      1009,
+      "Alice Walton",
+      1949.0,
+      17.8,
+      "United States"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Liliane Bettencourt"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "Liliane Bettencourt"
+   ],
+   [
+    "Alice Walton"
+   ]
+  ],
+  "idx": 142
+ },
+ {
+  "pair_id": "dinsql_gpt4:42",
+  "db_id": "concert_singer",
+  "question": "What are the names and locations of the stadiums that had concerts that occurred in both 2014 and 2015?",
+  "evidence": "",
+  "gold": "SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2014 INTERSECT SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2015",
+  "pred": "SELECT Name, Location FROM stadium WHERE Stadium_ID IN (SELECT Stadium_ID FROM concert WHERE Year = 2014) AND Stadium_ID IN (SELECT Stadium_ID FROM concert WHERE Year = 2015)",
+  "witness": {
+   "concert": {
+    "columns": [
+     "concert_ID",
+     "concert_Name",
+     "Theme",
+     "Stadium_ID",
+     "Year"
+    ],
+    "rows": [
+     [
+      1037,
+      "Auditions",
+      "Free choice",
+      "10",
+      "2014"
+     ],
+     [
+      1069,
+      "Week 1",
+      "Wide Awake",
+      "9",
+      "2015"
+     ],
+     [
+      1100,
+      "Week 1",
+      "Wide Awake",
+      "2",
+      "2015"
+     ],
+     [
+      1174,
+      "Week 1",
+      "Happy Tonight",
+      "1",
+      "2014"
+     ],
+     [
+      1211,
+      "Week 1",
+      "Wide Awake",
+      "9",
+      "2014"
+     ],
+     [
+      1766,
+      "Auditions",
+      "Free choice",
+      "10",
+      "2014"
+     ]
+    ]
+   },
+   "stadium": {
+    "columns": [
+     "Stadium_ID",
+     "Location",
+     "Name",
+     "Capacity",
+     "Highest",
+     "Lowest",
+     "Average"
+    ],
+    "rows": [
+     [
+      1038,
+      "Alloa Athletic",
+      "Forthbank Stadium",
+      4000,
+      837,
+      400,
+      615
+     ],
+     [
+      1070,
+      "East Fife",
+      "Glebe Park",
+      11998,
+      2363,
+      1057,
+      1477
+     ],
+     [
+      "10",
+      "East Fife",
+      "Recreation Park",
+      52500,
+      1763,
+      466,
+      730
+     ],
+     [
+      1176,
+      "East Fife",
+      "Glebe Park",
+      11998,
+      2363,
+      1057,
+      1477
+     ],
+     [
+      "1",
+      "Ayr United",
+      "Balmoor",
+      52500,
+      1763,
+      466,
+      730
+     ],
+     [
+      "9",
+      "East Fife",
+      "Recreation Park",
+      2000,
+      1980,
+      533,
+      864
+     ],
+     [
+      1765,
+      "Alloa Athletic",
+      "Stark's Park",
+      3808,
+      1125,
+      404,
+      642
+     ],
+     [
+      "2",
+      "Ayr United",
+      "Balmoor",
+      4125,
+      921,
+      411,
+      638
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Balmoor",
+    "Ayr United"
+   ],
+   [
+    "Recreation Park",
+    "East Fife"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "Recreation Park",
+    "East Fife"
+   ]
+  ],
+  "idx": 143
+ },
+ {
+  "pair_id": "graphix_t5:1022",
+  "db_id": "singer",
+  "question": "Show the names of singers that have more than one song.",
+  "evidence": "",
+  "gold": "SELECT T1.Name FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID GROUP BY T1.Name HAVING COUNT(*)  >  1",
+  "pred": "select singer.name from singer join song on singer.singer_id = song.singer_id group by song.singer_id having count(*) > 1",
+  "witness": {
+   "singer": {
+    "columns": [
+     "Singer_ID",
+     "Name",
+     "Birth_Year",
+     "Net_Worth_Millions",
+     "Citizenship"
+    ],
+    "rows": [
+     [
+      3,
+      "Susanne Klatten",
+      1948.0,
+      28.8,
+      "United States"
+     ],
+     [
+      2,
+      "Susanne Klatten",
+      1940.0,
+      17.8,
+      "United States"
+     ]
+    ]
+   },
+   "song": {
+    "columns": [
+     "Song_ID",
+     "Title",
+     "Singer_ID",
+     "Sales",
+     "Highest_Position"
+    ],
+    "rows": [
+     [
+      2,
+      "All This Time",
+      2,
+      292000.0,
+      1.0
+     ],
+     [
+      3,
+      "Mysterious Girl",
+      3,
+      261000.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Susanne Klatten"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 144
+ },
+ {
+  "pair_id": "graphix_t5:79",
+  "db_id": "pets_1",
+  "question": "Find the number of pets for each student who has any pet and student id.",
+  "evidence": "",
+  "gold": "SELECT count(*) ,  T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid GROUP BY T1.stuid",
+  "pred": "select count(*), stuid from has_pet group by stuid",
+  "witness": {
+   "Has_Pet": {
+    "columns": [
+     "StuID",
+     "PetID"
+    ],
+    "rows": [
+     [
+      1005,
+      1006
+     ],
+     [
+      1021,
+      1022
+     ],
+     [
+      1005,
+      1006
+     ],
+     [
+      null,
+      1022
+     ]
+    ]
+   },
+   "Pets": {
+    "columns": [
+     "PetID",
+     "PetType",
+     "pet_age",
+     "weight"
+    ],
+    "rows": [
+     [
+      1006,
+      "cat",
+      100,
+      1.5
+     ],
+     [
+      1022,
+      "dog",
+      1,
+      null
+     ]
+    ]
+   },
+   "Student": {
+    "columns": [
+     "StuID",
+     "LName",
+     "Fname",
+     "Age",
+     "Sex",
+     "Major",
+     "Advisor",
+     "city_code"
+    ],
+    "rows": [
+     [
+      1005,
+      "Kumar",
+      "A",
+      null,
+      "M",
+      null,
+      0,
+      "LOS"
+     ],
+     [
+      1021,
+      "Schultz",
+      "Mark",
+      null,
+      "a",
+      null,
+      1,
+      "NYC"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    2,
+    1005
+   ],
+   [
+    1,
+    1021
+   ]
+  ],
+  "pred_rows": [
+   [
+    1,
+    null
+   ],
+   [
+    2,
+    1005
+   ],
+   [
+    1,
+    1021
+   ]
+  ],
+  "idx": 145
+ },
+ {
+  "pair_id": "dailsql_gpt4_sc:278",
+  "db_id": "employee_hire_evaluation",
+  "question": "Which employee received the most awards in evaluations? Give me the employee name.",
+  "evidence": "",
+  "gold": "SELECT t1.name FROM employee AS t1 JOIN evaluation AS t2 ON t1.Employee_ID  =  t2.Employee_ID GROUP BY t2.Employee_ID ORDER BY count(*) DESC LIMIT 1",
+  "pred": "SELECT T1.Name FROM employee AS T1 JOIN evaluation AS T2 ON T1.Employee_ID = T2.Employee_ID GROUP BY T1.Name ORDER BY COUNT(*) DESC LIMIT 1",
+  "witness": {
+   "employee": {
+    "columns": [
+     "Employee_ID",
+     "Name",
+     "Age",
+     "City"
+    ],
+    "rows": [
+     [
+      1,
+      "Jason Hobson",
+      29,
+      "Wasps"
+     ],
+     [
+      2,
+      "George Chuter",
+      32,
+      "Bath"
+     ],
+     [
+      3,
+      "Mark Regan",
+      43,
+      "Bristol"
+     ]
+    ]
+   },
+   "evaluation": {
+    "columns": [
+     "Employee_ID",
+     "Year_awarded",
+     "Bonus"
+    ],
+    "rows": [
+     [
+      3,
+      "2011",
+      3200.0
+     ],
+     [
+      2,
+      "2011",
+      3000.0
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "George Chuter"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "Mark Regan"
+   ]
+  ],
+  "idx": 146
+ },
+ {
+  "pair_id": "dailsql_gpt4_sc:742",
+  "db_id": "world_1",
+  "question": "Which continent has the most diverse languages?",
+  "evidence": "",
+  "gold": "SELECT T1.Continent FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Continent ORDER BY COUNT(*) DESC LIMIT 1",
+  "pred": "SELECT Continent FROM ( SELECT Country.Continent, COUNT(DISTINCT countrylanguage.Language) AS num_languages FROM countrylanguage JOIN country ON countrylanguage.CountryCode = country.Code GROUP BY Country.Continent ) AS t1 ORDER BY num_languages DESC LIMIT 1",
+  "witness": {
+   "country": {
+    "columns": [
+     "Code",
+     "Name",
+     "Continent",
+     "Region",
+     "SurfaceArea",
+     "IndepYear",
+     "Population",
+     "LifeExpectancy",
+     "GNP",
+     "GNPOld",
+     "LocalName",
+     "GovernmentForm",
+     "HeadOfState",
+     "Capital",
+     "Code2"
+    ],
+    "rows": [
+     [
+      "BDI",
+      "A",
+      "Oceania",
+      "Southern Europe",
+      10.0,
+      null,
+      3,
+      null,
+      null,
+      null,
+      "Angola",
+      "Constitutional Monarchy",
+      "Mohammad Omar",
+      null,
+      "AD"
+     ],
+     [
+      "AUT",
+      "A",
+      "Oceania",
+      "Southern Europe",
+      10.0,
+      null,
+      3,
+      null,
+      null,
+      null,
+      "Angola",
+      "Constitutional Monarchy",
+      "Zayid bin Sultan al-Nahayan",
+      null,
+      "AD"
+     ],
+     [
+      "USA",
+      "Angola",
+      "A",
+      "Middle East",
+      0.0,
+      null,
+      0,
+      null,
+      null,
+      -1.5,
+      "Nederlandse Antillen",
+      "Constitutional Monarchy",
+      "Jacques Chirac",
+      null,
+      "AE"
+     ]
+    ]
+   },
+   "countrylanguage": {
+    "columns": [
+     "CountryCode",
+     "Language",
+     "IsOfficial",
+     "Percentage"
+    ],
+    "rows": [
+     [
+      "USA",
+      "Italian",
+      "F",
+      100.0
+     ],
+     [
+      "AUT",
+      "Portuguese",
+      "F",
+      100.0
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Oceania"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "A"
+   ]
+  ],
+  "idx": 147
+ },
+ {
+  "pair_id": "graphix_t5:558",
+  "db_id": "student_transcripts_tracking",
+  "question": "What is the first, middle, and last name of the earliest school graduate?",
+  "evidence": "",
+  "gold": "SELECT first_name ,  middle_name ,  last_name FROM Students ORDER BY date_left ASC LIMIT 1",
+  "pred": "select first_name, middle_name, last_name from students order by date_first_registered limit 1",
+  "witness": {
+   "Addresses": {
+    "columns": [
+     "address_id",
+     "line_1",
+     "line_2",
+     "line_3",
+     "city",
+     "zip_postcode",
+     "state_province_county",
+     "country",
+     "other_address_details"
+    ],
+    "rows": [
+     [
+      9,
+      "0643 Muller Vista",
+      "Suite 383",
+      null,
+      "Port Elvisfurt",
+      "777",
+      "NorthCarolina",
+      "Gabon",
+      null
+     ],
+     [
+      4,
+      "0144 Lamar Plaza Apt. 346",
+      "Suite 703",
+      null,
+      "Port Evanston",
+      "847",
+      "Washington",
+      "Angola",
+      null
+     ],
+     [
+      5,
+      "858 Peggie Bypass Suite 212",
+      "Apt. 335",
+      null,
+      "Michelleburgh",
+      "446",
+      "Hawaii",
+      "Haiti",
+      null
+     ],
+     [
+      2,
+      "3999 Aufderhar Ways Suite 593",
+      "Apt. 388",
+      null,
+      "Lake Laishafurt",
+      "943",
+      "Kentucky",
+      "Burundi",
+      null
+     ],
+     [
+      14,
+      "186 Evan Motorway Apt. 409",
+      "Suite 079",
+      null,
+      "Lake Careyberg",
+      "895",
+      "Kentucky",
+      "New Caledonia",
+      null
+     ],
+     [
+      1,
+      "2294 Grant Square Apt. 235",
+      "Apt. 370",
+      null,
+      "Port Chelsea",
+      "148",
+      "Virginia",
+      "Iceland",
+      null
+     ]
+    ]
+   },
+   "Students": {
+    "columns": [
+     "student_id",
+     "current_address_id",
+     "permanent_address_id",
+     "first_name",
+     "middle_name",
+     "last_name",
+     "cell_mobile_number",
+     "email_address",
+     "ssn",
+     "date_first_registered",
+     "date_left",
+     "other_student_details"
+    ],
+    "rows": [
+     [
+      15,
+      2,
+      9,
+      "Jett",
+      "Alberta",
+      "Jaskolski",
+      "877.549.9067x8723",
+      "mya88@example.org",
+      "156",
+      "1982-06-19 13:15:18",
+      "1982-06-11 00:25:39",
+      "omnis"
+     ],
+     [
+      11,
+      14,
+      4,
+      "Gregg",
+      "Mossie",
+      "Schuppe",
+      "(462)246-7921",
+      "nbruen@example.org",
+      "494",
+      "1989-05-24 23:31:29",
+      "1975-10-09 00:49:27",
+      "omnis"
+     ],
+     [
+      8,
+      1,
+      5,
+      "Delaney",
+      "Judd",
+      "Ankunding",
+      "03174364122",
+      "dell43@example.net",
+      "402",
+      "1982-02-14 08:46:35",
+      "2004-12-08 05:29:11",
+      "voluptatem"
+     ],
+     [
+      12,
+      14,
+      9,
+      "Orrin",
+      "Neal",
+      "Kemmer",
+      "(982)153-1469x1733",
+      "beth42@example.org",
+      "6274274",
+      "2005-12-15 08:42:10",
+      "2006-08-04 17:26:49",
+      "non"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Gregg",
+    "Mossie",
+    "Schuppe"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "Delaney",
+    "Judd",
+    "Ankunding"
+   ]
+  ],
+  "idx": 148
+ },
+ {
+  "pair_id": "gpt4_zeroshot:900",
+  "db_id": "network_1",
+  "question": "Show name of all students who have some friends and also are liked by someone else.",
+  "evidence": "",
+  "gold": "SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id INTERSECT SELECT T2.name FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.liked_id  =  T2.id",
+  "pred": "SELECT Highschooler.name FROM Highschooler JOIN Friend ON Highschooler.ID = Friend.student_id JOIN Likes ON Highschooler.ID = Likes.liked_id GROUP BY Highschooler.ID;",
+  "witness": {
+   "Friend": {
+    "columns": [
+     "student_id",
+     "friend_id"
+    ],
+    "rows": [
+     [
+      1510,
+      1689
+     ],
+     [
+      1247,
+      1911
+     ],
+     [
+      1934,
+      1304
+     ],
+     [
+      1782,
+      1304
+     ]
+    ]
+   },
+   "Highschooler": {
+    "columns": [
+     "ID",
+     "name",
+     "grade"
+    ],
+    "rows": [
+     [
+      1689,
+      "Gabriel",
+      9
+     ],
+     [
+      1911,
+      "Gabriel",
+      11
+     ],
+     [
+      1510,
+      "Jordan",
+      9
+     ],
+     [
+      1304,
+      "Jordan",
+      12
+     ],
+     [
+      1247,
+      "Alexis",
+      11
+     ],
+     [
+      1934,
+      "Kyle",
+      12
+     ],
+     [
+      1782,
+      "Andrew",
+      10
+     ],
+     [
+      1709,
+      "Cassandra",
+      9
+     ],
+     [
+      1316,
+      "Austin",
+      11
+     ]
+    ]
+   },
+   "Likes": {
+    "columns": [
+     "student_id",
+     "liked_id"
+    ],
+    "rows": [
+     [
+      1709,
+      1689
+     ],
+     [
+      1316,
+      1304
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Jordan"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 149
+ },
+ {
+  "pair_id": "dailsql_gpt4_sc:346",
+  "db_id": "cre_Doc_Template_Mgt",
+  "question": "What are the codes of template types that are not used for any document?",
+  "evidence": "",
+  "gold": "SELECT template_type_code FROM Templates EXCEPT SELECT template_type_code FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id",
+  "pred": "SELECT Template_Type_Code FROM Ref_Template_Types WHERE Template_Type_Code NOT IN ( SELECT Template_Type_Code FROM Templates WHERE Template_ID IN ( SELECT Template_ID FROM Documents ) );",
+  "witness": {
+   "Documents": {
+    "columns": [
+     "Document_ID",
+     "Template_ID",
+     "Document_Name",
+     "Document_Description",
+     "Other_Details"
+    ],
+    "rows": [
+     [
+      1004,
+      1005,
+      "How Google people work",
+      "c",
+      null
+     ]
+    ]
+   },
+   "Ref_Template_Types": {
+    "columns": [
+     "Template_Type_Code",
+     "Template_Type_Description"
+    ],
+    "rows": [
+     [
+      "PP",
+      "Advertisement"
+     ],
+     [
+      "AD",
+      "c"
+     ]
+    ]
+   },
+   "Templates": {
+    "columns": [
+     "Template_ID",
+     "Version_Number",
+     "Template_Type_Code",
+     "Date_Effective_From",
+     "Date_Effective_To",
+     "Template_Details"
+    ],
+    "rows": [
+     [
+      1005,
+      2,
+      "AD",
+      null,
+      null,
+      ""
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "PP"
+   ]
+  ],
+  "idx": 150
+ },
+ {
+  "pair_id": "dinsql_gpt4:68",
+  "db_id": "pets_1",
+  "question": "What type of pet is the youngest animal, and how much does it weigh?",
+  "evidence": "",
+  "gold": "SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1",
+  "pred": "SELECT PetType, weight FROM Pets WHERE pet_age = (SELECT MIN(pet_age) FROM Pets)",
+  "witness": {
+   "Pets": {
+    "columns": [
+     "PetID",
+     "PetType",
+     "pet_age",
+     "weight"
+    ],
+    "rows": [
+     [
+      1001,
+      "A",
+      null,
+      100.0
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "A",
+    100.0
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 151
+ },
+ {
+  "pair_id": "dailsql_gpt4:558",
+  "db_id": "student_transcripts_tracking",
+  "question": "What is the first, middle, and last name of the earliest school graduate?",
+  "evidence": "",
+  "gold": "SELECT first_name ,  middle_name ,  last_name FROM Students ORDER BY date_left ASC LIMIT 1",
+  "pred": "SELECT first_name, middle_name, last_name FROM Students WHERE date_left IS NOT NULL ORDER BY date_left ASC LIMIT 1",
+  "witness": {
+   "Addresses": {
+    "columns": [
+     "address_id",
+     "line_1",
+     "line_2",
+     "line_3",
+     "city",
+     "zip_postcode",
+     "state_province_county",
+     "country",
+     "other_address_details"
+    ],
+    "rows": [
+     [
+      1003,
+      "858 Peggie Bypass Suite 212",
+      "Apt. 388",
+      null,
+      "Goodwinhaven",
+      "669",
+      "Idaho",
+      "Haiti",
+      null
+     ]
+    ]
+   },
+   "Students": {
+    "columns": [
+     "student_id",
+     "current_address_id",
+     "permanent_address_id",
+     "first_name",
+     "middle_name",
+     "last_name",
+     "cell_mobile_number",
+     "email_address",
+     "ssn",
+     "date_first_registered",
+     "date_left",
+     "other_student_details"
+    ],
+    "rows": [
+     [
+      1004,
+      1003,
+      1003,
+      "Milton",
+      null,
+      "Carroll",
+      "(096)889-8954x524",
+      "lhartmann@example.org",
+      "668",
+      null,
+      null,
+      "autem"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Milton",
+    null,
+    "Carroll"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 152
+ },
+ {
+  "pair_id": "gpt4_fewshot:655",
+  "db_id": "poker_player",
+  "question": "What is the money rank of the poker player with the highest earnings?",
+  "evidence": "",
+  "gold": "SELECT Money_Rank FROM poker_player ORDER BY Earnings DESC LIMIT 1",
+  "pred": "SELECT money_rank FROM poker_player WHERE earnings = (SELECT max(earnings) FROM poker_player)",
+  "witness": {
+   "people": {
+    "columns": [
+     "People_ID",
+     "Nationality",
+     "Name",
+     "Birth_Date",
+     "Height"
+    ],
+    "rows": [
+     [
+      3,
+      "Russia",
+      "Roman Bragin",
+      "April 17, 1987",
+      187.0
+     ]
+    ]
+   },
+   "poker_player": {
+    "columns": [
+     "Poker_Player_ID",
+     "People_ID",
+     "Final_Table_Made",
+     "Best_Finish",
+     "Money_Rank",
+     "Earnings"
+    ],
+    "rows": [
+     [
+      2,
+      3,
+      10.0,
+      2.0,
+      141.0,
+      189233.0
+     ],
+     [
+      1,
+      3,
+      42.0,
+      1.0,
+      68.0,
+      189233.0
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    141.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    141.0
+   ],
+   [
+    68.0
+   ]
+  ],
+  "idx": 153
+ },
+ {
+  "pair_id": "dailsql_gpt4:60",
+  "db_id": "pets_1",
+  "question": "What are the students' first names who have both cats and dogs as pets?",
+  "evidence": "",
+  "gold": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'",
+  "pred": "SELECT Fname FROM Student WHERE StuID IN (SELECT StuID FROM Has_Pet WHERE PetID IN (SELECT PetID FROM Pets WHERE PetType = 'cat') INTERSECT SELECT StuID FROM Has_Pet WHERE PetID IN (SELECT PetID FROM Pets WHERE PetType = 'dog'))",
+  "witness": {
+   "Has_Pet": {
+    "columns": [
+     "StuID",
+     "PetID"
+    ],
+    "rows": [
+     [
+      2045,
+      2046
+     ],
+     [
+      2049,
+      2050
+     ]
+    ]
+   },
+   "Pets": {
+    "columns": [
+     "PetID",
+     "PetType",
+     "pet_age",
+     "weight"
+    ],
+    "rows": [
+     [
+      2046,
+      "cat",
+      2,
+      13.4
+     ],
+     [
+      2050,
+      "dog",
+      1,
+      9.3
+     ]
+    ]
+   },
+   "Student": {
+    "columns": [
+     "StuID",
+     "LName",
+     "Fname",
+     "Age",
+     "Sex",
+     "Major",
+     "Advisor",
+     "city_code"
+    ],
+    "rows": [
+     [
+      2045,
+      "Kumar",
+      "Stacy",
+      20,
+      "F",
+      600,
+      8423,
+      "CHI"
+     ],
+     [
+      2049,
+      "Cheng",
+      "Stacy",
+      21,
+      "F",
+      550,
+      2311,
+      "SFO"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Stacy"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 154
+ },
+ {
+  "pair_id": "dinsql_gpt4:142",
+  "db_id": "car_1",
+  "question": "What model has the most different versions?",
+  "evidence": "",
+  "gold": "SELECT Model FROM CAR_NAMES GROUP BY Model ORDER BY count(*) DESC LIMIT 1;",
+  "pred": "SELECT T1.Model FROM model_list AS T1 JOIN car_names AS T2 ON T1.Model = T2.Model GROUP BY T1.Model ORDER BY count(T2.Model) DESC LIMIT 1",
+  "witness": {
+   "car_makers": {
+    "columns": [
+     "Id",
+     "Maker",
+     "FullName",
+     "Country"
+    ],
+    "rows": [
+     [
+      1001,
+      "amc",
+      "Nissan Motors",
+      "8"
+     ]
+    ]
+   },
+   "car_names": {
+    "columns": [
+     "MakeId",
+     "Model",
+     "Make"
+    ],
+    "rows": [
+     [
+      1003,
+      null,
+      "A"
+     ]
+    ]
+   },
+   "continents": {
+    "columns": [
+     "ContId",
+     "Continent"
+    ],
+    "rows": [
+     [
+      1182,
+      null
+     ]
+    ]
+   },
+   "countries": {
+    "columns": [
+     "CountryId",
+     "CountryName",
+     "Continent"
+    ],
+    "rows": [
+     [
+      "8",
+      "italy",
+      1182
+     ]
+    ]
+   },
+   "model_list": {
+    "columns": [
+     "ModelId",
+     "Maker",
+     "Model"
+    ],
+    "rows": [
+     [
+      1005,
+      1001,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 155
+ },
+ {
+  "pair_id": "gpt4_zeroshot:896",
+  "db_id": "network_1",
+  "question": "Show names of all high school students who do not have any friends.",
+  "evidence": "",
+  "gold": "SELECT name FROM Highschooler EXCEPT SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id",
+  "pred": "SELECT Highschooler.name FROM Highschooler LEFT JOIN Friend ON Highschooler.ID = Friend.student_id WHERE Friend.student_id IS NULL;",
+  "witness": {
+   "Friend": {
+    "columns": [
+     "student_id",
+     "friend_id"
+    ],
+    "rows": [
+     [
+      1002,
+      1002
+     ],
+     [
+      1002,
+      1025
+     ]
+    ]
+   },
+   "Highschooler": {
+    "columns": [
+     "ID",
+     "name",
+     "grade"
+    ],
+    "rows": [
+     [
+      1024,
+      "A",
+      null
+     ],
+     [
+      1021,
+      null,
+      10
+     ],
+     [
+      1002,
+      "A",
+      null
+     ],
+     [
+      1025,
+      "Gabriel",
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null
+   ],
+   [
+    "Gabriel"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "A"
+   ],
+   [
+    null
+   ],
+   [
+    "Gabriel"
+   ]
+  ],
+  "idx": 156
+ },
+ {
+  "pair_id": "gpt4_zeroshot:28",
+  "db_id": "concert_singer",
+  "question": "Show the stadium names without any concert.",
+  "evidence": "",
+  "gold": "SELECT name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert)",
+  "pred": "SELECT stadium.Name FROM stadium LEFT JOIN concert ON stadium.Stadium_ID = concert.Stadium_ID WHERE concert.concert_ID IS NULL;",
+  "witness": {
+   "concert": {
+    "columns": [
+     "concert_ID",
+     "concert_Name",
+     "Theme",
+     "Stadium_ID",
+     "Year"
+    ],
+    "rows": [
+     [
+      1005,
+      "Super bootcamp",
+      "Party All Night",
+      "2",
+      "2015"
+     ],
+     [
+      1019,
+      "A",
+      "Happy Tonight",
+      null,
+      "2015"
+     ]
+    ]
+   },
+   "stadium": {
+    "columns": [
+     "Stadium_ID",
+     "Location",
+     "Name",
+     "Capacity",
+     "Highest",
+     "Lowest",
+     "Average"
+    ],
+    "rows": [
+     [
+      1006,
+      null,
+      "Hampden Park",
+      5,
+      null,
+      null,
+      null
+     ],
+     [
+      1020,
+      "c",
+      "Hampden Park",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "2",
+      "Queen's Park",
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "7",
+      "East Fife",
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "1",
+      "Raith Rovers",
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "Hampden Park"
+   ],
+   [
+    "Hampden Park"
+   ],
+   [
+    null
+   ],
+   [
+    null
+   ]
+  ],
+  "idx": 157
+ },
+ {
+  "pair_id": "graphix_t5:83",
+  "db_id": "pets_1",
+  "question": "Find the last name of the student who has a cat that is age 3.",
+  "evidence": "",
+  "gold": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  'cat'",
+  "pred": "select student.lname from student join has_pet on student.stuid = has_pet.stuid join pets on has_pet.petid = pets.petid where pets.pet_age = 3",
+  "witness": {
+   "Has_Pet": {
+    "columns": [
+     "StuID",
+     "PetID"
+    ],
+    "rows": [
+     [
+      1063,
+      1064
+     ]
+    ]
+   },
+   "Pets": {
+    "columns": [
+     "PetID",
+     "PetType",
+     "pet_age",
+     "weight"
+    ],
+    "rows": [
+     [
+      1064,
+      "dog",
+      3,
+      13.4
+     ]
+    ]
+   },
+   "Student": {
+    "columns": [
+     "StuID",
+     "LName",
+     "Fname",
+     "Age",
+     "Sex",
+     "Major",
+     "Advisor",
+     "city_code"
+    ],
+    "rows": [
+     [
+      1063,
+      "Pang",
+      "Dinesh",
+      20,
+      "M",
+      600,
+      8423,
+      "CHI"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "Pang"
+   ]
+  ],
+  "idx": 158
+ },
+ {
+  "pair_id": "gpt4_fewshot:1022",
+  "db_id": "singer",
+  "question": "Show the names of singers that have more than one song.",
+  "evidence": "",
+  "gold": "SELECT T1.Name FROM singer AS T1 JOIN song AS T2 ON T1.Singer_ID  =  T2.Singer_ID GROUP BY T1.Name HAVING COUNT(*)  >  1",
+  "pred": "SELECT Name FROM singer WHERE Singer_ID IN (SELECT Singer_ID FROM song GROUP BY Singer_ID HAVING count(*) > 1)",
+  "witness": {
+   "singer": {
+    "columns": [
+     "Singer_ID",
+     "Name",
+     "Birth_Year",
+     "Net_Worth_Millions",
+     "Citizenship"
+    ],
+    "rows": [
+     [
+      4,
+      "Iris Fontbona",
+      1942.0,
+      17.4,
+      "Chile"
+     ],
+     [
+      1005,
+      "Iris Fontbona",
+      1942.0,
+      17.4,
+      "Chile"
+     ]
+    ]
+   },
+   "song": {
+    "columns": [
+     "Song_ID",
+     "Title",
+     "Singer_ID",
+     "Sales",
+     "Highest_Position"
+    ],
+    "rows": [
+     [
+      4,
+      "Call on Me",
+      4,
+      335000.0,
+      1.0
+     ],
+     [
+      1006,
+      "Call on Me",
+      1005,
+      335000.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Iris Fontbona"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 159
+ }
+]

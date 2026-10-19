@@ -1,0 +1,322 @@
+[
+ {
+  "idx": 0,
+  "pair_id": "gpt4_fewshot:558",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two students tie on the earliest date_left; LIMIT 1 vs returning all tied rows are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 1,
+  "pair_id": "gpt4_fewshot:43",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two stadiums tie on maximum capacity; gold picks one arbitrarily, prediction counts concerts of all tied stadiums.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 2,
+  "pair_id": "gpt4_fewshot:68",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two pets tie on minimum age; tie handling is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 3,
+  "pair_id": "graphix_t5:84",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Prediction drops the PetType = cat condition and returns the owner of a 3-year-old dog.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 4,
+  "pair_id": "dailsql_gpt4:277",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "All employees have exactly one award, so the top choice is an arbitrary tie for both queries.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 5,
+  "pair_id": "dinsql_gpt4:1025",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because the same singer is duplicated under two IDs with identical attributes and songs.",
+  "implausible_fact": "duplicate identical singer records"
+ },
+ {
+  "idx": 6,
+  "pair_id": "dinsql_gpt4:6",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only singer has NULL age (and Is_male=10), so gold returns them as youngest while prediction returns nothing.",
+  "implausible_fact": "NULL singer age"
+ },
+ {
+  "idx": 7,
+  "pair_id": "gpt4_zeroshot:761",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Question does not restrict to official languages; prediction adds IsOfficial = T and misses the English-speaking city.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 8,
+  "pair_id": "gpt4_zeroshot:521",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Department is named engineer in the database; prediction filters on Engineering and finds nothing.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 9,
+  "pair_id": "dinsql_gpt4:930",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Each owner has one dog, so the top owner is an arbitrary tie.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 10,
+  "pair_id": "graphix_t5:488",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "All winner_rank_points are NULL, so both orderings are arbitrary; in the real data the field is always filled.",
+  "implausible_fact": "NULL winner_rank_points"
+ },
+ {
+  "idx": 11,
+  "pair_id": "dinsql_gpt4:138",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Car maker stored as uppercase VOLVO (with FullName Chrysler) breaks the prediction maker join; real maker names are lowercase.",
+  "implausible_fact": "maker name VOLVO uppercase"
+ },
+ {
+  "idx": 12,
+  "pair_id": "dinsql_gpt4:67",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two pets tie on minimum age; tie handling is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 13,
+  "pair_id": "dailsql_gpt4:742",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Under the distinct-language reading Africa and Asia tie at one language each; gold counts duplicate rows, so both answers are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 14,
+  "pair_id": "gpt4_zeroshot:426",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two different visitors share a name, each visiting only one of the museum groups; gold INTERSECT on names wrongly merges them.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 15,
+  "pair_id": "gpt4_zeroshot:415",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two museums tie on maximum staff; tie handling is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 16,
+  "pair_id": "dinsql_gpt4:667",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Tallest person is not a poker player; prediction takes max height over all people and returns nothing.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 17,
+  "pair_id": "gpt4_fewshot:558",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The only student has NULL date_left (never left), yet gold returns them as the earliest graduate because NULLs sort first.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 18,
+  "pair_id": "dinsql_gpt4:30",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference only arises from singers with NULL country, which gold returns as a country.",
+  "implausible_fact": "NULL singer country"
+ },
+ {
+  "idx": 19,
+  "pair_id": "dinsql_gpt4:379",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Prediction uses OR with LIKE instead of requiring both Brazil and Ireland paragraphs.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 20,
+  "pair_id": "graphix_t5:934",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both breeds have one dog each; the top breed is an arbitrary tie.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 21,
+  "pair_id": "graphix_t5:557",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Earliest graduate refers to date_left; prediction orders by registration date.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 22,
+  "pair_id": "gpt4_fewshot:426",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two different visitors with the same name each visited one museum group; gold merges them via name INTERSECT.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 23,
+  "pair_id": "gpt4_fewshot:742",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "By distinct languages Africa and North America tie at one each; gold counts duplicate rows, so both are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 24,
+  "pair_id": "dailsql_gpt4:47",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Question asks for the youngest dog; gold ignores PetType and returns a cat weight.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 25,
+  "pair_id": "dailsql_gpt4_sc:41",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Two stadium records with same name and location (same real stadium) under different IDs each host one year; gold merges them by name.",
+  "implausible_fact": "duplicate stadium name+location with different IDs"
+ },
+ {
+  "idx": 26,
+  "pair_id": "gpt4_zeroshot:1023",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The same singer is duplicated under two IDs with identical attributes, each with one song; gold merges by name.",
+  "implausible_fact": "duplicate identical singer records"
+ },
+ {
+  "idx": 27,
+  "pair_id": "graphix_t5:521",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Department is named engineer; prediction filters on Engineering.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 28,
+  "pair_id": "gpt4_zeroshot:1010",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Only singer has NULL net worth; gold returns them, prediction returns nothing; net worth is always filled in reality.",
+  "implausible_fact": "NULL Net_Worth_Millions"
+ },
+ {
+  "idx": 29,
+  "pair_id": "dailsql_gpt4_sc:901",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two different students named Jordan: one has friends, the other is liked; gold INTERSECT by name wrongly merges them.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 30,
+  "pair_id": "dinsql_gpt4:1024",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises from the same singer duplicated under two IDs with identical attributes; gold merges by name.",
+  "implausible_fact": "duplicate identical singer records"
+ },
+ {
+  "idx": 31,
+  "pair_id": "gpt4_zeroshot:22",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Stadiums hosting concerts have NULL names, so grouping by name merges them; stadium names are always filled.",
+  "implausible_fact": "NULL stadium Name"
+ },
+ {
+  "idx": 32,
+  "pair_id": "dinsql_gpt4:407",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two different teachers named Lucy Wong (different ages) each teach one course; gold groups by name and wrongly reports at least two.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 33,
+  "pair_id": "dailsql_gpt4:107",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Each country has one maker, so the top country is an arbitrary tie.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 34,
+  "pair_id": "graphix_t5:44",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two stadiums tie on largest capacity; gold picks one arbitrarily while prediction counts concerts at all tied stadiums.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 35,
+  "pair_id": "gpt4_zeroshot:1022",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Same singer duplicated under two IDs with identical attributes, each with one song; gold merges by name.",
+  "implausible_fact": "duplicate identical singer records"
+ },
+ {
+  "idx": 36,
+  "pair_id": "gpt4_zeroshot:269",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two shops tie on maximum products; tie handling is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 37,
+  "pair_id": "gpt4_fewshot:154",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Question says less than 4000 and more than 3000 (strict); a car weighing exactly 3000 should not qualify but gold BETWEEN includes it.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 38,
+  "pair_id": "gpt4_fewshot:521",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Department is named engineer; prediction filters on Engineering.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 39,
+  "pair_id": "dinsql_gpt4:22",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Stadiums hosting concerts have NULL names, so grouping by name merges them; stadium names are always filled.",
+  "implausible_fact": "NULL stadium Name"
+ }
+]

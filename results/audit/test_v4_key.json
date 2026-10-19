@@ -1,0 +1,2502 @@
+[
+ {
+  "idx": 0,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "alpha:1038"
+ },
+ {
+  "idx": 1,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:1112"
+ },
+ {
+  "idx": 2,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:478"
+ },
+ {
+  "idx": 3,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "alpha:1400"
+ },
+ {
+  "idx": 4,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:813"
+ },
+ {
+  "idx": 5,
+  "source": "Fuzz@L1f",
+  "pair_id": "omni-32-majority:655"
+ },
+ {
+  "idx": 6,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-7b:810"
+ },
+ {
+  "idx": 7,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:1045"
+ },
+ {
+  "idx": 8,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-7b:74"
+ },
+ {
+  "idx": 9,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:1167"
+ },
+ {
+  "idx": 10,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-7b:135"
+ },
+ {
+  "idx": 11,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "slm:1101"
+ },
+ {
+  "idx": 12,
+  "source": "SpotIt+@L0",
+  "pair_id": "omni-32-majority:583"
+ },
+ {
+  "idx": 13,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "alpha:1255"
+ },
+ {
+  "idx": 14,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "omni-32-majority:719"
+ },
+ {
+  "idx": 15,
+  "source": "SpotIt+@L0",
+  "pair_id": "omni-32-majority:867"
+ },
+ {
+  "idx": 16,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:8"
+ },
+ {
+  "idx": 17,
+  "source": "SpotIt@L0",
+  "pair_id": "alpha:112"
+ },
+ {
+  "idx": 18,
+  "source": "Fuzz@L1f",
+  "pair_id": "alpha:509"
+ },
+ {
+  "idx": 19,
+  "source": "Fuzz@L1f",
+  "pair_id": "chess:561"
+ },
+ {
+  "idx": 20,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:1403"
+ },
+ {
+  "idx": 21,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "chess:273"
+ },
+ {
+  "idx": 22,
+  "source": "Fuzz@L1f",
+  "pair_id": "chess:1096"
+ },
+ {
+  "idx": 23,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-32b:471"
+ },
+ {
+  "idx": 24,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:1384"
+ },
+ {
+  "idx": 25,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:826"
+ },
+ {
+  "idx": 26,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:867"
+ },
+ {
+  "idx": 27,
+  "source": "SpotIt@L0",
+  "pair_id": "rsl:876"
+ },
+ {
+  "idx": 28,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-32b:1183"
+ },
+ {
+  "idx": 29,
+  "source": "Fuzz@L1f",
+  "pair_id": "gsr:86"
+ },
+ {
+  "idx": 30,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "slm:91"
+ },
+ {
+  "idx": 31,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_2:321"
+ },
+ {
+  "idx": 32,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_2:931"
+ },
+ {
+  "idx": 33,
+  "source": "Fuzz@L1f",
+  "pair_id": "rsl:61"
+ },
+ {
+  "idx": 34,
+  "source": "Fuzz@L1f",
+  "pair_id": "omni-32-majority:1047"
+ },
+ {
+  "idx": 35,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:657"
+ },
+ {
+  "idx": 36,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:541"
+ },
+ {
+  "idx": 37,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:188"
+ },
+ {
+  "idx": 38,
+  "source": "Fuzz@L1f",
+  "pair_id": "alpha:982"
+ },
+ {
+  "idx": 39,
+  "source": "SpotIt@L0",
+  "pair_id": "gsr:1309"
+ },
+ {
+  "idx": 40,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-32b:73"
+ },
+ {
+  "idx": 41,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:137"
+ },
+ {
+  "idx": 42,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:1122"
+ },
+ {
+  "idx": 43,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:818"
+ },
+ {
+  "idx": 44,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:669"
+ },
+ {
+  "idx": 45,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:115"
+ },
+ {
+  "idx": 46,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_2:10"
+ },
+ {
+  "idx": 47,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:623"
+ },
+ {
+  "idx": 48,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:1101"
+ },
+ {
+  "idx": 49,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:1122"
+ },
+ {
+  "idx": 50,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-32b:426"
+ },
+ {
+  "idx": 51,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:284"
+ },
+ {
+  "idx": 52,
+  "source": "SpotIt+@L0",
+  "pair_id": "omni-32-majority:214"
+ },
+ {
+  "idx": 53,
+  "source": "Fuzz@L1f",
+  "pair_id": "alpha:245"
+ },
+ {
+  "idx": 54,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:1183"
+ },
+ {
+  "idx": 55,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:1128"
+ },
+ {
+  "idx": 56,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:321"
+ },
+ {
+  "idx": 57,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:1180"
+ },
+ {
+  "idx": 58,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:700"
+ },
+ {
+  "idx": 59,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-32b:1038"
+ },
+ {
+  "idx": 60,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-32b:1519"
+ },
+ {
+  "idx": 61,
+  "source": "SpotIt@L0",
+  "pair_id": "rsl:1147"
+ },
+ {
+  "idx": 62,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:8"
+ },
+ {
+  "idx": 63,
+  "source": "SpotIt@L0",
+  "pair_id": "gena_submission_1:242"
+ },
+ {
+  "idx": 64,
+  "source": "Fuzz@L1f",
+  "pair_id": "chess:1528"
+ },
+ {
+  "idx": 65,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_2:1183"
+ },
+ {
+  "idx": 66,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:1492"
+ },
+ {
+  "idx": 67,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:1122"
+ },
+ {
+  "idx": 68,
+  "source": "Fuzz@L1f",
+  "pair_id": "omni-32-majority:789"
+ },
+ {
+  "idx": 69,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:663"
+ },
+ {
+  "idx": 70,
+  "source": "Fuzz@L1f",
+  "pair_id": "omni-32-majority:1263"
+ },
+ {
+  "idx": 71,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gsr:695"
+ },
+ {
+  "idx": 72,
+  "source": "SpotIt@L0",
+  "pair_id": "rsl:5"
+ },
+ {
+  "idx": 73,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:175"
+ },
+ {
+  "idx": 74,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:556"
+ },
+ {
+  "idx": 75,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-32b:927"
+ },
+ {
+  "idx": 76,
+  "source": "Fuzz@L1f",
+  "pair_id": "rsl:786"
+ },
+ {
+  "idx": 77,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-32b:1178"
+ },
+ {
+  "idx": 78,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:880"
+ },
+ {
+  "idx": 79,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:1072"
+ },
+ {
+  "idx": 80,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:273"
+ },
+ {
+  "idx": 81,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_1:128"
+ },
+ {
+  "idx": 82,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "omni-32-majority:239"
+ },
+ {
+  "idx": 83,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-32b:914"
+ },
+ {
+  "idx": 84,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:668"
+ },
+ {
+  "idx": 85,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:695"
+ },
+ {
+  "idx": 86,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:214"
+ },
+ {
+  "idx": 87,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "chess:556"
+ },
+ {
+  "idx": 88,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:242"
+ },
+ {
+  "idx": 89,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:1331"
+ },
+ {
+  "idx": 90,
+  "source": "Fuzz@L1f",
+  "pair_id": "omni-32-majority:74"
+ },
+ {
+  "idx": 91,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "omni-32-majority:927"
+ },
+ {
+  "idx": 92,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_1:1122"
+ },
+ {
+  "idx": 93,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:242"
+ },
+ {
+  "idx": 94,
+  "source": "SpotIt@L0",
+  "pair_id": "gena_submission_1:1122"
+ },
+ {
+  "idx": 95,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:303"
+ },
+ {
+  "idx": 96,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "alpha:14"
+ },
+ {
+  "idx": 97,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-7b:865"
+ },
+ {
+  "idx": 98,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:214"
+ },
+ {
+  "idx": 99,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:284"
+ },
+ {
+  "idx": 100,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:1391"
+ },
+ {
+  "idx": 101,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:1122"
+ },
+ {
+  "idx": 102,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-7b:1095"
+ },
+ {
+  "idx": 103,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-7b:1040"
+ },
+ {
+  "idx": 104,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:753"
+ },
+ {
+  "idx": 105,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:1007"
+ },
+ {
+  "idx": 106,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-7b:1001"
+ },
+ {
+  "idx": 107,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:214"
+ },
+ {
+  "idx": 108,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-32b:1104"
+ },
+ {
+  "idx": 109,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:232"
+ },
+ {
+  "idx": 110,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "omni-32-majority:674"
+ },
+ {
+  "idx": 111,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "chess:753"
+ },
+ {
+  "idx": 112,
+  "source": "SpotIt@L0",
+  "pair_id": "gsr:668"
+ },
+ {
+  "idx": 113,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:703"
+ },
+ {
+  "idx": 114,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:512"
+ },
+ {
+  "idx": 115,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-32b:583"
+ },
+ {
+  "idx": 116,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:1084"
+ },
+ {
+  "idx": 117,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:1019"
+ },
+ {
+  "idx": 118,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:657"
+ },
+ {
+  "idx": 119,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-32b:312"
+ },
+ {
+  "idx": 120,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-7b:583"
+ },
+ {
+  "idx": 121,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_2:1458"
+ },
+ {
+  "idx": 122,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "chess:73"
+ },
+ {
+  "idx": 123,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_2:1178"
+ },
+ {
+  "idx": 124,
+  "source": "Fuzz@L1f",
+  "pair_id": "rsl:66"
+ },
+ {
+  "idx": 125,
+  "source": "Fuzz@L1f",
+  "pair_id": "chess:506"
+ },
+ {
+  "idx": 126,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-7b:5"
+ },
+ {
+  "idx": 127,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-7b:977"
+ },
+ {
+  "idx": 128,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_2:138"
+ },
+ {
+  "idx": 129,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-32b:1511"
+ },
+ {
+  "idx": 130,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:813"
+ },
+ {
+  "idx": 131,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:1051"
+ },
+ {
+  "idx": 132,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-7b:1263"
+ },
+ {
+  "idx": 133,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-32b:977"
+ },
+ {
+  "idx": 134,
+  "source": "SpotIt@L0",
+  "pair_id": "gsr:426"
+ },
+ {
+  "idx": 135,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-32b:1040"
+ },
+ {
+  "idx": 136,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:813"
+ },
+ {
+  "idx": 137,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_2:459"
+ },
+ {
+  "idx": 138,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-32b:828"
+ },
+ {
+  "idx": 139,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:44"
+ },
+ {
+  "idx": 140,
+  "source": "Fuzz@L1f",
+  "pair_id": "alpha:657"
+ },
+ {
+  "idx": 141,
+  "source": "SpotIt@L0",
+  "pair_id": "gsr:1485"
+ },
+ {
+  "idx": 142,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:899"
+ },
+ {
+  "idx": 143,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gsr:597"
+ },
+ {
+  "idx": 144,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_1:583"
+ },
+ {
+  "idx": 145,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:1528"
+ },
+ {
+  "idx": 146,
+  "source": "Fuzz@L1f",
+  "pair_id": "rsl:131"
+ },
+ {
+  "idx": 147,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:1238"
+ },
+ {
+  "idx": 148,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:583"
+ },
+ {
+  "idx": 149,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:589"
+ },
+ {
+  "idx": 150,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-32b:1309"
+ },
+ {
+  "idx": 151,
+  "source": "SpotIt@L0",
+  "pair_id": "gsr:475"
+ },
+ {
+  "idx": 152,
+  "source": "SpotIt+@L0",
+  "pair_id": "slm:1071"
+ },
+ {
+  "idx": 153,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-32b:1523"
+ },
+ {
+  "idx": 154,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "omni-32-majority:456"
+ },
+ {
+  "idx": 155,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_2:815"
+ },
+ {
+  "idx": 156,
+  "source": "SpotIt@L0",
+  "pair_id": "rsl:1123"
+ },
+ {
+  "idx": 157,
+  "source": "SpotIt@L0",
+  "pair_id": "slm:5"
+ },
+ {
+  "idx": 158,
+  "source": "SpotIt+@L0",
+  "pair_id": "rsl:268"
+ },
+ {
+  "idx": 159,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:674"
+ },
+ {
+  "idx": 160,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-32b:865"
+ },
+ {
+  "idx": 161,
+  "source": "Fuzz@L1f",
+  "pair_id": "rsl:718"
+ },
+ {
+  "idx": 162,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:285"
+ },
+ {
+  "idx": 163,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:8"
+ },
+ {
+  "idx": 164,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:1331"
+ },
+ {
+  "idx": 165,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-7b:426"
+ },
+ {
+  "idx": 166,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-32b:62"
+ },
+ {
+  "idx": 167,
+  "source": "SpotIt@L0",
+  "pair_id": "gsr:1038"
+ },
+ {
+  "idx": 168,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:318"
+ },
+ {
+  "idx": 169,
+  "source": "Fuzz@L1f",
+  "pair_id": "alpha:321"
+ },
+ {
+  "idx": 170,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:114"
+ },
+ {
+  "idx": 171,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:1238"
+ },
+ {
+  "idx": 172,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "alpha:1272"
+ },
+ {
+  "idx": 173,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:50"
+ },
+ {
+  "idx": 174,
+  "source": "SpotIt@L0",
+  "pair_id": "alpha:795"
+ },
+ {
+  "idx": 175,
+  "source": "Fuzz@L1f",
+  "pair_id": "omni-32-majority:120"
+ },
+ {
+  "idx": 176,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_2:1263"
+ },
+ {
+  "idx": 177,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:583"
+ },
+ {
+  "idx": 178,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "alpha:131"
+ },
+ {
+  "idx": 179,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:67"
+ },
+ {
+  "idx": 180,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-32b:303"
+ },
+ {
+  "idx": 181,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:501"
+ },
+ {
+  "idx": 182,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-7b:669"
+ },
+ {
+  "idx": 183,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "omni-32-majority:924"
+ },
+ {
+  "idx": 184,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-7b:426"
+ },
+ {
+  "idx": 185,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-32b:1084"
+ },
+ {
+  "idx": 186,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:1055"
+ },
+ {
+  "idx": 187,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:297"
+ },
+ {
+  "idx": 188,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:990"
+ },
+ {
+  "idx": 189,
+  "source": "Fuzz@L1f",
+  "pair_id": "rsl:114"
+ },
+ {
+  "idx": 190,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gsr:668"
+ },
+ {
+  "idx": 191,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:1384"
+ },
+ {
+  "idx": 192,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-32b:657"
+ },
+ {
+  "idx": 193,
+  "source": "SpotIt+@L0",
+  "pair_id": "omni-32-majority:8"
+ },
+ {
+  "idx": 194,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:862"
+ },
+ {
+  "idx": 195,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:589"
+ },
+ {
+  "idx": 196,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "slm:782"
+ },
+ {
+  "idx": 197,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_1:1511"
+ },
+ {
+  "idx": 198,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_1:507"
+ },
+ {
+  "idx": 199,
+  "source": "Fuzz@L1f",
+  "pair_id": "rsl:506"
+ },
+ {
+  "idx": 200,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_2:563"
+ },
+ {
+  "idx": 201,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-7b:103"
+ },
+ {
+  "idx": 202,
+  "source": "SpotIt@L0",
+  "pair_id": "gena_submission_2:1458"
+ },
+ {
+  "idx": 203,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-7b:989"
+ },
+ {
+  "idx": 204,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:1109"
+ },
+ {
+  "idx": 205,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:1084"
+ },
+ {
+  "idx": 206,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:290"
+ },
+ {
+  "idx": 207,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:906"
+ },
+ {
+  "idx": 208,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:1527"
+ },
+ {
+  "idx": 209,
+  "source": "Fuzz@L1f",
+  "pair_id": "chess:1114"
+ },
+ {
+  "idx": 210,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-32b:637"
+ },
+ {
+  "idx": 211,
+  "source": "Fuzz@L1f",
+  "pair_id": "alpha:270"
+ },
+ {
+  "idx": 212,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:312"
+ },
+ {
+  "idx": 213,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "alpha:1080"
+ },
+ {
+  "idx": 214,
+  "source": "Fuzz@L1f",
+  "pair_id": "gsr:318"
+ },
+ {
+  "idx": 215,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:244"
+ },
+ {
+  "idx": 216,
+  "source": "Fuzz@L1f",
+  "pair_id": "gsr:506"
+ },
+ {
+  "idx": 217,
+  "source": "Fuzz@L1f",
+  "pair_id": "omni-32-majority:1194"
+ },
+ {
+  "idx": 218,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "omni-32-majority:516"
+ },
+ {
+  "idx": 219,
+  "source": "SpotIt@L0",
+  "pair_id": "rsl:273"
+ },
+ {
+  "idx": 220,
+  "source": "Fuzz@L1f",
+  "pair_id": "chess:1202"
+ },
+ {
+  "idx": 221,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-32b:131"
+ },
+ {
+  "idx": 222,
+  "source": "Fuzz@L1f",
+  "pair_id": "gsr:173"
+ },
+ {
+  "idx": 223,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:302"
+ },
+ {
+  "idx": 224,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:815"
+ },
+ {
+  "idx": 225,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:938"
+ },
+ {
+  "idx": 226,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:1104"
+ },
+ {
+  "idx": 227,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-32b:669"
+ },
+ {
+  "idx": 228,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:818"
+ },
+ {
+  "idx": 229,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:29"
+ },
+ {
+  "idx": 230,
+  "source": "SpotIt@L0",
+  "pair_id": "alpha:512"
+ },
+ {
+  "idx": 231,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-32b:767"
+ },
+ {
+  "idx": 232,
+  "source": "SpotIt@L0",
+  "pair_id": "alpha:1123"
+ },
+ {
+  "idx": 233,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-7b:867"
+ },
+ {
+  "idx": 234,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:562"
+ },
+ {
+  "idx": 235,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_2:44"
+ },
+ {
+  "idx": 236,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:1492"
+ },
+ {
+  "idx": 237,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-32b:878"
+ },
+ {
+  "idx": 238,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-7b:1067"
+ },
+ {
+  "idx": 239,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "chess:242"
+ },
+ {
+  "idx": 240,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:927"
+ },
+ {
+  "idx": 241,
+  "source": "SpotIt@L0",
+  "pair_id": "gsr:239"
+ },
+ {
+  "idx": 242,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_2:1038"
+ },
+ {
+  "idx": 243,
+  "source": "Fuzz@L1f",
+  "pair_id": "omni-32-majority:1134"
+ },
+ {
+  "idx": 244,
+  "source": "Fuzz@L1f",
+  "pair_id": "gsr:209"
+ },
+ {
+  "idx": 245,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-32b:782"
+ },
+ {
+  "idx": 246,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gsr:1122"
+ },
+ {
+  "idx": 247,
+  "source": "SpotIt@L0",
+  "pair_id": "slm:556"
+ },
+ {
+  "idx": 248,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:14"
+ },
+ {
+  "idx": 249,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:741"
+ },
+ {
+  "idx": 250,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-32b:932"
+ },
+ {
+  "idx": 251,
+  "source": "SpotIt+@L0",
+  "pair_id": "rsl:1022"
+ },
+ {
+  "idx": 252,
+  "source": "SpotIt+@L0",
+  "pair_id": "slm:1272"
+ },
+ {
+  "idx": 253,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:1084"
+ },
+ {
+  "idx": 254,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:253"
+ },
+ {
+  "idx": 255,
+  "source": "SpotIt@L0",
+  "pair_id": "rsl:818"
+ },
+ {
+  "idx": 256,
+  "source": "SpotIt@L0",
+  "pair_id": "gsr:175"
+ },
+ {
+  "idx": 257,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:606"
+ },
+ {
+  "idx": 258,
+  "source": "SpotIt@L0",
+  "pair_id": "alpha:541"
+ },
+ {
+  "idx": 259,
+  "source": "Fuzz@L1f",
+  "pair_id": "rsl:258"
+ },
+ {
+  "idx": 260,
+  "source": "SpotIt@L0",
+  "pair_id": "slm:1183"
+ },
+ {
+  "idx": 261,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:285"
+ },
+ {
+  "idx": 262,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-32b:1109"
+ },
+ {
+  "idx": 263,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-32b:242"
+ },
+ {
+  "idx": 264,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_1:1367"
+ },
+ {
+  "idx": 265,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:1047"
+ },
+ {
+  "idx": 266,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "rsl:147"
+ },
+ {
+  "idx": 267,
+  "source": "SpotIt+@L0",
+  "pair_id": "rsl:867"
+ },
+ {
+  "idx": 268,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:1335"
+ },
+ {
+  "idx": 269,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:303"
+ },
+ {
+  "idx": 270,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:1309"
+ },
+ {
+  "idx": 271,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_2:1196"
+ },
+ {
+  "idx": 272,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:1134"
+ },
+ {
+  "idx": 273,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-7b:801"
+ },
+ {
+  "idx": 274,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:233"
+ },
+ {
+  "idx": 275,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:1164"
+ },
+ {
+  "idx": 276,
+  "source": "SpotIt@L0",
+  "pair_id": "alpha:32"
+ },
+ {
+  "idx": 277,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-32b:80"
+ },
+ {
+  "idx": 278,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:815"
+ },
+ {
+  "idx": 279,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:867"
+ },
+ {
+  "idx": 280,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:1055"
+ },
+ {
+  "idx": 281,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:1272"
+ },
+ {
+  "idx": 282,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:1340"
+ },
+ {
+  "idx": 283,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_1:1309"
+ },
+ {
+  "idx": 284,
+  "source": "SpotIt@L0",
+  "pair_id": "gsr:1486"
+ },
+ {
+  "idx": 285,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_1:321"
+ },
+ {
+  "idx": 286,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-7b:29"
+ },
+ {
+  "idx": 287,
+  "source": "Fuzz@L1f",
+  "pair_id": "alpha:815"
+ },
+ {
+  "idx": 288,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "rsl:1095"
+ },
+ {
+  "idx": 289,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_1:321"
+ },
+ {
+  "idx": 290,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-32b:1272"
+ },
+ {
+  "idx": 291,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:509"
+ },
+ {
+  "idx": 292,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-7b:1238"
+ },
+ {
+  "idx": 293,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-7b:758"
+ },
+ {
+  "idx": 294,
+  "source": "Fuzz@L1f",
+  "pair_id": "omni-32-majority:924"
+ },
+ {
+  "idx": 295,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:880"
+ },
+ {
+  "idx": 296,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:74"
+ },
+ {
+  "idx": 297,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_1:1072"
+ },
+ {
+  "idx": 298,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:1319"
+ },
+ {
+  "idx": 299,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_1:977"
+ },
+ {
+  "idx": 300,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:1101"
+ },
+ {
+  "idx": 301,
+  "source": "Fuzz@L1f",
+  "pair_id": "gsr:1079"
+ },
+ {
+  "idx": 302,
+  "source": "Fuzz@L1f",
+  "pair_id": "gsr:303"
+ },
+ {
+  "idx": 303,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_1:212"
+ },
+ {
+  "idx": 304,
+  "source": "Fuzz@L1f",
+  "pair_id": "rsl:939"
+ },
+ {
+  "idx": 305,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:656"
+ },
+ {
+  "idx": 306,
+  "source": "SpotIt@L0",
+  "pair_id": "gena_submission_1:815"
+ },
+ {
+  "idx": 307,
+  "source": "SpotIt@L0",
+  "pair_id": "gena_submission_1:128"
+ },
+ {
+  "idx": 308,
+  "source": "Fuzz@L1f",
+  "pair_id": "gsr:1528"
+ },
+ {
+  "idx": 309,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:818"
+ },
+ {
+  "idx": 310,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:292"
+ },
+ {
+  "idx": 311,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:303"
+ },
+ {
+  "idx": 312,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-7b:128"
+ },
+ {
+  "idx": 313,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_2:1263"
+ },
+ {
+  "idx": 314,
+  "source": "Fuzz@L1f",
+  "pair_id": "chess:112"
+ },
+ {
+  "idx": 315,
+  "source": "Fuzz@L1f",
+  "pair_id": "chess:44"
+ },
+ {
+  "idx": 316,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:68"
+ },
+ {
+  "idx": 317,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "alpha:1504"
+ },
+ {
+  "idx": 318,
+  "source": "SpotIt@L0",
+  "pair_id": "gena_submission_2:1367"
+ },
+ {
+  "idx": 319,
+  "source": "SpotIt+@L0",
+  "pair_id": "rsl:927"
+ },
+ {
+  "idx": 320,
+  "source": "SpotIt+@L0",
+  "pair_id": "slm:112"
+ },
+ {
+  "idx": 321,
+  "source": "SpotIt+@L0",
+  "pair_id": "omni-32-majority:1309"
+ },
+ {
+  "idx": 322,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:1130"
+ },
+ {
+  "idx": 323,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-7b:112"
+ },
+ {
+  "idx": 324,
+  "source": "SpotIt@L0",
+  "pair_id": "rsl:1492"
+ },
+ {
+  "idx": 325,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:285"
+ },
+ {
+  "idx": 326,
+  "source": "SpotIt@L0",
+  "pair_id": "rsl:285"
+ },
+ {
+  "idx": 327,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:303"
+ },
+ {
+  "idx": 328,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:556"
+ },
+ {
+  "idx": 329,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "slm:1434"
+ },
+ {
+  "idx": 330,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_2:1343"
+ },
+ {
+  "idx": 331,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_1:72"
+ },
+ {
+  "idx": 332,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "slm:801"
+ },
+ {
+  "idx": 333,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:1134"
+ },
+ {
+  "idx": 334,
+  "source": "Fuzz@L1f",
+  "pair_id": "omni-32-majority:759"
+ },
+ {
+  "idx": 335,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-32b:1367"
+ },
+ {
+  "idx": 336,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_2:1513"
+ },
+ {
+  "idx": 337,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:797"
+ },
+ {
+  "idx": 338,
+  "source": "Fuzz@L1f",
+  "pair_id": "alpha:91"
+ },
+ {
+  "idx": 339,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gsr:1319"
+ },
+ {
+  "idx": 340,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_2:1196"
+ },
+ {
+  "idx": 341,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-7b:506"
+ },
+ {
+  "idx": 342,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:657"
+ },
+ {
+  "idx": 343,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-7b:1055"
+ },
+ {
+  "idx": 344,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:1080"
+ },
+ {
+  "idx": 345,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_2:840"
+ },
+ {
+  "idx": 346,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "omni-32-majority:498"
+ },
+ {
+  "idx": 347,
+  "source": "SpotIt+@L0",
+  "pair_id": "slm:1122"
+ },
+ {
+  "idx": 348,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:1039"
+ },
+ {
+  "idx": 349,
+  "source": "SpotIt+@L0",
+  "pair_id": "omni-32-majority:564"
+ },
+ {
+  "idx": 350,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-7b:583"
+ },
+ {
+  "idx": 351,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:1255"
+ },
+ {
+  "idx": 352,
+  "source": "SpotIt+@L0",
+  "pair_id": "rsl:253"
+ },
+ {
+  "idx": 353,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_1:1384"
+ },
+ {
+  "idx": 354,
+  "source": "SpotIt@L0",
+  "pair_id": "gsr:1183"
+ },
+ {
+  "idx": 355,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "rsl:990"
+ },
+ {
+  "idx": 356,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-7b:260"
+ },
+ {
+  "idx": 357,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-7b:1133"
+ },
+ {
+  "idx": 358,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:1319"
+ },
+ {
+  "idx": 359,
+  "source": "Fuzz@L1f",
+  "pair_id": "chess:32"
+ },
+ {
+  "idx": 360,
+  "source": "SpotIt@L0",
+  "pair_id": "slm:1513"
+ },
+ {
+  "idx": 361,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:1263"
+ },
+ {
+  "idx": 362,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:786"
+ },
+ {
+  "idx": 363,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_2:108"
+ },
+ {
+  "idx": 364,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:1025"
+ },
+ {
+  "idx": 365,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:990"
+ },
+ {
+  "idx": 366,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_1:1022"
+ },
+ {
+  "idx": 367,
+  "source": "SpotIt@L0",
+  "pair_id": "rsl:128"
+ },
+ {
+  "idx": 368,
+  "source": "SpotIt@L0",
+  "pair_id": "alpha:5"
+ },
+ {
+  "idx": 369,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:897"
+ },
+ {
+  "idx": 370,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-7b:416"
+ },
+ {
+  "idx": 371,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:1266"
+ },
+ {
+  "idx": 372,
+  "source": "SpotIt+@L0",
+  "pair_id": "omni-32-majority:112"
+ },
+ {
+  "idx": 373,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "slm:1134"
+ },
+ {
+  "idx": 374,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_2:120"
+ },
+ {
+  "idx": 375,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-32b:108"
+ },
+ {
+  "idx": 376,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-32b:24"
+ },
+ {
+  "idx": 377,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "slm:539"
+ },
+ {
+  "idx": 378,
+  "source": "SpotIt@L0",
+  "pair_id": "slm:1263"
+ },
+ {
+  "idx": 379,
+  "source": "Fuzz@L1f",
+  "pair_id": "omni-32-majority:867"
+ },
+ {
+  "idx": 380,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gsr:623"
+ },
+ {
+  "idx": 381,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:91"
+ },
+ {
+  "idx": 382,
+  "source": "SpotIt@L0",
+  "pair_id": "slm:1252"
+ },
+ {
+  "idx": 383,
+  "source": "Fuzz@L1f",
+  "pair_id": "alpha:668"
+ },
+ {
+  "idx": 384,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "omni-32-majority:1403"
+ },
+ {
+  "idx": 385,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-7b:554"
+ },
+ {
+  "idx": 386,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_1:8"
+ },
+ {
+  "idx": 387,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:534"
+ },
+ {
+  "idx": 388,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:364"
+ },
+ {
+  "idx": 389,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:233"
+ },
+ {
+  "idx": 390,
+  "source": "SpotIt+@L0",
+  "pair_id": "rsl:1255"
+ },
+ {
+  "idx": 391,
+  "source": "SpotIt+@L0",
+  "pair_id": "slm:426"
+ },
+ {
+  "idx": 392,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:1319"
+ },
+ {
+  "idx": 393,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:1361"
+ },
+ {
+  "idx": 394,
+  "source": "SpotIt@L0",
+  "pair_id": "rsl:819"
+ },
+ {
+  "idx": 395,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:795"
+ },
+ {
+  "idx": 396,
+  "source": "SpotIt+@L0",
+  "pair_id": "gsr:288"
+ },
+ {
+  "idx": 397,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:312"
+ },
+ {
+  "idx": 398,
+  "source": "SpotIt+@L0",
+  "pair_id": "slm:459"
+ },
+ {
+  "idx": 399,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:13"
+ },
+ {
+  "idx": 400,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:1038"
+ },
+ {
+  "idx": 401,
+  "source": "SpotIt@L0",
+  "pair_id": "gena_submission_1:867"
+ },
+ {
+  "idx": 402,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "omni-32-majority:391"
+ },
+ {
+  "idx": 403,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:1403"
+ },
+ {
+  "idx": 404,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:554"
+ },
+ {
+  "idx": 405,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:1335"
+ },
+ {
+  "idx": 406,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-32b:1492"
+ },
+ {
+  "idx": 407,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:108"
+ },
+ {
+  "idx": 408,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "slm:579"
+ },
+ {
+  "idx": 409,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-7b:758"
+ },
+ {
+  "idx": 410,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:1442"
+ },
+ {
+  "idx": 411,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-7b:1055"
+ },
+ {
+  "idx": 412,
+  "source": "SpotIt@L0",
+  "pair_id": "gena_submission_1:977"
+ },
+ {
+  "idx": 413,
+  "source": "SpotIt+@L0",
+  "pair_id": "omni-32-majority:1022"
+ },
+ {
+  "idx": 414,
+  "source": "SpotIt+@L0",
+  "pair_id": "omni-32-majority:1255"
+ },
+ {
+  "idx": 415,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:1309"
+ },
+ {
+  "idx": 416,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:1384"
+ },
+ {
+  "idx": 417,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-32b:5"
+ },
+ {
+  "idx": 418,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_1:867"
+ },
+ {
+  "idx": 419,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_1:1263"
+ },
+ {
+  "idx": 420,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:409"
+ },
+ {
+  "idx": 421,
+  "source": "SpotIt+@L0",
+  "pair_id": "slm:1348"
+ },
+ {
+  "idx": 422,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:378"
+ },
+ {
+  "idx": 423,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:1123"
+ },
+ {
+  "idx": 424,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:242"
+ },
+ {
+  "idx": 425,
+  "source": "Fuzz@L1f",
+  "pair_id": "chess:1095"
+ },
+ {
+  "idx": 426,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-7b:16"
+ },
+ {
+  "idx": 427,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:1067"
+ },
+ {
+  "idx": 428,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:1042"
+ },
+ {
+  "idx": 429,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-32b:880"
+ },
+ {
+  "idx": 430,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:1331"
+ },
+ {
+  "idx": 431,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_2:74"
+ },
+ {
+  "idx": 432,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:516"
+ },
+ {
+  "idx": 433,
+  "source": "Fuzz@L1f",
+  "pair_id": "gsr:1400"
+ },
+ {
+  "idx": 434,
+  "source": "SpotIt+@L0",
+  "pair_id": "omni-32-majority:541"
+ },
+ {
+  "idx": 435,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-32b:914"
+ },
+ {
+  "idx": 436,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:718"
+ },
+ {
+  "idx": 437,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "alpha:302"
+ },
+ {
+  "idx": 438,
+  "source": "SpotIt@L0",
+  "pair_id": "slm:564"
+ },
+ {
+  "idx": 439,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-7b:561"
+ },
+ {
+  "idx": 440,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:592"
+ },
+ {
+  "idx": 441,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:232"
+ },
+ {
+  "idx": 442,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-7b:303"
+ },
+ {
+  "idx": 443,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:583"
+ },
+ {
+  "idx": 444,
+  "source": "SpotIt@L0",
+  "pair_id": "omni-32-majority:1272"
+ },
+ {
+  "idx": 445,
+  "source": "SpotIt@L0",
+  "pair_id": "slm:1194"
+ },
+ {
+  "idx": 446,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gena_submission_2:108"
+ },
+ {
+  "idx": 447,
+  "source": "SpotIt@L0",
+  "pair_id": "slm:74"
+ },
+ {
+  "idx": 448,
+  "source": "Fuzz@L1f",
+  "pair_id": "alpha:944"
+ },
+ {
+  "idx": 449,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-7b:561"
+ },
+ {
+  "idx": 450,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "chess:1406"
+ },
+ {
+  "idx": 451,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:1001"
+ },
+ {
+  "idx": 452,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gsr:999"
+ },
+ {
+  "idx": 453,
+  "source": "Fuzz@L1f",
+  "pair_id": "gsr:1095"
+ },
+ {
+  "idx": 454,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "alpha:318"
+ },
+ {
+  "idx": 455,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-7b:1367"
+ },
+ {
+  "idx": 456,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:759"
+ },
+ {
+  "idx": 457,
+  "source": "Fuzz@L1f",
+  "pair_id": "rsl:73"
+ },
+ {
+  "idx": 458,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:801"
+ },
+ {
+  "idx": 459,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-32b:107"
+ },
+ {
+  "idx": 460,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:882"
+ },
+ {
+  "idx": 461,
+  "source": "SpotIt+@L0",
+  "pair_id": "slm:1083"
+ },
+ {
+  "idx": 462,
+  "source": "SpotIt@L0",
+  "pair_id": "alpha:228"
+ },
+ {
+  "idx": 463,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "alpha:303"
+ },
+ {
+  "idx": 464,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "slm:1084"
+ },
+ {
+  "idx": 465,
+  "source": "SpotIt+@L0",
+  "pair_id": "csc-32b:897"
+ },
+ {
+  "idx": 466,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gsr:232"
+ },
+ {
+  "idx": 467,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:1007"
+ },
+ {
+  "idx": 468,
+  "source": "SpotIt+@L0",
+  "pair_id": "gena_submission_2:10"
+ },
+ {
+  "idx": 469,
+  "source": "Fuzz@L1f",
+  "pair_id": "gena_submission_2:1003"
+ },
+ {
+  "idx": 470,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "omni-32-majority:597"
+ },
+ {
+  "idx": 471,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:312"
+ },
+ {
+  "idx": 472,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gsr:1046"
+ },
+ {
+  "idx": 473,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-7b:790"
+ },
+ {
+  "idx": 474,
+  "source": "Fuzz@L1f",
+  "pair_id": "gsr:114"
+ },
+ {
+  "idx": 475,
+  "source": "SpotIt+@L0",
+  "pair_id": "chess:80"
+ },
+ {
+  "idx": 476,
+  "source": "SpotIt+@L0",
+  "pair_id": "alpha:426"
+ },
+ {
+  "idx": 477,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:1397"
+ },
+ {
+  "idx": 478,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "slm:934"
+ },
+ {
+  "idx": 479,
+  "source": "Fuzz@L1f",
+  "pair_id": "alpha:188"
+ },
+ {
+  "idx": 480,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:786"
+ },
+ {
+  "idx": 481,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-32b:927"
+ },
+ {
+  "idx": 482,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-32b:789"
+ },
+ {
+  "idx": 483,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "slm:815"
+ },
+ {
+  "idx": 484,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:556"
+ },
+ {
+  "idx": 485,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "csc-7b:1456"
+ },
+ {
+  "idx": 486,
+  "source": "SpotIt@L0",
+  "pair_id": "chess:1055"
+ },
+ {
+  "idx": 487,
+  "source": "SpotIt@L0",
+  "pair_id": "rsl:214"
+ },
+ {
+  "idx": 488,
+  "source": "SpotIt+@L0",
+  "pair_id": "rsl:795"
+ },
+ {
+  "idx": 489,
+  "source": "SpotIt@L0",
+  "pair_id": "slm:1147"
+ },
+ {
+  "idx": 490,
+  "source": "SpotIt@L0",
+  "pair_id": "csc-32b:668"
+ },
+ {
+  "idx": 491,
+  "source": "Fuzz@L1f",
+  "pair_id": "csc-32b:108"
+ },
+ {
+  "idx": 492,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "gsr:506"
+ },
+ {
+  "idx": 493,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "alpha:744"
+ },
+ {
+  "idx": 494,
+  "source": "Fuzz@L1f",
+  "pair_id": "slm:1019"
+ },
+ {
+  "idx": 495,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gena_submission_1:507"
+ },
+ {
+  "idx": 496,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "csc-32b:719"
+ },
+ {
+  "idx": 497,
+  "source": "ParSEval-L1@L1f",
+  "pair_id": "gsr:475"
+ },
+ {
+  "idx": 498,
+  "source": "CaliberGraph@L1f",
+  "pair_id": "rsl:1410"
+ },
+ {
+  "idx": 499,
+  "source": "SpotIt@L0",
+  "pair_id": "gsr:879"
+ }
+]

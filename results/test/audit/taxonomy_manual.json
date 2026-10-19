@@ -1,0 +1,928 @@
+[
+ {
+  "idx": 0,
+  "pair_id": "csc-7b:741",
+  "labels": [
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "primary": "null_semantics",
+  "note": "Gold COUNT(hero_id) ties both heroes at 1 while pred COUNT(power_id) skips the NULL power_id, so LIMIT 1 picks different heroes."
+ },
+ {
+  "idx": 1,
+  "pair_id": "chess:867",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "Gold filters fastestLapTime IS NOT NULL; the only result row has NULL fastestLapTime so gold is empty while pred returns it."
+ },
+ {
+  "idx": 2,
+  "pair_id": "gena_submission_1:611",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "Gold compares Date = '...19:39:08.0' (string equality fails on '...19:39:08') while pred's BETWEEN range matches."
+ },
+ {
+  "idx": 3,
+  "pair_id": "omni-32-majority:864",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "primary": "duplicates_distinct",
+  "note": "Two result rows for the same driver: COUNT(driverId)=2 vs COUNT(DISTINCT driverId)=1."
+ },
+ {
+  "idx": 4,
+  "pair_id": "alpha:740",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "primary": "duplicates_distinct",
+  "note": "Duplicate hero_attribute rows: COUNT(id)=2 vs COUNT(DISTINCT id)=1."
+ },
+ {
+  "idx": 5,
+  "pair_id": "alpha:1012",
+  "labels": [
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "primary": "null_semantics",
+  "note": "Lap time is NULL: ORDER BY time LIMIT 1 still returns the row, but time = MIN(time) compares with NULL and returns nothing."
+ },
+ {
+  "idx": 6,
+  "pair_id": "slm:861",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "q3='1:54' matches LIKE '1:54%' but not LIKE '1:54.%'."
+ },
+ {
+  "idx": 7,
+  "pair_id": "gsr:680",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Two users named 'Stephen Turner': gold joins both, pred's scalar subquery '=' uses only the first id (whose post has NULL score)."
+ },
+ {
+  "idx": 8,
+  "pair_id": "alpha:1335",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "Gold adds SUBSTR(event_date,6,2)='09' which the matching event (NULL date) fails; pred has no date filter."
+ },
+ {
+  "idx": 9,
+  "pair_id": "csc-7b:1495",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "Both customers have equal (NULL) consumption, so ORDER BY ... LIMIT 1 tie-breaks differently."
+ },
+ {
+  "idx": 10,
+  "pair_id": "gsr:1202",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "primary": "duplicates_distinct",
+  "note": "Duplicate Examination rows for the same patient: COUNT(ID)=2 vs COUNT(DISTINCT ID)=1."
+ },
+ {
+  "idx": 11,
+  "pair_id": "alpha:878",
+  "labels": [
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "primary": "null_semantics",
+  "note": "Lap time NULL: ORDER BY time LIMIT 1 returns the row, time = (SELECT MIN(time)) is NULL comparison and returns nothing."
+ },
+ {
+  "idx": 12,
+  "pair_id": "gsr:242",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "SUBSTR(atom_id,-2) vs SUBSTR(atom_id,7,2) extract different characters; only pred's yields '21'."
+ },
+ {
+  "idx": 13,
+  "pair_id": "csc-32b:475",
+  "labels": [
+   "empty_aggregate",
+   "null_semantics"
+  ],
+  "primary": "empty_aggregate",
+  "note": "No set matches 'Coldsnap' (trailing space), so SUM(CASE...) over empty input is NULL while COUNT(*) is 0."
+ },
+ {
+  "idx": 14,
+  "pair_id": "alpha:556",
+  "labels": [
+   "null_semantics",
+   "projection"
+  ],
+  "primary": "null_semantics",
+  "note": "Denominator COUNT(DISTINCT DisplayName) is 0 because DisplayName is NULL (division -> NULL), whereas pred counts distinct userid = 1."
+ },
+ {
+  "idx": 15,
+  "pair_id": "alpha:1145",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "All five leagues have one 2015/2016 match each; LIMIT 4 tie-breaking chooses different leagues."
+ },
+ {
+  "idx": 16,
+  "pair_id": "gena_submission_1:1342",
+  "labels": [
+   "join_path",
+   "null_semantics"
+  ],
+  "primary": "join_path",
+  "note": "Pred adds joins to budget/event; the matching expense has NULL link_to_budget and is dropped by the inner join."
+ },
+ {
+  "idx": 17,
+  "pair_id": "gena_submission_1:1019",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "SUM(ms)/COUNT(lap) counts a lap with NULL milliseconds in the denominator while AVG(ms) ignores it."
+ },
+ {
+  "idx": 18,
+  "pair_id": "alpha:997",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "COUNT(driverId) counts the NULL-nationality group (2) as largest, COUNT(nationality) gives it 0."
+ },
+ {
+  "idx": 19,
+  "pair_id": "csc-32b:843",
+  "labels": [
+   "join_path",
+   "null_semantics"
+  ],
+  "primary": "join_path",
+  "note": "Pred's extra join to superhero drops the hero_power row whose hero_id is NULL."
+ },
+ {
+  "idx": 20,
+  "pair_id": "alpha:1272",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "Gold requires `First Date` IS NOT NULL; both patients have NULL First Date so gold is empty while pred returns one."
+ },
+ {
+  "idx": 21,
+  "pair_id": "gsr:829",
+  "labels": [
+   "empty_aggregate",
+   "null_semantics"
+  ],
+  "primary": "empty_aggregate",
+  "note": "Join is empty (NULL publisher_id): SUM(CASE)-SUM(CASE) over empty input is NULL while COUNT(*)-COUNT(*) is 0.0."
+ },
+ {
+  "idx": 22,
+  "pair_id": "gena_submission_1:1104",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "Date stored as '2010-08-30' matches SUBSTR(date,1,10) equality but not date = '2010-08-30 00:00:00'."
+ },
+ {
+  "idx": 23,
+  "pair_id": "alpha:885",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "Two 1999 races share the max round; ORDER BY round DESC LIMIT 1 returns one, round = MAX(round) returns both."
+ },
+ {
+  "idx": 24,
+  "pair_id": "slm:927",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "Gold filters fastestLapTime IS NOT NULL; the only result has NULL fastestLapTime so gold is empty."
+ },
+ {
+  "idx": 25,
+  "pair_id": "gsr:1019",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "SUM(ms)/COUNT(lap) counts a lap with NULL milliseconds in the denominator while AVG(ms) ignores it."
+ },
+ {
+  "idx": 26,
+  "pair_id": "chess:475",
+  "labels": [
+   "empty_aggregate",
+   "null_semantics"
+  ],
+  "primary": "empty_aggregate",
+  "note": "No set matches 'Coldsnap' (trailing space): SUM(CASE...) over empty input is NULL while COUNT(id) is 0."
+ },
+ {
+  "idx": 27,
+  "pair_id": "csc-32b:637",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Gold links user to posts via postHistory.UserId, pred via posts.OwnerUserId, selecting different posts."
+ },
+ {
+  "idx": 28,
+  "pair_id": "omni-32-majority:516",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "primary": "duplicates_distinct",
+  "note": "Two foreign_data rows for one card: gold counts distinct card ids (via GROUP BY) = 1, pred counts join rows = 2."
+ },
+ {
+  "idx": 29,
+  "pair_id": "omni-32-majority:456",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "Pred adds (subtypes IS NOT NULL OR supertypes IS NOT NULL); the card has both NULL so pred is empty."
+ },
+ {
+  "idx": 30,
+  "pair_id": "alpha:901",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "Gold filters on races.year = 2005 while pred derives year from date ('2010-09-01'), so the row passes only gold."
+ },
+ {
+  "idx": 31,
+  "pair_id": "gsr:1114",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Gold joins Player to attributes on player_fifa_api_id; pred matches player_api_id via a scalar subquery (first player's api_id is NULL), so different attribute rows are used."
+ },
+ {
+  "idx": 32,
+  "pair_id": "gsr:1319",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "position 'vice president' matches case-insensitive LIKE 'vice president' but not = 'Vice President'."
+ },
+ {
+  "idx": 33,
+  "pair_id": "gena_submission_1:655",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Two posts share the title; gold joins both, pred's scalar subquery '=' uses only the first post id."
+ },
+ {
+  "idx": 34,
+  "pair_id": "alpha:755",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "Pred adds LIMIT 5, truncating six matching heroes to five."
+ },
+ {
+  "idx": 35,
+  "pair_id": "csc-32b:561",
+  "labels": [
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "primary": "null_semantics",
+  "note": "Gold's subquery picks the top-scored comment whose PostId is NULL (tie on score), yielding no post; pred's join drops that comment and returns another post."
+ },
+ {
+  "idx": 36,
+  "pair_id": "alpha:698",
+  "labels": [
+   "projection"
+  ],
+  "primary": "projection",
+  "note": "Gold returns the stored CommentCount column (3), pred computes COUNT(*) from comments (1)."
+ },
+ {
+  "idx": 37,
+  "pair_id": "gsr:901",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "Gold filters on races.year = 2005 while pred takes the year from date ('2010-09-01')."
+ },
+ {
+  "idx": 38,
+  "pair_id": "slm:1400",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "Denominator COUNT(type) is 0 for a NULL type (division -> NULL) whereas COUNT(event_id) is 1, giving 0.0."
+ },
+ {
+  "idx": 39,
+  "pair_id": "chess:637",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Gold links user to posts via postHistory.UserId, pred via posts.OwnerUserId, selecting different posts."
+ },
+ {
+  "idx": 40,
+  "pair_id": "csc-7b:10",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "Both schools have equal AvgScrRead, so ORDER BY ... LIMIT 1 tie-breaks to different frpm rows."
+ },
+ {
+  "idx": 41,
+  "pair_id": "gena_submission_1:1023",
+  "labels": [
+   "null_semantics",
+   "projection"
+  ],
+  "primary": "null_semantics",
+  "note": "Gold counts id, pred counts player_api_id which is NULL for the matching row (1 vs 0)."
+ },
+ {
+  "idx": 42,
+  "pair_id": "chess:789",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "SUM(weight)/COUNT(id) includes a hero with NULL weight in the denominator, AVG(weight) ignores it."
+ },
+ {
+  "idx": 43,
+  "pair_id": "gsr:751",
+  "labels": [
+   "duplicates_distinct",
+   "order_limit_ties"
+  ],
+  "primary": "duplicates_distinct",
+  "note": "Pred's DISTINCT collapses duplicate NULL power names, so LIMIT 5 admits an extra distinct power the gold LIMIT 5 cuts off."
+ },
+ {
+  "idx": 44,
+  "pair_id": "chess:260",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Gold links atoms to bonds via shared molecule_id, pred via connected.atom_id->bond_id, yielding different matches (1 vs 2)."
+ },
+ {
+  "idx": 45,
+  "pair_id": "gsr:1075",
+  "labels": [
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "primary": "null_semantics",
+  "note": "balance is NULL: ORDER BY balance LIMIT 1 still returns the row, balance = MAX(balance) compares with NULL and returns nothing."
+ },
+ {
+  "idx": 46,
+  "pair_id": "csc-7b:245",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "primary": "duplicates_distinct",
+  "note": "Atom has two connected rows: gold divides COUNT(bond_id) by COUNT(atom_id)=2, pred by COUNT(DISTINCT atom_id)=1."
+ },
+ {
+  "idx": 47,
+  "pair_id": "gsr:938",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "Gold requires time LIKE '_:%:__.___', pred requires positionText = '1'; the row satisfies only pred's predicate."
+ },
+ {
+  "idx": 48,
+  "pair_id": "slm:790",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "No 'Charles Chandler': gold's scalar subquery yields NULL so the difference is NULL, pred's SUM(CASE ... ELSE 0) yields 0."
+ },
+ {
+  "idx": 49,
+  "pair_id": "omni-32-majority:1392",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "Different sort keys: gold orders by source DESC, pred by SUM(amount) per source (NULL sum sorts last), picking different rows."
+ },
+ {
+  "idx": 50,
+  "pair_id": "chess:1351",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "Gold also requires first_name = 'Brent' (row has 'brent'); pred filters only on last_name."
+ },
+ {
+  "idx": 51,
+  "pair_id": "alpha:1513",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "Different sort keys for LIMIT 1: gold orders by Time DESC, pred by TransactionID ASC, selecting different stations."
+ },
+ {
+  "idx": 52,
+  "pair_id": "gsr:1183",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "Gold additionally requires Examination Date = First Date, which fails for the patient (NULL First Date); pred has no such condition."
+ },
+ {
+  "idx": 53,
+  "pair_id": "omni-32-majority:669",
+  "labels": [
+   "empty_aggregate"
+  ],
+  "primary": "empty_aggregate",
+  "note": "No user is exactly 'chl': gold's ORDER BY/LIMIT query returns no row, pred's MIN() over empty input returns one NULL row."
+ },
+ {
+  "idx": 54,
+  "pair_id": "chess:1504",
+  "labels": [
+   "projection"
+  ],
+  "primary": "projection",
+  "note": "Gold averages Amount, pred averages Amount*Price."
+ },
+ {
+  "idx": 55,
+  "pair_id": "gena_submission_1:74",
+  "labels": [
+   "empty_aggregate"
+  ],
+  "primary": "empty_aggregate",
+  "note": "No school matches the filters: gold's MIN() over empty input returns a NULL row, pred's ORDER BY LIMIT 1 returns nothing."
+ },
+ {
+  "idx": 56,
+  "pair_id": "alpha:1398",
+  "labels": [
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "primary": "null_semantics",
+  "note": "spent is NULL: ORDER BY spent LIMIT 1 still returns the event, spent = MAX(spent) compares with NULL and returns nothing."
+ },
+ {
+  "idx": 57,
+  "pair_id": "gsr:801",
+  "labels": [
+   "filter_predicate",
+   "join_path"
+  ],
+  "primary": "filter_predicate",
+  "note": "Pred hard-codes gender_id = 1 for Male / 2 for Female instead of joining gender names; here id 2 is Male, so gold gets 1/0 = NULL and pred 0/1 = 0.0."
+ },
+ {
+  "idx": 58,
+  "pair_id": "rsl:307",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Pred joins atom on atom_id OR atom_id2, adding the second atom's element 'c'."
+ },
+ {
+  "idx": 59,
+  "pair_id": "alpha:907",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "Gold filters races.year = 2017, pred filters the year from date ('2018-01-01')."
+ },
+ {
+  "idx": 60,
+  "pair_id": "gsr:1007",
+  "labels": [
+   "empty_aggregate"
+  ],
+  "primary": "empty_aggregate",
+  "note": "No driver matches ('Hamilton ' has trailing space): gold's ORDER BY LIMIT returns no row, pred's MAX() over empty input returns NULL."
+ },
+ {
+  "idx": 61,
+  "pair_id": "alpha:890",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "primary": "duplicates_distinct",
+  "note": "Two British GP races in the same year: COUNT(circuitId)=2 vs COUNT(DISTINCT year)=1."
+ },
+ {
+  "idx": 62,
+  "pair_id": "omni-32-majority:273",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "The only atom has NULL element: COUNT(element)=0 makes gold divide by zero (NULL), pred divides by COUNT(molecule_id)=1 giving 0.0."
+ },
+ {
+  "idx": 63,
+  "pair_id": "csc-32b:260",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Gold links atoms to bonds via shared molecule_id (no match, 0), pred via connected.bond_id (2)."
+ },
+ {
+  "idx": 64,
+  "pair_id": "gsr:107",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Pred adds inner joins to disp/account; the client in the max-A11 district has no disp row and is dropped."
+ },
+ {
+  "idx": 65,
+  "pair_id": "omni-32-majority:1358",
+  "labels": [
+   "null_semantics",
+   "order_limit_ties"
+  ],
+  "primary": "null_semantics",
+  "note": "date_received is NULL: ORDER BY LIMIT 1 returns the member, date_received = MIN(...) compares with NULL and returns nothing."
+ },
+ {
+  "idx": 66,
+  "pair_id": "gsr:601",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Pred uses LEFT JOIN from posts, returning post 395 with NULL link; gold's inner join on postLinks.PostId = 395 finds nothing."
+ },
+ {
+  "idx": 67,
+  "pair_id": "gena_submission_1:1182",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Two patients match; gold's scalar subquery '=' keeps only the first ID (no 1995 lab), pred's join counts the other patient's lab."
+ },
+ {
+  "idx": 68,
+  "pair_id": "rsl:1495",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "Both customers have equal (NULL) consumption, so ORDER BY ... LIMIT 1 tie-breaks differently."
+ },
+ {
+  "idx": 69,
+  "pair_id": "csc-7b:426",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "Pred also accepts mtgoCode = ''; the set has empty-string mtgoCode so only pred returns it."
+ },
+ {
+  "idx": 70,
+  "pair_id": "gena_submission_2:815",
+  "labels": [
+   "filter_predicate",
+   "join_path"
+  ],
+  "primary": "filter_predicate",
+  "note": "Pred hard-codes alignment_id = 1 / gender_id = 2 instead of joining on names; here alignment 1 is 'A', not 'Good'."
+ },
+ {
+  "idx": 71,
+  "pair_id": "gena_submission_2:239",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "atom_id '19' satisfies SUBSTR(atom_id,-2)='19' but not LIKE 'TR%_19'."
+ },
+ {
+  "idx": 72,
+  "pair_id": "csc-7b:1391",
+  "labels": [
+   "numeric_type_division"
+  ],
+  "primary": "numeric_type_division",
+  "note": "Gold uses integer division (1/2 = 0), pred casts to REAL (0.5)."
+ },
+ {
+  "idx": 73,
+  "pair_id": "csc-7b:107",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "Pred drops the A11 DESC sort key and orders only by birth_date, so LIMIT 1 picks a different client."
+ },
+ {
+  "idx": 74,
+  "pair_id": "csc-32b:931",
+  "labels": [
+   "null_semantics",
+   "empty_aggregate"
+  ],
+  "primary": "null_semantics",
+  "note": "fastestLapSpeed is NULL: gold's IS NOT NULL filter leaves no row, pred's MAX() returns a single NULL row."
+ },
+ {
+  "idx": 75,
+  "pair_id": "slm:290",
+  "labels": [
+   "filter_predicate"
+  ],
+  "primary": "filter_predicate",
+  "note": "Pred restricts element to a lowercase list; the atom's element 'BR' is excluded."
+ },
+ {
+  "idx": 76,
+  "pair_id": "chess:1335",
+  "labels": [
+   "empty_aggregate"
+  ],
+  "primary": "empty_aggregate",
+  "note": "No budget joins a 'September Meeting' event: gold returns no row, pred's SUM() over empty input returns NULL."
+ },
+ {
+  "idx": 77,
+  "pair_id": "rsl:131",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "Different sort key: gold ranks districts by SUM(amount), pred by COUNT(loan_id) which ties at 1, so LIMIT 1 differs."
+ },
+ {
+  "idx": 78,
+  "pair_id": "slm:5",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "School name is NULL: COUNT(DISTINCT School) = 0 while COUNT(*) = 1."
+ },
+ {
+  "idx": 79,
+  "pair_id": "csc-32b:885",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "Two 1999 races share the max round; ORDER BY round DESC LIMIT 1 returns one, round = MAX(round) returns both."
+ },
+ {
+  "idx": 80,
+  "pair_id": "alpha:1084",
+  "labels": [
+   "null_semantics",
+   "projection"
+  ],
+  "primary": "null_semantics",
+  "note": "The qualifying player has NULL player_name: COUNT(DISTINCT player_name) = 0 while COUNT(DISTINCT player_api_id) = 1."
+ },
+ {
+  "idx": 81,
+  "pair_id": "gsr:1101",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "One Parma away match has NULL away_team_goal: SUM/COUNT(id) counts it in the denominator (0.5), AVG ignores it (1.0)."
+ },
+ {
+  "idx": 82,
+  "pair_id": "csc-7b:108",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Pred requires a client->disp->loan path; no disp row links to a loan account, so pred is empty while gold returns a transaction amount."
+ },
+ {
+  "idx": 83,
+  "pair_id": "gsr:512",
+  "labels": [
+   "empty_aggregate",
+   "null_semantics"
+  ],
+  "primary": "empty_aggregate",
+  "note": "No card has hasFoil = 0 and duelDeck 'a': SUM(CASE) over empty input is NULL while COUNT(*) is 0."
+ },
+ {
+  "idx": 84,
+  "pair_id": "gsr:98",
+  "labels": [
+   "order_limit_ties"
+  ],
+  "primary": "order_limit_ties",
+  "note": "Two qualifying loans tie on the minimum amount; ORDER BY amount LIMIT 1 returns one, amount = MIN(amount) returns both."
+ },
+ {
+  "idx": 85,
+  "pair_id": "csc-7b:1013",
+  "labels": [
+   "projection",
+   "join_path"
+  ],
+  "primary": "projection",
+  "note": "Gold takes MIN(results.fastestLapTime), pred takes lapTimes.time ordered by milliseconds: different source table and column."
+ },
+ {
+  "idx": 86,
+  "pair_id": "rsl:695",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "primary": "duplicates_distinct",
+  "note": "One user holds two 'Citizen Patrol' badges: COUNT(id)=2 vs COUNT(DISTINCT userid)=1."
+ },
+ {
+  "idx": 87,
+  "pair_id": "gena_submission_2:75",
+  "labels": [
+   "projection"
+  ],
+  "primary": "projection",
+  "note": "Gold outputs schools.School, pred outputs frpm.`School Name`, which differ for the second school."
+ },
+ {
+  "idx": 88,
+  "pair_id": "csc-32b:1523",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Pred adds an inner join to customers; a transaction whose CustomerID is missing from customers is dropped."
+ },
+ {
+  "idx": 89,
+  "pair_id": "omni-32-majority:112",
+  "labels": [
+   "join_path"
+  ],
+  "primary": "join_path",
+  "note": "Pred adds an inner join to account on district_id; the district with no account is dropped."
+ },
+ {
+  "idx": 90,
+  "pair_id": "alpha:1015",
+  "labels": [
+   "join_path",
+   "null_semantics"
+  ],
+  "primary": "join_path",
+  "note": "Gold derives the record from results.FastestLapTime (NULL here, so no match), pred orders lapTimes by milliseconds and still returns the race via LIMIT 1."
+ },
+ {
+  "idx": 91,
+  "pair_id": "gsr:273",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "One atom has NULL element: gold divides by COUNT(element)=1 (100%), pred by COUNT(*)=2 (50%)."
+ },
+ {
+  "idx": 92,
+  "pair_id": "chess:1075",
+  "labels": [
+   "null_semantics",
+   "join_path",
+   "order_limit_ties"
+  ],
+  "primary": "null_semantics",
+  "note": "balance and player_fifa_api_id are NULL: gold's ORDER BY balance LIMIT 1 returns the player, pred's balance = MAX(balance) and fifa-id join both fail on NULL."
+ },
+ {
+  "idx": 93,
+  "pair_id": "rsl:1096",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "One attribute row has NULL overall_rating: SUM/COUNT(id) counts it in the denominator (513.5), AVG ignores it (1027)."
+ },
+ {
+  "idx": 94,
+  "pair_id": "csc-7b:1001",
+  "labels": [
+   "filter_predicate",
+   "order_limit_ties"
+  ],
+  "primary": "filter_predicate",
+  "note": "Gold picks the fastest q3 via ORDER BY ... LIMIT 1, pred filters qualifying position = 1; the only row has position -1."
+ },
+ {
+  "idx": 95,
+  "pair_id": "chess:890",
+  "labels": [
+   "duplicates_distinct"
+  ],
+  "primary": "duplicates_distinct",
+  "note": "Two British GP races in the same year: COUNT(circuitId)=2 vs COUNT(DISTINCT year)=1."
+ },
+ {
+  "idx": 96,
+  "pair_id": "gsr:61",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "School is NULL: COUNT(School)=0 vs COUNT(*)=1."
+ },
+ {
+  "idx": 97,
+  "pair_id": "gena_submission_1:1057",
+  "labels": [
+   "null_semantics"
+  ],
+  "primary": "null_semantics",
+  "note": "One match has NULL home_team_goal: SUM/COUNT(id) gives 1.5, AVG ignores the NULL and gives 3.0."
+ },
+ {
+  "idx": 98,
+  "pair_id": "alpha:583",
+  "labels": [
+   "grouping"
+  ],
+  "primary": "grouping",
+  "note": "Gold groups by WebsiteUrl (two groups), pred aggregates without GROUP BY into one row with an arbitrary WebsiteUrl."
+ },
+ {
+  "idx": 99,
+  "pair_id": "omni-32-majority:1084",
+  "labels": [
+   "null_semantics",
+   "projection"
+  ],
+  "primary": "null_semantics",
+  "note": "The qualifying player has NULL player_name: COUNT(DISTINCT player_name) = 0 while COUNT(DISTINCT player_api_id) = 1."
+ }
+]

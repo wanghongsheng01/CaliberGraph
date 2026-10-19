@@ -1,0 +1,970 @@
+[
+ {
+  "idx": 0,
+  "pair_id": "alpha:1115",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Neither player has a rating on the date in the witness; gold returns a NULL aggregate and pred an empty set, both defensible representations of \"no answer\".",
+  "implausible_fact": null
+ },
+ {
+  "idx": 1,
+  "pair_id": "alpha:77",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Results differ only in the last floating-point digit due to different operation order; both compute the requested percentage.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 2,
+  "pair_id": "alpha:401",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Results differ only in floating-point rounding of the same percentage.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 3,
+  "pair_id": "alpha:543",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "User csgillespie is absent; gold returns a NULL MAX and pred an empty set, both defensible \"no answer\" outputs.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 4,
+  "pair_id": "alpha:345",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines artifact cards as types = 'Artifact', which pred uses, while gold filters on the type column and misses artifact cards whose full type line is not exactly \"Artifact\".",
+  "implausible_fact": null
+ },
+ {
+  "idx": 5,
+  "pair_id": "alpha:19",
+  "verdict": "both_wrong",
+  "confidence": "low",
+  "reason": "The queries are equivalent and every candidate school has NULL AvgScrMath, so both return the phone of an arbitrary school with no math score rather than a highest-scoring school.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 6,
+  "pair_id": "alpha:19",
+  "verdict": "both_wrong",
+  "confidence": "low",
+  "reason": "The queries are equivalent and both satscores rows have NULL AvgScrMath, so both return an arbitrary school that has no math score.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 7,
+  "pair_id": "alpha:365",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The question only asks for the card type; gold needlessly inner-joins foreign_data and returns nothing for a card without foreign data, which is common in reality.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 8,
+  "pair_id": "alpha:76",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The difference arises because frpm says Merced/grades 9-12 while schools says Santa Clara with EILCode PS for the same CDSCode; such inconsistent records do not occur.",
+  "implausible_fact": "frpm and schools disagree on county; 9-12 school coded PS"
+ },
+ {
+  "idx": 9,
+  "pair_id": "alpha:77",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Same school and value; results differ only in floating-point last digit.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 10,
+  "pair_id": "alpha:116",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No loan approved on 1993-07-05 exists in the witness; gold yields a NULL aggregate and pred an empty set, both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 11,
+  "pair_id": "alpha:18",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The frpm row says Fresno/Directly funded but the schools row for the same CDSCode says Colusa/Not in CS funding model; in the real DB county always agrees between the tables.",
+  "implausible_fact": "frpm and schools disagree on county for same CDSCode"
+ },
+ {
+  "idx": 12,
+  "pair_id": "alpha:477",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold finds the set by name and pred hardcodes code CSP; the witness gives the set named Coldsnap the code PSAL, while in reality Coldsnap is CSP.",
+  "implausible_fact": "set named Coldsnap has code PSAL instead of CSP"
+ },
+ {
+  "idx": 13,
+  "pair_id": "alpha:1026",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "A Match row with NULL home_team_api_id forms a tied NULL group that pred picks and then loses in the join; real matches always have a home team.",
+  "implausible_fact": "match with NULL home_team_api_id"
+ },
+ {
+  "idx": 14,
+  "pair_id": "alpha:1020",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two players tie at the maximum rating; the question does not say whether to return one or all tied players.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 15,
+  "pair_id": "alpha:1069",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two players tie at the minimum height; returning one or all tied players are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 16,
+  "pair_id": "alpha:559",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The two queries are equivalent; both creation-date groups have one vote, so LIMIT 1 picks arbitrarily among the tie.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 17,
+  "pair_id": "alpha:474",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Evidence says having a translation means translation IS NOT NULL; pred omits that filter and counts the CSP row with NULL translation, which also occurs in the real DB.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 18,
+  "pair_id": "alpha:134",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two districts tie on A16; gold groups by A16 and counts accounts across both districts, which is not the count for any single branch, while pred returns one branch's count.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 19,
+  "pair_id": "alpha:76",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "frpm lists the school in San Francisco while schools lists the same CDSCode in Merced; county always agrees between these tables in reality.",
+  "implausible_fact": "frpm and schools disagree on county for same CDSCode"
+ },
+ {
+  "idx": 20,
+  "pair_id": "alpha:1116",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only player has NULL name and NULL height, so gold's DENSE_RANK yields a NULL-height row while MAX-based pred yields nothing; real players always have a height.",
+  "implausible_fact": "player with NULL height and name"
+ },
+ {
+  "idx": 21,
+  "pair_id": "alpha:116",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The account has no balance on 1998-12-27; gold treats the missing balance as 0 and reports a spurious -100%, while pred correctly returns no rate.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 22,
+  "pair_id": "alpha:88",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two schools tie at the maximum NumGE1500; returning one or all tied schools are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 23,
+  "pair_id": "alpha:1115",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Neither player exists in the witness; gold returns a NULL aggregate and pred an empty set, both defensible \"no answer\" outputs.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 24,
+  "pair_id": "alpha:18",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "frpm County Name is \"b\" while schools.County is Fresno for the same CDSCode; county always agrees between the tables in reality.",
+  "implausible_fact": "frpm and schools disagree on county for same CDSCode"
+ },
+ {
+  "idx": 25,
+  "pair_id": "alpha:1",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The school is SOCType Continuation High Schools but frpm Educational Option Type is Alternative School of Choice; in the real DB these always coincide.",
+  "implausible_fact": "continuation SOCType without continuation option type in frpm"
+ },
+ {
+  "idx": 26,
+  "pair_id": "alpha:99",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two accounts tie at the highest loan amount and the question asks to list the accounts; gold's LIMIT 1 drops one of them.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 27,
+  "pair_id": "alpha:0",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No Alameda rows exist in the witness; gold returns an empty set and pred a NULL MAX, both defensible \"no answer\" outputs.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 28,
+  "pair_id": "alpha:163",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Bruntal and Trebic each have one status-A loan; tie handling is unspecified so either district is defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 29,
+  "pair_id": "alpha:47",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold COUNT(School) skips a row with NULL School name that has an OpenDate in 1980; in the real DB NULL-School rows (district entries) never have an OpenDate.",
+  "implausible_fact": "NULL-School row with an OpenDate"
+ },
+ {
+  "idx": 30,
+  "pair_id": "alpha:492",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The set name is stored as \"FROM the Vault: Lore\", which only gold's case-insensitive LIKE matches; the real set name is \"From the Vault: Lore\".",
+  "implausible_fact": "set name with wrong capitalization \"FROM\""
+ },
+ {
+  "idx": 31,
+  "pair_id": "alpha:36",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred drops the only school because AdmLName1 is NULL while AdmFName1 is \"Myong\"; in the real DB a first name never appears without a last name.",
+  "implausible_fact": "administrator first name without last name"
+ },
+ {
+  "idx": 32,
+  "pair_id": "alpha:1115",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Jordan Bowery is absent and no rating matches; gold returns a NULL aggregate and pred an empty set, both \"no answer\".",
+  "implausible_fact": null
+ },
+ {
+  "idx": 33,
+  "pair_id": "alpha:670",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only user has NULL Age, so no youngest user exists; gold returns an empty set and pred a NULL MIN, both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 34,
+  "pair_id": "alpha:20",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "frpm says Stanislaus while schools says Amador for the same CDSCode; county always agrees between these tables in reality.",
+  "implausible_fact": "frpm and schools disagree on county for same CDSCode"
+ },
+ {
+  "idx": 35,
+  "pair_id": "alpha:1106",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The 2013-02-22 attribute row carries Kevin Berigaud's fifa id but another player's api id, so the two join keys disagree; real records pair the ids consistently.",
+  "implausible_fact": "attribute row with mismatched player_api_id/player_fifa_api_id"
+ },
+ {
+  "idx": 36,
+  "pair_id": "alpha:1106",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "A second attribute row for Kevin Berigaud's api id on the same date carries Jorginho's fifa id; real records pair the ids consistently.",
+  "implausible_fact": "attribute row with mismatched player_api_id/player_fifa_api_id"
+ },
+ {
+  "idx": 37,
+  "pair_id": "alpha:440",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The foreign_data row has NULL uuid, so pred's join to cards drops it; every real foreign_data row references a card.",
+  "implausible_fact": "foreign_data row with NULL uuid"
+ },
+ {
+  "idx": 38,
+  "pair_id": "alpha:78",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred counts NULL GSserved rows as a group and returns NULL, which is not a grade span; gold ignores NULLs and returns 9-10. NULL GSserved is common in reality.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 39,
+  "pair_id": "alpha:401",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Results differ only in floating-point rounding of the same percentage.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 40,
+  "pair_id": "alpha:187",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The same client has two OWNER disp rows for the same account, so gold counts 2 rows while pred counts 1 client; in the real DB each client owns at most one account and disp has no duplicates.",
+  "implausible_fact": "duplicate OWNER disposition for same client and account"
+ },
+ {
+  "idx": 41,
+  "pair_id": "alpha:670",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "All users have NULL Age, so no youngest user exists; gold returns an empty set and pred a NULL MIN, both \"no answer\".",
+  "implausible_fact": null
+ },
+ {
+  "idx": 42,
+  "pair_id": "alpha:677",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred ignores the 2010 restriction and counts Jay Stevens's 2011 post.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 43,
+  "pair_id": "alpha:1033",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The birthday is stored as \"1990-01-01\" without the time part, so pred's string comparison with \"1990-01-01 00:00:00\" excludes it; real birthdays always carry \" 00:00:00\".",
+  "implausible_fact": "birthday without time component"
+ },
+ {
+  "idx": 44,
+  "pair_id": "alpha:1098",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two Team rows are named Ajax (one with NULL team_api_id), which breaks pred's scalar subquery; the real DB has a single Ajax with a non-NULL id.",
+  "implausible_fact": "duplicate Ajax team, one with NULL team_api_id"
+ },
+ {
+  "idx": 45,
+  "pair_id": "alpha:543",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "csgillespie is absent; gold returns a NULL MAX and pred an empty set, both \"no answer\".",
+  "implausible_fact": null
+ },
+ {
+  "idx": 46,
+  "pair_id": "alpha:1069",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only player has NULL height and name, so ORDER BY returns a NULL row while MIN-equality returns nothing; real players always have a height.",
+  "implausible_fact": "player with NULL height"
+ },
+ {
+  "idx": 47,
+  "pair_id": "alpha:1020",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two players tie at the maximum rating of 84; returning one or all tied players are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 48,
+  "pair_id": "alpha:19",
+  "verdict": "both_wrong",
+  "confidence": "low",
+  "reason": "The queries are equivalent and both schools have NULL AvgScrMath, so each returns an arbitrary school with no math score.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 49,
+  "pair_id": "alpha:345",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Bolas's Citadel has types \"Artifact\" (per evidence) but type \"Legendary Artifact\"; gold filters type = 'Artifact' and wrongly misses it.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 50,
+  "pair_id": "alpha:365",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "This Benalish Knight printing has no foreign_data rows (true in the real DB too), so gold's unnecessary inner join drops the card whose type pred correctly returns.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 51,
+  "pair_id": "alpha:474",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Evidence requires translation IS NOT NULL; pred counts an Italian set_translations row whose translation is NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 52,
+  "pair_id": "alpha:20",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts frpm School Name, which is NULL here; School Name is never NULL in the real frpm table.",
+  "implausible_fact": "frpm row with NULL School Name"
+ },
+ {
+  "idx": 53,
+  "pair_id": "alpha:477",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The Coldsnap set and its card use code \"Csp\", which pred's case-sensitive CSP literal misses; the real code is \"CSP\".",
+  "implausible_fact": "set code stored as \"Csp\" instead of \"CSP\""
+ },
+ {
+  "idx": 54,
+  "pair_id": "alpha:1020",
+  "verdict": "gold_wrong",
+  "confidence": "low",
+  "reason": "The only attribute row has NULL overall_rating; gold still reports that player as highest-rated, while pred correctly finds no maximum.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 55,
+  "pair_id": "alpha:1090",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only player has NULL birthday, so ORDER BY birthday still returns it while MIN-equality returns nothing; real players always have a birthday.",
+  "implausible_fact": "player with NULL birthday"
+ },
+ {
+  "idx": 56,
+  "pair_id": "alpha:677",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred ignores the 2010 restriction and counts Jay Stevens's 2013 post.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 57,
+  "pair_id": "alpha:47",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold COUNT(School) skips a 1980-opened row whose School name is NULL; in the real DB NULL-School rows never have an OpenDate.",
+  "implausible_fact": "NULL-School row with an OpenDate"
+ },
+ {
+  "idx": 58,
+  "pair_id": "alpha:70",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The SOC 69 District Community Day School has a NULL School name, which gold's COUNT(School) skips; in the real DB SOC-coded rows always have a school name.",
+  "implausible_fact": "SOC 69 row with NULL School name"
+ },
+ {
+  "idx": 59,
+  "pair_id": "alpha:70",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The Alpine row has SOC 69 but SOCType \"High Schools (Public)\"; in the real DB SOC 69 always maps to District Community Day Schools.",
+  "implausible_fact": "SOC code inconsistent with SOCType"
+ },
+ {
+  "idx": 60,
+  "pair_id": "alpha:474",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Evidence requires translation IS NOT NULL; pred counts DD1 whose Italian translation is NULL, which is common in the real data.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 61,
+  "pair_id": "alpha:76",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "frpm County Name is NULL while schools.County is Merced for the same CDSCode; county always agrees between these tables in reality.",
+  "implausible_fact": "frpm and schools disagree on county for same CDSCode"
+ },
+ {
+  "idx": 62,
+  "pair_id": "alpha:47",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "One of the 1980 Alameda DOC-52 rows has NULL School, which gold's COUNT(School) skips; in the real DB NULL-School rows never have an OpenDate.",
+  "implausible_fact": "NULL-School row with an OpenDate"
+ },
+ {
+  "idx": 63,
+  "pair_id": "alpha:492",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The set name is stored as \"FROM the Vault: Lore\", which only gold's case-insensitive LIKE matches; the real name is \"From the Vault: Lore\".",
+  "implausible_fact": "set name with wrong capitalization \"FROM\""
+ },
+ {
+  "idx": 64,
+  "pair_id": "alpha:479",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No Coldsnap card has CMC > 5 in the witness, so the correct count is 0 (pred) while gold's SUM over no rows returns NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 65,
+  "pair_id": "alpha:365",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The Benalish Knight card has no foreign_data row, so gold's unnecessary inner join returns nothing while pred returns the card's type.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 66,
+  "pair_id": "alpha:134",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two districts tie on A16; gold groups by A16 and counts accounts across both districts, which is not any single branch's count.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 67,
+  "pair_id": "alpha:0",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No Alameda rows exist; gold returns an empty set and pred a NULL MAX, both defensible \"no answer\" outputs.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 68,
+  "pair_id": "alpha:1127",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The vision-90 player appears in lineup slots other than home_player_8; gold arbitrarily checks only home_player_8, while the question concerns any match the player played.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 69,
+  "pair_id": "alpha:185",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "One Prague client has no disp row and the other has two duplicate OWNER disps for the same account; in the real DB every client has exactly one disp.",
+  "implausible_fact": "client without disposition plus duplicate disposition"
+ },
+ {
+  "idx": 70,
+  "pair_id": "alpha:99",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Accounts 1 and 2 tie at the highest loan amount and the question asks to list the accounts; gold's LIMIT 1 drops one.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 71,
+  "pair_id": "alpha:633",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Slashnick's own post 1026 has no postHistory row by its owner, so gold's postHistory-based lookup misses it; in the real DB owned posts virtually always have the owner's history row.",
+  "implausible_fact": "owned post lacking owner postHistory entry"
+ },
+ {
+  "idx": 72,
+  "pair_id": "alpha:36",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred drops the only school because AdmFName1 is NULL while AdmLName1 is \"a\"; real administrators never have a last name without a first name.",
+  "implausible_fact": "administrator last name without first name"
+ },
+ {
+  "idx": 73,
+  "pair_id": "alpha:36",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred drops the top school because AdmLName1 is NULL while AdmFName1 is \"Julie\"; in the real DB a first name never appears without a last name.",
+  "implausible_fact": "administrator first name without last name"
+ },
+ {
+  "idx": 74,
+  "pair_id": "alpha:550",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only tag has NULL Count, so ORDER BY still picks it while MAX-equality finds nothing; tag counts are never NULL in reality.",
+  "implausible_fact": "tag with NULL Count"
+ },
+ {
+  "idx": 75,
+  "pair_id": "alpha:633",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Slashnick owns post 3 but has no postHistory row for it, so gold's postHistory join finds nothing; in reality a post owner almost always has a history row for it.",
+  "implausible_fact": "owned post lacking owner postHistory entry"
+ },
+ {
+  "idx": 76,
+  "pair_id": "alpha:163",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both districts have exactly one status-A loan; tie handling is unspecified so either name is defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 77,
+  "pair_id": "alpha:633",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Gold takes posts slashnick edited (postHistory) and returns 1029, owned by another user, while the question asks for posts by slashnick, which pred correctly answers with owned post 1359.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 78,
+  "pair_id": "alpha:479",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No matching Coldsnap cards exist, so the count is 0 (pred) while gold's SUM over no rows returns NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 79,
+  "pair_id": "alpha:1127",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The vision-90 player appears in a match lineup slot other than home_player_8; gold's restriction to that single slot is arbitrary, while pred checks all slots.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 80,
+  "pair_id": "alpha:149",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "The district's A11 is exactly 8000; the question says income must exceed 8000, but gold's BETWEEN 8000 AND 9000 includes it while pred correctly excludes it.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 81,
+  "pair_id": "alpha:559",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "The two queries are equivalent; both dates have exactly one vote, so the LIMIT 1 pick is an arbitrary tie-break.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 82,
+  "pair_id": "alpha:477",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The set named Coldsnap has code 8ED, and Chippy's CSP card has no matching set row; in reality Coldsnap is code CSP.",
+  "implausible_fact": "Coldsnap set has code 8ED; card set code CSP has no set row"
+ },
+ {
+  "idx": 83,
+  "pair_id": "alpha:1",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "frpm marks the school as Continuation School while schools gives SOCType Elementary Schools/Traditional; in the real DB these always coincide.",
+  "implausible_fact": "frpm continuation option type inconsistent with schools SOCType"
+ },
+ {
+  "idx": 84,
+  "pair_id": "alpha:543",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "csgillespie's only post has NULL AnswerCount; gold returns a NULL MAX and pred an empty set, both \"no answer\".",
+  "implausible_fact": null
+ },
+ {
+  "idx": 85,
+  "pair_id": "alpha:1098",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The witness has two different teams named Ajax; pred's scalar subquery picks one team's id while gold considers both, but the real DB has a single Ajax.",
+  "implausible_fact": "two distinct teams named Ajax"
+ },
+ {
+  "idx": 86,
+  "pair_id": "alpha:1",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "frpm marks the school as Continuation School while schools gives SOCType Preschool; in the real DB these always coincide.",
+  "implausible_fact": "frpm continuation option type inconsistent with schools SOCType"
+ },
+ {
+  "idx": 87,
+  "pair_id": "alpha:9",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "frpm Charter Funding Type says Directly funded but schools.FundingType says Locally funded; such disagreements occur in the real DB, and either column is a defensible source for funding type.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 88,
+  "pair_id": "alpha:1069",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two players tie at the minimum height; returning one or all tied players are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 89,
+  "pair_id": "alpha:9",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts frpm School Code, which is NULL here; School Code is never NULL in the real frpm table.",
+  "implausible_fact": "frpm row with NULL School Code"
+ },
+ {
+  "idx": 90,
+  "pair_id": "alpha:99",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two 1993 accounts tie at the highest loan amount and the question asks to list the accounts; gold's LIMIT 1 drops one.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 91,
+  "pair_id": "alpha:677",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred ignores the 2010 restriction and counts Jay Stevens's post from another year.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 92,
+  "pair_id": "alpha:670",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only user has NULL Age, so no youngest user exists; gold returns an empty set and pred a NULL MIN, both \"no answer\".",
+  "implausible_fact": null
+ },
+ {
+  "idx": 93,
+  "pair_id": "alpha:20",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "frpm places the school in Amador while schools places the same CDSCode in Santa Barbara; county always agrees between these tables in reality.",
+  "implausible_fact": "frpm and schools disagree on county for same CDSCode"
+ },
+ {
+  "idx": 94,
+  "pair_id": "alpha:1098",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Two distinct teams are named Ajax, so pred's scalar subquery picks one team while gold ranks over both; the real DB has a single Ajax.",
+  "implausible_fact": "two distinct teams named Ajax"
+ },
+ {
+  "idx": 95,
+  "pair_id": "alpha:550",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two tags tie at the maximum Count; the question uses the singular, and returning one or both excerpt posts are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 96,
+  "pair_id": "alpha:9",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The directly funded school with math 595 has no frpm row (such gaps exist in the real DB), so gold's frpm-based count misses it while pred counts it via schools.FundingType.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 97,
+  "pair_id": "alpha:0",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No Alameda rows exist; gold returns an empty set and pred a NULL MAX, both defensible \"no answer\" outputs.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 98,
+  "pair_id": "alpha:559",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "The two queries are equivalent; each date has one vote, so the LIMIT 1 pick is an arbitrary tie-break.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 99,
+  "pair_id": "alpha:1030",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "The only 2015/2016 match is not a draw (NULL goals), so no league has any draws; gold returns nothing while pred names the league with zero draws, and both readings are arguable.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 100,
+  "pair_id": "alpha:160",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The same account has two identical loans, so gold counts 2 loans while pred counts 1 account; in the real DB each account has at most one loan.",
+  "implausible_fact": "account with two loans"
+ },
+ {
+  "idx": 101,
+  "pair_id": "alpha:88",
+  "verdict": "gold_wrong",
+  "confidence": "low",
+  "reason": "The only school has NULL NumGE1500; gold still reports it as the top school, while pred correctly finds no maximum.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 102,
+  "pair_id": "alpha:18",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "frpm puts the school in Fresno while schools puts the same CDSCode in Tulare; county always agrees between these tables in reality.",
+  "implausible_fact": "frpm and schools disagree on county for same CDSCode"
+ },
+ {
+  "idx": 103,
+  "pair_id": "alpha:373",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The artist is stored as \"Aaron Boyd \" with a trailing space, which only pred's TRIM matches; no real artist value has leading or trailing spaces.",
+  "implausible_fact": "artist name with trailing space"
+ },
+ {
+  "idx": 104,
+  "pair_id": "alpha:88",
+  "verdict": "gold_wrong",
+  "confidence": "low",
+  "reason": "The only satscores row has NULL NumGE1500; gold still reports it as the top school, while pred correctly finds no maximum.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 105,
+  "pair_id": "alpha:550",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two tags tie at the maximum Count of 5; returning one or both excerpt posts are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 106,
+  "pair_id": "alpha:116",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No loan was approved on 1993-07-05 in the witness; gold returns a NULL aggregate and pred an empty set, both \"no answer\".",
+  "implausible_fact": null
+ },
+ {
+  "idx": 107,
+  "pair_id": "alpha:78",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred counts NULL GSserved rows as the most common group and returns NULL, which is not a grade span; gold ignores NULLs.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 108,
+  "pair_id": "alpha:1106",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Kevin Berigaud has NULL player_fifa_api_id, so gold's fifa-id join fails while pred's api-id join succeeds; in the real DB every player has a fifa id.",
+  "implausible_fact": "player with NULL player_fifa_api_id"
+ },
+ {
+  "idx": 109,
+  "pair_id": "alpha:345",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The card has type \"Artifact\" but types \"A\"; in the real DB type = 'Artifact' always implies types = 'Artifact'.",
+  "implausible_fact": "type and types columns inconsistent"
+ },
+ {
+  "idx": 110,
+  "pair_id": "alpha:184",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The same disposition holds two junior cards, so gold counts 2 while pred counts 1 client; in the real DB each disp has at most one card.",
+  "implausible_fact": "two cards for the same disposition"
+ },
+ {
+  "idx": 111,
+  "pair_id": "alpha:1030",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "No 2015/2016 match in the witness is a draw; gold returns nothing while pred names an arbitrary league with zero draws, and both readings of \"most draws\" are arguable.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 112,
+  "pair_id": "alpha:401",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Results differ only in floating-point rounding of the same percentage.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 113,
+  "pair_id": "alpha:134",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two districts tie on A16 = 1542; gold groups by A16 and counts accounts across both districts, which is not any single branch's count.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 114,
+  "pair_id": "alpha:1030",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Neither 2015/2016 match is a draw; gold returns nothing while pred names the only league with zero draws, and both readings are arguable.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 115,
+  "pair_id": "alpha:70",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The Alpine school has SOC 69 but SOCType Preschool; in the real DB SOC 69 always maps to District Community Day Schools.",
+  "implausible_fact": "SOC code inconsistent with SOCType"
+ },
+ {
+  "idx": 116,
+  "pair_id": "alpha:77",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Same school; the values differ only in the last floating-point digit.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 117,
+  "pair_id": "alpha:163",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both districts have exactly one status-A loan; tie handling is unspecified so either district is defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 118,
+  "pair_id": "alpha:479",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No set named Coldsnap exists in the witness, so the count is 0 (pred) while gold's SUM over no rows returns NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 119,
+  "pair_id": "alpha:591",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The Supporter badge has NULL UserId, so gold counts it via Id while pred's COUNT(UserId) skips it; real badges always have a user.",
+  "implausible_fact": "badge with NULL UserId"
+ },
+ {
+  "idx": 120,
+  "pair_id": "alpha:185",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Results differ only in floating-point rounding of the same percentage.",
+  "implausible_fact": null
+ }
+]

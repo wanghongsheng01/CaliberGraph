@@ -1,0 +1,95 @@
+{
+ "n_annotated": 200,
+ "missing": [],
+ "labels_sonnet": {
+  "gold_wrong": 30,
+  "pred_wrong": 23,
+  "implausible_data": 84,
+  "ambiguous": 60,
+  "both_wrong": 3
+ },
+ "labels_opus": {
+  "gold_wrong": 34,
+  "pred_wrong": 23,
+  "implausible_data": 86,
+  "ambiguous": 56,
+  "both_wrong": 1
+ },
+ "M_B1_sonnet_vs_opus": {
+  "n": 200,
+  "agree5": 172,
+  "kappa5": 0.799023830031582,
+  "kappa5_ci": [
+   0.7279301209994989,
+   0.8647349873634002
+  ],
+  "agree2": 182,
+  "kappa2": 0.8158756137479543,
+  "kappa2_ci": [
+   0.7294589178356713,
+   0.8927613941018766
+  ]
+ },
+ "M_B2_by_stage": {
+  "stage1": {
+   "n": 100,
+   "sonnet_imp": 61,
+   "opus_imp": 65
+  },
+  "stage2": {
+   "n": 100,
+   "sonnet_imp": 23,
+   "opus_imp": 21
+  },
+  "H_B2_fisher_one_sided": 3.905785178470294e-08
+ },
+ "M_B3_on_60": {
+  "sonnet_vs_h1": {
+   "n": 60,
+   "agree5": 23,
+   "kappa5": 0.2545332437877771,
+   "kappa5_ci": [
+    0.1557403261912376,
+    0.3675027262813523
+   ],
+   "agree2": 42,
+   "kappa2": 0.17808219178082177,
+   "kappa2_ci": [
+    0.0,
+    0.373913043478261
+   ]
+  },
+  "sonnet_vs_h2": {
+   "n": 60,
+   "agree5": 23,
+   "kappa5": 0.25050641458474004,
+   "kappa5_ci": [
+    0.15201005025125627,
+    0.3661202185792351
+   ],
+   "agree2": 42,
+   "kappa2": 0.17808219178082177,
+   "kappa2_ci": [
+    0.0,
+    0.37499999999999983
+   ]
+  },
+  "sonnet_vs_opus": {
+   "n": 60,
+   "agree5": 53,
+   "kappa5": 0.8349056603773585,
+   "kappa5_ci": [
+    0.7037599696164071,
+    0.9311136624569459
+   ],
+   "agree2": 54,
+   "kappa2": 0.7802197802197802,
+   "kappa2_ci": [
+    0.5901639344262296,
+    0.9283154121863799
+   ]
+  }
+ },
+ "H_B1_binary_kappa_ge_0.60": true,
+ "H_B2_p_unadjusted": 3.905785178470294e-08
+}

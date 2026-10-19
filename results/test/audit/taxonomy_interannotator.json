@@ -1,0 +1,16 @@
+{
+ "n": 100,
+ "primary_agree": 99,
+ "kappa": 0.9877944586842426,
+ "mean_jaccard": 0.885,
+ "disagreements": [
+  {
+   "idx": 35,
+   "pair_id": "csc-32b:561",
+   "a": "null_semantics",
+   "b": "join_path",
+   "note_a": "Gold's subquery picks the top-scored comment whose PostId is NULL (tie on score), yielding no post; pred's join drops that comment and returns another post.",
+   "note_b": "Gold picks the top comment first (tied score, NULL PostId) and finds no post; pred joins to posts before LIMIT, dropping the dangling comment."
+  }
+ ]
+}

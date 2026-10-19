@@ -1,0 +1,231 @@
+{
+ "profile_total": {
+  "columns": 798,
+  "categorical": 293,
+  "never_null": 420,
+  "ucc": 185,
+  "ind_fk": 6,
+  "ind_total": 15,
+  "symmetric": 3,
+  "lookup": 10,
+  "fd_map": 318,
+  "cross": 12,
+  "year_date": 1
+ },
+ "profile_per_db": {
+  "california_schools": {
+   "columns": 89,
+   "categorical": 36,
+   "never_null": 26,
+   "ucc": 25,
+   "ind_fk": 0,
+   "ind_total": 0,
+   "symmetric": 0,
+   "lookup": 0,
+   "fd_map": 49,
+   "cross": 8,
+   "year_date": 0
+  },
+  "card_games": {
+   "columns": 115,
+   "categorical": 54,
+   "never_null": 62,
+   "ucc": 84,
+   "ind_fk": 0,
+   "ind_total": 0,
+   "symmetric": 0,
+   "lookup": 0,
+   "fd_map": 131,
+   "cross": 0,
+   "year_date": 0
+  },
+  "codebase_community": {
+   "columns": 71,
+   "categorical": 8,
+   "never_null": 44,
+   "ucc": 10,
+   "ind_fk": 0,
+   "ind_total": 1,
+   "symmetric": 1,
+   "lookup": 0,
+   "fd_map": 6,
+   "cross": 0,
+   "year_date": 0
+  },
+  "debit_card_specializing": {
+   "columns": 21,
+   "categorical": 6,
+   "never_null": 21,
+   "ucc": 0,
+   "ind_fk": 3,
+   "ind_total": 0,
+   "symmetric": 0,
+   "lookup": 0,
+   "fd_map": 3,
+   "cross": 0,
+   "year_date": 0
+  },
+  "european_football_2": {
+   "columns": 199,
+   "categorical": 72,
+   "never_null": 55,
+   "ucc": 4,
+   "ind_fk": 2,
+   "ind_total": 4,
+   "symmetric": 0,
+   "lookup": 1,
+   "fd_map": 20,
+   "cross": 3,
+   "year_date": 0
+  },
+  "financial": {
+   "columns": 55,
+   "categorical": 21,
+   "never_null": 49,
+   "ucc": 6,
+   "ind_fk": 1,
+   "ind_total": 6,
+   "symmetric": 0,
+   "lookup": 0,
+   "fd_map": 6,
+   "cross": 0,
+   "year_date": 0
+  },
+  "formula_1": {
+   "columns": 94,
+   "categorical": 19,
+   "never_null": 77,
+   "ucc": 24,
+   "ind_fk": 0,
+   "ind_total": 1,
+   "symmetric": 0,
+   "lookup": 2,
+   "fd_map": 28,
+   "cross": 0,
+   "year_date": 1
+  },
+  "student_club": {
+   "columns": 48,
+   "categorical": 40,
+   "never_null": 41,
+   "ucc": 12,
+   "ind_fk": 0,
+   "ind_total": 0,
+   "symmetric": 0,
+   "lookup": 0,
+   "fd_map": 45,
+   "cross": 1,
+   "year_date": 0
+  },
+  "superhero": {
+   "columns": 31,
+   "categorical": 14,
+   "never_null": 25,
+   "ucc": 6,
+   "ind_fk": 0,
+   "ind_total": 0,
+   "symmetric": 0,
+   "lookup": 7,
+   "fd_map": 5,
+   "cross": 0,
+   "year_date": 0
+  },
+  "thrombosis_prediction": {
+   "columns": 64,
+   "categorical": 20,
+   "never_null": 10,
+   "ucc": 12,
+   "ind_fk": 0,
+   "ind_total": 0,
+   "symmetric": 0,
+   "lookup": 0,
+   "fd_map": 25,
+   "cross": 0,
+   "year_date": 0
+  },
+  "toxicology": {
+   "columns": 11,
+   "categorical": 3,
+   "never_null": 10,
+   "ucc": 2,
+   "ind_fk": 0,
+   "ind_total": 3,
+   "symmetric": 2,
+   "lookup": 0,
+   "fd_map": 0,
+   "cross": 0,
+   "year_date": 0
+  }
+ },
+ "violations": {
+  "CaliberGraph": {
+   "n": 1774,
+   "whole": {
+    "null": 82.0,
+    "domain": 97.4,
+    "lookup": 27.2,
+    "ucc": 20.0,
+    "ind": 32.2,
+    "symmetric": 5.9,
+    "valuedep": 40.7,
+    "year_date": 13.8
+   },
+   "referenced": {
+    "null": 42.3,
+    "domain": 72.1,
+    "lookup": 12.0,
+    "ucc": 15.1,
+    "ind": 22.7,
+    "symmetric": 5.5,
+    "valuedep": 20.5,
+    "year_date": 6.4
+   }
+  },
+  "Random fuzzing": {
+   "n": 1511,
+   "whole": {
+    "null": 74.3,
+    "domain": 98.9,
+    "lookup": 27.1,
+    "ucc": 55.5,
+    "ind": 48.5,
+    "symmetric": 6.3,
+    "valuedep": 78.6,
+    "year_date": 15.9
+   },
+   "referenced": {
+    "null": 30.4,
+    "domain": 86.5,
+    "lookup": 10.9,
+    "ucc": 24.0,
+    "ind": 38.2,
+    "symmetric": 5.9,
+    "valuedep": 54.9,
+    "year_date": 7.3
+   }
+  },
+  "ParSEval-L1": {
+   "n": 1196,
+   "whole": {
+    "null": 82.5,
+    "domain": 99.8,
+    "lookup": 28.0,
+    "ucc": 74.5,
+    "ind": 42.4,
+    "symmetric": 7.1,
+    "valuedep": 80.9,
+    "year_date": 12.6
+   },
+   "referenced": {
+    "null": 70.0,
+    "domain": 84.9,
+    "lookup": 14.7,
+    "ucc": 49.3,
+    "ind": 32.2,
+    "symmetric": 6.9,
+    "valuedep": 55.7,
+    "year_date": 6.3
+   }
+  }
+ }
+}

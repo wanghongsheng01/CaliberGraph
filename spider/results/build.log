@@ -1,0 +1,142 @@
+dev 6204 pairs; (EX labels written, not printed)
+battle_death 11 text columns
+car_1 10 text columns
+concert_singer 11 text columns
+course_teach 5 text columns
+cre_Doc_Template_Mgt 9 text columns
+dog_kennels 34 text columns
+employee_hire_evaluation 9 text columns
+flight_2 10 text columns
+museum_visit 4 text columns
+network_1 1 text columns
+orchestra 10 text columns
+pets_1 5 text columns
+poker_player 3 text columns
+real_estate_properties 27 text columns
+singer 3 text columns
+student_transcripts_tracking 32 text columns
+tvshow 20 text columns
+voter_1 3 text columns
+world_1 14 text columns
+wta_1 18 text columns
+  domains done
+  inds done
+battle_death 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+car_1 0s ucc 3 fk+ 0 total 2 sym 0 irr 0 lookup ['continents', 'countries', 'model_list'] yd []
+  domains done
+  inds done
+concert_singer 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+course_teach 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup ['course'] yd []
+  domains done
+  inds done
+cre_Doc_Template_Mgt 0s ucc 2 fk+ 0 total 0 sym 0 irr 0 lookup ['Ref_Template_Types'] yd []
+  domains done
+  inds done
+dog_kennels 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup ['Breeds', 'Sizes', 'Treatment_Types'] yd []
+  domains done
+  inds done
+employee_hire_evaluation 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+flight_2 0s ucc 0 fk+ 0 total 0 sym 1 irr 1 lookup [] yd []
+  domains done
+  inds done
+museum_visit 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+network_1 0s ucc 0 fk+ 0 total 0 sym 0 irr 2 lookup ['Highschooler'] yd []
+  domains done
+  inds done
+orchestra 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+pets_1 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+poker_player 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+real_estate_properties 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup ['Ref_Feature_Types', 'Ref_Property_Types'] yd []
+  domains done
+  inds done
+singer 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+student_transcripts_tracking 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup ['Student_Enrolment_Courses', 'Transcripts'] yd []
+  domains done
+  inds done
+tvshow 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+voter_1 0s ucc 0 fk+ 0 total 0 sym 0 irr 0 lookup ['CONTESTANTS'] yd []
+  domains done
+  inds done
+world_1 0s ucc 5 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+wta_1 3s ucc 1 fk+ 0 total 0 sym 0 irr 1 lookup [] yd [['matches', 'year', 'tourney_date']]
+battle_death 0s fd 0 map11 0 cross 0 []
+car_1 0s fd 0 map11 5 cross 0 []
+concert_singer 0s fd 0 map11 0 cross 0 []
+course_teach 0s fd 0 map11 0 cross 0 []
+cre_Doc_Template_Mgt 0s fd 0 map11 0 cross 0 []
+dog_kennels 0s fd 0 map11 0 cross 0 []
+employee_hire_evaluation 0s fd 0 map11 0 cross 0 []
+flight_2 0s fd 1 map11 0 cross 0 []
+museum_visit 0s fd 0 map11 0 cross 0 []
+network_1 0s fd 0 map11 0 cross 0 []
+orchestra 0s fd 0 map11 0 cross 0 []
+pets_1 0s fd 1 map11 0 cross 0 []
+poker_player 0s fd 0 map11 0 cross 0 []
+real_estate_properties 0s fd 0 map11 0 cross 0 []
+singer 0s fd 0 map11 0 cross 0 []
+student_transcripts_tracking 0s fd 0 map11 0 cross 0 []
+tvshow 0s fd 0 map11 0 cross 0 []
+voter_1 0s fd 0 map11 0 cross 0 []
+world_1 0s fd 1 map11 16 cross 0 []
+wta_1 0s fd 23 map11 0 cross 4 [('matches', 'winner_hand', 'players', 'hand'), ('matches', 'winner_ioc', 'players', 'country_code'), ('matches', 'loser_hand', 'players', 'hand'), ('matches', 'loser_ioc', 'players', 'country_code')]
+battle_death {'battle': 8, 'ship': 7, 'death': 13}
+car_1 {'continents': 5, 'countries': 15, 'car_makers': 22, 'model_list': 36, 'car_names': 60, 'cars_data': 60}
+concert_singer {'stadium': 9, 'singer': 6, 'concert': 6, 'singer_in_concert': 10}
+course_teach {'course': 10, 'teacher': 7, 'course_arrange': 6}
+cre_Doc_Template_Mgt {'Ref_Template_Types': 5, 'Templates': 20, 'Documents': 15, 'Paragraphs': 15}
+dog_kennels {'Breeds': 3, 'Charges': 3, 'Sizes': 3, 'Treatment_Types': 3, 'Owners': 15, 'Dogs': 15, 'Professionals': 15, 'Treatments': 15}
+employee_hire_evaluation {'employee': 10, 'shop': 9, 'hiring': 7, 'evaluation': 6}
+flight_2 {'airlines': 12, 'airports': 60, 'flights': 60}
+museum_visit {'museum': 8, 'visitor': 6, 'visit': 6}
+network_1 {'Highschooler': 16, 'Friend': 20, 'Likes': 10}
+orchestra {'conductor': 12, 'orchestra': 12, 'performance': 11, 'show': 5}
+pets_1 {'Student': 34, 'Has_Pet': 3, 'Pets': 3}
+poker_player {'poker_player': 5, 'people': 7}
+real_estate_properties {'Ref_Feature_Types': 2, 'Ref_Property_Types': 5, 'Other_Available_Features': 3, 'Properties': 15, 'Other_Property_Features': 15}
+singer {'singer': 8, 'song': 8}
+student_transcripts_tracking {'Addresses': 15, 'Courses': 15, 'Departments': 15, 'Degree_Programs': 15, 'Sections': 15, 'Semesters': 15, 'Students': 15, 'Student_Enrolment': 15, 'Student_Enrolment_Courses': 15, 'Transcripts': 15, 'Transcript_Contents': 15}
+tvshow {'TV_Channel': 15, 'TV_series': 12, 'Cartoon': 12}
+voter_1 {'AREA_CODE_STATE': 60, 'CONTESTANTS': 11, 'VOTES': 4}
+world_1 {'city': 60, 'country': 60, 'countrylanguage': 60}
+wta_1 {'players': 60, 'matches': 60, 'rankings': 60}
+battle_death 18 indexes 0s
+car_1 23 indexes 1s
+concert_singer 18 indexes 0s
+course_teach 9 indexes 0s
+cre_Doc_Template_Mgt 13 indexes 1s
+dog_kennels 43 indexes 1s
+employee_hire_evaluation 15 indexes 0s
+flight_2 12 indexes 1s
+museum_visit 12 indexes 0s
+network_1 7 indexes 0s
+orchestra 17 indexes 0s
+pets_1 12 indexes 0s
+poker_player 11 indexes 0s
+real_estate_properties 13 indexes 0s
+singer 9 indexes 0s
+student_transcripts_tracking 50 indexes 1s
+tvshow 22 indexes 0s
+voter_1 9 indexes 0s
+world_1 21 indexes 1s
+wta_1 26 indexes 2s
+Counter({(True, True): 6087, (True, False): 117})

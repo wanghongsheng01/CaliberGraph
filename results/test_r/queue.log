@@ -1,0 +1,19 @@
+2026-10-14T09:52:36+08:00 START python3 run_method.py --method cgx_r --split test --subset exc --dedup --budget 5 --procs 2 --out ../results/test_r/cgx_r_exc.jsonl
+2026-10-14T13:20:17+08:00 END python3 run_method.py --method
+2026-10-14T13:20:17+08:00 START python3 run_method.py --method fuzz_r --split test --subset exc --dedup --budget 5 --procs 2 --out ../results/test_r/fuzz_r_exc.jsonl
+2026-10-14T16:57:43+08:00 END python3 run_method.py --method
+2026-10-14T16:57:43+08:00 START python3 run_method.py --method cgx_r --split test --subset exi --dedup --budget 5 --procs 2 --out ../results/test_r/cgx_r_exi.jsonl
+2026-10-14T17:08:25+08:00 END python3 run_method.py --method
+2026-10-14T17:08:25+08:00 START python3 run_method.py --method fuzz_r --split test --subset exi --dedup --budget 5 --procs 2 --out ../results/test_r/fuzz_r_exi.jsonl
+2026-10-14T17:36:05+08:00 END python3 run_method.py --method
+2026-10-14T17:36:05+08:00 START ./baselines/parseval_env.sh baselines/parseval_run.py --variant r --split test --subset exc --ids ../data/test_subsample.json --budget 5 --procs 2 --out ../results/test_r/parseval_r_sub.jsonl
+2026-10-14T18:17:25+08:00 END ./baselines/parseval_env.sh baselines/parseval_run.py --variant
+2026-10-14T18:17:26+08:00 START python3 run_method.py --method cgx_r_noreal --split test --subset exc --dedup --ids ../data/test_subsample.json --budget 5 --procs 2 --out ../results/test_r/abl_cgx_r_noreal.jsonl
+2026-10-14T18:53:06+08:00 END python3 run_method.py --method
+2026-10-14T18:53:06+08:00 START python3 run_method.py --method cgx_r_nosyn --split test --subset exc --dedup --ids ../data/test_subsample.json --budget 5 --procs 2 --out ../results/test_r/abl_cgx_r_nosyn.jsonl
+2026-10-14T19:27:21+08:00 END python3 run_method.py --method
+2026-10-14T19:27:21+08:00 START python3 run_method.py --method cgx_r_noanchor --split test --subset exc --dedup --ids ../data/test_subsample.json --budget 5 --procs 2 --out ../results/test_r/abl_cgx_r_noanchor.jsonl
+2026-10-14T20:01:51+08:00 END python3 run_method.py --method
+2026-10-14T20:01:51+08:00 START python3 run_method.py --method cgx_r_nojoin --split test --subset exc --dedup --ids ../data/test_subsample.json --budget 5 --procs 2 --out ../results/test_r/abl_cgx_r_nojoin.jsonl
+2026-10-14T20:36:08+08:00 END python3 run_method.py --method
+2026-10-14T20:36:08+08:00 ALL_DONE

@@ -1,0 +1,39 @@
+{
+"customers_and_addresses": [
+"CREATE TABLE `Addresses` (\n`address_id` INTEGER PRIMARY KEY,\n`address_content` VARCHAR(80),\n`city` VARCHAR(50),\n`zip_postcode` VARCHAR(20),\n`state_province_county` VARCHAR(50),\n`country` VARCHAR(50),\n`other_address_details` VARCHAR(255)\n)",
+"CREATE TABLE `Products` (\n`product_id` INTEGER PRIMARY KEY,\n`product_details` VARCHAR(255)\n)",
+"CREATE TABLE `Customers` (\n`customer_id` INTEGER PRIMARY KEY,\n`payment_method` VARCHAR(15) NOT NULL,\n`customer_name` VARCHAR(80),\n`date_became_customer` DATETIME,\n`other_customer_details` VARCHAR(255)\n)",
+"CREATE TABLE `Customer_Addresses` (\n`customer_id` INTEGER NOT NULL,\n`address_id` INTEGER NOT NULL,\n`date_address_from` DATETIME NOT NULL,\n`address_type` VARCHAR(15) NOT NULL,\n`date_address_to` DATETIME,\nFOREIGN KEY (`address_id` ) REFERENCES `Addresses`(`address_id` ),\nFOREIGN KEY (`customer_id` ) REFERENCES `Customers`(`customer_id` )\n)",
+"CREATE TABLE `Customer_Contact_Channels` (\n`customer_id` INTEGER NOT NULL,\n`channel_code` VARCHAR(15) NOT NULL,\n`active_from_date` DATETIME NOT NULL,\n`active_to_date` DATETIME,\n`contact_number` VARCHAR(50) NOT NULL,\nFOREIGN KEY (`customer_id` ) REFERENCES `Customers`(`customer_id` )\n)",
+"CREATE TABLE `Customer_Orders` (\n`order_id` INTEGER PRIMARY KEY,\n`customer_id` INTEGER NOT NULL,\n`order_status` VARCHAR(15) NOT NULL,\n`order_date` DATETIME,\n`order_details` VARCHAR(255),\nFOREIGN KEY (`customer_id` ) REFERENCES `Customers`(`customer_id` )\n)",
+"CREATE TABLE `Order_Items` (\n`order_id` INTEGER NOT NULL,\n`product_id` INTEGER NOT NULL,\n`order_quantity` VARCHAR(15),\nFOREIGN KEY (`product_id` ) REFERENCES `Products`(`product_id` ),\nFOREIGN KEY (`order_id` ) REFERENCES `Customer_Orders`(`order_id` )\n)"
+],
+"debate": [
+"CREATE TABLE \"people\" (\n\"People_ID\" int,\n\"District\" text,\n\"Name\" text,\n\"Party\" text,\n\"Age\" int,\nPRIMARY KEY (\"People_ID\")\n)",
+"CREATE TABLE \"debate\" (\n\"Debate_ID\" int,\n\"Date\" text,\n\"Venue\" text,\n\"Num_of_Audience\" int,\nPRIMARY KEY (\"Debate_ID\")\n)",
+"CREATE TABLE \"debate_people\" (\n\"Debate_ID\" int,\n\"Affirmative\" int,\n\"Negative\" int,\n\"If_Affirmative_Win\" bool,\nPRIMARY KEY (\"Debate_ID\",\"Affirmative\",\"Negative\"),\nFOREIGN KEY (\"Debate_ID\") REFERENCES `debate`(\"Debate_ID\"),\nFOREIGN KEY (\"Affirmative\") REFERENCES `people`(\"People_ID\"),\nFOREIGN KEY (\"Negative\") REFERENCES `people`(\"People_ID\")\n)"
+],
+"department_management": [
+"CREATE TABLE \"department\" (\n\"Department_ID\" int,\n\"Name\" text,\n\"Creation\" text,\n\"Ranking\" int,\n\"Budget_in_Billions\" real,\n\"Num_Employees\" real,\nPRIMARY KEY (\"Department_ID\")\n)",
+"CREATE TABLE \"head\" (\n\"head_ID\" int,\n\"name\" text,\n\"born_state\" text,\n\"age\" real,\nPRIMARY KEY (\"head_ID\")\n)",
+"CREATE TABLE \"management\" (\n\"department_ID\" int,\n\"head_ID\" int,\n\"temporary_acting\" text,\nPRIMARY KEY (\"Department_ID\",\"head_ID\"),\nFOREIGN KEY (\"Department_ID\") REFERENCES `department`(\"Department_ID\"),\nFOREIGN KEY (\"head_ID\") REFERENCES `head`(\"head_ID\")\n)"
+],
+"device": [
+"CREATE TABLE \"device\" (\n\"Device_ID\" int,\n\"Device\" text,\n\"Carrier\" text,\n\"Package_Version\" text,\n\"Applications\" text,\n\"Software_Platform\" text,\nPRIMARY KEY (\"Device_ID\")\n)",
+"CREATE TABLE \"shop\" (\n\"Shop_ID\" int,\n\"Shop_Name\" text,\n\"Location\" text,\n\"Open_Date\" text,\n\"Open_Year\" int,\nPRIMARY KEY (\"Shop_ID\")\n)",
+"CREATE TABLE \"stock\" (\n\"Shop_ID\" int,\n\"Device_ID\" int,\n\"Quantity\" int,\nPRIMARY KEY (\"Shop_ID\",\"Device_ID\"),\nFOREIGN KEY (`Shop_ID`) REFERENCES `shop`(`Shop_ID`),\nFOREIGN KEY (`Device_ID`) REFERENCES `device`(`Device_ID`)\n)"
+],
+"phone_market": [
+"CREATE TABLE \"phone\" (\n\"Name\" text,\n\"Phone_ID\" int,\n\"Memory_in_G\" int,\n\"Carrier\" text,\n\"Price\" real,\nPRIMARY KEY (\"Phone_ID\")\n)",
+"CREATE TABLE \"market\" (\n\"Market_ID\" int,\n\"District\" text,\n\"Num_of_employees\" int,\n\"Num_of_shops\" real,\n\"Ranking\" int,\nPRIMARY KEY (\"Market_ID\")\n)",
+"CREATE TABLE \"phone_market\" (\n\"Market_ID\" int,\n\"Phone_ID\" text,\n\"Num_of_stock\" int,\nPRIMARY KEY (\"Market_ID\",\"Phone_ID\"),\nFOREIGN KEY (\"Market_ID\") REFERENCES `market`(\"Market_ID\"),\nFOREIGN KEY (\"Phone_ID\") REFERENCES `phone`(\"Phone_ID\")\n)"
+],
+"soccer_1": [
+"CREATE TABLE \"Player_Attributes\" (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`player_fifa_api_id`\tINTEGER,\n\t`player_api_id`\tINTEGER,\n\t`date`\tTEXT,\n\t`overall_rating`\tINTEGER,\n\t`potential`\tINTEGER,\n\t`preferred_foot`\tTEXT,\n\t`attacking_work_rate`\tTEXT,\n\t`defensive_work_rate`\tTEXT,\n\t`crossing`\tINTEGER,\n\t`finishing`\tINTEGER,\n\t`heading_accuracy`\tINTEGER,\n\t`short_passing`\tINTEGER,\n\t`volleys`\tINTEGER,\n\t`dribbling`\tINTEGER,\n\t`curve`\tINTEGER,\n\t`free_kick_accuracy`\tINTEGER,\n\t`long_passing`\tINTEGER,\n\t`ball_control`\tINTEGER,\n\t`acceleration`\tINTEGER,\n\t`sprint_speed`\tINTEGER,\n\t`agility`\tINTEGER,\n\t`reactions`\tINTEGER,\n\t`balance`\tINTEGER,\n\t`shot_power`\tINTEGER,\n\t`jumping`\tINTEGER,\n\t`stamina`\tINTEGER,\n\t`strength`\tINTEGER,\n\t`long_shots`\tINTEGER,\n\t`aggression`\tINTEGER,\n\t`interceptions`\tINTEGER,\n\t`positioning`\tINTEGER,\n\t`vision`\tINTEGER,\n\t`penalties`\tINTEGER,\n\t`marking`\tINTEGER,\n\t`standing_tackle`\tINTEGER,\n\t`sliding_tackle`\tINTEGER,\n\t`gk_diving`\tINTEGER,\n\t`gk_handling`\tINTEGER,\n\t`gk_kicking`\tINTEGER,\n\t`gk_positioning`\tINTEGER,\n\t`gk_reflexes`\tINTEGER,\n\tFOREIGN KEY(`player_fifa_api_id`) REFERENCES `Player`(`player_fifa_api_id`),\n\tFOREIGN KEY(`player_api_id`) REFERENCES `Player`(`player_api_id`)\n)",
+"CREATE TABLE `Player` (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`player_api_id`\tINTEGER UNIQUE,\n\t`player_name`\tTEXT,\n\t`player_fifa_api_id`\tINTEGER UNIQUE,\n\t`birthday`\tTEXT,\n\t`height`\tINTEGER,\n\t`weight`\tINTEGER\n)",
+"CREATE TABLE `League` (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`country_id`\tINTEGER,\n\t`name`\tTEXT UNIQUE,\n\tFOREIGN KEY(`country_id`) REFERENCES `Country`(`id`)\n)",
+"CREATE TABLE `Country` (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`name`\tTEXT UNIQUE\n)",
+"CREATE TABLE \"Team\" (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`team_api_id`\tINTEGER UNIQUE,\n\t`team_fifa_api_id`\tINTEGER,\n\t`team_long_name`\tTEXT,\n\t`team_short_name`\tTEXT\n)",
+"CREATE TABLE `Team_Attributes` (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`team_fifa_api_id`\tINTEGER,\n\t`team_api_id`\tINTEGER,\n\t`date`\tTEXT,\n\t`buildUpPlaySpeed`\tINTEGER,\n\t`buildUpPlaySpeedClass`\tTEXT,\n\t`buildUpPlayDribbling`\tINTEGER,\n\t`buildUpPlayDribblingClass`\tTEXT,\n\t`buildUpPlayPassing`\tINTEGER,\n\t`buildUpPlayPassingClass`\tTEXT,\n\t`buildUpPlayPositioningClass`\tTEXT,\n\t`chanceCreationPassing`\tINTEGER,\n\t`chanceCreationPassingClass`\tTEXT,\n\t`chanceCreationCrossing`\tINTEGER,\n\t`chanceCreationCrossingClass`\tTEXT,\n\t`chanceCreationShooting`\tINTEGER,\n\t`chanceCreationShootingClass`\tTEXT,\n\t`chanceCreationPositioningClass`\tTEXT,\n\t`defencePressure`\tINTEGER,\n\t`defencePressureClass`\tTEXT,\n\t`defenceAggression`\tINTEGER,\n\t`defenceAggressionClass`\tTEXT,\n\t`defenceTeamWidth`\tINTEGER,\n\t`defenceTeamWidthClass`\tTEXT,\n\t`defenceDefenderLineClass`\tTEXT,\n\tFOREIGN KEY(`team_fifa_api_id`) REFERENCES `Team`(`team_fifa_api_id`),\n\tFOREIGN KEY(`team_api_id`) REFERENCES `Team`(`team_api_id`)\n)"
+]
+}

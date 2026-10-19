@@ -1,0 +1,220 @@
+{
+ "n": 30,
+ "agree_a": 26,
+ "agree_b": 27,
+ "n_ai_agree": 24,
+ "agree_on_ai_agree": 24,
+ "agree_any": 29,
+ "items": [
+  {
+   "idx": 1,
+   "pair_id": "chess:867",
+   "human": "pred_wrong",
+   "ai_a": "pred_wrong",
+   "ai_b": "pred_wrong"
+  },
+  {
+   "idx": 10,
+   "pair_id": "gsr:1202",
+   "human": "gold_wrong",
+   "ai_a": "gold_wrong",
+   "ai_b": "gold_wrong"
+  },
+  {
+   "idx": 15,
+   "pair_id": "alpha:1145",
+   "human": "ambiguous",
+   "ai_a": "ambiguous",
+   "ai_b": "ambiguous"
+  },
+  {
+   "idx": 16,
+   "pair_id": "gena_submission_1:1342",
+   "human": "pred_wrong",
+   "ai_a": "implausible_data",
+   "ai_b": "pred_wrong"
+  },
+  {
+   "idx": 27,
+   "pair_id": "csc-32b:637",
+   "human": "gold_wrong",
+   "ai_a": "implausible_data",
+   "ai_b": "gold_wrong"
+  },
+  {
+   "idx": 29,
+   "pair_id": "omni-32-majority:456",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "ambiguous"
+  },
+  {
+   "idx": 34,
+   "pair_id": "alpha:755",
+   "human": "ambiguous",
+   "ai_a": "ambiguous",
+   "ai_b": "ambiguous"
+  },
+  {
+   "idx": 39,
+   "pair_id": "chess:637",
+   "human": "gold_wrong",
+   "ai_a": "implausible_data",
+   "ai_b": "gold_wrong"
+  },
+  {
+   "idx": 42,
+   "pair_id": "chess:789",
+   "human": "gold_wrong",
+   "ai_a": "gold_wrong",
+   "ai_b": "gold_wrong"
+  },
+  {
+   "idx": 44,
+   "pair_id": "chess:260",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "pred_wrong"
+  },
+  {
+   "idx": 46,
+   "pair_id": "csc-7b:245",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 51,
+   "pair_id": "alpha:1513",
+   "human": "pred_wrong",
+   "ai_a": "gold_wrong",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 55,
+   "pair_id": "gena_submission_1:74",
+   "human": "ambiguous",
+   "ai_a": "ambiguous",
+   "ai_b": "ambiguous"
+  },
+  {
+   "idx": 57,
+   "pair_id": "gsr:801",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 62,
+   "pair_id": "omni-32-majority:273",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 63,
+   "pair_id": "csc-32b:260",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 68,
+   "pair_id": "rsl:1495",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 69,
+   "pair_id": "csc-7b:426",
+   "human": "gold_wrong",
+   "ai_a": "gold_wrong",
+   "ai_b": "gold_wrong"
+  },
+  {
+   "idx": 72,
+   "pair_id": "csc-7b:1391",
+   "human": "gold_wrong",
+   "ai_a": "gold_wrong",
+   "ai_b": "gold_wrong"
+  },
+  {
+   "idx": 73,
+   "pair_id": "csc-7b:107",
+   "human": "pred_wrong",
+   "ai_a": "pred_wrong",
+   "ai_b": "pred_wrong"
+  },
+  {
+   "idx": 77,
+   "pair_id": "rsl:131",
+   "human": "pred_wrong",
+   "ai_a": "pred_wrong",
+   "ai_b": "pred_wrong"
+  },
+  {
+   "idx": 81,
+   "pair_id": "gsr:1101",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 83,
+   "pair_id": "gsr:512",
+   "human": "gold_wrong",
+   "ai_a": "gold_wrong",
+   "ai_b": "gold_wrong"
+  },
+  {
+   "idx": 84,
+   "pair_id": "gsr:98",
+   "human": "gold_wrong",
+   "ai_a": "gold_wrong",
+   "ai_b": "gold_wrong"
+  },
+  {
+   "idx": 85,
+   "pair_id": "csc-7b:1013",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 86,
+   "pair_id": "rsl:695",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 87,
+   "pair_id": "gena_submission_2:75",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 89,
+   "pair_id": "omni-32-majority:112",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 90,
+   "pair_id": "alpha:1015",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  },
+  {
+   "idx": 97,
+   "pair_id": "gena_submission_1:1057",
+   "human": "implausible_data",
+   "ai_a": "implausible_data",
+   "ai_b": "implausible_data"
+  }
+ ]
+}

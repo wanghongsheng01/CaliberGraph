@@ -1,0 +1,71 @@
+\section{CaliberGraph and CaliberGraph-R}\label{sec:method}
+
+CaliberGraph takes $(\mathcal S,\Sigma)$, $Q_g$, $Q_p$, a target tier $\mathcal A$ and a wall-clock budget $B$, and returns a certified witness or nothing (Fig.~\ref{fig:overview}). Every candidate database is executed by SQLite itself, so the method inherits SQLite's type affinity, three-valued logic, string and date functions, integer division and tie-breaking instead of modelling them. Four components guide the search; each can be disabled for ablation.
+
+\input{figs/overview}
+
+\textbf{Pair analysis and diff anchors.} Both queries are parsed in the SQLite dialect; column references are resolved to $(T,c)$ through aliases, subqueries and CTEs. For each query $Q$ we collect its tables $\mathrm{tab}(Q)$, its column equalities $E(Q)$ (including \texttt{IN}-subquery pairs) and its \emph{atoms} $\mathit{At}(Q)$: comparisons, \texttt{LIKE}, \texttt{IN}, \texttt{BETWEEN} and \texttt{IS [NOT] NULL} between a column, optionally wrapped in one function (\texttt{strftime}, \texttt{substr}, \texttt{lower}, \texttt{CAST}, $\pm k$, \dots), and literals. The \emph{anchor atoms} are those whose normal form (resolved names, canonical operator) occurs in only one query, and the \emph{anchor columns} add every column referenced, projected, ordered, grouped or aggregated in only one query. Anchors localise where the queries can disagree.
+
+\textbf{Join-graph completion.} Let $\mathcal T^{*}$ be $\mathrm{tab}(Q_g)\cup\mathrm{tab}(Q_p)$ closed under foreign-key parents. Columns of $\mathcal T^{*}$ are partitioned into classes by the closure of $E(Q_g)\cup E(Q_p)$ and of the foreign keys, computed with union--find. A \emph{probe} assigns one value per class; its materialisation contains one row per referenced table, so that all equated columns agree, and a repair step adds parent rows for dangling foreign keys, fills \texttt{NOT NULL} columns and drops duplicate keys. Key classes receive distinct values in distinct probes.
+
+\begin{proposition}[Reachability]
+If a probe makes every atom of the outermost \texttt{WHERE} clause of $Q$ true, its rows form a joined tuple of $Q$ that satisfies the join conditions and filters of $Q$ in the repaired database.
+\end{proposition}
+\noindent Each equality of $E(Q)$ relates columns of one class, which take one value; repair only adds rows, fills \texttt{NULL}s in \texttt{NOT NULL} columns and drops later duplicates, so the probe's rows are unchanged. Random rows satisfy a join only by chance, which is why fuzzing draws keys from tiny domains; probes reach the output by construction whenever their filters hold.
+
+\textbf{SQLite-aware value domain.} Each class receives a pool of values from the atoms on its columns: each literal $v$ and $v\pm1$, $v\pm0.5$ for numeric columns (integer division, \texttt{CAST}); case and padding variants of strings (\texttt{=} is case-sensitive, \texttt{LIKE} is not); pre-images under wrapping functions (e.g.\ \texttt{'2012-06-15 10:00:00'} for \texttt{strftime('\%Y',$c$)='2012'}); matching and non-matching \texttt{LIKE} instances; and values strictly between two comparable literals. Values are coerced to the declared type, and text of an unobserved shape is replaced by an observed sample.
+
+\textbf{Isolation and controlled growth.} Aggregates, \texttt{DISTINCT}, \texttt{GROUP BY} and \texttt{ORDER BY}\dots\texttt{LIMIT} can \emph{mask} a difference. The search therefore starts from single-probe databases, in which one joined tuple determines the output, and grows them only with operators that target a masking mechanism (Table~\ref{tab:operators}).
+
+\begin{table}[t]
+\centering\footnotesize
+\caption{Growth operators (each followed by repair).}\label{tab:operators}
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}X@{}}
+\toprule
+Operator & Construction: difference exposed\\
+\midrule
+duplicate & row copy with fresh keys: \texttt{DISTINCT}, \texttt{COUNT(DISTINCT)}\\
+fan-out & $n$ child rows of a join: multiplicity, \texttt{HAVING COUNT}$>n$\\
+tie probe & fresh copy tied on ordered columns, both insertion orders: \texttt{LIMIT} tie-breaking\\
+window & $\ell{+}o{+}1$ tie probes: rows at \texttt{LIMIT}~$\ell$ \texttt{OFFSET}~$o$ borders\\
+literal cover & one probe per equality literal: \texttt{CASE} branches, \texttt{IN} lists\\
+decoy & a row that joins nothing: outer joins, anti-joins, \texttt{NOT IN}\\
+violating & a probe failing the filters: empty inputs, \texttt{MAX} over no row\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{algorithm}[t]
+\caption{CaliberGraph (CaliberGraph-R adds line 4)}\label{alg:main}
+\footnotesize
+\begin{algorithmic}[1]
+\Require DDL $(\mathcal S,\Sigma)$, queries $Q_g,Q_p$, tier $\mathcal A$, budget $B$; for $\mathcal A_R$: $D_0$, $\Pi$
+\Ensure witness $W\in\mathcal A$ with $\neg\mathcal C_{\mathrm{set}}(Q_g(W),Q_p(W))$, or $\bot$
+\State analyse $Q_g,Q_p$: equalities $E$, atoms $\mathit{At}$, anchors
+\State union--find column classes over $\mathcal T^{*}$; a value pool per class
+\State $\mathit{Pool}\gets\emptyset$
+\State \textbf{if} $\mathcal A=\mathcal A_R$: put real sub-databases (anchored retrieval, join completion, real growth) first in the stream
+\For{each $D$ in the candidate stream \textbf{while} time $<B$}
+  \State $(r_g,r_p)\gets$ run $Q_g,Q_p$ on $D$ in a savepoint
+  \If{$\mathrm{set}(r_g)\neq\mathrm{set}(r_p)$ \textbf{and} \Call{Certify}{$D,\mathcal A$}}
+    \State \Return $D$ \Comment{re-certified on a fresh connection}
+  \EndIf
+  \State add $D$ to $\mathit{Pool}$ with weight $=$ number of non-empty results among $r_g,r_p$
+\EndFor
+\State \Return $\bot$
+\Statex \emph{Candidate stream, in order:} single probes for $Q_g$, $Q_p$ and both; two-probe combinations; growth operators (Table~\ref{tab:operators}); boundary and \texttt{NULL} variants of anchor classes; then mutations of parents drawn from $\mathit{Pool}$ by weight, each followed by repair
+\end{algorithmic}
+\end{algorithm}
+
+\textbf{Search and certification.} The candidate stream (Algorithm~\ref{alg:main}) enumerates single-probe databases satisfying $Q_g$, $Q_p$ and both, then two-probe combinations, the growth structures and boundary and \texttt{NULL} variants of anchor classes, and finally runs a mutation loop until the budget expires (parents weighted by how many queries return rows; 70\,\% of value changes on anchor columns). Each candidate is evaluated in a savepoint of one in-memory SQLite connection (a few hundred microseconds). A candidate on which the results differ is returned only if the certifier accepts it at the target tier, and the certifier is re-run on a fresh connection before reporting. \emph{Soundness} is immediate: a returned $W$ is in $\mathcal A$ and separates the original strings on SQLite. The guarantee is one-sided and relative to the correctness of SQLite and the certifier. CaliberGraph+SC (``SC'': SpotIt+ constraints) additionally uses the constraints mined by SpotIt+ for value pools and acceptance, so that it has the same knowledge as SpotIt+; no other self-run tool uses them.
+
+\subsection{Data-grounded search for $\mathcal A_R$}\label{sec:realsearch}
+CaliberGraph-R changes where candidate rows come from. It reads $D_0$ (through an indexed read-only copy) and $\Pi$, and searches \emph{real sub-databases} before synthesis. A sub-database of $D_0$ that is closed under the inclusion dependencies of $\Pi$ satisfies the profile, except for rare rows that violate an approximate cross-key dependency.
+\begin{itemize}
+\item \emph{Diff-anchored retrieval.} The atoms of each query on table $T$ are translated back to SQL predicates $\varphi_g^T,\varphi_p^T$; rows with $\varphi_g^T\wedge\neg\varphi_p^T$ or $\varphi_p^T\wedge\neg\varphi_g^T$ are retrieved first (the filters disagree on them), then rows satisfying both, one, or neither.
+\item \emph{Join completion.} Each seed row is completed along the join graph with real related rows, preferably of the same predicate mode, and closed under foreign keys, undeclared foreign keys and total participation.
+\item \emph{Real growth.} Sub-databases are combined (a row only one query selects next to rows both select) and grown with real rows that tie on an \texttt{ORDER BY} column, the first $k{+}1$ rows of a \texttt{LIMIT}~$k$ window, real \texttt{NULL}s and real duplicates; they are shrunk by single-row deletions, and an entity can be cloned with the rows that reference it.
+\item \emph{Constrained synthesis.} If no real sub-database separates the queries, the synthetic search continues from the evaluated sub-databases with pools filtered by $\Pi$, untouched columns filled from real template rows, and a repair step that also enforces $\Pi$.
+\end{itemize}
+
+\textbf{Example (development pair).} For BIRD question 1020 (``Which player has the highest overall rating?''), $Q_g$ orders \texttt{Player\_Attributes} by \texttt{overall\_rating DESC LIMIT 1}, whereas the Alpha-SQL prediction selects every row equal to the maximum rating. Both return one player on $D_0$. CaliberGraph-R retrieves a real attribute record (rating 84) with its player, then adds a \emph{real} record of another player with the same rating. On this four-row database, every row of which occurs in BIRD, $Q_g$ returns one player and $Q_p$ two; the witness is certified at $\mathcal A_R$ after 28 candidates and 0.22\,s. Whether the prediction or the gold query is right depends on how the question treats ties, which is what attribution judges.

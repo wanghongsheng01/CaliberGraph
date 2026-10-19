@@ -1,0 +1,283 @@
+700 items; 60 human-validation items
+{
+ "n": 700,
+ "K": 20,
+ "outcome_by_stage": {
+  "1": {
+   "vanishes": 279,
+   "unrepairable": 28,
+   "survives": 193
+  },
+  "2": {
+   "realistic_as_is": 200
+  }
+ },
+ "outcome_by_ai": {
+  "ambiguous": {
+   "survives": 55,
+   "vanishes": 34,
+   "unrepairable": 2,
+   "realistic_as_is": 80
+  },
+  "both_wrong": {
+   "survives": 4,
+   "vanishes": 1,
+   "realistic_as_is": 1
+  },
+  "gold_wrong": {
+   "survives": 32,
+   "vanishes": 20,
+   "unrepairable": 2,
+   "realistic_as_is": 42
+  },
+  "implausible_data": {
+   "vanishes": 212,
+   "unrepairable": 19,
+   "survives": 73,
+   "realistic_as_is": 45
+  },
+  "pred_wrong": {
+   "survives": 29,
+   "vanishes": 12,
+   "unrepairable": 5,
+   "realistic_as_is": 32
+  }
+ },
+ "outcome_by_stage_ai": {
+  "1|ambiguous": {
+   "survives": 55,
+   "vanishes": 34,
+   "unrepairable": 2
+  },
+  "1|both_wrong": {
+   "survives": 4,
+   "vanishes": 1
+  },
+  "1|gold_wrong": {
+   "survives": 32,
+   "vanishes": 20,
+   "unrepairable": 2
+  },
+  "1|implausible_data": {
+   "vanishes": 212,
+   "unrepairable": 19,
+   "survives": 73
+  },
+  "1|pred_wrong": {
+   "survives": 29,
+   "vanishes": 12,
+   "unrepairable": 5
+  },
+  "2|ambiguous": {
+   "realistic_as_is": 80
+  },
+  "2|both_wrong": {
+   "realistic_as_is": 1
+  },
+  "2|gold_wrong": {
+   "realistic_as_is": 42
+  },
+  "2|implausible_data": {
+   "realistic_as_is": 45
+  },
+  "2|pred_wrong": {
+   "realistic_as_is": 32
+  }
+ },
+ "outcome_by_tool": {
+  "CaliberGraph-R@R": {
+   "realistic_as_is": 100
+  },
+  "CaliberGraph@L1f": {
+   "vanishes": 56,
+   "survives": 40,
+   "unrepairable": 4
+  },
+  "Fuzz-R@R": {
+   "realistic_as_is": 100
+  },
+  "Fuzz@L1f": {
+   "survives": 42,
+   "vanishes": 58
+  },
+  "ParSEval-L1@L1f": {
+   "unrepairable": 10,
+   "vanishes": 53,
+   "survives": 37
+  },
+  "SpotIt+@L0": {
+   "vanishes": 49,
+   "survives": 45,
+   "unrepairable": 6
+  },
+  "SpotIt@L0": {
+   "vanishes": 63,
+   "survives": 29,
+   "unrepairable": 8
+  }
+ },
+ "pairAR_by_ai": {
+  "ambiguous": {
+   "True": 169,
+   "False": 2
+  },
+  "both_wrong": {
+   "True": 5,
+   "False": 1
+  },
+  "gold_wrong": {
+   "True": 87,
+   "False": 9
+  },
+  "implausible_data": {
+   "False": 144,
+   "True": 205
+  },
+  "pred_wrong": {
+   "True": 77,
+   "False": 1
+  }
+ },
+ "pairAR_by_stage": {
+  "1": {
+   "False": 157,
+   "True": 343
+  },
+  "2": {
+   "True": 200
+  }
+ },
+ "hv_outcome_by_ai": {
+  "ambiguous": {
+   "vanishes": 3,
+   "survives": 5,
+   "realistic_as_is": 12
+  },
+  "gold_wrong": {
+   "vanishes": 3,
+   "survives": 5,
+   "realistic_as_is": 7
+  },
+  "implausible_data": {
+   "survives": 4,
+   "vanishes": 7,
+   "unrepairable": 3,
+   "realistic_as_is": 7
+  },
+  "pred_wrong": {
+   "realistic_as_is": 4
+  }
+ },
+ "hv_outcome_by_human_consensus": {
+  "ambiguous": {
+   "vanishes": 1,
+   "realistic_as_is": 1
+  },
+  "both_wrong": {
+   "realistic_as_is": 1
+  },
+  "disagree": {
+   "survives": 1,
+   "vanishes": 2,
+   "realistic_as_is": 6
+  },
+  "gold_wrong": {
+   "vanishes": 7,
+   "survives": 9,
+   "unrepairable": 2,
+   "realistic_as_is": 11
+  },
+  "pred_wrong": {
+   "vanishes": 3,
+   "survives": 4,
+   "unrepairable": 1,
+   "realistic_as_is": 11
+  }
+ },
+ "hv_outcome_by_h1": {
+  "ambiguous": {
+   "vanishes": 1,
+   "realistic_as_is": 1
+  },
+  "both_wrong": {
+   "realistic_as_is": 1
+  },
+  "gold_wrong": {
+   "vanishes": 8,
+   "survives": 9,
+   "unrepairable": 2,
+   "realistic_as_is": 12
+  },
+  "implausible_data": {
+   "realistic_as_is": 3
+  },
+  "pred_wrong": {
+   "vanishes": 4,
+   "survives": 5,
+   "unrepairable": 1,
+   "realistic_as_is": 13
+  }
+ },
+ "hv_outcome_by_h2": {
+  "ambiguous": {
+   "vanishes": 1,
+   "realistic_as_is": 1
+  },
+  "both_wrong": {
+   "realistic_as_is": 1
+  },
+  "gold_wrong": {
+   "vanishes": 7,
+   "survives": 10,
+   "unrepairable": 2,
+   "realistic_as_is": 14
+  },
+  "implausible_data": {
+   "vanishes": 2,
+   "realistic_as_is": 1
+  },
+  "pred_wrong": {
+   "vanishes": 3,
+   "survives": 4,
+   "unrepairable": 1,
+   "realistic_as_is": 13
+  }
+ },
+ "hv_pairAR_by_ai": {
+  "ambiguous": {
+   "True": 20
+  },
+  "gold_wrong": {
+   "False": 2,
+   "True": 13
+  },
+  "implausible_data": {
+   "True": 13,
+   "False": 8
+  },
+  "pred_wrong": {
+   "True": 4
+  }
+ },
+ "hv_pairAR_by_human_consensus": {
+  "ambiguous": {
+   "True": 2
+  },
+  "both_wrong": {
+   "True": 1
+  },
+  "disagree": {
+   "True": 8,
+   "False": 1
+  },
+  "gold_wrong": {
+   "False": 7,
+   "True": 22
+  },
+  "pred_wrong": {
+   "True": 17,
+   "False": 2
+  }
+ },
+ "not_differing_initially": 0
+}

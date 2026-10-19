@@ -1,0 +1,553 @@
+{
+ "split": "test",
+ "n_exc": 7995,
+ "n_exi": 3664,
+ "n_questions_exc": 1005,
+ "n_distinct_exc": 6456,
+ "main": {
+  "CaliberGraph": {
+   "L0": 1979,
+   "L1": 1979,
+   "L1f": 1979,
+   "L1n": 1122,
+   "O1f": 585,
+   "O1n": 196,
+   "L2": 467,
+   "contracts_L1f": {
+    "C_set": 1979,
+    "C_bag": 1979,
+    "C_lenient": 1625
+   }
+  },
+  "CaliberGraph+SC": {
+   "L0": 1581,
+   "L1": 1581,
+   "L1f": 1581,
+   "L1n": 1527,
+   "O1f": 0,
+   "O1n": 0,
+   "L2": 1581,
+   "contracts_L1f": {
+    "C_set": 1581,
+    "C_bag": 1581,
+    "C_lenient": 1421
+   }
+  },
+  "ParSEval-L1": {
+   "L0": 1342,
+   "L1": 1342,
+   "L1f": 1342,
+   "L1n": 395,
+   "O1f": 445,
+   "O1n": 51,
+   "L2": 168,
+   "contracts_L1f": {
+    "C_set": 1342,
+    "C_bag": 1342,
+    "C_lenient": 1311
+   }
+  },
+  "ParSEval (official)": {
+   "L0": 1641,
+   "L1": 1283,
+   "L1f": 357,
+   "L1n": 45,
+   "O1f": 0,
+   "O1n": 0,
+   "L2": 23,
+   "contracts_L1f": {
+    "C_set": 357,
+    "C_bag": 357,
+    "C_lenient": 353
+   }
+  },
+  "Random fuzzing": {
+   "L0": 1691,
+   "L1": 1691,
+   "L1f": 1691,
+   "L1n": 1182,
+   "O1f": 103,
+   "O1n": 65,
+   "L2": 560,
+   "contracts_L1f": {
+    "C_set": 1691,
+    "C_bag": 1691,
+    "C_lenient": 1517
+   }
+  },
+  "SpotIt": {
+   "L0": 749,
+   "L1": 749,
+   "L1f": 116,
+   "L1n": 51,
+   "O1f": 0,
+   "O1n": 0,
+   "L2": 22,
+   "contracts_L1f": {
+    "C_set": 116,
+    "C_bag": 116,
+    "C_lenient": 97
+   },
+   "author_claims": 1419
+  },
+  "SpotIt+": {
+   "L0": 512,
+   "L1": 512,
+   "L1f": 204,
+   "L1n": 202,
+   "O1f": 0,
+   "O1n": 0,
+   "L2": 143,
+   "contracts_L1f": {
+    "C_set": 204,
+    "C_bag": 204,
+    "C_lenient": 195
+   },
+   "author_claims": 1125
+  }
+ },
+ "tests": [
+  {
+   "label": "H1",
+   "a": "CaliberGraph",
+   "b": "SpotIt",
+   "tier_a": "L1f",
+   "tier_b": "author-claims",
+   "count_a": 1979,
+   "count_b": 1419,
+   "a_only": 646,
+   "b_only": 86,
+   "diff": 560,
+   "ci95": [
+    437,
+    684
+   ],
+   "p": 5.179545659279502e-107,
+   "p_holm": 1.0359091318559004e-106
+  },
+  {
+   "label": "H2",
+   "a": "CaliberGraph+SC",
+   "b": "SpotIt+",
+   "tier_a": "L2",
+   "tier_b": "author-claims",
+   "count_a": 1581,
+   "count_b": 1125,
+   "a_only": 763,
+   "b_only": 307,
+   "diff": 456,
+   "ci95": [
+    308,
+    602
+   ],
+   "p": 2.370319025879882e-45,
+   "p_holm": 2.370319025879882e-45
+  },
+  {
+   "label": "vs ParSEval-L1",
+   "a": "CaliberGraph",
+   "b": "ParSEval-L1",
+   "tier_a": "L1f",
+   "tier_b": "L1f",
+   "count_a": 1979,
+   "count_b": 1342,
+   "a_only": 653,
+   "b_only": 16,
+   "diff": 637,
+   "ci95": [
+    523,
+    752
+   ],
+   "p": 5.3751651856164e-170
+  },
+  {
+   "label": "vs fuzzing",
+   "a": "CaliberGraph",
+   "b": "Random fuzzing",
+   "tier_a": "L1f",
+   "tier_b": "L1f",
+   "count_a": 1979,
+   "count_b": 1691,
+   "a_only": 296,
+   "b_only": 8,
+   "diff": 288,
+   "ci95": [
+    213,
+    367
+   ],
+   "p": 1.0395896414969961e-76
+  },
+  {
+   "label": "vs SpotIt+ claims (L1f)",
+   "a": "CaliberGraph",
+   "b": "SpotIt+",
+   "tier_a": "L1f",
+   "tier_b": "author-claims",
+   "count_a": 1979,
+   "count_b": 1125,
+   "a_only": 1075,
+   "b_only": 221,
+   "diff": 854,
+   "ci95": [
+    695,
+    1016
+   ],
+   "p": 6.255722102978044e-135
+  }
+ ],
+ "known_positive_recall": {
+  "CaliberGraph": {
+   "L0": 0.9713427947598253,
+   "L1": 0.9713427947598253,
+   "L1f": 0.9713427947598253,
+   "L1n": 0.6711244541484717,
+   "L2": 0.3239628820960699,
+   "found_L1f": 3559
+  },
+  "ParSEval-L1": {
+   "L0": 0.7336244541484717,
+   "L1": 0.7336244541484717,
+   "L1f": 0.7336244541484717,
+   "L1n": 0.2903930131004367,
+   "L2": 0.09770742358078603,
+   "found_L1f": 2688
+  },
+  "Random fuzzing": {
+   "L0": 0.8902838427947598,
+   "L1": 0.8902838427947598,
+   "L1f": 0.8902838427947598,
+   "L1n": 0.6716703056768559,
+   "L2": 0.28684497816593885,
+   "found_L1f": 3262
+  },
+  "SpotIt (claims)": {
+   "found": 2625,
+   "recall": 0.7164301310043668
+  }
+ },
+ "h3_tests": [
+  {
+   "b": "ParSEval-L1",
+   "a_only": 910,
+   "b_only": 39,
+   "p": 1.266345892256313e-216,
+   "count_a": 3559,
+   "count_b": 2688
+  },
+  {
+   "b": "SpotIt (claims)",
+   "a_only": 943,
+   "b_only": 9,
+   "p": 9.039148343249317e-266,
+   "count_a": 3559,
+   "count_b": 2625
+  },
+  {
+   "b": "Random fuzzing",
+   "a_only": 301,
+   "b_only": 4,
+   "p": 1.0991681362098683e-83,
+   "count_a": 3559,
+   "count_b": 3262
+  }
+ ],
+ "h3": {
+  "p": 1.266345892256313e-216,
+  "p_holm": 3.7990376767689393e-216
+ },
+ "per_system": {
+  "alpha": {
+   "name": "Alpha-SQL",
+   "n": 1174,
+   "ex": 0.6976149914821125,
+   "cg_fp": 214,
+   "union_fp": 215,
+   "spotit_fp": 165,
+   "corrected": 0.5153321976149915,
+   "corrected_union": 0.514480408858603,
+   "fp_share": 0.2612942612942613
+  },
+  "chess": {
+   "name": "CHESS",
+   "n": 1174,
+   "ex": 0.6405451448040886,
+   "cg_fp": 178,
+   "union_fp": 180,
+   "spotit_fp": 136,
+   "corrected": 0.4889267461669506,
+   "corrected_union": 0.48722316865417375,
+   "fp_share": 0.23670212765957446
+  },
+  "csc-32b": {
+   "name": "CSC-SQL-32B",
+   "n": 1174,
+   "ex": 0.721465076660988,
+   "cg_fp": 210,
+   "union_fp": 213,
+   "spotit_fp": 158,
+   "corrected": 0.5425894378194208,
+   "corrected_union": 0.5400340715502555,
+   "fp_share": 0.24793388429752067
+  },
+  "csc-7b": {
+   "name": "CSC-SQL-7B",
+   "n": 1174,
+   "ex": 0.6942078364565588,
+   "cg_fp": 188,
+   "union_fp": 191,
+   "spotit_fp": 131,
+   "corrected": 0.5340715502555367,
+   "corrected_union": 0.5315161839863713,
+   "fp_share": 0.23067484662576687
+  },
+  "gena_submission_1": {
+   "name": "GenaSQL-1",
+   "n": 1174,
+   "ex": 0.6916524701873935,
+   "cg_fp": 186,
+   "union_fp": 187,
+   "spotit_fp": 119,
+   "corrected": 0.5332197614991482,
+   "corrected_union": 0.5323679727427598,
+   "fp_share": 0.229064039408867
+  },
+  "gena_submission_2": {
+   "name": "GenaSQL-2",
+   "n": 1174,
+   "ex": 0.7052810902896082,
+   "cg_fp": 194,
+   "union_fp": 195,
+   "spotit_fp": 128,
+   "corrected": 0.5400340715502555,
+   "corrected_union": 0.5391822827938672,
+   "fp_share": 0.23429951690821257
+  },
+  "gsr": {
+   "name": "GSR",
+   "n": 1174,
+   "ex": 0.666098807495741,
+   "cg_fp": 231,
+   "union_fp": 232,
+   "spotit_fp": 154,
+   "corrected": 0.469335604770017,
+   "corrected_union": 0.4684838160136286,
+   "fp_share": 0.29539641943734013
+  },
+  "omni-32-majority": {
+   "name": "OmniSQL-32B",
+   "n": 1174,
+   "ex": 0.676320272572402,
+   "cg_fp": 195,
+   "union_fp": 197,
+   "spotit_fp": 149,
+   "corrected": 0.510221465076661,
+   "corrected_union": 0.5085178875638842,
+   "fp_share": 0.2455919395465995
+  },
+  "rsl": {
+   "name": "RSL-SQL",
+   "n": 1174,
+   "ex": 0.676320272572402,
+   "cg_fp": 188,
+   "union_fp": 190,
+   "spotit_fp": 136,
+   "corrected": 0.5161839863713799,
+   "corrected_union": 0.514480408858603,
+   "fp_share": 0.2367758186397985
+  },
+  "slm": {
+   "name": "SLM-SQL",
+   "n": 1174,
+   "ex": 0.6405451448040886,
+   "cg_fp": 195,
+   "union_fp": 198,
+   "spotit_fp": 143,
+   "corrected": 0.4744463373083475,
+   "corrected_union": 0.47189097103918226,
+   "fp_share": 0.25930851063829785
+  }
+ },
+ "kendall_tau_ex_vs_corrected": 0.7501937734175208,
+ "kendall_tau_ex_vs_spotit_corrected": 0.7047274841194893,
+ "rank_ex": {
+  "csc-32b": 1,
+  "gena_submission_2": 2,
+  "alpha": 3,
+  "csc-7b": 4,
+  "gena_submission_1": 5,
+  "omni-32-majority": 6,
+  "rsl": 7,
+  "gsr": 8,
+  "chess": 9,
+  "slm": 10
+ },
+ "rank_corrected": {
+  "csc-32b": 1,
+  "gena_submission_2": 2,
+  "csc-7b": 3,
+  "gena_submission_1": 4,
+  "rsl": 5,
+  "alpha": 6,
+  "omni-32-majority": 7,
+  "chess": 8,
+  "slm": 9,
+  "gsr": 10
+ },
+ "schema_groups": {
+  "other schemas": {
+   "n": 4947,
+   "found": 1256,
+   "rate": 0.2538912472205377
+  },
+  "held-out schemas": {
+   "n": 3048,
+   "found": 723,
+   "rate": 0.2372047244094488
+  }
+ },
+ "difficulty": {
+  "simple": {
+   "n": 5218,
+   "found": 1096,
+   "rate": 0.21004216174779608
+  },
+  "moderate": {
+   "n": 2170,
+   "found": 665,
+   "rate": 0.3064516129032258
+  },
+  "challenging": {
+   "n": 607,
+   "found": 218,
+   "rate": 0.35914332784184516
+  }
+ },
+ "time_to_witness": {
+  "CaliberGraph": {
+   "n": 1774,
+   "median": 0.008045806500376784,
+   "p95": 0.044352331000027334,
+   "max": 4.795996591000403,
+   "curve": [
+    1156,
+    1631,
+    1721,
+    1748,
+    1765,
+    1768,
+    1768,
+    1773,
+    1774
+   ]
+  },
+  "CaliberGraph+SC": {
+   "n": 1419,
+   "median": 0.023020836000796407,
+   "p95": 0.3468673620009213,
+   "max": 5.002271605000715,
+   "curve": [
+    272,
+    811,
+    1159,
+    1336,
+    1391,
+    1409,
+    1416,
+    1416,
+    1418
+   ]
+  },
+  "ParSEval-L1": {
+   "n": 1196,
+   "median": 0.3119803765002871,
+   "p95": 3.9040734930022154,
+   "max": 5.648595740000019,
+   "curve": [
+    0,
+    0,
+    56,
+    584,
+    891,
+    1003,
+    1107,
+    1143,
+    1177
+   ]
+  },
+  "ParSEval (official)": {
+   "n": 305,
+   "median": 0.2611360209994018,
+   "p95": 2.1929855630005477,
+   "max": 3.227172166996752,
+   "curve": [
+    0,
+    0,
+    0,
+    185,
+    250,
+    283,
+    303,
+    305,
+    305
+   ]
+  },
+  "Random fuzzing": {
+   "n": 1511,
+   "median": 0.005587997002294287,
+   "p95": 0.6986353250031243,
+   "max": 4.729415581001376,
+   "curve": [
+    976,
+    1231,
+    1341,
+    1396,
+    1456,
+    1485,
+    1491,
+    1503,
+    1511
+   ]
+  }
+ },
+ "spotit_released_time": {
+  "n": 11740,
+  "median": 5.7439350000000005,
+  "p95": 1216.0334,
+  "total_h": 524.9202843186112
+ },
+ "subsample": {
+  "n": 1000,
+  "counts": {
+   "full": 287,
+   "-anchoring": 288,
+   "-isolation": 289,
+   "-join graph": 276,
+   "-SQLite domain": 289,
+   "full, 10 s": 287,
+   "ParSEval-L1, 5 s": 187,
+   "ParSEval-L1, 10 s": 206
+  }
+ },
+ "h4_tests": {
+  "-anchoring": {
+   "full_only": 1,
+   "abl_only": 2,
+   "p": 1.0
+  },
+  "-isolation": {
+   "full_only": 3,
+   "abl_only": 5,
+   "p": 0.7265624999999989
+  },
+  "-join graph": {
+   "full_only": 11,
+   "abl_only": 0,
+   "p": 0.0009765624999999999
+  },
+  "-SQLite domain": {
+   "full_only": 1,
+   "abl_only": 3,
+   "p": 0.6249999999999994
+  }
+ }
+}

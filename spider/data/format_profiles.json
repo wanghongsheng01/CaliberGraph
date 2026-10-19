@@ -1,0 +1,5344 @@
+{
+"battle_death": {
+"battle": {
+"name": {
+"n_nonnull": 8,
+"n_distinct": 8,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A A A"
+],
+"samples": [
+"Battle of Adrianople",
+"Battle of Serres",
+"Battle of Rusion",
+"Battle of Rodosto",
+"Battle of Messinopolis",
+"Battle of Boruy",
+"Battle of Philippopolis",
+"Siege of Constantinople"
+]
+},
+"date": {
+"n_nonnull": 8,
+"n_distinct": 7,
+"n_shapes": 4,
+"free_text": false,
+"shapes": [
+"99 A 9999",
+"A 9999",
+"9 A 9999",
+"9999"
+],
+"samples": [
+"June 1205",
+"14 April 1205",
+"31 January 1206",
+"February 1206",
+"4 September 1207",
+"31 June 1208",
+"1235"
+]
+},
+"bulgarian_commander": {
+"n_nonnull": 8,
+"n_distinct": 4,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A A"
+],
+"samples": [
+"Kaloyan",
+"Boril",
+"Unknown",
+"Ivan Asen II"
+]
+},
+"latin_commander": {
+"n_nonnull": 8,
+"n_distinct": 6,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A A",
+"A A A",
+"A"
+],
+"samples": [
+"Unknown",
+"Henry I",
+"Baldwin I",
+"Thierry de Termond",
+"Boniface of Montferrat",
+"John of Brienne"
+]
+},
+"result": {
+"n_nonnull": 8,
+"n_distinct": 3,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A A A"
+],
+"samples": [
+"Bulgarian victory",
+"Latin victory",
+"Two Year Truce"
+]
+}
+},
+"ship": {
+"name": {
+"n_nonnull": 7,
+"n_distinct": 7,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A"
+],
+"samples": [
+"Lettice",
+"Bon Accord",
+"Mary",
+"HMS Avon",
+"Three Brothers",
+"Bacchus",
+"HMS Atalanta"
+]
+},
+"tonnage": {
+"n_nonnull": 7,
+"n_distinct": 3,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"999"
+],
+"samples": [
+"t",
+"391",
+"225"
+]
+},
+"ship_type": {
+"n_nonnull": 7,
+"n_distinct": 3,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A",
+"99-A A",
+"9 A A"
+],
+"samples": [
+"Brig",
+"18-gun Brig",
+"8 gun Brig"
+]
+},
+"location": {
+"n_nonnull": 7,
+"n_distinct": 3,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A-A"
+],
+"samples": [
+"English Channel",
+"SW Approaches",
+"Mid-Atlantic"
+]
+},
+"disposition_of_ship": {
+"n_nonnull": 7,
+"n_distinct": 4,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Captured",
+"Wrecked",
+"Scuttled",
+"Sank"
+]
+}
+},
+"death": {
+"note": {
+"n_nonnull": 13,
+"n_distinct": 9,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A, A",
+"A A, A",
+"A, A A"
+],
+"samples": [
+"Dantewada, Chhattisgarh",
+"Erraboru, Chhattisgarh",
+"East Champaran, Bihar",
+"Gajapati, Odisha",
+"Sundargarh, Odisha",
+"Kanker, Chhattisgarh",
+"WestMidnapore, West Bengal",
+"Bastar, Chattisgarh",
+"Bokaro, Jharkhand"
+]
+}
+}
+},
+"car_1": {
+"continents": {
+"Continent": {
+"n_nonnull": 5,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"america",
+"europe",
+"asia",
+"africa",
+"australia"
+]
+}
+},
+"countries": {
+"CountryName": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"usa",
+"germany",
+"france",
+"japan",
+"italy",
+"sweden",
+"uk",
+"korea",
+"russia",
+"nigeria",
+"australia",
+"new zealand",
+"egypt",
+"mexico",
+"brazil"
+]
+}
+},
+"car_makers": {
+"Maker": {
+"n_nonnull": 22,
+"n_distinct": 22,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"amc",
+"volkswagen",
+"bmw",
+"gm",
+"ford",
+"chrysler",
+"citroen",
+"nissan",
+"fiat",
+"honda",
+"mazda",
+"daimler benz",
+"opel",
+"peugeaut",
+"renault",
+"saab",
+"subaru",
+"toyota",
+"triumph",
+"volvo"
+]
+},
+"FullName": {
+"n_nonnull": 22,
+"n_distinct": 22,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A",
+"A A",
+"A A A"
+],
+"samples": [
+"American Motor Company",
+"Volkswagen",
+"BMW",
+"General Motors",
+"Ford Motor Company",
+"Chrysler",
+"Citroen",
+"Nissan Motors",
+"Fiat",
+"Honda",
+"Mazda",
+"Daimler Benz",
+"Opel",
+"Peugeaut",
+"Renault",
+"Saab",
+"Subaru",
+"Toyota",
+"Triumph",
+"Volvo"
+]
+},
+"Country": {
+"n_nonnull": 22,
+"n_distinct": 8,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9"
+],
+"samples": [
+"4",
+"1",
+"2",
+"3",
+"6",
+"8",
+"5",
+"7"
+]
+}
+},
+"model_list": {
+"Model": {
+"n_nonnull": 36,
+"n_distinct": 36,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A-A"
+],
+"samples": [
+"amc",
+"audi",
+"bmw",
+"buick",
+"cadillac",
+"capri",
+"chevrolet",
+"chrysler",
+"citroen",
+"datsun",
+"dodge",
+"fiat",
+"ford",
+"hi",
+"honda",
+"hyundai",
+"jeep",
+"kia",
+"mazda",
+"mercedes"
+]
+}
+},
+"car_names": {
+"Model": {
+"n_nonnull": 406,
+"n_distinct": 33,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A",
+"A-A",
+" A"
+],
+"samples": [
+"ford",
+"chevrolet",
+"plymouth",
+"amc",
+"dodge",
+"toyota",
+"datsun",
+"volkswagen",
+"buick",
+"pontiac",
+"honda",
+"mazda",
+"mercury",
+"oldsmobile",
+"peugeot",
+"fiat",
+"audi",
+"chrysler",
+"volvo",
+"saab"
+]
+},
+"Make": {
+"n_nonnull": 406,
+"n_distinct": 310,
+"n_shapes": 56,
+"free_text": true,
+"shapes": [],
+"samples": [
+"ford pinto",
+"ford maverick",
+"amc matador",
+"toyota corolla",
+"chevrolet impala",
+"amc hornet",
+"peugeot 504",
+"amc gremlin",
+"toyota corona",
+"chevrolet chevette",
+"chevrolet chevelle malibu",
+"ford galaxie 500",
+"plymouth fury iii",
+"pontiac catalina",
+"plymouth duster",
+"chevrolet vega",
+"ford gran torino",
+"chevrolet caprice classic",
+"chevrolet nova",
+"volkswagen dasher"
+]
+}
+},
+"cars_data": {
+"MPG": {
+"n_nonnull": 406,
+"n_distinct": 130,
+"n_shapes": 4,
+"free_text": false,
+"shapes": [
+"99",
+"99.9",
+"A",
+"9"
+],
+"samples": [
+"13",
+"14",
+"18",
+"15",
+"26",
+"16",
+"19",
+"24",
+"25",
+"22",
+"28",
+"23",
+"27",
+"20",
+"null",
+"21",
+"29",
+"17",
+"30",
+"31"
+]
+},
+"Horsepower": {
+"n_nonnull": 406,
+"n_distinct": 94,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"99",
+"999",
+"A"
+],
+"samples": [
+"150",
+"90",
+"88",
+"110",
+"100",
+"95",
+"75",
+"105",
+"70",
+"67",
+"65",
+"97",
+"85",
+"140",
+"175",
+"80",
+"145",
+"115",
+"null",
+"72"
+]
+}
+}
+},
+"concert_singer": {
+"stadium": {
+"Location": {
+"n_nonnull": 9,
+"n_distinct": 9,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A A",
+"A",
+"A'A A"
+],
+"samples": [
+"Raith Rovers",
+"Ayr United",
+"East Fife",
+"Queen's Park",
+"Stirling Albion",
+"Arbroath",
+"Alloa Athletic",
+"Peterhead",
+"Brechin City"
+]
+},
+"Name": {
+"n_nonnull": 9,
+"n_distinct": 9,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A A",
+"A'A A",
+"A"
+],
+"samples": [
+"Stark's Park",
+"Somerset Park",
+"Bayview Stadium",
+"Hampden Park",
+"Forthbank Stadium",
+"Gayfield Park",
+"Recreation Park",
+"Balmoor",
+"Glebe Park"
+]
+}
+},
+"singer": {
+"Name": {
+"n_nonnull": 6,
+"n_distinct": 6,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A"
+],
+"samples": [
+"Joe Sharp",
+"Timbaland",
+"Justin Brown",
+"Rose White",
+"John Nizinik",
+"Tribal King"
+]
+},
+"Country": {
+"n_nonnull": 6,
+"n_distinct": 3,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"France",
+"Netherlands",
+"United States"
+]
+},
+"Song_Name": {
+"n_nonnull": 6,
+"n_distinct": 6,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"You",
+"Dangerous",
+"Hey Oh",
+"Sun",
+"Gentleman",
+"Love"
+]
+},
+"Song_release_year": {
+"n_nonnull": 6,
+"n_distinct": 6,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9999"
+],
+"samples": [
+"1992",
+"2008",
+"2013",
+"2003",
+"2014",
+"2016"
+]
+}
+},
+"concert": {
+"concert_Name": {
+"n_nonnull": 6,
+"n_distinct": 5,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A 9",
+"A A",
+"A"
+],
+"samples": [
+"Week 1",
+"Auditions",
+"Super bootcamp",
+"Home Visits",
+"Week 2"
+]
+},
+"Theme": {
+"n_nonnull": 6,
+"n_distinct": 6,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A A",
+"A A 9",
+"A A A"
+],
+"samples": [
+"Free choice",
+"Free choice 2",
+"Bleeding Love",
+"Wide Awake",
+"Happy Tonight",
+"Party All Night"
+]
+},
+"Stadium_ID": {
+"n_nonnull": 6,
+"n_distinct": 5,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"9",
+"99"
+],
+"samples": [
+"2",
+"1",
+"10",
+"9",
+"7"
+]
+},
+"Year": {
+"n_nonnull": 6,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9999"
+],
+"samples": [
+"2014",
+"2015"
+]
+}
+},
+"singer_in_concert": {
+"Singer_ID": {
+"n_nonnull": 10,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9"
+],
+"samples": [
+"3",
+"2",
+"5",
+"6",
+"4"
+]
+}
+}
+},
+"course_teach": {
+"course": {
+"Staring_Date": {
+"n_nonnull": 10,
+"n_distinct": 10,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"99 A",
+"9 A"
+],
+"samples": [
+"5 May",
+"6 May",
+"7 May",
+"9 May",
+"10 May",
+"11 May",
+"13 May",
+"14 May",
+"15 May",
+"17 May"
+]
+},
+"Course": {
+"n_nonnull": 10,
+"n_distinct": 10,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"Language Arts",
+"Math",
+"Science",
+"History",
+"Bible",
+"Geography",
+"Sports",
+"French",
+"Health",
+"Music"
+]
+}
+},
+"teacher": {
+"Name": {
+"n_nonnull": 7,
+"n_distinct": 7,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A A"
+],
+"samples": [
+"Joseph Huts",
+"Gustaaf Deloor",
+"Vicente Carretero",
+"John Deloor",
+"Kearsley Brown",
+"Anne Walker",
+"Lucy Wong"
+]
+},
+"Age": {
+"n_nonnull": 7,
+"n_distinct": 7,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"99"
+],
+"samples": [
+"32",
+"29",
+"26",
+"33",
+"45",
+"41",
+"39"
+]
+},
+"Hometown": {
+"n_nonnull": 7,
+"n_distinct": 7,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A A",
+"A A A A"
+],
+"samples": [
+"Blackrod Urban District",
+"Bolton County Borough",
+"Farnworth Municipal Borough",
+"Horwich Urban District",
+"Kearsley Urban District",
+"Little Lever Urban District",
+"Turton Urban District"
+]
+}
+},
+"course_arrange": {}
+},
+"cre_Doc_Template_Mgt": {
+"Ref_Template_Types": {
+"Template_Type_Code": {
+"n_nonnull": 5,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"AD",
+"BK",
+"CV",
+"PP",
+"PPT"
+]
+},
+"Template_Type_Description": {
+"n_nonnull": 5,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Presentation",
+"CV",
+"Advertisement",
+"Paper",
+"Book"
+]
+}
+},
+"Templates": {
+"Template_Type_Code": {
+"n_nonnull": 20,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"PP",
+"BK",
+"PPT",
+"AD",
+"CV"
+]
+},
+"Template_Details": {
+"n_nonnull": 20,
+"n_distinct": 1,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+""
+],
+"samples": [
+""
+]
+}
+},
+"Documents": {
+"Document_Name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 4,
+"free_text": false,
+"shapes": [
+"A A",
+"A A A",
+"A A A A",
+"A A A A A"
+],
+"samples": [
+"Introduction of OS",
+"Understanding DB",
+"Summer Show",
+"Robbin CV",
+"Welcome to NY",
+"Data base",
+"Customer reviews",
+"Do not panic",
+"How Google people work",
+"Learning French",
+"How to write a CV",
+"How to read a book",
+"Palm reading",
+"A history of Arts",
+"About Korea"
+]
+},
+"Document_Description": {
+"n_nonnull": 15,
+"n_distinct": 10,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"y",
+"h",
+"w",
+"n",
+"u",
+"k",
+"z",
+"r",
+"f",
+"b"
+]
+},
+"Other_Details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+},
+"Paragraphs": {
+"Paragraph_Text": {
+"n_nonnull": 15,
+"n_distinct": 14,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A",
+"A A",
+"A A A"
+],
+"samples": [
+"Korea",
+"Somalia",
+"Palestinian Territory",
+"Jersey",
+"UK",
+"Fiji",
+"Japan",
+"Senegal",
+"Indonesia",
+"Ukraine",
+"Brazil",
+"Micronesia",
+"Ireland",
+"Papua New Guinea"
+]
+},
+"Other_Details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+}
+},
+"dog_kennels": {
+"Breeds": {
+"breed_code": {
+"n_nonnull": 3,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"BUL",
+"ESK",
+"HUS"
+]
+},
+"breed_name": {
+"n_nonnull": 3,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Eskimo",
+"Husky",
+"Bulldog"
+]
+}
+},
+"Charges": {
+"charge_type": {
+"n_nonnull": 3,
+"n_distinct": 3,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A"
+],
+"samples": [
+"Daily Accommodation",
+"Drugs",
+"Health Check"
+]
+}
+},
+"Sizes": {
+"size_code": {
+"n_nonnull": 3,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"LGE",
+"MED",
+"SML"
+]
+},
+"size_description": {
+"n_nonnull": 3,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Small",
+"Medium",
+"Large"
+]
+}
+},
+"Treatment_Types": {
+"treatment_type_code": {
+"n_nonnull": 3,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"EXAM",
+"VAC",
+"WALK"
+]
+},
+"treatment_type_description": {
+"n_nonnull": 3,
+"n_distinct": 3,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A A",
+"A",
+"A A A A"
+],
+"samples": [
+"Physical examination",
+"Vaccination",
+"Take for a Walk"
+]
+}
+},
+"Owners": {
+"first_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Nora",
+"Melisa",
+"Jaclyn",
+"Tre",
+"Johann",
+"Kade",
+"Emelie",
+"Rolando",
+"Adelle",
+"Lorenz",
+"Gay",
+"Orlando",
+"Cindy",
+"Rachelle",
+"Heather"
+]
+},
+"last_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Haley",
+"DuBuque",
+"Stoltenberg",
+"Hamill",
+"Fisher",
+"Rippin",
+"Mertz",
+"Prohaska",
+"Ondricka",
+"Nicolas",
+"Feil",
+"Price",
+"Schmitt",
+"Funk",
+"Hauck"
+]
+},
+"street": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 5,
+"free_text": false,
+"shapes": [
+"99999 A A",
+"9999 A A A. 999",
+"9999 A A",
+"99999 A A A 999",
+"999 A A"
+],
+"samples": [
+"0647 Hintz Village Apt. 024",
+"1204 Mae Highway Apt. 107",
+"2635 Caitlyn Plains",
+"692 Jaskolski Forges",
+"68118 Daniel Row",
+"51934 Treutel Harbor",
+"2417 Keara Stravenue Apt. 146",
+"57382 Yost Ridges",
+"9212 Rosenbaum Lights",
+"59509 Mellie Mountain",
+"60352 Kayleigh Crossing Suite 700",
+"89011 Kertzmann Spring Suite 642",
+"6950 Katherine Forges Apt. 630",
+"15828 Spencer Extensions",
+"1858 Jan Park"
+]
+},
+"city": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A"
+],
+"samples": [
+"Lake Tia",
+"Port Reannamouth",
+"Barrettburgh",
+"Brakusfurt",
+"Lake Valentin",
+"Lake Carleyborough",
+"Lake Jennyferfort",
+"South Afton",
+"East Hillardberg",
+"New Margaretteborough",
+"Port Zackery",
+"East Maribelbury",
+"Beerton",
+"West Leonard",
+"South Daisyfurt"
+]
+},
+"state": {
+"n_nonnull": 15,
+"n_distinct": 14,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"NorthDakota",
+"Wisconsin",
+"Virginia",
+"Vermont",
+"Florida",
+"Arizona",
+"NewYork",
+"Arkansas",
+"Washington",
+"SouthDakota",
+"Indiana",
+"Mississippi",
+"Maryland",
+"Pennsylvania"
+]
+},
+"zip_code": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"99999"
+],
+"samples": [
+"93165",
+"45244",
+"02647",
+"87304",
+"61019",
+"25609",
+"00589",
+"86010",
+"92406",
+"78297",
+"35747",
+"11990",
+"36871",
+"22731",
+"22693"
+]
+},
+"email_address": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A@A.A",
+"A99@A.A",
+"A.A@A.A"
+],
+"samples": [
+"lynn81@example.org",
+"ykris@example.com",
+"hudson.favian@example.com",
+"marks.gail@example.org",
+"zboncak.madonna@example.net",
+"margaretta.runte@example.net",
+"angeline99@example.com",
+"kturner@example.net",
+"fschoen@example.net",
+"ymaggio@example.com",
+"pearlie18@example.com",
+"christy49@example.org",
+"wpfeffer@example.net",
+"edythe62@example.org",
+"ybergstrom@example.com"
+]
+},
+"home_phone": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 11,
+"free_text": false,
+"shapes": [
+"999.999.9999A99999",
+"(999)999-9999",
+"999.999.9999",
+"999-999-9999A99999",
+"9-999-999-9999A99999",
+"(999)999-9999A999",
+"9-999-999-9999",
+"999-999-9999",
+"99999999999",
+"(999)999-9999A9999",
+"9-999-999-9999A999"
+],
+"samples": [
+"1-682-845-0116x63235",
+"(799)563-0260x454",
+"916.976.9480x13851",
+"1-332-849-1908",
+"(544)034-1670",
+"318-052-6573",
+"(058)997-7627",
+"01802479758",
+"066.264.7885",
+"085.557.0379x84348",
+"130-796-4589x05454",
+"363.948.1090",
+"(094)747-5094x8134",
+"1-346-655-5842x768",
+"893-862-5295x61709"
+]
+},
+"cell_number": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 12,
+"free_text": false,
+"shapes": [
+"999.999.9999",
+"+99(9)9999999999",
+"999.999.9999A9999",
+"(999)999-9999A999",
+"999-999-9999A99999",
+"999-999-9999",
+"9-999-999-9999A9999",
+"(999)999-9999A9999",
+"999.999.9999A999",
+"9-999-999-9999A99999",
+"999.999.9999A99999",
+"(999)999-9999"
+],
+"samples": [
+"478.978.0729",
+"(722)768-5439x484",
+"481-483-9083x37986",
+"739-136-7202",
+"1-626-264-7659x1697",
+"+70(4)9217952551",
+"121.381.3316x6535",
+"(783)271-6744x4507",
+"+00(2)4323592985",
+"559.874.3011x989",
+"762.589.6117x1328",
+"1-739-421-2225x38148",
+"633.455.3045x85484",
+"(257)399-3116",
+"341.667.8085"
+]
+}
+},
+"Dogs": {
+"abandoned_yn": {
+"n_nonnull": 15,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9"
+],
+"samples": [
+"0",
+"1"
+]
+},
+"breed_code": {
+"n_nonnull": 15,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"BUL",
+"ESK",
+"HUS"
+]
+},
+"size_code": {
+"n_nonnull": 15,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"MED",
+"LGE",
+"SML"
+]
+},
+"name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Kacey",
+"Hipolito",
+"Mavis",
+"Houston",
+"Jeffrey",
+"Merritt",
+"Narciso",
+"George",
+"Bessie",
+"Troy",
+"Betty",
+"Holden",
+"Jesus",
+"Lyric",
+"Evangeline"
+]
+},
+"age": {
+"n_nonnull": 15,
+"n_distinct": 8,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9"
+],
+"samples": [
+"9",
+"4",
+"2",
+"8",
+"6",
+"5",
+"3",
+"1"
+]
+},
+"gender": {
+"n_nonnull": 15,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9"
+],
+"samples": [
+"0",
+"1"
+]
+},
+"weight": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"9.99",
+"9.9"
+],
+"samples": [
+"7.57",
+"1.72",
+"8.04",
+"2.18",
+"1.39",
+"9.8",
+"9.48",
+"8.95",
+"3.52",
+"8.96",
+"8.16",
+"6.92",
+"5.16",
+"4.36",
+"4.01"
+]
+}
+},
+"Professionals": {
+"role_code": {
+"n_nonnull": 15,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Employee",
+"Veterenarian"
+]
+},
+"first_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Taryn",
+"Jayson",
+"Olaf",
+"Vernice",
+"Danny",
+"Ruben",
+"Velva",
+"Karley",
+"Monte",
+"Domenica",
+"Brady",
+"Winfield",
+"Ericka",
+"Sigurd",
+"Lesly"
+]
+},
+"street": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 12,
+"free_text": false,
+"shapes": [
+"99999 A A\nA A, A 99999",
+"9999 A A A 999\nA, A ",
+"99999 A A A. 999\nA, A 999",
+"999 A A A 999\nA A, A ",
+"99999 A A A 999\nA A, A 99",
+"99999 A A A 999\nA, A 99999-99",
+"9999 A A A. 999\nA, A 99999",
+"99999 A A A. 999\nA A",
+"99999 A A A. 999\nA, ",
+"9999 A A\nA A, A 99999-999",
+"999 A A\nA A, A 99999-9999",
+"99999 A A A. 999\nA, A 99999"
+],
+"samples": [
+"6915 Oberbrunner Point Suite 491\nGleasonville, LA ",
+"88665 Terence Lodge Apt. 904\nCorneliusfort, NC 194",
+"68589 Bradly Manor\nNew Audrey, IN 91497",
+"72532 Hane Course\nLake Berylland, ND 95283",
+"188 VonRueden Tunnel Suite 630\nNorth Macibury, NV ",
+"17286 Waters Green\nEast Bernadinefort, CA 89573",
+"44234 Marvin Shoals Suite 659\nNorth Frances, AL 23",
+"36895 Eli Ferry\nPort Marcelle, FL 45712",
+"07073 Brenna Ways Suite 089\nLowehaven, KY 93275-96",
+"7284 Torphy Flats Apt. 610\nDiannaburgh, SC 78560",
+"09615 McKenzie Stravenue Apt. 128\nWest Elliottview",
+"92912 Langworth Valleys Apt. 743\nThompsonborough, ",
+"7783 Abraham Alley\nPort Madelynhaven, KY 59172-273",
+"390 Bryce Drive\nNorth Dock, LA 65357-7228",
+"63949 Keeling Landing Apt. 502\nJohnsview, SD 06780"
+]
+},
+"city": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"West Heidi",
+"North Odellfurt",
+"Jaceton",
+"Domenickton",
+"New Laurytown",
+"Baileymouth",
+"McLaughlinfort",
+"Kirastad",
+"South Rockyport",
+"New Maryjane",
+"Raynorfort",
+"Juddton",
+"Borisside",
+"East Ila",
+"North Adelberttown"
+]
+},
+"state": {
+"n_nonnull": 15,
+"n_distinct": 13,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Indiana",
+"Connecticut",
+"Wisconsin",
+"Mississippi",
+"Hawaii",
+"NewMexico",
+"NorthCarolina",
+"SouthCarolina",
+"California",
+"Alabama",
+"Utah",
+"Wyoming",
+"Montana"
+]
+},
+"zip_code": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"99999"
+],
+"samples": [
+"06646",
+"43129",
+"77129",
+"02281",
+"84515",
+"52476",
+"67980",
+"33020",
+"80775",
+"54312",
+"07412",
+"34041",
+"17902",
+"41215",
+"98844"
+]
+},
+"last_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A'A"
+],
+"samples": [
+"Braun",
+"Ullrich",
+"Watsica",
+"Tillman",
+"Considine",
+"O'Reilly",
+"Hayes",
+"Hyatt",
+"Kshlerin",
+"Jacobs",
+"Pouros",
+"Christiansen",
+"Murazik",
+"Frami",
+"Walter"
+]
+},
+"email_address": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A.A@A.A",
+"A@A.A",
+"A99@A.A"
+],
+"samples": [
+"deanna.schuster@example.com",
+"lucile.shanahan@example.org",
+"uboehm@example.org",
+"lourdes.lowe@example.net",
+"mekhi.little@example.org",
+"jacynthe.mclaughlin@example.net",
+"lambert62@example.org",
+"goyette.roosevelt@example.net",
+"schneider.kathryne@example.org",
+"jerrod.bahringer@example.org",
+"west.eula@example.net",
+"marquardt.furman@example.org",
+"delphine29@example.com",
+"cole.margarita@example.org",
+"jeichmann@example.com"
+]
+},
+"home_phone": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 10,
+"free_text": false,
+"shapes": [
+"+99(9)9999999999",
+"999.999.9999",
+"999.999.9999A9999",
+"999-999-9999A9999",
+"9-999-999-9999A99999",
+"999-999-9999",
+"(999)999-9999A999",
+"(999)999-9999A99999",
+"999-999-9999A99999",
+"9-999-999-9999"
+],
+"samples": [
+"+71(6)2898266914",
+"+02(1)0259033559",
+"325-155-0801x7005",
+"312.216.3352",
+"1-609-566-2752x25197",
+"+43(5)1132733868",
+"022.529.0550x1319",
+"891.475.2256",
+"320-508-6023",
+"(230)338-3342x585",
+"(920)304-4499x59146",
+"246-951-0080x76716",
+"346.594.3739",
+"971.048.3763x9404",
+"1-138-287-3775"
+]
+},
+"cell_number": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 11,
+"free_text": false,
+"shapes": [
+"999-999-9999",
+"999-999-9999A9999",
+"(999)999-9999A99999",
+"(999)999-9999A999",
+"99999999999",
+"999.999.9999A9999",
+"999.999.9999",
+"9-999-999-9999",
+"999-999-9999A999",
+"9-999-999-9999A999",
+"9-999-999-9999A9999"
+],
+"samples": [
+"(275)939-2435x80863",
+"889-940-2676",
+"(369)908-7311x065",
+"00230569697",
+"011.193.9081x3186",
+"139-321-7313",
+"499-434-0215x1628",
+"328.842.3792",
+"962-983-8109x3509",
+"461-801-2600",
+"609-405-2990",
+"1-181-670-9466",
+"880-659-7577x736",
+"1-185-137-1945x409",
+"1-258-285-4707x8020"
+]
+}
+},
+"Treatments": {
+"treatment_type_code": {
+"n_nonnull": 15,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"WALK",
+"VAC",
+"EXAM"
+]
+}
+}
+},
+"employee_hire_evaluation": {
+"employee": {
+"Name": {
+"n_nonnull": 10,
+"n_distinct": 10,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A A"
+],
+"samples": [
+"George Chuter",
+"Lee Mears",
+"Mark Regan",
+"Jason Hobson",
+"Tim Payne",
+"Andrew Sheridan",
+"Matt Stevens",
+"Phil Vickery",
+"Steve Borthwick",
+"Louis Deacon"
+]
+},
+"City": {
+"n_nonnull": 10,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Bristol",
+"Bath",
+"Wasps",
+"Sale",
+"Leicester"
+]
+}
+},
+"shop": {
+"Name": {
+"n_nonnull": 9,
+"n_distinct": 9,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A"
+],
+"samples": [
+"FC Haka",
+"HJK",
+"FC Honka",
+"FC Inter",
+"FF Jaro",
+"FC KooTeePee",
+"KuPS",
+"FC Lahti",
+"IFK Mariehamn"
+]
+},
+"Location": {
+"n_nonnull": 9,
+"n_distinct": 9,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Valkeakoski",
+"Helsinki",
+"Espoo",
+"Turku",
+"Jakobstad",
+"Kotka",
+"Kuopio",
+"Lahti",
+"Mariehamn"
+]
+},
+"District": {
+"n_nonnull": 9,
+"n_distinct": 9,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A A A"
+],
+"samples": [
+"Tehtaan kenttä",
+"Finnair Stadium",
+"Tapiolan Urheilupuisto",
+"Veritas Stadion",
+"Jakobstads Centralplan",
+"Arto Tolsa Areena",
+"Magnum Areena",
+"Lahden Stadion",
+"Wiklöf Holding Arena"
+]
+},
+"Manager_name": {
+"n_nonnull": 9,
+"n_distinct": 9,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A A"
+],
+"samples": [
+"Olli Huttunen",
+"Antti Muurinen",
+"Mika Lehkosuo",
+"Job Dragtsma",
+"Mika Laurikainen",
+"Tommi Kautonen",
+"Kai Nyyssönen",
+"Ilkka Mäkelä",
+"Pekka Lyyski"
+]
+}
+},
+"hiring": {
+"Start_from": {
+"n_nonnull": 7,
+"n_distinct": 7,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9999"
+],
+"samples": [
+"2009",
+"2003",
+"2011",
+"2012",
+"2013",
+"2010",
+"2008"
+]
+}
+},
+"evaluation": {
+"Employee_ID": {
+"n_nonnull": 6,
+"n_distinct": 5,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"9",
+"99"
+],
+"samples": [
+"1",
+"10",
+"2",
+"4",
+"7"
+]
+},
+"Year_awarded": {
+"n_nonnull": 6,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9999"
+],
+"samples": [
+"2016",
+"2011",
+"2015",
+"2017",
+"2018"
+]
+}
+}
+},
+"flight_2": {
+"airlines": {
+"Airline": {
+"n_nonnull": 12,
+"n_distinct": 12,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A A"
+],
+"samples": [
+"United Airlines",
+"US Airways",
+"Delta Airlines",
+"Southwest Airlines",
+"American Airlines",
+"Northwest Airlines",
+"Continental Airlines",
+"JetBlue Airways",
+"Frontier Airlines",
+"AirTran Airways",
+"Allegiant Air",
+"Virgin America"
+]
+},
+"Abbreviation": {
+"n_nonnull": 12,
+"n_distinct": 12,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"UAL",
+"USAir",
+"Delta",
+"Southwest",
+"American",
+"Northwest",
+"Continental",
+"JetBlue",
+"Frontier",
+"AirTran",
+"Allegiant",
+"Virgin"
+]
+},
+"Country": {
+"n_nonnull": 12,
+"n_distinct": 1,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"USA"
+]
+}
+},
+"airports": {
+"City": {
+"n_nonnull": 100,
+"n_distinct": 85,
+"n_shapes": 9,
+"free_text": false,
+"shapes": [
+"A ",
+"A A ",
+" A A  ",
+" A A A  ",
+"A A  ",
+"A/A A  ",
+"A/A ",
+" A   ",
+" A  "
+],
+"samples": [
+"Albany ",
+"Anchorage ",
+"Athens ",
+"Aberdeen ",
+"Abilene ",
+"Alamogordo ",
+"Alexandria ",
+"Altus ",
+"Anderson ",
+"Anniston ",
+"Ardmore ",
+"Abingdon ",
+"Ada ",
+"Adak Island ",
+"Adrian ",
+"Afton ",
+"Aiken ",
+"Ainsworth ",
+"Akhiok ",
+"Akiachak "
+]
+},
+"AirportCode": {
+"n_nonnull": 100,
+"n_distinct": 100,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"AAF",
+"ABI",
+"ABL",
+"ABQ",
+"ABR",
+"ABY",
+"ACV",
+"ADG",
+"ADK",
+"ADM",
+"ADR",
+"ADT",
+"AED",
+"AEL",
+"AET",
+"AEX",
+"AFO",
+"AGN",
+"AHD",
+"AHF"
+]
+},
+"AirportName": {
+"n_nonnull": 100,
+"n_distinct": 89,
+"n_shapes": 7,
+"free_text": false,
+"shapes": [
+"A ",
+"A A ",
+"A A A ",
+"A A A A ",
+"A A A A A ",
+"A/A A ",
+"A-A A A "
+],
+"samples": [
+"Municipal ",
+"Phillips AAF ",
+"Dyess AFB ",
+"Virginia Highlands ",
+"Ada ",
+"Adak Island Ns ",
+"Lenawee County ",
+"Ainsworth ",
+"Akhiok SPB ",
+"Spb ",
+"Akiak ",
+"Colorado Plains Regional Airport ",
+"Akron/canton Regional ",
+"Fulton International ",
+"Akutan ",
+"Alakanuk ",
+"NAS ",
+"Holloman AFB ",
+"Albany NAS ",
+"Dougherty County "
+]
+},
+"Country": {
+"n_nonnull": 100,
+"n_distinct": 1,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A A "
+],
+"samples": [
+"United States "
+]
+},
+"CountryAbbrev": {
+"n_nonnull": 100,
+"n_distinct": 2,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A "
+],
+"samples": [
+"US",
+"US "
+]
+}
+},
+"flights": {
+"SourceAirport": {
+"n_nonnull": 1200,
+"n_distinct": 100,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+" A"
+],
+"samples": [
+" AAF",
+" AXG",
+" ASY",
+" ARB",
+" AKI",
+" CAK",
+" CVO",
+" ANV",
+" ABQ",
+" ALS",
+" OTS",
+" LTS",
+" ANP",
+" WKK",
+" ANN",
+" ANY",
+" ALE",
+" ABY",
+" JLH",
+" AIV"
+]
+},
+"DestAirport": {
+"n_nonnull": 1200,
+"n_distinct": 100,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+" A"
+],
+"samples": [
+" AAF",
+" AXG",
+" ASY",
+" ARB",
+" AKI",
+" CAK",
+" CVO",
+" ANV",
+" ABQ",
+" ALS",
+" OTS",
+" LTS",
+" ANP",
+" WKK",
+" ANN",
+" ANY",
+" ALE",
+" ABY",
+" JLH",
+" AIV"
+]
+}
+}
+},
+"museum_visit": {
+"museum": {
+"Name": {
+"n_nonnull": 8,
+"n_distinct": 8,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A A A",
+"A A",
+"A A A A A"
+],
+"samples": [
+"Plaza Museum",
+"Capital Plaza Museum",
+"Jefferson Development Museum",
+"Willow Grande Museum",
+"RiverPark Museum",
+"Place Tower Museum",
+"Central City District Residential Museum",
+"ZirMed Gateway Museum"
+]
+},
+"Open_Year": {
+"n_nonnull": 8,
+"n_distinct": 6,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9999"
+],
+"samples": [
+"2010",
+"2008",
+"2000",
+"2012",
+"2011",
+"2009"
+]
+}
+},
+"visitor": {
+"Name": {
+"n_nonnull": 6,
+"n_distinct": 6,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A A",
+"A A ",
+"A A A A"
+],
+"samples": [
+"Gonzalo Higuaín ",
+"Guti Midfielder",
+"Arjen Robben",
+"Raúl Brown",
+"Fernando Gago",
+"Rafael van der Vaart"
+]
+}
+},
+"visit": {
+"visitor_ID": {
+"n_nonnull": 6,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9"
+],
+"samples": [
+"5",
+"3",
+"6"
+]
+}
+}
+},
+"network_1": {
+"Highschooler": {
+"name": {
+"n_nonnull": 16,
+"n_distinct": 14,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Jordan",
+"Gabriel",
+"Tiffany",
+"Cassandra",
+"Haley",
+"Andrew",
+"Kris",
+"Brittany",
+"Alexis",
+"Austin",
+"Jessica",
+"John",
+"Kyle",
+"Logan"
+]
+}
+},
+"Friend": {},
+"Likes": {}
+},
+"orchestra": {
+"conductor": {
+"Name": {
+"n_nonnull": 12,
+"n_distinct": 12,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A A A"
+],
+"samples": [
+"Antal Doráti",
+"Igor Stravinsky",
+"Colin Davis",
+"Paul Jorgensen",
+"Antal Brown",
+"Charles Dutoit",
+"Gerard Schwarz",
+"Pierre Boulez",
+"Valeri Gergiev",
+"Robert Craft",
+"Seiji Ozawa",
+"Michael Tilson Thomas"
+]
+},
+"Nationality": {
+"n_nonnull": 12,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"USA",
+"UK",
+"France"
+]
+}
+},
+"orchestra": {
+"Orchestra": {
+"n_nonnull": 12,
+"n_distinct": 12,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A A A",
+"A A",
+"A A A A"
+],
+"samples": [
+"London Symphony Orchestra",
+"Columbia Symphony Orchestra",
+"Royal Concertgebouw Orchestra",
+"Royal Danish Orchestra",
+"Detroit Symphony Orchestra",
+"Montreal Symphony Orchestra",
+"Seattle Symphony Orchestra",
+"Chicago Symphony Orchestra",
+"Kirov Orchestra",
+"Philharmonia Orchestra",
+"Orchestre de Paris",
+"San Francisco Symphony Orchestra"
+]
+},
+"Record_Company": {
+"n_nonnull": 12,
+"n_distinct": 11,
+"n_shapes": 4,
+"free_text": false,
+"shapes": [
+"A A",
+"A",
+"A A A",
+"A A / A A"
+],
+"samples": [
+"Decca Records",
+"Mercury Records",
+"Columbia Masterworks",
+"Philips",
+"Kultur",
+"Delos Records",
+"Deutsche Grammophon",
+"Philips Classics Records",
+"Koch Records / Naxos Records",
+"EMI",
+"RCA"
+]
+},
+"Major_Record_Format": {
+"n_nonnull": 12,
+"n_distinct": 3,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A / A"
+],
+"samples": [
+"CD",
+"CD / LP",
+"DVD"
+]
+}
+},
+"performance": {
+"Type": {
+"n_nonnull": 11,
+"n_distinct": 11,
+"n_shapes": 4,
+"free_text": false,
+"shapes": [
+"A 9",
+"A-A 9",
+"A A",
+"A A A"
+],
+"samples": [
+"Auditions 1",
+"Auditions 2",
+"Auditions 3",
+"Auditions 4",
+"Auditions 5",
+"Semi-final 1",
+"Semi-final 2",
+"Semi-final 3",
+"Live final",
+"Live final results",
+"Series average"
+]
+},
+"Date": {
+"n_nonnull": 11,
+"n_distinct": 10,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"99 A",
+"9 A",
+"9999"
+],
+"samples": [
+"17 June",
+"9 June",
+"10 June",
+"11 June",
+"12 June",
+"13 June",
+"14 June",
+"15 June",
+"16 June",
+"2007"
+]
+},
+"Weekly_rank": {
+"n_nonnull": 11,
+"n_distinct": 10,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"9",
+"99",
+"A"
+],
+"samples": [
+"8",
+"12",
+"15",
+"13",
+"11",
+"9",
+"7",
+"1",
+"2",
+"TBC"
+]
+},
+"Share": {
+"n_nonnull": 11,
+"n_distinct": 11,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"99.9%",
+"99%"
+],
+"samples": [
+"22.7%",
+"28.0%",
+"29.4%",
+"29.3%",
+"29.2%",
+"34.0%",
+"38.1%",
+"40.9%",
+"43.7%",
+"44.7%",
+"34%"
+]
+}
+},
+"show": {
+"Result": {
+"n_nonnull": 5,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"T",
+"F"
+]
+}
+}
+},
+"pets_1": {
+"Student": {
+"LName": {
+"n_nonnull": 34,
+"n_distinct": 31,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Smith",
+"Lee",
+"Pang",
+"Kim",
+"Jones",
+"Kumar",
+"Gompers",
+"Schultz",
+"Apap",
+"Nelson",
+"Tai",
+"Adams",
+"Davis",
+"Norris",
+"Schwartz",
+"Wilson",
+"Leighton",
+"Thornton",
+"Andreou",
+"Woods"
+]
+},
+"Fname": {
+"n_nonnull": 34,
+"n_distinct": 24,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Eric",
+"Paul",
+"Lisa",
+"David",
+"Mark",
+"Michael",
+"Sarah",
+"Linda",
+"Tracy",
+"Shiela",
+"Dinesh",
+"Andy",
+"Jandy",
+"Derek",
+"Steven",
+"Charles",
+"Susan",
+"Bruce",
+"Arthur",
+"Ian"
+]
+},
+"Sex": {
+"n_nonnull": 34,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"M",
+"F"
+]
+},
+"city_code": {
+"n_nonnull": 34,
+"n_distinct": 19,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"BAL",
+"PIT",
+"HKG",
+"WAS",
+"PHL",
+"NYC",
+"YYZ",
+"CHI",
+"HOU",
+"DAL",
+"DET",
+"LON",
+"LOS",
+"ROC",
+"PEK",
+"SFO",
+"ATL",
+"NAR",
+"BOS"
+]
+}
+},
+"Has_Pet": {},
+"Pets": {
+"PetType": {
+"n_nonnull": 3,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"dog",
+"cat"
+]
+}
+}
+},
+"poker_player": {
+"poker_player": {},
+"people": {
+"Nationality": {
+"n_nonnull": 7,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Russia",
+"Bulgaria"
+]
+},
+"Name": {
+"n_nonnull": 7,
+"n_distinct": 7,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A A"
+],
+"samples": [
+"Aleksey Ostapenko",
+"Teodor Salparov",
+"Roman Bragin",
+"Sergey Grankin",
+"Yevgeni Sivozhelez",
+"Maksim Botin",
+"Semen Poltavskiy"
+]
+},
+"Birth_Date": {
+"n_nonnull": 7,
+"n_distinct": 7,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A 99, 9999",
+"A 9, 9999"
+],
+"samples": [
+"May 26, 1986",
+"August 16, 1982",
+"April 17, 1987",
+"January 22, 1987",
+"August 8, 1986",
+"July 14, 1983",
+"February 8, 1981"
+]
+}
+}
+},
+"real_estate_properties": {
+"Ref_Feature_Types": {
+"feature_type_code": {
+"n_nonnull": 2,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Amenity",
+"Security"
+]
+},
+"feature_type_name": {
+"n_nonnull": 2,
+"n_distinct": 2,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A, A A.",
+"A, A A A."
+],
+"samples": [
+"Amenity, eg Pool.",
+"Securiyt, eg Burglar Alarm."
+]
+}
+},
+"Ref_Property_Types": {
+"property_type_code": {
+"n_nonnull": 5,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Apartment",
+"Field",
+"House",
+"Other",
+"Shop"
+]
+},
+"property_type_description": {
+"n_nonnull": 5,
+"n_distinct": 5,
+"n_shapes": 5,
+"free_text": false,
+"shapes": [
+"A, A, A.",
+"A, A, A, A.",
+"A, A.",
+"A, A A A.",
+"A, A A."
+],
+"samples": [
+"House, Bungalow, etc.",
+"Apartment, Flat, Condo, etc.",
+"Field, Meadow.",
+"Other, to be determined.",
+"Shop, Retail Outlet."
+]
+}
+},
+"Other_Available_Features": {
+"feature_type_code": {
+"n_nonnull": 3,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Amenity",
+"Security"
+]
+},
+"feature_name": {
+"n_nonnull": 3,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"AirCon",
+"Pool",
+"BurglarAlarm"
+]
+},
+"feature_description": {
+"n_nonnull": 3,
+"n_distinct": 3,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A.",
+"A A"
+],
+"samples": [
+"Air Conditioning.",
+"Swimming Pool.",
+"Burglar Alarm"
+]
+}
+},
+"Properties": {
+"property_type_code": {
+"n_nonnull": 15,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Apartment",
+"Other",
+"House",
+"Shop",
+"Field"
+]
+},
+"property_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"park",
+"the cole",
+"prism",
+"riverside",
+"parc east",
+"high line",
+"avalon",
+"vogue",
+"longacre",
+"renoir",
+"murray hill",
+"ten tower",
+"chelsea",
+"wall street",
+"parc coliseum"
+]
+},
+"property_address": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 12,
+"free_text": false,
+"shapes": [
+"999 A A\nA, A 99999-9999",
+"9999 A A A 999\nA A, A 99999-9999",
+"999 A A A 999\nA A, A 99999-9999",
+"999 A A A. 999\nA, A 99999-9999",
+"99999 A A\nA A, A 99999",
+"9999 A A\nA, A 99999-9999",
+"9999 A A A. 999\nA A, A 99999",
+"999 A A A. 999\nA A, A 99999",
+"99999 A A\nA, A 99999-9999",
+"999 A A A. 999\nA, A 99999",
+"9999 A A A 999\nA, A 99999-9999",
+"99999 A A A. 999\nA A, A 99999-9999"
+],
+"samples": [
+"4745 Emerson Stravenue Suite 829\nSouth Garret, IN 16772-5682",
+"098 Tremaine Highway Suite 569\nSouth Wilford, NJ 46587-3537",
+"062 Micaela Court Apt. 707\nMargretville, WV 51628-3617",
+"49578 Ayden Mountains\nNew Russellhaven, UT 46626",
+"2765 Schulist Stream\nLindmouth, UT 03391-3817",
+"6837 Darien Views Apt. 475\nSouth Maraview, KS 77770",
+"092 Paucek Highway Apt. 772\nEast Erika, IA 61358",
+"24365 Ulices Run\nHomenicktown, MD 88485-6198",
+"107 Roob Courts\nErdmanburgh, IA 42926-0873",
+"084 Lakin Vista Apt. 394\nFishertown, MA 16876",
+"2088 Bashirian Fork Suite 337\nFaustinoport, MT 16771-9320",
+"743 Ephraim Greens\nAnniemouth, HI 47084-3853",
+"60845 Else Highway Apt. 826\nSouth Dougfort, CO 43200-4258",
+"1474 Dibbert Fields Suite 055\nSouth Renee, IN 58286-3097",
+"986 Hagenes Drives\nDraketon, UT 83411-3393"
+]
+},
+"apt_feature_1": {
+"n_nonnull": 15,
+"n_distinct": 12,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"aut",
+"fuga",
+"et",
+"est",
+"ut",
+"nesciunt",
+"quo",
+"sed",
+"quos",
+"enim",
+"consequatur",
+"qui"
+]
+},
+"apt_feature_2": {
+"n_nonnull": 15,
+"n_distinct": 13,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"est",
+"suscipit",
+"et",
+"adipisci",
+"sequi",
+"culpa",
+"odio",
+"sit",
+"vero",
+"autem",
+"aut",
+"eos",
+"iusto"
+]
+},
+"apt_feature_3": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"fld_feature_1": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"fld_feature_2": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"fld_feature_3": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"hse_feature_1": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"hse_feature_2": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"hse_feature_3": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"oth_feature_1": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"oth_feature_2": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"oth_feature_3": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"shp_feature_1": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"shp_feature_2": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"shp_feature_3": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"other_property_details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+},
+"Other_Property_Features": {
+"property_feature_description": {
+"n_nonnull": 15,
+"n_distinct": 14,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"quo",
+"dolorem",
+"earum",
+"illo",
+"hic",
+"et",
+"odio",
+"ad",
+"vitae",
+"corrupti",
+"doloribus",
+"autem",
+"cumque",
+"modi"
+]
+}
+}
+},
+"singer": {
+"singer": {
+"Name": {
+"n_nonnull": 8,
+"n_distinct": 8,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A A"
+],
+"samples": [
+"Liliane Bettencourt",
+"Christy Walton",
+"Alice Walton",
+"Iris Fontbona",
+"Jacqueline Mars",
+"Gina Rinehart",
+"Susanne Klatten",
+"Abigail Johnson"
+]
+},
+"Citizenship": {
+"n_nonnull": 8,
+"n_distinct": 5,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"United States",
+"France",
+"Chile",
+"Australia",
+"Germany"
+]
+}
+},
+"song": {
+"Title": {
+"n_nonnull": 8,
+"n_distinct": 8,
+"n_shapes": 5,
+"free_text": false,
+"shapes": [
+"A A A",
+"A A A A'A A",
+"A**A A (A A'A A A A)",
+"A",
+"A A"
+],
+"samples": [
+"Do They Know It's Christmas",
+"F**k It (I Don't Want You Back)",
+"Cha Cha Slide",
+"Call on Me",
+"Yeah",
+"All This Time",
+"Left Outside Alone",
+"Mysterious Girl"
+]
+}
+}
+},
+"student_transcripts_tracking": {
+"Addresses": {
+"line_1": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 8,
+"free_text": false,
+"shapes": [
+"9999 A A A. 999",
+"99999 A A A. 999",
+"999 A A A 999",
+"999 A A",
+"999 A A A. 999",
+"9999 A A",
+"9999 A A A 999",
+"99999 A A"
+],
+"samples": [
+"2294 Grant Square Apt. 235",
+"3999 Aufderhar Ways Suite 593",
+"67942 Carlotta Ferry Apt. 686",
+"0144 Lamar Plaza Apt. 346",
+"858 Peggie Bypass Suite 212",
+"16998 Mraz Lodge",
+"193 Marlin Brook",
+"202 Hessel Views Apt. 468",
+"0643 Muller Vista",
+"7081 Eda Center",
+"9283 Schulist Falls Apt. 037",
+"979 Haag Shores Suite 656",
+"492 Wilkinson Route",
+"186 Evan Motorway Apt. 409",
+"74046 Metz Walk Apt. 113"
+]
+},
+"line_2": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A. 999",
+"A 999"
+],
+"samples": [
+"Apt. 370",
+"Apt. 388",
+"Apt. 583",
+"Suite 703",
+"Apt. 335",
+"Apt. 689",
+"Apt. 406",
+"Apt. 305",
+"Suite 383",
+"Suite 830",
+"Suite 239",
+"Apt. 468",
+"Suite 865",
+"Suite 079",
+"Suite 674"
+]
+},
+"line_3": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+},
+"city": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A"
+],
+"samples": [
+"Port Chelsea",
+"Lake Laishafurt",
+"Goodwinhaven",
+"Port Evanston",
+"Michelleburgh",
+"North Omer",
+"Herzoghaven",
+"Mariliehaven",
+"Port Elvisfurt",
+"Rutherfordtown",
+"South Palma",
+"Prohaskafort",
+"New Clemensburgh",
+"Lake Careyberg",
+"Port Oceane"
+]
+},
+"zip_postcode": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"999"
+],
+"samples": [
+"148",
+"943",
+"541",
+"847",
+"446",
+"902",
+"068",
+"638",
+"777",
+"839",
+"400",
+"590",
+"386",
+"895",
+"669"
+]
+},
+"state_province_county": {
+"n_nonnull": 15,
+"n_distinct": 13,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Kentucky",
+"Virginia",
+"Kansas",
+"Washington",
+"Hawaii",
+"Arkansas",
+"Idaho",
+"NorthCarolina",
+"Delaware",
+"WestVirginia",
+"SouthDakota",
+"Florida",
+"Wyoming"
+]
+},
+"country": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"Iceland",
+"Burundi",
+"Saudi Arabia",
+"Angola",
+"Haiti",
+"Gibraltar",
+"Cook Islands",
+"Croatia",
+"Gabon",
+"Kyrgyz Republic",
+"Bermuda",
+"Lesotho",
+"Samoa",
+"New Caledonia",
+"Norfolk Island"
+]
+},
+"other_address_details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+},
+"Courses": {
+"course_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"ds",
+"math",
+"os",
+"en",
+"fr",
+"la",
+"cal",
+"nlp",
+"dl",
+"ml",
+"ai",
+"db",
+"rs",
+"pl",
+"oop"
+]
+},
+"course_description": {
+"n_nonnull": 15,
+"n_distinct": 10,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"q",
+"p",
+"v",
+"l",
+"k",
+"c",
+"n",
+"b",
+"w",
+"d"
+]
+},
+"other_details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+},
+"Departments": {
+"department_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"computer science",
+"history",
+"art",
+"linguistic",
+"management",
+"engineer",
+"math",
+"statistics",
+"law",
+"economics",
+"biology",
+"medical",
+"dance",
+"drama",
+"geography"
+]
+},
+"department_description": {
+"n_nonnull": 15,
+"n_distinct": 13,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"nihil",
+"consequatur",
+"error",
+"nostrum",
+"aliquam",
+"natus",
+"autem",
+"doloribus",
+"dolorem",
+"non",
+"ea",
+"in",
+"nisi"
+]
+},
+"other_details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+},
+"Degree_Programs": {
+"degree_summary_name": {
+"n_nonnull": 15,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Bachelor",
+"Master",
+"PHD"
+]
+},
+"degree_summary_description": {
+"n_nonnull": 15,
+"n_distinct": 14,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"aut",
+"architecto",
+"cumque",
+"placeat",
+"unde",
+"officiis",
+"aperiam",
+"assumenda",
+"earum",
+"voluptas",
+"qui",
+"quam",
+"et",
+"esse"
+]
+},
+"other_details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+},
+"Sections": {
+"section_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"a",
+"b",
+"c",
+"d",
+"e",
+"f",
+"g",
+"h",
+"j",
+"k",
+"l",
+"o",
+"p",
+"u",
+"y"
+]
+},
+"section_description": {
+"n_nonnull": 15,
+"n_distinct": 13,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"qui",
+"et",
+"non",
+"voluptatem",
+"voluptas",
+"ex",
+"doloremque",
+"provident",
+"quis",
+"nesciunt",
+"ad",
+"facilis",
+"reprehenderit"
+]
+},
+"other_details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+},
+"Semesters": {
+"semester_name": {
+"n_nonnull": 15,
+"n_distinct": 14,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A 9999"
+],
+"samples": [
+"spring 2018",
+"spring 2010",
+"summer 2010",
+"fall 2010",
+"winter 2010",
+"spring 2012",
+"spring 2013",
+"spring 2014",
+"spring 2015",
+"spring 2016",
+"spring 2017",
+"fall 2018",
+"winter 2018",
+"spring 2019"
+]
+},
+"semester_description": {
+"n_nonnull": 15,
+"n_distinct": 11,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"x",
+"g",
+"c",
+"w",
+"l",
+"y",
+"f",
+"m",
+"q",
+"t",
+"o"
+]
+},
+"other_details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+},
+"Students": {
+"first_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Timmothy",
+"Hobart",
+"Warren",
+"Jarvis",
+"Milton",
+"Stanford",
+"Frida",
+"Delaney",
+"Reva",
+"Helga",
+"Gregg",
+"Orrin",
+"Deon",
+"Jordy",
+"Jett"
+]
+},
+"middle_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Anna",
+"Lorenz",
+"Violet",
+"Aaliyah",
+"Vaughn",
+"Mona",
+"Aisha",
+"Judd",
+"Golda",
+"Cleve",
+"Mossie",
+"Neal",
+"Brooklyn",
+"Osborne",
+"Alberta"
+]
+},
+"last_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Ward",
+"Balistreri",
+"Gleichner",
+"Carroll",
+"Christiansen",
+"Rogahn",
+"Huel",
+"Ankunding",
+"Osinski",
+"Mohr",
+"Schuppe",
+"Kemmer",
+"Weimann",
+"Rempel",
+"Jaskolski"
+]
+},
+"cell_mobile_number": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 10,
+"free_text": false,
+"shapes": [
+"99999999999",
+"999.999.9999",
+"(999)999-9999",
+"(999)999-9999A9999",
+"(999)999-9999A999",
+"9-999-999-9999",
+"999-999-9999",
+"9-999-999-9999A999",
+"(999)999-9999A99999",
+"999.999.9999A9999"
+],
+"samples": [
+"(096)889-8954x524",
+"1-009-710-5151",
+"07661787471",
+"09700166582",
+"171-642-5684",
+"436.613.7683",
+"1-879-796-8987x164",
+"03174364122",
+"(507)365-8405",
+"677.401.9382",
+"(462)246-7921",
+"(982)153-1469x1733",
+"(213)445-0399x85208",
+"(605)919-3594x3661",
+"877.549.9067x8723"
+]
+},
+"email_address": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 4,
+"free_text": false,
+"shapes": [
+"A.A@A.A",
+"A99@A.A",
+"A@A.A",
+"A'A@A.A"
+],
+"samples": [
+"erwin.zboncak@example.com",
+"swift.kolby@example.com",
+"johns.unique@example.net",
+"jillian26@example.net",
+"lhartmann@example.org",
+"skassulke@example.net",
+"baumbach.lucious@example.org",
+"dell43@example.net",
+"qo'kon@example.com",
+"nya.lesch@example.net",
+"nbruen@example.org",
+"beth42@example.org",
+"jhuel@example.com",
+"gracie29@example.com",
+"mya88@example.org"
+]
+},
+"ssn": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 9,
+"free_text": false,
+"shapes": [
+"999",
+"99",
+"999999",
+"9",
+"999999999",
+"",
+"9999999",
+"99999",
+"99999999"
+],
+"samples": [
+"965",
+"304246",
+"3",
+"141072406",
+"",
+"248",
+"668",
+"402",
+"39",
+"43",
+"494",
+"6274274",
+"68095",
+"34458427",
+"156"
+]
+},
+"other_student_details": {
+"n_nonnull": 15,
+"n_distinct": 14,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"omnis",
+"quia",
+"autem",
+"facilis",
+"atque",
+"laborum",
+"qui",
+"dolorum",
+"voluptatem",
+"nesciunt",
+"rerum",
+"non",
+"assumenda",
+"et"
+]
+}
+},
+"Student_Enrolment": {
+"other_details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+},
+"Student_Enrolment_Courses": {},
+"Transcripts": {
+"other_details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+},
+"Transcript_Contents": {}
+},
+"tvshow": {
+"TV_Channel": {
+"id": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"999"
+],
+"samples": [
+"700",
+"701",
+"703",
+"704",
+"705",
+"706",
+"707",
+"708",
+"709",
+"713",
+"714",
+"715",
+"717",
+"719",
+"728"
+]
+},
+"series_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A A",
+"A A A",
+"A"
+],
+"samples": [
+"Sky Radio",
+"Sky Music",
+"Music Box Italia",
+"MTV Hits",
+"MTV Classic",
+"MTV Rocks",
+"MTV Dance",
+"MTV Music",
+"MTV Live HD",
+"Radio Capital TiVù",
+"myDeejay",
+"Match Music",
+"Rock TV",
+"Hip Hop TV",
+"Classica"
+]
+},
+"Country": {
+"n_nonnull": 15,
+"n_distinct": 3,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"Italy",
+"United Kingdom",
+"Poland"
+]
+},
+"Language": {
+"n_nonnull": 15,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Italian",
+"English"
+]
+},
+"Content": {
+"n_nonnull": 15,
+"n_distinct": 1,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"music"
+]
+},
+"Pixel_aspect_ratio_PAR": {
+"n_nonnull": 15,
+"n_distinct": 3,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"9:9",
+"99:9",
+"9:9 / 99:9"
+],
+"samples": [
+"4:3",
+"16:9",
+"4:3 / 16:9"
+]
+},
+"Hight_definition_TV": {
+"n_nonnull": 15,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"no",
+"yes"
+]
+},
+"Pay_per_view_PPV": {
+"n_nonnull": 15,
+"n_distinct": 1,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"no"
+]
+},
+"Package_Option": {
+"n_nonnull": 15,
+"n_distinct": 4,
+"n_shapes": 4,
+"free_text": false,
+"shapes": [
+"A A",
+"A ( A )",
+"A A + A A",
+"A"
+],
+"samples": [
+"Sky Famiglia",
+"no ( FTV )",
+"Sky Famiglia + Sky HD",
+"Option"
+]
+}
+},
+"TV_series": {
+"Episode": {
+"n_nonnull": 12,
+"n_distinct": 12,
+"n_shapes": 5,
+"free_text": false,
+"shapes": [
+"A",
+"A A A A A",
+"A A",
+"A A A A",
+"A A A"
+],
+"samples": [
+"A Love of a Lifetime",
+"Friendly Skies",
+"Game Three",
+"The Year of the Rabbit",
+"The Legend of Dylan McCleen",
+"Keepers",
+"Double Down",
+"Winterland",
+"Emily",
+"Blowback",
+"Home By Another Way",
+"The Hanged Man"
+]
+},
+"Air_Date": {
+"n_nonnull": 12,
+"n_distinct": 12,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A 99, 9999",
+"A 9, 9999"
+],
+"samples": [
+"September 24, 2007",
+"October 1, 2007",
+"October 8, 2007",
+"October 15, 2007",
+"October 22, 2007",
+"October 29, 2007",
+"November 5, 2007",
+"November 12, 2007",
+"November 19, 2007",
+"November 26, 2007",
+"December 10, 2007",
+"December 17, 2007"
+]
+},
+"Rating": {
+"n_nonnull": 12,
+"n_distinct": 10,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9.9"
+],
+"samples": [
+"3.7",
+"5.8",
+"5.3",
+"4.4",
+"4.3",
+"3.8",
+"3.4",
+"4.0",
+"3.5",
+"3.0"
+]
+},
+"18_49_Rating_Share": {
+"n_nonnull": 12,
+"n_distinct": 9,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9.9/9"
+],
+"samples": [
+"2.4/6",
+"2.2/6",
+"3.5/9",
+"3.2/8",
+"2.9/7",
+"2.7/7",
+"2.1/5",
+"1.7/5",
+"1.5/4"
+]
+},
+"Viewers_m": {
+"n_nonnull": 12,
+"n_distinct": 12,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9.99"
+],
+"samples": [
+"9.16",
+"8.23",
+"6.94",
+"6.75",
+"6.06",
+"5.75",
+"5.13",
+"6.09",
+"5.61",
+"6.05",
+"5.28",
+"4.24"
+]
+},
+"Channel": {
+"n_nonnull": 12,
+"n_distinct": 9,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"999"
+],
+"samples": [
+"700",
+"707",
+"714",
+"701",
+"713",
+"708",
+"717",
+"719",
+"728"
+]
+}
+},
+"Cartoon": {
+"Title": {
+"n_nonnull": 12,
+"n_distinct": 12,
+"n_shapes": 5,
+"free_text": false,
+"shapes": [
+"A A A A A!",
+"A A A A!",
+"A A A A A A!",
+"A A A!",
+"A A A A A A A!"
+],
+"samples": [
+"The Rise of the Blue Beetle!",
+"Terror on Dinosaur Island!",
+"Evil Under the Sea!",
+"Day of the Dark Knight!",
+"Invasion of the Secret Santas!",
+"Enter the Outsiders!",
+"Dawn of the Dead Man!",
+"Fall of the Blue Beetle!",
+"Journey to the Center of the Bat!",
+"The Eyes of Despero!",
+"Return of the Fearsome Fangs!",
+"Deep Cover for Batman!"
+]
+},
+"Directed_by": {
+"n_nonnull": 12,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A A"
+],
+"samples": [
+"Ben Jones",
+"Brandon Vietti",
+"Michael Chang"
+]
+},
+"Written_by": {
+"n_nonnull": 12,
+"n_distinct": 8,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A. A. A"
+],
+"samples": [
+"Steven Melching",
+"Joseph Kuhr",
+"J. M. DeMatteis",
+"Todd Casey",
+"Michael Jelenic",
+"Adam Beechen",
+"James Krieg",
+"Matt Wayne"
+]
+},
+"Original_air_date": {
+"n_nonnull": 12,
+"n_distinct": 12,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A99,9999",
+"A9,9999"
+],
+"samples": [
+"November14,2008",
+"November21,2008",
+"December5,2008",
+"January2,2009",
+"December12,2008",
+"January9,2009",
+"January16,2009",
+"January23,2009",
+"January30,2009",
+"February6,2009",
+"February20,2009",
+"February27,2009"
+]
+},
+"Channel": {
+"n_nonnull": 12,
+"n_distinct": 9,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"999"
+],
+"samples": [
+"707",
+"700",
+"701",
+"703",
+"704",
+"705",
+"706",
+"708",
+"728"
+]
+}
+}
+},
+"voter_1": {
+"AREA_CODE_STATE": {
+"state": {
+"n_nonnull": 305,
+"n_distinct": 51,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"CA",
+"TX",
+"FL",
+"NY",
+"IL",
+"MI",
+"OH",
+"PA",
+"NJ",
+"GA",
+"MA",
+"VA",
+"NC",
+"MO",
+"MN",
+"WA",
+"IN",
+"TN",
+"LA",
+"WI"
+]
+}
+},
+"CONTESTANTS": {
+"contestant_name": {
+"n_nonnull": 11,
+"n_distinct": 11,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A A A"
+],
+"samples": [
+"Edwina Burnam",
+"Tabatha Gehling",
+"Kelly Clauss",
+"Jessie Alloway",
+"Alana Bregman",
+"Jessie Eichman",
+"Allie Rogalski",
+"Nita Coster",
+"Kurt Walser",
+"Ericka Dieter",
+"Loraine NygrenTania Mattioli"
+]
+}
+},
+"VOTES": {
+"state": {
+"n_nonnull": 4,
+"n_distinct": 3,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A\n"
+],
+"samples": [
+"NY",
+"CA",
+"NJ\n"
+]
+}
+}
+},
+"world_1": {
+"city": {
+"Name": {
+"n_nonnull": 4079,
+"n_distinct": 4001,
+"n_shapes": 32,
+"free_text": false,
+"shapes": [
+"A",
+"A A",
+"A A A",
+"A-A",
+"A (A)",
+"A A A A",
+"A-A-A",
+"A [A]",
+"A´A",
+"A A-A",
+"A A A A A",
+"A-A A",
+"A A´A",
+"A/A",
+"A A (A A)",
+"´A-A",
+"A (A-A)",
+"A-A (A-A)",
+"A A. A",
+"A A A A A A",
+"A A A´A",
+"A/A (A)",
+"A [A A]",
+"A-A A-A",
+"A´A A A",
+"A A A A [A",
+"[A A A] A A",
+"A (A"
+],
+"samples": [
+"Córdoba",
+"San Miguel",
+"San Fernando",
+"Hamilton",
+"La Paz",
+"Toledo",
+"Cambridge",
+"Valencia",
+"León",
+"San Jose",
+"Victoria",
+"Richmond",
+"Springfield",
+"Ede",
+"Saint John´s",
+"San Juan",
+"Newcastle",
+"Santa Maria",
+"Colombo",
+"London"
+]
+},
+"CountryCode": {
+"n_nonnull": 4079,
+"n_distinct": 232,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"CHN",
+"IND",
+"USA",
+"BRA",
+"JPN",
+"RUS",
+"MEX",
+"PHL",
+"DEU",
+"IDN",
+"GBR",
+"KOR",
+"IRN",
+"NGA",
+"TUR",
+"ESP",
+"PAK",
+"ITA",
+"ARG",
+"UKR"
+]
+},
+"District": {
+"n_nonnull": 4079,
+"n_distinct": 1367,
+"n_shapes": 23,
+"free_text": false,
+"shapes": [
+"A",
+"A A",
+"A-A",
+"A A A",
+"A & A",
+"A A A A",
+"A-A-A",
+"–",
+"A A-A",
+"A-A A",
+"A [A]",
+"A-A-A-A",
+"A & A & A",
+"A-A A-A",
+"A (A)",
+"A [A",
+"",
+"A. A",
+"A A-A A"
+],
+"samples": [
+"England",
+"São Paulo",
+"California",
+"Punjab",
+"West Bengali",
+"Uttar Pradesh",
+"Nordrhein-Westfalen",
+"Maharashtra",
+"Andhra Pradesh",
+"Shandong",
+"Buenos Aires",
+"Southern Tagalog",
+"Tamil Nadu",
+"Minas Gerais",
+"Ontario",
+"México",
+"Texas",
+"West Java",
+"Jiangsu",
+"Rio de Janeiro"
+]
+}
+},
+"country": {
+"Code": {
+"n_nonnull": 239,
+"n_distinct": 239,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"ABW",
+"AFG",
+"AGO",
+"AIA",
+"ALB",
+"AND",
+"ANT",
+"ARE",
+"ARG",
+"ARM",
+"ASM",
+"ATA",
+"ATF",
+"ATG",
+"AUS",
+"AUT",
+"AZE",
+"BDI",
+"BEL",
+"BEN"
+]
+},
+"Name": {
+"n_nonnull": 239,
+"n_distinct": 239,
+"n_shapes": 14,
+"free_text": false,
+"shapes": [
+"A",
+"A A",
+"A A A",
+"A A A A",
+"A A A A A",
+"A (A) A",
+"A A’A",
+"A, A A A A A",
+"A, A A A",
+"A-A",
+"A A A A A A A",
+"A A (A A A)",
+"A A, A",
+"A A, A.A."
+],
+"samples": [
+"Aruba",
+"Afghanistan",
+"Angola",
+"Anguilla",
+"Albania",
+"Andorra",
+"Netherlands Antilles",
+"United Arab Emirates",
+"Argentina",
+"Armenia",
+"American Samoa",
+"Antarctica",
+"French Southern territories",
+"Antigua and Barbuda",
+"Australia",
+"Austria",
+"Azerbaijan",
+"Burundi",
+"Belgium",
+"Benin"
+]
+},
+"Continent": {
+"n_nonnull": 239,
+"n_distinct": 7,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"Africa",
+"Asia",
+"Europe",
+"North America",
+"Oceania",
+"South America",
+"Antarctica"
+]
+},
+"Region": {
+"n_nonnull": 239,
+"n_distinct": 25,
+"n_shapes": 4,
+"free_text": false,
+"shapes": [
+"A A",
+"A",
+"A A A A",
+"A/A"
+],
+"samples": [
+"Caribbean",
+"Eastern Africa",
+"Middle East",
+"Western Africa",
+"Southern Europe",
+"Southern and Central Asia",
+"South America",
+"Southeast Asia",
+"Polynesia",
+"Eastern Europe",
+"Central Africa",
+"Western Europe",
+"Central America",
+"Eastern Asia",
+"Nordic Countries",
+"Northern Africa",
+"Micronesia",
+"Antarctica",
+"Australia and New Zealand",
+"North America"
+]
+},
+"LocalName": {
+"n_nonnull": 239,
+"n_distinct": 239,
+"n_shapes": 31,
+"free_text": false,
+"shapes": [
+"A",
+"A A",
+"A/A",
+"A-A",
+"A A A",
+"A A A A",
+"A A/A",
+"A A A A A",
+"A/A/A/A",
+"A-A A-´A A-A",
+"–",
+"A/A-A",
+"A (A) A",
+"A A’A",
+"¸A",
+"A-A’A/A",
+"A´A",
+"A/A A",
+"A-´A",
+"A’A/A’A",
+"A A’A (A)",
+"´A",
+"A A A/A A",
+"A A A´A A (A)",
+"A-´A A-A´A",
+"A A A A A A A",
+"A-A-A-A",
+"A’A-A",
+"A A/A A A",
+"A A A A A A",
+"A-A-A"
+],
+"samples": [
+"Aruba",
+"Afganistan/Afqanestan",
+"Angola",
+"Anguilla",
+"Shqipëria",
+"Andorra",
+"Nederlandse Antillen",
+"Al-Imarat al-´Arabiya al-Muttahida",
+"Argentina",
+"Hajastan",
+"Amerika Samoa",
+"–",
+"Terres australes françaises",
+"Antigua and Barbuda",
+"Australia",
+"Österreich",
+"Azärbaycan",
+"Burundi/Uburundi",
+"België/Belgique",
+"Bénin"
+]
+},
+"GovernmentForm": {
+"n_nonnull": 239,
+"n_distinct": 35,
+"n_shapes": 10,
+"free_text": false,
+"shapes": [
+"A",
+"A A",
+"A A A A A",
+"A A A A",
+"A A A",
+"A A, A",
+"A (A)",
+"A-A",
+"A'A",
+"A A (A)"
+],
+"samples": [
+"Republic",
+"Constitutional Monarchy",
+"Federal Republic",
+"Dependent Territory of the UK",
+"Monarchy",
+"Nonmetropolitan Territory of France",
+"Constitutional Monarchy, Federation",
+"Territory of Australia",
+"Overseas Department of France",
+"US Territory",
+"Nonmetropolitan Territory of New Zealand",
+"Socialistic Republic",
+"Nonmetropolitan Territory of The Netherlands",
+"Monarchy (Sultanate)",
+"Dependent Territory of Norway",
+"Part of Denmark",
+"Special Administrative Region of China",
+"Islamic Republic",
+"Commonwealth of the US",
+"Territorial Collectivity of France"
+]
+},
+"HeadOfState": {
+"n_nonnull": 238,
+"n_distinct": 179,
+"n_shapes": 20,
+"free_text": false,
+"shapes": [
+"A A",
+"A A A",
+"A A. A",
+"A A A A",
+"A A-A",
+"A",
+"A A A A-A",
+"A-A A",
+"A A A-A",
+"",
+"A A [A A]",
+"A A-A A-A A-A",
+"A A A´A A",
+"A A A A A",
+"A A A´A",
+"A (A) A",
+"A A A-A A-A´A",
+"A'A A A",
+"A A. A. A",
+"A A-A A A"
+],
+"samples": [
+"Elisabeth II",
+"Jacques Chirac",
+"George W. Bush",
+"Beatrix",
+"Harald V",
+"Jiang Zemin",
+"Margrethe II",
+"",
+"Mohammad Omar",
+"José Eduardo dos Santos",
+"Rexhep Mejdani",
+"Zayid bin Sultan al-Nahayan",
+"Fernando de la Rúa",
+"Robert Kotšarjan",
+"Thomas Klestil",
+"Heydär Äliyev",
+"Pierre Buyoya",
+"Albert II",
+"Mathieu Kérékou",
+"Blaise Compaoré"
+]
+},
+"Code2": {
+"n_nonnull": 239,
+"n_distinct": 239,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"AW",
+"AF",
+"AO",
+"AI",
+"AL",
+"AD",
+"AN",
+"AE",
+"AR",
+"AM",
+"AS",
+"AQ",
+"TF",
+"AG",
+"AU",
+"AT",
+"AZ",
+"BI",
+"BE",
+"BJ"
+]
+}
+},
+"countrylanguage": {
+"CountryCode": {
+"n_nonnull": 984,
+"n_distinct": 233,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"CAN",
+"CHN",
+"IND",
+"RUS",
+"USA",
+"TZA",
+"ZAF",
+"COD",
+"IRN",
+"KEN",
+"MOZ",
+"NGA",
+"PHL",
+"SDN",
+"UGA",
+"AGO",
+"IDN",
+"VNM",
+"AUS",
+"AUT"
+]
+},
+"Language": {
+"n_nonnull": 984,
+"n_distinct": 457,
+"n_shapes": 6,
+"free_text": false,
+"shapes": [
+"A",
+"A A",
+"A-A",
+"A A A",
+"A-A-A",
+"[A]A"
+],
+"samples": [
+"English",
+"Arabic",
+"Spanish",
+"French",
+"German",
+"Chinese",
+"Russian",
+"Italian",
+"Creole English",
+"Portuguese",
+"Turkish",
+"Ful",
+"Ukrainian",
+"Polish",
+"Serbo-Croatian",
+"Creole French",
+"Hindi",
+"Hungarian",
+"Romani",
+"Belorussian"
+]
+},
+"IsOfficial": {
+"n_nonnull": 984,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"F",
+"T"
+]
+}
+}
+},
+"wta_1": {
+"players": {
+"first_name": {
+"n_nonnull": 20662,
+"n_distinct": 6768,
+"n_shapes": 9,
+"free_text": false,
+"shapes": [
+"A",
+"A A",
+"A A A"
+],
+"samples": [
+"Anna",
+"Maria",
+"Laura",
+"Alexandra",
+"Andrea",
+"Julia",
+"Natalia",
+"Elena",
+"Anastasia",
+"Stephanie",
+"Martina",
+"Ana",
+"Nicole",
+"Sara",
+"Daniela",
+"Patricia",
+"Marina",
+"Jennifer",
+"Sarah",
+"Caroline"
+]
+},
+"last_name": {
+"n_nonnull": 20662,
+"n_distinct": 15928,
+"n_shapes": 8,
+"free_text": false,
+"shapes": [
+"A",
+"A A",
+"A A A",
+"A A A A"
+],
+"samples": [
+"Lee",
+"Kim",
+"Smith",
+"Wang",
+"Liu",
+"Chen",
+"Li",
+"Jones",
+"Martinez",
+"Rodriguez",
+"Zhang",
+"Park",
+"Garcia",
+"Yang",
+"Fernandez",
+"Huang",
+"Brown",
+"Hernandez",
+"Williams",
+"Martin"
+]
+},
+"hand": {
+"n_nonnull": 20662,
+"n_distinct": 4,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+""
+],
+"samples": [
+"U",
+"R",
+"",
+"L"
+]
+},
+"country_code": {
+"n_nonnull": 20662,
+"n_distinct": 153,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"USA",
+"ITA",
+"ESP",
+"GER",
+"JPN",
+"RUS",
+"AUS",
+"FRA",
+"GBR",
+"IND",
+"ARG",
+"CZE",
+"BRA",
+"ROU",
+"MEX",
+"CHN",
+"NED",
+"CAN",
+"SWE",
+"UKR"
+]
+}
+},
+"matches": {
+"loser_entry": {
+"n_nonnull": 278,
+"n_distinct": 1,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+""
+],
+"samples": [
+""
+]
+},
+"loser_hand": {
+"n_nonnull": 278,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"R",
+"L"
+]
+},
+"loser_ioc": {
+"n_nonnull": 278,
+"n_distinct": 23,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"RUS",
+"CZE",
+"USA",
+"ESP",
+"GER",
+"ROU",
+"POL",
+"UKR",
+"ITA",
+"FRA",
+"SRB",
+"DEN",
+"AUS",
+"SVK",
+"HUN",
+"BLR",
+"BEL",
+"NED",
+"JPN",
+"SWE"
+]
+},
+"loser_name": {
+"n_nonnull": 278,
+"n_distinct": 49,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A A A"
+],
+"samples": [
+"Svetlana Kuznetsova",
+"Angelique Kerber",
+"Karolina Pliskova",
+"Agnieszka Radwanska",
+"Elina Svitolina",
+"Simona Halep",
+"Carla Suarez Navarro",
+"Garbine Muguruza",
+"Anastasia Pavlyuchenkova",
+"Madison Keys",
+"Petra Kvitova",
+"Kristina Mladenovic",
+"Caroline Wozniacki",
+"Roberta Vinci",
+"Samantha Stosur",
+"Venus Williams",
+"Dominika Cibulkova",
+"Serena Williams",
+"Barbora Zahlavova Strycova",
+"Elena Vesnina"
+]
+},
+"round": {
+"n_nonnull": 278,
+"n_distinct": 7,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A99"
+],
+"samples": [
+"QF",
+"R16",
+"SF",
+"R32",
+"F",
+"RR",
+"BR"
+]
+},
+"score": {
+"n_nonnull": 278,
+"n_distinct": 157,
+"n_shapes": 18,
+"free_text": false,
+"shapes": [
+"9-9 9-9",
+"9-9 9-9 9-9",
+"9-9 9-9(9)",
+"9-9 9-9(9) 9-9",
+"9-9(9) 9-9",
+"9-9(9) 9-9 9-9",
+"9-9 9-9 9-9(9)",
+"9-9 9-9 ",
+"9-9(9) 9-9(9)",
+"A/A",
+"9-9 9-9(9) 9-9(9)",
+"9-9 9-9 9-9 A",
+"9-9 9-9 A",
+"9-9 9-9(99)",
+"9-9 9-9 9-9 ",
+"9-9(99) 9-9 9-9",
+"9-9(9) 9-9 A",
+"9-9 A"
+],
+"samples": [
+"6-4 6-4",
+"6-2 6-4",
+"6-3 6-4",
+"6-3 6-3",
+"6-3 6-2",
+"6-1 6-1",
+"6-4 6-3",
+"6-4 6-2",
+"6-1 6-4",
+"7-5 6-3",
+"7-5 6-4",
+"6-2 6-0",
+"7-5 6-1",
+"6-3 6-1",
+"6-2 6-1",
+"6-3 7-5",
+"6-1 6-2",
+"6-2 6-3",
+"6-2 6-2",
+"6-1 6-3"
+]
+},
+"surface": {
+"n_nonnull": 278,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Hard",
+"Clay",
+"Grass"
+]
+},
+"tourney_id": {
+"n_nonnull": 278,
+"n_distinct": 70,
+"n_shapes": 5,
+"free_text": false,
+"shapes": [
+"9999-9999",
+"9999-A999",
+"9999-999",
+"9999-A-A-A-99A-9999",
+"9999-A99"
+],
+"samples": [
+"2017-M006",
+"2016-0808",
+"2013-W-WT-TUR-01A-2013",
+"2016-540",
+"2016-M006",
+"2016-520",
+"2016-560",
+"2016-M007",
+"2016-0806",
+"2016-M024",
+"2016-1075",
+"2017-560",
+"2016-580",
+"2016-O16",
+"2017-580",
+"2017-M007",
+"2017-M009",
+"2017-520",
+"2017-0806",
+"2016-M015"
+]
+},
+"tourney_level": {
+"n_nonnull": 278,
+"n_distinct": 4,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"I",
+"G",
+"P",
+"W"
+]
+},
+"tourney_name": {
+"n_nonnull": 278,
+"n_distinct": 53,
+"n_shapes": 5,
+"free_text": false,
+"shapes": [
+"A",
+"A A",
+"A. A",
+"A-A",
+"'A-A"
+],
+"samples": [
+"Indian Wells",
+"Us Open",
+"Miami",
+"Wimbledon",
+"Singapore",
+"Cincinnati",
+"WTA Championships",
+"Australian Open",
+"French Open",
+"Montreal",
+"Wuhan",
+"Rome",
+"Eastbourne",
+"Olympics",
+"Roland Garros",
+"Toronto",
+"Brisbane",
+"Stanford",
+"Beijing",
+"Zhuhai"
+]
+},
+"winner_entry": {
+"n_nonnull": 278,
+"n_distinct": 1,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+""
+],
+"samples": [
+""
+]
+},
+"winner_hand": {
+"n_nonnull": 278,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"R",
+"L"
+]
+},
+"winner_ioc": {
+"n_nonnull": 278,
+"n_distinct": 21,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"USA",
+"RUS",
+"CZE",
+"ROU",
+"GER",
+"ESP",
+"UKR",
+"SVK",
+"POL",
+"DEN",
+"BLR",
+"FRA",
+"AUS",
+"ITA",
+"CHN",
+"BEL",
+"HUN",
+"SRB",
+"JPN",
+"SWE"
+]
+},
+"winner_name": {
+"n_nonnull": 278,
+"n_distinct": 38,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A A A"
+],
+"samples": [
+"Angelique Kerber",
+"Simona Halep",
+"Karolina Pliskova",
+"Petra Kvitova",
+"Svetlana Kuznetsova",
+"Elina Svitolina",
+"Serena Williams",
+"Madison Keys",
+"Garbine Muguruza",
+"Dominika Cibulkova",
+"Agnieszka Radwanska",
+"Anastasia Pavlyuchenkova",
+"Caroline Wozniacki",
+"Victoria Azarenka",
+"Carla Suarez Navarro",
+"Ekaterina Makarova",
+"Venus Williams",
+"Samantha Stosur",
+"Coco Vandeweghe",
+"Elena Vesnina"
+]
+}
+},
+"rankings": {}
+}
+}

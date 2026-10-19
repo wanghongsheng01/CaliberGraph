@@ -1,0 +1,322 @@
+[
+ {
+  "idx": 0,
+  "pair_id": "md_ta_gpt-4-o_cot:959",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold relies on h:mm:ss time format identifying the winner while pred uses position=1; the witness gives a 4th-place (position 4, positionOrder 1) driver a winner-format time, which never happens in real data.",
+  "implausible_fact": "non-winner (position 4) has winner-format race time"
+ },
+ {
+  "idx": 1,
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:397",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Evidence maps 'available in paper and mtgo' to availability = 'mtgo,paper'; pred's LIKE also matches 'arena,mtgo,paper', returning a card the evidence excludes.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 2,
+  "pair_id": "md_kg_gpt-4:1057",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold joins Match.country_id while pred goes via League; the witness Match.league_id (15722) points to no League row since League ids were changed to 1653/1654, whereas in reality league id equals country id.",
+  "implausible_fact": "Match.league_id references nonexistent League id"
+ },
+ {
+  "idx": 3,
+  "pair_id": "md_kg_gpt-35-turbo:894",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two laps tie for the minimum milliseconds; gold and pred each return one tied record arbitrarily and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 4,
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:1252",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Evidence defines normal IgG as IGG > 900 and < 2000; gold uses BETWEEN and wrongly includes IGG = 900, while pred follows the evidence.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 5,
+  "pair_id": "md_kg_gpt-35-turbo-instruct:990",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The same driver/race result is duplicated with two different constructors both winning; gold lists both, pred one, but a race has only one winning entry.",
+  "implausible_fact": "same winning result row duplicated under two constructors"
+ },
+ {
+  "idx": 6,
+  "pair_id": "md_kg_gpt-4-turbo:1003",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No qualifying rows exist on the witness, so gold returns an empty set and pred returns a NULL aggregate; both express that no answer exists.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 7,
+  "pair_id": "md_kg_gpt-35-turbo:786",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Gold compares Strength values to the global MAX over all attributes (95 Intelligence), so it finds 0 heroes; pred correctly uses the max Strength value.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 8,
+  "pair_id": "md_ta_gpt-4-turbo_cot:100",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "'Stayed in Sokolov' refers to the client's residence district; pred uses the account's district and counts a client living in Benesov.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 9,
+  "pair_id": "md_ta_gpt-4-turbo_cot:1078",
+  "verdict": "gold_wrong",
+  "confidence": "low",
+  "reason": "Abdelaziz Barrada is absent, so no comparison is possible; gold still names Aaron Lennon as older while pred returns nothing.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 10,
+  "pair_id": "md_kg_meta-llama-3-70b-instruct-2:994",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both constructors tie with 0.0 points; gold and pred pick different tied constructors and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 11,
+  "pair_id": "md_kg_gpt-4:128",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Several districts tie at count 1 at the LIMIT 9 cutoff; gold and pred drop different tied districts (Ostrava vs Brno), an unspecified tie-break.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 12,
+  "pair_id": "md_kg_gpt-4:138",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two districts tie at the top A15 value; gold takes the second row (still the max value) while pred takes the second distinct value, and the question does not say how ties count for second-highest.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 13,
+  "pair_id": "md_ta_gpt-4-turbo_cot:62",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold COUNT(T2.School) skips a school whose name is NULL while pred counts it; in real data NULL School occurs only for district-office records with NULL Charter, not for a regular elementary school.",
+  "implausible_fact": "regular elementary school with NULL School name"
+ },
+ {
+  "idx": 14,
+  "pair_id": "md_kg_gpt-4:1003",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No qualifying rows exist on the witness, so gold returns an empty set and pred returns a NULL aggregate; both express that no answer exists.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 15,
+  "pair_id": "md_ta_gpt-4-o_cot:1331",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No qualifying rows exist on the witness, so gold returns an empty set and pred returns a NULL aggregate; both express that no answer exists.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 16,
+  "pair_id": "md_ta_gpt-4-turbo_cot:990",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The witness has a result with position 1 but positionOrder 23 (pred filters positionOrder=1, gold uses the winner time format); such inconsistent finishing records do not occur.",
+  "implausible_fact": "position=1 but positionOrder=23 for same result"
+ },
+ {
+  "idx": 17,
+  "pair_id": "md_kg_gpt-35-turbo:959",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold relies on h:mm:ss time format identifying the winner while pred uses position=1; the witness gives a 4th-place (position 4, positionOrder 1) driver a winner-format time, which never happens in real data.",
+  "implausible_fact": "non-winner (position 4) has winner-format race time"
+ },
+ {
+  "idx": 18,
+  "pair_id": "md_ta_gpt-4-o_cot:1057",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold joins Match.country_id while pred goes via League; the witness Match.league_id (15722) points to no League row since League ids were changed to 1653/1654, whereas in reality league id equals country id.",
+  "implausible_fact": "Match.league_id references nonexistent League id"
+ },
+ {
+  "idx": 19,
+  "pair_id": "md_ta_gpt-4-o_cot:212",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Least numerous element should be counted by atoms (evidence MIN(COUNT(element))); h has fewer atoms, while gold counts distinct molecules, yielding a tie broken arbitrarily to c.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 20,
+  "pair_id": "md_kg_meta-llama-3-70b-instruct-2:138",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two districts tie at the second-highest A15 value; gold counts males in both tied districts, pred picks one by LIMIT/OFFSET, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 21,
+  "pair_id": "md_ta_gpt-4-turbo_cot:1114",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Evidence defines the average as avg(overall_rating); gold divides SUM by COUNT(id), treating a NULL rating (which occurs in real data) as 0, while pred AVG ignores it.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 22,
+  "pair_id": "md_kg_gpt-35-turbo-instruct:879",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No result has a fastestLapSpeed, so no driver set a fastest lap speed; gold still returns an arbitrary driver via ORDER BY over NULLs, while pred returns nothing.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 23,
+  "pair_id": "md_kg_gpt-4-turbo:206",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The bond TR004_8_9 connects TR004_8 and TR004_9; gold only reads atom_id and misses TR004_8 because the symmetric connected row was given a mis-cased bond_id of another molecule, whereas real data always stores both directions with the same bond_id.",
+  "implausible_fact": "reverse connected row has mis-cased bond_id Tr004_8_9"
+ },
+ {
+  "idx": 24,
+  "pair_id": "md_kg_mistralai-mixtral-8x7b-instru-4:1398",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two events tie at the maximum Advertisement spend (67.81); gold and pred return different tied events and tie handling is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 25,
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:1078",
+  "verdict": "gold_wrong",
+  "confidence": "low",
+  "reason": "Abdelaziz Barrada is absent, so no comparison is possible; gold still names Aaron Lennon as older while pred returns nothing.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 26,
+  "pair_id": "md_kg_gpt-4:1331",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No qualifying rows exist on the witness, so gold returns an empty set and pred returns a NULL aggregate; both express that no answer exists.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 27,
+  "pair_id": "md_kg_mistralai-mixtral-8x7b-instru-4:1331",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No qualifying rows exist on the witness, so gold returns an empty set and pred returns a NULL aggregate; both express that no answer exists.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 28,
+  "pair_id": "md_kg_gpt-4-turbo:1114",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Evidence defines the average as avg(overall_rating); gold divides SUM by COUNT(id), treating a NULL rating (which occurs in real data) as 0, while pred AVG ignores it.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 29,
+  "pair_id": "md_ta_gpt-35-turbo_cot:212",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Least numerous element should be counted by atoms (evidence MIN(COUNT(element))); h has fewer atoms, while gold counts distinct molecules, yielding a tie broken arbitrarily to c.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 30,
+  "pair_id": "md_ta_gpt-4-o_cot:977",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "No disqualified finishers exist, so the count should be 0; gold SUM over no rows returns NULL while pred COUNT returns 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 31,
+  "pair_id": "md_kg_gpt-35-turbo:779",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold sums powers over two Amazo rows while pred takes one; the second Amazo is an exact clone of the first (same attributes and powers), a duplicate record that would not occur.",
+  "implausible_fact": "Amazo hero duplicated as identical record"
+ },
+ {
+  "idx": 32,
+  "pair_id": "md_ta_gpt-4-o_cot:1084",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two distinct players share the name Felipe (common in real data); gold counts distinct names and undercounts players, while pred counts distinct players.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 33,
+  "pair_id": "md_ta_gpt-4-o_cot:880",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Paul di Resta is absent from the witness; gold returns a NULL aggregate and pred an empty set, both meaning no answer.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 34,
+  "pair_id": "md_ta_gpt-4-turbo_cot:897",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "The only driver has 0 wins; gold requires wins >= 1 and returns nothing, while pred returns that driver as the maximum; with no winners both readings are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 35,
+  "pair_id": "md_ta_gpt-4-turbo_cot:138",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two districts tie at the second-highest A15 value; gold counts males in both tied districts, pred picks one by LIMIT/OFFSET, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 36,
+  "pair_id": "md_kg_gpt-4:206",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The bond TR004_8_9 connects TR004_8 and TR004_9; gold only reads atom_id and misses TR004_8 because the symmetric connected row was given a mis-cased bond_id of another molecule, whereas real data always stores both directions with the same bond_id.",
+  "implausible_fact": "reverse connected row has mis-cased bond_id Tr004_8_9"
+ },
+ {
+  "idx": 37,
+  "pair_id": "md_ta_gpt-35-turbo_cot:669",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No user 'chl' exists; gold returns empty and pred a NULL MIN, both meaning no answer.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 38,
+  "pair_id": "md_kg_gpt-4:1486",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No SME customers exist, so the difference is 0; gold SUM over no rows yields NULL while pred count difference gives 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 39,
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:1476",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The witness yearmonth Date '201243' has an invalid month; gold's year substring includes it while pred's BETWEEN 201201 and 201212 excludes it.",
+  "implausible_fact": "Date with month 43"
+ }
+]

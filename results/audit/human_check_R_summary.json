@@ -1,0 +1,310 @@
+{
+ "n": 30,
+ "agree_final": 28,
+ "agree_a": 28,
+ "agree_b": 28,
+ "agree_any": 30,
+ "agree_implausible_binary": 28,
+ "items": [
+  {
+   "n": 1,
+   "idx": 131,
+   "pair_id": "alpha:556",
+   "source": "CaliberGraph-R@R",
+   "human": "gold_wrong",
+   "final": "gold_wrong",
+   "a": "gold_wrong",
+   "b": "gold_wrong"
+  },
+  {
+   "n": 2,
+   "idx": 28,
+   "pair_id": "csc-32b:1025",
+   "source": "Fuzz-R@R",
+   "human": "implausible_data",
+   "final": "implausible_data",
+   "a": "implausible_data",
+   "b": "implausible_data"
+  },
+  {
+   "n": 3,
+   "idx": 31,
+   "pair_id": "slm:459",
+   "source": "Fuzz-R@R",
+   "human": "pred_wrong",
+   "final": "pred_wrong",
+   "a": "pred_wrong",
+   "b": "pred_wrong"
+  },
+  {
+   "n": 4,
+   "idx": 32,
+   "pair_id": "slm:1084",
+   "source": "CaliberGraph-R@R",
+   "human": "gold_wrong",
+   "final": "gold_wrong",
+   "a": "gold_wrong",
+   "b": "gold_wrong"
+  },
+  {
+   "n": 5,
+   "idx": 54,
+   "pair_id": "chess:260",
+   "source": "Fuzz-R@R",
+   "human": "implausible_data",
+   "final": "implausible_data",
+   "a": "implausible_data",
+   "b": "implausible_data"
+  },
+  {
+   "n": 6,
+   "idx": 232,
+   "pair_id": "csc-32b:1263",
+   "source": "CaliberGraph-R@R",
+   "human": "pred_wrong",
+   "final": "pred_wrong",
+   "a": "pred_wrong",
+   "b": "pred_wrong"
+  },
+  {
+   "n": 7,
+   "idx": 65,
+   "pair_id": "slm:1458",
+   "source": "Fuzz-R@R",
+   "human": "pred_wrong",
+   "final": "pred_wrong",
+   "a": "pred_wrong",
+   "b": "pred_wrong"
+  },
+  {
+   "n": 8,
+   "idx": 118,
+   "pair_id": "gena_submission_1:1255",
+   "source": "Fuzz-R@R",
+   "human": "gold_wrong",
+   "final": "gold_wrong",
+   "a": "gold_wrong",
+   "b": "gold_wrong"
+  },
+  {
+   "n": 9,
+   "idx": 79,
+   "pair_id": "rsl:751",
+   "source": "CaliberGraph-R@R",
+   "human": "gold_wrong",
+   "final": "gold_wrong",
+   "a": "gold_wrong",
+   "b": "gold_wrong"
+  },
+  {
+   "n": 10,
+   "idx": 242,
+   "pair_id": "rsl:1183",
+   "source": "Fuzz-R@R",
+   "human": "gold_wrong",
+   "final": "gold_wrong",
+   "a": "gold_wrong",
+   "b": "gold_wrong"
+  },
+  {
+   "n": 11,
+   "idx": 5,
+   "pair_id": "csc-7b:637",
+   "source": "CaliberGraph-R@R",
+   "human": "gold_wrong",
+   "final": "implausible_data",
+   "a": "implausible_data",
+   "b": "gold_wrong"
+  },
+  {
+   "n": 12,
+   "idx": 9,
+   "pair_id": "alpha:786",
+   "source": "Fuzz-R@R",
+   "human": "gold_wrong",
+   "final": "gold_wrong",
+   "a": "gold_wrong",
+   "b": "gold_wrong"
+  },
+  {
+   "n": 13,
+   "idx": 117,
+   "pair_id": "chess:1096",
+   "source": "Fuzz-R@R",
+   "human": "gold_wrong",
+   "final": "gold_wrong",
+   "a": "gold_wrong",
+   "b": "gold_wrong"
+  },
+  {
+   "n": 14,
+   "idx": 43,
+   "pair_id": "slm:641",
+   "source": "CaliberGraph-R@R",
+   "human": "implausible_data",
+   "final": "implausible_data",
+   "a": "implausible_data",
+   "b": "implausible_data"
+  },
+  {
+   "n": 15,
+   "idx": 236,
+   "pair_id": "gsr:936",
+   "source": "CaliberGraph-R@R",
+   "human": "implausible_data",
+   "final": "implausible_data",
+   "a": "implausible_data",
+   "b": "implausible_data"
+  },
+  {
+   "n": 16,
+   "idx": 103,
+   "pair_id": "csc-32b:939",
+   "source": "CaliberGraph-R@R",
+   "human": "implausible_data",
+   "final": "implausible_data",
+   "a": "implausible_data",
+   "b": "implausible_data"
+  },
+  {
+   "n": 17,
+   "idx": 249,
+   "pair_id": "gena_submission_1:101",
+   "source": "Fuzz-R@R",
+   "human": "ambiguous",
+   "final": "ambiguous",
+   "a": "ambiguous",
+   "b": "ambiguous"
+  },
+  {
+   "n": 18,
+   "idx": 92,
+   "pair_id": "alpha:583",
+   "source": "CaliberGraph-R@R",
+   "human": "ambiguous",
+   "final": "ambiguous",
+   "a": "ambiguous",
+   "b": "ambiguous"
+  },
+  {
+   "n": 19,
+   "idx": 64,
+   "pair_id": "gsr:173",
+   "source": "Fuzz-R@R",
+   "human": "ambiguous",
+   "final": "ambiguous",
+   "a": "ambiguous",
+   "b": "pred_wrong"
+  },
+  {
+   "n": 20,
+   "idx": 139,
+   "pair_id": "alpha:67",
+   "source": "CaliberGraph-R@R",
+   "human": "implausible_data",
+   "final": "implausible_data",
+   "a": "implausible_data",
+   "b": "implausible_data"
+  },
+  {
+   "n": 21,
+   "idx": 155,
+   "pair_id": "rsl:284",
+   "source": "Fuzz-R@R",
+   "human": "implausible_data",
+   "final": "implausible_data",
+   "a": "implausible_data",
+   "b": "implausible_data"
+  },
+  {
+   "n": 22,
+   "idx": 97,
+   "pair_id": "slm:91",
+   "source": "Fuzz-R@R",
+   "human": "implausible_data",
+   "final": "implausible_data",
+   "a": "implausible_data",
+   "b": "implausible_data"
+  },
+  {
+   "n": 23,
+   "idx": 6,
+   "pair_id": "alpha:512",
+   "source": "CaliberGraph-R@R",
+   "human": "gold_wrong",
+   "final": "gold_wrong",
+   "a": "gold_wrong",
+   "b": "gold_wrong"
+  },
+  {
+   "n": 24,
+   "idx": 158,
+   "pair_id": "chess:1147",
+   "source": "Fuzz-R@R",
+   "human": "ambiguous",
+   "final": "ambiguous",
+   "a": "ambiguous",
+   "b": "gold_wrong"
+  },
+  {
+   "n": 25,
+   "idx": 42,
+   "pair_id": "gena_submission_1:1331",
+   "source": "Fuzz-R@R",
+   "human": "ambiguous",
+   "final": "ambiguous",
+   "a": "ambiguous",
+   "b": "ambiguous"
+  },
+  {
+   "n": 26,
+   "idx": 12,
+   "pair_id": "csc-32b:876",
+   "source": "CaliberGraph-R@R",
+   "human": "implausible_data",
+   "final": "gold_wrong",
+   "a": "gold_wrong",
+   "b": "implausible_data"
+  },
+  {
+   "n": 27,
+   "idx": 91,
+   "pair_id": "gsr:1122",
+   "source": "CaliberGraph-R@R",
+   "human": "ambiguous",
+   "final": "ambiguous",
+   "a": "ambiguous",
+   "b": "ambiguous"
+  },
+  {
+   "n": 28,
+   "idx": 93,
+   "pair_id": "gsr:253",
+   "source": "Fuzz-R@R",
+   "human": "implausible_data",
+   "final": "implausible_data",
+   "a": "implausible_data",
+   "b": "implausible_data"
+  },
+  {
+   "n": 29,
+   "idx": 239,
+   "pair_id": "omni-32-majority:212",
+   "source": "CaliberGraph-R@R",
+   "human": "gold_wrong",
+   "final": "gold_wrong",
+   "a": "gold_wrong",
+   "b": "gold_wrong"
+  },
+  {
+   "n": 30,
+   "idx": 247,
+   "pair_id": "csc-32b:303",
+   "source": "CaliberGraph-R@R",
+   "human": "ambiguous",
+   "final": "ambiguous",
+   "a": "ambiguous",
+   "b": "ambiguous"
+  }
+ ]
+}

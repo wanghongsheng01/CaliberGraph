@@ -1,0 +1,72 @@
+{
+ "note": "Categories of the 43 gold-error items of benchmark_issues.json, assigned (AI-assisted) from the annotators' reasons for the ICDE version; post hoc. Items 744 and 829 rest on witnesses without the entity the question names.",
+ "categories": {
+  "filter_contradicts_evidence": [
+   426,
+   451,
+   597,
+   1202,
+   1252,
+   1255,
+   1266,
+   1309
+  ],
+  "wrong_join_path_or_attribute": [
+   29,
+   59,
+   112,
+   120,
+   147,
+   634,
+   637,
+   786,
+   1002,
+   1128,
+   1183
+  ],
+  "aggregate_over_empty_selection": [
+   303,
+   475,
+   512,
+   744,
+   819,
+   829,
+   977
+  ],
+  "rows_or_names_instead_of_entities": [
+   212,
+   556,
+   662,
+   751,
+   982,
+   1084,
+   1164
+  ],
+  "average_counts_nulls": [
+   789,
+   1072,
+   1096
+  ],
+  "other": [
+   876,
+   1013,
+   1123,
+   1134,
+   1263,
+   1391,
+   1513
+  ]
+ },
+ "counts": {
+  "filter_contradicts_evidence": 8,
+  "wrong_join_path_or_attribute": 11,
+  "aggregate_over_empty_selection": 7,
+  "rows_or_names_instead_of_entities": 7,
+  "average_counts_nulls": 3,
+  "other": 7
+ },
+ "sources": {
+  "A_R sample": 46,
+  "schema-tier sample": 77
+ }
+}

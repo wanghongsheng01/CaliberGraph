@@ -1,0 +1,80 @@
+{
+ "n": 100,
+ "primary_in_auto": 77,
+ "any_overlap": 90,
+ "exact_set": 23,
+ "mean_auto_labels": 2.17,
+ "mean_manual_labels": 1.26,
+ "per_label": {
+  "empty_aggregate": {
+   "tp": 5,
+   "fp": 9,
+   "fn": 4,
+   "prec": 0.35714285714285715,
+   "rec": 0.5555555555555556
+  },
+  "null_semantics": {
+   "tp": 20,
+   "fp": 21,
+   "fn": 17,
+   "prec": 0.4878048780487805,
+   "rec": 0.5405405405405406
+  },
+  "duplicates_distinct": {
+   "tp": 8,
+   "fp": 12,
+   "fn": 1,
+   "prec": 0.4,
+   "rec": 0.8888888888888888
+  },
+  "order_limit_ties": {
+   "tp": 21,
+   "fp": 8,
+   "fn": 1,
+   "prec": 0.7241379310344828,
+   "rec": 0.9545454545454546
+  },
+  "numeric_type_division": {
+   "tp": 1,
+   "fp": 15,
+   "fn": 0,
+   "prec": 0.0625,
+   "rec": 1.0
+  },
+  "filter_predicate": {
+   "tp": 17,
+   "fp": 12,
+   "fn": 1,
+   "prec": 0.5862068965517241,
+   "rec": 0.9444444444444444
+  },
+  "join_path": {
+   "tp": 20,
+   "fp": 9,
+   "fn": 1,
+   "prec": 0.6896551724137931,
+   "rec": 0.9523809523809523
+  },
+  "projection": {
+   "tp": 8,
+   "fp": 26,
+   "fn": 0,
+   "prec": 0.23529411764705882,
+   "rec": 1.0
+  },
+  "grouping": {
+   "tp": 1,
+   "fp": 4,
+   "fn": 0,
+   "prec": 0.2,
+   "rec": 1.0
+  },
+  "other": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "prec": null,
+   "rec": null
+  }
+ }
+}

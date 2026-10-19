@@ -1,0 +1,202 @@
+[
+ {
+  "idx": 100,
+  "pair_id": "gena_submission_1:101",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Several accounts tie on the earliest 1995 date (also true in the real data); gold and pred each pick one arbitrarily via LIMIT 1.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 101,
+  "pair_id": "chess:882",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Witness has no Singapore GP; empty result vs a NULL row from MIN is only an empty-aggregate difference.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 102,
+  "pair_id": "gsr:475",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises because two sets are both named Coldsnap; gold joins both, pred subquery takes only the first code.",
+  "implausible_fact": "two sets with the same name \"Coldsnap\" (set names are unique in reality)"
+ },
+ {
+  "idx": 103,
+  "pair_id": "rsl:307",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred returns both atoms of the bond, as the question asks; gold only matches the atom_id side and relies on the symmetric reverse row, which is missing in the witness.",
+  "implausible_fact": "connected row missing its symmetric reverse pair (always present in reality)"
+ },
+ {
+  "idx": 104,
+  "pair_id": "gena_submission_2:815",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness labels alignment id 1 as Bad while the evidence (and real data) defines id 1 as Good, so name-based gold and id-based pred diverge.",
+  "implausible_fact": "alignment id 1 labeled \"Bad\" (it is \"Good\" in reality)"
+ },
+ {
+  "idx": 105,
+  "pair_id": "gena_submission_1:1022",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two rows tie at the lowest potential with different preferred feet; LIMIT 1 vs all ties are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 106,
+  "pair_id": "csc-32b:931",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Witness lacks the 2009 Spanish GP; empty result vs NULL aggregate row is the only difference.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 107,
+  "pair_id": "csc-32b:1523",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred loses a country because its extra inner join to customers drops a transaction whose customer is missing from customers.",
+  "implausible_fact": "transaction references a CustomerID absent from customers (orphan)"
+ },
+ {
+  "idx": 108,
+  "pair_id": "alpha:1400",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold divides by COUNT(type), which is 0 because event type is NULL; pred correctly gives 0.0 percent over COUNT(event_id).",
+  "implausible_fact": "event type is NULL (never NULL in reality)"
+ },
+ {
+  "idx": 109,
+  "pair_id": "gsr:239",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Atom id \"T19\" does not follow the TRxxx_19 format, so the SUBSTR gold matches it while the LIKE pattern given in the evidence does not.",
+  "implausible_fact": "atom_id \"T19\" without TR prefix/underscore format"
+ },
+ {
+  "idx": 110,
+  "pair_id": "gsr:303",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "No TR006 rows exist; gold returns empty, pred returns a count 0 with NULL label from an ungrouped aggregate.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 111,
+  "pair_id": "chess:1513",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Question asks for the first customer of the day (earliest time); gold orders by Time DESC and returns the last one.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 112,
+  "pair_id": "rsl:634",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "\"Posts by\" a user means posts owned by them; gold attributes viewcounts via postHistory edits, giving Noah Snyder who owns no post in the witness.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 113,
+  "pair_id": "gsr:801",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness maps gender id 2 to Male (id 2 is Female in reality), so the name-based gold and id-based pred diverge on division by zero vs 0.",
+  "implausible_fact": "gender id 2 labeled \"Male\" (it is Female in reality)"
+ },
+ {
+  "idx": 114,
+  "pair_id": "omni-32-majority:456",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Gold uses DISTINCT and keeps a NULL/NULL row; pred drops that row but keeps a duplicate; both are defensible readings of listing types.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 115,
+  "pair_id": "rsl:282",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Molecule TR006 is absent; empty result vs a NULL row from an ungrouped aggregate.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 116,
+  "pair_id": "csc-7b:895",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Lap times exist for Hamilton in a race where he has no results row (and several drivers share the name), so gold and pred joins diverge.",
+  "implausible_fact": "lapTimes for a driver/race with no results row; duplicate driver names"
+ },
+ {
+  "idx": 117,
+  "pair_id": "csc-32b:669",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "User chl is absent from the witness; empty result vs NULL from MIN aggregate.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 118,
+  "pair_id": "chess:589",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Two users tie at the highest reputation; gold returns all ties, pred one; question is silent on ties.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 119,
+  "pair_id": "alpha:556",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold divides by COUNT(DISTINCT DisplayName), which is 0 because DisplayName is NULL for all users; pred divides by distinct users.",
+  "implausible_fact": "users.DisplayName is NULL (always filled in reality)"
+ },
+ {
+  "idx": 120,
+  "pair_id": "gsr:936",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Results.fastestLap (40) and the lapTimes lap of minimum time (1069) disagree only because the witness records are mutually inconsistent.",
+  "implausible_fact": "lapTimes lap 1069 inconsistent with results.fastestLap 40"
+ },
+ {
+  "idx": 121,
+  "pair_id": "slm:1084",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Question counts players; gold counts distinct names and merges two different players called Eduardo, pred counts distinct player ids.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 122,
+  "pair_id": "rsl:409",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold overcounts because the same card has two premodern legalities rows (and distinct matters); pred counts distinct cards.",
+  "implausible_fact": "duplicate legalities rows for same uuid and format"
+ },
+ {
+  "idx": 123,
+  "pair_id": "slm:1272",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred orders by First Date ASC without excluding NULL, so a patient with unknown first date is returned as the first patient; gold filters NULLs as MIN would.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 124,
+  "pair_id": "csc-32b:865",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred sorts NULL dob first and returns a driver with unknown birth date as the oldest; gold excludes NULL dob.",
+  "implausible_fact": null
+ }
+]

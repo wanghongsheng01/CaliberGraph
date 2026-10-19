@@ -1,0 +1,202 @@
+[
+ {
+  "idx": 0,
+  "pair_id": "gsr:1084",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Two distinct players share a name; the question counts players, so DISTINCT player_api_id is right and gold's DISTINCT player_name undercounts.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 1,
+  "pair_id": "slm:1458",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred forgot to divide the Vermont term by the member count, so it subtracts a raw count*100 instead of a percentage; gold gives the correct -50.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 2,
+  "pair_id": "gsr:899",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only because races.year (1990) contradicts races.date (2015) for the same race.",
+  "implausible_fact": "races.year inconsistent with races.date"
+ },
+ {
+  "idx": 3,
+  "pair_id": "omni-32-majority:391",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Extra gold row is a card with NULL name joined to a foreign_data row with NULL language; both fields are always filled in reality.",
+  "implausible_fact": "card name NULL and foreign_data language NULL"
+ },
+ {
+  "idx": 4,
+  "pair_id": "omni-32-majority:1255",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Evidence defines abnormal as IGM <=40 OR >=400; gold's NOT BETWEEN 40 AND 400 wrongly excludes the boundary value 400.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 5,
+  "pair_id": "omni-32-majority:744",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "With no Marvel/DC heroes the sums are empty: gold gives NULL, pred gives 0; both defensible for an empty set.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 6,
+  "pair_id": "gena_submission_2:990",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold's time-format proxy picks the row with a winner-style time but position=2 while positionOrder=1; position and positionOrder contradict each other.",
+  "implausible_fact": "winner has position 2 but positionOrder 1"
+ },
+ {
+  "idx": 7,
+  "pair_id": "alpha:270",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Molecules with NULL label form the largest group for COUNT(*) in pred; labels are always filled in reality.",
+  "implausible_fact": "molecule label NULL"
+ },
+ {
+  "idx": 8,
+  "pair_id": "csc-7b:1001",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Evidence says rank by MIN(q3); pred relies on qualifying.position=1 and returns nothing though a fastest q3 driver exists.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 9,
+  "pair_id": "omni-32-majority:475",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "'How many cards' with no matching rows should be 0 (pred); gold's SUM yields NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 10,
+  "pair_id": "chess:1114",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold (first 10 chars) and pred differ only because a date lacks the time part; all real dates are full 'YYYY-MM-DD 00:00:00'.",
+  "implausible_fact": "date without time component"
+ },
+ {
+  "idx": 11,
+  "pair_id": "gsr:1400",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold's COUNT(type) differs from evidence's COUNT(event_id) only because an event has NULL type, which never occurs in reality.",
+  "implausible_fact": "event type NULL"
+ },
+ {
+  "idx": 12,
+  "pair_id": "gsr:1319",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises only because positions are lowercase 'vice president'; real value is always 'Vice President'.",
+  "implausible_fact": "position in lowercase"
+ },
+ {
+  "idx": 13,
+  "pair_id": "slm:74",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred's ORDER BY returns a NULL Low Grade first while MIN ignores NULL; Low Grade is never NULL in real data.",
+  "implausible_fact": "frpm Low Grade NULL"
+ },
+ {
+  "idx": 14,
+  "pair_id": "slm:297",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred's path via connected/bond gives a different molecule than atom.molecule_id because the atom's molecule contradicts the bond's molecule.",
+  "implausible_fact": "atom.molecule_id inconsistent with bond.molecule_id"
+ },
+ {
+  "idx": 15,
+  "pair_id": "chess:321",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Question asks for the molecule of a bonded atom pair; pred ignores the pair and returns the molecule of a single existing atom although the pair is not connected.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 16,
+  "pair_id": "alpha:303",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The molecule has zero double bonds; pred answers 0 with its label while gold returns no row at all.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 17,
+  "pair_id": "alpha:880",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "No matching rows on the degenerate witness; gold returns a NULL aggregate row, pred an empty set, neither answers.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 18,
+  "pair_id": "gsr:209",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold only inspects connected.atom_id; difference arises because the witness lacks the reverse (symmetric) connected row that always exists.",
+  "implausible_fact": "connected row lacks its reverse pair"
+ },
+ {
+  "idx": 19,
+  "pair_id": "rsl:1492",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises from NULL Currency for the only KAM customer (SUM of NULL vs 0 branch); Currency is always filled.",
+  "implausible_fact": "customer Currency NULL"
+ },
+ {
+  "idx": 20,
+  "pair_id": "alpha:138",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Second-highest A15 is tied between two districts; gold takes all districts with that value, pred picks one arbitrarily; tie handling unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 21,
+  "pair_id": "rsl:751",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Question asks for five superpowers; gold's missing DISTINCT repeats 'Super Strength', so pred's distinct list is the right answer.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 22,
+  "pair_id": "rsl:273",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference arises from NULL element in the only atom (COUNT(element)=0 gives NULL); element is always filled.",
+  "implausible_fact": "atom element NULL"
+ },
+ {
+  "idx": 23,
+  "pair_id": "csc-7b:506",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred inflates the denominator via duplicate Japanese translation rows for the same set; each set has one translation per language in reality.",
+  "implausible_fact": "duplicate Japanese translations for one set"
+ },
+ {
+  "idx": 24,
+  "pair_id": "slm:801",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Witness labels gender id 2 as 'Male' (real: 1=Male, 2=Female), so id-based pred and name-based gold diverge only because of the altered mapping.",
+  "implausible_fact": "gender id 2 labelled Male"
+ }
+]

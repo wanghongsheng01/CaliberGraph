@@ -1,0 +1,6 @@
+../results/test/cgx_exc.jsonl checked 1774 R-ok 0
+../results/test/fuzz_exc.jsonl checked 1530 R-ok 0
+../results/test/parseval_l1_exc.jsonl checked 1196 R-ok 0
+../results/test/cgx_sc_exc.jsonl checked 1419 R-ok 23
+../results/test_spotit_vanilla_null.jsonl checked 1419 R-ok 0
+../results/test_spotit_llm.jsonl checked 2820 R-ok 0

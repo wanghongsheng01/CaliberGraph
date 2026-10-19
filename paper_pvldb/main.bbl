@@ -1,0 +1,867 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{53}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Abedjan, Golab, and Naumann}{Abedjan
+  et~al\mbox{.}}{2015}]%
+        {abedjan2015profiling}
+\bibfield{author}{\bibinfo{person}{Ziawasch Abedjan}, \bibinfo{person}{Lukasz
+  Golab}, {and} \bibinfo{person}{Felix Naumann}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Profiling relational data: a survey}.
+\newblock \bibinfo{journal}{\emph{The VLDB Journal}} \bibinfo{volume}{24},
+  \bibinfo{number}{4} (\bibinfo{year}{2015}), \bibinfo{pages}{557--581}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1007/s00778-015-0389-y}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Aho, Sagiv, and Ullman}{Aho
+  et~al\mbox{.}}{1979}]%
+        {aho1979tableaux}
+\bibfield{author}{\bibinfo{person}{Alfred~V. Aho}, \bibinfo{person}{Yehoshua
+  Sagiv}, {and} \bibinfo{person}{Jeffrey~D. Ullman}.}
+  \bibinfo{year}{1979}\natexlab{}.
+\newblock \showarticletitle{Efficient Optimization of a Class of Relational
+  Expressions}.
+\newblock \bibinfo{journal}{\emph{ACM Transactions on Database Systems}}
+  \bibinfo{volume}{4}, \bibinfo{number}{4} (\bibinfo{year}{1979}),
+  \bibinfo{pages}{435--454}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Alrashed, Sukoon, Karger, and Noy}{Alrashed
+  et~al\mbox{.}}{2026}]%
+        {alrashed2026verification}
+\bibfield{author}{\bibinfo{person}{Tarfah Alrashed}, \bibinfo{person}{Madhup
+  Sukoon}, \bibinfo{person}{David~R. Karger}, {and} \bibinfo{person}{Natasha
+  Noy}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{Developing and Benchmarking Verification Algorithms
+  to Improve Text-to-{SQL} Generation}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{19}, \bibinfo{number}{11} (\bibinfo{year}{2026}),
+  \bibinfo{pages}{3732--3744}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3836663.3836721}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Arasu, Kaushik, and Li}{Arasu
+  et~al\mbox{.}}{2011}]%
+        {arasu2011datasynth}
+\bibfield{author}{\bibinfo{person}{Arvind Arasu}, \bibinfo{person}{Raghav
+  Kaushik}, {and} \bibinfo{person}{Jian Li}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Data Generation Using Declarative Constraints}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the ACM SIGMOD International
+  Conference on Management of Data}}. \bibinfo{pages}{685--696}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Binnig, Kossmann, and Lo}{Binnig
+  et~al\mbox{.}}{2007a}]%
+        {binnig2007rqp}
+\bibfield{author}{\bibinfo{person}{Carsten Binnig}, \bibinfo{person}{Donald
+  Kossmann}, {and} \bibinfo{person}{Eric Lo}.}
+  \bibinfo{year}{2007}\natexlab{a}.
+\newblock \showarticletitle{Reverse Query Processing}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 23rd International Conference on
+  Data Engineering ({ICDE})}}. \bibinfo{publisher}{IEEE},
+  \bibinfo{pages}{506--515}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICDE.2007.367896}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Binnig, Kossmann, Lo, and {\"O}zsu}{Binnig
+  et~al\mbox{.}}{2007b}]%
+        {binnig2007qagen}
+\bibfield{author}{\bibinfo{person}{Carsten Binnig}, \bibinfo{person}{Donald
+  Kossmann}, \bibinfo{person}{Eric Lo}, {and} \bibinfo{person}{M.~Tamer
+  {\"O}zsu}.} \bibinfo{year}{2007}\natexlab{b}.
+\newblock \showarticletitle{{QAGen}: Generating Query-Aware Test Databases}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2007 ACM SIGMOD International
+  Conference on Management of Data}}. \bibinfo{publisher}{ACM},
+  \bibinfo{pages}{341--352}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/1247480.1247520}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Cao, Zheng, Fan, Zhang, Chen, and Bai}{Cao
+  et~al\mbox{.}}{2024}]%
+        {cao2024rslsql}
+\bibfield{author}{\bibinfo{person}{Zhenbiao Cao}, \bibinfo{person}{Yuanlei
+  Zheng}, \bibinfo{person}{Zhihao Fan}, \bibinfo{person}{Xiaojin Zhang},
+  \bibinfo{person}{Wei Chen}, {and} \bibinfo{person}{Xiang Bai}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{{RSL-SQL}: Robust Schema Linking in Text-to-{SQL}
+  Generation}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2411.00073}.
+\newblock
+\showeprint[arxiv]{2411.00073}
+
+
+\bibitem[\protect\citeauthoryear{Castelein, Aniche, Soltani, Panichella, and
+  van Deursen}{Castelein et~al\mbox{.}}{2018}]%
+        {castelein2018evosql}
+\bibfield{author}{\bibinfo{person}{Jeroen Castelein},
+  \bibinfo{person}{Maur{\'\i}cio Aniche}, \bibinfo{person}{Mozhan Soltani},
+  \bibinfo{person}{Annibale Panichella}, {and} \bibinfo{person}{Arie van
+  Deursen}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Search-based test data generation for {SQL}
+  queries}. In \bibinfo{booktitle}{\emph{Proceedings of the 40th International
+  Conference on Software Engineering ({ICSE})}}. \bibinfo{publisher}{ACM},
+  \bibinfo{pages}{1220--1230}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3180155.3180202}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Chandra and Merlin}{Chandra and
+  Merlin}{1977}]%
+        {chandra1977conjunctive}
+\bibfield{author}{\bibinfo{person}{Ashok~K. Chandra} {and}
+  \bibinfo{person}{Philip~M. Merlin}.} \bibinfo{year}{1977}\natexlab{}.
+\newblock \showarticletitle{Optimal Implementation of Conjunctive Queries in
+  Relational Data Bases}. In \bibinfo{booktitle}{\emph{Proceedings of the 9th
+  Annual ACM Symposium on Theory of Computing ({STOC})}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{pages}{77--90}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/800105.803397}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Chandra, Chawda, Kar, Reddy, Shah, and
+  Sudarshan}{Chandra et~al\mbox{.}}{2015}]%
+        {chandra2015xdata}
+\bibfield{author}{\bibinfo{person}{Bikash Chandra}, \bibinfo{person}{Bhupesh
+  Chawda}, \bibinfo{person}{Biplab Kar}, \bibinfo{person}{K.~V.~Maheshwara
+  Reddy}, \bibinfo{person}{Shetal Shah}, {and} \bibinfo{person}{S. Sudarshan}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Data generation for testing and grading {SQL}
+  queries}.
+\newblock \bibinfo{journal}{\emph{The {VLDB} Journal}} \bibinfo{volume}{24},
+  \bibinfo{number}{6} (\bibinfo{year}{2015}), \bibinfo{pages}{731--755}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1007/s00778-015-0395-0}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Chaudhuri and Vardi}{Chaudhuri and
+  Vardi}{1993}]%
+        {chaudhuri1993real}
+\bibfield{author}{\bibinfo{person}{Surajit Chaudhuri} {and}
+  \bibinfo{person}{Moshe~Y. Vardi}.} \bibinfo{year}{1993}\natexlab{}.
+\newblock \showarticletitle{Optimization of \emph{Real} Conjunctive Queries}.
+  In \bibinfo{booktitle}{\emph{Proceedings of the Twelfth ACM
+  SIGACT-SIGMOD-SIGART Symposium on Principles of Database Systems ({PODS})}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{Washington, DC, USA},
+  \bibinfo{pages}{59--70}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/153850.153856}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Chen, Miao, Zhang, and Wang}{Chen
+  et~al\mbox{.}}{2025}]%
+        {chen2025parseval}
+\bibfield{author}{\bibinfo{person}{Chunyu Chen}, \bibinfo{person}{Zhengjie
+  Miao}, \bibinfo{person}{Yong Zhang}, {and} \bibinfo{person}{Jiannan Wang}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{{ParSEval}: Plan-aware Test Database Generation for
+  {SQL} Equivalence Evaluation}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{18}, \bibinfo{number}{11} (\bibinfo{year}{2025}),
+  \bibinfo{pages}{4750--4762}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3749646.3749727}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Chen, Miao, Zhang, and Wang}{Chen
+  et~al\mbox{.}}{2026}]%
+        {chen2026parsevaldemo}
+\bibfield{author}{\bibinfo{person}{Chunyu Chen}, \bibinfo{person}{Zhengjie
+  Miao}, \bibinfo{person}{Yong Zhang}, {and} \bibinfo{person}{Jiannan Wang}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{ParSEval}: Interactive Counterexample-driven
+  Evaluation for Text-to-{SQL}}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{19}, \bibinfo{number}{12} (\bibinfo{year}{2026}),
+  \bibinfo{pages}{4846--4849}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3827998.3828137}
+\showDOI{\tempurl}
+\newblock
+\shownote{Demonstration paper.}
+
+
+\bibitem[\protect\citeauthoryear{Chu, Wang, Weitz, and Cheung}{Chu
+  et~al\mbox{.}}{2017}]%
+        {chu2017cosette}
+\bibfield{author}{\bibinfo{person}{Shumo Chu}, \bibinfo{person}{Chenglong
+  Wang}, \bibinfo{person}{Konstantin Weitz}, {and} \bibinfo{person}{Alvin
+  Cheung}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Cosette: An Automated Prover for {SQL}}. In
+  \bibinfo{booktitle}{\emph{Conference on Innovative Data Systems Research
+  ({CIDR})}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.cidrdb.org/cidr2017/papers/p51-chu-cidr17.pdf}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Chu, Ilyas, and Papotti}{Chu
+  et~al\mbox{.}}{2013}]%
+        {chu2013dc}
+\bibfield{author}{\bibinfo{person}{Xu Chu}, \bibinfo{person}{Ihab~F. Ilyas},
+  {and} \bibinfo{person}{Paolo Papotti}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Discovering Denial Constraints}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{6}, \bibinfo{number}{13} (\bibinfo{year}{2013}),
+  \bibinfo{pages}{1498--1509}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Cohen}{Cohen}{2026}]%
+        {cohen2026fewrows}
+\bibfield{author}{\bibinfo{person}{Sara Cohen}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Few Rows Tell Them Apart: Equivalence of Queries
+  Mixing Set and Bag Semantics}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2609.09978}.
+\newblock
+\showeprint[arxiv]{2609.09978}~[cs.DB]
+
+
+\bibitem[\protect\citeauthoryear{Cohen, Nutt, and Sagiv}{Cohen
+  et~al\mbox{.}}{2007}]%
+        {cohen2007aggregate}
+\bibfield{author}{\bibinfo{person}{Sara Cohen}, \bibinfo{person}{Werner Nutt},
+  {and} \bibinfo{person}{Yehoshua Sagiv}.} \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{Deciding equivalences among conjunctive aggregate
+  queries}.
+\newblock \bibinfo{journal}{\emph{J. ACM}} \bibinfo{volume}{54},
+  \bibinfo{number}{2} (\bibinfo{year}{2007}), \bibinfo{pages}{5}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/1219092.1219093}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Ding, Wang, Yang, Zhang, Xu, Chen, Piskac, and
+  Li}{Ding et~al\mbox{.}}{2023}]%
+        {ding2023sqlsolver}
+\bibfield{author}{\bibinfo{person}{Haoran Ding}, \bibinfo{person}{Zhaoguo
+  Wang}, \bibinfo{person}{Yicun Yang}, \bibinfo{person}{Dexin Zhang},
+  \bibinfo{person}{Zhenglin Xu}, \bibinfo{person}{Haibo Chen},
+  \bibinfo{person}{Ruzica Piskac}, {and} \bibinfo{person}{Jinyang Li}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Proving Query Equivalence Using Linear Integer
+  Arithmetic}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the ACM on Management of
+  Data}} \bibinfo{volume}{1}, \bibinfo{number}{4} (\bibinfo{year}{2023}),
+  \bibinfo{pages}{1--26}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3626768}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{D{\"o}nder, Hommel, Wen-Yi, Mimno, and
+  Jo}{D{\"o}nder et~al\mbox{.}}{2025}]%
+        {donder2025genasql}
+\bibfield{author}{\bibinfo{person}{Yusuf~Denizay D{\"o}nder},
+  \bibinfo{person}{Derek Hommel}, \bibinfo{person}{Andrea~W. Wen-Yi},
+  \bibinfo{person}{David Mimno}, {and} \bibinfo{person}{Unso Eun~Seo Jo}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{Cheaper, Better, Faster, Stronger: Robust
+  Text-to-{SQL} without Chain-of-Thought or Fine-Tuning}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2505.14174}.
+\newblock
+\showeprint[arxiv]{2505.14174}
+
+
+\bibitem[\protect\citeauthoryear{Entezari~Maleki, Pourreza, and
+  Rafiei}{Entezari~Maleki et~al\mbox{.}}{2026}]%
+        {maleki2026confidence}
+\bibfield{author}{\bibinfo{person}{Sepideh Entezari~Maleki},
+  \bibinfo{person}{Mohammadreza Pourreza}, {and} \bibinfo{person}{Davood
+  Rafiei}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{Confidence Estimation for Text-to-SQL in Large
+  Language Models}. In \bibinfo{booktitle}{\emph{Proceedings of the AAAI
+  Conference on Artificial Intelligence}}, Vol.~\bibinfo{volume}{40}.
+  \bibinfo{pages}{32474--32482}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1609/aaai.v40i38.40523}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Fan, Geerts, Li, and Xiong}{Fan
+  et~al\mbox{.}}{2011}]%
+        {fan2011cfd}
+\bibfield{author}{\bibinfo{person}{Wenfei Fan}, \bibinfo{person}{Floris
+  Geerts}, \bibinfo{person}{Jianzhong Li}, {and} \bibinfo{person}{Ming Xiong}.}
+  \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Discovering Conditional Functional Dependencies}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Knowledge and Data
+  Engineering}} \bibinfo{volume}{23}, \bibinfo{number}{5}
+  (\bibinfo{year}{2011}), \bibinfo{pages}{683--698}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Fan, Ren, Huang, He, and Wang}{Fan
+  et~al\mbox{.}}{2025}]%
+        {fan2025cyclesql}
+\bibfield{author}{\bibinfo{person}{Yuankai Fan}, \bibinfo{person}{Tonghui Ren},
+  \bibinfo{person}{Can Huang}, \bibinfo{person}{Zhenying He}, {and}
+  \bibinfo{person}{X.~Sean Wang}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Grounding Natural Language to {SQL} Translation
+  with Data-Based Self-Explanations}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the IEEE 41st International Conference on Data Engineering (ICDE)}}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICDE65448.2025.00010}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Gao, Wang, Li, Sun, Qian, Ding, and Zhou}{Gao
+  et~al\mbox{.}}{2024}]%
+        {gao2024dailsql}
+\bibfield{author}{\bibinfo{person}{Dawei Gao}, \bibinfo{person}{Haibin Wang},
+  \bibinfo{person}{Yaliang Li}, \bibinfo{person}{Xiuyu Sun},
+  \bibinfo{person}{Yichen Qian}, \bibinfo{person}{Bolin Ding}, {and}
+  \bibinfo{person}{Jingren Zhou}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Text-to-{SQL} Empowered by Large Language Models: A
+  Benchmark Evaluation}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{17}, \bibinfo{number}{5} (\bibinfo{year}{2024}),
+  \bibinfo{pages}{1132--1145}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3641204.3641221}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{He, Zhao, Wang, and Wang}{He
+  et~al\mbox{.}}{2024}]%
+        {he2024verieql}
+\bibfield{author}{\bibinfo{person}{Yang He}, \bibinfo{person}{Pinhan Zhao},
+  \bibinfo{person}{Xinyu Wang}, {and} \bibinfo{person}{Yuepeng Wang}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{VeriEQL}: Bounded Equivalence Verification for
+  Complex {SQL} Queries with Integrity Constraints}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the ACM on Programming
+  Languages}} \bibinfo{volume}{8}, \bibinfo{number}{OOPSLA1}
+  (\bibinfo{year}{2024}), \bibinfo{pages}{1071--1099}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3649849}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Hou, Pei, Chen, Ta, Lu, and Ooi}{Hou
+  et~al\mbox{.}}{2026}]%
+        {hou2026nl2sqlbench}
+\bibfield{author}{\bibinfo{person}{Shizheng Hou}, \bibinfo{person}{Wenqi Pei},
+  \bibinfo{person}{Nuo Chen}, \bibinfo{person}{Quang-Trung Ta},
+  \bibinfo{person}{Peng Lu}, {and} \bibinfo{person}{Beng~Chin Ooi}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{NL2SQLBench}: A Modular Benchmarking Framework for
+  {LLM}-Enabled {NL2SQL} Solutions}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{19}, \bibinfo{number}{5} (\bibinfo{year}{2026}),
+  \bibinfo{pages}{1001--1015}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3796195.3796211}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Jin, Choi, Zhu, and Kang}{Jin
+  et~al\mbox{.}}{2026}]%
+        {jin2026annotation}
+\bibfield{author}{\bibinfo{person}{Tengjun Jin}, \bibinfo{person}{Yoojin Choi},
+  \bibinfo{person}{Yuxuan Zhu}, {and} \bibinfo{person}{Daniel Kang}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{Pervasive Annotation Errors Break Text-to-{SQL}
+  Benchmarks and Leaderboards}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{19}, \bibinfo{number}{5} (\bibinfo{year}{2026}),
+  \bibinfo{pages}{931--944}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3796195.3796206}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Johnson and Klug}{Johnson and Klug}{1984}]%
+        {johnson1984containment}
+\bibfield{author}{\bibinfo{person}{David~S. Johnson} {and}
+  \bibinfo{person}{Anthony Klug}.} \bibinfo{year}{1984}\natexlab{}.
+\newblock \showarticletitle{Testing Containment of Conjunctive Queries under
+  Functional and Inclusion Dependencies}.
+\newblock \bibinfo{journal}{\emph{J. Comput. System Sci.}}
+  \bibinfo{volume}{28} (\bibinfo{year}{1984}), \bibinfo{pages}{167--189}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kim, Jeon, Choi, Choi, and Cho}{Kim
+  et~al\mbox{.}}{2025}]%
+        {kim2025flex}
+\bibfield{author}{\bibinfo{person}{Heegyu Kim}, \bibinfo{person}{Taeyang Jeon},
+  \bibinfo{person}{SeungHwan Choi}, \bibinfo{person}{Seungtaek Choi}, {and}
+  \bibinfo{person}{Hyunsouk Cho}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{{FLEX}: Expert-level False-Less {EX}ecution Metric
+  for Text-to-{SQL} Benchmark}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  2025 Conference of the Nations of the Americas Chapter of the Association for
+  Computational Linguistics: Human Language Technologies (Volume 1: Long
+  Papers)}}. \bibinfo{publisher}{Association for Computational Linguistics},
+  \bibinfo{pages}{4448--4475}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/2025.naacl-long.228}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Klopfenstein, He, Tremante, Wang, Narodytska,
+  and Wu}{Klopfenstein et~al\mbox{.}}{2026}]%
+        {klopfenstein2026spotit}
+\bibfield{author}{\bibinfo{person}{Rocky Klopfenstein}, \bibinfo{person}{Yang
+  He}, \bibinfo{person}{Andrew Tremante}, \bibinfo{person}{Yuepeng Wang},
+  \bibinfo{person}{Nina Narodytska}, {and} \bibinfo{person}{Haoze Wu}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{SpotIt}: Evaluating Text-to-{SQL} Evaluation with
+  Formal Verification}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  Fourteenth International Conference on Learning Representations (ICLR)}}.
+  \bibinfo{pages}{69012--69048}.
+\newblock
+\newblock
+\shownote{arXiv:2510.26840.}
+
+
+\bibitem[\protect\citeauthoryear{Li, Luo, Chai, Li, and Tang}{Li
+  et~al\mbox{.}}{2024}]%
+        {li2024nl2sql360}
+\bibfield{author}{\bibinfo{person}{Boyan Li}, \bibinfo{person}{Yuyu Luo},
+  \bibinfo{person}{Chengliang Chai}, \bibinfo{person}{Guoliang Li}, {and}
+  \bibinfo{person}{Nan Tang}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{The Dawn of Natural Language to {SQL}: Are We Fully
+  Ready?}
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{17}, \bibinfo{number}{11} (\bibinfo{year}{2024}),
+  \bibinfo{pages}{3318--3331}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3681954.3682003}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Li, Zhang, Fan, Xu, Chen, Tang, and Luo}{Li
+  et~al\mbox{.}}{2025b}]%
+        {li2025alphasql}
+\bibfield{author}{\bibinfo{person}{Boyan Li}, \bibinfo{person}{Jiayi Zhang},
+  \bibinfo{person}{Ju Fan}, \bibinfo{person}{Yanwei Xu}, \bibinfo{person}{Chong
+  Chen}, \bibinfo{person}{Nan Tang}, {and} \bibinfo{person}{Yuyu Luo}.}
+  \bibinfo{year}{2025}\natexlab{b}.
+\newblock \showarticletitle{{Alpha-SQL}: Zero-Shot Text-to-{SQL} using {Monte
+  Carlo} Tree Search}. In \bibinfo{booktitle}{\emph{Proceedings of the 42nd
+  International Conference on Machine Learning ({ICML})}}
+  \emph{(\bibinfo{series}{Proceedings of Machine Learning Research})},
+  Vol.~\bibinfo{volume}{267}. \bibinfo{publisher}{PMLR},
+  \bibinfo{pages}{36810--36830}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Li, Wu, Zhang, Huang, Zhang, Jiang, Wang,
+  Zhang, Chen, Shi, Chen, and Li}{Li et~al\mbox{.}}{2025a}]%
+        {li2025omnisql}
+\bibfield{author}{\bibinfo{person}{Haoyang Li}, \bibinfo{person}{Shang Wu},
+  \bibinfo{person}{Xiaokang Zhang}, \bibinfo{person}{Xinmei Huang},
+  \bibinfo{person}{Jing Zhang}, \bibinfo{person}{Fuxin Jiang},
+  \bibinfo{person}{Shuai Wang}, \bibinfo{person}{Tieying Zhang},
+  \bibinfo{person}{Jianjun Chen}, \bibinfo{person}{Rui Shi},
+  \bibinfo{person}{Hong Chen}, {and} \bibinfo{person}{Cuiping Li}.}
+  \bibinfo{year}{2025}\natexlab{a}.
+\newblock \showarticletitle{{OmniSQL}: Synthesizing High-quality Text-to-{SQL}
+  Data at Scale}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{18}, \bibinfo{number}{11} (\bibinfo{year}{2025}),
+  \bibinfo{pages}{4695--4709}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3749646.3749723}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Li, Hui, Cheng, Qin, Ma, Huo, Huang, Du, Si,
+  and Li}{Li et~al\mbox{.}}{2023a}]%
+        {li2023graphix}
+\bibfield{author}{\bibinfo{person}{Jinyang Li}, \bibinfo{person}{Binyuan Hui},
+  \bibinfo{person}{Reynold Cheng}, \bibinfo{person}{Bowen Qin},
+  \bibinfo{person}{Chenhao Ma}, \bibinfo{person}{Nan Huo}, \bibinfo{person}{Fei
+  Huang}, \bibinfo{person}{Wenyu Du}, \bibinfo{person}{Luo Si}, {and}
+  \bibinfo{person}{Yongbin Li}.} \bibinfo{year}{2023}\natexlab{a}.
+\newblock \showarticletitle{{Graphix-T5}: Mixing Pre-Trained Transformers with
+  Graph-Aware Layers for Text-to-{SQL} Parsing}. In
+  \bibinfo{booktitle}{\emph{AAAI Conference on Artificial Intelligence}},
+  Vol.~\bibinfo{volume}{37}. \bibinfo{pages}{13076--13084}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1609/aaai.v37i11.26536}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Li, Hui, Qu, Yang, Li, Li, Wang, Qin, Geng,
+  Huo, Zhou, Ma, Li, Chang, Huang, Cheng, and Li}{Li et~al\mbox{.}}{2023b}]%
+        {li2023bird}
+\bibfield{author}{\bibinfo{person}{Jinyang Li}, \bibinfo{person}{Binyuan Hui},
+  \bibinfo{person}{Ge Qu}, \bibinfo{person}{Jiaxi Yang},
+  \bibinfo{person}{Binhua Li}, \bibinfo{person}{Bowen Li},
+  \bibinfo{person}{Bailin Wang}, \bibinfo{person}{Bowen Qin},
+  \bibinfo{person}{Ruiying Geng}, \bibinfo{person}{Nan Huo},
+  \bibinfo{person}{Xuanhe Zhou}, \bibinfo{person}{Chenhao Ma},
+  \bibinfo{person}{Guoliang Li}, \bibinfo{person}{Kevin Chang},
+  \bibinfo{person}{Fei Huang}, \bibinfo{person}{Reynold Cheng}, {and}
+  \bibinfo{person}{Yongbin Li}.} \bibinfo{year}{2023}\natexlab{b}.
+\newblock \showarticletitle{Can {LLM} Already Serve as A Database Interface?
+  {A} {BIg} Bench for Large-Scale Database Grounded Text-to-{SQLs}}. In
+  \bibinfo{booktitle}{\emph{Advances in Neural Information Processing Systems
+  36 (NeurIPS 2023), Datasets and Benchmarks Track}},
+  Vol.~\bibinfo{volume}{36}. \bibinfo{pages}{42330--42357}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.52202/075280-1835}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Li, Zhang, Yang, Zhang, and Zhou}{Li
+  et~al\mbox{.}}{2018}]%
+        {li2018touchstone}
+\bibfield{author}{\bibinfo{person}{Yuming Li}, \bibinfo{person}{Rong Zhang},
+  \bibinfo{person}{Xiaoyan Yang}, \bibinfo{person}{Zhenjie Zhang}, {and}
+  \bibinfo{person}{Aoying Zhou}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Touchstone: Generating Enormous Query-Aware Test
+  Databases}. In \bibinfo{booktitle}{\emph{Proceedings of the USENIX Annual
+  Technical Conference (USENIX ATC)}}. \bibinfo{pages}{575--586}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Malekpour, Riahi, Lamothe, and
+  Mhedhbi}{Malekpour et~al\mbox{.}}{2026}]%
+        {malekpour2026sqlmorph}
+\bibfield{author}{\bibinfo{person}{Mohammadhossein Malekpour},
+  \bibinfo{person}{Mohamed Riahi}, \bibinfo{person}{Maxime Lamothe}, {and}
+  \bibinfo{person}{Amine Mhedhbi}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{SQLMorph}: Query Mutation and Fine-Grained Metrics
+  for Text-to-{SQL} Evaluation}. In \bibinfo{booktitle}{\emph{Proceedings of
+  the IEEE 42nd International Conference on Data Engineering (ICDE)}}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICDE65706.2026.00196}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Ni, Zhang, Miao, Zhao, Wu, Wang, and Yin}{Ni
+  et~al\mbox{.}}{2025}]%
+        {ni2025zeroed}
+\bibfield{author}{\bibinfo{person}{Wei Ni}, \bibinfo{person}{Kaihang Zhang},
+  \bibinfo{person}{Xiaoye Miao}, \bibinfo{person}{Xiangyu Zhao},
+  \bibinfo{person}{Yangyang Wu}, \bibinfo{person}{Yaoshu Wang}, {and}
+  \bibinfo{person}{Jianwei Yin}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{{ZeroED}: Hybrid Zero-Shot Error Detection with
+  Large Language Model Reasoning}. In \bibinfo{booktitle}{\emph{Proceedings of
+  the IEEE 41st International Conference on Data Engineering (ICDE)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Papenbrock, Kruse, Quian{\'e}-Ruiz, and
+  Naumann}{Papenbrock et~al\mbox{.}}{2015}]%
+        {papenbrock2015binder}
+\bibfield{author}{\bibinfo{person}{Thorsten Papenbrock},
+  \bibinfo{person}{Sebastian Kruse}, \bibinfo{person}{Jorge-Arnulfo
+  Quian{\'e}-Ruiz}, {and} \bibinfo{person}{Felix Naumann}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Divide \& Conquer-based Inclusion Dependency
+  Discovery}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{8}, \bibinfo{number}{7} (\bibinfo{year}{2015}),
+  \bibinfo{pages}{774--785}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Papenbrock and Naumann}{Papenbrock and
+  Naumann}{2016}]%
+        {papenbrock2016hyfd}
+\bibfield{author}{\bibinfo{person}{Thorsten Papenbrock} {and}
+  \bibinfo{person}{Felix Naumann}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{A Hybrid Approach to Functional Dependency
+  Discovery}. In \bibinfo{booktitle}{\emph{Proceedings of the ACM SIGMOD
+  International Conference on Management of Data}}. \bibinfo{pages}{821--833}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Pham, Nguyen, Huynh, Yin, and Nguyen}{Pham
+  et~al\mbox{.}}{2026}]%
+        {pham2026fusionsql}
+\bibfield{author}{\bibinfo{person}{Trinh Pham}, \bibinfo{person}{Thanh~Tam
+  Nguyen}, \bibinfo{person}{Viet Huynh}, \bibinfo{person}{Hongzhi Yin}, {and}
+  \bibinfo{person}{Quoc Viet~Hung Nguyen}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{An Efficient and Effective Evaluator for {Text2SQL}
+  Models on Unseen and Unlabeled Data}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the IEEE 42nd International
+  Conference on Data Engineering (ICDE)}}. \bibinfo{pages}{2434--2447}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICDE65706.2026.00182}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Pourreza and Rafiei}{Pourreza and
+  Rafiei}{2023}]%
+        {pourreza2023dinsql}
+\bibfield{author}{\bibinfo{person}{Mohammadreza Pourreza} {and}
+  \bibinfo{person}{Davood Rafiei}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{{DIN-SQL}: Decomposed In-Context Learning of
+  Text-to-{SQL} with Self-Correction}. In \bibinfo{booktitle}{\emph{Advances in
+  Neural Information Processing Systems (NeurIPS)}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Sheng and Xu}{Sheng and Xu}{2025a}]%
+        {sheng2025cscsql}
+\bibfield{author}{\bibinfo{person}{Lei Sheng} {and}
+  \bibinfo{person}{Shuai-Shuai Xu}.} \bibinfo{year}{2025}\natexlab{a}.
+\newblock \bibinfo{title}{{CSC-SQL}: Corrective Self-Consistency in
+  Text-to-{SQL} via Reinforcement Learning}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2505.13271}.
+\newblock
+\showeprint[arxiv]{2505.13271}
+
+
+\bibitem[\protect\citeauthoryear{Sheng and Xu}{Sheng and Xu}{2025b}]%
+        {sheng2025slmsql}
+\bibfield{author}{\bibinfo{person}{Lei Sheng} {and}
+  \bibinfo{person}{Shuai-Shuai Xu}.} \bibinfo{year}{2025}\natexlab{b}.
+\newblock \showarticletitle{{SLM-SQL}: An Exploration of Small Language Models
+  for Text-to-{SQL}}. In \bibinfo{booktitle}{\emph{Findings of the Association
+  for Computational Linguistics: IJCNLP-AACL 2025}}.
+  \bibinfo{publisher}{Association for Computational Linguistics},
+  \bibinfo{pages}{1497--1512}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/2025.findings-ijcnlp.92}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Somov and Tutubalina}{Somov and
+  Tutubalina}{2025}]%
+        {somov2025confidence}
+\bibfield{author}{\bibinfo{person}{Oleg Somov} {and} \bibinfo{person}{Elena
+  Tutubalina}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Confidence Estimation for Error Detection in
+  Text-to-SQL Systems}. In \bibinfo{booktitle}{\emph{Proceedings of the AAAI
+  Conference on Artificial Intelligence}}, Vol.~\bibinfo{volume}{39}.
+  \bibinfo{pages}{25137--25145}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1609/aaai.v39i23.34699}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Talaei, Pourreza, Chang, Mirhoseini, and
+  Saberi}{Talaei et~al\mbox{.}}{2024}]%
+        {talaei2024chess}
+\bibfield{author}{\bibinfo{person}{Shayan Talaei},
+  \bibinfo{person}{Mohammadreza Pourreza}, \bibinfo{person}{Yu-Chen Chang},
+  \bibinfo{person}{Azalia Mirhoseini}, {and} \bibinfo{person}{Amin Saberi}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{{CHESS}: Contextual Harnessing for Efficient {SQL}
+  Synthesis}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2405.16755}.
+\newblock
+\showeprint[arxiv]{2405.16755}
+
+
+\bibitem[\protect\citeauthoryear{Tremante, He, Klopfenstein, Wang, Narodytska,
+  and Wu}{Tremante et~al\mbox{.}}{2026}]%
+        {tremante2026spotitplus}
+\bibfield{author}{\bibinfo{person}{Andrew Tremante}, \bibinfo{person}{Yang He},
+  \bibinfo{person}{Rocky Klopfenstein}, \bibinfo{person}{Yuepeng Wang},
+  \bibinfo{person}{Nina Narodytska}, {and} \bibinfo{person}{Haoze Wu}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{SpotIt+}: Verification-based Text-to-{SQL}
+  Evaluation with Database Constraints}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2603.04334}.
+\newblock
+\showeprint[arxiv]{2603.04334}~[cs.DB]
+
+
+\bibitem[\protect\citeauthoryear{Tuya, de~la Riva, Su{\'a}rez-Cabal, and
+  Blanco}{Tuya et~al\mbox{.}}{2016}]%
+        {tuya2016reduction}
+\bibfield{author}{\bibinfo{person}{Javier Tuya}, \bibinfo{person}{Claudio de~la
+  Riva}, \bibinfo{person}{Mar{\'\i}a~Jos{\'e} Su{\'a}rez-Cabal}, {and}
+  \bibinfo{person}{Raquel Blanco}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Coverage-aware test database reduction}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Software Engineering}}
+  \bibinfo{volume}{42}, \bibinfo{number}{10} (\bibinfo{year}{2016}),
+  \bibinfo{pages}{941--959}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/TSE.2016.2519032}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Wang, Pan, and Cheung}{Wang
+  et~al\mbox{.}}{2024}]%
+        {wang2024qed}
+\bibfield{author}{\bibinfo{person}{Shuxian Wang}, \bibinfo{person}{Sicheng
+  Pan}, {and} \bibinfo{person}{Alvin Cheung}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{QED}: A Powerful Query Equivalence Decider for
+  {SQL}}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the VLDB Endowment}}
+  \bibinfo{volume}{17}, \bibinfo{number}{11} (\bibinfo{year}{2024}),
+  \bibinfo{pages}{3602--3614}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14778/3681954.3682024}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Wretblad, Riseby, Biswas, Ahmadi, and
+  Holmstr{\"o}m}{Wretblad et~al\mbox{.}}{2024}]%
+        {wretblad2024noise}
+\bibfield{author}{\bibinfo{person}{Niklas Wretblad}, \bibinfo{person}{Fredrik
+  Riseby}, \bibinfo{person}{Rahul Biswas}, \bibinfo{person}{Amin Ahmadi}, {and}
+  \bibinfo{person}{Oskar Holmstr{\"o}m}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Understanding the Effects of Noise in
+  Text-to-{SQL}: An Examination of the {BIRD}-Bench Benchmark}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 62nd Annual Meeting of the
+  Association for Computational Linguistics (Volume 2: Short Papers)}}.
+  \bibinfo{publisher}{Association for Computational Linguistics},
+  \bibinfo{pages}{356--369}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/2024.acl-short.34}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Yang, Wu, Cong, Zhang, and He}{Yang
+  et~al\mbox{.}}{2022}]%
+        {yang2022sam}
+\bibfield{author}{\bibinfo{person}{Jingyi Yang}, \bibinfo{person}{Peizhi Wu},
+  \bibinfo{person}{Gao Cong}, \bibinfo{person}{Tieying Zhang}, {and}
+  \bibinfo{person}{Xiao He}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{{SAM}: Database Generation from Query Workloads
+  with Supervised Autoregressive Models}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the ACM SIGMOD International
+  Conference on Management of Data}}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3514221.3526168}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Yu, Zhang, Yang, Yasunaga, Wang, Li, Ma, Li,
+  Yao, Roman, Zhang, and Radev}{Yu et~al\mbox{.}}{2018}]%
+        {yu2018spider}
+\bibfield{author}{\bibinfo{person}{Tao Yu}, \bibinfo{person}{Rui Zhang},
+  \bibinfo{person}{Kai Yang}, \bibinfo{person}{Michihiro Yasunaga},
+  \bibinfo{person}{Dongxu Wang}, \bibinfo{person}{Zifan Li},
+  \bibinfo{person}{James Ma}, \bibinfo{person}{Irene Li},
+  \bibinfo{person}{Qingning Yao}, \bibinfo{person}{Shanelle Roman},
+  \bibinfo{person}{Zilin Zhang}, {and} \bibinfo{person}{Dragomir Radev}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Spider: A Large-Scale Human-Labeled Dataset for
+  Complex and Cross-Domain Semantic Parsing and Text-to-{SQL} Task}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2018 Conference on Empirical
+  Methods in Natural Language Processing (EMNLP)}}.
+  \bibinfo{publisher}{Association for Computational Linguistics},
+  \bibinfo{address}{Brussels, Belgium}, \bibinfo{pages}{3911--3921}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/D18-1425}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Zhao, Wang, and Wang}{Zhao
+  et~al\mbox{.}}{2025}]%
+        {zhao2025polygon}
+\bibfield{author}{\bibinfo{person}{Pinhan Zhao}, \bibinfo{person}{Yuepeng
+  Wang}, {and} \bibinfo{person}{Xinyu Wang}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Polygon: Symbolic Reasoning for {SQL} using
+  Conflict-Driven Under-Approximation Search}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the ACM on Programming
+  Languages}} \bibinfo{volume}{9}, \bibinfo{number}{PLDI}
+  (\bibinfo{year}{2025}), \bibinfo{pages}{1315--1340}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3729303}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Zhong, Yu, and Klein}{Zhong
+  et~al\mbox{.}}{2020}]%
+        {zhong2020testsuite}
+\bibfield{author}{\bibinfo{person}{Ruiqi Zhong}, \bibinfo{person}{Tao Yu},
+  {and} \bibinfo{person}{Dan Klein}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Semantic Evaluation for Text-to-{SQL} with
+  Distilled Test Suites}. In \bibinfo{booktitle}{\emph{Proceedings of the 2020
+  Conference on Empirical Methods in Natural Language Processing (EMNLP)}}.
+  \bibinfo{publisher}{Association for Computational Linguistics},
+  \bibinfo{address}{Online}, \bibinfo{pages}{396--411}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.18653/v1/2020.emnlp-main.29}
+\showDOI{\tempurl}
+
+
+\end{thebibliography}

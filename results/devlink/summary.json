@@ -1,0 +1,372 @@
+{
+ "split": "dev",
+ "n_exc": 2341,
+ "n_exi": 1108,
+ "n_questions_exc": 289,
+ "n_distinct_exc": 1867,
+ "main": {
+  "CaliberGraph": {
+   "L0": 621,
+   "L1": 621,
+   "L1f": 621,
+   "L2": 208,
+   "contracts_L1f": {
+    "C_set": 621,
+    "C_bag": 621,
+    "C_lenient": 461
+   }
+  },
+  "CaliberGraph+SC": {
+   "L0": 59,
+   "L1": 59,
+   "L1f": 59,
+   "L2": 59,
+   "contracts_L1f": {
+    "C_set": 59,
+    "C_bag": 59,
+    "C_lenient": 51
+   }
+  },
+  "ParSEval-L1": {
+   "L0": 73,
+   "L1": 73,
+   "L1f": 73,
+   "L2": 5,
+   "contracts_L1f": {
+    "C_set": 73,
+    "C_bag": 73,
+    "C_lenient": 66
+   }
+  },
+  "SpotIt": {
+   "L0": 190,
+   "L1": 190,
+   "L1f": 18,
+   "L2": 5,
+   "contracts_L1f": {
+    "C_set": 18,
+    "C_bag": 18,
+    "C_lenient": 18
+   },
+   "author_claims": 434
+  },
+  "SpotIt+": {
+   "L0": 144,
+   "L1": 144,
+   "L1f": 46,
+   "L2": 31,
+   "contracts_L1f": {
+    "C_set": 46,
+    "C_bag": 46,
+    "C_lenient": 44
+   },
+   "author_claims": 336
+  }
+ },
+ "tests": [
+  {
+   "label": "H1",
+   "a": "CaliberGraph",
+   "b": "SpotIt",
+   "tier_a": "L1f",
+   "tier_b": "author-claims",
+   "count_a": 621,
+   "count_b": 434,
+   "a_only": 222,
+   "b_only": 35,
+   "diff": 187,
+   "ci95": [
+    120,
+    266
+   ],
+   "p": 1.9483256699532444e-34,
+   "p_holm": 1.9483256699532444e-34
+  },
+  {
+   "label": "H2",
+   "a": "CaliberGraph+SC",
+   "b": "SpotIt+",
+   "tier_a": "L2",
+   "tier_b": "author-claims",
+   "count_a": 59,
+   "count_b": 336,
+   "a_only": 28,
+   "b_only": 305,
+   "diff": -277,
+   "ci95": [
+    -346,
+    -202
+   ],
+   "p": 5.453849377429821e-60,
+   "p_holm": 1.0907698754859643e-59
+  },
+  {
+   "label": "vs ParSEval-L1",
+   "a": "CaliberGraph",
+   "b": "ParSEval-L1",
+   "tier_a": "L1f",
+   "tier_b": "L1f",
+   "count_a": 621,
+   "count_b": 73,
+   "a_only": 550,
+   "b_only": 2,
+   "diff": 548,
+   "ci95": [
+    451,
+    632
+   ],
+   "p": 2.070663117523272e-161
+  },
+  {
+   "label": "vs SpotIt+ claims (L1f)",
+   "a": "CaliberGraph",
+   "b": "SpotIt+",
+   "tier_a": "L1f",
+   "tier_b": "author-claims",
+   "count_a": 621,
+   "count_b": 336,
+   "a_only": 355,
+   "b_only": 70,
+   "diff": 285,
+   "ci95": [
+    199,
+    384
+   ],
+   "p": 5.652001753568519e-47
+  }
+ ],
+ "known_positive_recall": {
+  "CaliberGraph": {
+   "L0": 0.9747292418772563,
+   "L1": 0.9747292418772563,
+   "L1f": 0.9747292418772563,
+   "L2": 0.34386281588447654,
+   "found_L1f": 1080
+  },
+  "SpotIt (claims)": {
+   "found": 800,
+   "recall": 0.7220216606498195
+  }
+ },
+ "per_system": {
+  "alpha": {
+   "name": "Alpha-SQL",
+   "n": 349,
+   "ex": 0.6876790830945558,
+   "cg_fp": 72,
+   "union_fp": 73,
+   "spotit_fp": 53,
+   "corrected": 0.4813753581661891,
+   "corrected_union": 0.4785100286532951,
+   "fp_share": 0.3
+  },
+  "chess": {
+   "name": "CHESS",
+   "n": 349,
+   "ex": 0.6246418338108882,
+   "cg_fp": 53,
+   "union_fp": 54,
+   "spotit_fp": 35,
+   "corrected": 0.47277936962750716,
+   "corrected_union": 0.4699140401146132,
+   "fp_share": 0.24311926605504589
+  },
+  "csc-32b": {
+   "name": "CSC-SQL-32B",
+   "n": 349,
+   "ex": 0.6905444126074498,
+   "cg_fp": 63,
+   "union_fp": 63,
+   "spotit_fp": 47,
+   "corrected": 0.5100286532951289,
+   "corrected_union": 0.5100286532951289,
+   "fp_share": 0.26141078838174275
+  },
+  "csc-7b": {
+   "name": "CSC-SQL-7B",
+   "n": 349,
+   "ex": 0.6848137535816619,
+   "cg_fp": 56,
+   "union_fp": 56,
+   "spotit_fp": 40,
+   "corrected": 0.5243553008595988,
+   "corrected_union": 0.5243553008595988,
+   "fp_share": 0.23430962343096234
+  },
+  "gena_submission_1": {
+   "name": "GenaSQL-1",
+   "n": 349,
+   "ex": 0.6991404011461319,
+   "cg_fp": 55,
+   "union_fp": 55,
+   "spotit_fp": 37,
+   "corrected": 0.5415472779369628,
+   "corrected_union": 0.5415472779369628,
+   "fp_share": 0.22540983606557377
+  },
+  "gena_submission_2": {
+   "name": "GenaSQL-2",
+   "n": 349,
+   "ex": 0.7077363896848138,
+   "cg_fp": 67,
+   "union_fp": 67,
+   "spotit_fp": 46,
+   "corrected": 0.5157593123209169,
+   "corrected_union": 0.5157593123209169,
+   "fp_share": 0.27125506072874495
+  },
+  "gsr": {
+   "name": "GSR",
+   "n": 349,
+   "ex": 0.664756446991404,
+   "cg_fp": 69,
+   "union_fp": 69,
+   "spotit_fp": 39,
+   "corrected": 0.4670487106017192,
+   "corrected_union": 0.4670487106017192,
+   "fp_share": 0.2974137931034483
+  },
+  "omni-32-majority": {
+   "name": "OmniSQL-32B",
+   "n": 349,
+   "ex": 0.6475644699140402,
+   "cg_fp": 59,
+   "union_fp": 59,
+   "spotit_fp": 45,
+   "corrected": 0.4785100286532951,
+   "corrected_union": 0.4785100286532951,
+   "fp_share": 0.2610619469026549
+  },
+  "rsl": {
+   "name": "RSL-SQL",
+   "n": 349,
+   "ex": 0.6848137535816619,
+   "cg_fp": 63,
+   "union_fp": 63,
+   "spotit_fp": 44,
+   "corrected": 0.504297994269341,
+   "corrected_union": 0.504297994269341,
+   "fp_share": 0.26359832635983266
+  },
+  "slm": {
+   "name": "SLM-SQL",
+   "n": 349,
+   "ex": 0.6160458452722063,
+   "cg_fp": 64,
+   "union_fp": 64,
+   "spotit_fp": 48,
+   "corrected": 0.4326647564469914,
+   "corrected_union": 0.4326647564469914,
+   "fp_share": 0.29767441860465116
+  }
+ },
+ "kendall_tau_ex_vs_corrected": 0.6818181818181818,
+ "kendall_tau_ex_vs_spotit_corrected": 0.6818181818181818,
+ "rank_ex": {
+  "gena_submission_2": 1,
+  "gena_submission_1": 2,
+  "csc-32b": 3,
+  "alpha": 4,
+  "csc-7b": 5,
+  "rsl": 6,
+  "gsr": 7,
+  "omni-32-majority": 8,
+  "chess": 9,
+  "slm": 10
+ },
+ "rank_corrected": {
+  "gena_submission_1": 1,
+  "csc-7b": 2,
+  "gena_submission_2": 3,
+  "csc-32b": 4,
+  "rsl": 5,
+  "alpha": 6,
+  "omni-32-majority": 7,
+  "chess": 8,
+  "gsr": 9,
+  "slm": 10
+ },
+ "schema_groups": {
+  "other schemas": {
+   "n": 2341,
+   "found": 621,
+   "rate": 0.26527125160187953
+  }
+ },
+ "difficulty": {
+  "simple": {
+   "n": 1531,
+   "found": 315,
+   "rate": 0.20574787720444154
+  },
+  "moderate": {
+   "n": 648,
+   "found": 236,
+   "rate": 0.36419753086419754
+  },
+  "challenging": {
+   "n": 162,
+   "found": 70,
+   "rate": 0.43209876543209874
+  }
+ },
+ "time_to_witness": {
+  "CaliberGraph": {
+   "n": 558,
+   "median": 0.0071805004990892485,
+   "p95": 0.046157557000015004,
+   "max": 1.295763412001179,
+   "curve": [
+    384,
+    514,
+    549,
+    553,
+    556,
+    558,
+    558,
+    558,
+    558
+   ]
+  },
+  "CaliberGraph+SC": {
+   "n": 51,
+   "median": 0.03815342499910912,
+   "p95": 0.4411445680016186,
+   "max": 4.766178629000933,
+   "curve": [
+    3,
+    20,
+    37,
+    45,
+    49,
+    49,
+    50,
+    50,
+    51
+   ]
+  },
+  "ParSEval-L1": {
+   "n": 63,
+   "median": 0.3015755569999783,
+   "p95": 2.393929326000034,
+   "max": 4.100899460000164,
+   "curve": [
+    0,
+    0,
+    6,
+    31,
+    49,
+    54,
+    59,
+    62,
+    63
+   ]
+  }
+ },
+ "spotit_released_time": {
+  "n": 3490,
+  "median": 6.6258775,
+  "p95": 1244.1463410000001,
+  "total_h": 169.34416367194444
+ }
+}

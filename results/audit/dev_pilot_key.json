@@ -1,0 +1,607 @@
+[
+ {
+  "idx": 0,
+  "source": "fuzz_r",
+  "pair_id": "alpha:1115"
+ },
+ {
+  "idx": 1,
+  "source": "v4",
+  "pair_id": "alpha:77"
+ },
+ {
+  "idx": 2,
+  "source": "cgx_r",
+  "pair_id": "alpha:401"
+ },
+ {
+  "idx": 3,
+  "source": "fuzz_r",
+  "pair_id": "alpha:543"
+ },
+ {
+  "idx": 4,
+  "source": "fuzz_r",
+  "pair_id": "alpha:345"
+ },
+ {
+  "idx": 5,
+  "source": "v4",
+  "pair_id": "alpha:19"
+ },
+ {
+  "idx": 6,
+  "source": "cgx_r",
+  "pair_id": "alpha:19"
+ },
+ {
+  "idx": 7,
+  "source": "v4",
+  "pair_id": "alpha:365"
+ },
+ {
+  "idx": 8,
+  "source": "fuzz_r",
+  "pair_id": "alpha:76"
+ },
+ {
+  "idx": 9,
+  "source": "cgx_r",
+  "pair_id": "alpha:77"
+ },
+ {
+  "idx": 10,
+  "source": "cgx_r",
+  "pair_id": "alpha:116"
+ },
+ {
+  "idx": 11,
+  "source": "fuzz_r",
+  "pair_id": "alpha:18"
+ },
+ {
+  "idx": 12,
+  "source": "cgx_r",
+  "pair_id": "alpha:477"
+ },
+ {
+  "idx": 13,
+  "source": "v4",
+  "pair_id": "alpha:1026"
+ },
+ {
+  "idx": 14,
+  "source": "fuzz_r",
+  "pair_id": "alpha:1020"
+ },
+ {
+  "idx": 15,
+  "source": "cgx_r",
+  "pair_id": "alpha:1069"
+ },
+ {
+  "idx": 16,
+  "source": "v4",
+  "pair_id": "alpha:559"
+ },
+ {
+  "idx": 17,
+  "source": "fuzz_r",
+  "pair_id": "alpha:474"
+ },
+ {
+  "idx": 18,
+  "source": "fuzz_r",
+  "pair_id": "alpha:134"
+ },
+ {
+  "idx": 19,
+  "source": "cgx_r",
+  "pair_id": "alpha:76"
+ },
+ {
+  "idx": 20,
+  "source": "v4",
+  "pair_id": "alpha:1116"
+ },
+ {
+  "idx": 21,
+  "source": "v4",
+  "pair_id": "alpha:116"
+ },
+ {
+  "idx": 22,
+  "source": "fuzz_r",
+  "pair_id": "alpha:88"
+ },
+ {
+  "idx": 23,
+  "source": "cgx_r",
+  "pair_id": "alpha:1115"
+ },
+ {
+  "idx": 24,
+  "source": "v4",
+  "pair_id": "alpha:18"
+ },
+ {
+  "idx": 25,
+  "source": "v4",
+  "pair_id": "alpha:1"
+ },
+ {
+  "idx": 26,
+  "source": "v4",
+  "pair_id": "alpha:99"
+ },
+ {
+  "idx": 27,
+  "source": "v4",
+  "pair_id": "alpha:0"
+ },
+ {
+  "idx": 28,
+  "source": "cgx_r",
+  "pair_id": "alpha:163"
+ },
+ {
+  "idx": 29,
+  "source": "fuzz_r",
+  "pair_id": "alpha:47"
+ },
+ {
+  "idx": 30,
+  "source": "cgx_r",
+  "pair_id": "alpha:492"
+ },
+ {
+  "idx": 31,
+  "source": "cgx_r",
+  "pair_id": "alpha:36"
+ },
+ {
+  "idx": 32,
+  "source": "v4",
+  "pair_id": "alpha:1115"
+ },
+ {
+  "idx": 33,
+  "source": "v4",
+  "pair_id": "alpha:670"
+ },
+ {
+  "idx": 34,
+  "source": "cgx_r",
+  "pair_id": "alpha:20"
+ },
+ {
+  "idx": 35,
+  "source": "fuzz_r",
+  "pair_id": "alpha:1106"
+ },
+ {
+  "idx": 36,
+  "source": "cgx_r",
+  "pair_id": "alpha:1106"
+ },
+ {
+  "idx": 37,
+  "source": "v4",
+  "pair_id": "alpha:440"
+ },
+ {
+  "idx": 38,
+  "source": "cgx_r",
+  "pair_id": "alpha:78"
+ },
+ {
+  "idx": 39,
+  "source": "fuzz_r",
+  "pair_id": "alpha:401"
+ },
+ {
+  "idx": 40,
+  "source": "v4",
+  "pair_id": "alpha:187"
+ },
+ {
+  "idx": 41,
+  "source": "fuzz_r",
+  "pair_id": "alpha:670"
+ },
+ {
+  "idx": 42,
+  "source": "cgx_r",
+  "pair_id": "alpha:677"
+ },
+ {
+  "idx": 43,
+  "source": "v4",
+  "pair_id": "alpha:1033"
+ },
+ {
+  "idx": 44,
+  "source": "v4",
+  "pair_id": "alpha:1098"
+ },
+ {
+  "idx": 45,
+  "source": "cgx_r",
+  "pair_id": "alpha:543"
+ },
+ {
+  "idx": 46,
+  "source": "v4",
+  "pair_id": "alpha:1069"
+ },
+ {
+  "idx": 47,
+  "source": "cgx_r",
+  "pair_id": "alpha:1020"
+ },
+ {
+  "idx": 48,
+  "source": "fuzz_r",
+  "pair_id": "alpha:19"
+ },
+ {
+  "idx": 49,
+  "source": "cgx_r",
+  "pair_id": "alpha:345"
+ },
+ {
+  "idx": 50,
+  "source": "cgx_r",
+  "pair_id": "alpha:365"
+ },
+ {
+  "idx": 51,
+  "source": "v4",
+  "pair_id": "alpha:474"
+ },
+ {
+  "idx": 52,
+  "source": "v4",
+  "pair_id": "alpha:20"
+ },
+ {
+  "idx": 53,
+  "source": "v4",
+  "pair_id": "alpha:477"
+ },
+ {
+  "idx": 54,
+  "source": "v4",
+  "pair_id": "alpha:1020"
+ },
+ {
+  "idx": 55,
+  "source": "v4",
+  "pair_id": "alpha:1090"
+ },
+ {
+  "idx": 56,
+  "source": "fuzz_r",
+  "pair_id": "alpha:677"
+ },
+ {
+  "idx": 57,
+  "source": "v4",
+  "pair_id": "alpha:47"
+ },
+ {
+  "idx": 58,
+  "source": "v4",
+  "pair_id": "alpha:70"
+ },
+ {
+  "idx": 59,
+  "source": "fuzz_r",
+  "pair_id": "alpha:70"
+ },
+ {
+  "idx": 60,
+  "source": "cgx_r",
+  "pair_id": "alpha:474"
+ },
+ {
+  "idx": 61,
+  "source": "v4",
+  "pair_id": "alpha:76"
+ },
+ {
+  "idx": 62,
+  "source": "cgx_r",
+  "pair_id": "alpha:47"
+ },
+ {
+  "idx": 63,
+  "source": "v4",
+  "pair_id": "alpha:492"
+ },
+ {
+  "idx": 64,
+  "source": "cgx_r",
+  "pair_id": "alpha:479"
+ },
+ {
+  "idx": 65,
+  "source": "fuzz_r",
+  "pair_id": "alpha:365"
+ },
+ {
+  "idx": 66,
+  "source": "v4",
+  "pair_id": "alpha:134"
+ },
+ {
+  "idx": 67,
+  "source": "fuzz_r",
+  "pair_id": "alpha:0"
+ },
+ {
+  "idx": 68,
+  "source": "cgx_r",
+  "pair_id": "alpha:1127"
+ },
+ {
+  "idx": 69,
+  "source": "v4",
+  "pair_id": "alpha:185"
+ },
+ {
+  "idx": 70,
+  "source": "fuzz_r",
+  "pair_id": "alpha:99"
+ },
+ {
+  "idx": 71,
+  "source": "v4",
+  "pair_id": "alpha:633"
+ },
+ {
+  "idx": 72,
+  "source": "v4",
+  "pair_id": "alpha:36"
+ },
+ {
+  "idx": 73,
+  "source": "fuzz_r",
+  "pair_id": "alpha:36"
+ },
+ {
+  "idx": 74,
+  "source": "v4",
+  "pair_id": "alpha:550"
+ },
+ {
+  "idx": 75,
+  "source": "fuzz_r",
+  "pair_id": "alpha:633"
+ },
+ {
+  "idx": 76,
+  "source": "v4",
+  "pair_id": "alpha:163"
+ },
+ {
+  "idx": 77,
+  "source": "cgx_r",
+  "pair_id": "alpha:633"
+ },
+ {
+  "idx": 78,
+  "source": "v4",
+  "pair_id": "alpha:479"
+ },
+ {
+  "idx": 79,
+  "source": "v4",
+  "pair_id": "alpha:1127"
+ },
+ {
+  "idx": 80,
+  "source": "v4",
+  "pair_id": "alpha:149"
+ },
+ {
+  "idx": 81,
+  "source": "cgx_r",
+  "pair_id": "alpha:559"
+ },
+ {
+  "idx": 82,
+  "source": "fuzz_r",
+  "pair_id": "alpha:477"
+ },
+ {
+  "idx": 83,
+  "source": "cgx_r",
+  "pair_id": "alpha:1"
+ },
+ {
+  "idx": 84,
+  "source": "v4",
+  "pair_id": "alpha:543"
+ },
+ {
+  "idx": 85,
+  "source": "fuzz_r",
+  "pair_id": "alpha:1098"
+ },
+ {
+  "idx": 86,
+  "source": "fuzz_r",
+  "pair_id": "alpha:1"
+ },
+ {
+  "idx": 87,
+  "source": "cgx_r",
+  "pair_id": "alpha:9"
+ },
+ {
+  "idx": 88,
+  "source": "fuzz_r",
+  "pair_id": "alpha:1069"
+ },
+ {
+  "idx": 89,
+  "source": "v4",
+  "pair_id": "alpha:9"
+ },
+ {
+  "idx": 90,
+  "source": "cgx_r",
+  "pair_id": "alpha:99"
+ },
+ {
+  "idx": 91,
+  "source": "v4",
+  "pair_id": "alpha:677"
+ },
+ {
+  "idx": 92,
+  "source": "cgx_r",
+  "pair_id": "alpha:670"
+ },
+ {
+  "idx": 93,
+  "source": "fuzz_r",
+  "pair_id": "alpha:20"
+ },
+ {
+  "idx": 94,
+  "source": "cgx_r",
+  "pair_id": "alpha:1098"
+ },
+ {
+  "idx": 95,
+  "source": "fuzz_r",
+  "pair_id": "alpha:550"
+ },
+ {
+  "idx": 96,
+  "source": "fuzz_r",
+  "pair_id": "alpha:9"
+ },
+ {
+  "idx": 97,
+  "source": "cgx_r",
+  "pair_id": "alpha:0"
+ },
+ {
+  "idx": 98,
+  "source": "fuzz_r",
+  "pair_id": "alpha:559"
+ },
+ {
+  "idx": 99,
+  "source": "v4",
+  "pair_id": "alpha:1030"
+ },
+ {
+  "idx": 100,
+  "source": "v4",
+  "pair_id": "alpha:160"
+ },
+ {
+  "idx": 101,
+  "source": "v4",
+  "pair_id": "alpha:88"
+ },
+ {
+  "idx": 102,
+  "source": "cgx_r",
+  "pair_id": "alpha:18"
+ },
+ {
+  "idx": 103,
+  "source": "v4",
+  "pair_id": "alpha:373"
+ },
+ {
+  "idx": 104,
+  "source": "cgx_r",
+  "pair_id": "alpha:88"
+ },
+ {
+  "idx": 105,
+  "source": "cgx_r",
+  "pair_id": "alpha:550"
+ },
+ {
+  "idx": 106,
+  "source": "fuzz_r",
+  "pair_id": "alpha:116"
+ },
+ {
+  "idx": 107,
+  "source": "v4",
+  "pair_id": "alpha:78"
+ },
+ {
+  "idx": 108,
+  "source": "v4",
+  "pair_id": "alpha:1106"
+ },
+ {
+  "idx": 109,
+  "source": "v4",
+  "pair_id": "alpha:345"
+ },
+ {
+  "idx": 110,
+  "source": "v4",
+  "pair_id": "alpha:184"
+ },
+ {
+  "idx": 111,
+  "source": "fuzz_r",
+  "pair_id": "alpha:1030"
+ },
+ {
+  "idx": 112,
+  "source": "v4",
+  "pair_id": "alpha:401"
+ },
+ {
+  "idx": 113,
+  "source": "cgx_r",
+  "pair_id": "alpha:134"
+ },
+ {
+  "idx": 114,
+  "source": "cgx_r",
+  "pair_id": "alpha:1030"
+ },
+ {
+  "idx": 115,
+  "source": "cgx_r",
+  "pair_id": "alpha:70"
+ },
+ {
+  "idx": 116,
+  "source": "fuzz_r",
+  "pair_id": "alpha:77"
+ },
+ {
+  "idx": 117,
+  "source": "fuzz_r",
+  "pair_id": "alpha:163"
+ },
+ {
+  "idx": 118,
+  "source": "fuzz_r",
+  "pair_id": "alpha:479"
+ },
+ {
+  "idx": 119,
+  "source": "v4",
+  "pair_id": "alpha:591"
+ },
+ {
+  "idx": 120,
+  "source": "cgx_r",
+  "pair_id": "alpha:185"
+ }
+]

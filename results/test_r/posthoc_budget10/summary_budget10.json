@@ -1,0 +1,22 @@
+{
+ "cgx_r": {
+  "n": 1000,
+  "b5": 195,
+  "b10": 193,
+  "only10": 0,
+  "only5": 2
+ },
+ "fuzz_r": {
+  "n": 1000,
+  "b5": 151,
+  "b10": 153,
+  "only10": 2,
+  "only5": 0
+ },
+ "cgr_vs_fzr_10s": {
+  "cgr_only": 41,
+  "fzr_only": 1,
+  "p": 1.9554136088118115e-11
+ },
+ "note": "post hoc; frozen second-stage code; 10 s per distinct pair; one worker on one core; random test subsample (data/test_subsample.json) in 4 chunks"
+}

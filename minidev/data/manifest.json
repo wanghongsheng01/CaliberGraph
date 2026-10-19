@@ -1,0 +1,7 @@
+{
+ "n_pairs": 4029,
+ "dropped": {
+  "not_test": 1482,
+  "already_in_study_or_duplicate": 963
+ }
+}

@@ -1,0 +1,740 @@
+[
+ {
+  "question_id": 6,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 8,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 10,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 13,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 14,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 29,
+  "kind": "gold_wrong",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 44,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 59,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 68,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": true
+ },
+ {
+  "question_id": 73,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 74,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 75,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 80,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 91,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 101,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 108,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 112,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 115,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 120,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 128,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 138,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 147,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 173,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 188,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 212,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 214,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 282,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 303,
+  "kind": "gold_wrong",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 321,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 396,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 426,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 451,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 475,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 498,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 501,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 509,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 510,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 512,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 531,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 534,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 539,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 541,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 554,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 556,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 562,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 565,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": true
+ },
+ {
+  "question_id": 583,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 589,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 597,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 630,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 634,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 637,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 656,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 657,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 662,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 663,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 668,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 669,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 674,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 698,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 732,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 744,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 751,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 755,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 759,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 786,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 789,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 819,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 826,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 829,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 865,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 876,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 879,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 880,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 882,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 926,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 931,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 942,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": true
+ },
+ {
+  "question_id": 977,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 982,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 988,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 999,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1002,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1007,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1013,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1022,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1025,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1055,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1072,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1075,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1079,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1084,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1096,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1122,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1123,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1128,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1134,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1147,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1164,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1178,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1180,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1183,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1196,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1202,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1252,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1255,
+  "kind": "gold_wrong",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1263,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1266,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1272,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1309,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1331,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1335,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1343,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1367,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1384,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1391,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1396,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1406,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1410,
+  "kind": "ambiguous",
+  "entity_missing": true,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1485,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1494,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": true
+ },
+ {
+  "question_id": 1513,
+  "kind": "gold_wrong",
+  "entity_missing": false,
+  "rounding_or_case_only": false
+ },
+ {
+  "question_id": 1528,
+  "kind": "ambiguous",
+  "entity_missing": false,
+  "rounding_or_case_only": true
+ }
+]

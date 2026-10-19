@@ -1,0 +1,666 @@
+[
+ {
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:397",
+  "db_id": "card_games",
+  "question": "What is the mana cost of cards with a normal layout, a 2003 frame version, with a black border color, and available in paper and mtgo?",
+  "evidence": "available in paper and mtgo refers to availability = 'mtgo,paper'; frameVersion = 2003;borderColor = 'black'",
+  "gold": "SELECT manaCost FROM cards WHERE availability = 'mtgo,paper' AND borderColor = 'black' AND frameVersion = 2003 AND layout = 'normal'",
+  "pred": "SELECT manaCost\nFROM cards\nWHERE layout = 'normal'\nAND frameVersion = 2003\nAND borderColor = 'black'\nAND availability LIKE '%mtgo,paper%';",
+  "witness": {
+   "cards": {
+    "columns": [
+     "id",
+     "artist",
+     "asciiName",
+     "availability",
+     "borderColor",
+     "cardKingdomFoilId",
+     "cardKingdomId",
+     "colorIdentity",
+     "colorIndicator",
+     "colors",
+     "convertedManaCost",
+     "duelDeck",
+     "edhrecRank",
+     "faceConvertedManaCost",
+     "faceName",
+     "flavorName",
+     "flavorText",
+     "frameEffects",
+     "frameVersion",
+     "hand",
+     "hasAlternativeDeckLimit",
+     "hasContentWarning",
+     "hasFoil",
+     "hasNonFoil",
+     "isAlternative",
+     "isFullArt",
+     "isOnlineOnly",
+     "isOversized",
+     "isPromo",
+     "isReprint",
+     "isReserved",
+     "isStarter",
+     "isStorySpotlight",
+     "isTextless",
+     "isTimeshifted",
+     "keywords",
+     "layout",
+     "leadershipSkills",
+     "life",
+     "loyalty",
+     "manaCost",
+     "mcmId",
+     "mcmMetaId",
+     "mtgArenaId",
+     "mtgjsonV4Id",
+     "mtgoFoilId",
+     "mtgoId",
+     "multiverseId",
+     "name",
+     "number",
+     "originalReleaseDate",
+     "originalText",
+     "originalType",
+     "otherFaceIds",
+     "power",
+     "printings",
+     "promoTypes",
+     "purchaseUrls",
+     "rarity",
+     "scryfallId",
+     "scryfallIllustrationId",
+     "scryfallOracleId",
+     "setCode",
+     "side",
+     "subtypes",
+     "supertypes",
+     "tcgplayerProductId",
+     "text",
+     "toughness",
+     "type",
+     "types",
+     "uuid",
+     "variations",
+     "watermark"
+    ],
+    "rows": [
+     [
+      1005,
+      "Livia Prima",
+      null,
+      "arena,mtgo,paper",
+      "black",
+      null,
+      "232363",
+      "R",
+      null,
+      "R",
+      4.0,
+      null,
+      5321,
+      null,
+      null,
+      null,
+      "She cares little for leaders or loyalties, so long as the battle rages on.",
+      null,
+      "2003",
+      null,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      null,
+      "normal",
+      null,
+      null,
+      null,
+      "{U}",
+      "453133",
+      null,
+      null,
+      "d4c9f3e9-9660-596a-ac19-2e119846dc03",
+      null,
+      "80685",
+      "484899",
+      "Frontier Warmonger",
+      "52",
+      null,
+      "Whenever one or more creatures attack one of your opponents or a planeswalker they control, those creatures gain menace until end of turn.",
+      "Creature — Human Warrior",
+      null,
+      "4",
+      "C20",
+      null,
+      "{'cardKingdom': 'https://mtgjson.com/links/f264ae9a60ce98a4', 'tcgplayer': 'https://mtgjson.com/links/f8aafd8d282947ac'}",
+      "rare",
+      "233e1a27-c8d6-46de-a128-89791e7f2e9b",
+      "5a591b40-ece7-4ca6-bf74-6ab3a27f092d",
+      "9cb741ae-14d6-4a8d-bfad-703abfe3682c",
+      "C20",
+      null,
+      "Human,Warrior",
+      null,
+      "212225",
+      "Whenever one or more creatures attack one of your opponents or a planeswalker they control, those creatures gain menace until end of turn.",
+      "4",
+      "Creature — Human Warrior",
+      "Creature",
+      "c28a8cae-093f-5a5a-b59d-cedc0bbf42c0",
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "{U}"
+   ]
+  ],
+  "idx": 1
+ },
+ {
+  "pair_id": "md_ta_gpt-4-turbo_cot:1078",
+  "db_id": "european_football_2",
+  "question": "Which player is older, Aaron Lennon or Abdelaziz Barrada?",
+  "evidence": "The larger the birthday value, the younger the person is, and vice versa;",
+  "gold": "SELECT player_name FROM Player WHERE player_name IN ('Aaron Lennon', 'Abdelaziz Barrada') ORDER BY birthday ASC LIMIT 1",
+  "pred": "SELECT CASE WHEN p1.birthday < p2.birthday THEN 'Aaron Lennon' ELSE 'Abdelaziz Barrada' END AS older_player\nFROM Player p1, Player p2\nWHERE p1.player_name = 'Aaron Lennon' AND p2.player_name = 'Abdelaziz Barrada';",
+  "witness": {
+   "Player": {
+    "columns": [
+     "id",
+     "player_api_id",
+     "player_name",
+     "player_fifa_api_id",
+     "birthday",
+     "height",
+     "weight"
+    ],
+    "rows": [
+     [
+      8,
+      30895,
+      "Aaron Lennon",
+      152747,
+      "1987-04-16 00:00:00",
+      165.1,
+      139
+     ]
+    ]
+   },
+   "Player_Attributes": {
+    "columns": [
+     "id",
+     "player_fifa_api_id",
+     "player_api_id",
+     "date",
+     "overall_rating",
+     "potential",
+     "preferred_foot",
+     "attacking_work_rate",
+     "defensive_work_rate",
+     "crossing",
+     "finishing",
+     "heading_accuracy",
+     "short_passing",
+     "volleys",
+     "dribbling",
+     "curve",
+     "free_kick_accuracy",
+     "long_passing",
+     "ball_control",
+     "acceleration",
+     "sprint_speed",
+     "agility",
+     "reactions",
+     "balance",
+     "shot_power",
+     "jumping",
+     "stamina",
+     "strength",
+     "long_shots",
+     "aggression",
+     "interceptions",
+     "positioning",
+     "vision",
+     "penalties",
+     "marking",
+     "standing_tackle",
+     "sliding_tackle",
+     "gk_diving",
+     "gk_handling",
+     "gk_kicking",
+     "gk_positioning",
+     "gk_reflexes"
+    ],
+    "rows": [
+     [
+      148,
+      152747,
+      30895,
+      "2015-09-21 00:00:00",
+      77,
+      77,
+      "right",
+      "high",
+      "medium",
+      78,
+      66,
+      28,
+      76,
+      68,
+      84,
+      63,
+      55,
+      54,
+      81,
+      90,
+      89,
+      93,
+      74,
+      92,
+      62,
+      71,
+      75,
+      56,
+      57,
+      57,
+      37,
+      71,
+      73,
+      62,
+      30,
+      34,
+      35,
+      14,
+      7,
+      7,
+      16,
+      11
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Aaron Lennon"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 9
+ },
+ {
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:1078",
+  "db_id": "european_football_2",
+  "question": "Which player is older, Aaron Lennon or Abdelaziz Barrada?",
+  "evidence": "The larger the birthday value, the younger the person is, and vice versa;",
+  "gold": "SELECT player_name FROM Player WHERE player_name IN ('Aaron Lennon', 'Abdelaziz Barrada') ORDER BY birthday ASC LIMIT 1",
+  "pred": "SELECT \n  CASE \n    WHEN p1.birthday < p2.birthday THEN 'Aaron Lennon'\n    WHEN p1.birthday > p2.birthday THEN 'Abdelaziz Barrada'\n    ELSE 'They are the same age'\n  END AS older_player\nFROM \n  Player p1, \n  Player p2\nWHERE \n  p1.player_name = 'Aaron Lennon' \n  AND p2.player_name = 'Abdelaziz Barrada';",
+  "witness": {
+   "Player": {
+    "columns": [
+     "id",
+     "player_api_id",
+     "player_name",
+     "player_fifa_api_id",
+     "birthday",
+     "height",
+     "weight"
+    ],
+    "rows": [
+     [
+      8,
+      30895,
+      "Aaron Lennon",
+      152747,
+      "1987-04-16 00:00:00",
+      165.1,
+      139
+     ]
+    ]
+   },
+   "Player_Attributes": {
+    "columns": [
+     "id",
+     "player_fifa_api_id",
+     "player_api_id",
+     "date",
+     "overall_rating",
+     "potential",
+     "preferred_foot",
+     "attacking_work_rate",
+     "defensive_work_rate",
+     "crossing",
+     "finishing",
+     "heading_accuracy",
+     "short_passing",
+     "volleys",
+     "dribbling",
+     "curve",
+     "free_kick_accuracy",
+     "long_passing",
+     "ball_control",
+     "acceleration",
+     "sprint_speed",
+     "agility",
+     "reactions",
+     "balance",
+     "shot_power",
+     "jumping",
+     "stamina",
+     "strength",
+     "long_shots",
+     "aggression",
+     "interceptions",
+     "positioning",
+     "vision",
+     "penalties",
+     "marking",
+     "standing_tackle",
+     "sliding_tackle",
+     "gk_diving",
+     "gk_handling",
+     "gk_kicking",
+     "gk_positioning",
+     "gk_reflexes"
+    ],
+    "rows": [
+     [
+      148,
+      152747,
+      30895,
+      "2015-09-21 00:00:00",
+      77,
+      77,
+      "right",
+      "high",
+      "medium",
+      78,
+      66,
+      28,
+      76,
+      68,
+      84,
+      63,
+      55,
+      54,
+      81,
+      90,
+      89,
+      93,
+      74,
+      92,
+      62,
+      71,
+      75,
+      56,
+      57,
+      57,
+      37,
+      71,
+      73,
+      62,
+      30,
+      34,
+      35,
+      14,
+      7,
+      7,
+      16,
+      11
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Aaron Lennon"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 25
+ },
+ {
+  "pair_id": "md_ta_gpt-4-turbo_cot:897",
+  "db_id": "formula_1",
+  "question": "Name the driver with the most winning. Mention his nationality and what is his maximum point scores.",
+  "evidence": "Full name of the driver refers to drivers.forename and drivers.surname; the most winning refers to MAX(COUNT(wins)); average point scores refers to MAX(points);",
+  "gold": "SELECT T1.forename, T1.surname, T1.nationality, MAX(T2.points) FROM drivers AS T1 INNER JOIN driverStandings AS T2 ON T2.driverId = T1.driverId WHERE T2.wins >= 1 GROUP BY T1.forename, T1.surname, T1.nationality ORDER BY COUNT(T2.wins) DESC LIMIT 1",
+  "pred": "SELECT d.forename, d.surname, d.nationality, MAX(ds.points) as max_points\nFROM drivers d\nINNER JOIN driverStandings ds ON d.driverId = ds.driverId\nGROUP BY d.driverId\nORDER BY SUM(ds.wins) DESC\nLIMIT 1",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      30,
+      "kyalami",
+      "Kyalami",
+      "Midrand",
+      "South Africa",
+      -25.9894,
+      28.0767,
+      null,
+      "http://en.wikipedia.org/wiki/Kyalami"
+     ],
+     [
+      20,
+      "nurburgring",
+      "Nürburgring",
+      "Nürburg",
+      "Germany",
+      50.3356,
+      6.9475,
+      null,
+      "http://en.wikipedia.org/wiki/N%C3%BCrburgring"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      32,
+      "team_lotus",
+      "Team Lotus",
+      "British",
+      "http://en.wikipedia.org/wiki/Team_Lotus"
+     ]
+    ]
+   },
+   "driverStandings": {
+    "columns": [
+     "driverStandingsId",
+     "raceId",
+     "driverId",
+     "points",
+     "position",
+     "positionText",
+     "wins"
+    ],
+    "rows": [
+     [
+      53158,
+      632,
+      293,
+      0.0,
+      19,
+      "19",
+      0
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      293,
+      "charlton",
+      null,
+      null,
+      "Dave",
+      "Charlton",
+      "1936-10-27",
+      "South African",
+      "http://en.wikipedia.org/wiki/Dave_Charlton"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      632,
+      1971,
+      1,
+      30,
+      "South African Grand Prix",
+      "1971-03-06",
+      null,
+      "http://en.wikipedia.org/wiki/1971_South_African_Grand_Prix"
+     ],
+     [
+      627,
+      1972,
+      8,
+      20,
+      "German Grand Prix",
+      "1972-07-30",
+      null,
+      "http://en.wikipedia.org/wiki/1972_German_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      15518,
+      627,
+      293,
+      32,
+      29,
+      26,
+      null,
+      "R",
+      26,
+      0.0,
+      4,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      68
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      1971,
+      "http://en.wikipedia.org/wiki/1971_Formula_One_season"
+     ],
+     [
+      1972,
+      "http://en.wikipedia.org/wiki/1972_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      68,
+      "Physical"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "Dave",
+    "Charlton",
+    "South African",
+    0.0
+   ]
+  ],
+  "idx": 34
+ }
+]

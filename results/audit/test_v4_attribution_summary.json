@@ -1,0 +1,189 @@
+{
+ "agreement": {
+  "n": 500,
+  "agree": 458,
+  "kappa": 0.8575662825478003,
+  "adjudicated": 42
+ },
+ "methods": {
+  "CaliberGraph@L1f": {
+   "n": 100,
+   "counts": {
+    "implausible_data": 66,
+    "gold_wrong": 11,
+    "pred_wrong": 7,
+    "ambiguous": 14,
+    "both_wrong": 2
+   },
+   "implausible_share": 0.66,
+   "implausible_ci": [
+    0.5627754565831095,
+    0.74538620502457
+   ],
+   "meaningful": 34,
+   "meaningful_ci": [
+    0.25461379497543,
+    0.43722454341689065
+   ],
+   "errors": 9,
+   "errors_ci": [
+    0.048071995163884884,
+    0.16226374696643667
+   ],
+   "certified": 1979,
+   "est_meaningful": 672.86,
+   "est_meaningful_ci": [
+    503.88070025637603,
+    865.2673714220266
+   ],
+   "est_errors": 178.11,
+   "est_errors_ci": [
+    95.13447842932818,
+    321.1199552465782
+   ]
+  },
+  "ParSEval-L1@L1f": {
+   "n": 100,
+   "counts": {
+    "implausible_data": 68,
+    "pred_wrong": 8,
+    "ambiguous": 18,
+    "gold_wrong": 6
+   },
+   "implausible_share": 0.68,
+   "implausible_ci": [
+    0.5833719774632082,
+    0.7633098918454312
+   ],
+   "meaningful": 32,
+   "meaningful_ci": [
+    0.23669010815456884,
+    0.4166280225367919
+   ],
+   "errors": 8,
+   "errors_ci": [
+    0.04109296948581091,
+    0.1499826687940307
+   ],
+   "certified": 1342,
+   "est_meaningful": 429.44,
+   "est_meaningful_ci": [
+    317.6381251434314,
+    559.1148062443747
+   ],
+   "est_errors": 107.36,
+   "est_errors_ci": [
+    55.14676504995825,
+    201.27674152158917
+   ]
+  },
+  "SpotIt+@L0": {
+   "n": 100,
+   "counts": {
+    "implausible_data": 45,
+    "ambiguous": 27,
+    "pred_wrong": 12,
+    "gold_wrong": 15,
+    "both_wrong": 1
+   },
+   "implausible_share": 0.45,
+   "implausible_ci": [
+    0.3561437510640347,
+    0.5475557296835656
+   ],
+   "meaningful": 55,
+   "meaningful_ci": [
+    0.4524442703164345,
+    0.6438562489359655
+   ],
+   "errors": 13,
+   "errors_ci": [
+    0.07757093858414264,
+    0.2098052189480988
+   ],
+   "certified": 512,
+   "est_meaningful": 281.6,
+   "est_meaningful_ci": [
+    231.65146640201448,
+    329.65439945521433
+   ],
+   "est_errors": 66.56,
+   "est_errors_ci": [
+    39.71632055508103,
+    107.42027210142659
+   ]
+  },
+  "Fuzz@L1f": {
+   "n": 100,
+   "counts": {
+    "pred_wrong": 12,
+    "implausible_data": 62,
+    "ambiguous": 16,
+    "gold_wrong": 10
+   },
+   "implausible_share": 0.62,
+   "implausible_ci": [
+    0.5220957382071034,
+    0.7090255079986562
+   ],
+   "meaningful": 38,
+   "meaningful_ci": [
+    0.29097449200134384,
+    0.47790426179289663
+   ],
+   "errors": 12,
+   "errors_ci": [
+    0.06999337365267776,
+    0.1981226800290837
+   ],
+   "certified": 1691,
+   "est_meaningful": 642.58,
+   "est_meaningful_ci": [
+    492.03786597427245,
+    808.1361066917882
+   ],
+   "est_errors": 202.92,
+   "est_errors_ci": [
+    118.35879484667808,
+    335.0254519291805
+   ],
+   "certified_note": "corrected fuzzing baseline (P2)"
+  },
+  "SpotIt@L0": {
+   "n": 100,
+   "counts": {
+    "implausible_data": 63,
+    "gold_wrong": 12,
+    "ambiguous": 16,
+    "pred_wrong": 7,
+    "both_wrong": 2
+   },
+   "implausible_share": 0.63,
+   "implausible_ci": [
+    0.5322034757513312,
+    0.7181778743049083
+   ],
+   "meaningful": 37,
+   "meaningful_ci": [
+    0.28182212569509163,
+    0.46779652424866885
+   ],
+   "errors": 9,
+   "errors_ci": [
+    0.048071995163884884,
+    0.16226374696643667
+   ],
+   "certified": 749,
+   "est_meaningful": 277.13,
+   "est_meaningful_ci": [
+    211.08477214562362,
+    350.379596662253
+   ],
+   "est_errors": 67.41,
+   "est_errors_ci": [
+    36.00592437774978,
+    121.53554647786106
+   ]
+  }
+ }
+}

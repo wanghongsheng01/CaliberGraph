@@ -1,0 +1,202 @@
+[
+ {
+  "idx": 25,
+  "pair_id": "slm:1182",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Question presupposes a single patient; the witness has two patients with identical First Date, diagnosis, dates and lab data, so gold (scalar subquery, one patient) and pred (all matches) diverge.",
+  "implausible_fact": "two distinct patients with identical First Date/SJS and identical lab records"
+ },
+ {
+  "idx": 26,
+  "pair_id": "omni-32-majority:1007",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No Hamilton or pit-stop rows exist, so gold returns an empty set and pred returns a single NULL from MAX; only empty-vs-NULL aggregate handling differs.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 27,
+  "pair_id": "omni-32-majority:882",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No Singapore Grand Prix rows exist; gold returns empty and pred returns NULL from MIN, which is only an empty-input aggregate handling difference.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 28,
+  "pair_id": "rsl:1255",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Evidence defines abnormal as IGM<=40 OR >=400; gold uses NOT BETWEEN 40 AND 400, which excludes the boundary value 400, while pred follows the evidence.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 29,
+  "pair_id": "gsr:475",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "With no matching cards, \"how many\" should be 0; gold SUM(CASE...) yields NULL while pred COUNT yields 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 30,
+  "pair_id": "slm:1183",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "SLE refers to the diagnosis in Examination; pred filters Patient.Diagnosis = SLE (the original diagnosis) and so misreads the question, returning nothing, while gold returns the patient original diagnosis.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 31,
+  "pair_id": "omni-32-majority:732",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Four heroes tie for slowest speed; gold returns one arbitrary publisher via LIMIT 1 and pred returns all tied rows, so tie handling is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 32,
+  "pair_id": "chess:1202",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold uses Examination.Diagnosis and pred Patient.Diagnosis; both are defensible and agree in real data, and they differ only because the witness patient (exam diagnosis Behcet) has an unrelated Patient.Diagnosis.",
+  "implausible_fact": "Patient with Examination diagnosis Behcet has unrelated Patient.Diagnosis"
+ },
+ {
+  "idx": 33,
+  "pair_id": "gena_submission_2:74",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred ORDER BY Low Grade LIMIT 1 returns a NULL because the witness has NULL Low Grade values, which never occur in the real frpm table (0 NULLs).",
+  "implausible_fact": "NULL Low Grade in frpm"
+ },
+ {
+  "idx": 34,
+  "pair_id": "gsr:91",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "A12 and A13 averages are equal (single all-zero row); gold returns 1995 and pred 1996 on the tie, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 35,
+  "pair_id": "csc-7b:103",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred joins client.client_id to card.disp_id, skipping the disp table; the correct link is card->disp->client as in gold.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 36,
+  "pair_id": "omni-32-majority:698",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "The post titled Clustering 1D data is absent, so gold returns no row while pred returns 0,0; the two also use stored counts vs counted rows, so no clear correct answer.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 37,
+  "pair_id": "gena_submission_1:864",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Driver 815 has two result rows for the same race, so gold COUNT double counts and pred DISTINCT does not.",
+  "implausible_fact": "duplicate result rows for the same driver in one race"
+ },
+ {
+  "idx": 38,
+  "pair_id": "gsr:1494",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both compute the same percentage; results differ only by floating-point evaluation order (33.333333333333336 vs 33.33333333333333).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 39,
+  "pair_id": "alpha:1348",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Two events share the name November Meeting; pred scalar subquery picks one (without budgets) while gold covers all, and the real DB has only one such event.",
+  "implausible_fact": "duplicate event name November Meeting"
+ },
+ {
+  "idx": 40,
+  "pair_id": "rsl:795",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Evidence says neutral is alignment_id = 3, which pred uses; the witness labels alignment id 3 as Bad, so gold (by name Neutral) differs only because of the inconsistent label.",
+  "implausible_fact": "alignment id 3 labeled Bad instead of Neutral"
+ },
+ {
+  "idx": 41,
+  "pair_id": "gena_submission_2:685",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred filters posts.Title with a case-altered literal that does not match the question or evidence (history Text), returning nothing while gold applies the evidence.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 42,
+  "pair_id": "gsr:273",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts only non-NULL elements in the denominator while pred uses COUNT(*); the difference arises from an atom with NULL element, which never occurs in the real atom table.",
+  "implausible_fact": "NULL element in atom"
+ },
+ {
+  "idx": 43,
+  "pair_id": "chess:1055",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred joins Player_Attributes to Player on player_fifa_api_id instead of the key player_api_id, picking the wrong player when the two ids disagree.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 44,
+  "pair_id": "omni-32-majority:880",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Required races/names (raceId 854, Paul di Resta casing) are missing, so gold yields NULL and pred an empty set; no meaningful answer exists on this witness.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 45,
+  "pair_id": "csc-32b:685",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The post exists with the matching title but has no postHistory row carrying its title, so gold (via history Text) returns nothing while pred returns the post views and editor.",
+  "implausible_fact": "post without its title history record"
+ },
+ {
+  "idx": 46,
+  "pair_id": "csc-32b:657",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The only type 8 vote has NULL BountyAmount, so pred MAX equality matches nothing while gold LIMIT 1 returns that user; real type 8 votes never have NULL BountyAmount.",
+  "implausible_fact": "NULL BountyAmount for VoteTypeId 8"
+ },
+ {
+  "idx": 47,
+  "pair_id": "rsl:285",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Real connected table is symmetric (each bond has both directions); the witness has only one direction so gold sees one atom while pred sees both.",
+  "implausible_fact": "connected row missing its reverse direction"
+ },
+ {
+  "idx": 48,
+  "pair_id": "alpha:623",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The same user has several Supporter badges, so gold COUNT over the join double counts while pred counts distinct users; real data has no duplicate Supporter badges per user.",
+  "implausible_fact": "same user with multiple Supporter badges"
+ },
+ {
+  "idx": 49,
+  "pair_id": "slm:426",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Evidence says mtgoCode is NULL or empty; gold checks only IS NULL and misses the empty-string set that pred correctly returns.",
+  "implausible_fact": null
+ }
+]

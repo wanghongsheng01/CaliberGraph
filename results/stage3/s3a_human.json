@@ -1,0 +1,402 @@
+{
+ "n_items": 60,
+ "labels": {
+  "h1": {
+   "gold_wrong": 31,
+   "pred_wrong": 23,
+   "ambiguous": 2,
+   "implausible_data": 3,
+   "both_wrong": 1
+  },
+  "h2": {
+   "gold_wrong": 33,
+   "pred_wrong": 21,
+   "ambiguous": 2,
+   "implausible_data": 3,
+   "both_wrong": 1
+  },
+  "ai": {
+   "gold_wrong": 15,
+   "pred_wrong": 4,
+   "ambiguous": 20,
+   "implausible_data": 21
+  }
+ },
+ "M_A1_h1_vs_h2": {
+  "n": 60,
+  "agree5": 51,
+  "kappa5": 0.7403846153846154,
+  "kappa5_ci": [
+   0.5833333333333334,
+   0.8811881188118812
+  ],
+  "agree2": 54,
+  "kappa2": -0.05263157894736725,
+  "kappa2_ci": [
+   -0.09271523178807939,
+   0.0
+  ],
+  "confusion": {
+   "pred_wrong->pred_wrong": 19,
+   "pred_wrong->gold_wrong": 2,
+   "pred_wrong->implausible_data": 2,
+   "gold_wrong->pred_wrong": 1,
+   "gold_wrong->gold_wrong": 29,
+   "gold_wrong->implausible_data": 1,
+   "both_wrong->both_wrong": 1,
+   "ambiguous->ambiguous": 2,
+   "implausible_data->pred_wrong": 1,
+   "implausible_data->gold_wrong": 2
+  }
+ },
+ "M_A2_h1_vs_ai": {
+  "n": 60,
+  "agree5": 21,
+  "kappa5": 0.20408163265306123,
+  "kappa5_ci": [
+   0.10563836681788723,
+   0.3108399138549892
+  ],
+  "agree2": 38,
+  "kappa2": -0.004566210045662206,
+  "kappa2_ci": [
+   -0.12903225806451615,
+   0.1525423728813558
+  ],
+  "confusion": {
+   "pred_wrong->pred_wrong": 4,
+   "pred_wrong->ambiguous": 10,
+   "pred_wrong->implausible_data": 9,
+   "gold_wrong->gold_wrong": 14,
+   "gold_wrong->ambiguous": 6,
+   "gold_wrong->implausible_data": 11,
+   "both_wrong->ambiguous": 1,
+   "ambiguous->ambiguous": 2,
+   "implausible_data->gold_wrong": 1,
+   "implausible_data->ambiguous": 1,
+   "implausible_data->implausible_data": 1
+  }
+ },
+ "M_A2_h2_vs_ai": {
+  "n": 60,
+  "agree5": 24,
+  "kappa5": 0.2597669636737492,
+  "kappa5_ci": [
+   0.15831663326653306,
+   0.3747829107328934
+  ],
+  "agree2": 42,
+  "kappa2": 0.17808219178082177,
+  "kappa2_ci": [
+   0.0,
+   0.38016528925619836
+  ],
+  "confusion": {
+   "pred_wrong->pred_wrong": 4,
+   "pred_wrong->ambiguous": 9,
+   "pred_wrong->implausible_data": 8,
+   "gold_wrong->gold_wrong": 15,
+   "gold_wrong->ambiguous": 8,
+   "gold_wrong->implausible_data": 10,
+   "both_wrong->ambiguous": 1,
+   "ambiguous->ambiguous": 2,
+   "implausible_data->implausible_data": 3
+  }
+ },
+ "M_A3_implausible_by_stage": {
+  "h1": {
+   "stage1": {
+    "n": 30,
+    "implausible": 0,
+    "share": 0.0,
+    "wilson": [
+     -1.3877787807814457e-17,
+     0.113517091390478
+    ]
+   },
+   "stage2": {
+    "n": 30,
+    "implausible": 3,
+    "share": 0.1,
+    "wilson": [
+     0.03459925995971615,
+     0.25621441315266624
+    ]
+   },
+   "fisher_one_sided_stage1_gt_stage2": 1.0
+  },
+  "h2": {
+   "stage1": {
+    "n": 30,
+    "implausible": 2,
+    "share": 0.06666666666666667,
+    "wilson": [
+     0.01847663532769335,
+     0.21323817721072091
+    ]
+   },
+   "stage2": {
+    "n": 30,
+    "implausible": 1,
+    "share": 0.03333333333333333,
+    "wilson": [
+     0.0059084379948573795,
+     0.16670751396958874
+    ]
+   },
+   "fisher_one_sided_stage1_gt_stage2": 0.5
+  },
+  "ai": {
+   "stage1": {
+    "n": 30,
+    "implausible": 14,
+    "share": 0.4666666666666667,
+    "wilson": [
+     0.30232127224128236,
+     0.6385798671847496
+    ]
+   },
+   "stage2": {
+    "n": 30,
+    "implausible": 7,
+    "share": 0.23333333333333334,
+    "wilson": [
+     0.11792239210501232,
+     0.40928672330324267
+    ]
+   },
+   "fisher_one_sided_stage1_gt_stage2": 0.051667558586036354
+  },
+  "consensus": {
+   "stage1": {
+    "n": 27,
+    "implausible": 0,
+    "share": 0.0,
+    "wilson": [
+     6.938893903907228e-18,
+     0.12455903714463581
+    ]
+   },
+   "stage2": {
+    "n": 24,
+    "implausible": 0,
+    "share": 0.0,
+    "wilson": [
+     0.0,
+     0.13798057582897535
+    ]
+   },
+   "fisher_one_sided_stage1_gt_stage2": 1.0
+  }
+ },
+ "H_A1_binary_kappa_h1_h2_ge_0.60": false,
+ "H_A2_binary_kappa_each_human_vs_ai_ge_0.60": false,
+ "H_A3_p_unadjusted": 1.0,
+ "ai_implausible_items": [
+  {
+   "no": 5,
+   "stage": 1,
+   "source": "SpotIt+@L0",
+   "h1": "gold_wrong",
+   "h2": "implausible_data"
+  },
+  {
+   "no": 7,
+   "stage": 2,
+   "source": "CaliberGraph-R@R",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong"
+  },
+  {
+   "no": 10,
+   "stage": 1,
+   "source": "SpotIt+@L0",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong"
+  },
+  {
+   "no": 18,
+   "stage": 2,
+   "source": "CaliberGraph-R@R",
+   "h1": "implausible_data",
+   "h2": "gold_wrong"
+  },
+  {
+   "no": 20,
+   "stage": 1,
+   "source": "ParSEval-L1@L1f",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong"
+  },
+  {
+   "no": 26,
+   "stage": 1,
+   "source": "ParSEval-L1@L1f",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong"
+  },
+  {
+   "no": 28,
+   "stage": 1,
+   "source": "SpotIt@L0",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong"
+  },
+  {
+   "no": 30,
+   "stage": 1,
+   "source": "Fuzz@L1f",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong"
+  },
+  {
+   "no": 35,
+   "stage": 1,
+   "source": "SpotIt@L0",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong"
+  },
+  {
+   "no": 37,
+   "stage": 1,
+   "source": "SpotIt@L0",
+   "h1": "pred_wrong",
+   "h2": "implausible_data"
+  },
+  {
+   "no": 39,
+   "stage": 1,
+   "source": "Fuzz@L1f",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong"
+  },
+  {
+   "no": 40,
+   "stage": 1,
+   "source": "ParSEval-L1@L1f",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong"
+  },
+  {
+   "no": 42,
+   "stage": 1,
+   "source": "SpotIt+@L0",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong"
+  },
+  {
+   "no": 43,
+   "stage": 2,
+   "source": "CaliberGraph-R@R",
+   "h1": "pred_wrong",
+   "h2": "implausible_data"
+  },
+  {
+   "no": 45,
+   "stage": 1,
+   "source": "ParSEval-L1@L1f",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong"
+  },
+  {
+   "no": 46,
+   "stage": 2,
+   "source": "Fuzz-R@R",
+   "h1": "gold_wrong",
+   "h2": "pred_wrong"
+  },
+  {
+   "no": 47,
+   "stage": 1,
+   "source": "CaliberGraph@L1f",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong"
+  },
+  {
+   "no": 49,
+   "stage": 1,
+   "source": "CaliberGraph@L1f",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong"
+  },
+  {
+   "no": 52,
+   "stage": 2,
+   "source": "CaliberGraph-R@R",
+   "h1": "pred_wrong",
+   "h2": "pred_wrong"
+  },
+  {
+   "no": 56,
+   "stage": 2,
+   "source": "CaliberGraph-R@R",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong"
+  },
+  {
+   "no": 60,
+   "stage": 2,
+   "source": "Fuzz-R@R",
+   "h1": "gold_wrong",
+   "h2": "gold_wrong"
+  }
+ ],
+ "by_source": {
+  "CaliberGraph": {
+   "n": 3,
+   "ai_imp": 2,
+   "h1_imp": 0,
+   "h2_imp": 0,
+   "h1_eq_ai": 1,
+   "h2_eq_ai": 1
+  },
+  "Fuzz": {
+   "n": 4,
+   "ai_imp": 2,
+   "h1_imp": 0,
+   "h2_imp": 0,
+   "h1_eq_ai": 1,
+   "h2_eq_ai": 1
+  },
+  "Fuzz-R": {
+   "n": 15,
+   "ai_imp": 2,
+   "h1_imp": 0,
+   "h2_imp": 0,
+   "h1_eq_ai": 6,
+   "h2_eq_ai": 6
+  },
+  "SpotIt+": {
+   "n": 10,
+   "ai_imp": 3,
+   "h1_imp": 0,
+   "h2_imp": 1,
+   "h1_eq_ai": 5,
+   "h2_eq_ai": 6
+  },
+  "CaliberGraph-R": {
+   "n": 15,
+   "ai_imp": 5,
+   "h1_imp": 3,
+   "h2_imp": 1,
+   "h1_eq_ai": 6,
+   "h2_eq_ai": 7
+  },
+  "ParSEval-L1": {
+   "n": 7,
+   "ai_imp": 4,
+   "h1_imp": 0,
+   "h2_imp": 0,
+   "h1_eq_ai": 1,
+   "h2_eq_ai": 1
+  },
+  "SpotIt": {
+   "n": 6,
+   "ai_imp": 3,
+   "h1_imp": 0,
+   "h2_imp": 1,
+   "h1_eq_ai": 1,
+   "h2_eq_ai": 2
+  }
+ }
+}

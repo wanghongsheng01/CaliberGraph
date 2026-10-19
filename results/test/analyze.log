@@ -1,0 +1,355 @@
+{
+ "split": "test",
+ "n_exc": 7995,
+ "n_exi": 3664,
+ "n_questions_exc": 1005,
+ "n_distinct_exc": 6456,
+ "main": {
+  "CaliberGraph": {
+   "L0": 1979,
+   "L1": 1979,
+   "L1f": 1979,
+   "L1n": 1122,
+   "O1f": 585,
+   "O1n": 196,
+   "L2": 467,
+   "contracts_L1f": {
+    "C_set": 1979,
+    "C_bag": 1979,
+    "C_lenient": 1625
+   }
+  },
+  "CaliberGraph+SC": {
+   "L0": 1581,
+   "L1": 1581,
+   "L1f": 1581,
+   "L1n": 1527,
+   "O1f": 0,
+   "O1n": 0,
+   "L2": 1581,
+   "contracts_L1f": {
+    "C_set": 1581,
+    "C_bag": 1581,
+    "C_lenient": 1421
+   }
+  },
+  "ParSEval-L1": {
+   "L0": 1342,
+   "L1": 1342,
+   "L1f": 1342,
+   "L1n": 395,
+   "O1f": 445,
+   "O1n": 51,
+   "L2": 168,
+   "contracts_L1f": {
+    "C_set": 1342,
+    "C_bag": 1342,
+    "C_lenient": 1311
+   }
+  },
+  "ParSEval (official)": {
+   "L0": 1641,
+   "L1": 1283,
+   "L1f": 357,
+   "L1n": 45,
+   "O1f": 0,
+   "O1n": 0,
+   "L2": 23,
+   "contracts_L1f": {
+    "C_set": 357,
+    "C_bag": 357,
+    "C_lenient": 353
+   }
+  },
+  "Random fuzzing": {
+   "L0": 1691,
+   "L1": 1691,
+   "L1f": 1691,
+   "L1n": 1182,
+   "O1f": 103,
+   "O1n": 65,
+   "L2": 560,
+   "contracts_L1f": {
+    "C_set": 1691,
+    "C_bag": 1691,
+    "C_lenient": 1517
+   }
+  },
+  "SpotIt": {
+   "L0": 749,
+   "L1": 749,
+   "L1f": 116,
+   "L1n": 51,
+   "O1f": 0,
+   "O1n": 0,
+   "L2": 22,
+   "contracts_L1f": {
+    "C_set": 116,
+    "C_bag": 116,
+    "C_lenient": 97
+   },
+   "author_claims": 1419
+  },
+  "SpotIt+": {
+   "L0": 512,
+   "L1": 512,
+   "L1f": 204,
+   "L1n": 202,
+   "O1f": 0,
+   "O1n": 0,
+   "L2": 143,
+   "contracts_L1f": {
+    "C_set": 204,
+    "C_bag": 204,
+    "C_lenient": 195
+   },
+   "author_claims": 1125
+  }
+ },
+ "tests": [
+  {
+   "label": "H1",
+   "a": "CaliberGraph",
+   "b": "SpotIt",
+   "tier_a": "L1f",
+   "tier_b": "author-claims",
+   "count_a": 1979,
+   "count_b": 1419,
+   "a_only": 646,
+   "b_only": 86,
+   "diff": 560,
+   "ci95": [
+    437,
+    684
+   ],
+   "p": 5.179545659279502e-107,
+   "p_holm": 1.0359091318559004e-106
+  },
+  {
+   "label": "H2",
+   "a": "CaliberGraph+SC",
+   "b": "SpotIt+",
+   "tier_a": "L2",
+   "tier_b": "author-claims",
+   "count_a": 1581,
+   "count_b": 1125,
+   "a_only": 763,
+   "b_only": 307,
+   "diff": 456,
+   "ci95": [
+    308,
+    602
+   ],
+   "p": 2.370319025879882e-45,
+   "p_holm": 2.370319025879882e-45
+  },
+  {
+   "label": "vs ParSEval-L1",
+   "a": "CaliberGraph",
+   "b": "ParSEval-L1",
+   "tier_a": "L1f",
+   "tier_b": "L1f",
+   "count_a": 1979,
+   "count_b": 1342,
+   "a_only": 653,
+   "b_only": 16,
+   "diff": 637,
+   "ci95": [
+    523,
+    752
+   ],
+   "p": 5.3751651856164e-170
+  },
+  {
+   "label": "vs fuzzing",
+   "a": "CaliberGraph",
+   "b": "Random fuzzing",
+   "tier_a": "L1f",
+   "tier_b": "L1f",
+   "count_a": 1979,
+   "count_b": 1691,
+   "a_only": 296,
+   "b_only": 8,
+   "diff": 288,
+   "ci95": [
+    213,
+    367
+   ],
+   "p": 1.0395896414969961e-76
+  },
+  {
+   "label": "vs SpotIt+ claims (L1f)",
+   "a": "CaliberGraph",
+   "b": "SpotIt+",
+   "tier_a": "L1f",
+   "tier_b": "author-claims",
+   "count_a": 1979,
+   "count_b": 1125,
+   "a_only": 1075,
+   "b_only": 221,
+   "diff": 854,
+   "ci95": [
+    695,
+    1016
+   ],
+   "p": 6.255722102978044e-135
+  }
+ ],
+ "known_positive_recall": {
+  "CaliberGraph": {
+   "L0": 0.9713427947598253,
+   "L1": 0.9713427947598253,
+   "L1f": 0.9713427947598253,
+   "L1n": 0.6711244541484717,
+   "L2": 0.3239628820960699,
+   "found_L1f": 3559
+  },
+  "ParSEval-L1": {
+   "L0": 0.7336244541484717,
+   "L1": 0.7336244541484717,
+   "L1f": 0.7336244541484717,
+   "L1n": 0.2903930131004367,
+   "L2": 0.09770742358078603,
+   "found_L1f": 2688
+  },
+  "Random fuzzing": {
+   "L0": 0.8902838427947598,
+   "L1": 0.8902838427947598,
+   "L1f": 0.8902838427947598,
+   "L1n": 0.6716703056768559,
+   "L2": 0.28684497816593885,
+   "found_L1f": 3262
+  },
+  "SpotIt (claims)": {
+   "found": 2625,
+   "recall": 0.7164301310043668
+  }
+ },
+ "h3_tests": [
+  {
+   "b": "ParSEval-L1",
+   "a_only": 910,
+   "b_only": 39,
+   "p": 1.266345892256313e-216,
+   "count_a": 3559,
+   "count_b": 2688
+  },
+  {
+   "b": "SpotIt (claims)",
+   "a_only": 943,
+   "b_only": 9,
+   "p": 9.039148343249317e-266,
+   "count_a": 3559,
+   "count_b": 2625
+  },
+  {
+   "b": "Random fuzzing",
+   "a_only": 301,
+   "b_only": 4,
+   "p": 1.0991681362098683e-83,
+   "count_a": 3559,
+   "count_b": 3262
+  }
+ ],
+ "h3": {
+  "p": 1.266345892256313e-216,
+  "p_holm": 3.7990376767689393e-216
+ },
+ "kendall_tau_ex_vs_corrected": 0.7501937734175208,
+ "kendall_tau_ex_vs_spotit_corrected": 0.7047274841194893,
+ "rank_ex": {
+  "csc-32b": 1,
+  "gena_submission_2": 2,
+  "alpha": 3,
+  "csc-7b": 4,
+  "gena_submission_1": 5,
+  "omni-32-majority": 6,
+  "rsl": 7,
+  "gsr": 8,
+  "chess": 9,
+  "slm": 10
+ },
+ "rank_corrected": {
+  "csc-32b": 1,
+  "gena_submission_2": 2,
+  "csc-7b": 3,
+  "gena_submission_1": 4,
+  "rsl": 5,
+  "alpha": 6,
+  "omni-32-majority": 7,
+  "chess": 8,
+  "slm": 9,
+  "gsr": 10
+ },
+ "schema_groups": {
+  "other schemas": {
+   "n": 4947,
+   "found": 1256,
+   "rate": 0.2538912472205377
+  },
+  "held-out schemas": {
+   "n": 3048,
+   "found": 723,
+   "rate": 0.2372047244094488
+  }
+ },
+ "difficulty": {
+  "simple": {
+   "n": 5218,
+   "found": 1096,
+   "rate": 0.21004216174779608
+  },
+  "moderate": {
+   "n": 2170,
+   "found": 665,
+   "rate": 0.3064516129032258
+  },
+  "challenging": {
+   "n": 607,
+   "found": 218,
+   "rate": 0.35914332784184516
+  }
+ },
+ "time_to_witness": {
+  "CaliberGraph": {
+   "n": 1774,
+   "median": 0.008045806500376784,
+   "p95": 0.044352331000027334,
+   "max": 4.795996591000403,
+   "curve": [
+    1156,
+    1631,
+    1721,
+    1748,
+    1765,
+    1768,
+    1768,
+    1773,
+    1774
+   ]
+  },
+  "CaliberGraph+SC": {
+   "n": 1419,
+   "median": 0.023020836000796407,
+   "p95": 0.3468673620009213,
+   "max": 5.002271605000715,
+   "curve": [
+    272,
+    811,
+    1159,
+    1336,
+    1391,
+    1409,
+    1416,
+    1416,
+    1418
+   ]
+  },
+  "ParSEval-L1": {
+   "n": 1196,
+   "median": 0.3119803765002871,
+   "p95": 3.9040734930022154,
+   "max": 5.648595740000019,
+   "curve": [
+    0,
+    0,

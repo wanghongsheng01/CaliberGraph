@@ -1,0 +1,210 @@
+[
+ {
+  "idx": 5,
+  "pair_id": "csc-7b:637",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold misses Mark Meckes's own comment-less post (<r>) only because that post has no postHistory row by its owner (its initial-title row is by another user), which never happens in the real data where every owned post has owner history.",
+  "implausible_fact": "owned post lacks any postHistory row by its owner"
+ },
+ {
+  "idx": 10,
+  "pair_id": "alpha:541",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Every post has NULL FavoriteCount, so no post is 'most valuable'; gold returns an arbitrary tied owner while pred returns nothing, and the question does not say how NULL/absent favorites are treated.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 12,
+  "pair_id": "csc-32b:876",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The only result has status 'Finished' and position 1 but NULL time (a pattern that occurs in the real data), so 0 non-finishers is correct and gold's time IS NULL proxy wrongly counts the winner.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 15,
+  "pair_id": "chess:1335",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The September Meeting has no Advertisement budget line, so gold returns no row while pred's SUM returns NULL; both express that nothing is recorded and the question does not fix the empty-case output.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 26,
+  "pair_id": "gena_submission_2:1014",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The difference stems from a lap in lapTimes (1:44.058) by a driver who has no results row in that race and is faster than the race's recorded fastestLapTime, with milliseconds inconsistent with the time string; in consistent data both sources agree.",
+  "implausible_fact": "lap time by driver absent from results, faster than race fastest lap; ms mismatches time"
+ },
+ {
+  "idx": 35,
+  "pair_id": "gsr:284",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred misses '=' only because the connected table stores the carbon-containing bond in one direction only and links atoms of different molecules; in the real DB connected is always symmetric, so pred would find it.",
+  "implausible_fact": "connected row not symmetric and links atoms from different molecules"
+ },
+ {
+  "idx": 64,
+  "pair_id": "gsr:173",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Account 3 has two LEASING orders (3539 and 3); 'debiting 3539 in total' can mean the single order amount (pred) or the per-purpose sum (gold), and both readings are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 66,
+  "pair_id": "rsl:1182",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Two patients with identical birthday, dates, diagnosis and identical laboratory records both match; gold's scalar subquery takes one and pred counts both, a duplication that would not occur in a real hospital database where the question presumes one patient.",
+  "implausible_fact": "duplicate patient with identical record and lab results"
+ },
+ {
+  "idx": 70,
+  "pair_id": "rsl:498",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The French set translation exists but is NULL (NULL translations occur in reality); gold filters it out (empty) while pred returns NULL, both meaning no French name is known.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 71,
+  "pair_id": "csc-7b:876",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Bottas has two identical results rows (different resultId) for the same race, so COUNT counts him twice while COUNT DISTINCT does not; a driver cannot have two results in one race.",
+  "implausible_fact": "duplicate results row for same driver and race"
+ },
+ {
+  "idx": 73,
+  "pair_id": "alpha:272",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "TR060 is a non-carcinogenic molecule that has a triple bond and a carbon atom, which is what the question asks; pred additionally requires the carbon to participate in the triple bond, a stricter reading not in the question.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 105,
+  "pair_id": "gsr:377",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred's count only differs because a Sorcery card has originalType 'Summon - Angel' with NULL subtypes; in reality all 'Summon - Angel' cards are creatures with Angel-containing subtypes.",
+  "implausible_fact": "'Summon - Angel' card with NULL subtypes (a sorcery)"
+ },
+ {
+  "idx": 108,
+  "pair_id": "rsl:396",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The card has availability 'arena,paper'; the question ('available on paper') supports containment as in pred, while the evidence explicitly defines availability = 'paper' as in gold, so both are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 111,
+  "pair_id": "rsl:173",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Account 3 has two LEASING orders (3539 and 3); 'debiting 3539 in total' can mean the single order amount (pred) or the per-purpose sum (gold), and both readings are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 134,
+  "pair_id": "gsr:6",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The same CDS school is named differently in satscores (sname) and schools (School), which also happens in the real data, and the question does not specify which school-name column to list.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 136,
+  "pair_id": "csc-7b:29",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Gold takes the school with largest Enrollment (K-12) regardless of type while pred restricts to School Type 'K-12 Schools (Public)'; the question/evidence supports both readings, and the witness has only a middle school.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 144,
+  "pair_id": "csc-32b:1178",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only AORTITIS patient has a NULL First Date (common in the real data); gold excludes the patient for lacking a date while pred returns her as the only (hence first) patient, and the NULL handling is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 147,
+  "pair_id": "gena_submission_2:685",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Per the evidence the post is identified by postHistory Text = 'Computer Game Datasets', which gold uses; pred hardcodes a differently-cased title 'Computer game datasets' and so finds nothing, although a matching post exists.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 158,
+  "pair_id": "chess:1147",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Three players tie at the maximum overall rating; the question asks to 'name one player', so pred's single tied player and gold's list of all tied players are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 160,
+  "pair_id": "chess:147",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Female clients living in south Bohemia (gold) vs female clients' accounts held in south-Bohemian branches (pred) are both plausible readings, and client and account districts differ in about 9% of real records.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 182,
+  "pair_id": "omni-32-majority:904",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Schumacher's minimum-milliseconds lap is at the Bahrain GP, but pred's DISTINCT with ORDER BY on a non-selected column sorts Bahrain by another lap's time, a genuine bug that returns the wrong race.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 188,
+  "pair_id": "chess:1075",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only potential-61 player has a NULL balance (which occurs in the real data); gold still returns him while pred's MAX(balance)=NULL comparison returns nothing, so the NULL handling decides and is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 209,
+  "pair_id": "rsl:214",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "The question is garbled: gold follows the evidence (labels of molecules having atoms with element != 'sn') while pred reads it as labels of molecules without tin; on this witness the two readings diverge and both are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 231,
+  "pair_id": "chess:1072",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "One attribute row has NULL overall_rating (NULL ratings occur in the real data); the evidence asks for AVG(overall_rating), which ignores NULLs (69), while gold's SUM/COUNT(id) treats it as 0 (34.5).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 243,
+  "pair_id": "rsl:634",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Posts 'by' a user are the posts that user owns; Noah Snyder owns no posts here, but gold credits him with another user's post through a postHistory row, an attribution error that also arises with realistic edit histories.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 248,
+  "pair_id": "alpha:1272",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only patient with abnormal SSA has a NULL First Date (frequent in the real data); gold excludes the patient while pred returns that patient as the only candidate, and NULL handling is unspecified.",
+  "implausible_fact": null
+ }
+]

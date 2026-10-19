@@ -1,0 +1,1502 @@
+[
+ {
+  "idx": 0,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:1196",
+  "orig_idx": null
+ },
+ {
+  "idx": 1,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gena_submission_1:988",
+  "orig_idx": null
+ },
+ {
+  "idx": 2,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:1084",
+  "orig_idx": null
+ },
+ {
+  "idx": 3,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:1013",
+  "orig_idx": null
+ },
+ {
+  "idx": 4,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-7b:668",
+  "orig_idx": null
+ },
+ {
+  "idx": 5,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-7b:637",
+  "orig_idx": null
+ },
+ {
+  "idx": 6,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "alpha:512",
+  "orig_idx": null
+ },
+ {
+  "idx": 7,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-7b:927",
+  "orig_idx": null
+ },
+ {
+  "idx": 8,
+  "source": "Fuzz-R@R",
+  "pair_id": "gsr:597",
+  "orig_idx": null
+ },
+ {
+  "idx": 9,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:786",
+  "orig_idx": null
+ },
+ {
+  "idx": 10,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:541",
+  "orig_idx": null
+ },
+ {
+  "idx": 11,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "csc-7b:1055",
+  "orig_idx": 411
+ },
+ {
+  "idx": 12,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:876",
+  "orig_idx": null
+ },
+ {
+  "idx": 13,
+  "source": "Fuzz-R@R",
+  "pair_id": "gsr:1193",
+  "orig_idx": null
+ },
+ {
+  "idx": 14,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "chess:242",
+  "orig_idx": 239
+ },
+ {
+  "idx": 15,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:1335",
+  "orig_idx": null
+ },
+ {
+  "idx": 16,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_2:1396",
+  "orig_idx": null
+ },
+ {
+  "idx": 17,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-32b:906",
+  "orig_idx": null
+ },
+ {
+  "idx": 18,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:668",
+  "orig_idx": null
+ },
+ {
+  "idx": 19,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:698",
+  "orig_idx": null
+ },
+ {
+  "idx": 20,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:562",
+  "orig_idx": null
+ },
+ {
+  "idx": 21,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:1001",
+  "orig_idx": null
+ },
+ {
+  "idx": 22,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:882",
+  "orig_idx": null
+ },
+ {
+  "idx": 23,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:1442",
+  "orig_idx": 410
+ },
+ {
+  "idx": 24,
+  "source": "Fuzz-R@R",
+  "pair_id": "omni-32-majority:108",
+  "orig_idx": null
+ },
+ {
+  "idx": 25,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gsr:232",
+  "orig_idx": 441
+ },
+ {
+  "idx": 26,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_2:1014",
+  "orig_idx": null
+ },
+ {
+  "idx": 27,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "alpha:1080",
+  "orig_idx": 213
+ },
+ {
+  "idx": 28,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-32b:1025",
+  "orig_idx": null
+ },
+ {
+  "idx": 29,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "slm:815",
+  "orig_idx": 483
+ },
+ {
+  "idx": 30,
+  "source": "Fuzz-R@R",
+  "pair_id": "rsl:1340",
+  "orig_idx": null
+ },
+ {
+  "idx": 31,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:459",
+  "orig_idx": null
+ },
+ {
+  "idx": 32,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "slm:1084",
+  "orig_idx": null
+ },
+ {
+  "idx": 33,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:938",
+  "orig_idx": null
+ },
+ {
+  "idx": 34,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:983",
+  "orig_idx": null
+ },
+ {
+  "idx": 35,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gsr:284",
+  "orig_idx": 51
+ },
+ {
+  "idx": 36,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:188",
+  "orig_idx": null
+ },
+ {
+  "idx": 37,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:138",
+  "orig_idx": null
+ },
+ {
+  "idx": 38,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gena_submission_2:698",
+  "orig_idx": null
+ },
+ {
+  "idx": 39,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "csc-7b:1238",
+  "orig_idx": 292
+ },
+ {
+  "idx": 40,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "csc-32b:1519",
+  "orig_idx": 60
+ },
+ {
+  "idx": 41,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:668",
+  "orig_idx": null
+ },
+ {
+  "idx": 42,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_1:1331",
+  "orig_idx": null
+ },
+ {
+  "idx": 43,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "slm:641",
+  "orig_idx": null
+ },
+ {
+  "idx": 44,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-32b:657",
+  "orig_idx": null
+ },
+ {
+  "idx": 45,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:541",
+  "orig_idx": null
+ },
+ {
+  "idx": 46,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:1448",
+  "orig_idx": null
+ },
+ {
+  "idx": 47,
+  "source": "Fuzz-R@R",
+  "pair_id": "omni-32-majority:1007",
+  "orig_idx": null
+ },
+ {
+  "idx": 48,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-7b:1516",
+  "orig_idx": null
+ },
+ {
+  "idx": 49,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_1:564",
+  "orig_idx": null
+ },
+ {
+  "idx": 50,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:942",
+  "orig_idx": null
+ },
+ {
+  "idx": 51,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:1348",
+  "orig_idx": null
+ },
+ {
+  "idx": 52,
+  "source": "Fuzz-R@R",
+  "pair_id": "gsr:663",
+  "orig_idx": null
+ },
+ {
+  "idx": 53,
+  "source": "Fuzz-R@R",
+  "pair_id": "rsl:669",
+  "orig_idx": null
+ },
+ {
+  "idx": 54,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:260",
+  "orig_idx": null
+ },
+ {
+  "idx": 55,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-7b:1202",
+  "orig_idx": null
+ },
+ {
+  "idx": 56,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_1:906",
+  "orig_idx": null
+ },
+ {
+  "idx": 57,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gena_submission_1:112",
+  "orig_idx": null
+ },
+ {
+  "idx": 58,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-7b:1002",
+  "orig_idx": null
+ },
+ {
+  "idx": 59,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "csc-32b:1523",
+  "orig_idx": 153
+ },
+ {
+  "idx": 60,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:66",
+  "orig_idx": null
+ },
+ {
+  "idx": 61,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:579",
+  "orig_idx": null
+ },
+ {
+  "idx": 62,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:258",
+  "orig_idx": null
+ },
+ {
+  "idx": 63,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:24",
+  "orig_idx": null
+ },
+ {
+  "idx": 64,
+  "source": "Fuzz-R@R",
+  "pair_id": "gsr:173",
+  "orig_idx": null
+ },
+ {
+  "idx": 65,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:1458",
+  "orig_idx": null
+ },
+ {
+  "idx": 66,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:1182",
+  "orig_idx": null
+ },
+ {
+  "idx": 67,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-7b:74",
+  "orig_idx": null
+ },
+ {
+  "idx": 68,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:931",
+  "orig_idx": null
+ },
+ {
+  "idx": 69,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:1142",
+  "orig_idx": null
+ },
+ {
+  "idx": 70,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:498",
+  "orig_idx": null
+ },
+ {
+  "idx": 71,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-7b:876",
+  "orig_idx": null
+ },
+ {
+  "idx": 72,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_2:52",
+  "orig_idx": null
+ },
+ {
+  "idx": 73,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:272",
+  "orig_idx": null
+ },
+ {
+  "idx": 74,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-7b:5",
+  "orig_idx": null
+ },
+ {
+  "idx": 75,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "alpha:303",
+  "orig_idx": 463
+ },
+ {
+  "idx": 76,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "alpha:302",
+  "orig_idx": 437
+ },
+ {
+  "idx": 77,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:1434",
+  "orig_idx": null
+ },
+ {
+  "idx": 78,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:1055",
+  "orig_idx": null
+ },
+ {
+  "idx": 79,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:751",
+  "orig_idx": null
+ },
+ {
+  "idx": 80,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-32b:138",
+  "orig_idx": null
+ },
+ {
+  "idx": 81,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:685",
+  "orig_idx": null
+ },
+ {
+  "idx": 82,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-7b:1001",
+  "orig_idx": null
+ },
+ {
+  "idx": 83,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:112",
+  "orig_idx": null
+ },
+ {
+  "idx": 84,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:1122",
+  "orig_idx": 101
+ },
+ {
+  "idx": 85,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "csc-7b:561",
+  "orig_idx": 449
+ },
+ {
+  "idx": 86,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:303",
+  "orig_idx": null
+ },
+ {
+  "idx": 87,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:1367",
+  "orig_idx": null
+ },
+ {
+  "idx": 88,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "alpha:1183",
+  "orig_idx": null
+ },
+ {
+  "idx": 89,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:5",
+  "orig_idx": null
+ },
+ {
+  "idx": 90,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gena_submission_2:1343",
+  "orig_idx": 330
+ },
+ {
+  "idx": 91,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:1122",
+  "orig_idx": null
+ },
+ {
+  "idx": 92,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "alpha:583",
+  "orig_idx": null
+ },
+ {
+  "idx": 93,
+  "source": "Fuzz-R@R",
+  "pair_id": "gsr:253",
+  "orig_idx": null
+ },
+ {
+  "idx": 94,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-32b:475",
+  "orig_idx": null
+ },
+ {
+  "idx": 95,
+  "source": "Fuzz-R@R",
+  "pair_id": "gsr:1123",
+  "orig_idx": null
+ },
+ {
+  "idx": 96,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gsr:506",
+  "orig_idx": 492
+ },
+ {
+  "idx": 97,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:91",
+  "orig_idx": null
+ },
+ {
+  "idx": 98,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "rsl:409",
+  "orig_idx": 420
+ },
+ {
+  "idx": 99,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "chess:1263",
+  "orig_idx": null
+ },
+ {
+  "idx": 100,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:926",
+  "orig_idx": null
+ },
+ {
+  "idx": 101,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:1038",
+  "orig_idx": 400
+ },
+ {
+  "idx": 102,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gena_submission_1:213",
+  "orig_idx": null
+ },
+ {
+  "idx": 103,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:939",
+  "orig_idx": null
+ },
+ {
+  "idx": 104,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gena_submission_2:990",
+  "orig_idx": null
+ },
+ {
+  "idx": 105,
+  "source": "Fuzz-R@R",
+  "pair_id": "gsr:377",
+  "orig_idx": null
+ },
+ {
+  "idx": 106,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:759",
+  "orig_idx": 456
+ },
+ {
+  "idx": 107,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gena_submission_1:864",
+  "orig_idx": null
+ },
+ {
+  "idx": 108,
+  "source": "Fuzz-R@R",
+  "pair_id": "rsl:396",
+  "orig_idx": null
+ },
+ {
+  "idx": 109,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "slm:1522",
+  "orig_idx": null
+ },
+ {
+  "idx": 110,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "slm:1101",
+  "orig_idx": 11
+ },
+ {
+  "idx": 111,
+  "source": "Fuzz-R@R",
+  "pair_id": "rsl:173",
+  "orig_idx": null
+ },
+ {
+  "idx": 112,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:630",
+  "orig_idx": null
+ },
+ {
+  "idx": 113,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:29",
+  "orig_idx": 229
+ },
+ {
+  "idx": 114,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:1348",
+  "orig_idx": null
+ },
+ {
+  "idx": 115,
+  "source": "Fuzz-R@R",
+  "pair_id": "omni-32-majority:926",
+  "orig_idx": null
+ },
+ {
+  "idx": 116,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gsr:801",
+  "orig_idx": 458
+ },
+ {
+  "idx": 117,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:1096",
+  "orig_idx": null
+ },
+ {
+  "idx": 118,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_1:1255",
+  "orig_idx": null
+ },
+ {
+  "idx": 119,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "alpha:510",
+  "orig_idx": null
+ },
+ {
+  "idx": 120,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:212",
+  "orig_idx": null
+ },
+ {
+  "idx": 121,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_1:1202",
+  "orig_idx": null
+ },
+ {
+  "idx": 122,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:303",
+  "orig_idx": 311
+ },
+ {
+  "idx": 123,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:931",
+  "orig_idx": null
+ },
+ {
+  "idx": 124,
+  "source": "Fuzz-R@R",
+  "pair_id": "rsl:829",
+  "orig_idx": null
+ },
+ {
+  "idx": 125,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-7b:926",
+  "orig_idx": null
+ },
+ {
+  "idx": 126,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:669",
+  "orig_idx": null
+ },
+ {
+  "idx": 127,
+  "source": "Fuzz-R@R",
+  "pair_id": "rsl:212",
+  "orig_idx": null
+ },
+ {
+  "idx": 128,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gena_submission_1:1022",
+  "orig_idx": null
+ },
+ {
+  "idx": 129,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "rsl:1007",
+  "orig_idx": 105
+ },
+ {
+  "idx": 130,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:732",
+  "orig_idx": null
+ },
+ {
+  "idx": 131,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "alpha:556",
+  "orig_idx": null
+ },
+ {
+  "idx": 132,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:703",
+  "orig_idx": null
+ },
+ {
+  "idx": 133,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:751",
+  "orig_idx": null
+ },
+ {
+  "idx": 134,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:6",
+  "orig_idx": null
+ },
+ {
+  "idx": 135,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "slm:782",
+  "orig_idx": 196
+ },
+ {
+  "idx": 136,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "csc-7b:29",
+  "orig_idx": 286
+ },
+ {
+  "idx": 137,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "csc-32b:977",
+  "orig_idx": 133
+ },
+ {
+  "idx": 138,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:668",
+  "orig_idx": 84
+ },
+ {
+  "idx": 139,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "alpha:67",
+  "orig_idx": null
+ },
+ {
+  "idx": 140,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-7b:1067",
+  "orig_idx": null
+ },
+ {
+  "idx": 141,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:867",
+  "orig_idx": null
+ },
+ {
+  "idx": 142,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "slm:931",
+  "orig_idx": null
+ },
+ {
+  "idx": 143,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "chess:926",
+  "orig_idx": null
+ },
+ {
+  "idx": 144,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:1178",
+  "orig_idx": null
+ },
+ {
+  "idx": 145,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:1164",
+  "orig_idx": null
+ },
+ {
+  "idx": 146,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-32b:759",
+  "orig_idx": null
+ },
+ {
+  "idx": 147,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_2:685",
+  "orig_idx": null
+ },
+ {
+  "idx": 148,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gsr:364",
+  "orig_idx": 388
+ },
+ {
+  "idx": 149,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "chess:272",
+  "orig_idx": null
+ },
+ {
+  "idx": 150,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:1072",
+  "orig_idx": 79
+ },
+ {
+  "idx": 151,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:73",
+  "orig_idx": null
+ },
+ {
+  "idx": 152,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:1263",
+  "orig_idx": null
+ },
+ {
+  "idx": 153,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "csc-32b:303",
+  "orig_idx": 180
+ },
+ {
+  "idx": 154,
+  "source": "Fuzz-R@R",
+  "pair_id": "omni-32-majority:583",
+  "orig_idx": null
+ },
+ {
+  "idx": 155,
+  "source": "Fuzz-R@R",
+  "pair_id": "rsl:284",
+  "orig_idx": null
+ },
+ {
+  "idx": 156,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gena_submission_1:59",
+  "orig_idx": null
+ },
+ {
+  "idx": 157,
+  "source": "Fuzz-R@R",
+  "pair_id": "gsr:690",
+  "orig_idx": null
+ },
+ {
+  "idx": 158,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:1147",
+  "orig_idx": null
+ },
+ {
+  "idx": 159,
+  "source": "Fuzz-R@R",
+  "pair_id": "rsl:282",
+  "orig_idx": null
+ },
+ {
+  "idx": 160,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:147",
+  "orig_idx": null
+ },
+ {
+  "idx": 161,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:1193",
+  "orig_idx": null
+ },
+ {
+  "idx": 162,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "chess:1513",
+  "orig_idx": null
+ },
+ {
+  "idx": 163,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:589",
+  "orig_idx": null
+ },
+ {
+  "idx": 164,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "alpha:131",
+  "orig_idx": 178
+ },
+ {
+  "idx": 165,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:1403",
+  "orig_idx": null
+ },
+ {
+  "idx": 166,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_1:977",
+  "orig_idx": null
+ },
+ {
+  "idx": 167,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:1193",
+  "orig_idx": null
+ },
+ {
+  "idx": 168,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:1485",
+  "orig_idx": null
+ },
+ {
+  "idx": 169,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:556",
+  "orig_idx": null
+ },
+ {
+  "idx": 170,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "alpha:1038",
+  "orig_idx": 0
+ },
+ {
+  "idx": 171,
+  "source": "Fuzz-R@R",
+  "pair_id": "omni-32-majority:882",
+  "orig_idx": null
+ },
+ {
+  "idx": 172,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-32b:1367",
+  "orig_idx": null
+ },
+ {
+  "idx": 173,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:1494",
+  "orig_idx": null
+ },
+ {
+  "idx": 174,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:1079",
+  "orig_idx": null
+ },
+ {
+  "idx": 175,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "csc-32b:828",
+  "orig_idx": 138
+ },
+ {
+  "idx": 176,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:307",
+  "orig_idx": null
+ },
+ {
+  "idx": 177,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:1501",
+  "orig_idx": null
+ },
+ {
+  "idx": 178,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:662",
+  "orig_idx": null
+ },
+ {
+  "idx": 179,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "chess:1343",
+  "orig_idx": null
+ },
+ {
+  "idx": 180,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "slm:451",
+  "orig_idx": null
+ },
+ {
+  "idx": 181,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:531",
+  "orig_idx": null
+ },
+ {
+  "idx": 182,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:904",
+  "orig_idx": null
+ },
+ {
+  "idx": 183,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "rsl:1410",
+  "orig_idx": 498
+ },
+ {
+  "idx": 184,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "alpha:128",
+  "orig_idx": null
+ },
+ {
+  "idx": 185,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:983",
+  "orig_idx": null
+ },
+ {
+  "idx": 186,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "chess:73",
+  "orig_idx": 122
+ },
+ {
+  "idx": 187,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "alpha:115",
+  "orig_idx": null
+ },
+ {
+  "idx": 188,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:1075",
+  "orig_idx": null
+ },
+ {
+  "idx": 189,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:879",
+  "orig_idx": null
+ },
+ {
+  "idx": 190,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:1255",
+  "orig_idx": null
+ },
+ {
+  "idx": 191,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:49",
+  "orig_idx": null
+ },
+ {
+  "idx": 192,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:1410",
+  "orig_idx": null
+ },
+ {
+  "idx": 193,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gsr:68",
+  "orig_idx": 316
+ },
+ {
+  "idx": 194,
+  "source": "Fuzz-R@R",
+  "pair_id": "gsr:112",
+  "orig_idx": null
+ },
+ {
+  "idx": 195,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "omni-32-majority:786",
+  "orig_idx": 480
+ },
+ {
+  "idx": 196,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_1:8",
+  "orig_idx": null
+ },
+ {
+  "idx": 197,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gsr:1084",
+  "orig_idx": 253
+ },
+ {
+  "idx": 198,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "rsl:938",
+  "orig_idx": 225
+ },
+ {
+  "idx": 199,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gsr:115",
+  "orig_idx": 45
+ },
+ {
+  "idx": 200,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:755",
+  "orig_idx": null
+ },
+ {
+  "idx": 201,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:324",
+  "orig_idx": null
+ },
+ {
+  "idx": 202,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "chess:826",
+  "orig_idx": null
+ },
+ {
+  "idx": 203,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:1513",
+  "orig_idx": null
+ },
+ {
+  "idx": 204,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "slm:801",
+  "orig_idx": 332
+ },
+ {
+  "idx": 205,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:565",
+  "orig_idx": null
+ },
+ {
+  "idx": 206,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "alpha:1194",
+  "orig_idx": null
+ },
+ {
+  "idx": 207,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:8",
+  "orig_idx": 62
+ },
+ {
+  "idx": 208,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "slm:1182",
+  "orig_idx": null
+ },
+ {
+  "idx": 209,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "rsl:214",
+  "orig_idx": null
+ },
+ {
+  "idx": 210,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:1095",
+  "orig_idx": null
+ },
+ {
+  "idx": 211,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "rsl:244",
+  "orig_idx": 215
+ },
+ {
+  "idx": 212,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:744",
+  "orig_idx": null
+ },
+ {
+  "idx": 213,
+  "source": "Fuzz-R@R",
+  "pair_id": "omni-32-majority:744",
+  "orig_idx": null
+ },
+ {
+  "idx": 214,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-7b:554",
+  "orig_idx": null
+ },
+ {
+  "idx": 215,
+  "source": "Fuzz-R@R",
+  "pair_id": "omni-32-majority:475",
+  "orig_idx": null
+ },
+ {
+  "idx": 216,
+  "source": "Fuzz-R@R",
+  "pair_id": "rsl:1122",
+  "orig_idx": null
+ },
+ {
+  "idx": 217,
+  "source": "Fuzz-R@R",
+  "pair_id": "chess:321",
+  "orig_idx": null
+ },
+ {
+  "idx": 218,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-7b:1182",
+  "orig_idx": null
+ },
+ {
+  "idx": 219,
+  "source": "Fuzz-R@R",
+  "pair_id": "omni-32-majority:698",
+  "orig_idx": null
+ },
+ {
+  "idx": 220,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gena_submission_2:75",
+  "orig_idx": null
+ },
+ {
+  "idx": 221,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-32b:1255",
+  "orig_idx": null
+ },
+ {
+  "idx": 222,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gena_submission_1:1147",
+  "orig_idx": null
+ },
+ {
+  "idx": 223,
+  "source": "Fuzz-R@R",
+  "pair_id": "slm:1055",
+  "orig_idx": null
+ },
+ {
+  "idx": 224,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gena_submission_1:1001",
+  "orig_idx": null
+ },
+ {
+  "idx": 225,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:260",
+  "orig_idx": null
+ },
+ {
+  "idx": 226,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:534",
+  "orig_idx": null
+ },
+ {
+  "idx": 227,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gsr:899",
+  "orig_idx": 142
+ },
+ {
+  "idx": 228,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "chess:73",
+  "orig_idx": null
+ },
+ {
+  "idx": 229,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-7b:895",
+  "orig_idx": null
+ },
+ {
+  "idx": 230,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:1263",
+  "orig_idx": null
+ },
+ {
+  "idx": 231,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "chess:1072",
+  "orig_idx": null
+ },
+ {
+  "idx": 232,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:1263",
+  "orig_idx": null
+ },
+ {
+  "idx": 233,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:931",
+  "orig_idx": null
+ },
+ {
+  "idx": 234,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gena_submission_1:114",
+  "orig_idx": 170
+ },
+ {
+  "idx": 235,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-7b:120",
+  "orig_idx": null
+ },
+ {
+  "idx": 236,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:936",
+  "orig_idx": null
+ },
+ {
+  "idx": 237,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-7b:1485",
+  "orig_idx": null
+ },
+ {
+  "idx": 238,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "gsr:285",
+  "orig_idx": 162
+ },
+ {
+  "idx": 239,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "omni-32-majority:212",
+  "orig_idx": null
+ },
+ {
+  "idx": 240,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "gsr:288",
+  "orig_idx": null
+ },
+ {
+  "idx": 241,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "chess:753",
+  "orig_idx": 111
+ },
+ {
+  "idx": 242,
+  "source": "Fuzz-R@R",
+  "pair_id": "rsl:1183",
+  "orig_idx": null
+ },
+ {
+  "idx": 243,
+  "source": "Fuzz-R@R",
+  "pair_id": "rsl:634",
+  "orig_idx": null
+ },
+ {
+  "idx": 244,
+  "source": "Fuzz-R@R",
+  "pair_id": "csc-32b:554",
+  "orig_idx": null
+ },
+ {
+  "idx": 245,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "chess:273",
+  "orig_idx": 21
+ },
+ {
+  "idx": 246,
+  "source": "calib:CaliberGraph@L1f",
+  "pair_id": "alpha:1504",
+  "orig_idx": 317
+ },
+ {
+  "idx": 247,
+  "source": "CaliberGraph-R@R",
+  "pair_id": "csc-32b:303",
+  "orig_idx": null
+ },
+ {
+  "idx": 248,
+  "source": "Fuzz-R@R",
+  "pair_id": "alpha:1272",
+  "orig_idx": null
+ },
+ {
+  "idx": 249,
+  "source": "Fuzz-R@R",
+  "pair_id": "gena_submission_1:101",
+  "orig_idx": null
+ }
+]

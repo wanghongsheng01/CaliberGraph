@@ -1,0 +1,202 @@
+[
+ {
+  "idx": 150,
+  "pair_id": "csc-32b:242",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Atom id 4444424 lacks the TR..._ format, so the evidence substr(7,2) and the gold substr(-2) disagree; on real ids of 2-digit atoms they coincide.",
+  "implausible_fact": "atom_id not in TRxxx_n format"
+ },
+ {
+  "idx": 151,
+  "pair_id": "omni-32-majority:867",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold requires fastestLapTime NOT NULL while pred does not; the difference arises only because a result has a fastestLapSpeed but NULL fastestLapTime.",
+  "implausible_fact": "fastestLapSpeed present but fastestLapTime NULL"
+ },
+ {
+  "idx": 152,
+  "pair_id": "omni-32-majority:669",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No user chl / no votes in witness: empty-result aggregate returns a NULL row (pred) vs no rows (gold), both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 153,
+  "pair_id": "chess:272",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Question asks for two molecule ids; pred lacks DISTINCT and returns TR377 twice, gold returns the two distinct molecules.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 154,
+  "pair_id": "alpha:321",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Atoms TR000_2 and TR000_4 are in different molecules and no connected row links them, an inconsistent record set; real data places them in one molecule via connected.",
+  "implausible_fact": "atoms of one bond in different molecules / no connected row"
+ },
+ {
+  "idx": 155,
+  "pair_id": "chess:753",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because colour table has a second row named No Colour with a different id; in reality No Colour is the single id 1.",
+  "implausible_fact": "duplicate colour name No Colour with two ids"
+ },
+ {
+  "idx": 156,
+  "pair_id": "slm:324",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold and pred agree when connected is symmetric and every bond is connected (as in real data); witness has asymmetric/missing connected rows.",
+  "implausible_fact": "connected rows not symmetric per bond"
+ },
+ {
+  "idx": 157,
+  "pair_id": "rsl:1513",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "First customer of the day is earliest time (ASC); gold uses DESC and returns the last one.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 158,
+  "pair_id": "csc-32b:475",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "How many cards: with no matching cards the correct answer is 0 (COUNT), gold SUM returns NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 159,
+  "pair_id": "csc-32b:426",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines not on MTGO as NULL or empty string; gold ignores the empty-string case that pred handles (empty string does not occur in real data, though).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 160,
+  "pair_id": "rsl:1485",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Customer 5 has no April 2013 row (plausible); gold treats missing as 0 giving 1.58, pred yields NULL; both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 161,
+  "pair_id": "csc-32b:107",
+  "verdict": "both_wrong",
+  "confidence": "low",
+  "reason": "Pred joins client_id=account_id (bug) while gold uses the client district rather than the account branch; neither follows the account-district reading.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 162,
+  "pair_id": "rsl:1183",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Original diagnosis is Patient.Diagnosis; gold adds a requirement that an examination exists on First Date, which the question does not ask.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 163,
+  "pair_id": "rsl:669",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "User chl has no votes with UserId in witness: MIN yields NULL row vs gold empty result, both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 164,
+  "pair_id": "rsl:66",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold COUNT(School) skips the row only because School is NULL; directly funded schools always have a name in the real data.",
+  "implausible_fact": "School name NULL for a school row"
+ },
+ {
+  "idx": 165,
+  "pair_id": "csc-32b:938",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Row has winner-format time and positionOrder 1 but position 19, an inconsistent record; gold follows the time-format evidence, pred position=1.",
+  "implausible_fact": "position 19 with winning time/positionOrder 1"
+ },
+ {
+  "idx": 166,
+  "pair_id": "chess:112",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Question asks the district where the account was opened; gold uses the client district instead of account district via disp.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 167,
+  "pair_id": "rsl:990",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Result time values are dates (not time format) and races/results are nonsensical, so the time-pattern gold returns nothing while position=1 returns rows.",
+  "implausible_fact": "time column holds dates, not race times"
+ },
+ {
+  "idx": 168,
+  "pair_id": "chess:147",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Accounts in the region can mean the account district (pred) or the client district (gold); the two differ in real data and both are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 169,
+  "pair_id": "rsl:268",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold sees only atom_id side of connected; matches pred when connected is stored symmetrically as in real data; witness has only one direction.",
+  "implausible_fact": "connected row without reverse row"
+ },
+ {
+  "idx": 170,
+  "pair_id": "rsl:212",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence says MIN(COUNT(element)); pred orders by element count, gold counts distinct molecules leading to a tie and wrong element.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 171,
+  "pair_id": "csc-32b:744",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "No hero belongs to either publisher so the difference is 0; gold SUM over an empty join gives NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 172,
+  "pair_id": "rsl:506",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred counts a set twice only because it has two Japanese translations; set/language is unique in real data.",
+  "implausible_fact": "duplicate Japanese translation for one set"
+ },
+ {
+  "idx": 173,
+  "pair_id": "csc-7b:1067",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Team_Attributes row has team_api_id and team_fifa_api_id belonging to different teams, an inconsistent record that makes the two join keys differ.",
+  "implausible_fact": "attribute row ids point to different teams"
+ },
+ {
+  "idx": 174,
+  "pair_id": "csc-7b:1202",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "Diagnosis can be read from Examination (gold) or Patient (pred); the two coincide in real data, and both count rows.",
+  "implausible_fact": null
+ }
+]

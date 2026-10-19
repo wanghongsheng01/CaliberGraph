@@ -1,0 +1,5 @@
+2026-10-15T03:12:00+08:00 START python3 run_method.py --method fuzz_cert --split test --subset exc --dedup --ids /home/claude/work/results/test/posthoc/fuzzcert_ids_exc.json --budget 5 --procs 2 --out /home/claude/work/results/test/posthoc/fuzz_cert_rerun_exc.jsonl
+2026-10-15T03:13:06+08:00 END python3 run_method.py --method
+2026-10-15T03:13:06+08:00 START python3 run_method.py --method fuzz_cert --split test --subset exi --dedup --ids /home/claude/work/results/test/posthoc/fuzzcert_ids_exi.json --budget 5 --procs 2 --out /home/claude/work/results/test/posthoc/fuzz_cert_rerun_exi.jsonl
+2026-10-15T03:15:33+08:00 END python3 run_method.py --method
+2026-10-15T03:15:33+08:00 ALL_DONE

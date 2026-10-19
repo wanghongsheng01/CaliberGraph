@@ -1,0 +1,362 @@
+[
+ {
+  "no": 1,
+  "pair_id": "csc-32b:637",
+  "source": "CaliberGraph@L1f",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 2,
+  "pair_id": "omni-32-majority:789",
+  "source": "Fuzz@L1f",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 3,
+  "pair_id": "gena_submission_2:685",
+  "source": "Fuzz-R@R",
+  "ai": "pred_wrong"
+ },
+ {
+  "no": 4,
+  "pair_id": "csc-7b:554",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 5,
+  "pair_id": "rsl:795",
+  "source": "SpotIt+@L0",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 6,
+  "pair_id": "alpha:630",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 7,
+  "pair_id": "rsl:307",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 8,
+  "pair_id": "alpha:1194",
+  "source": "CaliberGraph-R@R",
+  "ai": "pred_wrong"
+ },
+ {
+  "no": 9,
+  "pair_id": "slm:1309",
+  "source": "ParSEval-L1@L1f",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 10,
+  "pair_id": "omni-32-majority:112",
+  "source": "SpotIt+@L0",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 11,
+  "pair_id": "rsl:662",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 12,
+  "pair_id": "gsr:6",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 13,
+  "pair_id": "alpha:115",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 14,
+  "pair_id": "alpha:138",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 15,
+  "pair_id": "omni-32-majority:541",
+  "source": "SpotIt+@L0",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 16,
+  "pair_id": "rsl:282",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 17,
+  "pair_id": "omni-32-majority:698",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 18,
+  "pair_id": "gena_submission_1:864",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 19,
+  "pair_id": "rsl:634",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 20,
+  "pair_id": "alpha:1101",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 21,
+  "pair_id": "gena_submission_1:101",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 22,
+  "pair_id": "slm:426",
+  "source": "SpotIt+@L0",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 23,
+  "pair_id": "omni-32-majority:1309",
+  "source": "SpotIt+@L0",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 24,
+  "pair_id": "rsl:212",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 25,
+  "pair_id": "chess:272",
+  "source": "CaliberGraph-R@R",
+  "ai": "pred_wrong"
+ },
+ {
+  "no": 26,
+  "pair_id": "chess:786",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 27,
+  "pair_id": "rsl:173",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 28,
+  "pair_id": "rsl:1492",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 29,
+  "pair_id": "alpha:657",
+  "source": "ParSEval-L1@L1f",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 30,
+  "pair_id": "alpha:815",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 31,
+  "pair_id": "csc-32b:426",
+  "source": "SpotIt+@L0",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 32,
+  "pair_id": "omni-32-majority:744",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 33,
+  "pair_id": "csc-7b:74",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 34,
+  "pair_id": "rsl:931",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 35,
+  "pair_id": "csc-32b:242",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 36,
+  "pair_id": "rsl:1255",
+  "source": "SpotIt+@L0",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 37,
+  "pair_id": "csc-32b:1367",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 38,
+  "pair_id": "rsl:1513",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 39,
+  "pair_id": "slm:695",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 40,
+  "pair_id": "gena_submission_2:459",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 41,
+  "pair_id": "alpha:1331",
+  "source": "ParSEval-L1@L1f",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 42,
+  "pair_id": "chess:1055",
+  "source": "SpotIt+@L0",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 43,
+  "pair_id": "gsr:1142",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 44,
+  "pair_id": "gena_submission_2:1196",
+  "source": "SpotIt+@L0",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 45,
+  "pair_id": "gsr:1319",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 46,
+  "pair_id": "csc-32b:906",
+  "source": "Fuzz-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 47,
+  "pair_id": "slm:1434",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 48,
+  "pair_id": "gsr:91",
+  "source": "SpotIt+@L0",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 49,
+  "pair_id": "gena_submission_1:1039",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 50,
+  "pair_id": "csc-7b:927",
+  "source": "Fuzz-R@R",
+  "ai": "pred_wrong"
+ },
+ {
+  "no": 51,
+  "pair_id": "omni-32-majority:1255",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 52,
+  "pair_id": "gsr:936",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 53,
+  "pair_id": "alpha:556",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 54,
+  "pair_id": "omni-32-majority:303",
+  "source": "SpotIt@L0",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 55,
+  "pair_id": "gsr:475",
+  "source": "SpotIt@L0",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 56,
+  "pair_id": "csc-32b:73",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 57,
+  "pair_id": "csc-32b:669",
+  "source": "Fuzz@L1f",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 58,
+  "pair_id": "csc-32b:931",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 59,
+  "pair_id": "rsl:876",
+  "source": "SpotIt@L0",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 60,
+  "pair_id": "slm:1196",
+  "source": "Fuzz-R@R",
+  "ai": "implausible_data"
+ }
+]

@@ -1,0 +1,9061 @@
+[
+ {
+  "pair_id": "md_ta_gpt-4-o_cot:959",
+  "db_id": "formula_1",
+  "question": "What is the fastest lap number of the champion in 2009?",
+  "evidence": "in 2009 refers to year = 2009; Only the time of the champion shows in the format of \"hour: minutes: seconds.millionsecond\"",
+  "gold": "SELECT T1.fastestLap FROM results AS T1 INNER JOIN races AS T2 on T1.raceId = T2.raceId WHERE T2.year = 2009 AND T1.time LIKE '_:%:__.___'",
+  "pred": "select results.fastestLap \nfrom results \ninner join races on results.raceId = races.raceId \nwhere races.year = 2009 and results.position = 1",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      1022,
+      "estoril",
+      "Autódromo do Estoril",
+      "Estoril",
+      "Portugal",
+      38.7506,
+      -9.39417,
+      null,
+      "http://en.wikipedia.org/wiki/Aut%C3%B3dromo_do_Estoril"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      1023,
+      "cooper-castellotti",
+      "Cooper-Castellotti",
+      "British",
+      "http://en.wikipedia.org/wiki/Cooper_Car_Company"
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      1024,
+      "villota",
+      null,
+      null,
+      "Emilio",
+      "de Villota",
+      "1946-07-26",
+      "Spanish",
+      "http://en.wikipedia.org/wiki/Emilio_de_Villota"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      1025,
+      2009,
+      15,
+      1022,
+      "Luxembourg Grand Prix",
+      "2009-09-28",
+      null,
+      "http://en.wikipedia.org/wiki/1997_Luxembourg_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      1026,
+      1025,
+      1024,
+      1023,
+      24,
+      3,
+      4,
+      "4",
+      1,
+      9.0,
+      108,
+      "1:34:50.616",
+      7052790,
+      null,
+      null,
+      null,
+      null,
+      1
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      2009,
+      "http://en.wikipedia.org/wiki/2009_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      1,
+      "Finished"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 0
+ },
+ {
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:397",
+  "db_id": "card_games",
+  "question": "What is the mana cost of cards with a normal layout, a 2003 frame version, with a black border color, and available in paper and mtgo?",
+  "evidence": "available in paper and mtgo refers to availability = 'mtgo,paper'; frameVersion = 2003;borderColor = 'black'",
+  "gold": "SELECT manaCost FROM cards WHERE availability = 'mtgo,paper' AND borderColor = 'black' AND frameVersion = 2003 AND layout = 'normal'",
+  "pred": "SELECT manaCost\nFROM cards\nWHERE layout = 'normal'\nAND frameVersion = 2003\nAND borderColor = 'black'\nAND availability LIKE '%mtgo,paper%';",
+  "witness": {
+   "cards": {
+    "columns": [
+     "id",
+     "artist",
+     "asciiName",
+     "availability",
+     "borderColor",
+     "cardKingdomFoilId",
+     "cardKingdomId",
+     "colorIdentity",
+     "colorIndicator",
+     "colors",
+     "convertedManaCost",
+     "duelDeck",
+     "edhrecRank",
+     "faceConvertedManaCost",
+     "faceName",
+     "flavorName",
+     "flavorText",
+     "frameEffects",
+     "frameVersion",
+     "hand",
+     "hasAlternativeDeckLimit",
+     "hasContentWarning",
+     "hasFoil",
+     "hasNonFoil",
+     "isAlternative",
+     "isFullArt",
+     "isOnlineOnly",
+     "isOversized",
+     "isPromo",
+     "isReprint",
+     "isReserved",
+     "isStarter",
+     "isStorySpotlight",
+     "isTextless",
+     "isTimeshifted",
+     "keywords",
+     "layout",
+     "leadershipSkills",
+     "life",
+     "loyalty",
+     "manaCost",
+     "mcmId",
+     "mcmMetaId",
+     "mtgArenaId",
+     "mtgjsonV4Id",
+     "mtgoFoilId",
+     "mtgoId",
+     "multiverseId",
+     "name",
+     "number",
+     "originalReleaseDate",
+     "originalText",
+     "originalType",
+     "otherFaceIds",
+     "power",
+     "printings",
+     "promoTypes",
+     "purchaseUrls",
+     "rarity",
+     "scryfallId",
+     "scryfallIllustrationId",
+     "scryfallOracleId",
+     "setCode",
+     "side",
+     "subtypes",
+     "supertypes",
+     "tcgplayerProductId",
+     "text",
+     "toughness",
+     "type",
+     "types",
+     "uuid",
+     "variations",
+     "watermark"
+    ],
+    "rows": [
+     [
+      1005,
+      "Livia Prima",
+      null,
+      "arena,mtgo,paper",
+      "black",
+      null,
+      "232363",
+      "R",
+      null,
+      "R",
+      4.0,
+      null,
+      5321,
+      null,
+      null,
+      null,
+      "She cares little for leaders or loyalties, so long as the battle rages on.",
+      null,
+      "2003",
+      null,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      null,
+      "normal",
+      null,
+      null,
+      null,
+      "{U}",
+      "453133",
+      null,
+      null,
+      "d4c9f3e9-9660-596a-ac19-2e119846dc03",
+      null,
+      "80685",
+      "484899",
+      "Frontier Warmonger",
+      "52",
+      null,
+      "Whenever one or more creatures attack one of your opponents or a planeswalker they control, those creatures gain menace until end of turn.",
+      "Creature — Human Warrior",
+      null,
+      "4",
+      "C20",
+      null,
+      "{'cardKingdom': 'https://mtgjson.com/links/f264ae9a60ce98a4', 'tcgplayer': 'https://mtgjson.com/links/f8aafd8d282947ac'}",
+      "rare",
+      "233e1a27-c8d6-46de-a128-89791e7f2e9b",
+      "5a591b40-ece7-4ca6-bf74-6ab3a27f092d",
+      "9cb741ae-14d6-4a8d-bfad-703abfe3682c",
+      "C20",
+      null,
+      "Human,Warrior",
+      null,
+      "212225",
+      "Whenever one or more creatures attack one of your opponents or a planeswalker they control, those creatures gain menace until end of turn.",
+      "4",
+      "Creature — Human Warrior",
+      "Creature",
+      "c28a8cae-093f-5a5a-b59d-cedc0bbf42c0",
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "{U}"
+   ]
+  ],
+  "idx": 1
+ },
+ {
+  "pair_id": "md_kg_gpt-4:1057",
+  "db_id": "european_football_2",
+  "question": "Calculate the average home team goal in the 2010/2011 season in the country of Poland.",
+  "evidence": "average home team goal = AVG(home_team_goal)= SUM(home_team_goal) / COUNT(DISTINCT Match.id) WHERE name = 'Poland' and season = '2010/2011';",
+  "gold": "SELECT CAST(SUM(t2.home_team_goal) AS REAL) / COUNT(t2.id) FROM Country AS t1 INNER JOIN Match AS t2 ON t1.id = t2.country_id WHERE t1.name = 'Poland' AND t2.season = '2010/2011'",
+  "pred": "SELECT AVG(home_team_goal) AS average_home_team_goal\nFROM Match\nJOIN League ON Match.league_id = League.id\nJOIN Country ON League.country_id = Country.id\nWHERE Country.name = 'Poland' AND Match.season = '2010/2011'",
+  "witness": {
+   "Country": {
+    "columns": [
+     "id",
+     "name"
+    ],
+    "rows": [
+     [
+      13274,
+      "Netherlands"
+     ],
+     [
+      15722,
+      "Poland"
+     ]
+    ]
+   },
+   "League": {
+    "columns": [
+     "id",
+     "country_id",
+     "name"
+    ],
+    "rows": [
+     [
+      1654,
+      13274,
+      "Netherlands Eredivisie"
+     ],
+     [
+      1653,
+      15722,
+      "Poland Ekstraklasa"
+     ]
+    ]
+   },
+   "Match": {
+    "columns": [
+     "id",
+     "country_id",
+     "league_id",
+     "season",
+     "stage",
+     "date",
+     "match_api_id",
+     "home_team_api_id",
+     "away_team_api_id",
+     "home_team_goal",
+     "away_team_goal",
+     "home_player_X1",
+     "home_player_X2",
+     "home_player_X3",
+     "home_player_X4",
+     "home_player_X5",
+     "home_player_X6",
+     "home_player_X7",
+     "home_player_X8",
+     "home_player_X9",
+     "home_player_X10",
+     "home_player_X11",
+     "away_player_X1",
+     "away_player_X2",
+     "away_player_X3",
+     "away_player_X4",
+     "away_player_X5",
+     "away_player_X6",
+     "away_player_X7",
+     "away_player_X8",
+     "away_player_X9",
+     "away_player_X10",
+     "away_player_X11",
+     "home_player_Y1",
+     "home_player_Y2",
+     "home_player_Y3",
+     "home_player_Y4",
+     "home_player_Y5",
+     "home_player_Y6",
+     "home_player_Y7",
+     "home_player_Y8",
+     "home_player_Y9",
+     "home_player_Y10",
+     "home_player_Y11",
+     "away_player_Y1",
+     "away_player_Y2",
+     "away_player_Y3",
+     "away_player_Y4",
+     "away_player_Y5",
+     "away_player_Y6",
+     "away_player_Y7",
+     "away_player_Y8",
+     "away_player_Y9",
+     "away_player_Y10",
+     "away_player_Y11",
+     "home_player_1",
+     "home_player_2",
+     "home_player_3",
+     "home_player_4",
+     "home_player_5",
+     "home_player_6",
+     "home_player_7",
+     "home_player_8",
+     "home_player_9",
+     "home_player_10",
+     "home_player_11",
+     "away_player_1",
+     "away_player_2",
+     "away_player_3",
+     "away_player_4",
+     "away_player_5",
+     "away_player_6",
+     "away_player_7",
+     "away_player_8",
+     "away_player_9",
+     "away_player_10",
+     "away_player_11",
+     "goal",
+     "shoton",
+     "shotoff",
+     "foulcommit",
+     "card",
+     "cross",
+     "corner",
+     "possession",
+     "B365H",
+     "B365D",
+     "B365A",
+     "BWH",
+     "BWD",
+     "BWA",
+     "IWH",
+     "IWD",
+     "IWA",
+     "LBH",
+     "LBD",
+     "LBA",
+     "PSH",
+     "PSD",
+     "PSA",
+     "WHH",
+     "WHD",
+     "WHA",
+     "SJH",
+     "SJD",
+     "SJA",
+     "VCH",
+     "VCD",
+     "VCA",
+     "GBH",
+     "GBD",
+     "GBA",
+     "BSH",
+     "BSD",
+     "BSA"
+    ],
+    "rows": [
+     [
+      14101,
+      13274,
+      13274,
+      "2010/2011",
+      30,
+      "2011-04-10 00:00:00",
+      836666,
+      9908,
+      10235,
+      0,
+      4,
+      1,
+      2,
+      4,
+      6,
+      8,
+      5,
+      2,
+      4,
+      6,
+      8,
+      5,
+      1,
+      2,
+      4,
+      6,
+      8,
+      3,
+      5,
+      7,
+      3,
+      5,
+      7,
+      1,
+      3,
+      3,
+      5,
+      3,
+      5,
+      7,
+      7,
+      7,
+      7,
+      11,
+      1,
+      3,
+      3,
+      3,
+      3,
+      7,
+      7,
+      7,
+      10,
+      10,
+      10,
+      37193,
+      103684,
+      26503,
+      26671,
+      40863,
+      26781,
+      17855,
+      67958,
+      114558,
+      46104,
+      45830,
+      112107,
+      159854,
+      188555,
+      30602,
+      212511,
+      45466,
+      108038,
+      109638,
+      36391,
+      189237,
+      245422,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.8,
+      3.5,
+      4.5,
+      1.85,
+      3.5,
+      3.6,
+      1.9,
+      3.3,
+      3.4,
+      1.73,
+      3.4,
+      4.0,
+      null,
+      null,
+      null,
+      1.73,
+      3.6,
+      4.2,
+      1.8,
+      3.6,
+      4.2,
+      1.8,
+      3.6,
+      4.4,
+      1.85,
+      3.4,
+      3.75,
+      1.8,
+      3.5,
+      4.2
+     ],
+     [
+      14029,
+      13274,
+      13274,
+      "2010/2011",
+      23,
+      "2011-02-13 00:00:00",
+      836603,
+      8464,
+      10218,
+      2,
+      0,
+      1,
+      2,
+      4,
+      6,
+      8,
+      1,
+      3,
+      5,
+      7,
+      9,
+      5,
+      1,
+      2,
+      4,
+      6,
+      8,
+      3,
+      5,
+      7,
+      3,
+      5,
+      7,
+      1,
+      3,
+      3,
+      3,
+      3,
+      7,
+      7,
+      7,
+      7,
+      7,
+      11,
+      1,
+      3,
+      3,
+      3,
+      3,
+      7,
+      7,
+      7,
+      10,
+      10,
+      10,
+      212512,
+      209418,
+      178758,
+      31296,
+      184522,
+      27168,
+      31294,
+      38798,
+      39213,
+      33657,
+      109653,
+      33682,
+      209381,
+      150211,
+      209380,
+      185554,
+      38103,
+      110110,
+      209384,
+      102290,
+      179184,
+      180236,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.44,
+      4.33,
+      7.0,
+      1.44,
+      4.4,
+      5.75,
+      1.45,
+      3.8,
+      5.4,
+      1.44,
+      3.75,
+      6.0,
+      null,
+      null,
+      null,
+      1.4,
+      4.33,
+      6.5,
+      1.5,
+      4.0,
+      6.5,
+      1.4,
+      4.5,
+      7.5,
+      1.45,
+      4.0,
+      6.5,
+      1.44,
+      4.33,
+      7.0
+     ],
+     [
+      16202,
+      15722,
+      15722,
+      "2010/2011",
+      1,
+      "2010-08-08 00:00:00",
+      838389,
+      8025,
+      1957,
+      0,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      75579,
+      13437,
+      23930,
+      15608,
+      null,
+      null,
+      40159,
+      30975,
+      179310,
+      null,
+      null,
+      114822,
+      50657,
+      null,
+      null,
+      null,
+      206829,
+      79241,
+      69242,
+      34225,
+      null,
+      69541,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      16203,
+      15722,
+      15722,
+      "2010/2011",
+      1,
+      "2010-08-06 00:00:00",
+      838390,
+      8569,
+      8031,
+      2,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      47246,
+      92223,
+      null,
+      95533,
+      null,
+      null,
+      null,
+      null,
+      13329,
+      null,
+      116872,
+      null,
+      13490,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    ]
+   },
+   "Team": {
+    "columns": [
+     "id",
+     "team_api_id",
+     "team_fifa_api_id",
+     "team_long_name",
+     "team_short_name"
+    ],
+    "rows": [
+     [
+      26555,
+      9908,
+      1903,
+      "FC Utrecht",
+      "UTR"
+     ],
+     [
+      26553,
+      8464,
+      1910,
+      "N.E.C.",
+      "NEC"
+     ],
+     [
+      31449,
+      8025,
+      111092,
+      "Śląsk Wrocław",
+      "SLA"
+     ],
+     [
+      31454,
+      8569,
+      110744,
+      "GKS Bełchatów",
+      "BEL"
+     ]
+    ]
+   },
+   "Team_Attributes": {
+    "columns": [
+     "id",
+     "team_fifa_api_id",
+     "team_api_id",
+     "date",
+     "buildUpPlaySpeed",
+     "buildUpPlaySpeedClass",
+     "buildUpPlayDribbling",
+     "buildUpPlayDribblingClass",
+     "buildUpPlayPassing",
+     "buildUpPlayPassingClass",
+     "buildUpPlayPositioningClass",
+     "chanceCreationPassing",
+     "chanceCreationPassingClass",
+     "chanceCreationCrossing",
+     "chanceCreationCrossingClass",
+     "chanceCreationShooting",
+     "chanceCreationShootingClass",
+     "chanceCreationPositioningClass",
+     "defencePressure",
+     "defencePressureClass",
+     "defenceAggression",
+     "defenceAggressionClass",
+     "defenceTeamWidth",
+     "defenceTeamWidthClass",
+     "defenceDefenderLineClass"
+    ],
+    "rows": [
+     [
+      440,
+      1903,
+      9908,
+      "2011-02-22 00:00:00",
+      66,
+      "Balanced",
+      null,
+      "Little",
+      45,
+      "Mixed",
+      "Organised",
+      41,
+      "Normal",
+      69,
+      "Lots",
+      72,
+      "Lots",
+      "Organised",
+      34,
+      "Medium",
+      57,
+      "Press",
+      34,
+      "Normal",
+      "Offside Trap"
+     ],
+     [
+      888,
+      1910,
+      8464,
+      "2010-02-22 00:00:00",
+      32,
+      "Slow",
+      null,
+      "Little",
+      30,
+      "Short",
+      "Organised",
+      35,
+      "Normal",
+      40,
+      "Normal",
+      60,
+      "Normal",
+      "Organised",
+      30,
+      "Deep",
+      30,
+      "Contain",
+      30,
+      "Narrow",
+      "Cover"
+     ],
+     [
+      1170,
+      111092,
+      8025,
+      "2011-02-22 00:00:00",
+      47,
+      "Balanced",
+      null,
+      "Little",
+      55,
+      "Mixed",
+      "Organised",
+      45,
+      "Normal",
+      48,
+      "Normal",
+      54,
+      "Normal",
+      "Organised",
+      48,
+      "Medium",
+      47,
+      "Press",
+      51,
+      "Normal",
+      "Cover"
+     ],
+     [
+      516,
+      110744,
+      8569,
+      "2011-02-22 00:00:00",
+      47,
+      "Balanced",
+      null,
+      "Little",
+      27,
+      "Short",
+      "Organised",
+      45,
+      "Normal",
+      51,
+      "Normal",
+      54,
+      "Normal",
+      "Organised",
+      48,
+      "Medium",
+      60,
+      "Press",
+      37,
+      "Normal",
+      "Cover"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    1.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "idx": 2
+ },
+ {
+  "pair_id": "md_kg_gpt-35-turbo:894",
+  "db_id": "formula_1",
+  "question": "What is the best lap time recorded? List the driver and race with such recorded lap time.",
+  "evidence": "the best lap time refers to min(milliseconds); List the driver refers to drivers.forename and drivers.surname; List the race refers to races.name",
+  "gold": "SELECT T2.milliseconds, T1.forename, T1.surname, T3.name FROM drivers AS T1 INNER JOIN lapTimes AS T2 ON T1.driverId = T2.driverId INNER JOIN races AS T3 ON T2.raceId = T3.raceId ORDER BY T2.milliseconds ASC LIMIT 1",
+  "pred": "SELECT MIN(milliseconds) AS best_lap_time, drivers.forename, drivers.surname, races.name AS race\nFROM lapTimes\nJOIN drivers ON lapTimes.driverId = drivers.driverId\nJOIN races ON lapTimes.raceId = races.raceId\nGROUP BY lapTimes.raceId\nORDER BY best_lap_time\nLIMIT 1",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      1298,
+      "riverside",
+      "Riverside International Raceway",
+      "California",
+      "USA",
+      33.937,
+      -117.273,
+      null,
+      "http://en.wikipedia.org/wiki/Riverside_International_Raceway"
+     ],
+     [
+      1205,
+      "buddh",
+      "Buddh International Circuit",
+      "Uttar Pradesh",
+      "India",
+      28.3487,
+      77.5331,
+      null,
+      "http://en.wikipedia.org/wiki/Buddh_International_Circuit"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      204,
+      "brabham-alfa_romeo",
+      "Brabham-Alfa Romeo",
+      "British",
+      "http://en.wikipedia.org/wiki/Leyton_House"
+     ],
+     [
+      32,
+      "team_lotus",
+      "Team Lotus",
+      "Australian",
+      "http://en.wikipedia.org/wiki/McGuire_(Formula_One)"
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      1300,
+      "rossi",
+      53,
+      "RSS",
+      "John",
+      "Taylor",
+      "1991-09-25",
+      "American",
+      "http://en.wikipedia.org/wiki/Alexander_Rossi_%28racing_driver%29"
+     ],
+     [
+      1207,
+      "lucas",
+      null,
+      null,
+      "Jackie",
+      "Hill",
+      "1917-04-25",
+      "French",
+      "http://en.wikipedia.org/wiki/Jean_Lucas"
+     ]
+    ]
+   },
+   "lapTimes": {
+    "columns": [
+     "raceId",
+     "driverId",
+     "lap",
+     "position",
+     "time",
+     "milliseconds"
+    ],
+    "rows": [
+     [
+      1301,
+      1300,
+      1302,
+      14,
+      "1:37.905",
+      85096
+     ],
+     [
+      1208,
+      1207,
+      1209,
+      14,
+      "1:26.071",
+      85096
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      1301,
+      2010,
+      15,
+      1298,
+      "British Grand Prix",
+      "2010-09-28",
+      null,
+      "http://en.wikipedia.org/wiki/1997_Luxembourg_Grand_Prix"
+     ],
+     [
+      1208,
+      1950,
+      6,
+      1205,
+      "Spanish Grand Prix",
+      "1950-06-03",
+      null,
+      "http://en.wikipedia.org/wiki/1973_Monaco_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      1306,
+      1301,
+      1300,
+      204,
+      6,
+      18,
+      null,
+      "R",
+      7,
+      0.0,
+      68,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      7
+     ],
+     [
+      1307,
+      1301,
+      1207,
+      32,
+      12,
+      3,
+      4,
+      "4",
+      4,
+      3.0,
+      79,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      11
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      2010,
+      "http://en.wikipedia.org/wiki/2010_Formula_One_season"
+     ],
+     [
+      1950,
+      "http://en.wikipedia.org/wiki/1950_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      7,
+      "Transmission"
+     ],
+     [
+      11,
+      "+1 Lap"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    85096,
+    "John",
+    "Taylor",
+    "British Grand Prix"
+   ]
+  ],
+  "pred_rows": [
+   [
+    85096,
+    "Jackie",
+    "Hill",
+    "Spanish Grand Prix"
+   ]
+  ],
+  "idx": 3
+ },
+ {
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:1252",
+  "db_id": "thrombosis_prediction",
+  "question": "Among the patients with a normal Ig G level, how many of them have symptoms?",
+  "evidence": "normal Ig G level refers to IGG > 900 and IGG < 2000; have symptoms refers to Symptoms IS NOT NULL;",
+  "gold": "SELECT COUNT(T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID INNER JOIN Examination AS T3 ON T3.ID = T2.ID WHERE T2.IGG BETWEEN 900 AND 2000 AND T3.Symptoms IS NOT NULL",
+  "pred": "SELECT COUNT(*)\nFROM Examination\nJOIN Patient ON Examination.ID = Patient.ID\nJOIN Laboratory ON Patient.ID = Laboratory.ID\nWHERE Laboratory.IGG > 900 AND Laboratory.IGG < 2000 AND Examination.Symptoms IS NOT NULL;",
+  "witness": {
+   "Examination": {
+    "columns": [
+     "ID",
+     "Examination Date",
+     "aCL IgG",
+     "aCL IgM",
+     "ANA",
+     "ANA Pattern",
+     "aCL IgA",
+     "Diagnosis",
+     "KCT",
+     "RVVT",
+     "LAC",
+     "Symptoms",
+     "Thrombosis"
+    ],
+    "rows": [
+     [
+      1071,
+      "1996-04-16",
+      4.7,
+      4.2,
+      256,
+      "P,S",
+      9,
+      "SLE, APS",
+      null,
+      null,
+      "+",
+      "CNS lupus",
+      2
+     ]
+    ]
+   },
+   "Laboratory": {
+    "columns": [
+     "ID",
+     "Date",
+     "GOT",
+     "GPT",
+     "LDH",
+     "ALP",
+     "TP",
+     "ALB",
+     "UA",
+     "UN",
+     "CRE",
+     "T-BIL",
+     "T-CHO",
+     "TG",
+     "CPK",
+     "GLU",
+     "WBC",
+     "RBC",
+     "HGB",
+     "HCT",
+     "PLT",
+     "PT",
+     "APTT",
+     "FG",
+     "PIC",
+     "TAT",
+     "TAT2",
+     "U-PRO",
+     "IGG",
+     "IGA",
+     "IGM",
+     "CRP",
+     "RA",
+     "RF",
+     "C3",
+     "C4",
+     "RNP",
+     "SM",
+     "SC170",
+     "SSA",
+     "SSB",
+     "CENTROMEA",
+     "DNA",
+     "DNA-II"
+    ],
+    "rows": [
+     [
+      1071,
+      "1995-01-23",
+      null,
+      null,
+      null,
+      null,
+      null,
+      3.3,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      900,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    ]
+   },
+   "Patient": {
+    "columns": [
+     "ID",
+     "SEX",
+     "Birthday",
+     "Description",
+     "First Date",
+     "Admission",
+     "Diagnosis"
+    ],
+    "rows": [
+     [
+      1071,
+      "M",
+      "1927-09-23",
+      "1994-02-14",
+      "1993-06-07",
+      "-",
+      "MRA"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "idx": 4
+ },
+ {
+  "pair_id": "md_kg_gpt-35-turbo-instruct:990",
+  "db_id": "formula_1",
+  "question": "What is the constructor reference name of the champion in the 2009 Singapore Grand Prix? Please give its website.",
+  "evidence": "the time of the champion shows in the format of \"minutes: seconds.millionsecond\" in which Max(time); constructor reference name refers to constructorRef; website refers to url",
+  "gold": "SELECT T3.constructorRef, T3.url FROM results AS T1 INNER JOIN races AS T2 on T1.raceId = T2.raceId INNER JOIN constructors AS T3 on T1.constructorId = T3.constructorId WHERE T2.name = 'Singapore Grand Prix' AND T2.year = 2009 AND T1.time LIKE '_:%:__.___'",
+  "pred": "SELECT  constructorRef, url\nFROM constructors\nWHERE constructorId = (SELECT constructorId\n                       FROM results\n                       WHERE raceId = (SELECT raceId\n                                       FROM races\n                                       WHERE name = 'Singapore Grand Prix'\n                                         AND year = 2009)\n                         AND position = 1)",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      15,
+      "marina_bay",
+      "Marina Bay Street Circuit",
+      "Marina Bay",
+      "Singapore",
+      1.2914,
+      103.864,
+      null,
+      "http://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      1,
+      "mclaren",
+      "McLaren",
+      "British",
+      "http://en.wikipedia.org/wiki/McLaren"
+     ],
+     [
+      1001,
+      "bellasi",
+      "Bellasi",
+      "American",
+      "http://en.wikipedia.org/wiki/Matra"
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      1,
+      "hamilton",
+      44,
+      "HAM",
+      "Lewis",
+      "Hamilton",
+      "1985-01-07",
+      "British",
+      "http://en.wikipedia.org/wiki/Lewis_Hamilton"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      14,
+      2009,
+      14,
+      15,
+      "Singapore Grand Prix",
+      "2009-09-27",
+      "12:00:00",
+      "http://en.wikipedia.org/wiki/2009_Singapore_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      7814,
+      14,
+      1,
+      1,
+      1,
+      1,
+      1,
+      "1",
+      1,
+      10.0,
+      61,
+      "1:56:06.337",
+      6966337,
+      36,
+      2,
+      "1:48.345",
+      "168.561",
+      1
+     ],
+     [
+      1002,
+      14,
+      1,
+      1001,
+      1,
+      1,
+      1,
+      "1",
+      1,
+      10.0,
+      61,
+      "1:56:06.337",
+      6966337,
+      36,
+      2,
+      "1:48.345",
+      "168.561",
+      1
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      2009,
+      "http://en.wikipedia.org/wiki/2009_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      1,
+      "Finished"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "bellasi",
+    "http://en.wikipedia.org/wiki/Matra"
+   ],
+   [
+    "mclaren",
+    "http://en.wikipedia.org/wiki/McLaren"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "bellasi",
+    "http://en.wikipedia.org/wiki/Matra"
+   ]
+  ],
+  "idx": 5
+ },
+ {
+  "pair_id": "md_kg_gpt-4-turbo:1003",
+  "db_id": "formula_1",
+  "question": "How many accidents did the driver who had the highest number accidents in the Canadian Grand Prix have?",
+  "evidence": "number of accidents refers to the number where statusid = 3; Canadian Grand Prix refers to the race of name\n",
+  "gold": "SELECT COUNT(T1.driverId) FROM results AS T1 INNER JOIN races AS T2 on T1.raceId = T2.raceId INNER JOIN status AS T3 on T1.statusId = T3.statusId WHERE T3.statusId = 3 AND T2.name = 'Canadian Grand Prix' GROUP BY T1.driverId ORDER BY COUNT(T1.driverId) DESC LIMIT 1",
+  "pred": "SELECT MAX(accident_count) AS max_accidents\nFROM (\n    SELECT driverId, COUNT(*) AS accident_count\n    FROM results\n    WHERE raceId IN (\n        SELECT raceId\n        FROM races\n        WHERE name = 'Canadian Grand Prix'\n    )\n    AND statusId = 3\n    GROUP BY driverId\n)",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      8,
+      "magny_cours",
+      "Circuit de Nevers Magny-Cours",
+      "Magny Cours",
+      "France",
+      46.8642,
+      3.16361,
+      null,
+      "http://en.wikipedia.org/wiki/Circuit_de_Nevers_Magny-Cours"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      6,
+      "ferrari",
+      "Ferrari",
+      "Italian",
+      "http://en.wikipedia.org/wiki/Scuderia_Ferrari"
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      30,
+      "michael_schumacher",
+      null,
+      "MSC",
+      "Michael",
+      "Schumacher",
+      "1969-01-03",
+      "German",
+      "http://en.wikipedia.org/wiki/Michael_Schumacher"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      99,
+      2004,
+      10,
+      8,
+      "French Grand Prix",
+      "2004-07-04",
+      null,
+      "http://en.wikipedia.org/wiki/2004_French_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      1695,
+      99,
+      30,
+      6,
+      1,
+      2,
+      1,
+      "1",
+      1,
+      10.0,
+      70,
+      "1:30:18.133",
+      5418133,
+      32,
+      1,
+      "1:15.377",
+      "210.669",
+      1
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      2004,
+      "http://en.wikipedia.org/wiki/2004_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      1,
+      "Finished"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "idx": 6
+ },
+ {
+  "pair_id": "md_kg_gpt-35-turbo:786",
+  "db_id": "superhero",
+  "question": "How many heroes have the highest attribute value in strength?",
+  "evidence": "highest attribute value in strength refers to MAX(attribute_value) WHERE attribute_name = 'Strength';",
+  "gold": "SELECT COUNT(T1.hero_id) FROM hero_attribute AS T1 INNER JOIN attribute AS T2 ON T1.attribute_id = T2.id WHERE T2.attribute_name = 'Strength' AND T1.attribute_value = ( SELECT MAX(attribute_value) FROM hero_attribute )",
+  "pred": "SELECT COUNT(hero_id)\nFROM hero_attribute\nWHERE attribute_id = (SELECT id FROM attribute WHERE attribute_name = 'Strength')\nAND attribute_value = (SELECT MAX(attribute_value) FROM hero_attribute WHERE attribute_id = (SELECT id FROM attribute WHERE attribute_name = 'Strength'))",
+  "witness": {
+   "alignment": {
+    "columns": [
+     "id",
+     "alignment"
+    ],
+    "rows": [
+     [
+      2,
+      "Bad"
+     ],
+     [
+      1,
+      "Good"
+     ]
+    ]
+   },
+   "attribute": {
+    "columns": [
+     "id",
+     "attribute_name"
+    ],
+    "rows": [
+     [
+      2,
+      "Strength"
+     ],
+     [
+      1,
+      "Intelligence"
+     ]
+    ]
+   },
+   "colour": {
+    "columns": [
+     "id",
+     "colour"
+    ],
+    "rows": [
+     [
+      22,
+      "Purple"
+     ],
+     [
+      1,
+      "No Colour"
+     ],
+     [
+      9,
+      "Brown"
+     ]
+    ]
+   },
+   "gender": {
+    "columns": [
+     "id",
+     "gender"
+    ],
+    "rows": [
+     [
+      1,
+      "Male"
+     ]
+    ]
+   },
+   "hero_attribute": {
+    "columns": [
+     "hero_id",
+     "attribute_id",
+     "attribute_value"
+    ],
+    "rows": [
+     [
+      549,
+      2,
+      10
+     ],
+     [
+      467,
+      2,
+      70
+     ],
+     [
+      654,
+      1,
+      95
+     ]
+    ]
+   },
+   "publisher": {
+    "columns": [
+     "id",
+     "publisher_name"
+    ],
+    "rows": [
+     [
+      13,
+      "Marvel Comics"
+     ]
+    ]
+   },
+   "race": {
+    "columns": [
+     "id",
+     "race"
+    ],
+    "rows": [
+     [
+      24,
+      "Human"
+     ],
+     [
+      1,
+      "-"
+     ]
+    ]
+   },
+   "superhero": {
+    "columns": [
+     "id",
+     "superhero_name",
+     "full_name",
+     "gender_id",
+     "eye_colour_id",
+     "hair_colour_id",
+     "skin_colour_id",
+     "race_id",
+     "publisher_id",
+     "alignment_id",
+     "height_cm",
+     "weight_kg"
+    ],
+    "rows": [
+     [
+      549,
+      "Purple Man",
+      "Zebediah Killgrave",
+      1,
+      22,
+      22,
+      22,
+      24,
+      13,
+      2,
+      180,
+      74
+     ],
+     [
+      467,
+      "Mimic",
+      "Calvin Montgomery Rankin",
+      1,
+      9,
+      9,
+      1,
+      1,
+      13,
+      1,
+      188,
+      101
+     ],
+     [
+      654,
+      "Stardust",
+      "-",
+      1,
+      1,
+      1,
+      1,
+      1,
+      13,
+      1,
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "idx": 7
+ },
+ {
+  "pair_id": "md_ta_gpt-4-turbo_cot:100",
+  "db_id": "financial",
+  "question": "Among the account opened, how many female customers who were born before 1950 and stayed in Sokolov?",
+  "evidence": "Customers refer to clients; Female refers to gender = 'F'; Names of districts appear in column A2",
+  "gold": "SELECT COUNT(T2.client_id) FROM district AS T1 INNER JOIN client AS T2 ON T1.district_id = T2.district_id WHERE T2.gender = 'F' AND STRFTIME('%Y', T2.birth_date) < '1950' AND T1.A2 = 'Sokolov'",
+  "pred": "SELECT COUNT(DISTINCT client.client_id) \nFROM client \nINNER JOIN disp ON client.client_id = disp.client_id \nINNER JOIN account ON disp.account_id = account.account_id \nINNER JOIN district ON account.district_id = district.district_id \nWHERE client.gender = 'F' \nAND client.birth_date < '1950-01-01' \nAND district.A2 = 'Sokolov'",
+  "witness": {
+   "account": {
+    "columns": [
+     "account_id",
+     "district_id",
+     "frequency",
+     "date"
+    ],
+    "rows": [
+     [
+      1048,
+      1049,
+      "POPLATEK MESICNE",
+      "1997-12-17"
+     ],
+     [
+      1190,
+      1189,
+      "POPLATEK MESICNE",
+      "1997-12-17"
+     ]
+    ]
+   },
+   "client": {
+    "columns": [
+     "client_id",
+     "gender",
+     "birth_date",
+     "district_id"
+    ],
+    "rows": [
+     [
+      1050,
+      "F",
+      "1947-07-13",
+      1049
+     ],
+     [
+      1191,
+      "F",
+      "1947-07-13",
+      1189
+     ],
+     [
+      1193,
+      "F",
+      "1970-09-11",
+      1049
+     ]
+    ]
+   },
+   "disp": {
+    "columns": [
+     "disp_id",
+     "client_id",
+     "account_id",
+     "type"
+    ],
+    "rows": [
+     [
+      1051,
+      1050,
+      1048,
+      "DISPONENT"
+     ],
+     [
+      1192,
+      1191,
+      1048,
+      "OWNER"
+     ],
+     [
+      1194,
+      1193,
+      1190,
+      "DISPONENT"
+     ]
+    ]
+   },
+   "district": {
+    "columns": [
+     "district_id",
+     "A2",
+     "A3",
+     "A4",
+     "A5",
+     "A6",
+     "A7",
+     "A8",
+     "A9",
+     "A10",
+     "A11",
+     "A12",
+     "A13",
+     "A14",
+     "A15",
+     "A16"
+    ],
+    "rows": [
+     [
+      1049,
+      "Sokolov",
+      "north Moravia",
+      "94812",
+      "0",
+      "0",
+      "0",
+      1,
+      1,
+      100.0,
+      10673,
+      4.7,
+      5.44,
+      100,
+      18782,
+      18347
+     ],
+     [
+      1189,
+      "Benesov",
+      "north Moravia",
+      "88884",
+      "0",
+      "0",
+      "0",
+      1,
+      1,
+      100.0,
+      10673,
+      4.7,
+      5.44,
+      100,
+      18782,
+      18347
+     ]
+    ]
+   },
+   "trans": {
+    "columns": [
+     "trans_id",
+     "account_id",
+     "date",
+     "type",
+     "operation",
+     "amount",
+     "balance",
+     "k_symbol",
+     "bank",
+     "account"
+    ],
+    "rows": [
+     [
+      1188,
+      1048,
+      "1997-10-31",
+      "VYDAJ",
+      "VYBER",
+      15,
+      15599,
+      "SLUZBY",
+      null,
+      null
+     ],
+     [
+      1195,
+      1190,
+      "1998-12-31",
+      "PRIJEM",
+      null,
+      314,
+      63446,
+      "UROK",
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    2
+   ]
+  ],
+  "idx": 8
+ },
+ {
+  "pair_id": "md_ta_gpt-4-turbo_cot:1078",
+  "db_id": "european_football_2",
+  "question": "Which player is older, Aaron Lennon or Abdelaziz Barrada?",
+  "evidence": "The larger the birthday value, the younger the person is, and vice versa;",
+  "gold": "SELECT player_name FROM Player WHERE player_name IN ('Aaron Lennon', 'Abdelaziz Barrada') ORDER BY birthday ASC LIMIT 1",
+  "pred": "SELECT CASE WHEN p1.birthday < p2.birthday THEN 'Aaron Lennon' ELSE 'Abdelaziz Barrada' END AS older_player\nFROM Player p1, Player p2\nWHERE p1.player_name = 'Aaron Lennon' AND p2.player_name = 'Abdelaziz Barrada';",
+  "witness": {
+   "Player": {
+    "columns": [
+     "id",
+     "player_api_id",
+     "player_name",
+     "player_fifa_api_id",
+     "birthday",
+     "height",
+     "weight"
+    ],
+    "rows": [
+     [
+      8,
+      30895,
+      "Aaron Lennon",
+      152747,
+      "1987-04-16 00:00:00",
+      165.1,
+      139
+     ]
+    ]
+   },
+   "Player_Attributes": {
+    "columns": [
+     "id",
+     "player_fifa_api_id",
+     "player_api_id",
+     "date",
+     "overall_rating",
+     "potential",
+     "preferred_foot",
+     "attacking_work_rate",
+     "defensive_work_rate",
+     "crossing",
+     "finishing",
+     "heading_accuracy",
+     "short_passing",
+     "volleys",
+     "dribbling",
+     "curve",
+     "free_kick_accuracy",
+     "long_passing",
+     "ball_control",
+     "acceleration",
+     "sprint_speed",
+     "agility",
+     "reactions",
+     "balance",
+     "shot_power",
+     "jumping",
+     "stamina",
+     "strength",
+     "long_shots",
+     "aggression",
+     "interceptions",
+     "positioning",
+     "vision",
+     "penalties",
+     "marking",
+     "standing_tackle",
+     "sliding_tackle",
+     "gk_diving",
+     "gk_handling",
+     "gk_kicking",
+     "gk_positioning",
+     "gk_reflexes"
+    ],
+    "rows": [
+     [
+      148,
+      152747,
+      30895,
+      "2015-09-21 00:00:00",
+      77,
+      77,
+      "right",
+      "high",
+      "medium",
+      78,
+      66,
+      28,
+      76,
+      68,
+      84,
+      63,
+      55,
+      54,
+      81,
+      90,
+      89,
+      93,
+      74,
+      92,
+      62,
+      71,
+      75,
+      56,
+      57,
+      57,
+      37,
+      71,
+      73,
+      62,
+      30,
+      34,
+      35,
+      14,
+      7,
+      7,
+      16,
+      11
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Aaron Lennon"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 9
+ },
+ {
+  "pair_id": "md_kg_meta-llama-3-70b-instruct-2:994",
+  "db_id": "formula_1",
+  "question": "Which constructor scored most points from Monaco Grand Prix between 1980 and 2010? List the score, name and nationality of this team.",
+  "evidence": "Monaco Grand Priz refers to the race; race in year between 1980 and 2010",
+  "gold": "SELECT SUM(T1.points), T2.name, T2.nationality FROM constructorResults AS T1 INNER JOIN constructors AS T2 ON T1.constructorId = T2.constructorId INNER JOIN races AS T3 ON T3.raceid = T1.raceid WHERE T3.name = 'Monaco Grand Prix' AND T3.year BETWEEN 1980 AND 2010 GROUP BY T2.name ORDER BY SUM(T1.points) DESC LIMIT 1",
+  "pred": "SELECT SUM(cr.points) AS score, c.name, c.nationality\nFROM constructorResults cr\nJOIN constructors c ON cr.constructorId = c.constructorId\nJOIN races r ON cr.raceId = r.raceId\nWHERE r.name = 'Monaco Grand Prix' AND r.year BETWEEN 1980 AND 2010\nGROUP BY c.name, c.nationality\nORDER BY score DESC\nLIMIT 1;",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      6,
+      "monaco",
+      "Circuit de Monaco",
+      "Monte-Carlo",
+      "Monaco",
+      43.7347,
+      7.42056,
+      null,
+      "http://en.wikipedia.org/wiki/Circuit_de_Monaco"
+     ]
+    ]
+   },
+   "constructorResults": {
+    "columns": [
+     "constructorResultsId",
+     "raceId",
+     "constructorId",
+     "points",
+     "status"
+    ],
+    "rows": [
+     [
+      3879,
+      6,
+      10,
+      0.0,
+      null
+     ],
+     [
+      3880,
+      6,
+      7,
+      0.0,
+      null
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      10,
+      "force_india",
+      "Force India",
+      "Indian",
+      "http://en.wikipedia.org/wiki/Force_India"
+     ],
+     [
+      7,
+      "toyota",
+      "Toyota",
+      "Japanese",
+      "http://en.wikipedia.org/wiki/Toyota_Racing"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      6,
+      2009,
+      6,
+      6,
+      "Monaco Grand Prix",
+      "2009-05-24",
+      "12:00:00",
+      "http://en.wikipedia.org/wiki/2009_Monaco_Grand_Prix"
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      2009,
+      "http://en.wikipedia.org/wiki/2009_Formula_One_season"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    0.0,
+    "Toyota",
+    "Japanese"
+   ]
+  ],
+  "pred_rows": [
+   [
+    0.0,
+    "Force India",
+    "Indian"
+   ]
+  ],
+  "idx": 10
+ },
+ {
+  "pair_id": "md_kg_gpt-4:128",
+  "db_id": "financial",
+  "question": "List the top nine districts, by descending order, from the highest to the lowest, the number of female account holders.",
+  "evidence": "A2 refers to districts; Female refers to gender = 'F'",
+  "gold": "SELECT T2.A2, COUNT(T1.client_id) FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T1.gender = 'F' GROUP BY T2.district_id, T2.A2 ORDER BY COUNT(T1.client_id) DESC LIMIT 9",
+  "pred": "SELECT d.A2, COUNT(*) as female_account_holders\nFROM district d\nJOIN client c ON d.district_id = c.district_id\nJOIN disp di ON c.client_id = di.client_id\nJOIN account a ON di.account_id = a.account_id\nWHERE c.gender = 'F'\nGROUP BY d.A2\nORDER BY female_account_holders DESC\nLIMIT 9",
+  "witness": {
+   "account": {
+    "columns": [
+     "account_id",
+     "district_id",
+     "frequency",
+     "date"
+    ],
+    "rows": [
+     [
+      11382,
+      74,
+      "POPLATEK MESICNE",
+      "1995-08-20"
+     ],
+     [
+      11362,
+      67,
+      "POPLATEK MESICNE",
+      "1995-10-14"
+     ],
+     [
+      11349,
+      1,
+      "POPLATEK TYDNE",
+      "1995-05-26"
+     ],
+     [
+      11328,
+      54,
+      "POPLATEK MESICNE",
+      "1996-11-05"
+     ],
+     [
+      11327,
+      7,
+      "POPLATEK MESICNE",
+      "1997-10-15"
+     ],
+     [
+      11325,
+      62,
+      "POPLATEK MESICNE",
+      "1996-10-15"
+     ],
+     [
+      11295,
+      74,
+      "POPLATEK MESICNE",
+      "1993-01-21"
+     ],
+     [
+      11244,
+      33,
+      "POPLATEK MESICNE",
+      "1997-01-12"
+     ],
+     [
+      11186,
+      12,
+      "POPLATEK MESICNE",
+      "1994-11-24"
+     ],
+     [
+      11141,
+      1,
+      "POPLATEK TYDNE",
+      "1997-02-11"
+     ],
+     [
+      11111,
+      1,
+      "POPLATEK MESICNE",
+      "1993-05-20"
+     ],
+     [
+      2417,
+      44,
+      "POPLATEK MESICNE",
+      "1993-08-20"
+     ],
+     [
+      2561,
+      59,
+      "POPLATEK MESICNE",
+      "1996-09-29"
+     ]
+    ]
+   },
+   "client": {
+    "columns": [
+     "client_id",
+     "gender",
+     "birth_date",
+     "district_id"
+    ],
+    "rows": [
+     [
+      13998,
+      "F",
+      "1953-08-12",
+      74
+     ],
+     [
+      13971,
+      "F",
+      "1962-10-19",
+      67
+     ],
+     [
+      13955,
+      "F",
+      "1945-10-30",
+      1
+     ],
+     [
+      13924,
+      "F",
+      "1952-09-09",
+      54
+     ],
+     [
+      13923,
+      "F",
+      "1979-02-22",
+      7
+     ],
+     [
+      13921,
+      "F",
+      "1970-12-20",
+      62
+     ],
+     [
+      13886,
+      "F",
+      "1954-04-12",
+      44
+     ],
+     [
+      13820,
+      "F",
+      "1948-07-31",
+      33
+     ],
+     [
+      13750,
+      "F",
+      "1980-11-13",
+      12
+     ],
+     [
+      13694,
+      "F",
+      "1976-01-20",
+      1
+     ],
+     [
+      13657,
+      "F",
+      "1963-05-12",
+      59
+     ],
+     [
+      2920,
+      "F",
+      "1962-06-23",
+      44
+     ],
+     [
+      3092,
+      "F",
+      "1967-11-06",
+      59
+     ]
+    ]
+   },
+   "disp": {
+    "columns": [
+     "disp_id",
+     "client_id",
+     "account_id",
+     "type"
+    ],
+    "rows": [
+     [
+      13690,
+      13998,
+      11382,
+      "OWNER"
+     ],
+     [
+      13663,
+      13971,
+      11362,
+      "OWNER"
+     ],
+     [
+      13647,
+      13955,
+      11349,
+      "OWNER"
+     ],
+     [
+      13616,
+      13924,
+      11328,
+      "OWNER"
+     ],
+     [
+      13615,
+      13923,
+      11327,
+      "OWNER"
+     ],
+     [
+      13613,
+      13921,
+      11325,
+      "OWNER"
+     ],
+     [
+      13578,
+      13886,
+      11295,
+      "OWNER"
+     ],
+     [
+      13512,
+      13820,
+      11244,
+      "OWNER"
+     ],
+     [
+      13442,
+      13750,
+      11186,
+      "OWNER"
+     ],
+     [
+      13386,
+      13694,
+      11141,
+      "OWNER"
+     ],
+     [
+      13349,
+      13657,
+      11111,
+      "OWNER"
+     ],
+     [
+      2920,
+      2920,
+      2417,
+      "OWNER"
+     ],
+     [
+      3092,
+      3092,
+      2561,
+      "OWNER"
+     ]
+    ]
+   },
+   "district": {
+    "columns": [
+     "district_id",
+     "A2",
+     "A3",
+     "A4",
+     "A5",
+     "A6",
+     "A7",
+     "A8",
+     "A9",
+     "A10",
+     "A11",
+     "A12",
+     "A13",
+     "A14",
+     "A15",
+     "A16"
+    ],
+    "rows": [
+     [
+      74,
+      "Ostrava - mesto",
+      "north Moravia",
+      "323870",
+      "0",
+      "0",
+      "0",
+      1,
+      1,
+      100.0,
+      10673,
+      4.7,
+      5.44,
+      100,
+      18782,
+      18347
+     ],
+     [
+      67,
+      "Bruntal",
+      "north Moravia",
+      "106054",
+      "38",
+      "25",
+      "6",
+      2,
+      6,
+      63.1,
+      8110,
+      5.7,
+      6.55,
+      109,
+      3244,
+      3079
+     ],
+     [
+      1,
+      "Hl.m. Praha",
+      "Prague",
+      "1204953",
+      "0",
+      "0",
+      "0",
+      1,
+      1,
+      100.0,
+      12541,
+      0.2,
+      0.43,
+      167,
+      85677,
+      99107
+     ],
+     [
+      54,
+      "Brno - mesto",
+      "south Moravia",
+      "387570",
+      "0",
+      "0",
+      "0",
+      1,
+      1,
+      100.0,
+      9897,
+      1.6,
+      1.96,
+      140,
+      18721,
+      18696
+     ],
+     [
+      7,
+      "Melnik",
+      "central Bohemia",
+      "94725",
+      "38",
+      "28",
+      "1",
+      3,
+      6,
+      63.4,
+      9920,
+      2.2,
+      2.87,
+      130,
+      4289,
+      4846
+     ],
+     [
+      62,
+      "Uherske Hradiste",
+      "south Moravia",
+      "145688",
+      "22",
+      "41",
+      "13",
+      2,
+      5,
+      40.7,
+      8544,
+      1.2,
+      1.86,
+      109,
+      2719,
+      2906
+     ],
+     [
+      44,
+      "Chrudim",
+      "east Bohemia",
+      "105606",
+      "77",
+      "26",
+      "7",
+      2,
+      7,
+      53.0,
+      8254,
+      2.7,
+      3.76,
+      97,
+      2166,
+      2325
+     ],
+     [
+      33,
+      "Decin",
+      "north Bohemia",
+      "133777",
+      "24",
+      "17",
+      "7",
+      3,
+      11,
+      84.7,
+      8705,
+      5.7,
+      7.61,
+      116,
+      4650,
+      4859
+     ],
+     [
+      12,
+      "Pribram",
+      "central Bohemia",
+      "107870",
+      "84",
+      "29",
+      "6",
+      1,
+      6,
+      58.0,
+      8754,
+      3.8,
+      4.31,
+      137,
+      3804,
+      3868
+     ],
+     [
+      59,
+      "Kromeriz",
+      "south Moravia",
+      "108871",
+      "41",
+      "29",
+      "7",
+      2,
+      6,
+      62.1,
+      8444,
+      3.2,
+      3.47,
+      106,
+      2595,
+      2305
+     ]
+    ]
+   },
+   "trans": {
+    "columns": [
+     "trans_id",
+     "account_id",
+     "date",
+     "type",
+     "operation",
+     "amount",
+     "balance",
+     "k_symbol",
+     "bank",
+     "account"
+    ],
+    "rows": [
+     [
+      3431252,
+      11382,
+      "1996-04-16",
+      "VYDAJ",
+      "VYBER",
+      14500,
+      25139,
+      null,
+      null,
+      null
+     ],
+     [
+      3424219,
+      11362,
+      "1997-07-12",
+      "VYDAJ",
+      "PREVOD NA UCET",
+      5392,
+      14085,
+      "UVER",
+      "MN",
+      61540514
+     ],
+     [
+      3419747,
+      11349,
+      "1997-10-08",
+      "PRIJEM",
+      "PREVOD Z UCTU",
+      41988,
+      73164,
+      null,
+      "GH",
+      94058370
+     ],
+     [
+      3412788,
+      11328,
+      "1998-01-29",
+      "PRIJEM",
+      "VKLAD",
+      6400,
+      25593,
+      null,
+      null,
+      null
+     ],
+     [
+      3412500,
+      11327,
+      "1998-05-04",
+      "VYDAJ",
+      "VYBER",
+      1800,
+      58680,
+      null,
+      null,
+      0
+     ],
+     [
+      3458985,
+      11325,
+      "1997-08-31",
+      "PRIJEM",
+      null,
+      256,
+      89075,
+      "UROK",
+      null,
+      null
+     ],
+     [
+      3402725,
+      11295,
+      "1998-01-08",
+      "PRIJEM",
+      "VKLAD",
+      18347,
+      99427,
+      null,
+      null,
+      null
+     ],
+     [
+      3386929,
+      11244,
+      "1998-07-12",
+      "VYDAJ",
+      "PREVOD NA UCET",
+      6491,
+      53563,
+      "UVER",
+      "KL",
+      40766275
+     ],
+     [
+      3369366,
+      11186,
+      "1997-10-07",
+      "VYDAJ",
+      "VYBER",
+      13500,
+      32877,
+      null,
+      null,
+      null
+     ],
+     [
+      3354580,
+      11141,
+      "1997-03-13",
+      "VYDAJ",
+      "VYBER",
+      900,
+      25347,
+      null,
+      null,
+      null
+     ],
+     [
+      3345095,
+      11111,
+      "1994-02-14",
+      "PRIJEM",
+      "VKLAD",
+      4800,
+      19067,
+      null,
+      null,
+      null
+     ],
+     [
+      705768,
+      2417,
+      "1994-12-31",
+      "VYDAJ",
+      "VYBER",
+      15,
+      14785,
+      "SLUZBY",
+      null,
+      null
+     ],
+     [
+      750992,
+      2561,
+      "1998-01-14",
+      "VYDAJ",
+      "VYBER",
+      1920,
+      38239,
+      null,
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Hl.m. Praha",
+    2
+   ],
+   [
+    "Chrudim",
+    2
+   ],
+   [
+    "Kromeriz",
+    2
+   ],
+   [
+    "Melnik",
+    1
+   ],
+   [
+    "Pribram",
+    1
+   ],
+   [
+    "Decin",
+    1
+   ],
+   [
+    "Brno - mesto",
+    1
+   ],
+   [
+    "Uherske Hradiste",
+    1
+   ],
+   [
+    "Bruntal",
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    "Kromeriz",
+    2
+   ],
+   [
+    "Hl.m. Praha",
+    2
+   ],
+   [
+    "Chrudim",
+    2
+   ],
+   [
+    "Uherske Hradiste",
+    1
+   ],
+   [
+    "Pribram",
+    1
+   ],
+   [
+    "Ostrava - mesto",
+    1
+   ],
+   [
+    "Melnik",
+    1
+   ],
+   [
+    "Decin",
+    1
+   ],
+   [
+    "Bruntal",
+    1
+   ]
+  ],
+  "idx": 11
+ },
+ {
+  "pair_id": "md_kg_gpt-4:138",
+  "db_id": "financial",
+  "question": "In the branch where the second-highest number of crimes were committed in 1995 occurred, how many male clients are there?",
+  "evidence": "Male refers to gender = 'M'; A15 stands for no. of commited crimes 1995",
+  "gold": "SELECT COUNT(T1.client_id) FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T1.gender = 'M' AND T2.A15 = (SELECT T3.A15 FROM district AS T3 ORDER BY T3.A15 DESC LIMIT 1, 1)",
+  "pred": "SELECT COUNT(*) AS male_clients\nFROM client\nJOIN district ON client.district_id = district.district_id\nWHERE district.A15 = (\n    SELECT MAX(A15)\n    FROM district\n    WHERE A15 < (\n        SELECT MAX(A15)\n        FROM district\n    )\n) AND client.gender = 'M'",
+  "witness": {
+   "account": {
+    "columns": [
+     "account_id",
+     "district_id",
+     "frequency",
+     "date"
+    ],
+    "rows": [
+     [
+      3715,
+      74,
+      "POPLATEK MESICNE",
+      "1997-11-27"
+     ],
+     [
+      3709,
+      74,
+      "POPLATEK MESICNE",
+      "1996-03-05"
+     ],
+     [
+      838,
+      47,
+      "POPLATEK MESICNE",
+      "1993-10-23"
+     ],
+     [
+      1786,
+      1,
+      "POPLATEK MESICNE",
+      "1993-05-25"
+     ],
+     [
+      1011,
+      1009,
+      "POPLATEK MESICNE",
+      "1996-02-16"
+     ]
+    ]
+   },
+   "client": {
+    "columns": [
+     "client_id",
+     "gender",
+     "birth_date",
+     "district_id"
+    ],
+    "rows": [
+     [
+      4472,
+      "M",
+      "1965-07-25",
+      74
+     ],
+     [
+      1010,
+      "M",
+      "1965-07-25",
+      1009
+     ],
+     [
+      4480,
+      "M",
+      "1963-03-30",
+      74
+     ],
+     [
+      2164,
+      "M",
+      "1941-10-29",
+      47
+     ],
+     [
+      1012,
+      "F",
+      "1961-01-15",
+      1
+     ],
+     [
+      1014,
+      "M",
+      "1963-06-09",
+      74
+     ]
+    ]
+   },
+   "disp": {
+    "columns": [
+     "disp_id",
+     "client_id",
+     "account_id",
+     "type"
+    ],
+    "rows": [
+     [
+      4472,
+      4472,
+      3709,
+      "OWNER"
+     ],
+     [
+      1010,
+      1010,
+      838,
+      "DISPONENT"
+     ],
+     [
+      4480,
+      4480,
+      3715,
+      "OWNER"
+     ],
+     [
+      2164,
+      2164,
+      1786,
+      "OWNER"
+     ],
+     [
+      1013,
+      1012,
+      3715,
+      "DISPONENT"
+     ],
+     [
+      1015,
+      1014,
+      1011,
+      "OWNER"
+     ]
+    ]
+   },
+   "district": {
+    "columns": [
+     "district_id",
+     "A2",
+     "A3",
+     "A4",
+     "A5",
+     "A6",
+     "A7",
+     "A8",
+     "A9",
+     "A10",
+     "A11",
+     "A12",
+     "A13",
+     "A14",
+     "A15",
+     "A16"
+    ],
+    "rows": [
+     [
+      74,
+      "Ostrava - mesto",
+      "north Moravia",
+      "323870",
+      "0",
+      "0",
+      "0",
+      1,
+      1,
+      100.0,
+      10673,
+      4.7,
+      5.44,
+      100,
+      18782,
+      18347
+     ],
+     [
+      1009,
+      "Benesov",
+      "north Moravia",
+      "88884",
+      "0",
+      "0",
+      "0",
+      1,
+      1,
+      100.0,
+      10673,
+      4.7,
+      5.44,
+      100,
+      18782,
+      18347
+     ],
+     [
+      47,
+      "Pardubice",
+      "east Bohemia",
+      "162580",
+      "83",
+      "26",
+      "5",
+      1,
+      6,
+      72.8,
+      9538,
+      1.5,
+      1.81,
+      111,
+      6079,
+      5410
+     ],
+     [
+      1,
+      "Hl.m. Praha",
+      "central Bohemia",
+      "1204953",
+      "35",
+      "36",
+      "9",
+      0,
+      7,
+      36.5,
+      9622,
+      0.4,
+      0.59,
+      154,
+      18721,
+      3529
+     ]
+    ]
+   },
+   "trans": {
+    "columns": [
+     "trans_id",
+     "account_id",
+     "date",
+     "type",
+     "operation",
+     "amount",
+     "balance",
+     "k_symbol",
+     "bank",
+     "account"
+    ],
+    "rows": [
+     [
+      1087667,
+      3715,
+      "1998-01-26",
+      "PRIJEM",
+      "VKLAD",
+      900,
+      13300,
+      null,
+      null,
+      null
+     ],
+     [
+      1085736,
+      3709,
+      "1996-12-31",
+      "VYDAJ",
+      "VYBER",
+      15,
+      40184,
+      "SLUZBY",
+      null,
+      null
+     ],
+     [
+      244405,
+      838,
+      "1995-10-13",
+      "PRIJEM",
+      "VKLAD",
+      2100,
+      30000,
+      null,
+      null,
+      null
+     ],
+     [
+      523502,
+      1786,
+      "1994-09-17",
+      "VYDAJ",
+      "VYBER",
+      9500,
+      34422,
+      null,
+      null,
+      null
+     ],
+     [
+      1016,
+      1011,
+      "1998-09-18",
+      "VYDAJ",
+      "VYBER",
+      8600,
+      47292,
+      null,
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    4
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "idx": 12
+ },
+ {
+  "pair_id": "md_ta_gpt-4-turbo_cot:62",
+  "db_id": "california_schools",
+  "question": "What is the total number of non-chartered schools in the county of Los Angeles with a percent (%) of eligible free meals for grades 1 through 12 that is less than 0.18%?",
+  "evidence": "non-chartered schools refer to schools whose Charter = 0; K-12 means grades 1 through 12; percent of eligible free rate for K-12 = `Free Meal Count (K-12)` * 100 / `Enrollment (K-12)`",
+  "gold": "SELECT COUNT(T2.School) FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.County = 'Los Angeles' AND T2.Charter = 0 AND CAST(T1.`Free Meal Count (K-12)` AS REAL) * 100 / T1.`Enrollment (K-12)` < 0.18",
+  "pred": "SELECT COUNT(*) \nFROM schools \nINNER JOIN frpm ON schools.CDSCode = frpm.CDSCode \nWHERE schools.Charter = 0 \nAND schools.County = 'Los Angeles' \nAND (frpm.`Free Meal Count (K-12)` * 100 / frpm.`Enrollment (K-12)`) < 0.18",
+  "witness": {
+   "frpm": {
+    "columns": [
+     "CDSCode",
+     "Academic Year",
+     "County Code",
+     "District Code",
+     "School Code",
+     "County Name",
+     "District Name",
+     "School Name",
+     "District Type",
+     "School Type",
+     "Educational Option Type",
+     "NSLP Provision Status",
+     "Charter School (Y/N)",
+     "Charter School Number",
+     "Charter Funding Type",
+     "IRC",
+     "Low Grade",
+     "High Grade",
+     "Enrollment (K-12)",
+     "Free Meal Count (K-12)",
+     "Percent (%) Eligible Free (K-12)",
+     "FRPM Count (K-12)",
+     "Percent (%) Eligible FRPM (K-12)",
+     "Enrollment (Ages 5-17)",
+     "Free Meal Count (Ages 5-17)",
+     "Percent (%) Eligible Free (Ages 5-17)",
+     "FRPM Count (Ages 5-17)",
+     "Percent (%) Eligible FRPM (Ages 5-17)",
+     "2013-14 CALPADS Fall 1 Certification Status"
+    ],
+    "rows": [
+     [
+      "19650521995976",
+      "2014-2015",
+      "19",
+      65052,
+      "1995976",
+      "Los Angeles",
+      "Temple City Unified",
+      "Temple City Alternative",
+      "Unified School District",
+      "Alternative Schools of Choice",
+      "Alternative School of Choice",
+      null,
+      0,
+      null,
+      null,
+      0,
+      "K",
+      "12",
+      13.0,
+      1.0,
+      0.0769230769230769,
+      1.0,
+      0.0769230769230769,
+      11.0,
+      1.0,
+      0.0909090909090909,
+      1.0,
+      0.0909090909090909,
+      1
+     ],
+     [
+      "19734376114441",
+      "2014-2015",
+      "19",
+      73437,
+      "6114441",
+      "Los Angeles",
+      "Compton Unified",
+      "Compton Community Day Middle",
+      "Unified School District",
+      "District Community Day Schools",
+      "Community Day School",
+      "Provision 2",
+      0,
+      null,
+      null,
+      0,
+      "6",
+      "8",
+      2.0,
+      1.0,
+      0.5,
+      1.0,
+      0.5,
+      2.0,
+      1.0,
+      0.5,
+      1.0,
+      0.5,
+      1
+     ],
+     [
+      "19753336020325",
+      "2014-2015",
+      "19",
+      75333,
+      "6020325",
+      "Los Angeles",
+      "Manhattan Beach Unified",
+      "Aurelia Pennekamp Elementary",
+      "Unified School District",
+      "Elementary Schools (Public)",
+      "Traditional",
+      null,
+      0,
+      null,
+      null,
+      0,
+      "K",
+      "5",
+      568.0,
+      1.0,
+      0.00176056338028169,
+      3.0,
+      0.00528169014084507,
+      556.0,
+      1.0,
+      0.00179856115107914,
+      3.0,
+      0.00539568345323741,
+      1
+     ],
+     [
+      "19753410116285",
+      "2014-2015",
+      "19",
+      75341,
+      "0116285",
+      "Los Angeles",
+      "Redondo Beach Unified",
+      "Redondo Beach Learning Academy",
+      "Unified School District",
+      "District Community Day Schools",
+      "Community Day School",
+      null,
+      0,
+      null,
+      null,
+      0,
+      "9",
+      "12",
+      10.0,
+      1.0,
+      0.1,
+      2.0,
+      0.2,
+      9.0,
+      1.0,
+      0.111111111111111,
+      2.0,
+      0.222222222222222,
+      1
+     ]
+    ]
+   },
+   "schools": {
+    "columns": [
+     "CDSCode",
+     "NCESDist",
+     "NCESSchool",
+     "StatusType",
+     "County",
+     "District",
+     "School",
+     "Street",
+     "StreetAbr",
+     "City",
+     "Zip",
+     "State",
+     "MailStreet",
+     "MailStrAbr",
+     "MailCity",
+     "MailZip",
+     "MailState",
+     "Phone",
+     "Ext",
+     "Website",
+     "OpenDate",
+     "ClosedDate",
+     "Charter",
+     "CharterNum",
+     "FundingType",
+     "DOC",
+     "DOCType",
+     "SOC",
+     "SOCType",
+     "EdOpsCode",
+     "EdOpsName",
+     "EILCode",
+     "EILName",
+     "GSoffered",
+     "GSserved",
+     "Virtual",
+     "Magnet",
+     "Latitude",
+     "Longitude",
+     "AdmFName1",
+     "AdmLName1",
+     "AdmEmail1",
+     "AdmFName2",
+     "AdmLName2",
+     "AdmEmail2",
+     "AdmFName3",
+     "AdmLName3",
+     "AdmEmail3",
+     "LastUpdate"
+    ],
+    "rows": [
+     [
+      "19650521995976",
+      "0638980",
+      "07145",
+      "Active",
+      "Los Angeles",
+      "Temple City Unified",
+      "Temple City Alternative",
+      "9229 Pentland Street",
+      "9229 Pentland St.",
+      "Temple City",
+      "91780-3736",
+      "CA",
+      "9229 Pentland Street",
+      "9229 Pentland St.",
+      "Temple City",
+      "91780-3736",
+      "CA",
+      "(626) 548-5113",
+      null,
+      null,
+      "1996-09-09",
+      null,
+      0,
+      null,
+      null,
+      "54",
+      "Unified School District",
+      "63",
+      "Alternative Schools of Choice",
+      "ALTSOC",
+      "Alternative School of Choice",
+      "HS",
+      "High School",
+      "K-12",
+      "9-12",
+      "P",
+      0,
+      34.093992,
+      -118.06679,
+      "Chris",
+      "Sewell",
+      "csewell@tcusd.net",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "2016-05-10"
+     ],
+     [
+      "19734376114441",
+      "0609620",
+      "07158",
+      "Active",
+      "Los Angeles",
+      "Compton Unified",
+      "Compton Community Day Middle",
+      "2300 West Caldwell Street",
+      "2300 West Caldwell St.",
+      "Compton",
+      "90220-4116",
+      "CA",
+      "2300 West Caldwell Street",
+      "2300 West Caldwell St.",
+      "Compton",
+      "90220-4116",
+      "CA",
+      "(310) 898-6154",
+      null,
+      "www.compton.k12.ca.us",
+      "1997-03-17",
+      null,
+      0,
+      null,
+      null,
+      "54",
+      "Unified School District",
+      "69",
+      "District Community Day Schools",
+      "COMMDAY",
+      "Community Day School",
+      "INTMIDJR",
+      "Intermediate/Middle/Junior High",
+      "6-8",
+      "6-8",
+      "P",
+      0,
+      33.88322,
+      -118.24964,
+      "Fredricka",
+      "Brown",
+      "fbrown@compton.k12.ca.us",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "2016-08-26"
+     ],
+     [
+      "19753336020325",
+      "0600025",
+      "03570",
+      "Active",
+      "Los Angeles",
+      "Manhattan Beach Unified",
+      null,
+      "110 South Rowell",
+      "110 South Rowell",
+      "Manhattan Beach",
+      "90266-6962",
+      "CA",
+      "325 South Peck Avenue",
+      "325 South Peck Ave.",
+      "Manhattan Beach",
+      "90266",
+      "CA",
+      "(310) 798-6223",
+      "5801",
+      null,
+      "1980-07-01",
+      null,
+      0,
+      null,
+      null,
+      "54",
+      "Unified School District",
+      "60",
+      "Elementary Schools (Public)",
+      "TRAD",
+      "Traditional",
+      "ELEM",
+      "Elementary",
+      "K-5",
+      "K-5",
+      "N",
+      0,
+      33.879214,
+      -118.38951,
+      "Toni",
+      "Brown",
+      "tbrown@mbusd.org",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "2016-07-01"
+     ],
+     [
+      "19753410116285",
+      "0600032",
+      "12165",
+      "Active",
+      "Los Angeles",
+      "Redondo Beach Unified",
+      "Redondo Beach Learning Academy",
+      "1000 Del Amo Street",
+      "1000 Del Amo St.",
+      "Redondo Beach",
+      "90277-3934",
+      "CA",
+      "1401 Inglewood Avenue",
+      "1401 Inglewood Ave.",
+      "Redondo Beach",
+      "90278-3999",
+      "CA",
+      "(310) 798-8690",
+      null,
+      "www.rbusd.org",
+      "2008-07-14",
+      null,
+      0,
+      null,
+      null,
+      "54",
+      "Unified School District",
+      "69",
+      "District Community Day Schools",
+      "COMMDAY",
+      "Community Day School",
+      "HS",
+      "High School",
+      "9-12",
+      "9-12",
+      "N",
+      0,
+      33.84872,
+      -118.38247,
+      "Susannah",
+      "Hall",
+      "shall@rbusd.org",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "2015-06-18"
+     ],
+     [
+      "01100176001788",
+      "0638980",
+      "07145",
+      "Active",
+      "Los Angeles",
+      "Temple City Unified",
+      "Temple City Alternative",
+      "9229 Pentland Street",
+      "9229 Pentland St.",
+      "Temple City",
+      "91780-3736",
+      "CA",
+      "9229 Pentland Street",
+      "9229 Pentland St.",
+      "Temple City",
+      "91780-3736",
+      "CA",
+      "(626) 548-5113",
+      null,
+      null,
+      "1996-09-09",
+      null,
+      0,
+      null,
+      null,
+      "54",
+      "Unified School District",
+      "63",
+      "Alternative Schools of Choice",
+      "ALTSOC",
+      "Alternative School of Choice",
+      "HS",
+      "High School",
+      "K-12",
+      "9-12",
+      "P",
+      0,
+      34.093992,
+      -118.06679,
+      "Chris",
+      "Sewell",
+      "csewell@tcusd.net",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "2016-05-10"
+     ],
+     [
+      "01100176002000",
+      "0691078",
+      "07487",
+      "Active",
+      "Los Angeles",
+      "Los Angeles County Office of Education",
+      "Aurelia Pennekamp Elementary",
+      "110 South Rowell",
+      "110 South Rowell",
+      "Modesto",
+      "90266-6962",
+      "CA",
+      "325 South Peck Avenue",
+      "325 South Peck Ave.",
+      "Redding",
+      "92084",
+      "CA",
+      "(909) 397-4900",
+      "110",
+      null,
+      "2007-09-04",
+      "2014-06-30",
+      1,
+      null,
+      null,
+      "00",
+      "County Office of Education (COE)",
+      "70",
+      "Adult Education Centers",
+      "TRAD",
+      "Traditional",
+      "INTMIDJR",
+      "Intermediate/Middle/Junior High",
+      "K-5",
+      "8",
+      "N",
+      0,
+      33.879214,
+      -118.38951,
+      "Toni",
+      "Brown",
+      "b",
+      "Steve",
+      "Gocke",
+      "steve.gocke@learn4life.org",
+      null,
+      null,
+      null,
+      "2016-07-01"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    0
+   ]
+  ],
+  "pred_rows": [
+   [
+    1
+   ]
+  ],
+  "idx": 13
+ },
+ {
+  "pair_id": "md_kg_gpt-4:1003",
+  "db_id": "formula_1",
+  "question": "How many accidents did the driver who had the highest number accidents in the Canadian Grand Prix have?",
+  "evidence": "number of accidents refers to the number where statusid = 3; Canadian Grand Prix refers to the race of name\n",
+  "gold": "SELECT COUNT(T1.driverId) FROM results AS T1 INNER JOIN races AS T2 on T1.raceId = T2.raceId INNER JOIN status AS T3 on T1.statusId = T3.statusId WHERE T3.statusId = 3 AND T2.name = 'Canadian Grand Prix' GROUP BY T1.driverId ORDER BY COUNT(T1.driverId) DESC LIMIT 1",
+  "pred": "SELECT MAX(accident_count) AS highest_accidents\nFROM (\n    SELECT driverId, COUNT(*) AS accident_count\n    FROM results\n    WHERE raceId IN (SELECT raceId FROM races WHERE name = 'Canadian Grand Prix')\n      AND statusId = 3\n    GROUP BY driverId\n)",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      8,
+      "magny_cours",
+      "Circuit de Nevers Magny-Cours",
+      "Magny Cours",
+      "France",
+      46.8642,
+      3.16361,
+      null,
+      "http://en.wikipedia.org/wiki/Circuit_de_Nevers_Magny-Cours"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      6,
+      "ferrari",
+      "Ferrari",
+      "Italian",
+      "http://en.wikipedia.org/wiki/Scuderia_Ferrari"
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      30,
+      "michael_schumacher",
+      null,
+      "MSC",
+      "Michael",
+      "Schumacher",
+      "1969-01-03",
+      "German",
+      "http://en.wikipedia.org/wiki/Michael_Schumacher"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      99,
+      2004,
+      10,
+      8,
+      "French Grand Prix",
+      "2004-07-04",
+      null,
+      "http://en.wikipedia.org/wiki/2004_French_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      1695,
+      99,
+      30,
+      6,
+      1,
+      2,
+      1,
+      "1",
+      1,
+      10.0,
+      70,
+      "1:30:18.133",
+      5418133,
+      32,
+      1,
+      "1:15.377",
+      "210.669",
+      1
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      2004,
+      "http://en.wikipedia.org/wiki/2004_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      1,
+      "Finished"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "idx": 14
+ },
+ {
+  "pair_id": "md_ta_gpt-4-o_cot:1331",
+  "db_id": "student_club",
+  "question": "What is the amount of the funds that the Vice President received?",
+  "evidence": "'Vice President' is a position of Student Club; funds received refers to amount.",
+  "gold": "SELECT T2.amount FROM member AS T1 INNER JOIN income AS T2 ON T1.member_id = T2.link_to_member WHERE T1.position = 'Vice President'",
+  "pred": "select sum(income.amount) \nfrom income \ninner join member \non income.link_to_member = member.member_id \nwhere member.position = 'Vice President'",
+  "witness": {
+   "income": {
+    "columns": [
+     "income_id",
+     "date_received",
+     "amount",
+     "source",
+     "notes",
+     "link_to_member"
+    ],
+    "rows": [
+     [
+      "rec7f5XMQZexgtQJo",
+      "2019-09-04",
+      50,
+      "Dues",
+      null,
+      "recTjHY5xXhvkCdVT"
+     ]
+    ]
+   },
+   "major": {
+    "columns": [
+     "major_id",
+     "major_name",
+     "department",
+     "college"
+    ],
+    "rows": [
+     [
+      "rec09LedkREyskCNv",
+      "Agricultural Communication",
+      "School of Applied Sciences, Technology and Education",
+      "College of Agriculture and Applied Sciences"
+     ]
+    ]
+   },
+   "member": {
+    "columns": [
+     "member_id",
+     "first_name",
+     "last_name",
+     "email",
+     "position",
+     "t_shirt_size",
+     "phone",
+     "zip",
+     "link_to_major"
+    ],
+    "rows": [
+     [
+      "recTjHY5xXhvkCdVT",
+      "Edwardo",
+      "Ing",
+      "edwardo.ing@lpu.edu",
+      "Member",
+      "Medium",
+      "109-555-7016",
+      47711,
+      "rec09LedkREyskCNv"
+     ]
+    ]
+   },
+   "zip_code": {
+    "columns": [
+     "zip_code",
+     "type",
+     "city",
+     "county",
+     "state",
+     "short_state"
+    ],
+    "rows": [
+     [
+      47711,
+      "Standard",
+      "Evansville",
+      "Vanderburgh County",
+      "Indiana",
+      "IN"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "idx": 15
+ },
+ {
+  "pair_id": "md_ta_gpt-4-turbo_cot:990",
+  "db_id": "formula_1",
+  "question": "What is the constructor reference name of the champion in the 2009 Singapore Grand Prix? Please give its website.",
+  "evidence": "the time of the champion shows in the format of \"minutes: seconds.millionsecond\" in which Max(time); constructor reference name refers to constructorRef; website refers to url",
+  "gold": "SELECT T3.constructorRef, T3.url FROM results AS T1 INNER JOIN races AS T2 on T1.raceId = T2.raceId INNER JOIN constructors AS T3 on T1.constructorId = T3.constructorId WHERE T2.name = 'Singapore Grand Prix' AND T2.year = 2009 AND T1.time LIKE '_:%:__.___'",
+  "pred": "SELECT constructors.constructorRef, constructors.url\nFROM constructors\nINNER JOIN results ON constructors.constructorId = results.constructorId\nINNER JOIN races ON results.raceId = races.raceId\nWHERE races.name = 'Singapore Grand Prix' AND races.year = 2009 AND results.positionOrder = 1",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      1030,
+      "americas",
+      "Circuit of the Americas",
+      "Austin",
+      "USA",
+      30.1328,
+      -97.6411,
+      null,
+      "http://en.wikipedia.org/wiki/Circuit_of_the_Americas"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      1031,
+      "fry",
+      "Fry",
+      "British",
+      "http://en.wikipedia.org/wiki/Alfa_Romeo_(Formula_One)"
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      1032,
+      "cabianca",
+      null,
+      null,
+      "Giulio",
+      "Cabianca",
+      "1923-02-19",
+      "Italian",
+      "http://en.wikipedia.org/wiki/Giulio_Cabianca"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      1033,
+      2009,
+      15,
+      1030,
+      "Singapore Grand Prix",
+      "2009-09-28",
+      null,
+      "http://en.wikipedia.org/wiki/1997_Luxembourg_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      1034,
+      1033,
+      1032,
+      1031,
+      24,
+      3,
+      1,
+      "1",
+      23,
+      9.0,
+      108,
+      "1:34:50.616",
+      7052790,
+      null,
+      null,
+      null,
+      null,
+      1
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      2009,
+      "http://en.wikipedia.org/wiki/2009_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      1,
+      "Finished"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "fry",
+    "http://en.wikipedia.org/wiki/Alfa_Romeo_(Formula_One)"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 16
+ },
+ {
+  "pair_id": "md_kg_gpt-35-turbo:959",
+  "db_id": "formula_1",
+  "question": "What is the fastest lap number of the champion in 2009?",
+  "evidence": "in 2009 refers to year = 2009; Only the time of the champion shows in the format of \"hour: minutes: seconds.millionsecond\"",
+  "gold": "SELECT T1.fastestLap FROM results AS T1 INNER JOIN races AS T2 on T1.raceId = T2.raceId WHERE T2.year = 2009 AND T1.time LIKE '_:%:__.___'",
+  "pred": "SELECT results.fastestLap\nFROM results\nJOIN races ON results.raceId = races.raceId\nWHERE races.year = 2009\nAND results.position = 1",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      1022,
+      "estoril",
+      "Autódromo do Estoril",
+      "Estoril",
+      "Portugal",
+      38.7506,
+      -9.39417,
+      null,
+      "http://en.wikipedia.org/wiki/Aut%C3%B3dromo_do_Estoril"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      1023,
+      "cooper-castellotti",
+      "Cooper-Castellotti",
+      "British",
+      "http://en.wikipedia.org/wiki/Cooper_Car_Company"
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      1024,
+      "villota",
+      null,
+      null,
+      "Emilio",
+      "de Villota",
+      "1946-07-26",
+      "Spanish",
+      "http://en.wikipedia.org/wiki/Emilio_de_Villota"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      1025,
+      2009,
+      15,
+      1022,
+      "Luxembourg Grand Prix",
+      "2009-09-28",
+      null,
+      "http://en.wikipedia.org/wiki/1997_Luxembourg_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      1026,
+      1025,
+      1024,
+      1023,
+      24,
+      3,
+      4,
+      "4",
+      1,
+      9.0,
+      108,
+      "1:34:50.616",
+      7052790,
+      null,
+      null,
+      null,
+      null,
+      1
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      2009,
+      "http://en.wikipedia.org/wiki/2009_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      1,
+      "Finished"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 17
+ },
+ {
+  "pair_id": "md_ta_gpt-4-o_cot:1057",
+  "db_id": "european_football_2",
+  "question": "Calculate the average home team goal in the 2010/2011 season in the country of Poland.",
+  "evidence": "average home team goal = AVG(home_team_goal)= SUM(home_team_goal) / COUNT(DISTINCT Match.id) WHERE name = 'Poland' and season = '2010/2011';",
+  "gold": "SELECT CAST(SUM(t2.home_team_goal) AS REAL) / COUNT(t2.id) FROM Country AS t1 INNER JOIN Match AS t2 ON t1.id = t2.country_id WHERE t1.name = 'Poland' AND t2.season = '2010/2011'",
+  "pred": "select avg(Match.home_team_goal) \nfrom Match \ninner join League on Match.league_id = League.id \ninner join Country on League.country_id = Country.id \nwhere Country.name = 'Poland' and Match.season = '2010/2011';",
+  "witness": {
+   "Country": {
+    "columns": [
+     "id",
+     "name"
+    ],
+    "rows": [
+     [
+      13274,
+      "Netherlands"
+     ],
+     [
+      15722,
+      "Poland"
+     ]
+    ]
+   },
+   "League": {
+    "columns": [
+     "id",
+     "country_id",
+     "name"
+    ],
+    "rows": [
+     [
+      1654,
+      13274,
+      "Netherlands Eredivisie"
+     ],
+     [
+      1653,
+      15722,
+      "Poland Ekstraklasa"
+     ]
+    ]
+   },
+   "Match": {
+    "columns": [
+     "id",
+     "country_id",
+     "league_id",
+     "season",
+     "stage",
+     "date",
+     "match_api_id",
+     "home_team_api_id",
+     "away_team_api_id",
+     "home_team_goal",
+     "away_team_goal",
+     "home_player_X1",
+     "home_player_X2",
+     "home_player_X3",
+     "home_player_X4",
+     "home_player_X5",
+     "home_player_X6",
+     "home_player_X7",
+     "home_player_X8",
+     "home_player_X9",
+     "home_player_X10",
+     "home_player_X11",
+     "away_player_X1",
+     "away_player_X2",
+     "away_player_X3",
+     "away_player_X4",
+     "away_player_X5",
+     "away_player_X6",
+     "away_player_X7",
+     "away_player_X8",
+     "away_player_X9",
+     "away_player_X10",
+     "away_player_X11",
+     "home_player_Y1",
+     "home_player_Y2",
+     "home_player_Y3",
+     "home_player_Y4",
+     "home_player_Y5",
+     "home_player_Y6",
+     "home_player_Y7",
+     "home_player_Y8",
+     "home_player_Y9",
+     "home_player_Y10",
+     "home_player_Y11",
+     "away_player_Y1",
+     "away_player_Y2",
+     "away_player_Y3",
+     "away_player_Y4",
+     "away_player_Y5",
+     "away_player_Y6",
+     "away_player_Y7",
+     "away_player_Y8",
+     "away_player_Y9",
+     "away_player_Y10",
+     "away_player_Y11",
+     "home_player_1",
+     "home_player_2",
+     "home_player_3",
+     "home_player_4",
+     "home_player_5",
+     "home_player_6",
+     "home_player_7",
+     "home_player_8",
+     "home_player_9",
+     "home_player_10",
+     "home_player_11",
+     "away_player_1",
+     "away_player_2",
+     "away_player_3",
+     "away_player_4",
+     "away_player_5",
+     "away_player_6",
+     "away_player_7",
+     "away_player_8",
+     "away_player_9",
+     "away_player_10",
+     "away_player_11",
+     "goal",
+     "shoton",
+     "shotoff",
+     "foulcommit",
+     "card",
+     "cross",
+     "corner",
+     "possession",
+     "B365H",
+     "B365D",
+     "B365A",
+     "BWH",
+     "BWD",
+     "BWA",
+     "IWH",
+     "IWD",
+     "IWA",
+     "LBH",
+     "LBD",
+     "LBA",
+     "PSH",
+     "PSD",
+     "PSA",
+     "WHH",
+     "WHD",
+     "WHA",
+     "SJH",
+     "SJD",
+     "SJA",
+     "VCH",
+     "VCD",
+     "VCA",
+     "GBH",
+     "GBD",
+     "GBA",
+     "BSH",
+     "BSD",
+     "BSA"
+    ],
+    "rows": [
+     [
+      14101,
+      13274,
+      13274,
+      "2010/2011",
+      30,
+      "2011-04-10 00:00:00",
+      836666,
+      9908,
+      10235,
+      0,
+      4,
+      1,
+      2,
+      4,
+      6,
+      8,
+      5,
+      2,
+      4,
+      6,
+      8,
+      5,
+      1,
+      2,
+      4,
+      6,
+      8,
+      3,
+      5,
+      7,
+      3,
+      5,
+      7,
+      1,
+      3,
+      3,
+      5,
+      3,
+      5,
+      7,
+      7,
+      7,
+      7,
+      11,
+      1,
+      3,
+      3,
+      3,
+      3,
+      7,
+      7,
+      7,
+      10,
+      10,
+      10,
+      37193,
+      103684,
+      26503,
+      26671,
+      40863,
+      26781,
+      17855,
+      67958,
+      114558,
+      46104,
+      45830,
+      112107,
+      159854,
+      188555,
+      30602,
+      212511,
+      45466,
+      108038,
+      109638,
+      36391,
+      189237,
+      245422,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.8,
+      3.5,
+      4.5,
+      1.85,
+      3.5,
+      3.6,
+      1.9,
+      3.3,
+      3.4,
+      1.73,
+      3.4,
+      4.0,
+      null,
+      null,
+      null,
+      1.73,
+      3.6,
+      4.2,
+      1.8,
+      3.6,
+      4.2,
+      1.8,
+      3.6,
+      4.4,
+      1.85,
+      3.4,
+      3.75,
+      1.8,
+      3.5,
+      4.2
+     ],
+     [
+      14029,
+      13274,
+      13274,
+      "2010/2011",
+      23,
+      "2011-02-13 00:00:00",
+      836603,
+      8464,
+      10218,
+      2,
+      0,
+      1,
+      2,
+      4,
+      6,
+      8,
+      1,
+      3,
+      5,
+      7,
+      9,
+      5,
+      1,
+      2,
+      4,
+      6,
+      8,
+      3,
+      5,
+      7,
+      3,
+      5,
+      7,
+      1,
+      3,
+      3,
+      3,
+      3,
+      7,
+      7,
+      7,
+      7,
+      7,
+      11,
+      1,
+      3,
+      3,
+      3,
+      3,
+      7,
+      7,
+      7,
+      10,
+      10,
+      10,
+      212512,
+      209418,
+      178758,
+      31296,
+      184522,
+      27168,
+      31294,
+      38798,
+      39213,
+      33657,
+      109653,
+      33682,
+      209381,
+      150211,
+      209380,
+      185554,
+      38103,
+      110110,
+      209384,
+      102290,
+      179184,
+      180236,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.44,
+      4.33,
+      7.0,
+      1.44,
+      4.4,
+      5.75,
+      1.45,
+      3.8,
+      5.4,
+      1.44,
+      3.75,
+      6.0,
+      null,
+      null,
+      null,
+      1.4,
+      4.33,
+      6.5,
+      1.5,
+      4.0,
+      6.5,
+      1.4,
+      4.5,
+      7.5,
+      1.45,
+      4.0,
+      6.5,
+      1.44,
+      4.33,
+      7.0
+     ],
+     [
+      16202,
+      15722,
+      15722,
+      "2010/2011",
+      1,
+      "2010-08-08 00:00:00",
+      838389,
+      8025,
+      1957,
+      0,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      75579,
+      13437,
+      23930,
+      15608,
+      null,
+      null,
+      40159,
+      30975,
+      179310,
+      null,
+      null,
+      114822,
+      50657,
+      null,
+      null,
+      null,
+      206829,
+      79241,
+      69242,
+      34225,
+      null,
+      69541,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      16203,
+      15722,
+      15722,
+      "2010/2011",
+      1,
+      "2010-08-06 00:00:00",
+      838390,
+      8569,
+      8031,
+      2,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      47246,
+      92223,
+      null,
+      95533,
+      null,
+      null,
+      null,
+      null,
+      13329,
+      null,
+      116872,
+      null,
+      13490,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    ]
+   },
+   "Team": {
+    "columns": [
+     "id",
+     "team_api_id",
+     "team_fifa_api_id",
+     "team_long_name",
+     "team_short_name"
+    ],
+    "rows": [
+     [
+      26555,
+      9908,
+      1903,
+      "FC Utrecht",
+      "UTR"
+     ],
+     [
+      26553,
+      8464,
+      1910,
+      "N.E.C.",
+      "NEC"
+     ],
+     [
+      31449,
+      8025,
+      111092,
+      "Śląsk Wrocław",
+      "SLA"
+     ],
+     [
+      31454,
+      8569,
+      110744,
+      "GKS Bełchatów",
+      "BEL"
+     ]
+    ]
+   },
+   "Team_Attributes": {
+    "columns": [
+     "id",
+     "team_fifa_api_id",
+     "team_api_id",
+     "date",
+     "buildUpPlaySpeed",
+     "buildUpPlaySpeedClass",
+     "buildUpPlayDribbling",
+     "buildUpPlayDribblingClass",
+     "buildUpPlayPassing",
+     "buildUpPlayPassingClass",
+     "buildUpPlayPositioningClass",
+     "chanceCreationPassing",
+     "chanceCreationPassingClass",
+     "chanceCreationCrossing",
+     "chanceCreationCrossingClass",
+     "chanceCreationShooting",
+     "chanceCreationShootingClass",
+     "chanceCreationPositioningClass",
+     "defencePressure",
+     "defencePressureClass",
+     "defenceAggression",
+     "defenceAggressionClass",
+     "defenceTeamWidth",
+     "defenceTeamWidthClass",
+     "defenceDefenderLineClass"
+    ],
+    "rows": [
+     [
+      440,
+      1903,
+      9908,
+      "2011-02-22 00:00:00",
+      66,
+      "Balanced",
+      null,
+      "Little",
+      45,
+      "Mixed",
+      "Organised",
+      41,
+      "Normal",
+      69,
+      "Lots",
+      72,
+      "Lots",
+      "Organised",
+      34,
+      "Medium",
+      57,
+      "Press",
+      34,
+      "Normal",
+      "Offside Trap"
+     ],
+     [
+      888,
+      1910,
+      8464,
+      "2010-02-22 00:00:00",
+      32,
+      "Slow",
+      null,
+      "Little",
+      30,
+      "Short",
+      "Organised",
+      35,
+      "Normal",
+      40,
+      "Normal",
+      60,
+      "Normal",
+      "Organised",
+      30,
+      "Deep",
+      30,
+      "Contain",
+      30,
+      "Narrow",
+      "Cover"
+     ],
+     [
+      1170,
+      111092,
+      8025,
+      "2011-02-22 00:00:00",
+      47,
+      "Balanced",
+      null,
+      "Little",
+      55,
+      "Mixed",
+      "Organised",
+      45,
+      "Normal",
+      48,
+      "Normal",
+      54,
+      "Normal",
+      "Organised",
+      48,
+      "Medium",
+      47,
+      "Press",
+      51,
+      "Normal",
+      "Cover"
+     ],
+     [
+      516,
+      110744,
+      8569,
+      "2011-02-22 00:00:00",
+      47,
+      "Balanced",
+      null,
+      "Little",
+      27,
+      "Short",
+      "Organised",
+      45,
+      "Normal",
+      51,
+      "Normal",
+      54,
+      "Normal",
+      "Organised",
+      48,
+      "Medium",
+      60,
+      "Press",
+      37,
+      "Normal",
+      "Cover"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    1.0
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "idx": 18
+ },
+ {
+  "pair_id": "md_ta_gpt-4-o_cot:212",
+  "db_id": "toxicology",
+  "question": "Which element is the least numerous in non-carcinogenic molecules?",
+  "evidence": "label = '-' means molecules are non-carcinogenic; least numerous refers to MIN(COUNT(element));",
+  "gold": "SELECT T.element FROM (SELECT T1.element, COUNT(DISTINCT T1.molecule_id) FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T2.label = '-' GROUP BY T1.element ORDER BY COUNT(DISTINCT T1.molecule_id) ASC LIMIT 1) t",
+  "pred": "SELECT atom.element\nFROM atom\nJOIN molecule ON atom.molecule_id = molecule.molecule_id\nWHERE molecule.label = '-'\nGROUP BY atom.element\nORDER BY COUNT(atom.element) ASC\nLIMIT 1;",
+  "witness": {
+   "atom": {
+    "columns": [
+     "atom_id",
+     "molecule_id",
+     "element"
+    ],
+    "rows": [
+     [
+      "TR060_22",
+      "TR060",
+      "c"
+     ],
+     [
+      "TR060_49",
+      "TR060",
+      "h"
+     ],
+     [
+      "TR060_5",
+      "TR060",
+      "c"
+     ]
+    ]
+   },
+   "bond": {
+    "columns": [
+     "bond_id",
+     "molecule_id",
+     "bond_type"
+    ],
+    "rows": [
+     [
+      "TR060_5_49",
+      "TR060",
+      "-"
+     ]
+    ]
+   },
+   "connected": {
+    "columns": [
+     "atom_id",
+     "atom_id2",
+     "bond_id"
+    ],
+    "rows": [
+     [
+      "TR060_5",
+      "TR060_49",
+      "TR060_5_49"
+     ],
+     [
+      "TR060_49",
+      "TR060_5",
+      "TR060_5_49"
+     ]
+    ]
+   },
+   "molecule": {
+    "columns": [
+     "molecule_id",
+     "label"
+    ],
+    "rows": [
+     [
+      "TR060",
+      "-"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "c"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "h"
+   ]
+  ],
+  "idx": 19
+ },
+ {
+  "pair_id": "md_kg_meta-llama-3-70b-instruct-2:138",
+  "db_id": "financial",
+  "question": "In the branch where the second-highest number of crimes were committed in 1995 occurred, how many male clients are there?",
+  "evidence": "Male refers to gender = 'M'; A15 stands for no. of commited crimes 1995",
+  "gold": "SELECT COUNT(T1.client_id) FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T1.gender = 'M' AND T2.A15 = (SELECT T3.A15 FROM district AS T3 ORDER BY T3.A15 DESC LIMIT 1, 1)",
+  "pred": "SELECT COUNT(*)\nFROM client\nWHERE district_id IN (\n    SELECT district_id\n    FROM district\n    ORDER BY A15 DESC\n    LIMIT 1 OFFSET 1\n) AND gender = 'M';",
+  "witness": {
+   "account": {
+    "columns": [
+     "account_id",
+     "district_id",
+     "frequency",
+     "date"
+    ],
+    "rows": [
+     [
+      253,
+      46,
+      "POPLATEK MESICNE",
+      "1995-12-05"
+     ],
+     [
+      290,
+      56,
+      "POPLATEK MESICNE",
+      "1993-12-02"
+     ],
+     [
+      2837,
+      46,
+      "POPLATEK MESICNE",
+      "1996-06-02"
+     ],
+     [
+      11065,
+      11,
+      "POPLATEK MESICNE",
+      "1993-03-19"
+     ],
+     [
+      1667,
+      56,
+      "POPLATEK MESICNE",
+      "1996-08-18"
+     ],
+     [
+      1317,
+      56,
+      "POPLATEK MESICNE",
+      "1994-02-18"
+     ],
+     [
+      451,
+      11,
+      "POPLATEK MESICNE",
+      "1994-05-05"
+     ]
+    ]
+   },
+   "client": {
+    "columns": [
+     "client_id",
+     "gender",
+     "birth_date",
+     "district_id"
+    ],
+    "rows": [
+     [
+      3429,
+      "M",
+      "1941-10-16",
+      46
+     ],
+     [
+      13603,
+      "M",
+      "1941-07-28",
+      46
+     ],
+     [
+      2022,
+      "M",
+      "1939-11-12",
+      56
+     ],
+     [
+      1592,
+      "M",
+      "1928-04-11",
+      56
+     ],
+     [
+      305,
+      "M",
+      "1938-06-08",
+      46
+     ],
+     [
+      352,
+      "M",
+      "1940-08-27",
+      56
+     ],
+     [
+      543,
+      "F",
+      "1958-04-15",
+      11
+     ]
+    ]
+   },
+   "disp": {
+    "columns": [
+     "disp_id",
+     "client_id",
+     "account_id",
+     "type"
+    ],
+    "rows": [
+     [
+      3429,
+      3429,
+      2837,
+      "OWNER"
+     ],
+     [
+      13295,
+      13603,
+      11065,
+      "OWNER"
+     ],
+     [
+      2022,
+      2022,
+      1667,
+      "OWNER"
+     ],
+     [
+      1592,
+      1592,
+      1317,
+      "OWNER"
+     ],
+     [
+      305,
+      305,
+      253,
+      "OWNER"
+     ],
+     [
+      352,
+      352,
+      290,
+      "OWNER"
+     ],
+     [
+      543,
+      543,
+      451,
+      "OWNER"
+     ]
+    ]
+   },
+   "district": {
+    "columns": [
+     "district_id",
+     "A2",
+     "A3",
+     "A4",
+     "A5",
+     "A6",
+     "A7",
+     "A8",
+     "A9",
+     "A10",
+     "A11",
+     "A12",
+     "A13",
+     "A14",
+     "A15",
+     "A16"
+    ],
+    "rows": [
+     [
+      46,
+      "Nachod",
+      "east Bohemia",
+      "112709",
+      "48",
+      "20",
+      "7",
+      3,
+      10,
+      73.5,
+      8369,
+      1.7,
+      2.31,
+      117,
+      2854,
+      2618
+     ],
+     [
+      56,
+      "Breclav",
+      "south Moravia",
+      "124605",
+      "11",
+      "42",
+      "14",
+      1,
+      8,
+      46.0,
+      8772,
+      4.6,
+      4.98,
+      126,
+      2854,
+      3158
+     ],
+     [
+      11,
+      "Praha - zapad",
+      "central Bohemia",
+      "75637",
+      "35",
+      "36",
+      "9",
+      0,
+      7,
+      36.5,
+      9622,
+      0.4,
+      0.59,
+      154,
+      3475,
+      3529
+     ]
+    ]
+   },
+   "trans": {
+    "columns": [
+     "trans_id",
+     "account_id",
+     "date",
+     "type",
+     "operation",
+     "amount",
+     "balance",
+     "k_symbol",
+     "bank",
+     "account"
+    ],
+    "rows": [
+     [
+      76059,
+      253,
+      "1996-05-03",
+      "VYDAJ",
+      "VYBER",
+      19700,
+      46687,
+      null,
+      null,
+      null
+     ],
+     [
+      87058,
+      290,
+      "1997-12-31",
+      "VYDAJ",
+      "VYBER",
+      15,
+      70225,
+      "SLUZBY",
+      null,
+      null
+     ],
+     [
+      833002,
+      2837,
+      "1997-03-07",
+      "PRIJEM",
+      "VKLAD",
+      21150,
+      43204,
+      null,
+      null,
+      null
+     ],
+     [
+      3331860,
+      11065,
+      "1997-01-27",
+      "VYDAJ",
+      "VYBER",
+      7800,
+      17456,
+      null,
+      null,
+      null
+     ],
+     [
+      3585172,
+      1667,
+      "1998-12-31",
+      "PRIJEM",
+      null,
+      73,
+      17783,
+      "UROK",
+      null,
+      null
+     ],
+     [
+      3573920,
+      1317,
+      "1995-01-31",
+      "PRIJEM",
+      null,
+      71,
+      14175,
+      "UROK",
+      null,
+      null
+     ],
+     [
+      134699,
+      451,
+      "1998-12-10",
+      "VYDAJ",
+      "VYBER",
+      3600,
+      16783,
+      null,
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    6
+   ]
+  ],
+  "pred_rows": [
+   [
+    3
+   ]
+  ],
+  "idx": 20
+ },
+ {
+  "pair_id": "md_ta_gpt-4-turbo_cot:1114",
+  "db_id": "european_football_2",
+  "question": "What was the average overall rating for Marko Arnautovic from 2007/2/22 to 2016/4/21?",
+  "evidence": "average overall rating refers to avg(overall_rating); Marko Arnautovic refers to player_name = 'Marko Arnautovic'; from 2007/2/22 to 2016/4/21 refers to the first 10 characters of date BETWEEN '2007-02-22' and '2016-04-21'",
+  "gold": "SELECT CAST(SUM(t2.overall_rating) AS REAL) / COUNT(t2.id) FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_fifa_api_id = t2.player_fifa_api_id WHERE t1.player_name = 'Marko Arnautovic' AND SUBSTR(t2.`date`, 1, 10) BETWEEN '2007-02-22' AND '2016-04-21'",
+  "pred": "SELECT AVG(Player_Attributes.overall_rating) AS average_overall_rating\nFROM Player_Attributes\nINNER JOIN Player ON Player_Attributes.player_api_id = Player.player_api_id\nWHERE Player.player_name = 'Marko Arnautovic'\nAND SUBSTR(Player_Attributes.date, 1, 10) BETWEEN '2007-02-22' AND '2016-04-21'",
+  "witness": {
+   "Player": {
+    "columns": [
+     "id",
+     "player_api_id",
+     "player_name",
+     "player_fifa_api_id",
+     "birthday",
+     "height",
+     "weight"
+    ],
+    "rows": [
+     [
+      1181,
+      2790,
+      "Marko Arnautovic",
+      10,
+      "1993-05-24 00:00:00",
+      208.28,
+      163
+     ]
+    ]
+   },
+   "Player_Attributes": {
+    "columns": [
+     "id",
+     "player_fifa_api_id",
+     "player_api_id",
+     "date",
+     "overall_rating",
+     "potential",
+     "preferred_foot",
+     "attacking_work_rate",
+     "defensive_work_rate",
+     "crossing",
+     "finishing",
+     "heading_accuracy",
+     "short_passing",
+     "volleys",
+     "dribbling",
+     "curve",
+     "free_kick_accuracy",
+     "long_passing",
+     "ball_control",
+     "acceleration",
+     "sprint_speed",
+     "agility",
+     "reactions",
+     "balance",
+     "shot_power",
+     "jumping",
+     "stamina",
+     "strength",
+     "long_shots",
+     "aggression",
+     "interceptions",
+     "positioning",
+     "vision",
+     "penalties",
+     "marking",
+     "standing_tackle",
+     "sliding_tackle",
+     "gk_diving",
+     "gk_handling",
+     "gk_kicking",
+     "gk_positioning",
+     "gk_reflexes"
+    ],
+    "rows": [
+     [
+      1182,
+      10,
+      2790,
+      "2007-02-22 00:00:00",
+      null,
+      68,
+      "right",
+      "medium",
+      "medium",
+      52,
+      23,
+      47,
+      29,
+      26,
+      52,
+      32,
+      32,
+      28,
+      38,
+      61,
+      62,
+      53,
+      54,
+      72,
+      30,
+      62,
+      53,
+      57,
+      29,
+      56,
+      49,
+      43,
+      32,
+      35,
+      46,
+      53,
+      58,
+      13,
+      16,
+      8,
+      12,
+      13
+     ],
+     [
+      1186,
+      10,
+      2790,
+      "2007-02-22 00:00:00",
+      79,
+      76,
+      "right",
+      "high",
+      "medium",
+      72,
+      72,
+      69,
+      68,
+      65,
+      81,
+      69,
+      75,
+      49,
+      77,
+      89,
+      88,
+      89,
+      62,
+      80,
+      73,
+      64,
+      83,
+      57,
+      65,
+      45,
+      45,
+      75,
+      67,
+      83,
+      19,
+      30,
+      28,
+      13,
+      11,
+      10,
+      13,
+      15
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    39.5
+   ]
+  ],
+  "pred_rows": [
+   [
+    79.0
+   ]
+  ],
+  "idx": 21
+ },
+ {
+  "pair_id": "md_kg_gpt-35-turbo-instruct:879",
+  "db_id": "formula_1",
+  "question": "For the driver who set the fastest lap speed, what is his nationality?",
+  "evidence": "the fastest lap speed refers to (MAX) fastestLapSpeed;",
+  "gold": "SELECT T1.nationality FROM drivers AS T1 INNER JOIN results AS T2 ON T2.driverId = T1.driverId ORDER BY T2.fastestLapSpeed DESC LIMIT 1",
+  "pred": "SELECT  drivers.nationality\nFROM drivers\nINNER JOIN results ON drivers.driverId = results.driverId\nWHERE results.fastestLapSpeed = (SELECT MAX(results.fastestLapSpeed) FROM results)\nLIMIT 1",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      64,
+      "ain-diab",
+      "Ain Diab",
+      "Casablanca",
+      "Morocco",
+      33.5786,
+      -7.6875,
+      null,
+      "http://en.wikipedia.org/wiki/Ain-Diab_Circuit"
+     ],
+     [
+      58,
+      "aintree",
+      "Aintree",
+      "Liverpool",
+      "UK",
+      53.4769,
+      -2.94056,
+      null,
+      "http://en.wikipedia.org/wiki/Aintree_Motor_Racing_Circuit"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      66,
+      "brm",
+      "BRM",
+      "British",
+      "http://en.wikipedia.org/wiki/BRM"
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      541,
+      "flockhart",
+      null,
+      null,
+      "Ron",
+      "Flockhart",
+      "1923-06-16",
+      "British",
+      "http://en.wikipedia.org/wiki/Ron_Flockhart_(auto_racing)"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      775,
+      1958,
+      11,
+      64,
+      "Moroccan Grand Prix",
+      "1958-10-19",
+      null,
+      "http://en.wikipedia.org/wiki/1958_Moroccan_Grand_Prix"
+     ],
+     [
+      760,
+      1959,
+      5,
+      58,
+      "British Grand Prix",
+      "1959-07-18",
+      null,
+      "http://en.wikipedia.org/wiki/1959_British_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      18721,
+      775,
+      541,
+      66,
+      20,
+      15,
+      null,
+      "R",
+      24,
+      0.0,
+      15,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      5
+     ],
+     [
+      18398,
+      760,
+      541,
+      66,
+      42,
+      11,
+      null,
+      "R",
+      16,
+      0.0,
+      53,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      20
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      1958,
+      "http://en.wikipedia.org/wiki/1958_Formula_One_season"
+     ],
+     [
+      1959,
+      "http://en.wikipedia.org/wiki/1959_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      5,
+      "Engine"
+     ],
+     [
+      20,
+      "Spun off"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "British"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 22
+ },
+ {
+  "pair_id": "md_kg_gpt-4-turbo:206",
+  "db_id": "toxicology",
+  "question": "What elements are in the TR004_8_9 bond atoms?",
+  "evidence": "TR004_8_9 bond atoms refers to bond_id = 'TR004_8_9';",
+  "gold": "SELECT DISTINCT T1.element FROM atom AS T1 INNER JOIN connected AS T2 ON T1.atom_id = T2.atom_id WHERE T2.bond_id = 'TR004_8_9'",
+  "pred": "SELECT a.element\nFROM atom a\nJOIN connected c ON a.atom_id = c.atom_id OR a.atom_id = c.atom_id2\nWHERE c.bond_id = 'TR004_8_9'",
+  "witness": {
+   "atom": {
+    "columns": [
+     "atom_id",
+     "molecule_id",
+     "element"
+    ],
+    "rows": [
+     [
+      "TR004_8",
+      "TR004",
+      "b"
+     ],
+     [
+      "TR004_9",
+      "TR004",
+      "c"
+     ],
+     [
+      "YO378_0",
+      "XV059",
+      "c"
+     ]
+    ]
+   },
+   "bond": {
+    "columns": [
+     "bond_id",
+     "molecule_id",
+     "bond_type"
+    ],
+    "rows": [
+     [
+      "TR004_8_9",
+      "TR004",
+      "-"
+     ],
+     [
+      "Tr004_8_9",
+      "XV059",
+      "-"
+     ]
+    ]
+   },
+   "connected": {
+    "columns": [
+     "atom_id",
+     "atom_id2",
+     "bond_id"
+    ],
+    "rows": [
+     [
+      "TR004_8",
+      "TR004_9",
+      "Tr004_8_9"
+     ],
+     [
+      "TR004_9",
+      "TR004_8",
+      "TR004_8_9"
+     ]
+    ]
+   },
+   "molecule": {
+    "columns": [
+     "molecule_id",
+     "label"
+    ],
+    "rows": [
+     [
+      "TR004",
+      "-"
+     ],
+     [
+      "XV059",
+      "+"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "c"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "b"
+   ],
+   [
+    "c"
+   ]
+  ],
+  "idx": 23
+ },
+ {
+  "pair_id": "md_kg_mistralai-mixtral-8x7b-instru-4:1398",
+  "db_id": "student_club",
+  "question": "Name the event with the highest amount spent on advertisement.",
+  "evidence": "Name of event refers to event_name; highest amount spent on advertisement refers to MAX(spent) where category = 'Advertisement'",
+  "gold": "SELECT T2.event_name FROM budget AS T1 INNER JOIN event AS T2 ON T1.link_to_event = T2.event_id WHERE T1.category = 'Advertisement' ORDER BY T1.spent DESC LIMIT 1",
+  "pred": "SELECT event_name \nFROM event \nJOIN budget ON event.event_id = budget.link_to_event\nWHERE category = 'Advertisement' \nGROUP BY link_to_event \nORDER BY MAX(spent) DESC \nLIMIT 1;",
+  "witness": {
+   "budget": {
+    "columns": [
+     "budget_id",
+     "category",
+     "spent",
+     "remaining",
+     "amount",
+     "event_status",
+     "link_to_event"
+    ],
+    "rows": [
+     [
+      "recsI0IzpUuxl2bPh",
+      "Advertisement",
+      67.81,
+      7.19,
+      75,
+      "Closed",
+      "recEVTik3MlqbvLFi"
+     ],
+     [
+      "rec0QmEc3cSQFQ6V2",
+      "Advertisement",
+      67.81,
+      7.19,
+      75,
+      "Closed",
+      "recI43CzsZ0Q625ma"
+     ],
+     [
+      "rec59vErJo51glQRb",
+      "Advertisement",
+      0.0,
+      55.0,
+      55,
+      "Open",
+      "recwM7GMBSLDlb1Ix"
+     ]
+    ]
+   },
+   "event": {
+    "columns": [
+     "event_id",
+     "event_name",
+     "event_date",
+     "type",
+     "notes",
+     "location",
+     "status"
+    ],
+    "rows": [
+     [
+      "recEVTik3MlqbvLFi",
+      "October Speaker",
+      "2019-10-22T12:00:00",
+      "Guest Speaker",
+      null,
+      "MU 215",
+      "Closed"
+     ],
+     [
+      "recI43CzsZ0Q625ma",
+      "September Speaker",
+      "2019-09-24T12:00:00",
+      "Guest Speaker",
+      null,
+      "MU 215",
+      "Closed"
+     ],
+     [
+      "recwM7GMBSLDlb1Ix",
+      "April Meeting",
+      "2020-04-07T12:00:00",
+      "Meeting",
+      null,
+      "MU 215",
+      "Open"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "October Speaker"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "September Speaker"
+   ]
+  ],
+  "idx": 24
+ },
+ {
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:1078",
+  "db_id": "european_football_2",
+  "question": "Which player is older, Aaron Lennon or Abdelaziz Barrada?",
+  "evidence": "The larger the birthday value, the younger the person is, and vice versa;",
+  "gold": "SELECT player_name FROM Player WHERE player_name IN ('Aaron Lennon', 'Abdelaziz Barrada') ORDER BY birthday ASC LIMIT 1",
+  "pred": "SELECT \n  CASE \n    WHEN p1.birthday < p2.birthday THEN 'Aaron Lennon'\n    WHEN p1.birthday > p2.birthday THEN 'Abdelaziz Barrada'\n    ELSE 'They are the same age'\n  END AS older_player\nFROM \n  Player p1, \n  Player p2\nWHERE \n  p1.player_name = 'Aaron Lennon' \n  AND p2.player_name = 'Abdelaziz Barrada';",
+  "witness": {
+   "Player": {
+    "columns": [
+     "id",
+     "player_api_id",
+     "player_name",
+     "player_fifa_api_id",
+     "birthday",
+     "height",
+     "weight"
+    ],
+    "rows": [
+     [
+      8,
+      30895,
+      "Aaron Lennon",
+      152747,
+      "1987-04-16 00:00:00",
+      165.1,
+      139
+     ]
+    ]
+   },
+   "Player_Attributes": {
+    "columns": [
+     "id",
+     "player_fifa_api_id",
+     "player_api_id",
+     "date",
+     "overall_rating",
+     "potential",
+     "preferred_foot",
+     "attacking_work_rate",
+     "defensive_work_rate",
+     "crossing",
+     "finishing",
+     "heading_accuracy",
+     "short_passing",
+     "volleys",
+     "dribbling",
+     "curve",
+     "free_kick_accuracy",
+     "long_passing",
+     "ball_control",
+     "acceleration",
+     "sprint_speed",
+     "agility",
+     "reactions",
+     "balance",
+     "shot_power",
+     "jumping",
+     "stamina",
+     "strength",
+     "long_shots",
+     "aggression",
+     "interceptions",
+     "positioning",
+     "vision",
+     "penalties",
+     "marking",
+     "standing_tackle",
+     "sliding_tackle",
+     "gk_diving",
+     "gk_handling",
+     "gk_kicking",
+     "gk_positioning",
+     "gk_reflexes"
+    ],
+    "rows": [
+     [
+      148,
+      152747,
+      30895,
+      "2015-09-21 00:00:00",
+      77,
+      77,
+      "right",
+      "high",
+      "medium",
+      78,
+      66,
+      28,
+      76,
+      68,
+      84,
+      63,
+      55,
+      54,
+      81,
+      90,
+      89,
+      93,
+      74,
+      92,
+      62,
+      71,
+      75,
+      56,
+      57,
+      57,
+      37,
+      71,
+      73,
+      62,
+      30,
+      34,
+      35,
+      14,
+      7,
+      7,
+      16,
+      11
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "Aaron Lennon"
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 25
+ },
+ {
+  "pair_id": "md_kg_gpt-4:1331",
+  "db_id": "student_club",
+  "question": "What is the amount of the funds that the Vice President received?",
+  "evidence": "'Vice President' is a position of Student Club; funds received refers to amount.",
+  "gold": "SELECT T2.amount FROM member AS T1 INNER JOIN income AS T2 ON T1.member_id = T2.link_to_member WHERE T1.position = 'Vice President'",
+  "pred": "SELECT SUM(income.amount) AS funds_received\nFROM income\nJOIN member ON income.link_to_member = member.member_id\nWHERE member.position = 'Vice President'",
+  "witness": {
+   "income": {
+    "columns": [
+     "income_id",
+     "date_received",
+     "amount",
+     "source",
+     "notes",
+     "link_to_member"
+    ],
+    "rows": [
+     [
+      "rec7f5XMQZexgtQJo",
+      "2019-09-04",
+      50,
+      "Dues",
+      null,
+      "recTjHY5xXhvkCdVT"
+     ]
+    ]
+   },
+   "major": {
+    "columns": [
+     "major_id",
+     "major_name",
+     "department",
+     "college"
+    ],
+    "rows": [
+     [
+      "rec09LedkREyskCNv",
+      "Agricultural Communication",
+      "School of Applied Sciences, Technology and Education",
+      "College of Agriculture and Applied Sciences"
+     ]
+    ]
+   },
+   "member": {
+    "columns": [
+     "member_id",
+     "first_name",
+     "last_name",
+     "email",
+     "position",
+     "t_shirt_size",
+     "phone",
+     "zip",
+     "link_to_major"
+    ],
+    "rows": [
+     [
+      "recTjHY5xXhvkCdVT",
+      "Edwardo",
+      "Ing",
+      "edwardo.ing@lpu.edu",
+      "Member",
+      "Medium",
+      "109-555-7016",
+      47711,
+      "rec09LedkREyskCNv"
+     ]
+    ]
+   },
+   "zip_code": {
+    "columns": [
+     "zip_code",
+     "type",
+     "city",
+     "county",
+     "state",
+     "short_state"
+    ],
+    "rows": [
+     [
+      47711,
+      "Standard",
+      "Evansville",
+      "Vanderburgh County",
+      "Indiana",
+      "IN"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "idx": 26
+ },
+ {
+  "pair_id": "md_kg_mistralai-mixtral-8x7b-instru-4:1331",
+  "db_id": "student_club",
+  "question": "What is the amount of the funds that the Vice President received?",
+  "evidence": "'Vice President' is a position of Student Club; funds received refers to amount.",
+  "gold": "SELECT T2.amount FROM member AS T1 INNER JOIN income AS T2 ON T1.member_id = T2.link_to_member WHERE T1.position = 'Vice President'",
+  "pred": "SELECT SUM(amount) as total_funds_received\nFROM income\nJOIN member ON income.link_to_member = member.member_id\nWHERE position = 'Vice President';",
+  "witness": {
+   "income": {
+    "columns": [
+     "income_id",
+     "date_received",
+     "amount",
+     "source",
+     "notes",
+     "link_to_member"
+    ],
+    "rows": [
+     [
+      "rec7f5XMQZexgtQJo",
+      "2019-09-04",
+      50,
+      "Dues",
+      null,
+      "recTjHY5xXhvkCdVT"
+     ]
+    ]
+   },
+   "major": {
+    "columns": [
+     "major_id",
+     "major_name",
+     "department",
+     "college"
+    ],
+    "rows": [
+     [
+      "rec09LedkREyskCNv",
+      "Agricultural Communication",
+      "School of Applied Sciences, Technology and Education",
+      "College of Agriculture and Applied Sciences"
+     ]
+    ]
+   },
+   "member": {
+    "columns": [
+     "member_id",
+     "first_name",
+     "last_name",
+     "email",
+     "position",
+     "t_shirt_size",
+     "phone",
+     "zip",
+     "link_to_major"
+    ],
+    "rows": [
+     [
+      "recTjHY5xXhvkCdVT",
+      "Edwardo",
+      "Ing",
+      "edwardo.ing@lpu.edu",
+      "Member",
+      "Medium",
+      "109-555-7016",
+      47711,
+      "rec09LedkREyskCNv"
+     ]
+    ]
+   },
+   "zip_code": {
+    "columns": [
+     "zip_code",
+     "type",
+     "city",
+     "county",
+     "state",
+     "short_state"
+    ],
+    "rows": [
+     [
+      47711,
+      "Standard",
+      "Evansville",
+      "Vanderburgh County",
+      "Indiana",
+      "IN"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "idx": 27
+ },
+ {
+  "pair_id": "md_kg_gpt-4-turbo:1114",
+  "db_id": "european_football_2",
+  "question": "What was the average overall rating for Marko Arnautovic from 2007/2/22 to 2016/4/21?",
+  "evidence": "average overall rating refers to avg(overall_rating); Marko Arnautovic refers to player_name = 'Marko Arnautovic'; from 2007/2/22 to 2016/4/21 refers to the first 10 characters of date BETWEEN '2007-02-22' and '2016-04-21'",
+  "gold": "SELECT CAST(SUM(t2.overall_rating) AS REAL) / COUNT(t2.id) FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_fifa_api_id = t2.player_fifa_api_id WHERE t1.player_name = 'Marko Arnautovic' AND SUBSTR(t2.`date`, 1, 10) BETWEEN '2007-02-22' AND '2016-04-21'",
+  "pred": "SELECT AVG(overall_rating) AS average_overall_rating\nFROM Player_Attributes\nJOIN Player ON Player.player_api_id = Player_Attributes.player_api_id\nWHERE Player.player_name = 'Marko Arnautovic'\nAND SUBSTR(Player_Attributes.date, 1, 10) BETWEEN '2007-02-22' AND '2016-04-21'",
+  "witness": {
+   "Player": {
+    "columns": [
+     "id",
+     "player_api_id",
+     "player_name",
+     "player_fifa_api_id",
+     "birthday",
+     "height",
+     "weight"
+    ],
+    "rows": [
+     [
+      1181,
+      2790,
+      "Marko Arnautovic",
+      10,
+      "1993-05-24 00:00:00",
+      208.28,
+      163
+     ]
+    ]
+   },
+   "Player_Attributes": {
+    "columns": [
+     "id",
+     "player_fifa_api_id",
+     "player_api_id",
+     "date",
+     "overall_rating",
+     "potential",
+     "preferred_foot",
+     "attacking_work_rate",
+     "defensive_work_rate",
+     "crossing",
+     "finishing",
+     "heading_accuracy",
+     "short_passing",
+     "volleys",
+     "dribbling",
+     "curve",
+     "free_kick_accuracy",
+     "long_passing",
+     "ball_control",
+     "acceleration",
+     "sprint_speed",
+     "agility",
+     "reactions",
+     "balance",
+     "shot_power",
+     "jumping",
+     "stamina",
+     "strength",
+     "long_shots",
+     "aggression",
+     "interceptions",
+     "positioning",
+     "vision",
+     "penalties",
+     "marking",
+     "standing_tackle",
+     "sliding_tackle",
+     "gk_diving",
+     "gk_handling",
+     "gk_kicking",
+     "gk_positioning",
+     "gk_reflexes"
+    ],
+    "rows": [
+     [
+      1182,
+      10,
+      2790,
+      "2007-02-22 00:00:00",
+      null,
+      68,
+      "right",
+      "medium",
+      "medium",
+      52,
+      23,
+      47,
+      29,
+      26,
+      52,
+      32,
+      32,
+      28,
+      38,
+      61,
+      62,
+      53,
+      54,
+      72,
+      30,
+      62,
+      53,
+      57,
+      29,
+      56,
+      49,
+      43,
+      32,
+      35,
+      46,
+      53,
+      58,
+      13,
+      16,
+      8,
+      12,
+      13
+     ],
+     [
+      1186,
+      10,
+      2790,
+      "2007-02-22 00:00:00",
+      79,
+      76,
+      "right",
+      "high",
+      "medium",
+      72,
+      72,
+      69,
+      68,
+      65,
+      81,
+      69,
+      75,
+      49,
+      77,
+      89,
+      88,
+      89,
+      62,
+      80,
+      73,
+      64,
+      83,
+      57,
+      65,
+      45,
+      45,
+      75,
+      67,
+      83,
+      19,
+      30,
+      28,
+      13,
+      11,
+      10,
+      13,
+      15
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    39.5
+   ]
+  ],
+  "pred_rows": [
+   [
+    79.0
+   ]
+  ],
+  "idx": 28
+ },
+ {
+  "pair_id": "md_ta_gpt-35-turbo_cot:212",
+  "db_id": "toxicology",
+  "question": "Which element is the least numerous in non-carcinogenic molecules?",
+  "evidence": "label = '-' means molecules are non-carcinogenic; least numerous refers to MIN(COUNT(element));",
+  "gold": "SELECT T.element FROM (SELECT T1.element, COUNT(DISTINCT T1.molecule_id) FROM atom AS T1 INNER JOIN molecule AS T2 ON T1.molecule_id = T2.molecule_id WHERE T2.label = '-' GROUP BY T1.element ORDER BY COUNT(DISTINCT T1.molecule_id) ASC LIMIT 1) t",
+  "pred": "SELECT atom.element\nFROM molecule\nJOIN atom ON molecule.molecule_id = atom.molecule_id\nWHERE molecule.label = '-'\nGROUP BY atom.element\nORDER BY COUNT(atom.element) ASC\nLIMIT 1;",
+  "witness": {
+   "atom": {
+    "columns": [
+     "atom_id",
+     "molecule_id",
+     "element"
+    ],
+    "rows": [
+     [
+      "TR060_22",
+      "TR060",
+      "c"
+     ],
+     [
+      "TR060_49",
+      "TR060",
+      "h"
+     ],
+     [
+      "TR060_5",
+      "TR060",
+      "c"
+     ]
+    ]
+   },
+   "bond": {
+    "columns": [
+     "bond_id",
+     "molecule_id",
+     "bond_type"
+    ],
+    "rows": [
+     [
+      "TR060_5_49",
+      "TR060",
+      "-"
+     ]
+    ]
+   },
+   "connected": {
+    "columns": [
+     "atom_id",
+     "atom_id2",
+     "bond_id"
+    ],
+    "rows": [
+     [
+      "TR060_5",
+      "TR060_49",
+      "TR060_5_49"
+     ],
+     [
+      "TR060_49",
+      "TR060_5",
+      "TR060_5_49"
+     ]
+    ]
+   },
+   "molecule": {
+    "columns": [
+     "molecule_id",
+     "label"
+    ],
+    "rows": [
+     [
+      "TR060",
+      "-"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "c"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "h"
+   ]
+  ],
+  "idx": 29
+ },
+ {
+  "pair_id": "md_ta_gpt-4-o_cot:977",
+  "db_id": "formula_1",
+  "question": "From race no. 50 to 100, how many finishers have been disqualified?",
+  "evidence": "disqualified refers to statusID = 2, finisher refers to time! = null; race no. refers to raceId; raceId > 50 and raceId < 100;",
+  "gold": "SELECT SUM(IIF(time IS NOT NULL, 1, 0)) FROM results WHERE statusId = 2 AND raceID < 100 AND raceId > 50",
+  "pred": "select count(*) \nfrom results \nwhere raceId > 50 \nand raceId < 100 \nand time is not null \nand statusId = 2;",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      6,
+      "monaco",
+      "Circuit de Monaco",
+      "Monte-Carlo",
+      "Monaco",
+      43.7347,
+      7.42056,
+      null,
+      "http://en.wikipedia.org/wiki/Circuit_de_Monaco"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      18,
+      "minardi",
+      "Minardi",
+      "Italian",
+      "http://en.wikipedia.org/wiki/Minardi"
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      69,
+      "badoer",
+      null,
+      "BAD",
+      "Luca",
+      "Badoer",
+      "1971-01-25",
+      "Italian",
+      "http://en.wikipedia.org/wiki/Luca_Badoer"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      178,
+      1999,
+      4,
+      6,
+      "Monaco Grand Prix",
+      "1999-05-16",
+      null,
+      "http://en.wikipedia.org/wiki/1999_Monaco_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      3390,
+      178,
+      69,
+      18,
+      20,
+      20,
+      null,
+      "R",
+      21,
+      0.0,
+      10,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      6
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      1999,
+      "http://en.wikipedia.org/wiki/1999_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      6,
+      "Gearbox"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "idx": 30
+ },
+ {
+  "pair_id": "md_kg_gpt-35-turbo:779",
+  "db_id": "superhero",
+  "question": "How many powers does Amazo hero have?",
+  "evidence": "Amazo hero refers to superhero_name = 'Amazo';",
+  "gold": "SELECT COUNT(T1.power_id) FROM hero_power AS T1 INNER JOIN superhero AS T2 ON T1.hero_id = T2.id WHERE T2.superhero_name = 'Amazo'",
+  "pred": "SELECT COUNT(power_id) \nFROM hero_power \nWHERE hero_id = (SELECT id FROM superhero WHERE superhero_name = 'Amazo')",
+  "witness": {
+   "alignment": {
+    "columns": [
+     "id",
+     "alignment"
+    ],
+    "rows": [
+     [
+      2,
+      "Bad"
+     ]
+    ]
+   },
+   "colour": {
+    "columns": [
+     "id",
+     "colour"
+    ],
+    "rows": [
+     [
+      1,
+      "No Colour"
+     ],
+     [
+      23,
+      "Red"
+     ]
+    ]
+   },
+   "gender": {
+    "columns": [
+     "id",
+     "gender"
+    ],
+    "rows": [
+     [
+      1,
+      "Male"
+     ]
+    ]
+   },
+   "hero_power": {
+    "columns": [
+     "hero_id",
+     "power_id"
+    ],
+    "rows": [
+     [
+      21,
+      127
+     ],
+     [
+      21,
+      3
+     ],
+     [
+      1004,
+      127
+     ],
+     [
+      1004,
+      3
+     ]
+    ]
+   },
+   "publisher": {
+    "columns": [
+     "id",
+     "publisher_name"
+    ],
+    "rows": [
+     [
+      4,
+      "DC Comics"
+     ]
+    ]
+   },
+   "race": {
+    "columns": [
+     "id",
+     "race"
+    ],
+    "rows": [
+     [
+      5,
+      "Android"
+     ]
+    ]
+   },
+   "superhero": {
+    "columns": [
+     "id",
+     "superhero_name",
+     "full_name",
+     "gender_id",
+     "eye_colour_id",
+     "hair_colour_id",
+     "skin_colour_id",
+     "race_id",
+     "publisher_id",
+     "alignment_id",
+     "height_cm",
+     "weight_kg"
+    ],
+    "rows": [
+     [
+      21,
+      "Amazo",
+      "-",
+      1,
+      23,
+      1,
+      1,
+      5,
+      4,
+      2,
+      257,
+      173
+     ],
+     [
+      1004,
+      "Amazo",
+      "-",
+      1,
+      23,
+      1,
+      1,
+      5,
+      4,
+      2,
+      257,
+      173
+     ]
+    ]
+   },
+   "superpower": {
+    "columns": [
+     "id",
+     "power_name"
+    ],
+    "rows": [
+     [
+      127,
+      "Magnetism"
+     ],
+     [
+      3,
+      "Lantern Power Ring"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    4
+   ]
+  ],
+  "pred_rows": [
+   [
+    2
+   ]
+  ],
+  "idx": 31
+ },
+ {
+  "pair_id": "md_ta_gpt-4-o_cot:1084",
+  "db_id": "european_football_2",
+  "question": "Among the players born before the year 1986, how many of them would remain in his position and defense while the team attacked?",
+  "evidence": "players born before the year 1986 refers to strftime('%Y', birthday)<'1986'; players who would remain in his position and defense while the team attacked refers to defensive_work_rate = 'high'; Should consider DISTINCT in the final result;",
+  "gold": "SELECT COUNT(DISTINCT t1.player_name) FROM Player AS t1 INNER JOIN Player_Attributes AS t2 ON t1.player_api_id = t2.player_api_id WHERE STRFTIME('%Y',t1.birthday) < '1986' AND t2.defensive_work_rate = 'high'",
+  "pred": "select count(distinct Player.id) \nfrom Player \ninner join Player_Attributes \non Player.player_api_id = Player_Attributes.player_api_id \nwhere strftime('%Y', Player.birthday) < '1986' \nand Player_Attributes.defensive_work_rate = 'high'",
+  "witness": {
+   "Player": {
+    "columns": [
+     "id",
+     "player_api_id",
+     "player_name",
+     "player_fifa_api_id",
+     "birthday",
+     "height",
+     "weight"
+    ],
+    "rows": [
+     [
+      4525,
+      2983,
+      "Felipe",
+      249,
+      "1980-08-05 00:00:00",
+      208.28,
+      163
+     ],
+     [
+      4529,
+      2770,
+      "Felipe",
+      246,
+      "1980-08-05 00:00:00",
+      208.28,
+      179
+     ]
+    ]
+   },
+   "Player_Attributes": {
+    "columns": [
+     "id",
+     "player_fifa_api_id",
+     "player_api_id",
+     "date",
+     "overall_rating",
+     "potential",
+     "preferred_foot",
+     "attacking_work_rate",
+     "defensive_work_rate",
+     "crossing",
+     "finishing",
+     "heading_accuracy",
+     "short_passing",
+     "volleys",
+     "dribbling",
+     "curve",
+     "free_kick_accuracy",
+     "long_passing",
+     "ball_control",
+     "acceleration",
+     "sprint_speed",
+     "agility",
+     "reactions",
+     "balance",
+     "shot_power",
+     "jumping",
+     "stamina",
+     "strength",
+     "long_shots",
+     "aggression",
+     "interceptions",
+     "positioning",
+     "vision",
+     "penalties",
+     "marking",
+     "standing_tackle",
+     "sliding_tackle",
+     "gk_diving",
+     "gk_handling",
+     "gk_kicking",
+     "gk_positioning",
+     "gk_reflexes"
+    ],
+    "rows": [
+     [
+      4526,
+      249,
+      2983,
+      "2007-02-22 00:00:00",
+      51,
+      68,
+      "right",
+      "medium",
+      "high",
+      52,
+      23,
+      47,
+      29,
+      26,
+      52,
+      32,
+      32,
+      28,
+      38,
+      61,
+      62,
+      53,
+      54,
+      72,
+      30,
+      62,
+      53,
+      57,
+      29,
+      56,
+      49,
+      43,
+      32,
+      35,
+      46,
+      53,
+      58,
+      13,
+      16,
+      8,
+      12,
+      13
+     ],
+     [
+      4530,
+      246,
+      2770,
+      "2016-02-11 00:00:00",
+      75,
+      76,
+      "right",
+      "high",
+      "high",
+      72,
+      72,
+      69,
+      68,
+      65,
+      81,
+      69,
+      75,
+      49,
+      77,
+      89,
+      88,
+      89,
+      62,
+      80,
+      73,
+      64,
+      83,
+      57,
+      65,
+      45,
+      45,
+      75,
+      67,
+      83,
+      19,
+      30,
+      28,
+      13,
+      11,
+      10,
+      13,
+      15
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    1
+   ]
+  ],
+  "pred_rows": [
+   [
+    2
+   ]
+  ],
+  "idx": 32
+ },
+ {
+  "pair_id": "md_ta_gpt-4-o_cot:880",
+  "db_id": "formula_1",
+  "question": "Paul di Resta was in the No. 853 race, what percent faster did he finish in the 853rd race than the next race for the fastest lap speed?",
+  "evidence": "Paul di Resta refers to the full name of the driver; Full name of the driver refers to drivers.forename ='Paul' and drivers.surname = 'di Resta'; race number refers to raceId; percentage = DIVIDE(SUBTRACT(fastestLapSpeed(raceId = 853), (fastestLapSpeed (raceId = 854)) * 100 , (fastestLapSpeed(raceId = 853))",
+  "gold": "SELECT (SUM(IIF(T2.raceId = 853, T2.fastestLapSpeed, 0)) - SUM(IIF(T2.raceId = 854, T2.fastestLapSpeed, 0))) * 100 / SUM(IIF(T2.raceId = 853, T2.fastestLapSpeed, 0)) FROM drivers AS T1 INNER JOIN results AS T2 ON T2.driverId = T1.driverId WHERE T1.forename = 'Paul' AND T1.surname = 'di Resta'",
+  "pred": "SELECT \n    (CAST((r1.fastestLapSpeed - r2.fastestLapSpeed) AS REAL) * 100 / r1.fastestLapSpeed) AS percentage_faster\nFROM \n    results r1\nINNER JOIN \n    drivers d ON r1.driverId = d.driverId\nINNER JOIN \n    results r2 ON d.driverId = r2.driverId\nWHERE \n    d.forename = 'Paul' \n    AND d.surname = 'di Resta'\n    AND r1.raceId = 853\n    AND r2.raceId = 854",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      6,
+      "monaco",
+      "Circuit de Monaco",
+      "Monte-Carlo",
+      "Monaco",
+      43.7347,
+      7.42056,
+      null,
+      "http://en.wikipedia.org/wiki/Circuit_de_Monaco"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      18,
+      "minardi",
+      "Minardi",
+      "Italian",
+      "http://en.wikipedia.org/wiki/Minardi"
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      69,
+      "badoer",
+      null,
+      "BAD",
+      "Luca",
+      "Badoer",
+      "1971-01-25",
+      "Italian",
+      "http://en.wikipedia.org/wiki/Luca_Badoer"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      178,
+      1999,
+      4,
+      6,
+      "Monaco Grand Prix",
+      "1999-05-16",
+      null,
+      "http://en.wikipedia.org/wiki/1999_Monaco_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      3390,
+      178,
+      69,
+      18,
+      20,
+      20,
+      null,
+      "R",
+      21,
+      0.0,
+      10,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      6
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      1999,
+      "http://en.wikipedia.org/wiki/1999_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      6,
+      "Gearbox"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [],
+  "idx": 33
+ },
+ {
+  "pair_id": "md_ta_gpt-4-turbo_cot:897",
+  "db_id": "formula_1",
+  "question": "Name the driver with the most winning. Mention his nationality and what is his maximum point scores.",
+  "evidence": "Full name of the driver refers to drivers.forename and drivers.surname; the most winning refers to MAX(COUNT(wins)); average point scores refers to MAX(points);",
+  "gold": "SELECT T1.forename, T1.surname, T1.nationality, MAX(T2.points) FROM drivers AS T1 INNER JOIN driverStandings AS T2 ON T2.driverId = T1.driverId WHERE T2.wins >= 1 GROUP BY T1.forename, T1.surname, T1.nationality ORDER BY COUNT(T2.wins) DESC LIMIT 1",
+  "pred": "SELECT d.forename, d.surname, d.nationality, MAX(ds.points) as max_points\nFROM drivers d\nINNER JOIN driverStandings ds ON d.driverId = ds.driverId\nGROUP BY d.driverId\nORDER BY SUM(ds.wins) DESC\nLIMIT 1",
+  "witness": {
+   "circuits": {
+    "columns": [
+     "circuitId",
+     "circuitRef",
+     "name",
+     "location",
+     "country",
+     "lat",
+     "lng",
+     "alt",
+     "url"
+    ],
+    "rows": [
+     [
+      30,
+      "kyalami",
+      "Kyalami",
+      "Midrand",
+      "South Africa",
+      -25.9894,
+      28.0767,
+      null,
+      "http://en.wikipedia.org/wiki/Kyalami"
+     ],
+     [
+      20,
+      "nurburgring",
+      "Nürburgring",
+      "Nürburg",
+      "Germany",
+      50.3356,
+      6.9475,
+      null,
+      "http://en.wikipedia.org/wiki/N%C3%BCrburgring"
+     ]
+    ]
+   },
+   "constructors": {
+    "columns": [
+     "constructorId",
+     "constructorRef",
+     "name",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      32,
+      "team_lotus",
+      "Team Lotus",
+      "British",
+      "http://en.wikipedia.org/wiki/Team_Lotus"
+     ]
+    ]
+   },
+   "driverStandings": {
+    "columns": [
+     "driverStandingsId",
+     "raceId",
+     "driverId",
+     "points",
+     "position",
+     "positionText",
+     "wins"
+    ],
+    "rows": [
+     [
+      53158,
+      632,
+      293,
+      0.0,
+      19,
+      "19",
+      0
+     ]
+    ]
+   },
+   "drivers": {
+    "columns": [
+     "driverId",
+     "driverRef",
+     "number",
+     "code",
+     "forename",
+     "surname",
+     "dob",
+     "nationality",
+     "url"
+    ],
+    "rows": [
+     [
+      293,
+      "charlton",
+      null,
+      null,
+      "Dave",
+      "Charlton",
+      "1936-10-27",
+      "South African",
+      "http://en.wikipedia.org/wiki/Dave_Charlton"
+     ]
+    ]
+   },
+   "races": {
+    "columns": [
+     "raceId",
+     "year",
+     "round",
+     "circuitId",
+     "name",
+     "date",
+     "time",
+     "url"
+    ],
+    "rows": [
+     [
+      632,
+      1971,
+      1,
+      30,
+      "South African Grand Prix",
+      "1971-03-06",
+      null,
+      "http://en.wikipedia.org/wiki/1971_South_African_Grand_Prix"
+     ],
+     [
+      627,
+      1972,
+      8,
+      20,
+      "German Grand Prix",
+      "1972-07-30",
+      null,
+      "http://en.wikipedia.org/wiki/1972_German_Grand_Prix"
+     ]
+    ]
+   },
+   "results": {
+    "columns": [
+     "resultId",
+     "raceId",
+     "driverId",
+     "constructorId",
+     "number",
+     "grid",
+     "position",
+     "positionText",
+     "positionOrder",
+     "points",
+     "laps",
+     "time",
+     "milliseconds",
+     "fastestLap",
+     "rank",
+     "fastestLapTime",
+     "fastestLapSpeed",
+     "statusId"
+    ],
+    "rows": [
+     [
+      15518,
+      627,
+      293,
+      32,
+      29,
+      26,
+      null,
+      "R",
+      26,
+      0.0,
+      4,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      68
+     ]
+    ]
+   },
+   "seasons": {
+    "columns": [
+     "year",
+     "url"
+    ],
+    "rows": [
+     [
+      1971,
+      "http://en.wikipedia.org/wiki/1971_Formula_One_season"
+     ],
+     [
+      1972,
+      "http://en.wikipedia.org/wiki/1972_Formula_One_season"
+     ]
+    ]
+   },
+   "status": {
+    "columns": [
+     "statusId",
+     "status"
+    ],
+    "rows": [
+     [
+      68,
+      "Physical"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    "Dave",
+    "Charlton",
+    "South African",
+    0.0
+   ]
+  ],
+  "idx": 34
+ },
+ {
+  "pair_id": "md_ta_gpt-4-turbo_cot:138",
+  "db_id": "financial",
+  "question": "In the branch where the second-highest number of crimes were committed in 1995 occurred, how many male clients are there?",
+  "evidence": "Male refers to gender = 'M'; A15 stands for no. of commited crimes 1995",
+  "gold": "SELECT COUNT(T1.client_id) FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T1.gender = 'M' AND T2.A15 = (SELECT T3.A15 FROM district AS T3 ORDER BY T3.A15 DESC LIMIT 1, 1)",
+  "pred": "SELECT COUNT(client.client_id) AS male_clients_count\nFROM client\nINNER JOIN (\n  SELECT district_id\n  FROM district\n  ORDER BY A15 DESC\n  LIMIT 1 OFFSET 1\n) AS second_highest_crimes_district ON client.district_id = second_highest_crimes_district.district_id\nWHERE client.gender = 'M'",
+  "witness": {
+   "account": {
+    "columns": [
+     "account_id",
+     "district_id",
+     "frequency",
+     "date"
+    ],
+    "rows": [
+     [
+      253,
+      46,
+      "POPLATEK MESICNE",
+      "1995-12-05"
+     ],
+     [
+      290,
+      56,
+      "POPLATEK MESICNE",
+      "1993-12-02"
+     ],
+     [
+      2837,
+      46,
+      "POPLATEK MESICNE",
+      "1996-06-02"
+     ],
+     [
+      11065,
+      11,
+      "POPLATEK MESICNE",
+      "1993-03-19"
+     ],
+     [
+      1667,
+      56,
+      "POPLATEK MESICNE",
+      "1996-08-18"
+     ],
+     [
+      1317,
+      56,
+      "POPLATEK MESICNE",
+      "1994-02-18"
+     ],
+     [
+      451,
+      11,
+      "POPLATEK MESICNE",
+      "1994-05-05"
+     ]
+    ]
+   },
+   "client": {
+    "columns": [
+     "client_id",
+     "gender",
+     "birth_date",
+     "district_id"
+    ],
+    "rows": [
+     [
+      3429,
+      "M",
+      "1941-10-16",
+      46
+     ],
+     [
+      13603,
+      "M",
+      "1941-07-28",
+      46
+     ],
+     [
+      2022,
+      "M",
+      "1939-11-12",
+      56
+     ],
+     [
+      1592,
+      "M",
+      "1928-04-11",
+      56
+     ],
+     [
+      305,
+      "M",
+      "1938-06-08",
+      46
+     ],
+     [
+      352,
+      "M",
+      "1940-08-27",
+      56
+     ],
+     [
+      543,
+      "F",
+      "1958-04-15",
+      11
+     ]
+    ]
+   },
+   "disp": {
+    "columns": [
+     "disp_id",
+     "client_id",
+     "account_id",
+     "type"
+    ],
+    "rows": [
+     [
+      3429,
+      3429,
+      2837,
+      "OWNER"
+     ],
+     [
+      13295,
+      13603,
+      11065,
+      "OWNER"
+     ],
+     [
+      2022,
+      2022,
+      1667,
+      "OWNER"
+     ],
+     [
+      1592,
+      1592,
+      1317,
+      "OWNER"
+     ],
+     [
+      305,
+      305,
+      253,
+      "OWNER"
+     ],
+     [
+      352,
+      352,
+      290,
+      "OWNER"
+     ],
+     [
+      543,
+      543,
+      451,
+      "OWNER"
+     ]
+    ]
+   },
+   "district": {
+    "columns": [
+     "district_id",
+     "A2",
+     "A3",
+     "A4",
+     "A5",
+     "A6",
+     "A7",
+     "A8",
+     "A9",
+     "A10",
+     "A11",
+     "A12",
+     "A13",
+     "A14",
+     "A15",
+     "A16"
+    ],
+    "rows": [
+     [
+      46,
+      "Nachod",
+      "east Bohemia",
+      "112709",
+      "48",
+      "20",
+      "7",
+      3,
+      10,
+      73.5,
+      8369,
+      1.7,
+      2.31,
+      117,
+      2854,
+      2618
+     ],
+     [
+      56,
+      "Breclav",
+      "south Moravia",
+      "124605",
+      "11",
+      "42",
+      "14",
+      1,
+      8,
+      46.0,
+      8772,
+      4.6,
+      4.98,
+      126,
+      2854,
+      3158
+     ],
+     [
+      11,
+      "Praha - zapad",
+      "central Bohemia",
+      "75637",
+      "35",
+      "36",
+      "9",
+      0,
+      7,
+      36.5,
+      9622,
+      0.4,
+      0.59,
+      154,
+      3475,
+      3529
+     ]
+    ]
+   },
+   "trans": {
+    "columns": [
+     "trans_id",
+     "account_id",
+     "date",
+     "type",
+     "operation",
+     "amount",
+     "balance",
+     "k_symbol",
+     "bank",
+     "account"
+    ],
+    "rows": [
+     [
+      76059,
+      253,
+      "1996-05-03",
+      "VYDAJ",
+      "VYBER",
+      19700,
+      46687,
+      null,
+      null,
+      null
+     ],
+     [
+      87058,
+      290,
+      "1997-12-31",
+      "VYDAJ",
+      "VYBER",
+      15,
+      70225,
+      "SLUZBY",
+      null,
+      null
+     ],
+     [
+      833002,
+      2837,
+      "1997-03-07",
+      "PRIJEM",
+      "VKLAD",
+      21150,
+      43204,
+      null,
+      null,
+      null
+     ],
+     [
+      3331860,
+      11065,
+      "1997-01-27",
+      "VYDAJ",
+      "VYBER",
+      7800,
+      17456,
+      null,
+      null,
+      null
+     ],
+     [
+      3585172,
+      1667,
+      "1998-12-31",
+      "PRIJEM",
+      null,
+      73,
+      17783,
+      "UROK",
+      null,
+      null
+     ],
+     [
+      3573920,
+      1317,
+      "1995-01-31",
+      "PRIJEM",
+      null,
+      71,
+      14175,
+      "UROK",
+      null,
+      null
+     ],
+     [
+      134699,
+      451,
+      "1998-12-10",
+      "VYDAJ",
+      "VYBER",
+      3600,
+      16783,
+      null,
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    6
+   ]
+  ],
+  "pred_rows": [
+   [
+    3
+   ]
+  ],
+  "idx": 35
+ },
+ {
+  "pair_id": "md_kg_gpt-4:206",
+  "db_id": "toxicology",
+  "question": "What elements are in the TR004_8_9 bond atoms?",
+  "evidence": "TR004_8_9 bond atoms refers to bond_id = 'TR004_8_9';",
+  "gold": "SELECT DISTINCT T1.element FROM atom AS T1 INNER JOIN connected AS T2 ON T1.atom_id = T2.atom_id WHERE T2.bond_id = 'TR004_8_9'",
+  "pred": "SELECT a.element\nFROM connected c\nJOIN atom a ON c.atom_id = a.atom_id OR c.atom_id2 = a.atom_id\nWHERE c.bond_id = 'TR004_8_9'",
+  "witness": {
+   "atom": {
+    "columns": [
+     "atom_id",
+     "molecule_id",
+     "element"
+    ],
+    "rows": [
+     [
+      "TR004_8",
+      "TR004",
+      "b"
+     ],
+     [
+      "TR004_9",
+      "TR004",
+      "c"
+     ],
+     [
+      "YO378_0",
+      "XV059",
+      "c"
+     ]
+    ]
+   },
+   "bond": {
+    "columns": [
+     "bond_id",
+     "molecule_id",
+     "bond_type"
+    ],
+    "rows": [
+     [
+      "TR004_8_9",
+      "TR004",
+      "-"
+     ],
+     [
+      "Tr004_8_9",
+      "XV059",
+      "-"
+     ]
+    ]
+   },
+   "connected": {
+    "columns": [
+     "atom_id",
+     "atom_id2",
+     "bond_id"
+    ],
+    "rows": [
+     [
+      "TR004_8",
+      "TR004_9",
+      "Tr004_8_9"
+     ],
+     [
+      "TR004_9",
+      "TR004_8",
+      "TR004_8_9"
+     ]
+    ]
+   },
+   "molecule": {
+    "columns": [
+     "molecule_id",
+     "label"
+    ],
+    "rows": [
+     [
+      "TR004",
+      "-"
+     ],
+     [
+      "XV059",
+      "+"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    "c"
+   ]
+  ],
+  "pred_rows": [
+   [
+    "b"
+   ],
+   [
+    "c"
+   ]
+  ],
+  "idx": 36
+ },
+ {
+  "pair_id": "md_ta_gpt-35-turbo_cot:669",
+  "db_id": "codebase_community",
+  "question": "When did 'chl' cast its first vote in a post?",
+  "evidence": "DisplayName = 'chl'; cast its first vote refers to MIN(CreationDate);",
+  "gold": "SELECT T2.CreationDate FROM users AS T1 INNER JOIN votes AS T2 ON T1.Id = T2.UserId WHERE T1.DisplayName = 'chl' ORDER BY T2.CreationDate LIMIT 1",
+  "pred": "SELECT MIN(votes.CreationDate) \nFROM votes \nINNER JOIN users ON votes.UserId = users.Id \nWHERE users.DisplayName = 'chl'",
+  "witness": {
+   "postHistory": {
+    "columns": [
+     "Id",
+     "PostHistoryTypeId",
+     "PostId",
+     "RevisionGUID",
+     "CreationDate",
+     "UserId",
+     "Text",
+     "Comment",
+     "UserDisplayName"
+    ],
+    "rows": [
+     [
+      1775,
+      5,
+      732,
+      "353bc74d-64f3-458c-84b0-452cdcdb0646",
+      "2010-07-27 18:08:19.0",
+      223,
+      "\"Strange events permit themselves the luxury of occurring. \"\\\\n\\\\n-- [Charlie Chan][1]\\\\n\\\\n\\\\n  [1]: http://gutenberg.net.au/ebooks02/0200691.txt",
+      "added 1 characters in body",
+      ""
+     ]
+    ]
+   },
+   "posts": {
+    "columns": [
+     "Id",
+     "PostTypeId",
+     "AcceptedAnswerId",
+     "CreaionDate",
+     "Score",
+     "ViewCount",
+     "Body",
+     "OwnerUserId",
+     "LasActivityDate",
+     "Title",
+     "Tags",
+     "AnswerCount",
+     "CommentCount",
+     "FavoriteCount",
+     "LastEditorUserId",
+     "LastEditDate",
+     "CommunityOwnedDate",
+     "ParentId",
+     "ClosedDate",
+     "OwnerDisplayName",
+     "LastEditorDisplayName"
+    ],
+    "rows": [
+     [
+      732,
+      2,
+      null,
+      "2010-07-27 06:51:24.0",
+      57,
+      null,
+      "<blockquote>\n  <p>Strange events permit themselves the\n  luxury of occurring.</p>\n</blockquote>\n\n<p>-- <a href=\"http://gutenberg.net.au/ebooks02/0200691.txt\">Charlie Chan</a></p>\n",
+      251,
+      "2010-08-07 10:08:04.0",
+      null,
+      null,
+      null,
+      4,
+      null,
+      380,
+      "2010-08-07 10:08:04.0",
+      "2010-07-27 06:51:24.0",
+      726,
+      null,
+      null,
+      null
+     ]
+    ]
+   },
+   "users": {
+    "columns": [
+     "Id",
+     "Reputation",
+     "CreationDate",
+     "DisplayName",
+     "LastAccessDate",
+     "WebsiteUrl",
+     "Location",
+     "AboutMe",
+     "Views",
+     "UpVotes",
+     "DownVotes",
+     "AccountId",
+     "Age",
+     "ProfileImageUrl"
+    ],
+    "rows": [
+     [
+      223,
+      4022,
+      "2010-07-20 12:52:54.0",
+      "robin girard",
+      "2014-09-11 22:19:31.0",
+      "http://www.mines-paristech.fr/Services/Annuaire/&?id=8828",
+      "France",
+      "<p>Reasearcher in applications of mathematics and statistics in the field of renewable energy.<br>\nAlso on <a href=\"http://mathoverflow.net/users/6531/robin-girard\" rel=\"nofollow\">Mathoverflow</a> </p>\n",
+      1471,
+      345,
+      19,
+      146757,
+      34,
+      null
+     ],
+     [
+      251,
+      7931,
+      "2010-07-21 03:28:48.0",
+      "ars",
+      "2014-02-26 14:27:12.0",
+      null,
+      null,
+      null,
+      984,
+      819,
+      0,
+      1895,
+      null,
+      null
+     ],
+     [
+      380,
+      101,
+      "2010-07-27 01:46:13.0",
+      "Jonik",
+      "2013-07-08 19:35:21.0",
+      "http://careers.stackoverflow.com/jonik",
+      "Finland",
+      null,
+      2,
+      4,
+      0,
+      22705,
+      35,
+      null
+     ]
+    ]
+   },
+   "votes": {
+    "columns": [
+     "Id",
+     "PostId",
+     "VoteTypeId",
+     "CreationDate",
+     "UserId",
+     "BountyAmount"
+    ],
+    "rows": [
+     [
+      26579,
+      732,
+      2,
+      "2011-01-14",
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  "gold_rows": [],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "idx": 37
+ },
+ {
+  "pair_id": "md_kg_gpt-4:1486",
+  "db_id": "debit_card_specializing",
+  "question": "Is it true that more SMEs pay in Czech koruna than in euros? If so, how many more?",
+  "evidence": "Amount of more SMEs = Total of SMEs pay using Currency CZK - Total of SMEs pay using Currency EUR",
+  "gold": "SELECT SUM(Currency = 'CZK') - SUM(Currency = 'EUR') FROM customers WHERE Segment = 'SME'",
+  "pred": "SELECT\n    (SELECT COUNT(DISTINCT CustomerID)\n     FROM customers\n     WHERE Segment = 'SME' AND Currency = 'CZK') -\n    (SELECT COUNT(DISTINCT CustomerID)\n     FROM customers\n     WHERE Segment = 'SME' AND Currency = 'EUR') AS MoreSMEsCZKThanEUR",
+  "witness": {
+   "customers": {
+    "columns": [
+     "CustomerID",
+     "Segment",
+     "Currency"
+    ],
+    "rows": [
+     [
+      26579,
+      "LAM",
+      "CZK"
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    null
+   ]
+  ],
+  "pred_rows": [
+   [
+    0
+   ]
+  ],
+  "idx": 38
+ },
+ {
+  "pair_id": "md_ta_meta-llama-3-70b-instruct2_cot:1476",
+  "db_id": "debit_card_specializing",
+  "question": "What was the difference in gas consumption between CZK-paying customers and EUR-paying customers in 2012?",
+  "evidence": "Year 2012 can be presented as Between 201201 And 201212; The first 4 strings of the Date values in the yearmonth table can represent year; Difference in Consumption = CZK customers consumption in 2012 - EUR customers consumption in 2012",
+  "gold": "SELECT SUM(IIF(T1.Currency = 'CZK', T2.Consumption, 0)) - SUM(IIF(T1.Currency = 'EUR', T2.Consumption, 0)) FROM customers AS T1 INNER JOIN yearmonth AS T2 ON T1.CustomerID = T2.CustomerID WHERE SUBSTR(T2.Date, 1, 4) = '2012'",
+  "pred": "SELECT \n  SUM(CASE WHEN c.Currency = 'CZK' THEN ym.Consumption ELSE 0 END) - \n  SUM(CASE WHEN c.Currency = 'EUR' THEN ym.Consumption ELSE 0 END) AS difference_in_gas_consumption\nFROM \n  yearmonth ym\n  JOIN customers c ON ym.CustomerID = c.CustomerID\nWHERE \n  ym.Date BETWEEN '201201' AND '201212';",
+  "witness": {
+   "customers": {
+    "columns": [
+     "CustomerID",
+     "Segment",
+     "Currency"
+    ],
+    "rows": [
+     [
+      37432,
+      "SME",
+      "CZK"
+     ]
+    ]
+   },
+   "yearmonth": {
+    "columns": [
+     "CustomerID",
+     "Date",
+     "Consumption"
+    ],
+    "rows": [
+     [
+      37432,
+      "201243",
+      51.66
+     ]
+    ]
+   }
+  },
+  "gold_rows": [
+   [
+    51.66
+   ]
+  ],
+  "pred_rows": [
+   [
+    null
+   ]
+  ],
+  "idx": 39
+ }
+]

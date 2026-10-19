@@ -1,0 +1,242 @@
+{
+ "files": {
+  "ta_gpt-35-turbo_cot": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/TA_output/predict_mini_dev_gpt-35-turbo_cot_SQLite.json",
+   "sha256": "b055397306e17aaf934c55d7a2d9e78a475fdeea657ae26093a3a56f7c59320f"
+  },
+  "ta_gpt-4-o_cot": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/TA_output/predict_mini_dev_gpt-4-o_cot_SQLite.json",
+   "sha256": "a49977f96af06c06bd002d50bceb3b43937789c3ff76226ac7bd604b6357ede8"
+  },
+  "ta_gpt-4-turbo_cot": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/TA_output/predict_mini_dev_gpt-4-turbo_cot_SQLite.json",
+   "sha256": "068935fde3c832fcb9e534bcf127ef9b15b06db0685d4e17d43b6cfa2daf49c9"
+  },
+  "ta_meta-llama-3-70b-instruct2_cot": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/TA_output/predict_mini_dev_meta-llama-3-70b-instruct2_cot_SQLite.json",
+   "sha256": "5ec377aba06301b223a9617bb347fa4ff74ed6b90745e8c3c1ad5d04b5d1e519"
+  },
+  "kg_gpt-35-turbo-instruct": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo-instruct_sqlite.json",
+   "sha256": "a4a5f5e12d19d3fa742d0f3111723bd1dca50b29887eb705438580efe6dcc04b"
+  },
+  "kg_gpt-35-turbo": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo_sqlite.json",
+   "sha256": "cfb1ec56c697378c74b91a87718209a939c4bc45d8bb5f0ab06bc95e8684773b"
+  },
+  "kg_gpt-4-32k": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-32k_sqlite.json",
+   "sha256": "7ee53fcc67b9eaca363efb53ddb94dabd61526dafc09d835d832989e4911a1ca"
+  },
+  "kg_gpt-4-turbo": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-turbo_sqlite.json",
+   "sha256": "ef9fcb0470d9710c8a9674fd35874ec0986925e27a4d5d9ccece8bff606fb5df"
+  },
+  "kg_gpt-4": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4_sqlite.json",
+   "sha256": "afb13727cd9ba01aa4a4761769567b80746581e13895b63e54e6a5cc38d0c1a6"
+  },
+  "kg_meta-llama-3-70b-instruct-2": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-70b-instruct-2_sqlite.json",
+   "sha256": "d4e0efbafaa26435c2110559b7a24c91efa272ce82b6ec6d2a7176019582e1ae"
+  },
+  "kg_meta-llama-3-8b-instruct-2": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-8b-instruct-2_sqlite.json",
+   "sha256": "e1bd066794d120ff766d010a5cf4e4118e48404c4b0168fce4dfaf362a975301"
+  },
+  "kg_mistralai-mixtral-8x7b-instru-4": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/sql_output_kg/predict_mini_dev_mistralai-mixtral-8x7b-instru-4_sqlite.json",
+   "sha256": "53cdf9142e3f2e49941eb7b50ebbea90361b2c5b46de37d5ba1c244187d643a2"
+  },
+  "kg_phi-3-medium-128k-instruct-1": {
+   "file": "/home/claude/ext/probe/mini_dev/llm/exp_result/sql_output_kg/predict_mini_dev_phi-3-medium-128k-instruct-1_sqlite.json",
+   "sha256": "5e1a3a37cb174cbe62ff3bd269b293b6473c99da34f3fe3ac6f186dd5a1a7ff5"
+  }
+ },
+ "arcwise_sha256": "e7bf76408f99266506ea558d84982c69422e5db3dfecab5f08a3a8d3900e8395",
+ "systems": {
+  "ta_gpt-35-turbo_cot": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 408,
+   "b_ok": 0.9975490196078431,
+   "literal_overlap_by_offset": {
+    "-2": 0.14,
+    "-1": 0.147,
+    "0": 0.921,
+    "1": 0.144,
+    "2": 0.125
+   }
+  },
+  "ta_gpt-4-o_cot": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 487,
+   "b_ok": 0.997946611909651,
+   "literal_overlap_by_offset": {
+    "-2": 0.138,
+    "-1": 0.147,
+    "0": 0.922,
+    "1": 0.147,
+    "2": 0.128
+   }
+  },
+  "ta_gpt-4-turbo_cot": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 477,
+   "b_ok": 0.9937106918238994,
+   "literal_overlap_by_offset": {
+    "-2": 0.136,
+    "-1": 0.148,
+    "0": 0.905,
+    "1": 0.15,
+    "2": 0.122
+   }
+  },
+  "ta_meta-llama-3-70b-instruct2_cot": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 411,
+   "b_ok": 1.0,
+   "literal_overlap_by_offset": {
+    "-2": 0.124,
+    "-1": 0.129,
+    "0": 0.925,
+    "1": 0.131,
+    "2": 0.112
+   }
+  },
+  "kg_gpt-35-turbo-instruct": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 374,
+   "b_ok": 0.9893048128342246,
+   "literal_overlap_by_offset": {
+    "-2": 0.127,
+    "-1": 0.134,
+    "0": 0.911,
+    "1": 0.144,
+    "2": 0.117
+   }
+  },
+  "kg_gpt-35-turbo": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 412,
+   "b_ok": 0.9902912621359223,
+   "literal_overlap_by_offset": {
+    "-2": 0.134,
+    "-1": 0.138,
+    "0": 0.907,
+    "1": 0.143,
+    "2": 0.121
+   }
+  },
+  "kg_gpt-4-32k": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 462,
+   "b_ok": 0.9956709956709957,
+   "literal_overlap_by_offset": {
+    "-2": 0.138,
+    "-1": 0.15,
+    "0": 0.934,
+    "1": 0.147,
+    "2": 0.126
+   }
+  },
+  "kg_gpt-4-turbo": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 424,
+   "b_ok": 0.9976415094339622,
+   "literal_overlap_by_offset": {
+    "-2": 0.133,
+    "-1": 0.147,
+    "0": 0.923,
+    "1": 0.144,
+    "2": 0.127
+   }
+  },
+  "kg_gpt-4": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 474,
+   "b_ok": 0.9978902953586498,
+   "literal_overlap_by_offset": {
+    "-2": 0.133,
+    "-1": 0.137,
+    "0": 0.921,
+    "1": 0.144,
+    "2": 0.12
+   }
+  },
+  "kg_meta-llama-3-70b-instruct-2": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 443,
+   "b_ok": 0.9954853273137697,
+   "literal_overlap_by_offset": {
+    "-2": 0.134,
+    "-1": 0.136,
+    "0": 0.909,
+    "1": 0.134,
+    "2": 0.11
+   }
+  },
+  "kg_meta-llama-3-8b-instruct-2": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 311,
+   "b_ok": 0.9903536977491961,
+   "literal_overlap_by_offset": {
+    "-2": 0.12,
+    "-1": 0.12,
+    "0": 0.897,
+    "1": 0.132,
+    "2": 0.108
+   }
+  },
+  "kg_mistralai-mixtral-8x7b-instru-4": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 248,
+   "b_ok": 0.9919354838709677,
+   "literal_overlap_by_offset": {
+    "-2": 0.128,
+    "-1": 0.138,
+    "0": 0.877,
+    "1": 0.145,
+    "2": 0.114
+   }
+  },
+  "kg_phi-3-medium-128k-instruct-1": {
+   "n_pred": 500,
+   "n_mapped": 498,
+   "a_db_match": 1.0,
+   "b_checked": 366,
+   "b_ok": 0.9890710382513661,
+   "literal_overlap_by_offset": {
+    "-2": 0.133,
+    "-1": 0.137,
+    "0": 0.909,
+    "1": 0.139,
+    "2": 0.118
+   }
+  }
+ },
+ "mapping_valid": true
+}

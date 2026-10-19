@@ -1,0 +1,338 @@
+[
+ {
+  "idx": 16,
+  "pair_id": "omni-32-majority:8",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because every row's ranking value is NULL (ORDER BY DESC LIMIT 1 vs = MAX()); in a real database of this domain at least one non-NULL value always exists.",
+  "implausible_fact": "all FRPM Count (K-12) values NULL"
+ },
+ {
+  "idx": 27,
+  "pair_id": "rsl:876",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Evidence defines non-finishers via the time column (gold) while pred uses status != 'Finished'; a timed result with a non-Finished status (e.g. Disqualified) occurs in reality, and both readings of 'did not finish' are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 29,
+  "pair_id": "gsr:86",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Question asks for the school with charter number 40, which schools.CharterNum identifies; pred relies on frpm's charter number via a join, missing the school whenever frpm lacks/disagrees (frpm has NULL charter numbers and omits many schools in reality).",
+  "implausible_fact": null
+ },
+ {
+  "idx": 32,
+  "pair_id": "gena_submission_2:931",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Only difference is NULL vs empty when every 2009 Spanish GP result lacks fastestLapSpeed; a 2009 race where no driver has a fastest lap speed does not occur.",
+  "implausible_fact": "all 2009 Spanish GP fastestLapSpeed NULL"
+ },
+ {
+  "idx": 40,
+  "pair_id": "csc-32b:73",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "'Youth Authority School' can mean EdOpsName='Youth Authority School' (pred) or SOCType='Youth Authority Facilities' (gold); in reality most Youth Authority facilities have NULL EdOpsName, so both readings are defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 49,
+  "pair_id": "chess:1122",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Pred joins Player_Attributes to Player on player_fifa_api_id (which in the real DB sometimes points to a different player) and returns the top 10 rows instead of the max-rated player, so it names the wrong player.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 51,
+  "pair_id": "gsr:284",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred misses '=' only because the connected table lists the C-P bond in one direction and links atoms of different molecules; in the real DB connected is always symmetric and intra-molecular.",
+  "implausible_fact": "connected row not mirrored; bond spans molecules"
+ },
+ {
+  "idx": 61,
+  "pair_id": "rsl:1147",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because every row's ranking value is NULL (ORDER BY DESC LIMIT 1 vs = MAX()); in a real database of this domain at least one non-NULL value always exists.",
+  "implausible_fact": "all overall_rating values NULL"
+ },
+ {
+  "idx": 62,
+  "pair_id": "gena_submission_1:8",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because every row's ranking value is NULL (ORDER BY DESC LIMIT 1 vs = MAX()); in a real database of this domain at least one non-NULL value always exists.",
+  "implausible_fact": "all FRPM Count (K-12) values NULL"
+ },
+ {
+  "idx": 89,
+  "pair_id": "alpha:1331",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "'The amount of the funds the Vice President received' can be read as listing each income amount (gold) or as the total (pred); members have multiple income rows in reality.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 94,
+  "pair_id": "gena_submission_1:1122",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because every row's ranking value is NULL (ORDER BY DESC LIMIT 1 vs = MAX()); in a real database of this domain at least one non-NULL value always exists.",
+  "implausible_fact": "all overall_rating values NULL"
+ },
+ {
+  "idx": 100,
+  "pair_id": "slm:1391",
+  "verdict": "gold_wrong",
+  "confidence": "high",
+  "reason": "Gold uses integer division and returns 0 for a 1:2 ratio; the question asks for the ratio (0.5), which pred computes.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 103,
+  "pair_id": "csc-7b:1040",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "Pred joins attributes on player_fifa_api_id, which can point to another player in the real DB; the tall player's attribute rows are linked by player_api_id, so gold correctly lists him and pred drops him.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 123,
+  "pair_id": "gena_submission_2:1178",
+  "verdict": "ambiguous",
+  "confidence": "low",
+  "reason": "No patient has Diagnosis exactly 'AORTITIS' but several contain it (as with real values like 'SJS, MCTD, AORTITIS'); exact match (gold, empty) vs substring match (pred) are both defensible readings.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 127,
+  "pair_id": "csc-7b:977",
+  "verdict": "both_wrong",
+  "confidence": "medium",
+  "reason": "Evidence restricts to raceId > 50 and < 100, so race 50 must be excluded (answer 0); pred includes it (1) and gold returns NULL from SUM over no rows instead of 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 154,
+  "pair_id": "omni-32-majority:456",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Difference is only the (NULL, NULL) row from a printing of the same card with no types; in reality every printing of Molimo has subtypes 'Elemental' and supertypes 'Legendary'.",
+  "implausible_fact": "card printing with NULL subtypes and supertypes"
+ },
+ {
+  "idx": 160,
+  "pair_id": "csc-32b:865",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only finisher has NULL dob, so gold returns nothing and pred returns him; in reality no race finisher lacks a date of birth and races have several finishers.",
+  "implausible_fact": "sole finisher has NULL dob"
+ },
+ {
+  "idx": 186,
+  "pair_id": "slm:1055",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "The highest rating belongs (via player_api_id) to the player born 2000-01-09; pred's join on player_fifa_api_id, which can mismatch in the real DB, attributes the rating to another player.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 194,
+  "pair_id": "chess:862",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Pred counts 4 only because the status names are 'Finisheda' rather than 'Finished' (plus duplicate 2007 Bahrain GPs and duplicate driver results); with real status values both count the same rows.",
+  "implausible_fact": "status text \"Finisheda\" instead of \"Finished\""
+ },
+ {
+  "idx": 221,
+  "pair_id": "csc-32b:131",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "'Highest active loan' refers to loan amount; gold ranks by summed amount (east Bohemia) while pred ranks by loan count, which ties here and arbitrarily picks west Bohemia.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 232,
+  "pair_id": "alpha:1123",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because every row's ranking value is NULL (ORDER BY DESC LIMIT 1 vs = MAX()); in a real database of this domain at least one non-NULL value always exists.",
+  "implausible_fact": "all potential values NULL"
+ },
+ {
+  "idx": 248,
+  "pair_id": "chess:14",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold lists a NULL-enrollment school only because fewer than five schools have a non-NULL Enrollment (Ages 5-17); a real school database has thousands.",
+  "implausible_fact": "all Enrollment (Ages 5-17) values NULL"
+ },
+ {
+  "idx": 258,
+  "pair_id": "alpha:541",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because every row's ranking value is NULL (ORDER BY DESC LIMIT 1 vs = MAX()); in a real database of this domain at least one non-NULL value always exists.",
+  "implausible_fact": "all FavoriteCount values NULL"
+ },
+ {
+  "idx": 266,
+  "pair_id": "rsl:147",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The question counts female clients' accounts located in South Bohemia; gold counts clients by the client's own district (Prague here, differing from account district as happens in the real DB), returning 0 instead of the 2 accounts.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 270,
+  "pair_id": "slm:1309",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines normal range as PLT > 100 and PLT < 400 (strict); gold's BETWEEN includes PLT = 400.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 283,
+  "pair_id": "gena_submission_1:1309",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines normal range as PLT > 100 and PLT < 400 (strict); gold's BETWEEN includes PLT = 100.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 286,
+  "pair_id": "csc-7b:29",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "The question asks about a first-through-twelfth-grade (K-12) school; gold does not restrict school type and returns the open date of a middle school, while pred correctly finds no K-12 school.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 304,
+  "pair_id": "rsl:939",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "Gold counts 2 only because the same British driver has two result rows in the 2008 Australian GP; duplicate (race, driver) results only exist pre-1979 shared drives.",
+  "implausible_fact": "duplicate result for same driver in 2008 race"
+ },
+ {
+  "idx": 320,
+  "pair_id": "slm:112",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred drops client 0 only because her district has no accounts and she has no account/disp at all; in the real DB every client has a disposition and every district has accounts.",
+  "implausible_fact": "client without any account; district without accounts"
+ },
+ {
+  "idx": 329,
+  "pair_id": "slm:1434",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred's extra city='San Juan' filter fails only because the city is stored as 'San Juan ' with a trailing space; in reality all San Juan Municipio ZIPs have city 'San Juan'.",
+  "implausible_fact": "city value with trailing space"
+ },
+ {
+  "idx": 347,
+  "pair_id": "slm:1122",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "The max-rated attribute row belongs to player_api_id 2625; pred joins on player_fifa_api_id (which can point to a different player in the real DB) and names the wrong player.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 372,
+  "pair_id": "omni-32-majority:112",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Pred drops client 0 only because her district has no accounts and she has no account/disp at all; in the real DB every client has a disposition and every district has accounts.",
+  "implausible_fact": "client without any account; district without accounts"
+ },
+ {
+  "idx": 374,
+  "pair_id": "gena_submission_2:120",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence says account holder is the person owning the account, so 'holders from east Bohemia' refers to the owner's district (pred); gold filters on the account's branch district, which differs from the client's district in real data.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 377,
+  "pair_id": "slm:539",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "The only post's title differs from the requested title only in letter case; case-sensitive exact match (gold, empty) and case-insensitive match (pred) are both defensible.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 412,
+  "pair_id": "gena_submission_1:977",
+  "verdict": "both_wrong",
+  "confidence": "medium",
+  "reason": "Evidence restricts to raceId > 50 and < 100, so race 50 must be excluded (answer 0); pred includes it (1) and gold returns NULL from SUM over no rows instead of 0.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 430,
+  "pair_id": "omni-32-majority:1331",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "'The amount of the funds the Vice President received' can be read as listing each income amount (gold) or as the total (pred); members have multiple income rows in reality.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 438,
+  "pair_id": "slm:564",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold (per evidence CommentCount=1) and pred (actual comment count=1) differ only because the post's CommentCount is 0 although it has a comment, and the post is its own parent; real posts' counters match and no post is its own parent.",
+  "implausible_fact": "CommentCount 0 despite existing comment"
+ },
+ {
+  "idx": 456,
+  "pair_id": "omni-32-majority:759",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because every row's ranking value is NULL (ORDER BY DESC LIMIT 1 vs = MAX()); in a real database of this domain at least one non-NULL value always exists.",
+  "implausible_fact": "all weight_kg values NULL"
+ },
+ {
+  "idx": 465,
+  "pair_id": "csc-32b:897",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold returns nothing and pred returns a driver only because no driver in the witness has any win; a real F1 database always has race winners.",
+  "implausible_fact": "no driver has any win"
+ },
+ {
+  "idx": 489,
+  "pair_id": "slm:1147",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because every row's ranking value is NULL (ORDER BY DESC LIMIT 1 vs = MAX()); in a real database of this domain at least one non-NULL value always exists.",
+  "implausible_fact": "all overall_rating values NULL"
+ },
+ {
+  "idx": 493,
+  "pair_id": "alpha:744",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Gold's NULL vs pred's 0 arises only because no superhero is linked to any publisher (empty join); a real superhero database has many Marvel and DC heroes.",
+  "implausible_fact": "no superhero linked to a publisher"
+ },
+ {
+  "idx": 499,
+  "pair_id": "gsr:879",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only because every row's ranking value is NULL (ORDER BY DESC LIMIT 1 vs = MAX()); in a real database of this domain at least one non-NULL value always exists.",
+  "implausible_fact": "all fastestLapSpeed values NULL"
+ }
+]

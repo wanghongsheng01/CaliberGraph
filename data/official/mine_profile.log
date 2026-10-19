@@ -1,0 +1,33 @@
+  domains done
+  inds done
+california_schools 5s ucc 40 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+card_games 34s ucc 89 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+codebase_community 40s ucc 28 fk+ 0 total 1 sym 0 irr 1 lookup [] yd []
+  domains done
+  inds done
+debit_card_specializing 1s ucc 0 fk+ 3 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+european_football_2 94s ucc 6 fk+ 2 total 4 sym 0 irr 0 lookup ['Country'] yd []
+  domains done
+  inds done
+financial 12s ucc 6 fk+ 1 total 6 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+formula_1 4s ucc 32 fk+ 0 total 1 sym 0 irr 0 lookup ['seasons', 'status'] yd [['races', 'year', 'date']]
+  domains done
+  inds done
+student_club 0s ucc 13 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+superhero 0s ucc 6 fk+ 0 total 0 sym 0 irr 0 lookup ['alignment', 'attribute', 'colour', 'gender', 'publisher', 'race', 'superpower'] yd []
+  domains done
+  inds done
+thrombosis_prediction 2s ucc 118 fk+ 0 total 0 sym 0 irr 0 lookup [] yd []
+  domains done
+  inds done
+toxicology 0s ucc 2 fk+ 0 total 3 sym 1 irr 1 lookup [] yd []

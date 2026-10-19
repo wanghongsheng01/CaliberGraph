@@ -1,0 +1,362 @@
+[
+ {
+  "no": 1,
+  "pair_id": "omni-32-majority:516",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 2,
+  "pair_id": "alpha:188",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 3,
+  "pair_id": "gsr:1122",
+  "source": "ParSEval-L1@L1f",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 4,
+  "pair_id": "csc-32b:897",
+  "source": "SpotIt+@L0",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 5,
+  "pair_id": "alpha:1080",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 6,
+  "pair_id": "omni-32-majority:669",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 7,
+  "pair_id": "omni-32-majority:1266",
+  "source": "SpotIt@L0",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 8,
+  "pair_id": "csc-7b:1002",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 9,
+  "pair_id": "csc-7b:876",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 10,
+  "pair_id": "gena_submission_2:1396",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 11,
+  "pair_id": "slm:1122",
+  "source": "SpotIt+@L0",
+  "ai": "pred_wrong"
+ },
+ {
+  "no": 12,
+  "pair_id": "gena_submission_1:977",
+  "source": "SpotIt@L0",
+  "ai": "both_wrong"
+ },
+ {
+  "no": 13,
+  "pair_id": "alpha:67",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 14,
+  "pair_id": "gsr:303",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 15,
+  "pair_id": "slm:1180",
+  "source": "ParSEval-L1@L1f",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 16,
+  "pair_id": "alpha:623",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 17,
+  "pair_id": "gena_submission_1:507",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 18,
+  "pair_id": "slm:931",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 19,
+  "pair_id": "alpha:583",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 20,
+  "pair_id": "csc-7b:426",
+  "source": "SpotIt+@L0",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 21,
+  "pair_id": "gsr:318",
+  "source": "SpotIt+@L0",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 22,
+  "pair_id": "omni-32-majority:1095",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 23,
+  "pair_id": "alpha:1255",
+  "source": "ParSEval-L1@L1f",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 24,
+  "pair_id": "gsr:506",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 25,
+  "pair_id": "slm:641",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 26,
+  "pair_id": "gena_submission_2:931",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 27,
+  "pair_id": "gena_submission_2:1196",
+  "source": "ParSEval-L1@L1f",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 28,
+  "pair_id": "alpha:983",
+  "source": "Fuzz-R@R",
+  "ai": "pred_wrong"
+ },
+ {
+  "no": 29,
+  "pair_id": "gena_submission_1:242",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 30,
+  "pair_id": "gena_submission_1:1331",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 31,
+  "pair_id": "gena_submission_1:564",
+  "source": "Fuzz-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 32,
+  "pair_id": "csc-7b:989",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 33,
+  "pair_id": "rsl:1183",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 34,
+  "pair_id": "rsl:926",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 35,
+  "pair_id": "rsl:1340",
+  "source": "Fuzz-R@R",
+  "ai": "pred_wrong"
+ },
+ {
+  "no": 36,
+  "pair_id": "gena_submission_2:1263",
+  "source": "ParSEval-L1@L1f",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 37,
+  "pair_id": "gsr:175",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 38,
+  "pair_id": "rsl:829",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 39,
+  "pair_id": "rsl:284",
+  "source": "Fuzz-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 40,
+  "pair_id": "gsr:68",
+  "source": "CaliberGraph@L1f",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 41,
+  "pair_id": "gena_submission_2:698",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 42,
+  "pair_id": "rsl:1019",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 43,
+  "pair_id": "gsr:663",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 44,
+  "pair_id": "slm:1167",
+  "source": "Fuzz@L1f",
+  "ai": "pred_wrong"
+ },
+ {
+  "no": 45,
+  "pair_id": "omni-32-majority:655",
+  "source": "Fuzz@L1f",
+  "ai": "pred_wrong"
+ },
+ {
+  "no": 46,
+  "pair_id": "gena_submission_1:1084",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 47,
+  "pair_id": "csc-7b:1001",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 48,
+  "pair_id": "gena_submission_1:906",
+  "source": "Fuzz-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 49,
+  "pair_id": "slm:1410",
+  "source": "Fuzz-R@R",
+  "ai": "both_wrong"
+ },
+ {
+  "no": 50,
+  "pair_id": "csc-32b:938",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 51,
+  "pair_id": "csc-32b:1183",
+  "source": "Fuzz@L1f",
+  "ai": "gold_wrong"
+ },
+ {
+  "no": 52,
+  "pair_id": "slm:1182",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 53,
+  "pair_id": "gena_submission_2:75",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 54,
+  "pair_id": "omni-32-majority:698",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 55,
+  "pair_id": "csc-7b:1055",
+  "source": "SpotIt@L0",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 56,
+  "pair_id": "chess:506",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 57,
+  "pair_id": "omni-32-majority:924",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 58,
+  "pair_id": "csc-7b:668",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous"
+ },
+ {
+  "no": 59,
+  "pair_id": "alpha:1038",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data"
+ },
+ {
+  "no": 60,
+  "pair_id": "alpha:1193",
+  "source": "Fuzz-R@R",
+  "ai": "pred_wrong"
+ }
+]

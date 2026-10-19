@@ -1,0 +1,202 @@
+[
+ {
+  "idx": 125,
+  "pair_id": "alpha:983",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Question asks for the Italian constructor with the highest points; pred picks the overall top constructor first and then filters by nationality, returning nothing when that one is not Italian.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 126,
+  "pair_id": "gsr:1007",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No matching pit-stop rows: gold returns an empty result and pred returns a NULL aggregate row; both are defensible for an empty set.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 127,
+  "pair_id": "alpha:115",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "No south Bohemia district present: gold (GROUP BY) returns no row, pred returns a NULL aggregate row; same logic otherwise.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 128,
+  "pair_id": "csc-7b:927",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "All fastestLapSpeed values are NULL so no driver set a fastest lap; gold correctly returns none while pred returns an arbitrary driver with NULL speed.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 129,
+  "pair_id": "gena_submission_1:906",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The difference stems from inconsistent records (Hamilton has a result in a 1952 race and no standing for it, while standings exist only for another race), so the two source tables disagree.",
+  "implausible_fact": "Hamilton has a result in a 1952 race but no standings row for it"
+ },
+ {
+  "idx": 130,
+  "pair_id": "chess:1072",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence says AVG(overall_rating); gold's SUM/COUNT(id) counts rows with NULL rating in the denominator (34.5) whereas the average rating is 69.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 131,
+  "pair_id": "gsr:663",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two users tie for the minimum age; gold returns all ties and pred returns only one, and the question does not specify tie handling.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 132,
+  "pair_id": "slm:1309",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Evidence defines normal as PLT > 100 and < 400 (strict) but gold's BETWEEN includes the boundary value 100.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 133,
+  "pair_id": "alpha:657",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Several users tie for the highest bounty; gold returns one arbitrary user while pred returns all tied users (with duplicate rows); tie handling is unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 134,
+  "pair_id": "csc-7b:1516",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Morning is defined as before 13:00:00, but pred's BETWEEN includes a transaction at exactly 13:00:00.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 135,
+  "pair_id": "csc-32b:637",
+  "verdict": "gold_wrong",
+  "confidence": "medium",
+  "reason": "Tags used by the user in his posts should come from posts he owns; gold goes via postHistory edits and misses an owned post that pred returns.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 136,
+  "pair_id": "slm:1348",
+  "verdict": "pred_wrong",
+  "confidence": "medium",
+  "reason": "A 'how many' question with no matching budgets should yield 0 (gold); pred's SUM returns NULL.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 137,
+  "pair_id": "csc-32b:668",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Both users have one badge (tie); the difference arises only because a badge has a NULL Name, which makes COUNT(Name) differ from COUNT(Id).",
+  "implausible_fact": "badges.Name is NULL"
+ },
+ {
+  "idx": 138,
+  "pair_id": "slm:1147",
+  "verdict": "pred_wrong",
+  "confidence": "low",
+  "reason": "The only rating is NULL so no player has a greatest rating; gold returns nothing while pred returns a player with a NULL rating.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 139,
+  "pair_id": "gsr:1528",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Both compute the same percentage; results differ only in floating-point rounding at the last digit.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 140,
+  "pair_id": "alpha:509",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "Two sets tie on baseSetSize; gold returns one (LIMIT 1) and pred returns all tied, tie handling unspecified.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 141,
+  "pair_id": "omni-32-majority:303",
+  "verdict": "ambiguous",
+  "confidence": "medium",
+  "reason": "Molecule TR006 is absent: gold returns no rows, pred returns (0, NULL); both are defensible for an empty case.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 142,
+  "pair_id": "gsr:377",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Difference arises only from a 'Summon - Angel' card with NULL subtypes, which never occurs in the real data (all such cards have subtypes).",
+  "implausible_fact": "'Summon - Angel' card with NULL subtypes"
+ },
+ {
+  "idx": 143,
+  "pair_id": "chess:1263",
+  "verdict": "pred_wrong",
+  "confidence": "high",
+  "reason": "Evidence says normal is 29 < HCT < 52, so abnormal includes HCT = 52 (and 29); pred's strict inequalities exclude the boundary patient.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 144,
+  "pair_id": "chess:1095",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Team_Attributes row has the team's team_api_id but a team_fifa_api_id that belongs to another team, so the two join keys disagree; such inconsistency does not occur in reality.",
+  "implausible_fact": "team_api_id and team_fifa_api_id of the same team are inconsistent"
+ },
+ {
+  "idx": 145,
+  "pair_id": "csc-32b:554",
+  "verdict": "ambiguous",
+  "confidence": "high",
+  "reason": "All users have one badge each (tie), so the chosen user depends on arbitrary tie-breaking; grouping by name vs id makes no real difference.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 146,
+  "pair_id": "gsr:6",
+  "verdict": "implausible_data",
+  "confidence": "high",
+  "reason": "The same CDS code has different school names in satscores and schools (and an elementary school with 501 SAT takers), so the name column choice changes the result.",
+  "implausible_fact": "same cds has different school names in satscores and schools"
+ },
+ {
+  "idx": 147,
+  "pair_id": "rsl:876",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "The only result has a race time yet a non-'Finished' junk status, an inconsistency that does not occur in reality; time-null (per the evidence) and status-based readings diverge only because of it.",
+  "implausible_fact": "result with a finishing time but status not 'Finished'"
+ },
+ {
+  "idx": 148,
+  "pair_id": "csc-7b:1002",
+  "verdict": "both_wrong",
+  "confidence": "medium",
+  "reason": "Neither query orders by race date to get the first race; the differing race is just an arbitrary row pick from standings vs results.",
+  "implausible_fact": null
+ },
+ {
+  "idx": 149,
+  "pair_id": "alpha:818",
+  "verdict": "implausible_data",
+  "confidence": "medium",
+  "reason": "Lookup tables are scrambled (several alignment ids named 'Bad', alignment id 2 NULL, gender id 2 named 'Male'), so name-based and id-based filters diverge.",
+  "implausible_fact": "alignment/gender lookup names inconsistent with their ids"
+ }
+]

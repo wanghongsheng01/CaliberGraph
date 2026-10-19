@@ -1,0 +1,75 @@
+{
+ "mode": "dev",
+ "n_pairs": 6204,
+ "databases": [
+  "battle_death",
+  "car_1",
+  "concert_singer",
+  "course_teach",
+  "cre_Doc_Template_Mgt",
+  "dog_kennels",
+  "employee_hire_evaluation",
+  "flight_2",
+  "museum_visit",
+  "network_1",
+  "orchestra",
+  "pets_1",
+  "poker_player",
+  "real_estate_properties",
+  "singer",
+  "student_transcripts_tracking",
+  "tvshow",
+  "voter_1",
+  "world_1",
+  "wta_1"
+ ],
+ "utf8_cells_fixed": {
+  "battle_death": 0,
+  "car_1": 0,
+  "concert_singer": 0,
+  "course_teach": 0,
+  "cre_Doc_Template_Mgt": 0,
+  "dog_kennels": 0,
+  "employee_hire_evaluation": 0,
+  "flight_2": 0,
+  "museum_visit": 0,
+  "network_1": 0,
+  "orchestra": 0,
+  "pets_1": 0,
+  "poker_player": 0,
+  "real_estate_properties": 0,
+  "singer": 0,
+  "student_transcripts_tracking": 0,
+  "tvshow": 0,
+  "voter_1": 0,
+  "world_1": 0,
+  "wta_1": 2
+ },
+ "sources": {
+  "dailsql_gpt4": {
+   "file": "/home/claude/ext/probe/DAIL-SQL/results/DAIL-SQL+GPT-4.txt",
+   "sha256": "f871ac43c314eced575c6c1045f6d1a353ee27c1432941faf7bfe86c2d2051aa"
+  },
+  "dailsql_gpt4_sc": {
+   "file": "/home/claude/ext/probe/DAIL-SQL/results/DAIL-SQL+GPT-4+self-consistency.txt",
+   "sha256": "23bb4c5e7fecf4d454843a689162d8e5e2f2b6ebce9c90d50113185009177928"
+  },
+  "graphix_t5": {
+   "file": "/home/claude/ext/probe/DAIL-SQL/results/graphix_result.txt",
+   "sha256": "353ee537752c6111e9c0319fb4e217d42cd07faa5b2efcac48377a0dc9856ca2"
+  },
+  "dinsql_gpt4": {
+   "file": "/home/claude/ext/probe/Few-shot-NL2SQL-with-prompting/GPT4_results/DIN-SQL.csv",
+   "sha256": "2fac3f264dd09eda3bdfde3f07e98bc8b5c141a82de77c20c964271c9b5645a8"
+  },
+  "gpt4_fewshot": {
+   "file": "/home/claude/ext/probe/Few-shot-NL2SQL-with-prompting/GPT4_results/GPT4_few_shot.csv",
+   "sha256": "20d2da4a83c02e62d28b9ca515b7e20186aa46ff42a6688531fb91a2555e5f0f"
+  },
+  "gpt4_zeroshot": {
+   "file": "/home/claude/ext/probe/Few-shot-NL2SQL-with-prompting/GPT4_results/GPT4_zero_shot.csv",
+   "sha256": "3baf64703752b8d222426aa361a5116be5595b5cb1afd1a1597c2293f7af9b40"
+  }
+ },
+ "dev_json_sha256": "30d64a3fccde493226df79687aed9e4a1c0129525baf44f29c0573d914d758a4"
+}

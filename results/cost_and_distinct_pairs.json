@@ -1,0 +1,94 @@
+{
+ "CaliberGraph": {
+  "distinct_pairs": 6456,
+  "found": 1774,
+  "certified_L1f": 1774,
+  "found_not_certified_L1f": 0,
+  "certified_R": 0,
+  "no_witness_in_budget": 4326,
+  "identical_text": 356,
+  "mean_search_s": 3.3601510734055045
+ },
+ "CaliberGraph+SC": {
+  "distinct_pairs": 6456,
+  "found": 1419,
+  "certified_L1f": 1419,
+  "found_not_certified_L1f": 0,
+  "certified_R": 23,
+  "no_witness_in_budget": 4681,
+  "identical_text": 356,
+  "mean_search_s": 3.648636943300937
+ },
+ "ParSEval-L1": {
+  "distinct_pairs": 6456,
+  "found": 1196,
+  "certified_L1f": 1196,
+  "found_not_certified_L1f": 0,
+  "certified_R": 0,
+  "no_witness_in_budget": 4172,
+  "hard_timeout": 732,
+  "identical_text": 356,
+  "mean_search_s": 3.5641003369582283
+ },
+ "ParSEval (official)": {
+  "distinct_pairs": 6456,
+  "found": 1665,
+  "certified_L1f": 305,
+  "found_not_certified_L1f": 1360,
+  "no_witness_in_budget": 3799,
+  "hard_timeout": 635,
+  "identical_text": 356,
+  "error": 1,
+  "mean_search_s": 1.0820965341006485
+ },
+ "Random fuzzing (corrected)": {
+  "distinct_pairs": 6456,
+  "found": 1511,
+  "certified_L1f": 1511,
+  "found_not_certified_L1f": 0,
+  "certified_R": 1,
+  "no_witness_in_budget": 4589,
+  "identical_text": 356,
+  "mean_search_s": 3.5839671453114845
+ },
+ "Random fuzzing (frozen, uncorrected)": {
+  "distinct_pairs": 6456,
+  "found": 1530,
+  "certified_L1f": 1398,
+  "found_not_certified_L1f": 132,
+  "certified_R": 0,
+  "no_witness_in_budget": 4570,
+  "identical_text": 356,
+  "mean_search_s": 3.564789507335801
+ },
+ "CaliberGraph-R": {
+  "distinct_pairs": 6456,
+  "found": 1168,
+  "certified_L1f": 1168,
+  "found_not_certified_L1f": 0,
+  "certified_R": 1168,
+  "no_witness_in_budget": 4932,
+  "identical_text": 356,
+  "mean_search_s": 3.8554967864168823
+ },
+ "Random fuzzing-R": {
+  "distinct_pairs": 6456,
+  "found": 942,
+  "certified_L1f": 942,
+  "found_not_certified_L1f": 0,
+  "certified_R": 942,
+  "no_witness_in_budget": 5158,
+  "identical_text": 356,
+  "mean_search_s": 4.031014481503171
+ },
+ "SpotIt": {
+  "claims_EXcorrect": 1419,
+  "claims_not_recertified_L0": 670,
+  "claims_not_recertified_L1f": 1303
+ },
+ "SpotIt+": {
+  "claims_EXcorrect": 1125,
+  "claims_not_recertified_L0": 614,
+  "claims_not_recertified_L1f": 921
+ }
+}

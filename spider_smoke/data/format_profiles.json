@@ -1,0 +1,1282 @@
+{
+"customers_and_addresses": {
+"Addresses": {
+"address_content": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 8,
+"free_text": false,
+"shapes": [
+"999 A A",
+"99999 A A",
+"9999 A A A 999",
+"99999 A A A 999",
+"99999 A A A. 999",
+"999 A A A. 999",
+"9999 A A",
+"999 A A A 999"
+],
+"samples": [
+"9443 Boyle Route Suite 857",
+"1969 Jabari Port Suite 393",
+"295 Hackett Curve",
+"92865 Margaretta Streets Suite 467",
+"08996 Brisa Lane Apt. 583",
+"826 Murray Locks Apt. 654",
+"59540 Grover Wells Apt. 814",
+"78614 Maybell Alley Suite 057",
+"9168 King Rest",
+"120 Noble Radial",
+"618 Odie Villages Suite 133",
+"16438 Herman Pine",
+"47831 Martin Islands",
+"995 Weimann Gateway",
+"41632 Kerluke Field"
+]
+},
+"city": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A"
+],
+"samples": [
+"Lucasville",
+"New Sabryna",
+"Reingertown",
+"Gleasonmouth",
+"Stantonville",
+"South Meghanview",
+"Lake Walterton",
+"South Bellaland",
+"Felicityfort",
+"East Julianaside",
+"Lake Geovannyton",
+"New Terrillport",
+"Port Lilyan",
+"Lake Ryann",
+"East Pascale"
+]
+},
+"zip_postcode": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"999"
+],
+"samples": [
+"416",
+"721",
+"255",
+"940",
+"354",
+"918",
+"767",
+"921",
+"482",
+"821",
+"623",
+"684",
+"235",
+"470",
+"720"
+]
+},
+"state_province_county": {
+"n_nonnull": 15,
+"n_distinct": 12,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Texas",
+"Colorado",
+"SouthCarolina",
+"NewJersey",
+"Arizona",
+"Mississippi",
+"Virginia",
+"Florida",
+"NewMexico",
+"Arkansas",
+"RhodeIsland",
+"Kentucky"
+]
+},
+"country": {
+"n_nonnull": 15,
+"n_distinct": 1,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"USA"
+]
+},
+"other_address_details": {
+"n_nonnull": 0,
+"n_distinct": 0,
+"n_shapes": 0,
+"free_text": false,
+"shapes": [],
+"samples": []
+}
+},
+"Products": {
+"product_details": {
+"n_nonnull": 3,
+"n_distinct": 3,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"Americano",
+"Dove Chocolate",
+"Latte"
+]
+}
+},
+"Customers": {
+"payment_method": {
+"n_nonnull": 15,
+"n_distinct": 3,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"Cheque",
+"Credit Card",
+"Cash"
+]
+},
+"customer_name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 4,
+"free_text": false,
+"shapes": [
+"A A",
+"A. A A A",
+"A. A A",
+"A A A"
+],
+"samples": [
+"Dr. Julia Wuckert MD",
+"Tillman Ernser",
+"Rodrick Heaney",
+"Prof. Alexzander Hamill",
+"Prof. Reyes Berge II",
+"Maudie Kertzmann",
+"Mozell Morissette",
+"Eunice Morar",
+"Devin Mills",
+"Kitty Padberg III",
+"Salvatore Tillman",
+"Clifford Pagac",
+"Miss Aliyah Witting",
+"Alexane Kilback",
+"Prof. Ibrahim Bashirian"
+]
+},
+"other_customer_details": {
+"n_nonnull": 2,
+"n_distinct": 1,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"VIP"
+]
+}
+},
+"Customer_Addresses": {
+"address_type": {
+"n_nonnull": 15,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Residential",
+"Billing"
+]
+}
+},
+"Customer_Contact_Channels": {
+"channel_code": {
+"n_nonnull": 20,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Handheld",
+"Email",
+"Cell",
+"Fax",
+"Mobile"
+]
+},
+"contact_number": {
+"n_nonnull": 20,
+"n_distinct": 20,
+"n_shapes": 12,
+"free_text": false,
+"shapes": [
+"999.999.9999A9999",
+"999-999-9999",
+"9-999-999-9999A99999",
+"(999)999-9999A9999",
+"9-999-999-9999",
+"999.999.9999",
+"999.999.9999A99999",
+"99999999999",
+"(999)999-9999A999",
+"(999)999-9999A99999",
+"999-999-9999A9999",
+"(999)999-9999"
+],
+"samples": [
+"940.035.6435x0225",
+"189.449.8326x7607",
+"958-653-2640",
+"1-968-863-4947x96956",
+"(165)527-5756x2419",
+"1-077-864-0102",
+"06068550461",
+"542.983.0224",
+"(379)834-0867x267",
+"(620)266-6990x8590",
+"(068)656-5276x84466",
+"496-074-8589x5477",
+"1-687-190-8968x63811",
+"118.523.6764x57405",
+"445.924.9417",
+"(155)830-6182",
+"1-453-027-1291",
+"026.019.5981x72518",
+"495-168-9662",
+"846.043.4809x0426"
+]
+}
+},
+"Customer_Orders": {
+"order_status": {
+"n_nonnull": 15,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Cancelled",
+"Delivered"
+]
+},
+"order_details": {
+"n_nonnull": 5,
+"n_distinct": 1,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A A"
+],
+"samples": [
+"Second time"
+]
+}
+},
+"Order_Items": {
+"order_quantity": {
+"n_nonnull": 15,
+"n_distinct": 7,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9"
+],
+"samples": [
+"9",
+"5",
+"6",
+"2",
+"8",
+"1",
+"7"
+]
+}
+}
+},
+"debate": {
+"people": {
+"District": {
+"n_nonnull": 10,
+"n_distinct": 10,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A 9",
+"A A 99"
+],
+"samples": [
+"New York 1",
+"New York 2",
+"New York 3",
+"New York 4",
+"New York 5",
+"New York 6",
+"New York 7",
+"New York 8",
+"New York 9",
+"New York 10"
+]
+},
+"Name": {
+"n_nonnull": 10,
+"n_distinct": 10,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A A. A",
+"A A",
+"A A A"
+],
+"samples": [
+"Luther C. Carter",
+"James Humphrey",
+"Daniel Sickles",
+"Thomas J. Barr",
+"William B. Maclay",
+"John Cochrane",
+"George Briggs",
+"Horace F. Clark",
+"John B. Haskin",
+"Charles Van Wyck"
+]
+},
+"Party": {
+"n_nonnull": 10,
+"n_distinct": 4,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A",
+"A-A A",
+"A A"
+],
+"samples": [
+"Republican",
+"Democratic",
+"Anti-Lecompton Democrat",
+"Independent Democrat"
+]
+}
+},
+"debate": {
+"Date": {
+"n_nonnull": 6,
+"n_distinct": 6,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A 99, 9999",
+"A 9, 9999"
+],
+"samples": [
+"October 21, 2011",
+"December 17, 2014",
+"August 3, 2015",
+"October 27, 2015",
+"January 12, 2017",
+"January 21, 2017"
+]
+},
+"Venue": {
+"n_nonnull": 6,
+"n_distinct": 4,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A , A",
+"A A , A"
+],
+"samples": [
+"Manama , Bahrain",
+"Doha , Qatar",
+"Dubai , UAE",
+"Abu Dhabi , UAE"
+]
+}
+},
+"debate_people": {}
+},
+"department_management": {
+"department": {
+"Name": {
+"n_nonnull": 15,
+"n_distinct": 15,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A",
+"A A A A",
+"A A"
+],
+"samples": [
+"State",
+"Treasury",
+"Defense",
+"Justice",
+"Interior",
+"Agriculture",
+"Commerce",
+"Labor",
+"Health and Human Services",
+"Housing and Urban Development",
+"Transportation",
+"Energy",
+"Education",
+"Veterans Affairs",
+"Homeland Security"
+]
+},
+"Creation": {
+"n_nonnull": 15,
+"n_distinct": 14,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9999"
+],
+"samples": [
+"1789",
+"1947",
+"1870",
+"1849",
+"1889",
+"1903",
+"1913",
+"1953",
+"1965",
+"1966",
+"1977",
+"1979",
+"1989",
+"2002"
+]
+}
+},
+"head": {
+"name": {
+"n_nonnull": 10,
+"n_distinct": 10,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A. A. A"
+],
+"samples": [
+"Tiger Woods",
+"Sergio García",
+"K. J. Choi",
+"Dudley Hart",
+"Jeff Maggert",
+"Billy Mayfair",
+"Stewart Cink",
+"Nick Faldo",
+"Pádraig Harrington",
+"Franklin Langham"
+]
+},
+"born_state": {
+"n_nonnull": 10,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"California",
+"Alabama",
+"Connecticut",
+"Delaware",
+"Florida"
+]
+}
+},
+"management": {
+"temporary_acting": {
+"n_nonnull": 5,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Yes",
+"No"
+]
+}
+}
+},
+"device": {
+"device": {
+"Device": {
+"n_nonnull": 6,
+"n_distinct": 6,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A 9999"
+],
+"samples": [
+"BlackBerry Storm 9530",
+"Apple",
+"Huawei",
+"Xiaomi",
+"Samsung",
+"Galaxy"
+]
+},
+"Carrier": {
+"n_nonnull": 6,
+"n_distinct": 6,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A A",
+"A"
+],
+"samples": [
+"MTS Mobility",
+"Verizon Wireless",
+"Telus Mobility",
+"Bell Mobility",
+"Iusacell",
+"Vodafone AU"
+]
+},
+"Package_Version": {
+"n_nonnull": 6,
+"n_distinct": 5,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9.9.9.999"
+],
+"samples": [
+"5.0.0.419",
+"5.0.0.808",
+"5.0.0.328",
+"4.7.0.208",
+"5.0.0.742"
+]
+},
+"Applications": {
+"n_nonnull": 6,
+"n_distinct": 4,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9.9.9.999"
+],
+"samples": [
+"5.0.0.419",
+"5.0.0.328",
+"4.7.0.151",
+"5.0.0.451"
+]
+},
+"Software_Platform": {
+"n_nonnull": 6,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Android",
+"iOS"
+]
+}
+},
+"shop": {
+"Shop_Name": {
+"n_nonnull": 12,
+"n_distinct": 12,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A A",
+"A",
+"A'A A"
+],
+"samples": [
+"Dinas Device",
+"Best Buy",
+"Ferndale",
+"Apple",
+"Pentre store",
+"Tynewydd repair",
+"Dinas store",
+"Naval repair",
+"Gelli repair",
+"Naval's shop",
+"ATnT",
+"National Cellphone"
+]
+},
+"Location": {
+"n_nonnull": 12,
+"n_distinct": 9,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Dinas",
+"Blaenllechau",
+"Penygraig",
+"Cymmer",
+"Pentre",
+"Porth",
+"Gelli",
+"Maerdy",
+"Wattstown"
+]
+},
+"Open_Date": {
+"n_nonnull": 12,
+"n_distinct": 12,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"99 A",
+"9 A",
+"99–99 A"
+],
+"samples": [
+"1 January",
+"15 July",
+"8 November",
+"10 June",
+"24 February",
+"11 April",
+"13 January",
+"10 December",
+"21 August",
+"27 January",
+"23–24 December",
+"18 February"
+]
+}
+},
+"stock": {}
+},
+"phone_market": {
+"phone": {
+"Name": {
+"n_nonnull": 5,
+"n_distinct": 5,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A 9A",
+"A 9",
+"A A"
+],
+"samples": [
+"IPhone 5s",
+"IPhone 6",
+"IPhone 6s",
+"IPhone 7",
+"IPhone X"
+]
+},
+"Carrier": {
+"n_nonnull": 5,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"TMobile",
+"Sprint"
+]
+}
+},
+"market": {
+"District": {
+"n_nonnull": 6,
+"n_distinct": 6,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"Alberta",
+"British Columbia",
+"New Brunswick",
+"Nova Scotia",
+"Ontario",
+"Quebec"
+]
+}
+},
+"phone_market": {
+"Phone_ID": {
+"n_nonnull": 6,
+"n_distinct": 4,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9"
+],
+"samples": [
+"1",
+"3",
+"4",
+"2"
+]
+}
+}
+},
+"soccer_1": {
+"Player_Attributes": {
+"date": {
+"n_nonnull": 183978,
+"n_distinct": 197,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9999-99-99 99:99:99"
+],
+"samples": [
+"2007-02-22 00:00:00",
+"2013-09-20 00:00:00",
+"2011-08-30 00:00:00",
+"2015-09-21 00:00:00",
+"2012-08-31 00:00:00",
+"2014-09-18 00:00:00",
+"2013-02-15 00:00:00",
+"2010-08-30 00:00:00",
+"2012-02-22 00:00:00",
+"2009-08-30 00:00:00",
+"2011-02-22 00:00:00",
+"2008-08-30 00:00:00",
+"2010-02-22 00:00:00",
+"2007-08-30 00:00:00",
+"2009-02-22 00:00:00",
+"2013-03-22 00:00:00",
+"2013-02-22 00:00:00",
+"2015-01-09 00:00:00",
+"2015-10-16 00:00:00",
+"2013-03-08 00:00:00"
+]
+},
+"preferred_foot": {
+"n_nonnull": 183142,
+"n_distinct": 2,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"right",
+"left"
+]
+},
+"attacking_work_rate": {
+"n_nonnull": 180748,
+"n_distinct": 8,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"medium",
+"high",
+"low",
+"None",
+"norm",
+"y",
+"le",
+"stoc"
+]
+},
+"defensive_work_rate": {
+"n_nonnull": 183142,
+"n_distinct": 19,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A",
+"_9",
+"9"
+],
+"samples": [
+"medium",
+"high",
+"low",
+"_0",
+"o",
+"1",
+"ormal",
+"2",
+"3",
+"5",
+"7",
+"0",
+"6",
+"9",
+"4",
+"es",
+"ean",
+"tocky",
+"8"
+]
+}
+},
+"Player": {
+"player_name": {
+"n_nonnull": 11060,
+"n_distinct": 10848,
+"n_shapes": 25,
+"free_text": false,
+"shapes": [
+"A A",
+"A A A",
+"A",
+"A-A A",
+"A A A A",
+"A A'A",
+"A A-A",
+"A A,99",
+"A A A,99",
+"A A A A,99",
+"A A A A A",
+"A A. A",
+"A-A A-A",
+"A-A A A",
+"A A'A A",
+"A A A'A"
+],
+"samples": [
+"Danilo",
+"Paulinho",
+"Ricardo",
+"Adriano",
+"Douglas",
+"Felipe",
+"Fernando",
+"Joao Pedro",
+"Rafael",
+"Roberto",
+"Alex",
+"Anselmo",
+"Carlitos",
+"Cassio",
+"Diego",
+"Eduardo",
+"Guilherme",
+"Jaime",
+"Jorginho",
+"Josue"
+]
+},
+"birthday": {
+"n_nonnull": 11060,
+"n_distinct": 5762,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9999-99-99 99:99:99"
+],
+"samples": [
+"1989-03-02 00:00:00",
+"1990-01-13 00:00:00",
+"1990-03-27 00:00:00",
+"1988-08-31 00:00:00",
+"1987-04-16 00:00:00",
+"1988-06-12 00:00:00",
+"1988-01-08 00:00:00",
+"1991-08-19 00:00:00",
+"1980-08-05 00:00:00",
+"1990-01-08 00:00:00",
+"1984-01-16 00:00:00",
+"1989-11-14 00:00:00",
+"1990-03-09 00:00:00",
+"1989-04-22 00:00:00",
+"1988-01-05 00:00:00",
+"1995-02-09 00:00:00",
+"1988-03-02 00:00:00",
+"1989-06-09 00:00:00",
+"1987-02-14 00:00:00",
+"1984-01-10 00:00:00"
+]
+}
+},
+"League": {
+"name": {
+"n_nonnull": 11,
+"n_distinct": 11,
+"n_shapes": 5,
+"free_text": false,
+"shapes": [
+"A A A",
+"A A",
+"A A 9",
+"A 9. A",
+"A A A A"
+],
+"samples": [
+"Belgium Jupiler League",
+"England Premier League",
+"France Ligue 1",
+"Germany 1. Bundesliga",
+"Italy Serie A",
+"Netherlands Eredivisie",
+"Poland Ekstraklasa",
+"Portugal Liga ZON Sagres",
+"Scotland Premier League",
+"Spain LIGA BBVA",
+"Switzerland Super League"
+]
+}
+},
+"Country": {
+"name": {
+"n_nonnull": 11,
+"n_distinct": 11,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Belgium",
+"England",
+"France",
+"Germany",
+"Italy",
+"Netherlands",
+"Poland",
+"Portugal",
+"Scotland",
+"Spain",
+"Switzerland"
+]
+}
+},
+"Team": {
+"team_long_name": {
+"n_nonnull": 299,
+"n_distinct": 296,
+"n_shapes": 24,
+"free_text": false,
+"shapes": [
+"A A",
+"A",
+"A A A",
+"A A-A",
+"A A A A",
+"A A 99",
+"9. A A",
+"A-A A",
+"A-A",
+"A A. A",
+"A. A",
+"A A A A'A",
+"A 99 A",
+"A 99",
+"A 9999 A",
+"9. A A 99",
+"A.A.A.",
+"A A-A A",
+"A 9° A A",
+"A A A, A",
+"A.A. A",
+"A. A A",
+"A A A.A.",
+"A A A A A"
+],
+"samples": [
+"Royal Excel Mouscron",
+"Polonia Bytom",
+"Widzew Łódź",
+"KRC Genk",
+"Beerschot AC",
+"SV Zulte-Waregem",
+"Sporting Lokeren",
+"KSV Cercle Brugge",
+"RSC Anderlecht",
+"KAA Gent",
+"RAEC Mons",
+"FCV Dender EH",
+"Standard de Liège",
+"KV Mechelen",
+"Club Brugge KV",
+"KSV Roeselare",
+"KV Kortrijk",
+"Tubize",
+"KVC Westerlo",
+"Sporting Charleroi"
+]
+},
+"team_short_name": {
+"n_nonnull": 299,
+"n_distinct": 259,
+"n_shapes": 3,
+"free_text": false,
+"shapes": [
+"A",
+"A-A",
+"A99"
+],
+"samples": [
+"GEN",
+"MON",
+"POR",
+"VAL",
+"GRA",
+"BEL",
+"ROS",
+"LIV",
+"BOL",
+"WOL",
+"REA",
+"LEI",
+"BOU",
+"NAN",
+"MAR",
+"SOC",
+"BRE",
+"AJA",
+"BAS",
+"TRO"
+]
+}
+},
+"Team_Attributes": {
+"date": {
+"n_nonnull": 1458,
+"n_distinct": 6,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"9999-99-99 99:99:99"
+],
+"samples": [
+"2015-09-10 00:00:00",
+"2014-09-19 00:00:00",
+"2011-02-22 00:00:00",
+"2012-02-22 00:00:00",
+"2013-09-20 00:00:00",
+"2010-02-22 00:00:00"
+]
+},
+"buildUpPlaySpeedClass": {
+"n_nonnull": 1458,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Balanced",
+"Fast",
+"Slow"
+]
+},
+"buildUpPlayDribblingClass": {
+"n_nonnull": 1458,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Little",
+"Normal",
+"Lots"
+]
+},
+"buildUpPlayPassingClass": {
+"n_nonnull": 1458,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Mixed",
+"Short",
+"Long"
+]
+},
+"buildUpPlayPositioningClass": {
+"n_nonnull": 1458,
+"n_distinct": 2,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"Organised",
+"Free Form"
+]
+},
+"chanceCreationPassingClass": {
+"n_nonnull": 1458,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Normal",
+"Risky",
+"Safe"
+]
+},
+"chanceCreationCrossingClass": {
+"n_nonnull": 1458,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Normal",
+"Lots",
+"Little"
+]
+},
+"chanceCreationShootingClass": {
+"n_nonnull": 1458,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Normal",
+"Lots",
+"Little"
+]
+},
+"chanceCreationPositioningClass": {
+"n_nonnull": 1458,
+"n_distinct": 2,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"Organised",
+"Free Form"
+]
+},
+"defencePressureClass": {
+"n_nonnull": 1458,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Medium",
+"Deep",
+"High"
+]
+},
+"defenceAggressionClass": {
+"n_nonnull": 1458,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Press",
+"Double",
+"Contain"
+]
+},
+"defenceTeamWidthClass": {
+"n_nonnull": 1458,
+"n_distinct": 3,
+"n_shapes": 1,
+"free_text": false,
+"shapes": [
+"A"
+],
+"samples": [
+"Normal",
+"Wide",
+"Narrow"
+]
+},
+"defenceDefenderLineClass": {
+"n_nonnull": 1458,
+"n_distinct": 2,
+"n_shapes": 2,
+"free_text": false,
+"shapes": [
+"A",
+"A A"
+],
+"samples": [
+"Cover",
+"Offside Trap"
+]
+}
+}
+}
+}

@@ -1,0 +1,42 @@
+{
+ "BIRD": {
+  "databases": 11,
+  "tables": 75,
+  "columns": 798,
+  "rows": 3932735,
+  "domain_cols": 652,
+  "categorical_cols": 293,
+  "ucc": 185,
+  "ind_fk": 6,
+  "ind_total": 15,
+  "fd": 318,
+  "cross": 12,
+  "lookup_tables": 10,
+  "never_null_cols": 420,
+  "rows_per_table": 52436.46666666667,
+  "domain_share": 0.8170426065162907,
+  "categorical_share": 0.36716791979949875,
+  "ucc_per_table": 2.466666666666667,
+  "fd_per_table": 4.24
+ },
+ "Spider": {
+  "databases": 20,
+  "tables": 80,
+  "columns": 439,
+  "rows": 539860,
+  "domain_cols": 435,
+  "categorical_cols": 381,
+  "ucc": 7,
+  "ind_fk": 0,
+  "ind_total": 2,
+  "fd": 47,
+  "cross": 4,
+  "lookup_tables": 14,
+  "never_null_cols": 409,
+  "rows_per_table": 6748.25,
+  "domain_share": 0.9908883826879271,
+  "categorical_share": 0.8678815489749431,
+  "ucc_per_table": 0.0875,
+  "fd_per_table": 0.5875
+ }
+}
