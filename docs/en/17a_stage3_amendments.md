@@ -243,3 +243,9 @@ No Spider dev EX label, witness or count had been seen when these were written.
 - **Implied pace.** Three hours for 150 items is about 1.2 minutes per item, against the estimate of seven to nine hours.
 - **What the account does not address.** It says nothing about the templated reasons on sheet A or the editor changes on sheet B. Both remain reported.
 - **Use in the paper.** The paper reports both the recorded times and the authors' account.
+
+## E19 (2026-10-19 18:30) Change of venue
+- **Decision.** The authors decided not to submit to PVLDB and to submit to the journal *Information Systems* (Elsevier) instead.
+- **Manuscript.** The manuscript was moved to the `elsarticle` template (`paper_is/`). Passages cut only to fit PVLDB's 12-page limit were restored, and the journal's front matter and declarations were added.
+- **What did not change.** No result, analysis or pre-registered rule changed.
+- **PVLDB version.** The PVLDB version (`paper_pvldb/`) is kept, unsubmitted.

@@ -1,0 +1,16 @@
+\appendix
+\section{Comparison contracts and root causes}\label{app:contracts}
+
+\begin{table}[h]
+\centering\small
+\caption{First-freeze $\mathcal A_{1f}$ witnesses under the three comparison contracts (EX-correct test pairs; SpotIt and SpotIt+: re-certified released counterexamples; random fuzzing: corrected counts). Every $\mathcal C_{\mathrm{set}}$ difference is also a $\mathcal C_{\mathrm{bag}}$ difference; $\mathcal C_{\mathrm{len}}$ additionally equates an empty result with one all-\texttt{NULL} row and compares numbers to nine significant digits.}\label{tab:contracts}
+\Tab{contracts}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\caption{Primary root cause of the difference for a random sample of 100 distinct first-freeze CaliberGraph witnesses (AI annotation, two independent passes, $\kappa=\V{taxKappa}$; no human check of root causes was made). Rule-based labels derived from the query structure contained the annotated primary cause in \V{taxRulePrimary} of 100 cases but assigned many additional labels, so we report the annotated causes.}\label{tab:taxonomy}
+\Tab{taxonomy}
+\end{table}
+
+Differences caused by \texttt{NULL} handling, by filters and by join paths account for about two thirds of the sampled witnesses; ordering and \texttt{LIMIT} ties, duplicates and aggregates over empty inputs for most of the rest. These are also the classes in which the AI attribution most often finds implausible data (\texttt{NULL} in always-filled fields, duplicated entities) or ambiguous questions (ties).

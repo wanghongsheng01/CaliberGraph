@@ -1,0 +1,358 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{yu2018spider}
+T.~Yu, R.~Zhang, K.~Yang, M.~Yasunaga, D.~Wang, Z.~Li, J.~Ma, I.~Li, Q.~Yao,
+  S.~Roman, Z.~Zhang, D.~Radev, Spider: A large-scale human-labeled dataset for
+  complex and cross-domain semantic parsing and text-to-{SQL} task, in:
+  Proceedings of the 2018 Conference on Empirical Methods in Natural Language
+  Processing (EMNLP), Association for Computational Linguistics, Brussels,
+  Belgium, 2018, pp. 3911--3921.
+\newblock \href {https://doi.org/10.18653/v1/D18-1425}
+  {\path{doi:10.18653/v1/D18-1425}}.
+
+\bibitem{li2023bird}
+J.~Li, B.~Hui, G.~Qu, J.~Yang, B.~Li, B.~Li, B.~Wang, B.~Qin, R.~Geng, N.~Huo,
+  X.~Zhou, C.~Ma, G.~Li, K.~Chang, F.~Huang, R.~Cheng, Y.~Li, Can {LLM} already
+  serve as a database interface? {A} {BIg} bench for large-scale database
+  grounded text-to-{SQLs}, in: Advances in Neural Information Processing
+  Systems 36 (NeurIPS 2023), Datasets and Benchmarks Track, Vol.~36, 2023, pp.
+  42330--42357.
+\newblock \href {https://doi.org/10.52202/075280-1835}
+  {\path{doi:10.52202/075280-1835}}.
+
+\bibitem{zhong2020testsuite}
+R.~Zhong, T.~Yu, D.~Klein, Semantic evaluation for text-to-{SQL} with distilled
+  test suites, in: Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP), Association for Computational
+  Linguistics, Online, 2020, pp. 396--411.
+\newblock \href {https://doi.org/10.18653/v1/2020.emnlp-main.29}
+  {\path{doi:10.18653/v1/2020.emnlp-main.29}}.
+
+\bibitem{chen2025parseval}
+C.~Chen, Z.~Miao, Y.~Zhang, J.~Wang, {ParSEval}: Plan-aware test database
+  generation for {SQL} equivalence evaluation, Proceedings of the VLDB
+  Endowment 18~(11) (2025) 4750--4762.
+\newblock \href {https://doi.org/10.14778/3749646.3749727}
+  {\path{doi:10.14778/3749646.3749727}}.
+
+\bibitem{klopfenstein2026spotit}
+R.~Klopfenstein, Y.~He, A.~Tremante, Y.~Wang, N.~Narodytska, H.~Wu, {SpotIt}:
+  Evaluating text-to-{SQL} evaluation with formal verification, in: Proceedings
+  of the Fourteenth International Conference on Learning Representations
+  (ICLR), 2026, pp. 69012--69048, arXiv:2510.26840.
+
+\bibitem{tremante2026spotitplus}
+A.~Tremante, Y.~He, R.~Klopfenstein, Y.~Wang, N.~Narodytska, H.~Wu, {SpotIt+}:
+  Verification-based text-to-{SQL} evaluation with database constraints, arXiv
+  preprint arXiv:2603.04334 (2026).
+\newblock \href {http://arxiv.org/abs/2603.04334} {\path{arXiv:2603.04334}}.
+
+\bibitem{jin2026annotation}
+T.~Jin, Y.~Choi, Y.~Zhu, D.~Kang, Pervasive annotation errors break
+  text-to-{SQL} benchmarks and leaderboards, Proceedings of the VLDB Endowment
+  19~(5) (2026) 931--944.
+\newblock \href {https://doi.org/10.14778/3796195.3796206}
+  {\path{doi:10.14778/3796195.3796206}}.
+
+\bibitem{abedjan2015profiling}
+Z.~Abedjan, L.~Golab, F.~Naumann, Profiling relational data: a survey, The VLDB
+  Journal 24~(4) (2015) 557--581.
+\newblock \href {https://doi.org/10.1007/s00778-015-0389-y}
+  {\path{doi:10.1007/s00778-015-0389-y}}.
+
+\bibitem{li2025alphasql}
+B.~Li, J.~Zhang, J.~Fan, Y.~Xu, C.~Chen, N.~Tang, Y.~Luo, {Alpha-SQL}:
+  Zero-shot text-to-{SQL} using {Monte Carlo} tree search, in: Proceedings of
+  the 42nd International Conference on Machine Learning ({ICML}), Vol. 267 of
+  Proceedings of Machine Learning Research, PMLR, 2025, pp. 36810--36830.
+
+\bibitem{talaei2024chess}
+S.~Talaei, M.~Pourreza, Y.-C. Chang, A.~Mirhoseini, A.~Saberi, {CHESS}:
+  Contextual harnessing for efficient {SQL} synthesis, arXiv preprint
+  arXiv:2405.16755 (2024).
+\newblock \href {http://arxiv.org/abs/2405.16755} {\path{arXiv:2405.16755}}.
+
+\bibitem{sheng2025cscsql}
+L.~Sheng, S.-S. Xu, {CSC-SQL}: Corrective self-consistency in text-to-{SQL} via
+  reinforcement learning, arXiv preprint arXiv:2505.13271 (2025).
+\newblock \href {http://arxiv.org/abs/2505.13271} {\path{arXiv:2505.13271}}.
+
+\bibitem{donder2025genasql}
+Y.~D. D{\"o}nder, D.~Hommel, A.~W. Wen-Yi, D.~Mimno, U.~E.~S. Jo, Cheaper,
+  better, faster, stronger: Robust text-to-{SQL} without chain-of-thought or
+  fine-tuning, arXiv preprint arXiv:2505.14174 (2025).
+\newblock \href {http://arxiv.org/abs/2505.14174} {\path{arXiv:2505.14174}}.
+
+\bibitem{li2025omnisql}
+H.~Li, S.~Wu, X.~Zhang, X.~Huang, J.~Zhang, F.~Jiang, S.~Wang, T.~Zhang,
+  J.~Chen, R.~Shi, H.~Chen, C.~Li, {OmniSQL}: Synthesizing high-quality
+  text-to-{SQL} data at scale, Proceedings of the VLDB Endowment 18~(11) (2025)
+  4695--4709.
+\newblock \href {https://doi.org/10.14778/3749646.3749723}
+  {\path{doi:10.14778/3749646.3749723}}.
+
+\bibitem{cao2024rslsql}
+Z.~Cao, Y.~Zheng, Z.~Fan, X.~Zhang, W.~Chen, X.~Bai, {RSL-SQL}: Robust schema
+  linking in text-to-{SQL} generation, arXiv preprint arXiv:2411.00073 (2024).
+\newblock \href {http://arxiv.org/abs/2411.00073} {\path{arXiv:2411.00073}}.
+
+\bibitem{sheng2025slmsql}
+L.~Sheng, S.-S. Xu, {SLM-SQL}: An exploration of small language models for
+  text-to-{SQL}, in: Findings of the Association for Computational Linguistics:
+  IJCNLP-AACL 2025, Association for Computational Linguistics, 2025, pp.
+  1497--1512.
+\newblock \href {https://doi.org/10.18653/v1/2025.findings-ijcnlp.92}
+  {\path{doi:10.18653/v1/2025.findings-ijcnlp.92}}.
+
+\bibitem{ding2023sqlsolver}
+H.~Ding, Z.~Wang, Y.~Yang, D.~Zhang, Z.~Xu, H.~Chen, R.~Piskac, J.~Li, Proving
+  query equivalence using linear integer arithmetic, Proceedings of the ACM on
+  Management of Data 1~(4) (2023) 1--26.
+\newblock \href {https://doi.org/10.1145/3626768} {\path{doi:10.1145/3626768}}.
+
+\bibitem{wang2024qed}
+S.~Wang, S.~Pan, A.~Cheung, {QED}: A powerful query equivalence decider for
+  {SQL}, Proceedings of the VLDB Endowment 17~(11) (2024) 3602--3614.
+\newblock \href {https://doi.org/10.14778/3681954.3682024}
+  {\path{doi:10.14778/3681954.3682024}}.
+
+\bibitem{he2024verieql}
+Y.~He, P.~Zhao, X.~Wang, Y.~Wang, {VeriEQL}: Bounded equivalence verification
+  for complex {SQL} queries with integrity constraints, Proceedings of the ACM
+  on Programming Languages 8~(OOPSLA1) (2024) 1071--1099.
+\newblock \href {https://doi.org/10.1145/3649849} {\path{doi:10.1145/3649849}}.
+
+\bibitem{chandra2015xdata}
+B.~Chandra, B.~Chawda, B.~Kar, K.~V.~M. Reddy, S.~Shah, S.~Sudarshan, Data
+  generation for testing and grading {SQL} queries, The {VLDB} Journal 24~(6)
+  (2015) 731--755.
+\newblock \href {https://doi.org/10.1007/s00778-015-0395-0}
+  {\path{doi:10.1007/s00778-015-0395-0}}.
+
+\bibitem{castelein2018evosql}
+J.~Castelein, M.~Aniche, M.~Soltani, A.~Panichella, A.~van Deursen,
+  Search-based test data generation for {SQL} queries, in: Proceedings of the
+  40th International Conference on Software Engineering ({ICSE}), ACM, 2018,
+  pp. 1220--1230.
+\newblock \href {https://doi.org/10.1145/3180155.3180202}
+  {\path{doi:10.1145/3180155.3180202}}.
+
+\bibitem{kim2025flex}
+H.~Kim, T.~Jeon, S.~Choi, S.~Choi, H.~Cho, {FLEX}: Expert-level false-less
+  {EX}ecution metric for text-to-{SQL} benchmark, in: Proceedings of the 2025
+  Conference of the Nations of the Americas Chapter of the Association for
+  Computational Linguistics: Human Language Technologies (Volume 1: Long
+  Papers), Association for Computational Linguistics, 2025, pp. 4448--4475.
+\newblock \href {https://doi.org/10.18653/v1/2025.naacl-long.228}
+  {\path{doi:10.18653/v1/2025.naacl-long.228}}.
+
+\bibitem{gao2024dailsql}
+D.~Gao, H.~Wang, Y.~Li, X.~Sun, Y.~Qian, B.~Ding, J.~Zhou, Text-to-{SQL}
+  empowered by large language models: A benchmark evaluation, Proceedings of
+  the VLDB Endowment 17~(5) (2024) 1132--1145.
+\newblock \href {https://doi.org/10.14778/3641204.3641221}
+  {\path{doi:10.14778/3641204.3641221}}.
+
+\bibitem{li2023graphix}
+J.~Li, B.~Hui, R.~Cheng, B.~Qin, C.~Ma, N.~Huo, F.~Huang, W.~Du, L.~Si, Y.~Li,
+  {Graphix-T5}: Mixing pre-trained transformers with graph-aware layers for
+  text-to-{SQL} parsing, in: AAAI Conference on Artificial Intelligence,
+  Vol.~37, 2023, pp. 13076--13084.
+\newblock \href {https://doi.org/10.1609/aaai.v37i11.26536}
+  {\path{doi:10.1609/aaai.v37i11.26536}}.
+
+\bibitem{pourreza2023dinsql}
+M.~Pourreza, D.~Rafiei, {DIN-SQL}: Decomposed in-context learning of
+  text-to-{SQL} with self-correction, in: Advances in Neural Information
+  Processing Systems (NeurIPS), 2023.
+
+\bibitem{fan2011cfd}
+W.~Fan, F.~Geerts, J.~Li, M.~Xiong, Discovering conditional functional
+  dependencies, IEEE Transactions on Knowledge and Data Engineering 23~(5)
+  (2011) 683--698.
+
+\bibitem{chu2013dc}
+X.~Chu, I.~F. Ilyas, P.~Papotti, Discovering denial constraints, Proceedings of
+  the VLDB Endowment 6~(13) (2013) 1498--1509.
+
+\bibitem{malekpour2026sqlmorph}
+M.~Malekpour, M.~Riahi, M.~Lamothe, A.~Mhedhbi, {SQLMorph}: Query mutation and
+  fine-grained metrics for text-to-{SQL} evaluation, in: Proceedings of the
+  IEEE 42nd International Conference on Data Engineering (ICDE), 2026.
+\newblock \href {https://doi.org/10.1109/ICDE65706.2026.00196}
+  {\path{doi:10.1109/ICDE65706.2026.00196}}.
+
+\bibitem{li2024nl2sql360}
+B.~Li, Y.~Luo, C.~Chai, G.~Li, N.~Tang, The dawn of natural language to {SQL}:
+  Are we fully ready?, Proceedings of the VLDB Endowment 17~(11) (2024)
+  3318--3331.
+\newblock \href {https://doi.org/10.14778/3681954.3682003}
+  {\path{doi:10.14778/3681954.3682003}}.
+
+\bibitem{pham2026fusionsql}
+T.~Pham, T.~T. Nguyen, V.~Huynh, H.~Yin, Q.~V.~H. Nguyen, An efficient and
+  effective evaluator for {Text2SQL} models on unseen and unlabeled data, in:
+  Proceedings of the IEEE 42nd International Conference on Data Engineering
+  (ICDE), 2026, pp. 2434--2447.
+\newblock \href {https://doi.org/10.1109/ICDE65706.2026.00182}
+  {\path{doi:10.1109/ICDE65706.2026.00182}}.
+
+\bibitem{fan2025cyclesql}
+Y.~Fan, T.~Ren, C.~Huang, Z.~He, X.~S. Wang, Grounding natural language to
+  {SQL} translation with data-based self-explanations, in: Proceedings of the
+  IEEE 41st International Conference on Data Engineering (ICDE), 2025.
+\newblock \href {https://doi.org/10.1109/ICDE65448.2025.00010}
+  {\path{doi:10.1109/ICDE65448.2025.00010}}.
+
+\bibitem{somov2025confidence}
+O.~Somov, E.~Tutubalina, Confidence estimation for error detection in
+  text-to-sql systems, in: Proceedings of the AAAI Conference on Artificial
+  Intelligence, Vol.~39, 2025, pp. 25137--25145.
+\newblock \href {https://doi.org/10.1609/aaai.v39i23.34699}
+  {\path{doi:10.1609/aaai.v39i23.34699}}.
+
+\bibitem{maleki2026confidence}
+S.~Entezari~Maleki, M.~Pourreza, D.~Rafiei, Confidence estimation for
+  text-to-sql in large language models, in: Proceedings of the AAAI Conference
+  on Artificial Intelligence, Vol.~40, 2026, pp. 32474--32482.
+\newblock \href {https://doi.org/10.1609/aaai.v40i38.40523}
+  {\path{doi:10.1609/aaai.v40i38.40523}}.
+
+\bibitem{wretblad2024noise}
+N.~Wretblad, F.~Riseby, R.~Biswas, A.~Ahmadi, O.~Holmstr{\"o}m, Understanding
+  the effects of noise in text-to-{SQL}: An examination of the {BIRD}-bench
+  benchmark, in: Proceedings of the 62nd Annual Meeting of the Association for
+  Computational Linguistics (Volume 2: Short Papers), Association for
+  Computational Linguistics, 2024, pp. 356--369.
+\newblock \href {https://doi.org/10.18653/v1/2024.acl-short.34}
+  {\path{doi:10.18653/v1/2024.acl-short.34}}.
+
+\bibitem{hou2026nl2sqlbench}
+S.~Hou, W.~Pei, N.~Chen, Q.-T. Ta, P.~Lu, B.~C. Ooi, {NL2SQLBench}: A modular
+  benchmarking framework for {LLM}-enabled {NL2SQL} solutions, Proceedings of
+  the VLDB Endowment 19~(5) (2026) 1001--1015.
+\newblock \href {https://doi.org/10.14778/3796195.3796211}
+  {\path{doi:10.14778/3796195.3796211}}.
+
+\bibitem{alrashed2026verification}
+T.~Alrashed, M.~Sukoon, D.~R. Karger, N.~Noy, Developing and benchmarking
+  verification algorithms to improve text-to-{SQL} generation, Proceedings of
+  the VLDB Endowment 19~(11) (2026) 3732--3744.
+\newblock \href {https://doi.org/10.14778/3836663.3836721}
+  {\path{doi:10.14778/3836663.3836721}}.
+
+\bibitem{chu2017cosette}
+S.~Chu, C.~Wang, K.~Weitz, A.~Cheung,
+  \href{https://www.cidrdb.org/cidr2017/papers/p51-chu-cidr17.pdf}{Cosette: An
+  automated prover for {SQL}}, in: Conference on Innovative Data Systems
+  Research ({CIDR}), 2017.
+\newline\urlprefix\url{https://www.cidrdb.org/cidr2017/papers/p51-chu-cidr17.pdf}
+
+\bibitem{zhao2025polygon}
+P.~Zhao, Y.~Wang, X.~Wang, Polygon: Symbolic reasoning for {SQL} using
+  conflict-driven under-approximation search, Proceedings of the ACM on
+  Programming Languages 9~(PLDI) (2025) 1315--1340.
+\newblock \href {https://doi.org/10.1145/3729303} {\path{doi:10.1145/3729303}}.
+
+\bibitem{chandra1977conjunctive}
+A.~K. Chandra, P.~M. Merlin, Optimal implementation of conjunctive queries in
+  relational data bases, in: Proceedings of the 9th Annual ACM Symposium on
+  Theory of Computing ({STOC}), ACM, 1977, pp. 77--90.
+\newblock \href {https://doi.org/10.1145/800105.803397}
+  {\path{doi:10.1145/800105.803397}}.
+
+\bibitem{chaudhuri1993real}
+S.~Chaudhuri, M.~Y. Vardi, Optimization of \emph{Real} conjunctive queries, in:
+  Proceedings of the Twelfth ACM SIGACT-SIGMOD-SIGART Symposium on Principles
+  of Database Systems ({PODS}), ACM, Washington, DC, USA, 1993, pp. 59--70.
+\newblock \href {https://doi.org/10.1145/153850.153856}
+  {\path{doi:10.1145/153850.153856}}.
+
+\bibitem{cohen2007aggregate}
+S.~Cohen, W.~Nutt, Y.~Sagiv, Deciding equivalences among conjunctive aggregate
+  queries, Journal of the ACM 54~(2) (2007) 5.
+\newblock \href {https://doi.org/10.1145/1219092.1219093}
+  {\path{doi:10.1145/1219092.1219093}}.
+
+\bibitem{cohen2026fewrows}
+S.~Cohen, Few rows tell them apart: Equivalence of queries mixing set and bag
+  semantics, arXiv preprint arXiv:2609.09978 (2026).
+\newblock \href {http://arxiv.org/abs/2609.09978} {\path{arXiv:2609.09978}}.
+
+\bibitem{aho1979tableaux}
+A.~V. Aho, Y.~Sagiv, J.~D. Ullman, Efficient optimization of a class of
+  relational expressions, ACM Transactions on Database Systems 4~(4) (1979)
+  435--454.
+
+\bibitem{johnson1984containment}
+D.~S. Johnson, A.~Klug, Testing containment of conjunctive queries under
+  functional and inclusion dependencies, Journal of Computer and System
+  Sciences 28 (1984) 167--189.
+
+\bibitem{binnig2007qagen}
+C.~Binnig, D.~Kossmann, E.~Lo, M.~T. {\"O}zsu, {QAGen}: Generating query-aware
+  test databases, in: Proceedings of the 2007 ACM SIGMOD International
+  Conference on Management of Data, ACM, 2007, pp. 341--352.
+\newblock \href {https://doi.org/10.1145/1247480.1247520}
+  {\path{doi:10.1145/1247480.1247520}}.
+
+\bibitem{binnig2007rqp}
+C.~Binnig, D.~Kossmann, E.~Lo, Reverse query processing, in: Proceedings of the
+  23rd International Conference on Data Engineering ({ICDE}), IEEE, 2007, pp.
+  506--515.
+\newblock \href {https://doi.org/10.1109/ICDE.2007.367896}
+  {\path{doi:10.1109/ICDE.2007.367896}}.
+
+\bibitem{chen2026parsevaldemo}
+C.~Chen, Z.~Miao, Y.~Zhang, J.~Wang, {ParSEval}: Interactive
+  counterexample-driven evaluation for text-to-{SQL}, Proceedings of the VLDB
+  Endowment 19~(12) (2026) 4846--4849, demonstration paper.
+\newblock \href {https://doi.org/10.14778/3827998.3828137}
+  {\path{doi:10.14778/3827998.3828137}}.
+
+\bibitem{arasu2011datasynth}
+A.~Arasu, R.~Kaushik, J.~Li, Data generation using declarative constraints, in:
+  Proceedings of the ACM SIGMOD International Conference on Management of Data,
+  2011, pp. 685--696.
+
+\bibitem{li2018touchstone}
+Y.~Li, R.~Zhang, X.~Yang, Z.~Zhang, A.~Zhou, Touchstone: Generating enormous
+  query-aware test databases, in: Proceedings of the USENIX Annual Technical
+  Conference (USENIX ATC), 2018, pp. 575--586.
+
+\bibitem{yang2022sam}
+J.~Yang, P.~Wu, G.~Cong, T.~Zhang, X.~He, {SAM}: Database generation from query
+  workloads with supervised autoregressive models, in: Proceedings of the ACM
+  SIGMOD International Conference on Management of Data, 2022.
+\newblock \href {https://doi.org/10.1145/3514221.3526168}
+  {\path{doi:10.1145/3514221.3526168}}.
+
+\bibitem{tuya2016reduction}
+J.~Tuya, C.~de~la Riva, M.~J. Su{\'a}rez-Cabal, R.~Blanco, Coverage-aware test
+  database reduction, IEEE Transactions on Software Engineering 42~(10) (2016)
+  941--959.
+\newblock \href {https://doi.org/10.1109/TSE.2016.2519032}
+  {\path{doi:10.1109/TSE.2016.2519032}}.
+
+\bibitem{papenbrock2016hyfd}
+T.~Papenbrock, F.~Naumann, A hybrid approach to functional dependency
+  discovery, in: Proceedings of the ACM SIGMOD International Conference on
+  Management of Data, 2016, pp. 821--833.
+
+\bibitem{papenbrock2015binder}
+T.~Papenbrock, S.~Kruse, J.-A. Quian{\'e}-Ruiz, F.~Naumann, Divide \&
+  conquer-based inclusion dependency discovery, Proceedings of the VLDB
+  Endowment 8~(7) (2015) 774--785.
+
+\bibitem{ni2025zeroed}
+W.~Ni, K.~Zhang, X.~Miao, X.~Zhao, Y.~Wu, Y.~Wang, J.~Yin, {ZeroED}: Hybrid
+  zero-shot error detection with large language model reasoning, in:
+  Proceedings of the IEEE 41st International Conference on Data Engineering
+  (ICDE), 2025.
+
+\end{thebibliography}

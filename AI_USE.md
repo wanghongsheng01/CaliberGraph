@@ -1,6 +1,6 @@
 # Use of Generative AI in This Study
 
-This supplement documents the use of generative AI, as required by the PVLDB Code of Ethics (§3.2.3: such use "must be documented") and by the ACM policy on authorship, which asks for tools, versions, prompts and editing when whole sections are generated. The paper's acknowledgements carry a shorter disclosure.
+This supplement documents the use of generative AI in the research and in the writing, as required by Elsevier's policy on generative AI for journals: use in the research process must be described in the methods, and use in manuscript preparation must be declared. The manuscript describes the use in its section "Use of AI models in this study" and in the declaration at its end; this file gives the details (tools, versions, prompts and editing process).
 
 ## Tools and versions
 - **Primary model.** Claude Opus 5.5 (Anthropic; model identifier `claude-opus-5-5`), used through an agentic coding environment (Claude, with file, shell and sub-agent tools) from October 2026 (first commit of the study repository: 2026-10-13) until submission.

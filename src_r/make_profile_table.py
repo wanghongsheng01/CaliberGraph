@@ -5,7 +5,12 @@ import json
 import sys
 
 
-def f(x):
+def f(x, n=None):
+    # x is a percentage already rounded to one decimal; with n, recover the count and round the exact share
+    # half up (rounding the rounded value again turned 20.52 into 20)
+    if n:
+        k = round(x * n / 100)
+        return str(int(100 * k / n + 0.5))
     return f'{x:.0f}'
 
 
@@ -30,7 +35,7 @@ def main(src, dst):
            '\\cmidrule(l){3-%d}' % (2 + len(tools)),
            'Constraint class & $|\\Pi|$ on BIRD & CG & Fuzz & PSE\\\\', '\\midrule']
     for name, size, k in rows:
-        out.append(f'{name} & {size} & ' + ' & '.join(f(V[t]['referenced'][k]) for t in tools) + '\\\\')
+        out.append(f'{name} & {size} & ' + ' & '.join(f(V[t]['referenced'][k], V[t]['n']) for t in tools) + '\\\\')
     out.append('\\midrule')
     out.append('Witnesses $n$ & & ' + ' & '.join(f"{V[t]['n']:,}".replace(',', '{,}') for t in tools) + '\\\\')
     out += ['\\bottomrule', '\\end{tabular}']

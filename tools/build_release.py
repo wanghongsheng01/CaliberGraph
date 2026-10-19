@@ -1,4 +1,4 @@
-"""Build the public artifact repository for the PVLDB submission from the tracked files of this
+"""Build the public artifact repository for the Information Systems submission from the tracked files of this
 (development) repository. Internal working notes are excluded; the pre-registrations, freeze
 records, code, data, raw outputs, annotations and paper sources are included.
 
@@ -12,13 +12,13 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 INCLUDE_PREFIXES = [
-    'src/', 'src_r/', 'src_v5/', 'src_s3/', 'data/', 'results/', 'paper_pvldb/', 'tools/', 'REPRODUCE_DERIVED.md',
+    'src/', 'src_r/', 'src_v5/', 'src_s3/', 'data/', 'results/', 'paper_pvldb/', 'paper_is/', 'submission_is/highlights.txt', 'tools/', 'REPRODUCE_DERIVED.md',
     'docs/en/', 'docs/FREEZE.md', 'docs/FREEZE_R.md', 'docs/FREEZE_SHA256.txt', 'docs/FREEZE_R_SHA256.txt',
     'docs/FREEZE_S3.md', 'docs/FREEZE_S3_SHA256.txt', 'docs/02_', 'docs/02a_', 'docs/07_',
     'spider/data/', 'spider/results/', 'spider/aborted_', 'minidev/data/', 'minidev/results/', 'spider_smoke/data/', 'spider_smoke/results/',
 ]
 EXCLUDE_SUFFIXES = ('.aux', '.log', '.out', '.blg', '.spl', '.synctex.gz')
-EXCLUDE_EXACT = {'paper_pvldb/main.pdf'}  # rebuilt from sources; the submitted PDF goes to CMT
+EXCLUDE_EXACT = {'paper_pvldb/main.pdf', 'paper_is/main.pdf'}  # rebuilt from sources
 # (the round-3 key was withheld until all three sheets were returned, docs/en/17c; it is now included)
 
 
@@ -28,7 +28,7 @@ def tracked():
 
 
 def keep(p):
-    if p in EXCLUDE_EXACT or p.endswith(EXCLUDE_SUFFIXES) and p.startswith('paper_pvldb/'):
+    if p in EXCLUDE_EXACT or p.endswith(EXCLUDE_SUFFIXES) and p.startswith(('paper_pvldb/', 'paper_is/')):
         return False
     return any(p.startswith(x) for x in INCLUDE_PREFIXES)
 

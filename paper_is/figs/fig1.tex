@@ -1,0 +1,27 @@
+\begin{figure}[!htbp]
+\centering\footnotesize
+\setlength{\fboxsep}{3pt}
+\fbox{\begin{minipage}{0.96\linewidth}
+\textbf{Question} (BIRD, \texttt{european\_football\_2}): \emph{List the top 5 leagues in ascending order of the number of goals made in all seasons combined.}\\[2pt]
+{\scriptsize\ttfamily
+$Q_g$: SELECT l.name, SUM(m.home\_team\_goal) + SUM(m.away\_team\_goal) \dots\ GROUP BY l.name ORDER BY \dots\ LIMIT 5\\
+$Q_p$: SELECT l.name, SUM(m.home\_team\_goal + m.away\_team\_goal) \dots\ GROUP BY l.name ORDER BY \dots\ LIMIT 5}\\[3pt]
+\begin{minipage}[t]{0.49\linewidth}\raggedright
+\textbf{(a) Certified witness at $\mathcal A_{1f}$} (excerpt)\\[1pt]
+\begin{tabular}{@{}l@{\,}c@{\,}c@{}}
+\toprule
+League & home\_goal & away\_goal\\
+\midrule
+N.\ Eredivisie & 3 & 10\\
+N.\ Eredivisie & \textcolor{red}{\texttt{NULL}} & 10\\
+\bottomrule
+\end{tabular}\\[2pt]
+$Q_g\mapsto 23$, \ $Q_p\mapsto 13$: \emph{non-equivalent}. Found by CaliberGraph (0.2\,s), random fuzzing and ParSEval; satisfies the DDL, types and formats.
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\linewidth}\raggedright
+\textbf{(b) Against the data profile}\\[1pt]
+In BIRD, \texttt{home\_team\_goal} is \texttt{NULL} in \textbf{0 of 25,979} matches. On \texttt{NULL}-free data $\textsc{sum}(a){+}\textsc{sum}(b)=\textsc{sum}(a{+}b)$ for every group, so the queries compute the same totals; CaliberGraph-R and fuzzing-R find no $\mathcal A_R$ witness. Both annotation passes: \emph{implausible data}.
+\end{minipage}
+\end{minipage}}
+\caption{A certified counterexample that says little about the question. Under DDL- and format-derived admissibility, three tools ``disprove'' an accepted prediction; the difference needs a played match without a goal count, which never occurs in BIRD. By the AI attribution, \V{attrImplMin}--\V{attrImplMax}\,\% of the sampled witnesses of every tool rest on such data (round-3 human majority: \V{hvThreeImpOne} of \V{hvThreeMajOne} schema-tier witnesses).}\label{fig:example}
+\end{figure}

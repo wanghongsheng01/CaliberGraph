@@ -1,0 +1,616 @@
+% =====================================================================
+% Verified bibliography for: counterexample-database Text-to-SQL evaluation
+% (target venue: Data & Knowledge Engineering, Elsevier)
+% Compiled 2026-10-13. Sources per entry are listed in references_notes.md.
+% Fields that could not be verified are omitted and flagged "% UNVERIFIED".
+% =====================================================================
+
+% ---------------------------------------------------------------------
+% Benchmarks
+% ---------------------------------------------------------------------
+
+@inproceedings{li2023bird,
+  author    = {Li, Jinyang and Hui, Binyuan and Qu, Ge and Yang, Jiaxi and Li, Binhua and Li, Bowen and Wang, Bailin and Qin, Bowen and Geng, Ruiying and Huo, Nan and Zhou, Xuanhe and Ma, Chenhao and Li, Guoliang and Chang, Kevin and Huang, Fei and Cheng, Reynold and Li, Yongbin},
+  title     = {Can {LLM} Already Serve as A Database Interface? {A} {BIg} Bench for Large-Scale Database Grounded Text-to-{SQLs}},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023), Datasets and Benchmarks Track},
+  volume    = {36},
+  pages     = {42330--42357},
+  year      = {2023},
+  doi       = {10.52202/075280-1835}
+}
+
+@inproceedings{yu2018spider,
+  author    = {Yu, Tao and Zhang, Rui and Yang, Kai and Yasunaga, Michihiro and Wang, Dongxu and Li, Zifan and Ma, James and Li, Irene and Yao, Qingning and Roman, Shanelle and Zhang, Zilin and Radev, Dragomir},
+  title     = {Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-{SQL} Task},
+  booktitle = {Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  address   = {Brussels, Belgium},
+  publisher = {Association for Computational Linguistics},
+  pages     = {3911--3921},
+  year      = {2018},
+  doi       = {10.18653/v1/D18-1425}
+}
+
+% ---------------------------------------------------------------------
+% Text-to-SQL evaluation
+% ---------------------------------------------------------------------
+
+@inproceedings{zhong2020testsuite,
+  author    = {Zhong, Ruiqi and Yu, Tao and Klein, Dan},
+  title     = {Semantic Evaluation for Text-to-{SQL} with Distilled Test Suites},
+  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  address   = {Online},
+  publisher = {Association for Computational Linguistics},
+  pages     = {396--411},
+  month     = nov,
+  year      = {2020},
+  doi       = {10.18653/v1/2020.emnlp-main.29}
+}
+
+@inproceedings{klopfenstein2026spotit,
+  author    = {Klopfenstein, Rocky and He, Yang and Tremante, Andrew and Wang, Yuepeng and Narodytska, Nina and Wu, Haoze},
+  title     = {{SpotIt}: Evaluating Text-to-{SQL} Evaluation with Formal Verification},
+  booktitle = {Proceedings of the Fourteenth International Conference on Learning Representations (ICLR)},
+  pages     = {69012--69048},
+  year      = {2026},
+  note      = {arXiv:2510.26840}
+}
+% UNVERIFIED: exact official booktitle string (taken from proceedings.iclr.cc page metadata; official .bib not read). No DOI.
+
+@misc{tremante2026spotitplus,
+  author        = {Tremante, Andrew and He, Yang and Klopfenstein, Rocky and Wang, Yuepeng and Narodytska, Nina and Wu, Haoze},
+  title         = {{SpotIt+}: Verification-based Text-to-{SQL} Evaluation with Database Constraints},
+  year          = {2026},
+  eprint        = {2603.04334},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.DB},
+  howpublished  = {arXiv preprint arXiv:2603.04334}
+}
+% UNVERIFIED: primaryclass (not read from abstract page). No published venue found as of 2026-10.
+
+@article{chen2025parseval,
+  author    = {Chen, Chunyu and Miao, Zhengjie and Zhang, Yong and Wang, Jiannan},
+  title     = {{ParSEval}: Plan-aware Test Database Generation for {SQL} Equivalence Evaluation},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {18},
+  number    = {11},
+  pages     = {4750--4762},
+  year      = {2025},
+  doi       = {10.14778/3749646.3749727}
+}
+
+@article{chen2026parsevaldemo,
+  author    = {Chen, Chunyu and Miao, Zhengjie and Zhang, Yong and Wang, Jiannan},
+  title     = {{ParSEval}: Interactive Counterexample-driven Evaluation for Text-to-{SQL}},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {19},
+  number    = {12},
+  pages     = {4846--4849},
+  year      = {2026},
+  doi       = {10.14778/3827998.3828137},
+  note      = {Demonstration paper}
+}
+
+@inproceedings{kim2025flex,
+  author    = {Kim, Heegyu and Jeon, Taeyang and Choi, SeungHwan and Choi, Seungtaek and Cho, Hyunsouk},
+  title     = {{FLEX}: Expert-level False-Less {EX}ecution Metric for Text-to-{SQL} Benchmark},
+  booktitle = {Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)},
+  publisher = {Association for Computational Linguistics},
+  pages     = {4448--4475},
+  month     = apr,
+  year      = {2025},
+  doi       = {10.18653/v1/2025.naacl-long.228}
+}
+% NOTE: Published title drops "Reliable" (arXiv title: "...Metric for Reliable Text-to-SQL Benchmark").
+% NOTE: ACL Anthology .bib encodes the 2nd author as "Taeyang, Jeon"; byline is "Jeon Taeyang". Kept as a braced literal.
+
+% ---------------------------------------------------------------------
+% Annotation errors / unreliability of Text-to-SQL benchmarks
+% ---------------------------------------------------------------------
+
+@inproceedings{wretblad2024noise,
+  author    = {Wretblad, Niklas and Riseby, Fredrik and Biswas, Rahul and Ahmadi, Amin and Holmstr{\"o}m, Oskar},
+  title     = {Understanding the Effects of Noise in Text-to-{SQL}: An Examination of the {BIRD}-Bench Benchmark},
+  booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)},
+  publisher = {Association for Computational Linguistics},
+  pages     = {356--369},
+  month     = aug,
+  year      = {2024},
+  doi       = {10.18653/v1/2024.acl-short.34}
+}
+
+@article{jin2026annotation,
+  author    = {Jin, Tengjun and Choi, Yoojin and Zhu, Yuxuan and Kang, Daniel},
+  title     = {Pervasive Annotation Errors Break Text-to-{SQL} Benchmarks and Leaderboards},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {19},
+  number    = {5},
+  pages     = {931--944},
+  year      = {2026},
+  doi       = {10.14778/3796195.3796206}
+}
+
+% ---------------------------------------------------------------------
+% SQL equivalence verification / proving
+% ---------------------------------------------------------------------
+
+@article{he2024verieql,
+  author    = {He, Yang and Zhao, Pinhan and Wang, Xinyu and Wang, Yuepeng},
+  title     = {{VeriEQL}: Bounded Equivalence Verification for Complex {SQL} Queries with Integrity Constraints},
+  journal   = {Proceedings of the ACM on Programming Languages},
+  volume    = {8},
+  number    = {OOPSLA1},
+  pages     = {1071--1099},
+  year      = {2024},
+  doi       = {10.1145/3649849}
+}
+% UNVERIFIED: article number.
+
+@article{zhao2025polygon,
+  author    = {Zhao, Pinhan and Wang, Yuepeng and Wang, Xinyu},
+  title     = {Polygon: Symbolic Reasoning for {SQL} using Conflict-Driven Under-Approximation Search},
+  journal   = {Proceedings of the ACM on Programming Languages},
+  volume    = {9},
+  number    = {PLDI},
+  pages     = {1315--1340},
+  year      = {2025},
+  doi       = {10.1145/3729303}
+}
+% NOTE: Published in PACMPL (PLDI 2025), NOT PACMMOD/SIGMOD as the request assumed.
+% UNVERIFIED: article number.
+
+@inproceedings{chu2017cosette,
+  author    = {Chu, Shumo and Wang, Chenglong and Weitz, Konstantin and Cheung, Alvin},
+  title     = {Cosette: An Automated Prover for {SQL}},
+  booktitle = {Conference on Innovative Data Systems Research ({CIDR})},
+  year      = {2017},
+  url       = {https://www.cidrdb.org/cidr2017/papers/p51-chu-cidr17.pdf}
+}
+% NOTE: Authors are Chu, Wang, Weitz, Cheung (Suciu is NOT an author of the CIDR paper).
+% UNVERIFIED: address (one secondary index said "Amsterdam", which looks wrong for CIDR 2017; omitted), pages.
+
+@article{ding2023sqlsolver,
+  author    = {Ding, Haoran and Wang, Zhaoguo and Yang, Yicun and Zhang, Dexin and Xu, Zhenglin and Chen, Haibo and Piskac, Ruzica and Li, Jinyang},
+  title     = {Proving Query Equivalence Using Linear Integer Arithmetic},
+  journal   = {Proceedings of the ACM on Management of Data},
+  volume    = {1},
+  number    = {4},
+  pages     = {1--26},
+  year      = {2023},
+  doi       = {10.1145/3626768}
+}
+% UNVERIFIED: article number.
+
+@article{wang2024qed,
+  author    = {Wang, Shuxian and Pan, Sicheng and Cheung, Alvin},
+  title     = {{QED}: A Powerful Query Equivalence Decider for {SQL}},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {17},
+  number    = {11},
+  pages     = {3602--3614},
+  year      = {2024},
+  doi       = {10.14778/3681954.3682024}
+}
+
+% ---------------------------------------------------------------------
+% Test database / test data generation for SQL
+% ---------------------------------------------------------------------
+
+@article{chandra2015xdata,
+  author    = {Chandra, Bikash and Chawda, Bhupesh and Kar, Biplab and Reddy, K. V. Maheshwara and Shah, Shetal and Sudarshan, S.},
+  title     = {Data generation for testing and grading {SQL} queries},
+  journal   = {The {VLDB} Journal},
+  volume    = {24},
+  number    = {6},
+  pages     = {731--755},
+  year      = {2015},
+  doi       = {10.1007/s00778-015-0395-0}
+}
+
+@inproceedings{castelein2018evosql,
+  author    = {Castelein, Jeroen and Aniche, Maur{\'\i}cio and Soltani, Mozhan and Panichella, Annibale and van Deursen, Arie},
+  title     = {Search-based test data generation for {SQL} queries},
+  booktitle = {Proceedings of the 40th International Conference on Software Engineering ({ICSE})},
+  publisher = {ACM},
+  pages     = {1220--1230},
+  year      = {2018},
+  doi       = {10.1145/3180155.3180202}
+}
+% UNVERIFIED: booktitle ordinal "40th" (not confirmed by a fetched page; pages/DOI/authors verified via OpenAlex).
+
+@inproceedings{binnig2007qagen,
+  author    = {Binnig, Carsten and Kossmann, Donald and Lo, Eric and {\"O}zsu, M. Tamer},
+  title     = {{QAGen}: Generating Query-Aware Test Databases},
+  booktitle = {Proceedings of the 2007 ACM SIGMOD International Conference on Management of Data},
+  publisher = {ACM},
+  pages     = {341--352},
+  year      = {2007},
+  doi       = {10.1145/1247480.1247520}
+}
+
+@inproceedings{binnig2007rqp,
+  author    = {Binnig, Carsten and Kossmann, Donald and Lo, Eric},
+  title     = {Reverse Query Processing},
+  booktitle = {Proceedings of the 23rd International Conference on Data Engineering ({ICDE})},
+  publisher = {IEEE},
+  pages     = {506--515},
+  year      = {2007},
+  doi       = {10.1109/ICDE.2007.367896}
+}
+
+% ---------------------------------------------------------------------
+% Data & Knowledge Engineering (venue fit)
+% ---------------------------------------------------------------------
+
+@article{thanisch2019measurement,
+  author    = {Thanisch, Peter and Niemi, Tapio and Nummenmaa, Jyrki and Niinim{\"a}ki, Marko},
+  title     = {Detecting measurement issues in {SQL} arithmetic expressions and aggregations},
+  journal   = {Data \& Knowledge Engineering},
+  volume    = {122},
+  pages     = {116--129},
+  year      = {2019},
+  doi       = {10.1016/j.datak.2019.06.001}
+}
+
+@article{nascimento2026kgtext2sql,
+  author    = {Nascimento, Eduardo R. and Avila, Caio Viktor S. and Izquierdo, Yenier T. and Garc{\'\i}a, Grettel M. and Andrade, Lucas Feij{\'o} L. and Silva, Matheus O. and Facina, Michelle S. P. and Lemos, Melissa and Casanova, Marco A.},
+  title     = {A {Text-to-SQL} strategy based on large language models and knowledge graphs for real-world databases},
+  journal   = {Data \& Knowledge Engineering},
+  volume    = {164},
+  pages     = {102580},
+  year      = {2026},
+  doi       = {10.1016/j.datak.2026.102580}
+}
+
+@article{leguilly2022sqlext,
+  author    = {Le Guilly, Marie and Petit, Jean-Marc and Scuturici, Vasile-Marian},
+  title     = {{SQL} query extensions for imprecise questions},
+  journal   = {Data \& Knowledge Engineering},
+  volume    = {137},
+  pages     = {101944},
+  year      = {2022},
+  doi       = {10.1016/j.datak.2021.101944}
+}
+% NOTE: Volume 137 is the January 2022 issue (online Oct 2021); OpenAlex reports year 2021. Only loosely related (SQL query completion).
+
+% ---------------------------------------------------------------------
+% Query equivalence / containment theory
+% ---------------------------------------------------------------------
+
+@misc{cohen2026fewrows,
+  author        = {Cohen, Sara},
+  title         = {Few Rows Tell Them Apart: Equivalence of Queries Mixing Set and Bag Semantics},
+  year          = {2026},
+  eprint        = {2609.09978},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.DB},
+  howpublished  = {arXiv preprint arXiv:2609.09978}
+}
+
+@article{cohen2007aggregate,
+  author    = {Cohen, Sara and Nutt, Werner and Sagiv, Yehoshua},
+  title     = {Deciding equivalences among conjunctive aggregate queries},
+  journal   = {Journal of the ACM},
+  volume    = {54},
+  number    = {2},
+  pages     = {5},
+  year      = {2007},
+  doi       = {10.1145/1219092.1219093}
+}
+% NOTE: pages field is the article number (Article 5).
+
+@inproceedings{chandra1977conjunctive,
+  author    = {Chandra, Ashok K. and Merlin, Philip M.},
+  title     = {Optimal Implementation of Conjunctive Queries in Relational Data Bases},
+  booktitle = {Proceedings of the 9th Annual ACM Symposium on Theory of Computing ({STOC})},
+  publisher = {ACM},
+  pages     = {77--90},
+  year      = {1977},
+  doi       = {10.1145/800105.803397}
+}
+
+@inproceedings{chaudhuri1993real,
+  author    = {Chaudhuri, Surajit and Vardi, Moshe Y.},
+  title     = {Optimization of \emph{Real} Conjunctive Queries},
+  booktitle = {Proceedings of the Twelfth ACM SIGACT-SIGMOD-SIGART Symposium on Principles of Database Systems ({PODS})},
+  address   = {Washington, DC, USA},
+  publisher = {ACM},
+  pages     = {59--70},
+  year      = {1993},
+  doi       = {10.1145/153850.153856}
+}
+
+% ---------------------------------------------------------------------
+% Text-to-SQL systems whose predictions are evaluated
+% ---------------------------------------------------------------------
+
+@misc{talaei2024chess,
+  author        = {Talaei, Shayan and Pourreza, Mohammadreza and Chang, Yu-Chen and Mirhoseini, Azalia and Saberi, Amin},
+  title         = {{CHESS}: Contextual Harnessing for Efficient {SQL} Synthesis},
+  year          = {2024},
+  eprint        = {2405.16755},
+  archiveprefix = {arXiv},
+  howpublished  = {arXiv preprint arXiv:2405.16755}
+}
+% NOTE: Also presented as a poster at the ICML 2025 Workshop "Multi-Agent Systems in the Era of Foundation Models"; no archival proceedings found.
+
+@inproceedings{li2025alphasql,
+  author    = {Li, Boyan and Zhang, Jiayi and Fan, Ju and Xu, Yanwei and Chen, Chong and Tang, Nan and Luo, Yuyu},
+  title     = {{Alpha-SQL}: Zero-Shot Text-to-{SQL} using {Monte Carlo} Tree Search},
+  booktitle = {Proceedings of the 42nd International Conference on Machine Learning ({ICML})},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {267},
+  pages     = {36810--36830},
+  publisher = {PMLR},
+  year      = {2025}
+}
+
+@article{li2025omnisql,
+  author    = {Li, Haoyang and Wu, Shang and Zhang, Xiaokang and Huang, Xinmei and Zhang, Jing and Jiang, Fuxin and Wang, Shuai and Zhang, Tieying and Chen, Jianjun and Shi, Rui and Chen, Hong and Li, Cuiping},
+  title     = {{OmniSQL}: Synthesizing High-quality Text-to-{SQL} Data at Scale},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {18},
+  number    = {11},
+  pages     = {4695--4709},
+  year      = {2025},
+  doi       = {10.14778/3749646.3749723}
+}
+
+@misc{cao2024rslsql,
+  author        = {Cao, Zhenbiao and Zheng, Yuanlei and Fan, Zhihao and Zhang, Xiaojin and Chen, Wei and Bai, Xiang},
+  title         = {{RSL-SQL}: Robust Schema Linking in Text-to-{SQL} Generation},
+  year          = {2024},
+  eprint        = {2411.00073},
+  archiveprefix = {arXiv},
+  howpublished  = {arXiv preprint arXiv:2411.00073}
+}
+
+@article{gao2024dailsql,
+  author    = {Gao, Dawei and Wang, Haibin and Li, Yaliang and Sun, Xiuyu and Qian, Yichen and Ding, Bolin and Zhou, Jingren},
+  title     = {Text-to-{SQL} Empowered by Large Language Models: A Benchmark Evaluation},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {17},
+  number    = {5},
+  pages     = {1132--1145},
+  year      = {2024},
+  doi       = {10.14778/3641204.3641221}
+}
+
+@misc{sheng2025cscsql,
+  author        = {Sheng, Lei and Xu, Shuai-Shuai},
+  title         = {{CSC-SQL}: Corrective Self-Consistency in Text-to-{SQL} via Reinforcement Learning},
+  year          = {2025},
+  eprint        = {2505.13271},
+  archiveprefix = {arXiv},
+  howpublished  = {arXiv preprint arXiv:2505.13271}
+}
+
+@inproceedings{sheng2025slmsql,
+  author    = {Sheng, Lei and Xu, Shuai-Shuai},
+  title     = {{SLM-SQL}: An Exploration of Small Language Models for Text-to-{SQL}},
+  booktitle = {Findings of the Association for Computational Linguistics: IJCNLP-AACL 2025},
+  publisher = {Association for Computational Linguistics},
+  pages     = {1497--1512},
+  month     = dec,
+  year      = {2025},
+  doi       = {10.18653/v1/2025.findings-ijcnlp.92}
+}
+% NOTE: ACL Anthology lists 2nd author as "Xu Shuai Shuai" (same person as CSC-SQL's "Shuai-Shuai Xu").
+% UNVERIFIED: exact Findings booktitle string (page reported the IJCNLP-AACL main proceedings title; the DOI is a findings-ijcnlp DOI).
+
+@misc{donder2025genasql,
+  author        = {D{\"o}nder, Yusuf Denizay and Hommel, Derek and Wen-Yi, Andrea W. and Mimno, David and Jo, Unso Eun Seo},
+  title         = {Cheaper, Better, Faster, Stronger: Robust Text-to-{SQL} without Chain-of-Thought or Fine-Tuning},
+  year          = {2025},
+  eprint        = {2505.14174},
+  archiveprefix = {arXiv},
+  howpublished  = {arXiv preprint arXiv:2505.14174}
+}
+% NOTE: Source of GenaSQL-1/GenaSQL-2 predictions used in SpotIt+.
+
+% GSR: NOT INCLUDED. SpotIt+ (arXiv 2603.04334, Table II) lists "GSR (anonymous authors)" with no citation;
+% no paper could be identified. Cite it as an anonymous BIRD leaderboard submission if needed.
+
+@inproceedings{somov2025confidence,
+  author    = {Somov, Oleg and Tutubalina, Elena},
+  title     = {Confidence Estimation for Error Detection in Text-to-SQL Systems},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {39},
+  number    = {23},
+  pages     = {25137--25145},
+  year      = {2025},
+  doi       = {10.1609/aaai.v39i23.34699}
+}
+
+@inproceedings{maleki2026confidence,
+  author    = {Entezari Maleki, Sepideh and Pourreza, Mohammadreza and Rafiei, Davood},
+  title     = {Confidence Estimation for Text-to-SQL in Large Language Models},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {40},
+  number    = {38},
+  pages     = {32474--32482},
+  year      = {2026},
+  doi       = {10.1609/aaai.v40i38.40523}
+}
+
+@article{abedjan2015profiling,
+  author  = {Abedjan, Ziawasch and Golab, Lukasz and Naumann, Felix},
+  title   = {Profiling relational data: a survey},
+  journal = {The VLDB Journal},
+  volume  = {24},
+  number  = {4},
+  pages   = {557--581},
+  year    = {2015},
+  doi     = {10.1007/s00778-015-0389-y}
+}
+
+@article{tuya2016reduction,
+  author  = {Tuya, Javier and de la Riva, Claudio and Su{\'a}rez-Cabal, Mar{\'\i}a Jos{\'e} and Blanco, Raquel},
+  title   = {Coverage-aware test database reduction},
+  journal = {IEEE Transactions on Software Engineering},
+  volume  = {42},
+  number  = {10},
+  pages   = {941--959},
+  year    = {2016},
+  doi     = {10.1109/TSE.2016.2519032}
+}
+
+% ---- added for the ICDE version (verified 2026-10-16 against arXiv abstract pages / ICDE accepted lists / publisher records)
+@inproceedings{malekpour2026sqlmorph,
+  author    = {Malekpour, Mohammadhossein and Riahi, Mohamed and Lamothe, Maxime and Mhedhbi, Amine},
+  title     = {{SQLMorph}: Query Mutation and Fine-Grained Metrics for Text-to-{SQL} Evaluation},
+  booktitle = {Proceedings of the IEEE 42nd International Conference on Data Engineering (ICDE)},
+  year      = {2026},
+  doi       = {10.1109/ICDE65706.2026.00196}
+}
+
+@inproceedings{pham2026fusionsql,
+  author    = {Pham, Trinh and Nguyen, Thanh Tam and Huynh, Viet and Yin, Hongzhi and Nguyen, Quoc Viet Hung},
+  title     = {An Efficient and Effective Evaluator for {Text2SQL} Models on Unseen and Unlabeled Data},
+  booktitle = {Proceedings of the IEEE 42nd International Conference on Data Engineering (ICDE)},
+  pages     = {2434--2447},
+  year      = {2026},
+  doi       = {10.1109/ICDE65706.2026.00182}
+}
+
+@inproceedings{fan2025cyclesql,
+  author    = {Fan, Yuankai and Ren, Tonghui and Huang, Can and He, Zhenying and Wang, X. Sean},
+  title     = {Grounding Natural Language to {SQL} Translation with Data-Based Self-Explanations},
+  booktitle = {Proceedings of the IEEE 41st International Conference on Data Engineering (ICDE)},
+  year      = {2025},
+  doi       = {10.1109/ICDE65448.2025.00010}
+}
+
+@inproceedings{ni2025zeroed,
+  author    = {Ni, Wei and Zhang, Kaihang and Miao, Xiaoye and Zhao, Xiangyu and Wu, Yangyang and Wang, Yaoshu and Yin, Jianwei},
+  title     = {{ZeroED}: Hybrid Zero-Shot Error Detection with Large Language Model Reasoning},
+  booktitle = {Proceedings of the IEEE 41st International Conference on Data Engineering (ICDE)},
+  year      = {2025}
+}
+
+@article{li2024nl2sql360,
+  author    = {Li, Boyan and Luo, Yuyu and Chai, Chengliang and Li, Guoliang and Tang, Nan},
+  title     = {The Dawn of Natural Language to {SQL}: Are We Fully Ready?},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {17},
+  number    = {11},
+  pages     = {3318--3331},
+  year      = {2024},
+  doi       = {10.14778/3681954.3682003}
+}
+
+% ---- data-engineering references added after the independent review (2026-10-16)
+@article{chu2013dc,
+  author  = {Chu, Xu and Ilyas, Ihab F. and Papotti, Paolo},
+  title   = {Discovering Denial Constraints},
+  journal = {Proceedings of the VLDB Endowment},
+  volume  = {6}, number = {13}, pages = {1498--1509}, year = {2013}
+}
+@article{fan2011cfd,
+  author  = {Fan, Wenfei and Geerts, Floris and Li, Jianzhong and Xiong, Ming},
+  title   = {Discovering Conditional Functional Dependencies},
+  journal = {IEEE Transactions on Knowledge and Data Engineering},
+  volume  = {23}, number = {5}, pages = {683--698}, year = {2011}
+}
+@inproceedings{arasu2011datasynth,
+  author    = {Arasu, Arvind and Kaushik, Raghav and Li, Jian},
+  title     = {Data Generation Using Declarative Constraints},
+  booktitle = {Proceedings of the ACM SIGMOD International Conference on Management of Data},
+  pages     = {685--696}, year = {2011}
+}
+@inproceedings{li2018touchstone,
+  author    = {Li, Yuming and Zhang, Rong and Yang, Xiaoyan and Zhang, Zhenjie and Zhou, Aoying},
+  title     = {Touchstone: Generating Enormous Query-Aware Test Databases},
+  booktitle = {Proceedings of the USENIX Annual Technical Conference (USENIX ATC)},
+  pages     = {575--586}, year = {2018}
+}
+@inproceedings{yang2022sam,
+  author    = {Yang, Jingyi and Wu, Peizhi and Cong, Gao and Zhang, Tieying and He, Xiao},
+  title     = {{SAM}: Database Generation from Query Workloads with Supervised Autoregressive Models},
+  booktitle = {Proceedings of the ACM SIGMOD International Conference on Management of Data},
+  year      = {2022}, doi = {10.1145/3514221.3526168}
+}
+@inproceedings{papenbrock2016hyfd,
+  author    = {Papenbrock, Thorsten and Naumann, Felix},
+  title     = {A Hybrid Approach to Functional Dependency Discovery},
+  booktitle = {Proceedings of the ACM SIGMOD International Conference on Management of Data},
+  pages     = {821--833}, year = {2016}
+}
+@article{papenbrock2015binder,
+  author  = {Papenbrock, Thorsten and Kruse, Sebastian and Quian{\'e}-Ruiz, Jorge-Arnulfo and Naumann, Felix},
+  title   = {Divide \& Conquer-based Inclusion Dependency Discovery},
+  journal = {Proceedings of the VLDB Endowment},
+  volume  = {8}, number = {7}, pages = {774--785}, year = {2015}
+}
+
+% ---------------------------------------------------------------------
+% Added for PVLDB (verified 2026-10-18; sources in docs/pvldb_writing_study.md and mlanthology.org)
+% ---------------------------------------------------------------------
+@article{alrashed2026verification,
+  author    = {Alrashed, Tarfah and Sukoon, Madhup and Karger, David R. and Noy, Natasha},
+  title     = {Developing and Benchmarking Verification Algorithms to Improve Text-to-{SQL} Generation},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {19},
+  number    = {11},
+  pages     = {3732--3744},
+  year      = {2026},
+  doi       = {10.14778/3836663.3836721}
+}
+
+@article{luoma2026subsetting,
+  author    = {Luoma, Kyle and Kumar, Arun},
+  title     = {A Comparative Evaluation of Schema Subsetting for {LLM}-based {NL}-to-{SQL} over Large-Schema Databases},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {19},
+  number    = {9},
+  pages     = {2019--2031},
+  year      = {2026},
+  doi       = {10.14778/3819518.3819531}
+}
+
+@article{hou2026nl2sqlbench,
+  author    = {Hou, Shizheng and Pei, Wenqi and Chen, Nuo and Ta, Quang-Trung and Lu, Peng and Ooi, Beng Chin},
+  title     = {{NL2SQLBench}: A Modular Benchmarking Framework for {LLM}-Enabled {NL2SQL} Solutions},
+  journal   = {Proceedings of the VLDB Endowment},
+  volume    = {19},
+  number    = {5},
+  pages     = {1001--1015},
+  year      = {2026},
+  doi       = {10.14778/3796195.3796211}
+}
+
+@inproceedings{pourreza2023dinsql,
+  author    = {Pourreza, Mohammadreza and Rafiei, Davood},
+  title     = {{DIN-SQL}: Decomposed In-Context Learning of Text-to-{SQL} with Self-Correction},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2023}
+}
+
+@inproceedings{li2023graphix,
+  author    = {Li, Jinyang and Hui, Binyuan and Cheng, Reynold and Qin, Bowen and Ma, Chenhao and Huo, Nan and Huang, Fei and Du, Wenyu and Si, Luo and Li, Yongbin},
+  title     = {{Graphix-T5}: Mixing Pre-Trained Transformers with Graph-Aware Layers for Text-to-{SQL} Parsing},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  volume    = {37},
+  number    = {11},
+  pages     = {13076--13084},
+  year      = {2023},
+  doi       = {10.1609/aaai.v37i11.26536}
+}
+
+@article{aho1979tableaux,
+  author    = {Aho, Alfred V. and Sagiv, Yehoshua and Ullman, Jeffrey D.},
+  title     = {Efficient Optimization of a Class of Relational Expressions},
+  journal   = {ACM Transactions on Database Systems},
+  volume    = {4},
+  number    = {4},
+  pages     = {435--454},
+  year      = {1979}
+}
+
+@article{johnson1984containment,
+  author    = {Johnson, David S. and Klug, Anthony},
+  title     = {Testing Containment of Conjunctive Queries under Functional and Inclusion Dependencies},
+  journal   = {Journal of Computer and System Sciences},
+  volume    = {28},
+  pages     = {167--189},
+  year      = {1984}
+}

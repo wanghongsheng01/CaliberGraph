@@ -1,0 +1,5 @@
+- One SQLite certifier compares five Text-to-SQL disprovers under shared rules
+- Almost no schema-tier witness satisfies a data profile of the benchmark instance
+- Real sub-database search yields data-grounded witnesses on BIRD, not on Spider
+- Human annotators barely agree on whether a witness shows a real error
+- Pre-registered study; all outcomes, code, data and annotations are released

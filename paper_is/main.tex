@@ -1,0 +1,92 @@
+\documentclass[preprint,12pt]{elsarticle}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+\usepackage[varqu]{zi4}
+\usepackage{booktabs,array,tabularx,multirow,rotating}
+\usepackage{graphicx,xcolor,url,xspace}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{lineno}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{proposition}{Proposition}
+\setlength{\emergencystretch}{2em}
+\newcommand{\tbd}[1]{\textcolor{red}{#1}}
+\input{numbers}
+\input{numbers_icde}
+\input{numbers_s3}
+\xspaceaddexceptions{\,]}
+% \V{name}: experimental number from the generated macro files; red placeholder if missing
+\newcommand{\Tab}[1]{\IfFileExists{tables/#1.tex}{\input{tables/#1}}{\tbd{[table #1 pending]}}}
+\newcommand{\V}[1]{\ifcsname #1\endcsname\csname #1\endcsname\else\tbd{[#1]}\fi}
+\newcommand{\artifacturl}{\url{https://github.com/wanghongsheng01/CaliberGraph}}
+
+\journal{Information Systems}
+
+\begin{document}
+\begin{frontmatter}
+\title{What Do Counterexamples Prove? Certified, Data-Grounded Witnesses for Auditing Text-to-SQL Execution Accuracy}
+
+\author[1,2]{Hongsheng Wang\corref{cor1}}
+\ead{wanghongsheng@zju.edu.cn}
+\author[1]{Fei Wu}
+\ead{wufei@zju.edu.cn}
+\cortext[cor1]{Corresponding author.}
+\affiliation[1]{organization={College of Computer Science and Technology, Zhejiang University},
+  addressline={866 Yuhangtang Road, Xihu District},
+  city={Hangzhou},
+  postcode={310058},
+  state={Zhejiang},
+  country={China}}
+\affiliation[2]{organization={Artificial Intelligence Department, Loctek Ergonomic Technology Corp.},
+  addressline={Loctek Building, 436 Xueshi Road, Shounan Subdistrict, Yinzhou District},
+  city={Ningbo},
+  postcode={315100},
+  state={Zhejiang},
+  country={China}}
+
+\input{sections/abstract}
+
+\begin{keyword}
+Text-to-SQL evaluation \sep SQL query equivalence \sep test database generation \sep data profiling \sep counterexample certification \sep benchmark reliability \sep pre-registration
+\end{keyword}
+\end{frontmatter}
+
+\linenumbers
+
+\input{sections/intro}
+\input{sections/problem}
+\input{sections/protocol}
+\input{sections/method}
+\input{sections/setup}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/related}
+\input{sections/conclusion}
+
+\section*{Data and code availability}
+All code, data, raw outputs, witness databases with certifier reports, AI and human annotations (every sheet as returned, with its key), the pre-registrations with their amendment log and freeze hashes, and the scripts that regenerate every number, table and figure are publicly available at \artifacturl{} under the Apache License 2.0 for our code and generated data. Material derived from BIRD and Spider is shared under CC BY-SA 4.0; third-party predictions and tools are used under their licences, listed in \texttt{THIRD\_PARTY\_NOTICES.md}. The BIRD and Spider databases themselves and the SpotIt/VeriEQL code are not redistributed.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+During the preparation of this work the authors used Claude Opus~5.5 (Anthropic) to draft and edit the manuscript text. The use of AI models in the research itself (study design, implementation, experiments and annotation) is described in Section~\ref{sec:aiuse}. After using this tool, the authors reviewed and edited the content as needed and take full responsibility for the content of the published article.
+
+\section*{CRediT authorship contribution statement}
+\textbf{Hongsheng Wang:} Conceptualization, Methodology, Validation, Investigation, Resources, Data curation, Writing -- review \& editing, Project administration. \textbf{Fei Wu:} Supervision, Writing -- review \& editing.
+
+\section*{Funding}
+This work was supported by Zhejiang University.
+
+\section*{Declaration of competing interest}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Acknowledgements}
+We thank the human annotators, who volunteered their time.
+
+\input{sections/appendix}
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references_verified}
+\end{document}

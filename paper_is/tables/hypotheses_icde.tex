@@ -1,0 +1,38 @@
+% ICDE: pre-registered hypotheses and outcomes; numbers are macros from numbers.tex / numbers_icde.tex
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Pre-registered hypotheses and outcomes on the test pairs. $\Delta$: difference in pairs (H6: estimated meaningful witnesses) with 95\,\% CI from a bootstrap over questions; $p$: exact McNemar (H1--H5), Holm-adjusted within H1--H3 and (post hoc) across the four H4 components; one-sided bootstrap for H6 (pre-registered parametric; over questions: CI \V{hSixClusterCI}, $p$ \V{hSixClusterP}) and over questions for H7. Stage~3: one-sided tests (R3-4: two-sided), Holm-adjusted over its eight tests (C1 and C2 share a row; C2: \V{arcApct} vs.\ \V{arcANpct}\,\%, adjusted $p$ \V{holmCTwo}); R2 and R3 were pre-registered separately and are not adjusted; SP1--SP2 were pre-registered separately and are Holm-adjusted together; $\kappa_2$: Cohen's (R3-1: Fleiss') $\kappa$ on implausible vs.\ other.}\label{tab:hypotheses}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}l p{60mm} l l c@{}}
+\toprule
+& Comparison & $\Delta$ [95\,\% CI] & $p$ & Result\\
+\midrule
+H1 & CG at $\mathcal A_{1f}$ vs SpotIt claims & \V{hOneDiff} \V{hOneCI} & $<10^{-10}$ & yes\\
+H2 & CG+SC at $\mathcal A_2$ vs SpotIt+ claims & \V{hTwoDiff} \V{hTwoCI} & $<10^{-10}$ & yes\\
+H3 & recall: CG vs ParSEval-L1 / SpotIt & \V{rCGLonef} vs \V{rPVLonef} / \V{rSI}\,\% & $<10^{-10}$ & yes\\
+H4 & each component's removal lowers the count & join graph only ($-$11) & 0.004 & no\\
+H5 & CG-R vs fuzzing-R at $\mathcal A_R$ & \V{tCGRvsFZRRDiff} \V{tCGRvsFZRRCI} & $<10^{-10}$ & yes\\
+   & CG-R vs ParSEval-R (subsample) & \V{ablRFull} vs \V{ablRPV} & $<10^{-10}$ & \\
+H6 & est.\ meaningful, CG-R vs fuzzing-R & \V{hSixDiff} \V{hSixCI} & \V{hSixP} & weak\\
+H7 & implausible share, CG-R vs CG & \V{pCGRImpl} vs \V{pCGImpl}\,\% & $<10^{-4}$ & yes\\
+\midrule
+\multicolumn{5}{@{}l}{\emph{Stage 3 (attribution validity and replication)}}\\
+A1 & humans without $D_0$ agree with each other & $\kappa_2$ \V{hvKappaHHbin} & & no\\
+A2--3 & \quad with AI; tier gap & $\kappa_2$ \V{hvKappaHAbinMin}--\V{hvKappaHAbinMax}; \V{hvImpConsOne}/\V{hvConsOne} vs \V{hvImpConsTwo}/\V{hvConsTwo} & \V{holmAThree} & no\\
+R2 & humans with facts of $D_0$: tier gap & \V{hvTwoImpConsOne}/\V{hvTwoConsOne} vs \V{hvTwoImpConsTwo}/\V{hvTwoConsTwo} & \V{hvTwoP} & yes\\
+   & \quad agree with each other / with AI & $\kappa_2$ \V{hvTwoKappaBin} / \V{hvTwoKappaAIbinMax} & & yes / no\\
+B & second model vs AI; tier gap & $\kappa_2$ \V{cmKappaBin}; \V{cmImpOne} vs \V{cmImpTwo}\,\% & \V{holmBTwo} & yes\\
+C & our issues vs Arcwise-Plat corrections & \V{arcGpct} vs \V{arcNpct}\,\% (gold) & \V{holmCOne} & no\\
+S1 & Spider: CG-R vs fuzzing-R at $\mathcal A_R$ & \V{spRCG} vs \V{spRFZ} & \V{holmSOne} & no\\
+S2 & Spider: implausible, CG-R vs CG & \V{spImpCGR} vs \V{spImpCG} of 60 & \V{holmSTwo} & no\\
+S3 & Spider: est.\ meaningful, CG-R vs fuzzing-R & \V{spEstCGR} vs \V{spEstFZR} & \V{holmSThree} & rev.\\
+E1 & 13 new BIRD systems: CG-R vs fuzzing-R & \V{mdDiff} [\V{mdLo}, \V{mdHi}] & \V{holmEOne} & yes\\
+R3-1 & three humans agree (Fleiss) & $\kappa_2$ \V{hvThreeFleissBin} & & no\\
+R3-2 & \quad majority vs AI & $\kappa_2$ \V{hvThreeKappaAIbin} & & no\\
+R3-3 & \quad majority: tier gap & \V{hvThreeImpOne}/\V{hvThreeMajOne} vs \V{hvThreeImpTwo}/\V{hvThreeMajTwo} & \V{hvThreePThree} & yes\\
+R3-4 & \quad pred.\ errors at $\mathcal A_R$, majority vs AI & \V{hvThreeErrHumTwo} vs \V{hvThreeErrAITwo} of \V{hvThreeMajTwo} & \V{hvThreePFour} & yes\\
+SP1 & CG vs SpotIt re-run, $\mathcal A_{1f}$ & \V{srOneDiff} \V{srOneCI} & $<10^{-10}$ & yes\\
+SP2 & \quad at $\mathcal A_0$ & \V{srTwoDiff} \V{srTwoCI} & $<10^{-10}$ & yes\\
+\bottomrule
+\end{tabular}
+\end{table}

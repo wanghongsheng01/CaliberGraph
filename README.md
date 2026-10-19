@@ -1,6 +1,6 @@
 # What Do Counterexamples Prove? — Artifacts
 
-Artifacts of the paper *"What Do Counterexamples Prove? Certified, Data-Grounded Witnesses for Auditing Text-to-SQL Execution Accuracy [Experiment, Analysis & Benchmark]"* (Hongsheng Wang, Fei Wu), submitted to PVLDB Vol. 20 (2027).
+Artifacts of the paper *"What Do Counterexamples Prove? Certified, Data-Grounded Witnesses for Auditing Text-to-SQL Execution Accuracy"* (Hongsheng Wang, Fei Wu), submitted to PVLDB Vol. 20 (2027).
 
 The repository contains:
 - **Code:** CaliberGraph and CaliberGraph-R, the independent certifier, the data-profile miner and checker, and the baseline harnesses.
@@ -27,7 +27,8 @@ The repository contains:
 | `src_s3/` | **Stage 3** (adapters frozen in `docs/FREEZE_S3.md`): Spider and Mini-Dev builders, queue scripts, human-validation scoring (`s3a_human.py`), cross-model (`s3b_*`), Arcwise cross-check (`s3c_arcwise.py`), repair test (`x1_repair.py`), Spider analysis (`s3d_*`), Holm family (`s3f_family.py`), paper macros (`make_numbers_s3.py`), the local SpotIt re-run (`spotit_run.py`, `queue_spotit.sh`, analysis `s3g_spotit.py`) and the third human round (`hv3_build.py`) |
 | `spider/`, `minidev/`, `spider_smoke/` | Stage-3 data roots: `data/` (pairs, EX labels, mined profiles; databases and code copies are rebuilt, not stored) and `results/` (raw outputs). Each root runs byte-identical copies of the frozen `src/` and `src_r/`. |
 | `results/stage3/` | Stage-3 outputs: annotation batches and passes, summaries; `results/audit/human_validation*/` holds the three human rounds (sheets as received, keys included) |
-| `paper_pvldb/` | LaTeX sources of the paper (official PVLDB template). `numbers*.tex` and `tables/` are generated. |
+| `paper_is/` | LaTeX sources of the manuscript submitted to *Information Systems* (Elsevier `elsarticle`). `numbers*.tex` and `tables/` are generated. |
+| `paper_pvldb/` | Earlier version of the same paper in the PVLDB template (not submitted); kept because the generator scripts write there first. |
 | `tools/` | `verify_freeze.py` (checks the code against the freeze hash lists) and `build_release.py` |
 
 ## Setup

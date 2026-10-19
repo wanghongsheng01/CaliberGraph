@@ -153,20 +153,9 @@ M['mdDiff'] = e['H_E1']['cgr'] - e['H_E1']['fuzzr']
 M['mdLo'], M['mdHi'] = e['H_E1']['ci95_cluster']
 M['mdImp'], M['mdAttrN'] = e['attribution']['implausible'], e['attribution']['n']
 M['mdErr'] = e['attribution']['counts'].get('pred_wrong', 0) + e['attribution']['counts'].get('both_wrong', 0)
-# post hoc: error-weighted effect on EX with the human annotators' error rates (pooled rounds, consensus items)
-ht = json.load(open(os.path.join(R, 's3a_humanai_table.json')))
 import re as _re
 _icde = open(os.path.join(ROOT, 'paper_pvldb', 'numbers_icde.tex')).read()
 _v = lambda n: float(_re.search(r'\\newcommand\{\\%s\}\{([0-9.]+)' % n, _icde).group(1))  # noqa: E731
-for st, tier in ((1, 'Onef'), (2, 'R')):
-    err = agreed = 0
-    for rnd in ('1', '2'):
-        h = ht[f'r{rnd}s{st}']['human']
-        err += h.get('pred_wrong', 0) + h.get('both_wrong', 0)
-        agreed += sum(v for k, v in h.items() if k != 'disagree')
-    M[f'humErrPct{tier}'] = pct(err, agreed)
-    M[f'ptsHum{tier}Min'] = f"{_v(f'ptsCount{tier}Min') * err / agreed:.1f}"
-    M[f'ptsHum{tier}Max'] = f"{_v(f'ptsCount{tier}Max') * err / agreed:.1f}"
 # round 3 (docs/en/17c): three annotators, human majority
 h3 = json.load(open(os.path.join(R, 's3a_human_r3.json')))
 M['hvThreeN'] = h3['n_items']
@@ -205,6 +194,7 @@ M['srLzero'], M['srLonef'], M['srRq'], M['srR'] = rr['L0'], rr['L1f'], rr['Rq'],
 for t in sg['tests']:
     nm = 'srOne' if t['label'] == 'H-SP1' else 'srTwo'
     M[nm + 'Diff'] = f"{t['diff']:+,}"
+    M[nm + 'DiffAbs'] = f"{t['diff']:,}"
     M[nm + 'CI'] = f"[{t['ci95'][0]:+,}, {t['ci95'][1]:+,}]"
     M[nm + 'CGonly'], M[nm + 'SIonly'] = f"{t['cg_only']:,}", t['spotit_only']
 ag = sg['agreement']
@@ -234,5 +224,7 @@ for kk, v in M.items():
         continue
     lines.append(f'\\newcommand{{\\{kk}}}{{{v}\\xspace}}' if not isinstance(v, str) or not v.startswith('\\') else
                  f'\\newcommand{{\\{kk}}}{{{v}\\xspace}}')
-open(os.path.join(ROOT, 'paper_pvldb', 'numbers_s3.tex'), 'w').write('\n'.join(lines) + '\n')
+for _d in ('paper_pvldb', 'paper_is'):  # PVLDB version and the Information Systems journal version
+    if os.path.isdir(os.path.join(ROOT, _d)):
+        open(os.path.join(ROOT, _d, 'numbers_s3.tex'), 'w').write('\n'.join(lines) + '\n')
 print('\n'.join(lines))

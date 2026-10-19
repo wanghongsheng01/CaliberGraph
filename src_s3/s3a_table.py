@@ -51,4 +51,6 @@ for rnd, st, n, ai, hc in rows:
         tex.append(r'\addlinespace[1pt]' if st == 1 else r'\midrule')
 tex += [r'\bottomrule', r'\end{tabular}', r'\end{table}']
 open(os.path.join(ROOT, 'paper_pvldb', 'tables', 'humanai.tex'), 'w').write('\n'.join(tex) + '\n')
+if os.path.isdir(os.path.join(ROOT, 'paper_is', 'tables')):  # journal version: floats placed here/top/bottom/page
+    open(os.path.join(ROOT, 'paper_is', 'tables', 'humanai.tex'), 'w').write('\n'.join(tex).replace('\\begin{table}[t]', '\\begin{table}[!htbp]') + '\n')
 print('\n'.join(tex))
