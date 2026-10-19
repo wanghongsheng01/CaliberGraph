@@ -18,7 +18,9 @@ INCLUDE_PREFIXES = [
     'spider/data/', 'spider/results/', 'spider/aborted_', 'minidev/data/', 'minidev/results/', 'spider_smoke/data/', 'spider_smoke/results/',
 ]
 EXCLUDE_SUFFIXES = ('.aux', '.log', '.out', '.blg', '.spl', '.synctex.gz')
-EXCLUDE_EXACT = {'paper_pvldb/main.pdf'}  # rebuilt from sources; the submitted PDF goes to CMT
+EXCLUDE_EXACT = {'paper_pvldb/main.pdf',
+                 # withheld until all round-3 sheets are returned (docs/en/17c; SHA-256 in docs/en/17c_key_sha256.txt)
+                 'results/audit/human_validation_r3/key_DO_NOT_OPEN_BEFORE_ANNOTATING.json'}  # rebuilt from sources; the submitted PDF goes to CMT
 
 
 def tracked():
