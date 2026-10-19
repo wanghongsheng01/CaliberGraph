@@ -220,3 +220,10 @@ No Spider dev EX label, witness or count had been seen when these were written.
   - It agrees with the released verdict on 98% of distinct pairs that neither run reports as an error.
   - 58% of the distinct pairs exhaust the 5 s budget.
   - The diagnostic re-cased certification gives fewer pairs (438 at A_0, 61 at A_1f).
+
+## E16 (2026-10-19 15:55) Round-3 annotators
+- **Author statement.** The authors describe the three round-3 annotators as follows. None of them was paid.
+  - A: a data analyst for an independent online store (e-commerce).
+  - B: a data analyst for Amazon e-commerce.
+  - C: a social-media data analyst.
+- **Use in the paper.** The paper describes them as "unpaid volunteers, data analysts in e-commerce and social media".

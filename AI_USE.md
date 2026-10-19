@@ -27,7 +27,7 @@ The prompt is stored in `results/audit_protocol/annotator_prompt.md` (SHA-256 `3
    - Two human annotators labelled 60 witnesses independently, blind to tool, tier and AI verdict, without access to the BIRD databases and without AI assistance (author statement, amendment E3).
    - They agreed with each other (five-label κ = 0.74) but not with the AI (κ = 0.20–0.26). The pre-registered validation therefore failed. It is reported in the paper.
 3. **Stage-3 round 2** (pre-registered, `docs/en/17b`). The same design, with facts from the real database added to every item. Results: see the paper and `results/stage3/`.
-4. **Stage-3 round 3** (pre-registered, `docs/en/17c`). Three annotators labelled 150 new witnesses with the same facts and the AI annotator's label definitions. All three declared that they used no AI tool. The process check found inconsistent recorded times and one sheet with templated reasons (amendment E14 in `docs/en/17a_stage3_amendments.md`). The sheets are released as received.
+4. **Stage-3 round 3** (pre-registered, `docs/en/17c`). Three annotators (unpaid data analysts in e-commerce and social media) labelled 150 new witnesses with the same facts and the AI annotator's label definitions. All three declared that they used no AI tool. The process check found inconsistent recorded times and one sheet with templated reasons (amendment E14 in `docs/en/17a_stage3_amendments.md`). The sheets are released as received.
    - The annotators agreed with each other barely above chance (Fleiss' κ = 0.03 on implausible vs. other).
    - The pre-registered agreement hypotheses failed. The paper reports them.
 
