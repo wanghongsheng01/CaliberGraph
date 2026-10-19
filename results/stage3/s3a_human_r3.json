@@ -1,0 +1,441 @@
+{
+ "n_items": 150,
+ "n_stage": {
+  "1": 75,
+  "2": 75
+ },
+ "labels": {
+  "A": {
+   "ambiguous": 70,
+   "gold_wrong": 37,
+   "implausible_data": 14,
+   "pred_wrong": 29
+  },
+  "B": {
+   "gold_wrong": 76,
+   "pred_wrong": 55,
+   "both_wrong": 3,
+   "implausible_data": 3,
+   "ambiguous": 13
+  },
+  "C": {
+   "gold_wrong": 49,
+   "ambiguous": 35,
+   "implausible_data": 44,
+   "pred_wrong": 21,
+   "both_wrong": 1
+  },
+  "ai": {
+   "implausible_data": 57,
+   "gold_wrong": 28,
+   "ambiguous": 44,
+   "pred_wrong": 20,
+   "both_wrong": 1
+  },
+  "majority": {
+   "gold_wrong": 52,
+   "implausible_data": 10,
+   "no_majority": 34,
+   "pred_wrong": 29,
+   "ambiguous": 25
+  }
+ },
+ "M_R3_1": {
+  "fleiss5": 0.17056312258589146,
+  "fleiss5_ci": [
+   0.09960665410145038,
+   0.23916290944646634
+  ],
+  "fleiss2": 0.03282902777192419,
+  "fleiss2_ci": [
+   -0.04944029850746269,
+   0.1153846153846152
+  ],
+  "pairwise": {
+   "AB": {
+    "agree5": 53,
+    "kappa5": 0.15115804212122982,
+    "agree2": 133,
+    "kappa2": -0.03406326034063188
+   },
+   "AC": {
+    "agree5": 53,
+    "kappa5": 0.14472137314836586,
+    "agree2": 108,
+    "kappa2": 0.15640064274236717
+   },
+   "BC": {
+    "agree5": 72,
+    "kappa5": 0.3130174387880923,
+    "agree2": 107,
+    "kappa2": 0.04951370468611855
+   }
+  }
+ },
+ "M_R3_2": {
+  "with_majority": 116,
+  "no_majority": 34,
+  "unanimous": 31
+ },
+ "M_R3_3": {
+  "n": 116,
+  "agree5": 64,
+  "kappa5": 0.4172543715583035,
+  "kappa5_ci": [
+   0.3107810253953043,
+   0.521085225597169
+  ],
+  "agree2": 82,
+  "kappa2": 0.14558058925476586,
+  "kappa2_ci": [
+   -0.011774967291757765,
+   0.31065573770491794
+  ],
+  "confusion": {
+   "pred_wrong->pred_wrong": 15,
+   "pred_wrong->ambiguous": 6,
+   "pred_wrong->implausible_data": 8,
+   "gold_wrong->gold_wrong": 24,
+   "gold_wrong->both_wrong": 1,
+   "gold_wrong->ambiguous": 10,
+   "gold_wrong->implausible_data": 17,
+   "ambiguous->gold_wrong": 1,
+   "ambiguous->ambiguous": 19,
+   "ambiguous->implausible_data": 5,
+   "implausible_data->pred_wrong": 2,
+   "implausible_data->gold_wrong": 1,
+   "implausible_data->ambiguous": 1,
+   "implausible_data->implausible_data": 6
+  },
+  "binary_majority_of_binary": {
+   "n": 150,
+   "kappa2": 0.07407407407407404,
+   "kappa2_ci": [
+    -0.029872319922910267,
+    0.18761496014714876
+   ]
+  }
+ },
+ "M_R3_4": {
+  "stage1": {
+   "n": 75,
+   "n_with_majority": 52,
+   "majority": {
+    "pred_wrong": {
+     "k": 11,
+     "share": 0.21153846153846154,
+     "ci": [
+      0.11538461538461539,
+      0.3269230769230769
+     ]
+    },
+    "gold_wrong": {
+     "k": 24,
+     "share": 0.46153846153846156,
+     "ci": [
+      0.3269230769230769,
+      0.5961538461538461
+     ]
+    },
+    "both_wrong": {
+     "k": 0,
+     "share": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "ambiguous": {
+     "k": 7,
+     "share": 0.1346153846153846,
+     "ci": [
+      0.057692307692307696,
+      0.23076923076923078
+     ]
+    },
+    "implausible_data": {
+     "k": 10,
+     "share": 0.19230769230769232,
+     "ci": [
+      0.09615384615384616,
+      0.3076923076923077
+     ]
+    },
+    "pred_error": {
+     "k": 11,
+     "share": 0.21153846153846154,
+     "ci": [
+      0.11538461538461539,
+      0.3269230769230769
+     ]
+    }
+   },
+   "ai": {
+    "pred_wrong": {
+     "k": 9,
+     "share": 0.12,
+     "ci": [
+      0.05333333333333334,
+      0.2
+     ]
+    },
+    "gold_wrong": {
+     "k": 10,
+     "share": 0.13333333333333333,
+     "ci": [
+      0.06666666666666667,
+      0.21333333333333335
+     ]
+    },
+    "both_wrong": {
+     "k": 1,
+     "share": 0.013333333333333334,
+     "ci": [
+      0.0,
+      0.04
+     ]
+    },
+    "ambiguous": {
+     "k": 13,
+     "share": 0.17333333333333334,
+     "ci": [
+      0.09333333333333334,
+      0.26666666666666666
+     ]
+    },
+    "implausible_data": {
+     "k": 42,
+     "share": 0.56,
+     "ci": [
+      0.44,
+      0.68
+     ]
+    },
+    "pred_error": {
+     "k": 10,
+     "share": 0.13333333333333333,
+     "ci": [
+      0.06666666666666667,
+      0.21333333333333335
+     ]
+    }
+   },
+   "ai_same_items": {
+    "pred_wrong": {
+     "k": 7,
+     "share": 0.1346153846153846
+    },
+    "gold_wrong": {
+     "k": 9,
+     "share": 0.17307692307692307
+    },
+    "both_wrong": {
+     "k": 1,
+     "share": 0.019230769230769232
+    },
+    "ambiguous": {
+     "k": 9,
+     "share": 0.17307692307692307
+    },
+    "implausible_data": {
+     "k": 26,
+     "share": 0.5
+    },
+    "pred_error": {
+     "k": 8,
+     "share": 0.15384615384615385
+    }
+   }
+  },
+  "stage2": {
+   "n": 75,
+   "n_with_majority": 64,
+   "majority": {
+    "pred_wrong": {
+     "k": 18,
+     "share": 0.28125,
+     "ci": [
+      0.171875,
+      0.390625
+     ]
+    },
+    "gold_wrong": {
+     "k": 28,
+     "share": 0.4375,
+     "ci": [
+      0.3125,
+      0.5625
+     ]
+    },
+    "both_wrong": {
+     "k": 0,
+     "share": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "ambiguous": {
+     "k": 18,
+     "share": 0.28125,
+     "ci": [
+      0.171875,
+      0.390625
+     ]
+    },
+    "implausible_data": {
+     "k": 0,
+     "share": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "pred_error": {
+     "k": 18,
+     "share": 0.28125,
+     "ci": [
+      0.171875,
+      0.390625
+     ]
+    }
+   },
+   "ai": {
+    "pred_wrong": {
+     "k": 11,
+     "share": 0.14666666666666667,
+     "ci": [
+      0.06666666666666667,
+      0.22666666666666666
+     ]
+    },
+    "gold_wrong": {
+     "k": 18,
+     "share": 0.24,
+     "ci": [
+      0.14666666666666667,
+      0.3333333333333333
+     ]
+    },
+    "both_wrong": {
+     "k": 0,
+     "share": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "ambiguous": {
+     "k": 31,
+     "share": 0.41333333333333333,
+     "ci": [
+      0.30666666666666664,
+      0.52
+     ]
+    },
+    "implausible_data": {
+     "k": 15,
+     "share": 0.2,
+     "ci": [
+      0.10666666666666667,
+      0.29333333333333333
+     ]
+    },
+    "pred_error": {
+     "k": 11,
+     "share": 0.14666666666666667,
+     "ci": [
+      0.06666666666666667,
+      0.22666666666666666
+     ]
+    }
+   },
+   "ai_same_items": {
+    "pred_wrong": {
+     "k": 10,
+     "share": 0.15625
+    },
+    "gold_wrong": {
+     "k": 17,
+     "share": 0.265625
+    },
+    "both_wrong": {
+     "k": 0,
+     "share": 0.0
+    },
+    "ambiguous": {
+     "k": 27,
+     "share": 0.421875
+    },
+    "implausible_data": {
+     "k": 10,
+     "share": 0.15625
+    },
+    "pred_error": {
+     "k": 10,
+     "share": 0.15625
+    }
+   }
+  }
+ },
+ "hypotheses": {
+  "H-R3-1": {
+   "value": 0.03282902777192419,
+   "threshold": 0.6,
+   "met": false
+  },
+  "H-R3-2": {
+   "value": 0.14558058925476586,
+   "threshold": 0.6,
+   "met": false
+  },
+  "H-R3-3": {
+   "stage1": [
+    10,
+    52
+   ],
+   "stage2": [
+    0,
+    64
+   ],
+   "p_one_sided": 0.00019393818853710642,
+   "met": true
+  },
+  "H-R3-4": {
+   "n": 64,
+   "majority_pred_error": 18,
+   "ai_pred_error": 10,
+   "majority_only": 8,
+   "ai_only": 0,
+   "p_two_sided": 0.007812500000000002,
+   "met": true
+  }
+ },
+ "sensitivity_without_A": {
+  "note": "post hoc, not pre-registered: annotators B and C only; consensus = B and C agree",
+  "kappa2_B_C": 0.04951370468611855,
+  "kappa5_B_C": 0.3130174387880923,
+  "n_consensus": 72,
+  "kappa2_consensus_vs_ai": 0.042553191489361514,
+  "kappa2_consensus_vs_ai_ci": [
+   -0.07623318385650225,
+   0.20253164556962028
+  ],
+  "implausible_stage1": [
+   2,
+   30
+  ],
+  "implausible_stage2": [
+   0,
+   42
+  ],
+  "pred_error_stage2_consensus": [
+   14,
+   42
+  ],
+  "pred_error_stage2_ai_same_items": [
+   9,
+   42
+  ]
+ }
+}

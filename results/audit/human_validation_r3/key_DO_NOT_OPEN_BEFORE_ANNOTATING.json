@@ -1,0 +1,1052 @@
+[
+ {
+  "code": "R3-001",
+  "pair_id": "omni-32-majority:391",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-002",
+  "pair_id": "chess:66",
+  "source": "Fuzz-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-003",
+  "pair_id": "gsr:597",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-004",
+  "pair_id": "gsr:285",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-005",
+  "pair_id": "alpha:510",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-006",
+  "pair_id": "csc-7b:1040",
+  "source": "SpotIt@L0",
+  "ai": "pred_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-007",
+  "pair_id": "gsr:751",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-008",
+  "pair_id": "alpha:786",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-009",
+  "pair_id": "gsr:1084",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-010",
+  "pair_id": "alpha:880",
+  "source": "SpotIt+@L0",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-011",
+  "pair_id": "csc-7b:1202",
+  "source": "Fuzz-R@R",
+  "ai": "pred_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-012",
+  "pair_id": "gena_submission_2:1458",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-013",
+  "pair_id": "omni-32-majority:879",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-014",
+  "pair_id": "omni-32-majority:212",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-015",
+  "pair_id": "rsl:1079",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-016",
+  "pair_id": "slm:324",
+  "source": "Fuzz-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-017",
+  "pair_id": "alpha:944",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-018",
+  "pair_id": "csc-32b:1178",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-019",
+  "pair_id": "gena_submission_1:1263",
+  "source": "SpotIt+@L0",
+  "ai": "pred_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-020",
+  "pair_id": "omni-32-majority:1272",
+  "source": "SpotIt@L0",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-021",
+  "pair_id": "rsl:1485",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-022",
+  "pair_id": "alpha:512",
+  "source": "SpotIt+@L0",
+  "ai": "gold_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-023",
+  "pair_id": "csc-7b:1485",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-024",
+  "pair_id": "alpha:260",
+  "source": "Fuzz-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-025",
+  "pair_id": "omni-32-majority:541",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-026",
+  "pair_id": "gsr:1494",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-027",
+  "pair_id": "slm:1263",
+  "source": "SpotIt@L0",
+  "ai": "pred_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-028",
+  "pair_id": "gsr:927",
+  "source": "SpotIt+@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-029",
+  "pair_id": "gena_submission_1:1202",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-030",
+  "pair_id": "slm:1055",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-031",
+  "pair_id": "csc-32b:303",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-032",
+  "pair_id": "gsr:312",
+  "source": "SpotIt+@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-033",
+  "pair_id": "omni-32-majority:1255",
+  "source": "SpotIt+@L0",
+  "ai": "gold_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-034",
+  "pair_id": "alpha:813",
+  "source": "SpotIt+@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-035",
+  "pair_id": "csc-7b:637",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-036",
+  "pair_id": "omni-32-majority:732",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-037",
+  "pair_id": "chess:321",
+  "source": "SpotIt@L0",
+  "ai": "pred_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-038",
+  "pair_id": "rsl:1022",
+  "source": "SpotIt+@L0",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-039",
+  "pair_id": "omni-32-majority:882",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-040",
+  "pair_id": "gsr:668",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-041",
+  "pair_id": "slm:1025",
+  "source": "Fuzz@L1f",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-042",
+  "pair_id": "omni-32-majority:759",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-043",
+  "pair_id": "chess:556",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-044",
+  "pair_id": "csc-32b:554",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-045",
+  "pair_id": "gena_submission_1:1122",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-046",
+  "pair_id": "rsl:258",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-047",
+  "pair_id": "omni-32-majority:583",
+  "source": "SpotIt@L0",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-048",
+  "pair_id": "omni-32-majority:108",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-049",
+  "pair_id": "csc-32b:927",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-050",
+  "pair_id": "alpha:512",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-051",
+  "pair_id": "csc-32b:475",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-052",
+  "pair_id": "csc-32b:1255",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-053",
+  "pair_id": "omni-32-majority:880",
+  "source": "SpotIt@L0",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-054",
+  "pair_id": "gsr:1123",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-055",
+  "pair_id": "omni-32-majority:564",
+  "source": "SpotIt+@L0",
+  "ai": "pred_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-056",
+  "pair_id": "rsl:128",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-057",
+  "pair_id": "omni-32-majority:926",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-058",
+  "pair_id": "csc-7b:895",
+  "source": "CaliberGraph-R@R",
+  "ai": "pred_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-059",
+  "pair_id": "omni-32-majority:498",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-060",
+  "pair_id": "gena_submission_1:988",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-061",
+  "pair_id": "csc-32b:138",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-062",
+  "pair_id": "alpha:1504",
+  "source": "CaliberGraph@L1f",
+  "ai": "both_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-063",
+  "pair_id": "csc-7b:5",
+  "source": "Fuzz-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-064",
+  "pair_id": "chess:1122",
+  "source": "ParSEval-L1@L1f",
+  "ai": "pred_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-065",
+  "pair_id": "omni-32-majority:1164",
+  "source": "SpotIt@L0",
+  "ai": "gold_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-066",
+  "pair_id": "slm:813",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-067",
+  "pair_id": "gena_submission_1:1367",
+  "source": "SpotIt+@L0",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-068",
+  "pair_id": "chess:1055",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-069",
+  "pair_id": "gena_submission_1:815",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-070",
+  "pair_id": "csc-32b:782",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-071",
+  "pair_id": "csc-32b:789",
+  "source": "ParSEval-L1@L1f",
+  "ai": "gold_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-072",
+  "pair_id": "chess:663",
+  "source": "SpotIt+@L0",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-073",
+  "pair_id": "gena_submission_1:1147",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-074",
+  "pair_id": "alpha:541",
+  "source": "ParSEval-L1@L1f",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-075",
+  "pair_id": "slm:703",
+  "source": "Fuzz-R@R",
+  "ai": "pred_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-076",
+  "pair_id": "chess:1072",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-077",
+  "pair_id": "chess:867",
+  "source": "SpotIt+@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-078",
+  "pair_id": "gsr:49",
+  "source": "CaliberGraph-R@R",
+  "ai": "pred_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-079",
+  "pair_id": "chess:826",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-080",
+  "pair_id": "slm:1084",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-081",
+  "pair_id": "gsr:86",
+  "source": "Fuzz@L1f",
+  "ai": "pred_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-082",
+  "pair_id": "chess:1080",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-083",
+  "pair_id": "chess:1513",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-084",
+  "pair_id": "omni-32-majority:657",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-085",
+  "pair_id": "alpha:556",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-086",
+  "pair_id": "gena_submission_1:1001",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-087",
+  "pair_id": "gsr:1309",
+  "source": "SpotIt@L0",
+  "ai": "gold_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-088",
+  "pair_id": "csc-32b:668",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-089",
+  "pair_id": "alpha:1348",
+  "source": "Fuzz-R@R",
+  "ai": "pred_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-090",
+  "pair_id": "gsr:668",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-091",
+  "pair_id": "omni-32-majority:1263",
+  "source": "Fuzz@L1f",
+  "ai": "gold_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-092",
+  "pair_id": "alpha:245",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-093",
+  "pair_id": "csc-32b:914",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-094",
+  "pair_id": "slm:1348",
+  "source": "SpotIt+@L0",
+  "ai": "pred_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-095",
+  "pair_id": "rsl:1182",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-096",
+  "pair_id": "csc-7b:1067",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-097",
+  "pair_id": "alpha:931",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-098",
+  "pair_id": "gena_submission_2:990",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-099",
+  "pair_id": "chess:1096",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-100",
+  "pair_id": "omni-32-majority:242",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-101",
+  "pair_id": "gsr:583",
+  "source": "SpotIt+@L0",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-102",
+  "pair_id": "chess:926",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-103",
+  "pair_id": "slm:1522",
+  "source": "CaliberGraph-R@R",
+  "ai": "pred_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-104",
+  "pair_id": "csc-7b:1516",
+  "source": "Fuzz-R@R",
+  "ai": "pred_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-105",
+  "pair_id": "alpha:657",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-106",
+  "pair_id": "gsr:377",
+  "source": "Fuzz-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-107",
+  "pair_id": "gsr:690",
+  "source": "Fuzz-R@R",
+  "ai": "pred_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-108",
+  "pair_id": "gsr:288",
+  "source": "CaliberGraph-R@R",
+  "ai": "pred_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-109",
+  "pair_id": "gena_submission_2:1183",
+  "source": "SpotIt+@L0",
+  "ai": "gold_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-110",
+  "pair_id": "chess:556",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-111",
+  "pair_id": "csc-7b:1182",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-112",
+  "pair_id": "alpha:1400",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-113",
+  "pair_id": "csc-32b:685",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-114",
+  "pair_id": "gena_submission_2:563",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-115",
+  "pair_id": "chess:1528",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-116",
+  "pair_id": "gena_submission_1:977",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-117",
+  "pair_id": "chess:112",
+  "source": "Fuzz-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-118",
+  "pair_id": "omni-32-majority:786",
+  "source": "CaliberGraph@L1f",
+  "ai": "gold_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-119",
+  "pair_id": "rsl:1122",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-120",
+  "pair_id": "omni-32-majority:24",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-121",
+  "pair_id": "gena_submission_1:507",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-122",
+  "pair_id": "alpha:188",
+  "source": "Fuzz@L1f",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-123",
+  "pair_id": "gsr:668",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-124",
+  "pair_id": "gsr:188",
+  "source": "CaliberGraph@L1f",
+  "ai": "pred_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-125",
+  "pair_id": "gena_submission_1:1072",
+  "source": "Fuzz@L1f",
+  "ai": "gold_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-126",
+  "pair_id": "gsr:364",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-127",
+  "pair_id": "gsr:478",
+  "source": "CaliberGraph@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-128",
+  "pair_id": "gsr:534",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-129",
+  "pair_id": "rsl:498",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-130",
+  "pair_id": "gsr:475",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-131",
+  "pair_id": "csc-32b:1109",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-132",
+  "pair_id": "chess:1343",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-133",
+  "pair_id": "alpha:1367",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-134",
+  "pair_id": "alpha:270",
+  "source": "Fuzz@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-135",
+  "pair_id": "gena_submission_1:59",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-136",
+  "pair_id": "chess:1075",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-137",
+  "pair_id": "csc-7b:5",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-138",
+  "pair_id": "gena_submission_2:108",
+  "source": "CaliberGraph@L1f",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-139",
+  "pair_id": "csc-32b:1013",
+  "source": "CaliberGraph-R@R",
+  "ai": "gold_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-140",
+  "pair_id": "chess:1147",
+  "source": "Fuzz-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-141",
+  "pair_id": "omni-32-majority:302",
+  "source": "SpotIt@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-142",
+  "pair_id": "chess:73",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-143",
+  "pair_id": "csc-32b:977",
+  "source": "CaliberGraph@L1f",
+  "ai": "gold_wrong",
+  "stage": 1
+ },
+ {
+  "code": "R3-144",
+  "pair_id": "alpha:91",
+  "source": "Fuzz@L1f",
+  "ai": "ambiguous",
+  "stage": 1
+ },
+ {
+  "code": "R3-145",
+  "pair_id": "omni-32-majority:755",
+  "source": "CaliberGraph-R@R",
+  "ai": "ambiguous",
+  "stage": 2
+ },
+ {
+  "code": "R3-146",
+  "pair_id": "gena_submission_1:213",
+  "source": "CaliberGraph-R@R",
+  "ai": "implausible_data",
+  "stage": 2
+ },
+ {
+  "code": "R3-147",
+  "pair_id": "gena_submission_1:700",
+  "source": "ParSEval-L1@L1f",
+  "ai": "implausible_data",
+  "stage": 1
+ },
+ {
+  "code": "R3-148",
+  "pair_id": "chess:1263",
+  "source": "CaliberGraph-R@R",
+  "ai": "pred_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-149",
+  "pair_id": "slm:1458",
+  "source": "Fuzz-R@R",
+  "ai": "pred_wrong",
+  "stage": 2
+ },
+ {
+  "code": "R3-150",
+  "pair_id": "csc-32b:914",
+  "source": "SpotIt+@L0",
+  "ai": "implausible_data",
+  "stage": 1
+ }
+]

@@ -61,5 +61,37 @@
    "implausible_data": 9,
    "gold_wrong": 2
   }
+ },
+ "r3s1": {
+  "n": 75,
+  "ai": {
+   "implausible_data": 42,
+   "pred_wrong": 9,
+   "ambiguous": 13,
+   "gold_wrong": 10,
+   "both_wrong": 1
+  },
+  "human": {
+   "gold_wrong": 24,
+   "implausible_data": 10,
+   "disagree": 23,
+   "pred_wrong": 11,
+   "ambiguous": 7
+  }
+ },
+ "r3s2": {
+  "n": 75,
+  "ai": {
+   "implausible_data": 15,
+   "gold_wrong": 18,
+   "ambiguous": 31,
+   "pred_wrong": 11
+  },
+  "human": {
+   "gold_wrong": 28,
+   "disagree": 11,
+   "pred_wrong": 18,
+   "ambiguous": 18
+  }
  }
 }

@@ -180,3 +180,43 @@ No Spider dev EX label, witness or count had been seen when these were written.
 - **Possible effect.** Contention can shorten the effective 5 s search budget of some CG-R pairs in that window.
 - **Handling.** By rule S3-0.4, no pair is re-run selectively. The deviation is reported instead.
 - **Direction of the bias.** The bias, if any, works against CG-R in H-E1. The Fuzz-R run that follows will have the machine to itself.
+
+## E13 (2026-10-19, corrected 14:50) Chunked execution of the SpotIt run (document 17d)
+- **What happened.** The SpotIt queue (`src_s3/queue_spotit.sh`) runs in chunks of at most 6,300 s, as the Stage-3 queues do since E8, because background jobs on this machine are limited to 2 h. The first chunk started at 11:19 and reached its limit at 13:04, during the test run, after 1,868 test pairs; the second chunk reached its limit at 14:49, after 5,349 test pairs. (An earlier version of this entry called the first stop "external"; the times show it was the chunk limit. The exit code 144 came from the clean-up command of the wrapper.) No test result was read or analysed between chunks.
+- **Handling.** After each stop, every written record was checked to parse completely (none was dropped) and the run was resumed with the same frozen command. The harness skips pairs already present in its output, so every pair is run exactly once; the record being processed at the stop is not written and is run again from the start. By rule S3-0.4, no pair is re-run selectively. Each resumption is logged in `results/stage3/spotit/queue.log`.
+- **Possible effect.** None on verdicts, because each pair has its own wall-clock budget and the pairs are independent.
+
+## E14 (2026-10-19 15:35) Round 3 (document 17c): process check, authors' decision, scoring
+- **Return.** All three sheets were received at 14:52 on 2026-10-19, the day of distribution, and are archived as received in `results/audit/human_validation_r3/`.
+- **Process check** (`src_s3/hv3_check.py` → `results/stage3/s3a_human_r3_check.json`), done before any scoring:
+  - all 150 items present in every sheet, in the distributed order; every Verdict is one of the five labels; every Reason is filled in;
+  - line by line, every item differs from the blank sheet. After undoing pure Markdown re-formatting (blank lines, table padding, escapes, emphasis style, auto-links), sheets A and C have no content change. In sheet B, an editor removed tag-like values (`<r>`, `<sampling>`, `<data-mining>`, ...) from witness cells and fact lines of items R3-035 and R3-113, and turned one URL into a link (R3-098);
+  - recorded times: A 14:30–16:15 (the finish time is later than the return of the file at 14:52); B 10:00–14:42 (the start time is earlier than the creation of the sheets at 10:32); C 11:30–13:59. The estimated effort was seven to nine hours per annotator;
+  - reasons: A gave 24 distinct reasons for 150 items, most of them generic templates (e.g., one sentence stating that further analysis would be required, 34 times); B 138 and C 149 distinct reasons, specific to the item;
+  - all three declared no use of AI tools.
+- **Decision.** The check was reported to the authors with the recommendation to verify the process with the annotators before scoring. The authors decided to adopt all three sheets (A, B and C). The round is therefore scored as pre-registered, and the paper reports the process findings above.
+- **Scoring** (`src_s3/s3a_human_r3.py` → `results/stage3/s3a_human_r3.json`):
+  - H-R3-1 not met: Fleiss' κ = 0.17 (five labels), 0.03 (binary; CI −0.05 to 0.12);
+  - H-R3-2 not met: majority vs AI, binary κ = 0.15 (116 items with a majority; 34 without);
+  - H-R3-3 met: majority `implausible_data` 10/52 in stage 1 vs 0/64 in stage 2 (one-sided Fisher p = 0.0002);
+  - H-R3-4 met: stage-2 prediction errors 18 (majority) vs 10 (AI) of 64 (exact McNemar p = 0.0078).
+- **Post hoc sensitivity** (not pre-registered): without annotator A, B and C agree on the binary judgement with κ = 0.05; the conclusions do not change.
+- **Pre-stated rules applied.**
+  - Rule 1: the human-majority shares are reported next to the AI shares (Table `tab:humanai`, RQ2, RQ4).
+  - Rule 2: the error-weighted EX effect is reported with both error rates and their intervals.
+  - Rules 3 and 4 together: H-R3-2 fails, and the human judgement is not reliable even in binary form (κ < 0.60). The abstract and introduction therefore make no claim about the distribution of meaningful witnesses from either annotator, and say that it remains open.
+  - Rule 5: rounds 1–3 are all reported.
+- **Key.** The key file is published with the sheets, as 17c provides.
+
+## E15 (2026-10-19 15:35) SpotIt re-run (document 17d): outcomes
+- **Run.** The run finished at 15:25; all 6,456 distinct test pairs were run once (E13).
+- **Analysis** (`src_s3/s3g_spotit.py` → `results/stage3/spotit/s3g_spotit.json`):
+  - H-SP1 met: at A_1f, CaliberGraph 1,979 vs re-run SpotIt 101 (1,878 vs 0 discordant; CI +1,699 to +2,057);
+  - H-SP2 met: at A_0, 1,979 vs 680 (1,312 vs 13 discordant; CI +1,146 to +1,452);
+  - one-sided exact McNemar p < 10^-300 for both, Holm-adjusted over the two.
+- **Descriptive.**
+  - The re-run claims 1,242 pairs. Its counterexamples are certified for 680 pairs at A_0, 101 at A_1f, 7 at Rq and 0 at A_R.
+  - It reproduces 1,094 of the 1,268 released non-equivalence claims (distinct pairs).
+  - It agrees with the released verdict on 98% of distinct pairs that neither run reports as an error.
+  - 58% of the distinct pairs exhaust the 5 s budget.
+  - The diagnostic re-cased certification gives fewer pairs (438 at A_0, 61 at A_1f).

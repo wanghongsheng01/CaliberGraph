@@ -1,0 +1,3221 @@
+{
+ "A": {
+  "header": {
+   "started": "2026-10-19 14:30",
+   "finished": "2026-10-19 16:15",
+   "ai_tool": "no"
+  },
+  "n_items": 150,
+  "missing": [],
+  "extra": [],
+  "order_same": true,
+  "items": {
+   "R3-050": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL via SUM(CASE...) for empty set, but \"how many\" questions expect 0; Pred correctly returns 0 with COUNT(*).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-041": {
+    "verdict": "ambiguous",
+    "reason": "GROUP BY column differs (name vs id), producing different aggregation granularity when multiple ids share the same name; the evidence does not specify which grouping level is correct.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-058": {
+    "verdict": "pred_wrong",
+    "reason": "Pred incorrectly joins through the results table, causing driverId key mismatch and empty result; Gold directly joins the correct tables.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-134": {
+    "verdict": "ambiguous",
+    "reason": "Two out of three calcium molecules have NULL labels; whether to count NULL labels as a category or exclude them is ambiguous.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-010": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-077": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-144": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-139": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL/None where the question expects a concrete answer; Pred returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-009": {
+    "verdict": "gold_wrong",
+    "reason": "Gold counts DISTINCT player_name, but different player_api_ids with the same name are distinct players; Pred correctly counts by player_api_id.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-085": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL/None where the question expects a concrete answer; Pred returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-044": {
+    "verdict": "ambiguous",
+    "reason": "GROUP BY column differs (name vs id), producing different aggregation granularity when multiple ids share the same name; the evidence does not specify which grouping level is correct.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-091": {
+    "verdict": "gold_wrong",
+    "reason": "Gold's three-table JOIN produces Cartesian product and DISTINCT ID makes ORDER BY non-deterministic; Pred correctly returns patient ID=1 with highest aCL IgA.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-128": {
+    "verdict": "pred_wrong",
+    "reason": "Question uses singular, expecting just one result; Pred incorrectly returns all tied values.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-019": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-129": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-095": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-022": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL via SUM(CASE...) for empty set, but \"how many\" questions expect 0; Pred correctly returns 0 with COUNT(*).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-133": {
+    "verdict": "ambiguous",
+    "reason": "GROUP BY column differs (major_id vs college), producing different results when member counts are tied across colleges.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-092": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-060": {
+    "verdict": "ambiguous",
+    "reason": "GROUP BY column differs (name vs id), producing different aggregation granularity when multiple ids share the same name; the evidence does not specify which grouping level is correct.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-067": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-007": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-034": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL/None where the question expects a concrete answer; Pred returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-105": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL has extra JOIN causing key mismatch and empty result set; Gold correctly returns the expected result.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-078": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-103": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL incorrectly uses HAVING with aggregate filter; the question asks for exact match, not threshold comparison.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-148": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-063": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-131": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-119": {
+    "verdict": "pred_wrong",
+    "reason": "Question uses singular, expecting just one result; Pred incorrectly returns all tied values.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-074": {
+    "verdict": "gold_wrong",
+    "reason": "Question uses singular, expecting just one result; Gold incorrectly returns all tied values.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-106": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-108": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-018": {
+    "verdict": "gold_wrong",
+    "reason": "Gold adds unnecessary IS NOT NULL filter that excludes valid rows; Pred correctly includes them and returns the expected result.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-107": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-075": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-126": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-073": {
+    "verdict": "pred_wrong",
+    "reason": "Question uses plural, expecting all tied values; Pred incorrectly uses LIMIT 1 returning only one row.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-061": {
+    "verdict": "ambiguous",
+    "reason": "COUNT(column) ignores NULL values while COUNT(*) includes them; the question does not specify whether NULL entries should be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-130": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-056": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-036": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-150": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-097": {
+    "verdict": "gold_wrong",
+    "reason": "Question uses plural, expecting all tied values; Gold incorrectly uses LIMIT 1 returning only one row.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-135": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty result set due to overly restrictive filters or wrong table choice; Pred result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-015": {
+    "verdict": "gold_wrong",
+    "reason": "Question uses plural, expecting all tied values; Gold incorrectly uses LIMIT 1 returning only one row.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-033": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-123": {
+    "verdict": "ambiguous",
+    "reason": "GROUP BY column differs (name vs id), producing different aggregation granularity when multiple ids share the same name; the evidence does not specify which grouping level is correct.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-011": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-042": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-026": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-053": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-094": {
+    "verdict": "pred_wrong",
+    "reason": "Pred returns NULL/None where the question expects a concrete answer; Gold returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-040": {
+    "verdict": "ambiguous",
+    "reason": "GROUP BY column differs (name vs id), producing different aggregation granularity when multiple ids share the same name; the evidence does not specify which grouping level is correct.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-089": {
+    "verdict": "ambiguous",
+    "reason": "COUNT(column) ignores NULL values while COUNT(*) includes them; the question does not specify whether NULL entries should be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-046": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty result set due to overly restrictive filters or wrong table choice; Pred result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-020": {
+    "verdict": "gold_wrong",
+    "reason": "Gold adds unnecessary IS NOT NULL filter that excludes valid rows; Pred correctly includes them and returns the expected result.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-101": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty result set due to overly restrictive filters or wrong table choice; Pred result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-149": {
+    "verdict": "ambiguous",
+    "reason": "COUNT(column) ignores NULL values while COUNT(*) includes them; the question does not specify whether NULL entries should be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-124": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-099": {
+    "verdict": "ambiguous",
+    "reason": "JOIN key differs (player_api_id vs player_fifa_api_id), producing different player matches; the schema does not clarify which key is the correct relationship.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-079": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-096": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-080": {
+    "verdict": "ambiguous",
+    "reason": "JOIN key differs (player_api_id vs player_fifa_api_id), producing different player matches; the schema does not clarify which key is the correct relationship.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-021": {
+    "verdict": "pred_wrong",
+    "reason": "Pred returns NULL/None where the question expects a concrete answer; Gold returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-014": {
+    "verdict": "ambiguous",
+    "reason": "'Least numerous' is ambiguous - whether to count distinct molecules containing the element vs. total atom occurrences.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-147": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-112": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL/None where the question expects a concrete answer; Pred returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-012": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-048": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-110": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL/None where the question expects a concrete answer; Pred returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-047": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty result set due to overly restrictive filters or wrong table choice; Pred result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-023": {
+    "verdict": "pred_wrong",
+    "reason": "Pred returns NULL/None where the question expects a concrete answer; Gold returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-137": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-052": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty result set due to overly restrictive filters or wrong table choice; Pred result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-032": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty result set due to overly restrictive filters or wrong table choice; Pred result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-062": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-005": {
+    "verdict": "gold_wrong",
+    "reason": "Question uses singular, expecting just one result; Gold incorrectly returns all tied values.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-104": {
+    "verdict": "ambiguous",
+    "reason": "COUNT(column) ignores NULL values while COUNT(*) includes them; the question does not specify whether NULL entries should be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-051": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL via SUM(CASE...) for empty set, but \"how many\" questions expect 0; Pred correctly returns 0 with COUNT(*).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-120": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty result set due to overly restrictive filters or wrong table choice; Pred result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-136": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-076": {
+    "verdict": "ambiguous",
+    "reason": "JOIN key differs (player_api_id vs player_fifa_api_id), producing different player matches; the schema does not clarify which key is the correct relationship.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-037": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-039": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-140": {
+    "verdict": "pred_wrong",
+    "reason": "Question uses plural, expecting all tied values; Pred incorrectly uses LIMIT 1 returning only one row.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-086": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL has extra JOIN causing key mismatch and empty result set; Gold correctly returns the expected result.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-090": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-118": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-065": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-043": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL/None where the question expects a concrete answer; Pred returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-016": {
+    "verdict": "ambiguous",
+    "reason": "COUNT(column) ignores NULL values while COUNT(*) includes them; the question does not specify whether NULL entries should be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-102": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-117": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-081": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL has extra JOIN causing key mismatch and empty result set; Gold correctly returns the expected result.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-024": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-013": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-083": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-072": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-141": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-003": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-038": {
+    "verdict": "gold_wrong",
+    "reason": "Question uses singular, expecting just one result; Gold incorrectly returns all tied values.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-132": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-122": {
+    "verdict": "gold_wrong",
+    "reason": "Question uses plural, expecting all tied values; Gold incorrectly uses LIMIT 1 returning only one row.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-114": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-087": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-109": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-045": {
+    "verdict": "gold_wrong",
+    "reason": "Question uses singular, expecting just one result; Gold incorrectly returns all tied values.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-030": {
+    "verdict": "ambiguous",
+    "reason": "JOIN key differs (player_api_id vs player_fifa_api_id), producing different player matches; the schema does not clarify which key is the correct relationship.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-071": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-064": {
+    "verdict": "gold_wrong",
+    "reason": "Question uses singular, expecting just one result; Gold incorrectly returns all tied values.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-057": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-142": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty result set due to overly restrictive filters or wrong table choice; Pred result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-029": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-068": {
+    "verdict": "ambiguous",
+    "reason": "JOIN key differs (player_api_id vs player_fifa_api_id), producing different player matches; the schema does not clarify which key is the correct relationship.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-145": {
+    "verdict": "pred_wrong",
+    "reason": "Question uses plural, expecting all tied values; Pred incorrectly uses LIMIT 1 returning only one row.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-093": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-055": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-028": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-088": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-049": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-113": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty result set due to overly restrictive filters or wrong table choice; Pred result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-143": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL/None where the question expects a concrete answer; Pred returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-002": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-070": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty result set due to overly restrictive filters or wrong table choice; Pred result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-084": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-004": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-006": {
+    "verdict": "implausible_data",
+    "reason": "Difference arises from 2147483648 (integer overflow max) values in witness data that would not occur in a real database.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-138": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-082": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-027": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-059": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-069": {
+    "verdict": "ambiguous",
+    "reason": "COUNT(column) ignores NULL values while COUNT(*) includes them; the question does not specify whether NULL entries should be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-115": {
+    "verdict": "pred_wrong",
+    "reason": "Pred returns NULL/None where the question expects a concrete answer; Gold returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-001": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-111": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-100": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-008": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-125": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-025": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-054": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-098": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-121": {
+    "verdict": "ambiguous",
+    "reason": "Results differ in value; requires detailed analysis of query logic and witness data to determine which answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-116": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL/None where the question expects a concrete answer; Pred returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-127": {
+    "verdict": "pred_wrong",
+    "reason": "Predicted SQL returns empty result set due to incorrect join conditions or overly restrictive filters; Gold result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-031": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty result set due to overly restrictive filters or wrong table choice; Pred result answers the question correctly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-066": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL/None where the question expects a concrete answer; Pred returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-017": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns NULL/None where the question expects a concrete answer; Pred returns the expected value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-146": {
+    "verdict": "ambiguous",
+    "reason": "Multiple values tie for the maximum; the question does not specify whether to return all tied values or just one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-035": {
+    "verdict": "gold_wrong",
+    "reason": "Question uses plural, expecting all tied values; Gold incorrectly uses LIMIT 1 returning only one row.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   }
+  },
+  "exact_changed": 150,
+  "content_changed": [],
+  "header_body_changed": true
+ },
+ "B": {
+  "header": {
+   "started": "2026-10-19 10:00",
+   "finished": "2026-10-19 14:42",
+   "ai_tool": "No"
+  },
+  "n_items": 150,
+  "missing": [],
+  "extra": [],
+  "order_same": true,
+  "items": {
+   "R3-050": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses SUM(CASE...) which returns NULL on an empty match set, but the question asks \"how many\" and expects a numeric count; Pred's COUNT(\\*) correctly returns 0 as the quantity answer.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-109": {
+    "verdict": "gold_wrong",
+    "reason": "Gold adds an extra T2.Examination Date = T1.First Date join condition, but original diagnosis is a Patient-level attribute already stored in Patient.Diagnosis; the extra date filter incorrectly excludes the matching SLE patient.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-126": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses a single-value subquery (uuid = (...)) but the same card name maps to multiple uuids; only one status is returned instead of all legalities for that card name.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-027": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses ALB instead of HCT for hematocrit, and writes the abnormal condition as an impossible AND (<29 AND >52) plus an unsupported IS NULL filter, so no rows match.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-081": {
+    "verdict": "pred_wrong",
+    "reason": "Pred filters on frpm.\"Charter School Number\" instead of schools.CharterNum; charter number is a school attribute stored on schools, so the join yields no matching row.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-020": {
+    "verdict": "pred_wrong",
+    "reason": "Pred omits the First Date IS NOT NULL filter, so a patient with unknown admission date is ranked as \"first\", which contradicts the question's temporal ordering.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-011": {
+    "verdict": "both_wrong",
+    "reason": "Gold incorrectly uses Examination.Diagnosis for Behcet (which is the final Patient-level diagnosis), while Pred counts Examination rows instead of distinct patients, inflating the count when one patient has multiple tests.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-133": {
+    "verdict": "gold_wrong",
+    "reason": "Gold groups by major_id instead of by college, so it picks the college with the most members in a single major rather than the college with the most members overall; Pred correctly groups by college.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-057": {
+    "verdict": "ambiguous",
+    "reason": "Both queries are semantically equivalent (finding Lewis Hamilton's minimum non-NULL fastest lap time); the difference only appears on an empty match set where returning \\[] vs NULL is equally defensible.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-019": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses strict inequalities (HCT < 29 OR HCT > 52), but the evidence defines normal as 29 < N < 52 (strict), so abnormal should include boundary values (≤29 OR ≥52); HCT=29 is incorrectly excluded.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-017": {
+    "verdict": "implausible_data",
+    "reason": "The witness's results.time values are full datetime strings (e.g. '2010-06-15 00:00:00') rather than the 'HH:MM:SS.mmm' race-time format described in the evidence, making any percentage calculation nonsensical.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-141": {
+    "verdict": "gold_wrong",
+    "reason": "Gold only looks up atoms on one side of the bond (connected.atom_id) and misses atom_id2; a bond connects two atoms, so both sides should be included.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-083": {
+    "verdict": "gold_wrong",
+    "reason": "Gold sorts by Time DESC (latest transaction) but the question asks for the \"first\" (earliest) customer of the day; Pred correctly uses ASC.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-026": {
+    "verdict": "ambiguous",
+    "reason": "Both queries are semantically equivalent (premium count / total SVK stations \\* 100); the slight difference is only floating-point precision from operation order, not a meaningful semantic gap.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-078": {
+    "verdict": "pred_wrong",
+    "reason": "Pred adds an extra ClosedDate IS NOT NULL filter, excluding closed schools whose closure date is NULL; the question asks for all closed schools in the top county, not only those with a known closure date.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-056": {
+    "verdict": "gold_wrong",
+    "reason": "Gold groups by district_id instead of by A2 (which the evidence defines as the district); two different district_ids sharing the same A2 are incorrectly split into separate district rows.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-080": {
+    "verdict": "gold_wrong",
+    "reason": "Gold counts DISTINCT player_name, which incorrectly treats two different players sharing the name Eduardo as one; player identity should be counted by ID, not by name.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-075": {
+    "verdict": "pred_wrong",
+    "reason": "The evidence defines \"20 count of posts and below\" as Count <= 20, but Pred uses Count < 20, excluding tags with exactly 20 posts; Gold correctly uses Count <= 20.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-103": {
+    "verdict": "pred_wrong",
+    "reason": "Pred incorrectly groups by customer and uses SUM(Consumption) > 214582.17, but yearmonth already stores monthly consumption per customer; the question asks for the customer whose June consumption equals exactly 214582.17.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-130": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses a single-value subquery (setCode = ...) but the Coldsnap set maps to multiple codes (a and ep), so only one set is counted instead of all Coldsnap cards.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-025": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses FavoriteCount = (SELECT MAX(FavoriteCount)) which evaluates to = NULL and matches nothing (SQL NULL comparison requires IS NULL); Gold's ORDER BY ... LIMIT 1 correctly returns the top post.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-077": {
+    "verdict": "gold_wrong",
+    "reason": "Gold adds an unsupported fastestLapTime IS NOT NULL filter; the evidence only defines fastest lap speed by fastestLapSpeed, so drivers with a speed but NULL time are incorrectly excluded.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-134": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses COUNT(\\*) which counts NULL-label molecules as a group, but the question asks whether calcium-containing molecules are mostly carcinogenic (+) or non-carcinogenic (-); NULL labels are unclassified and should not be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-061": {
+    "verdict": "pred_wrong",
+    "reason": "Pred picks only the single district_id at sort position 2, but multiple districts can tie for second-highest crime count; Gold correctly matches by A15 value so all tied districts are included.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-127": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses a single-value subquery (setCode = ...) but Coldsnap maps to multiple set codes (a and y2), so only one code is matched and card number 4 from the other set is missed.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-104": {
+    "verdict": "pred_wrong",
+    "reason": "The evidence defines morning as time before 13:00:00 (i.e., Time < '13:00:00'), but Pred uses BETWEEN '00:00:00' AND '13:00:00' which includes the endpoint 13:00:00; Gold correctly uses strict less-than.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-132": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses ORDER BY ... LIMIT 1 which only returns one row even when multiple Food budgets tie for the maximum amount; Gold correctly returns all rows with amount equal to the Food category maximum.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-006": {
+    "verdict": "pred_wrong",
+    "reason": "Pred joins Player and Player_Attributes on player_fifa_api_id instead of player_api_id; the correct join key is player_api_id, so the join mismatches players with their attribute records.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-119": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses ORDER BY ... LIMIT 1 which only returns one player even when multiple players tie for the maximum overall_rating; Gold correctly returns all players tied at the top rating.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-012": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses COUNT(member_id) as the denominator, but the evidence specifies that percentage is calculated over members with position='Member' only; Gold incorrectly includes non-Member position rows in the denominator.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-002": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses COUNT(School) which excludes schools with NULL school names, but CDSCode is the unique school identifier; even unnamed schools should be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-003": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses case-sensitive Location = 'India', which excludes users whose location is stored as 'india' (lowercase); country names should be matched case-insensitively.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-028": {
+    "verdict": "gold_wrong",
+    "reason": "Gold adds an unsupported fastestLapTime IS NOT NULL filter; the question only asks for the driver with the fastest lap speed, and a NULL time with a valid speed should still count.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-137": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses COUNT(DISTINCT School) which excludes schools with NULL school names, but CDSCode is the unique school identifier; unnamed schools should still be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-071": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses COUNT(id) as the denominator for average weight, but the evidence defines average as AVG(weight_kg), which automatically excludes NULL weight values; Gold incorrectly includes heroes with NULL weight in the denominator.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-016": {
+    "verdict": "pred_wrong",
+    "reason": "Pred joins bond with connected and atom, which inflates the row count due to one-to-many relationships; the evidence specifies percentage as single-bond count divided by total bond_id count, not joined-row count.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-043": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses COUNT(DISTINCT users.Id) as the denominator, but the evidence specifies average badges per user as Count(badges.Id) / Count(DisplayName); users with NULL DisplayName should not be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-009": {
+    "verdict": "gold_wrong",
+    "reason": "Gold counts DISTINCT player_name, which incorrectly treats two different players sharing the name Kiko as one; player identity should be counted by player_api_id, not by name.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-034": {
+    "verdict": "gold_wrong",
+    "reason": "Gold joins alignment table and filters by alignment='Neutral', but the evidence explicitly defines neutral superheroes as alignment_id=3; Pred correctly uses alignment_id=3 directly without an unnecessary join.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-049": {
+    "verdict": "gold_wrong",
+    "reason": "Gold adds an unsupported fastestLapTime IS NOT NULL filter; the question only asks for the driver with the fastest lap speed, and the evidence does not mention filtering by fastestLapTime.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-150": {
+    "verdict": "pred_wrong",
+    "reason": "Pred adds code = '' to the NULL check, but the evidence explicitly defines \"don't have a code\" as code IS NULL only; empty string is semantically different from NULL.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-038": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY ... LIMIT 1 which only returns one player even when multiple players tie for the minimum potential; the evidence defines lowest potential as MIN(potential), so all players with potential equal to the minimum should be returned.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-125": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses COUNT(id) as the denominator, but the evidence defines average as AVG(overall_rating), which automatically excludes NULL overall_rating values; Gold incorrectly includes rows with NULL rating in the denominator.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-138": {
+    "verdict": "gold_wrong",
+    "reason": "Gold joins all largest-loan clients' transactions together and picks the earliest globally, but the question asks for the first transaction of the client who applied the biggest loan; Gold conflates multiple clients' transactions instead of isolating one client's first transaction.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-074": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY ... LIMIT 1 which only returns one user even when multiple posts tie for the maximum FavoriteCount; the evidence defines most valuable post as Max(FavoriteCount), so all posts with maximum FavoriteCount should be included.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-037": {
+    "verdict": "gold_wrong",
+    "reason": "Gold assumes the two atoms are connected by a bond and joins through the bond/connected tables, but the question simply asks which molecule each atom belongs to; Pred correctly queries the atom table directly for molecule_id.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-118": {
+    "verdict": "gold_wrong",
+    "reason": "Gold computes MAX(attribute_value) across all attributes, but the evidence specifies the highest value should be computed within Strength only; Gold incorrectly compares Strength values against the global maximum across all attributes.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-007": {
+    "verdict": "gold_wrong",
+    "reason": "Gold does not use DISTINCT, resulting in duplicate superpower names (Super Strength appears twice); the question asks for a list of superpowers, which should be distinct types.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-048": {
+    "verdict": "ambiguous",
+    "reason": "Both transactions have the same date (1997-04-30), so \"first transaction\" is ambiguous when only date is available; LIMIT 1 arbitrarily picks one row without a time-level tiebreaker.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-013": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY ... LIMIT 1 which picks a row even when all fastestLapSpeed values are NULL, but the evidence defines fastest lap speed as MAX(fastestLapSpeed); when all values are NULL, no driver should be returned.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-001": {
+    "verdict": "gold_wrong",
+    "reason": "Gold does not filter foreign_data.language IS NOT NULL, incorrectly including cards with NULL language; \"comes with foreign language translation\" means the card must actually have a non-NULL foreign language entry.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-099": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses COUNT(id) as the denominator, but the evidence defines average as AVG(overall_rating), which automatically excludes NULL overall_rating values; Gold incorrectly includes rows with NULL rating in the denominator.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-145": {
+    "verdict": "ambiguous",
+    "reason": "The question asks for \"at least five\" names, so both returning exactly five (LIMIT 5) and returning all six are semantically valid interpretations of \"at least five\".",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-091": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses SELECT DISTINCT ID combined with ORDER BY aCL IgA, which leads to undefined behavior after DISTINCT; Pred correctly finds the row with the highest aCL value and returns its patient ID.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-051": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses SUM(CASE WHEN ...) which returns NULL when no Coldsnap set exists, but the answer to \"how many\" should be 0 when there are no matching cards, not NULL.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-005": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY ... LIMIT 1 which only returns one illustrator even when multiple cards tie for the maximum converted mana cost; the evidence defines highest CMC as MAX(convertedManaCost), so all cards with maximum CMC should be included.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-086": {
+    "verdict": "pred_wrong",
+    "reason": "Pred filters by position=1, but the evidence defines ranked 1st in the 3rd qualifying race as MIN(q3) (fastest q3 lap time), not the position column; no position=1 record exists in the witness.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-146": {
+    "verdict": "pred_wrong",
+    "reason": "Pred only matches one direction of the atom pair, but the evidence explicitly specifies \"or another way around\" — both (atom_id=X, atom_id2=Y) and (atom_id=Y, atom_id2=X) should be matched.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-107": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses UserId = (SELECT Id ...) which fails when multiple users share the display name Emmett (subquery returns multiple rows); Gold correctly joins badges with users to find the latest badge across all Emmett users.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-033": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses IGM NOT BETWEEN 40 AND 400, which excludes IGM=40, but the evidence defines abnormal as IGM <= 40 OR IGM >= 400; IGM=40 should be included as abnormal.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-089": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses link_to_event = (SELECT event_id ...) which fails when multiple events share the name November Meeting (subquery returns multiple rows); Gold correctly joins budget with event to include all matching events.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-014": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses COUNT(DISTINCT molecule_id), but the evidence defines least numerous as MIN(COUNT(element)); counting distinct molecules incorrectly counts molecule occurrences rather than atom counts.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-097": {
+    "verdict": "gold_wrong",
+    "reason": "Gold adds fastestLapSpeed IS NOT NULL filter and uses ORDER BY LIMIT 1, but the evidence defines fastest lap speed as MAX(fastestLapSpeed); Pred correctly uses MAX() which naturally returns NULL when no matching races exist.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-070": {
+    "verdict": "gold_wrong",
+    "reason": "Gold joins colour table once with eye_colour_id = hair_colour_id = colour.id, which incorrectly requires both eye and hair to have the same colour ID; Pred correctly joins colour table twice (once for eyes, once for hair) to check both are black independently.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-053": {
+    "verdict": "implausible_data",
+    "reason": "The witness data contains implausible placeholder values (fastestLapSpeed=2147483648, an integer overflow sentinel) and raceId=854 does not exist, making the percentage calculation physically meaningless.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-090": {
+    "verdict": "ambiguous",
+    "reason": "Two users tie for the highest badge count (1 badge each), so LIMIT 1 arbitrarily picks one; both results are equally valid when there is a tie.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-067": {
+    "verdict": "gold_wrong",
+    "reason": "Gold groups by major_id instead of college, but the question asks which college most members go to; grouping by major incorrectly splits members within the same college into separate groups.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-085": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses COUNT(DISTINCT UserId) as the denominator, but the evidence specifies average badges per user as Count(badges.Id) / Count(DisplayName); users with NULL DisplayName should not be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-039": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY year ASC LIMIT 1 which returns empty when no Singapore Grand Prix exists, but the evidence defines first race as MIN(year); Pred correctly uses MIN() which returns NULL when no matching races exist.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-040": {
+    "verdict": "gold_wrong",
+    "reason": "Gold groups by DisplayName, which incorrectly merges multiple users with NULL display name into one group; the question asks for the user with the most badges, which should be grouped by user ID, not display name.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-062": {
+    "verdict": "gold_wrong",
+    "reason": "Gold computes AVG(Amount), but the question asks for average total price; total price should be Amount multiplied by Price, not just Amount alone.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-035": {
+    "verdict": "gold_wrong",
+    "reason": "Gold joins through postHistory (posts edited by Mark Meckes), but the question asks for tags in \"his posts\" (posts owned by Mark Meckes); Pred correctly uses posts.OwnerUserId to find Mark Meckes' own posts.",
+    "exact_changed": true,
+    "content_changed": true,
+    "content_diff": [
+     "-|1230|1231|<r>|0|",
+     "-|1050|1051|<sampling>|0|",
+     "-|1609|1610|<anova>|20|",
+     "+|1230|1231||0|",
+     "+|1050|1051||0|",
+     "+|1609|1610||20|",
+     "-- `posts.Tags`: 91,966 rows, 49,054 NULL, 28,528 distinct values. Witness values: '<r>' occurs 301x; '<sampling>' occurs 83x; '<anova>' occurs 94x.",
+     "+- `posts.Tags`: 91,966 rows, 49,054 NULL, 28,528 distinct values. Witness values: '' occurs 301x; '' occurs 83x; '' occurs 94x."
+    ]
+   },
+   "R3-123": {
+    "verdict": "ambiguous",
+    "reason": "Two users tie for the highest badge count (1 badge each), so LIMIT 1 arbitrarily picks one; both results are equally valid when there is a tie.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-116": {
+    "verdict": "both_wrong",
+    "reason": "Gold uses SUM(IIF(...)) which returns NULL when no rows match, but \"how many\" should return 0; Pred uses BETWEEN 50 AND 100 which incorrectly includes endpoints, while the evidence specifies raceId > 50 and raceId < 100.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-029": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses exact match Diagnosis = 'Behcet', but the diagnosis text is 'Behcet, SjS susp' which includes Behcet; Pred correctly uses LIKE '%Behcet%' to match diagnoses containing Behcet.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-088": {
+    "verdict": "ambiguous",
+    "reason": "Two users tie for the highest badge count (1 badge each), so LIMIT 1 arbitrarily picks one; both results are equally valid when there is a tie.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-135": {
+    "verdict": "gold_wrong",
+    "reason": "Gold only checks AdmFName1/AdmLName1, but administrators can be in any of the three admin positions (1, 2, or 3); Pred correctly checks all three admin slots for both names.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-108": {
+    "verdict": "pred_wrong",
+    "reason": "Pred adds AND label='+' to the query, but the question asks to identify whether the molecule is carcinogenic; returning the actual label value ('-' or '+') is correct, not filtering to only '+' results.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-073": {
+    "verdict": "gold_wrong",
+    "reason": "The question asks to name \"one player\" whose overall strength is greatest, so LIMIT 1 is appropriate; Gold returns all tied players, which is more than requested.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-045": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses ORDER BY ... LIMIT 1 which picks a row even when all overall_rating values are NULL, but the evidence defines strongest player as MAX(overall_rating); when all values are NULL, no player should be returned.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-147": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses COUNT(id) which includes votes with NULL PostId, but the question asks for the number of posts; votes with NULL PostId do not represent any actual post and should be excluded.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-059": {
+    "verdict": "pred_wrong",
+    "reason": "Pred does not filter translation IS NOT NULL, incorrectly including rows with NULL translation; the question asks for the French name, so rows without a French translation should be excluded.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-139": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses results.fastestLapTime, but the evidence defines lap record as \"time\" which refers to the lapTimes table time column; Pred correctly uses lapTimes.time.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-110": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses COUNT(DISTINCT UserId) as the denominator, but the evidence specifies average badges per user as Count(badges.Id) / Count(DisplayName); users with NULL DisplayName should not be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-144": {
+    "verdict": "ambiguous",
+    "reason": "The average unemployment rates of 1995 and 1996 are equal in the witness data, so the question \"which one has higher percentage\" is ambiguous; both Gold and Pred arbitrarily return one of the two years when they are equal.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-064": {
+    "verdict": "pred_wrong",
+    "reason": "Pred joins on player_fifa_api_id instead of player_api_id, and returns LIMIT 10 players instead of just the strongest one; the question asks for \"the most strongest player\" (singular), and the correct join key is player_api_id.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-036": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY ... LIMIT 1 which only returns one publisher even when multiple superheroes tie for the minimum Speed value; the evidence defines slowest as MIN(attribute_value), so all tied superheroes' publishers should be included.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-063": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses COUNT(DISTINCT School) which excludes schools with NULL school names, but CDSCode is the unique school identifier; unnamed schools should still be counted.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-032": {
+    "verdict": "gold_wrong",
+    "reason": "Gold unnecessarily joins the atom table, which filters out the result when the bond's molecule has no atom in the witness; the question only asks for the label of the molecule containing the bond, which can be found directly from bond → molecule.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-105": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY BountyAmount DESC LIMIT 1 which returns a row even when all BountyAmount values are NULL, but the evidence defines highest bounty as MAX(BountyAmount); when all values are NULL, no user should be returned.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-084": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY BountyAmount DESC LIMIT 1 which returns a row even when all BountyAmount values are NULL, but the evidence defines highest bounty as MAX(BountyAmount); when all values are NULL, no user should be returned.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-060": {
+    "verdict": "ambiguous",
+    "reason": "All four German drivers have the same average pit stop duration (20.567), so the top 3 selection is arbitrary; both Gold and Pred return different subsets of the tied drivers.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-092": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses COUNT(DISTINCT atom_id) as the denominator, but the evidence specifies average bonds per atom as COUNT(bond_id) / COUNT(atom_id); since JOIN multiplies rows, COUNT(atom_id) counts each bond-atom pair, not distinct atoms.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-052": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses IGM NOT BETWEEN 40 AND 400, which excludes the boundary values 40 and 400, but the evidence defines abnormal IgM as IGM <= 40 OR IGM >= 400, which includes both endpoints.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-021": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses scalar subqueries which return NULL when customer 5 has no consumption record, but the question expects 0 for missing data; Gold correctly uses SUM(IIF(...)) which treats missing customer 5 as 0.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-106": {
+    "verdict": "pred_wrong",
+    "reason": "Pred includes subtypes IS NULL, treating cards without a subtype as \"other than Angel\", but the question asks for cards that have a subtype other than Angel; NULL subtype means no subtype, not a subtype different from Angel.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-100": {
+    "verdict": "implausible_data",
+    "reason": "The witness atom_id 'ABCDE21' is only 7 characters long, but the evidence defines atoms from 21 to 25 as SUBSTR(atom_id, 7, 2), which implies atom_id should be at least 8 characters long with the number starting at position 7; the witness data format is inconsistent with the evidence definition.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-046": {
+    "verdict": "gold_wrong",
+    "reason": "Gold only joins on atom_id = connected.atom_id, but atoms can appear in either atom_id or atom_id2 position of the connected table; Pred correctly uses OR to check both positions.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-076": {
+    "verdict": "both_wrong",
+    "reason": "Gold uses the correct join key (player_api_id) but incorrectly calculates average as SUM(rating)/COUNT(id), counting NULL ratings as 0; Pred uses the correct AVG() function but joins on the wrong key (player_fifa_api_id instead of player_api_id).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-140": {
+    "verdict": "gold_wrong",
+    "reason": "The question asks to name \"one player\" whose overall strength is greatest, so LIMIT 1 is appropriate; Gold returns all tied players, which is more than requested.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-128": {
+    "verdict": "gold_wrong",
+    "reason": "The question asks for \"the user\" (singular) with the most views, so LIMIT 1 is appropriate; Gold returns all tied users, which is more than requested.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-124": {
+    "verdict": "pred_wrong",
+    "reason": "Pred first computes MIN(amount) across all loans with duration > 24 months, then filters by date; but the question asks for the lowest amount among accounts that already satisfy both duration > 24 AND opening date before 1997; Gold correctly filters first then picks the minimum.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-095": {
+    "verdict": "ambiguous",
+    "reason": "Two patients satisfy the criteria (First Date='1991-06-13' AND Diagnosis='SJS'), so the question is ambiguous about which patient's lab tests to count; Gold arbitrarily picks one via = subquery, Pred counts both.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-054": {
+    "verdict": "gold_wrong",
+    "reason": "The question asks for \"players\" (plural) with the highest potential, so all tied players should be returned; Gold uses LIMIT 1 which arbitrarily picks one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-102": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY ... LIMIT 1 with IS NOT NULL filter, returning empty when all values are NULL; but the evidence defines fastest lap time as MIN(fastestLapTime), which correctly returns NULL via MIN().",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-058": {
+    "verdict": "pred_wrong",
+    "reason": "Pred unnecessarily joins through the results table, which filters out the correct lap time data because the driver who set the lap time (12361) is different from the driver in results for that race (12387); Gold correctly joins races → lapTimes → drivers directly.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-149": {
+    "verdict": "pred_wrong",
+    "reason": "Pred calculates NJ percentage minus absolute Vermont count (not Vermont percentage), while the question asks for the difference in percentage between the two states; Gold correctly computes (NJ_count - VT_count) \\* 100 / total_members.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-122": {
+    "verdict": "gold_wrong",
+    "reason": "The question asks for \"accounts\" (plural) with the lowest approved amount, so all tied accounts should be returned; Gold uses LIMIT 1 which arbitrarily picks one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-087": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses PLT BETWEEN 100 AND 400 which includes boundary values, but the evidence defines normal range as PLT > 100 AND PLT < 400, which excludes both endpoints.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-112": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses COUNT(type) which excludes NULL type rows, but the evidence specifies denominator as COUNT(event_id); when type is NULL, the event should still be counted in the total denominator.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-047": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses COALESCE(SUM(Score), 0) which returns 0 when no user named Yevgeny exists, but the question asks for the total score of posts edited by a specific user; if the user doesn't exist, the result should be empty, not 0.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-113": {
+    "verdict": "pred_wrong",
+    "reason": "Pred searches by posts.Title, but the evidence defines the post 'Computer Game Datasets' as postHistory.Text; the question refers to the post text, not the title.",
+    "exact_changed": true,
+    "content_changed": true,
+    "content_diff": [
+     "-|8222|<data-mining><dataset><games>|",
+     "+|8222||",
+     "-- `postHistory.Text`: 303,155 rows, 0 NULL, 254,564 distinct values. Witness values: \"I have been looking for computer game datasets, b occurs 1x; '<data-mining><dataset><games>' occurs 1x.",
+     "+- `postHistory.Text`: 303,155 rows, 0 NULL, 254,564 distinct values. Witness values: \"I have been looking for computer game datasets, b occurs 1x; '' occurs 1x."
+    ]
+   },
+   "R3-066": {
+    "verdict": "gold_wrong",
+    "reason": "Gold joins the alignment table and filters by alignment='Neutral', but in the witness data alignment_id=3 corresponds to 'Bad', not 'Neutral'; the evidence explicitly defines neutral superheroes as alignment_id = 3, so Pred is correct.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-018": {
+    "verdict": "pred_wrong",
+    "reason": "Pred sorts by Description instead of First Date, but \"first diagnosed patient\" should be ordered by first visit date; Gold correctly uses First Date, though it adds IS NOT NULL filter.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-117": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses client.district_id (the client's home district), but the question asks which district she opened her account in; the account's district is determined by account.district_id via the disp-account relationship, which Pred correctly uses.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-042": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY weight_kg DESC LIMIT 1 which returns a row even when all weight_kg values are NULL, but the evidence defines heaviest as MAX(weight_kg); when all values are NULL, no superhero should be returned.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-121": {
+    "verdict": "pred_wrong",
+    "reason": "Pred joins set_translations directly, which duplicates sets that have multiple translation rows (k1 appears twice), inflating the denominator; Gold correctly uses IN subquery to count unique sets with Portuguese (Brazil) translation.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-004": {
+    "verdict": "gold_wrong",
+    "reason": "Gold only joins on atom.atom_id = connected.atom_id, missing atoms that appear in the atom_id2 position; Pred correctly uses IN (atom_id, atom_id2) to find both atoms forming the bond.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-030": {
+    "verdict": "pred_wrong",
+    "reason": "Pred joins on player_fifa_api_id instead of player_api_id; the correct join key between Player and Player_Attributes is player_api_id, as used by Gold.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-031": {
+    "verdict": "gold_wrong",
+    "reason": "Gold returns empty when molecule TR006 doesn't exist, but the question asks for both the count of double bonds and carcinogenic label; even for a non-existent molecule, returning 0 bonds and NULL label is more appropriate than returning empty.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-023": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses scalar subqueries which return NULL when customer 5 has no consumption record, but the question expects 0 for missing data; Gold correctly uses SUM(IIF(...)) which treats missing customer 5 as 0.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-072": {
+    "verdict": "ambiguous",
+    "reason": "Two users tie for the youngest (both Age=0), so the question \"the id of the youngest user\" is ambiguous; both Gold (returning all tied) and Pred (returning one via LIMIT 1) are reasonable interpretations.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-148": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses HCT < 29 OR HCT > 52 which excludes boundary values, but the evidence defines normal range as 29 < N < 52 (strict), so abnormal includes the boundaries HCT <= 29 OR HCT >= 52.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-068": {
+    "verdict": "pred_wrong",
+    "reason": "Pred joins on player_fifa_api_id instead of player_api_id; the correct join key between Player and Player_Attributes is player_api_id, as used by Gold.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-136": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY balance DESC LIMIT 1 which returns a row even when balance is NULL, but the evidence defines highest balance as MAX(balance); when all balance values for potential=61 are NULL, no player should be returned.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-115": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses COUNT(Segment) which excludes rows with NULL Segment, but the denominator should be all gas stations in Country='SVK', regardless of whether Segment is NULL; Gold correctly uses SUM(IIF(Country='SVK', 1, 0)) as denominator.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-143": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses SUM(IIF(time IS NOT NULL, 1, 0)) which returns NULL when no rows match statusId=2, but \"how many\" should return 0; Pred correctly uses COUNT(driverId) which returns 0 for empty result set.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-098": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses position=1 to identify the champion, but the evidence defines champion as Max(time) with a specific time format; Gold correctly uses time LIKE pattern to identify the champion by time format.",
+    "exact_changed": true,
+    "content_changed": true,
+    "content_diff": [
+     "-|1031|fry|http://en.wikipedia.org/wiki/Alfa_Romeo_(Formula_One)|",
+     "+|1031|fry|[http://en.wikipedia.org/wiki/Alfa_Romeo_(Formula_One)](<http://en.wikipedia.org/wiki/Alfa_Romeo_(Formula_One)>)|"
+    ]
+   },
+   "R3-082": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses COUNT(id) which counts all attribute rows including those with NULL player_api_id, but the question asks about players; rows with NULL player_api_id cannot be attributed to a specific player and should be excluded.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-120": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses the pre-computed Percent (%) Eligible Free column, but the evidence defines percent eligible for free meals as Free Meal Count (K-12) / Enrollment (K-12); using the pre-computed column is not the same as the evidence definition.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-094": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses SUM(CASE WHEN remaining < 0 THEN 1 ELSE 0 END) which returns NULL when no rows match the event_name filter, but \"how many\" should return 0; Gold correctly uses COUNT(\\*) with WHERE remaining < 0 which returns 0 for empty result.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-008": {
+    "verdict": "gold_wrong",
+    "reason": "Gold computes MAX(attribute_value) across all attributes instead of only Strength attributes, but the evidence defines highest attribute value in strength as MAX(attribute_value) WHERE attribute_name='Strength'; Pred correctly restricts the MAX subquery to Strength attribute_id.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-142": {
+    "verdict": "gold_wrong",
+    "reason": "Gold filters by SOCType='Youth Authority Facilities', but the question refers to 'Youth Authority School' which corresponds to EdOpsName in the witness data; Pred correctly uses EdOpsName='Youth Authority School' and MailStrAbr for the address.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-069": {
+    "verdict": "gold_wrong",
+    "reason": "Gold joins alignment and gender tables and filters by alignment='Good' and gender='Female', but in the witness data the alignment and gender name columns are placeholder values; the evidence explicitly defines good as alignment_id=1 and female as gender_id=2, so Pred is correct.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-129": {
+    "verdict": "pred_wrong",
+    "reason": "Pred does not filter translation IS NOT NULL, incorrectly including rows with NULL translation; the question asks for the French name, so rows without a French translation should be excluded.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-114": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses exact string match on CreationDate='2014-04-23 20:29:39.0' which fails when the stored datetime has no milliseconds; the question refers to a comment at 20:29:39, so matching by second precision is appropriate; Pred correctly uses STRFTIME to format the datetime.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-096": {
+    "verdict": "pred_wrong",
+    "reason": "Pred joins on team_fifa_api_id instead of team_api_id; the correct join key between Team and Team_Attributes is team_api_id, as used by Gold.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-131": {
+    "verdict": "pred_wrong",
+    "reason": "Pred adds an extra join condition on team_fifa_api_id, which filters out valid Team_Attributes rows where only team_api_id matches; the correct join key is team_api_id alone, as used by Gold.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-101": {
+    "verdict": "pred_wrong",
+    "reason": "Pred returns \\[\\[None, None]] when no user named Yevgeny exists, but the question asks for posts edited by a specific user; if the user doesn't exist (due to case mismatch), the result should be empty, not NULL values.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-111": {
+    "verdict": "ambiguous",
+    "reason": "Two patients satisfy the criteria (First Date='1991-06-13' AND Diagnosis='SJS'), so the question is ambiguous about which patient's lab tests to count; Gold arbitrarily picks one via = subquery, Pred counts both.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-041": {
+    "verdict": "ambiguous",
+    "reason": "Two leagues tie for the most total goals (Italy Serie A and England Premier League both have 2 goals), so LIMIT 1 arbitrarily picks one; both results are equally valid when there is a tie.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-010": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses SUM(IIF(...)) which treats missing race 854 as 0, leading to a meaningless calculation when the next race data doesn't exist; Pred correctly uses a self-join which returns empty when race 854 data is missing.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-055": {
+    "verdict": "gold_wrong",
+    "reason": "The question asks for \"the only one comment text\", so LIMIT 1 is appropriate; Gold returns all matching comments, which is more than requested.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-065": {
+    "verdict": "gold_wrong",
+    "reason": "The question asks \"how many patients\", so COUNT(DISTINCT Patient.ID) is correct; Gold uses COUNT(\\*) which counts examination rows, not patients, and overcounts when one patient has multiple examinations.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-079": {
+    "verdict": "gold_wrong",
+    "reason": "Gold uses ORDER BY weight_kg DESC LIMIT 1 which returns a row even when all weight_kg values are NULL, but the evidence defines heaviest as MAX(weight_kg); when all values are NULL, no superhero should be returned.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-044": {
+    "verdict": "gold_wrong",
+    "reason": "The question asks about \"the user\", which should be identified by UserId; Gold groups by DisplayName, which incorrectly merges users with the same display name, while Pred correctly groups by UserId.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-093": {
+    "verdict": "pred_wrong",
+    "reason": "The evidence defines \"don't have a code\" as code IS NULL, but Pred additionally includes code = '' (empty string), which is not the same as NULL; Gold correctly calculates the count of NULL codes.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-022": {
+    "verdict": "gold_wrong",
+    "reason": "The question asks \"how many cards\", which should return 0 when no cards match the criteria; Gold uses SUM(CASE...) which returns NULL for empty result sets, while Pred correctly uses COUNT(\\*) which returns 0.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-024": {
+    "verdict": "pred_wrong",
+    "reason": "The question asks for atoms in triple-bond molecules containing phosphorus or bromine, meaning atoms in molecules that have at least one triple bond; Pred incorrectly counts only atoms directly involved in triple bonds via the connected table, while Gold correctly joins via molecule_id to count all atoms in triple-bond molecules.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-015": {
+    "verdict": "gold_wrong",
+    "reason": "Two players tie for the tallest height (160.02), so both should be returned; Gold uses LIMIT 1 which arbitrarily picks one, while Pred correctly returns all players with height equal to the maximum.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   }
+  },
+  "exact_changed": 150,
+  "content_changed": [
+   "R3-035",
+   "R3-113",
+   "R3-098"
+  ],
+  "header_body_changed": true
+ },
+ "C": {
+  "header": {
+   "started": "2026-10-19 11:30",
+   "finished": "2026-10-19 13:59",
+   "ai_tool": "No."
+  },
+  "n_items": 150,
+  "missing": [],
+  "extra": [],
+  "order_same": true,
+  "items": {
+   "R3-139": {
+    "verdict": "gold_wrong",
+    "reason": "The lap record should come from laptimes.time, but the witness has results.fastestLapTime all NULL, so gold's MIN over fastestLapTime returns nothing while Pred correctly reads laptimes.time.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-127": {
+    "verdict": "implausible_data",
+    "reason": "Two distinct set codes share the name 'Coldsnap' (real setCode is unique), driving gold and Pred to resolve different sets.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-130": {
+    "verdict": "implausible_data",
+    "reason": "Sets are fabricated: duplicate 'Coldsnap' code and borderColor 'blacka' occurs 0x in the real DB.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-006": {
+    "verdict": "implausible_data",
+    "reason": "All IDs are int32 boundary values 2147483648/9 and player/PA keys are shuffled (both occur 0x), making the join results meaningless.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-086": {
+    "verdict": "pred_wrong",
+    "reason": "Evidence says the third-smallest standing = MIN(position)-based ranking, but Pred hard-codes position=1 which does not equal the minimum in the witness.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-083": {
+    "verdict": "gold_wrong",
+    "reason": "The first (earliest) paid subscriber must be the minimum join date, but gold uses ORDER BY ... DESC which returns the latest, while Pred takes the earliest.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-109": {
+    "verdict": "implausible_data",
+    "reason": "The First Date is later than the SLE diagnosis date and Diagnosis is a numeric code, both impossible in the real clinical schema.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-032": {
+    "verdict": "implausible_data",
+    "reason": "A bond is attributed to a molecule that has no atom rows in the witness, violating referential consistency.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-048": {
+    "verdict": "ambiguous",
+    "reason": "Two transactions share the same date and there is no time column to order them, so 'most recent' admits either row.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-119": {
+    "verdict": "ambiguous",
+    "reason": "Two players tie at the highest rating 76, so either can be returned as the top one.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-115": {
+    "verdict": "implausible_data",
+    "reason": "Segment is NULL (real DB has 0 NULL) and Country='Premium' is not a valid country value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-098": {
+    "verdict": "gold_wrong",
+    "reason": "The champion is position=1, but gold matches via time LIKE pattern which actually selects the runner-up row.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-026": {
+    "verdict": "ambiguous",
+    "reason": "The two queries are mathematically equivalent and the difference is only a floating-point last-digit rounding.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-147": {
+    "verdict": "implausible_data",
+    "reason": "A votes.BountyAmount=45 row has PostId=NULL, which cannot reference a post in the real schema.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-114": {
+    "verdict": "gold_wrong",
+    "reason": "Gold hard-codes a string comparison '...39.0' that does not match the stored value '...39', while Pred matches the stored value.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-066": {
+    "verdict": "implausible_data",
+    "reason": "alignment.id=3's label text is 'Bad' in the witness but 'Neutral' in the real DB; the id is right but the text was swapped.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-082": {
+    "verdict": "implausible_data",
+    "reason": "player_api_id has multiple NULL rows (real DB has 0 NULL) and player_name 'lowa' occurs 0x.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-085": {
+    "verdict": "implausible_data",
+    "reason": "users.DisplayName is NULL (real DB has 0 NULL DisplayNames), driving the aggregate mismatch.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-135": {
+    "verdict": "gold_wrong",
+    "reason": "Mike Larson is an Adm2 member, but gold only queries Adm1, missing him, while Pred includes Adm2.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-031": {
+    "verdict": "both_wrong",
+    "reason": "The witness contains only TR409 data and none of the TR006 molecule the question specifies, so neither query can answer it.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-142": {
+    "verdict": "gold_wrong",
+    "reason": "The school name is Youth Authority School, but gold misuses SOCType to identify it and returns empty.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-015": {
+    "verdict": "ambiguous",
+    "reason": "Two players tie at the greatest height, so either is a valid answer.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-024": {
+    "verdict": "implausible_data",
+    "reason": "Three bonds reference br atoms that belong to a different molecule than the one asked about.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-107": {
+    "verdict": "implausible_data",
+    "reason": "Two different users share DisplayName 'Emmett' (real DisplayName is unique), driving the duplicate-resolution difference.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-096": {
+    "verdict": "implausible_data",
+    "reason": "Team and Team_Attributes id correspondence is broken in the witness (real api ids occur 0x).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-068": {
+    "verdict": "ambiguous",
+    "reason": "Two players tie at rating 80, so either can be returned.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-029": {
+    "verdict": "gold_wrong",
+    "reason": "Diagnosis contains 'Behcet' as a substring and should be matched with LIKE, but gold uses exact ='Behcet' and misses it.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-129": {
+    "verdict": "gold_wrong",
+    "reason": "A NULL French translation is a legitimate result, but gold adds translation IS NOT NULL and wrongly excludes it.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-138": {
+    "verdict": "ambiguous",
+    "reason": "Two loans tie at amount=2 as the maximum, so either account can be returned.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-063": {
+    "verdict": "gold_wrong",
+    "reason": "School count should be by rows, but gold uses COUNT(DISTINCT School) which drops the NULL-name school.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-023": {
+    "verdict": "pred_wrong",
+    "reason": "Customer 5 has no record and should count as 0; gold's SUM(IIF...) correctly yields 0, while Pred's scalar subquery over no rows returns NULL.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-010": {
+    "verdict": "implausible_data",
+    "reason": "int32 boundary values, name 'PAUL/DI RESTA' occurs 0x, and no raceId=854 row exists in the witness.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-131": {
+    "verdict": "implausible_data",
+    "reason": "Three distinct Team rows all have short_name 'LEI', impossible in the real data.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-091": {
+    "verdict": "gold_wrong",
+    "reason": "The highest aCL IgA=52 should map to ID=1, but gold returns ID=3.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-059": {
+    "verdict": "implausible_data",
+    "reason": "setCode is NULL (real DB has 0 NULL) and gold filters out NULL translations while Pred does not.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-125": {
+    "verdict": "implausible_data",
+    "reason": "Two rows share api for Aaron Doran and a NULL rating; gold's COUNT(id) includes the NULL-rated row while AVG skips it.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-043": {
+    "verdict": "implausible_data",
+    "reason": "DisplayName=NULL makes gold's denominator zero (real DB has 0 NULL DisplayNames).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-088": {
+    "verdict": "ambiguous",
+    "reason": "Two users each have exactly one badge and all values are synthetic, so either can be top.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-007": {
+    "verdict": "gold_wrong",
+    "reason": "Gold lacks DISTINCT and repeats the 'Super Strength' ability, returning 4 instead of the 5 distinct superpowers.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-105": {
+    "verdict": "gold_wrong",
+    "reason": "The unique VoteTypeId=8 row has Bounty=NULL, yet gold still returns that user while Pred correctly returns empty.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-001": {
+    "verdict": "gold_wrong",
+    "reason": "'Has a foreign-language translation' should filter language NOT NULL, but gold does not filter NULL translations.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-124": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses a global MIN(amount)=0, but that account's opening date is not before 1997, so Pred returns empty.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-052": {
+    "verdict": "gold_wrong",
+    "reason": "Boundary IGM=40 is abnormal per evidence (<=40), but gold uses NOT BETWEEN and excludes 40.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-072": {
+    "verdict": "ambiguous",
+    "reason": "Two users tie at Age=0 as youngest, so either can be returned.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-033": {
+    "verdict": "gold_wrong",
+    "reason": "Same boundary issue as R3-052: IGM=40 is abnormal but gold's NOT BETWEEN excludes it; Diagnosis is int32 boundary.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-104": {
+    "verdict": "pred_wrong",
+    "reason": "'Morning' = before 13:00 excludes 13:00, but Pred uses BETWEEN which includes 13:00, while gold's < is correct.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-084": {
+    "verdict": "gold_wrong",
+    "reason": "The only VoteTypeId=8 vote has BountyAmount=NULL, so there is no highest bounty; gold's ORDER BY ... LIMIT 1 still returns user 0, while Pred's BountyAmount=MAX(NULL) correctly returns empty.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-022": {
+    "verdict": "gold_wrong",
+    "reason": "With no matching rows the count should be 0, but gold's SUM over empty returns None while Pred's COUNT=0.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-038": {
+    "verdict": "ambiguous",
+    "reason": "Two rows tie at potential=0, so either is a valid pick.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-046": {
+    "verdict": "gold_wrong",
+    "reason": "The sn atom appears on the atom_id2 side of a connection, but gold joins only one side and misses it.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-025": {
+    "verdict": "gold_wrong",
+    "reason": "The only post has FavoriteCount=NULL, yet gold still returns its owner.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-058": {
+    "verdict": "pred_wrong",
+    "reason": "Hamilton has laptimes but no results row, so Pred's extra join to results wrongly filters him out.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-049": {
+    "verdict": "implausible_data",
+    "reason": "Values are 0/2147483648 and fastestLapTime=NULL yet fastestLapSpeed is populated, an inconsistent combination.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-040": {
+    "verdict": "implausible_data",
+    "reason": "Three users have DisplayName=NULL and are merged into a NULL group.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-097": {
+    "verdict": "ambiguous",
+    "reason": "The witness has no 2009 Spanish GP, and empty vs None are equivalent no-result representations.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-003": {
+    "verdict": "gold_wrong",
+    "reason": "User 1's Location is lowercase 'india', but gold matches exact 'India' and misses it.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-008": {
+    "verdict": "gold_wrong",
+    "reason": "MAX over all attributes gives 25 (Speed), but the question asks for Strength only; Pred correctly restricts to Strength.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-099": {
+    "verdict": "gold_wrong",
+    "reason": "AVG ignores NULL ratings, but gold uses COUNT(id) which counts NULL-rated rows in the denominator.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-027": {
+    "verdict": "pred_wrong",
+    "reason": "Pred uses ALB instead of HCT, and ALB<29 AND >52 is impossible, returning empty.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-112": {
+    "verdict": "implausible_data",
+    "reason": "The only 2019 event has type=NULL (real DB has 0 NULL type).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-076": {
+    "verdict": "implausible_data",
+    "reason": "Two rows share Aaron Doran's api plus a NULL rating, all fabricated.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-019": {
+    "verdict": "pred_wrong",
+    "reason": "HCT=29 is abnormal (<=29), but Pred uses <29 and excludes it.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-002": {
+    "verdict": "gold_wrong",
+    "reason": "The 2003 Stanislaus school has School=NULL but a valid CDS, yet gold's COUNT(School) drops it.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-020": {
+    "verdict": "pred_wrong",
+    "reason": "The only patient has First Date=NULL, and gold correctly requires NOT NULL, while Pred ignores the filter.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-089": {
+    "verdict": "pred_wrong",
+    "reason": "'November Meeting' maps to two event_ids, so Pred's scalar subquery equality fails.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-071": {
+    "verdict": "gold_wrong",
+    "reason": "AVG ignores NULL weight, but gold's COUNT(id) includes the NULL-weight hero in the denominator.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-116": {
+    "verdict": "gold_wrong",
+    "reason": "There is no statusId=2 row so the answer is 0, but gold's SUM over empty returns None.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-012": {
+    "verdict": "gold_wrong",
+    "reason": "The denominator should count only position='Member', but gold counts every joined member.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-080": {
+    "verdict": "gold_wrong",
+    "reason": "Two distinct players are named Eduardo, so the count of players is 2, but gold counts names giving 1.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-062": {
+    "verdict": "gold_wrong",
+    "reason": "Total price = Amount\\*Price, but gold only averages Amount.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-009": {
+    "verdict": "gold_wrong",
+    "reason": "Two distinct players are named Kiko with different api ids, so gold's name count gives 1 instead of 2.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-016": {
+    "verdict": "pred_wrong",
+    "reason": "Evidence sets the bond denominator at 3/4=75%, but Pred joins connected/atom which doubles the denominator to 66.7%.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-037": {
+    "verdict": "implausible_data",
+    "reason": "The witness only has TR000_4 (TR000_2 is missing) and all values are int32 boundary.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-123": {
+    "verdict": "ambiguous",
+    "reason": "Two users each have exactly one badge and tie.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-079": {
+    "verdict": "gold_wrong",
+    "reason": "The only DC hero has weight=NULL, yet gold still returns it.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-137": {
+    "verdict": "implausible_data",
+    "reason": "CDS/School are int32-boundary/NULL fabricated values, and gold's COUNT(DISTINCT School) drops the NULL-name school.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-014": {
+    "verdict": "gold_wrong",
+    "reason": "Counting by atom gives c=2/h=1, but gold uses COUNT(DISTINCT molecule) treating each as 1.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-073": {
+    "verdict": "ambiguous",
+    "reason": "Two players tie at rating=71 for 'one' top player.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-120": {
+    "verdict": "implausible_data",
+    "reason": "frpm stores Percent=0.25 while Free16/Enroll427=0.037, an internal contradiction.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-070": {
+    "verdict": "gold_wrong",
+    "reason": "Both eye and hair are black, requiring two joins to colour, but gold joins once forcing eye_id=hair_id.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-042": {
+    "verdict": "implausible_data",
+    "reason": "The only hero has weight=NULL and colour.id=1002 is fabricated.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-021": {
+    "verdict": "pred_wrong",
+    "reason": "Customer 5 has no 201304 record and should be 0; gold's IIF is correct, while Pred's scalar subquery returns NULL.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-128": {
+    "verdict": "ambiguous",
+    "reason": "Two users tie at Views=0 as highest.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-036": {
+    "verdict": "ambiguous",
+    "reason": "Four heroes tie at Speed=10 as slowest.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-126": {
+    "verdict": "ambiguous",
+    "reason": "Cloudchaser Eagle has two print runs with uuid b=Legal and y2=Banned that cannot be uniquely ordered.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-044": {
+    "verdict": "ambiguous",
+    "reason": "Four users each have exactly one badge and tie.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-030": {
+    "verdict": "ambiguous",
+    "reason": "Two PAs tie at rating=80 and join on different keys, each returning one row.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-090": {
+    "verdict": "ambiguous",
+    "reason": "Two users each have exactly one badge and all values are synthetic.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-053": {
+    "verdict": "implausible_data",
+    "reason": "Values are 0/'PAUL/DI RESTA' and no raceId=854 row exists.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-075": {
+    "verdict": "pred_wrong",
+    "reason": "'20 and below' includes Count=20, but Pred uses <20 and excludes Count=20.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-069": {
+    "verdict": "implausible_data",
+    "reason": "alignment/gender label texts were replaced with garbage values while the ids remain correct.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-045": {
+    "verdict": "implausible_data",
+    "reason": "api=-1, player_name=NULL and rating=NULL are all fabricated.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-110": {
+    "verdict": "implausible_data",
+    "reason": "DisplayName=NULL makes gold's denominator zero (real DB has 0 NULL DisplayNames).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-117": {
+    "verdict": "gold_wrong",
+    "reason": "'District where the account was opened' uses account.district_id=Kolin, but gold wrongly uses the client's residential district Benesov.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-065": {
+    "verdict": "gold_wrong",
+    "reason": "Two Examination rows belong to the same patient, so distinct-patient count=1, but gold's COUNT(\\*)=2.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-054": {
+    "verdict": "ambiguous",
+    "reason": "Two players tie at potential=84.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-134": {
+    "verdict": "implausible_data",
+    "reason": "Molecule k1/k2 labels are NULL (real DB has 0 NULL labels).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-081": {
+    "verdict": "implausible_data",
+    "reason": "Values 0040/k1/y2 are fabricated, and CharterNum lives in different columns across schools vs frpm.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-056": {
+    "verdict": "implausible_data",
+    "reason": "Two different district_ids share A2='2147483648' (real A2 is unique).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-087": {
+    "verdict": "gold_wrong",
+    "reason": "Evidence says normal platelets are strictly >100 AND <400, so PLT=100 is abnormal, but gold's BETWEEN includes 100.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-148": {
+    "verdict": "pred_wrong",
+    "reason": "HCT=52 is abnormal (>=52), but Pred uses >52 and excludes it.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-028": {
+    "verdict": "implausible_data",
+    "reason": "fastestLapTime=NULL yet speed is populated and all values are fabricated.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-064": {
+    "verdict": "implausible_data",
+    "reason": "api 8/42, names a/g/i and ratings 2/86 are all fabricated and join keys mismatch.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-108": {
+    "verdict": "pred_wrong",
+    "reason": "The question asks whether the molecule is carcinogenic (return its label '-'), but Pred adds label='+' and excludes the non-carcinogenic molecule, returning empty.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-005": {
+    "verdict": "ambiguous",
+    "reason": "Two cards tie at convertedManaCost=0.0 as highest.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-013": {
+    "verdict": "gold_wrong",
+    "reason": "Both fastestLapSpeed rows are NULL, so there is no driver, yet gold still returns the driver.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-047": {
+    "verdict": "implausible_data",
+    "reason": "The only user's DisplayName is a large number, not 'Yevgeny'.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-018": {
+    "verdict": "pred_wrong",
+    "reason": "'First' patient must order by First Date (which is NULL here), but Pred orders by Description.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-057": {
+    "verdict": "ambiguous",
+    "reason": "The witness has no Lewis Hamilton, and empty vs None are equivalent.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-074": {
+    "verdict": "ambiguous",
+    "reason": "Three posts tie at FavoriteCount=37 as maximum.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-103": {
+    "verdict": "pred_wrong",
+    "reason": "Consumption equals exactly 214582.17, so gold's equality match is right, but Pred's HAVING SUM> requires strictly more and returns empty.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-094": {
+    "verdict": "ambiguous",
+    "reason": "All values are 2147483648, the event is not named 'November Meeting', and 0 vs None are equivalent.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-051": {
+    "verdict": "gold_wrong",
+    "reason": "The witness has no Coldsnap set so the count is 0, but gold's SUM over empty returns None.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-055": {
+    "verdict": "ambiguous",
+    "reason": "Two posts both have ParentId 107829 and CommentCount=1, each with one comment.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-101": {
+    "verdict": "implausible_data",
+    "reason": "DisplayNames are uppercase 'YEVGENY' not 'Yevgeny' (case mismatch, occurs 0x).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-092": {
+    "verdict": "gold_wrong",
+    "reason": "Iodine atom k2 has 2 bond rows but is 1 atom, so average bonds per atom=2.0; gold's COUNT(atom_id) counts rows giving 1.0, Pred's COUNT(DISTINCT atom_id)=2.0.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-149": {
+    "verdict": "pred_wrong",
+    "reason": "Evidence subtracts two percentages, so both terms divide by total members; Pred divides only the New Jersey term, yielding -100 instead of -50.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-113": {
+    "verdict": "gold_wrong",
+    "reason": "The post is identified by Title='Computer game datasets' (ViewCount 1708, editor mbq), but gold wrongly requires postHistory.Text to equal the exact string and returns empty.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-118": {
+    "verdict": "gold_wrong",
+    "reason": "Gold computes MAX over all attributes (=3, a Durability value) then compares Strength rows (none match, 0); Pred correctly takes MAX among Strength (1) and counts hero 1068.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-093": {
+    "verdict": "pred_wrong",
+    "reason": "Evidence defines 'no code' as code IS NULL, and the driver's code is an empty string '' (occurring 0x in the real DB), so gold's NULL-only count is 0; Pred wrongly counts '' as missing.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-077": {
+    "verdict": "implausible_data",
+    "reason": "Race 933's only result has fastestLapTime=NULL while fastestLapSpeed=2147483648 (inconsistent; all ids synthetic).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-150": {
+    "verdict": "pred_wrong",
+    "reason": "Same as R3-093: the driver's code is an empty string '' (0x in real DB), so gold's NULL-only count is 0 and Pred wrongly counts '' as missing.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-035": {
+    "verdict": "gold_wrong",
+    "reason": "Two users are both named Mark Meckes (DisplayName should be unique); 'his posts' means OwnerUserId, but gold joins via postHistory.UserId and finds only <sampling>.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-111": {
+    "verdict": "implausible_data",
+    "reason": "Two patients share First Date 1991-06-13 + SJS (real DB has 1x), and lab rows are not visibly tied to a patient id.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-106": {
+    "verdict": "gold_wrong",
+    "reason": "A card with NULL subtypes is not 'Angel' and should count; gold's subtypes != 'Angel' (three-valued logic) excludes NULL (0), Pred's IS NULL OR != 'Angel' correctly counts it (1).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-132": {
+    "verdict": "ambiguous",
+    "reason": "Two Food budgets tie at max amount=150 (remaining 28.86 and 150.0).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-133": {
+    "verdict": "ambiguous",
+    "reason": "The three members belong to three different colleges each with count 1 (tied).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-078": {
+    "verdict": "pred_wrong",
+    "reason": "The only closed school (San Joaquin, Golden Valley) has ClosedDate=NULL; gold lists it with NULL date, but Pred's ClosedDate IS NOT NULL filter wrongly excludes it.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-011": {
+    "verdict": "gold_wrong",
+    "reason": "Behcet diagnosis is in Patient.Diagnosis ('BEHCET' for patient 1); gold wrongly filters Examination.Diagnosis (no Behcet rows, count 0), while Pred correctly uses Patient.Diagnosis and counts 4.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-041": {
+    "verdict": "ambiguous",
+    "reason": "Italy Serie A and England Premier League tie at total goals (2 each, including an implausible away_goal=-1).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-145": {
+    "verdict": "ambiguous",
+    "reason": "There are 6 Demi-God superheroes; 'at least five' is satisfied by gold's 6 rows and Pred's LIMIT 5.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-144": {
+    "verdict": "implausible_data",
+    "reason": "A12/A13 hold year-like values 1995.0/1996.0 (unemployment rates, occur 0x), making AVG(A12)≈AVG(A13) a tie on which gold/pred return different years.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-100": {
+    "verdict": "gold_wrong",
+    "reason": "The witness atom_id 'ABCDE21' is only 7 chars; evidence defines position 7-8, but gold uses SUBSTR(atom_id,-2)='21' which matches while Pred's SUBSTR(...,7,2)='1' does not.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-136": {
+    "verdict": "gold_wrong",
+    "reason": "The only player with potential=61 (Atiba Hutchinson) has balance NULL, so there is no highest balance; gold's ORDER BY ... LIMIT 1 returns him while Pred's balance=MAX(NULL) correctly returns empty.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-141": {
+    "verdict": "implausible_data",
+    "reason": "All atom/connected ids are 2147483648/9 (occur 0x) with element NULL/2147483648; gold joins only atom_id while Pred joins both sides.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-039": {
+    "verdict": "ambiguous",
+    "reason": "No 'Singapore Grand Prix' race exists in the witness; empty vs None are equivalent no-result.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-102": {
+    "verdict": "ambiguous",
+    "reason": "The witness has no Lewis Hamilton (only Luca Badoer); empty vs None are equivalent.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-146": {
+    "verdict": "gold_wrong",
+    "reason": "Two different bonds connect the same atom pair TR004_8 and TR004_20; gold checks both orientations returning ['-','='] while Pred checks only the forward orientation returning ['-'].",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-143": {
+    "verdict": "gold_wrong",
+    "reason": "No rows match statusId=2 in raceId 50-100, so the count is 0; gold's SUM over empty returns None while Pred's COUNT=0.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-050": {
+    "verdict": "gold_wrong",
+    "reason": "No card matches hasFoil=0 AND duelDeck='a' (only card has duelDeck NULL, hasFoil=1), so count=0; gold's SUM over empty returns None while Pred's COUNT=0.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-060": {
+    "verdict": "ambiguous",
+    "reason": "All four German drivers born 1980 tie at average pit-stop 20.567, so gold and Pred return different top-3 subsets.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-067": {
+    "verdict": "ambiguous",
+    "reason": "Two majors each have one member (tied); all ids are 2147483648/9 (occur 0x).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-121": {
+    "verdict": "pred_wrong",
+    "reason": "The percentage is over distinct Brazil-translated sets (k1, k2); gold counts distinct sets (1/2=50%) while Pred's JOIN duplicates the two k1 translation rows, inflating denominator to 3 (33.3%).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-004": {
+    "verdict": "gold_wrong",
+    "reason": "The bond connects v1001 (element A) and v1044 (element a); gold's one-sided join returns A twice while Pred checks both sides returning A and a.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-017": {
+    "verdict": "implausible_data",
+    "reason": "results.time values are dates ('2000-01-01' etc.) not lap durations and other values are fabricated; gold returns None while Pred's time parsing yields an absurd negative percentage.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-122": {
+    "verdict": "ambiguous",
+    "reason": "Accounts 1 and 24 both have amount=1 (tied lowest), duration>24 and date<1997.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-095": {
+    "verdict": "implausible_data",
+    "reason": "Two patients share First Date 1991-06-13 + SJS (real DB 1x); gold's scalar subquery matches 2 labs while Pred's JOIN matches both patients' 4 labs.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-034": {
+    "verdict": "implausible_data",
+    "reason": "alignment id=3's text is 'N/A' in the witness but 'Neutral' in the real DB; gold's text filter fails (None) while Pred's id filter alignment_id=3 averages value 0.",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-140": {
+    "verdict": "ambiguous",
+    "reason": "Three players tie at max overall_rating=78 (Paulinho, Ross Wallace, Moussa Sow).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   },
+   "R3-061": {
+    "verdict": "ambiguous",
+    "reason": "Districts 2 and 18 tie for second-highest A15=1740; gold picks district 18 (1 male) while Pred picks district 2 (0 males).",
+    "exact_changed": true,
+    "content_changed": false,
+    "content_diff": []
+   }
+  },
+  "exact_changed": 150,
+  "content_changed": [],
+  "header_body_changed": true
+ }
+}

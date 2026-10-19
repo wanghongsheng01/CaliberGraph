@@ -167,6 +167,54 @@ for st, tier in ((1, 'Onef'), (2, 'R')):
     M[f'humErrPct{tier}'] = pct(err, agreed)
     M[f'ptsHum{tier}Min'] = f"{_v(f'ptsCount{tier}Min') * err / agreed:.1f}"
     M[f'ptsHum{tier}Max'] = f"{_v(f'ptsCount{tier}Max') * err / agreed:.1f}"
+# round 3 (docs/en/17c): three annotators, human majority
+h3 = json.load(open(os.path.join(R, 's3a_human_r3.json')))
+M['hvThreeN'] = h3['n_items']
+M['hvThreeFleissFive'], M['hvThreeFleissBin'] = f2(h3['M_R3_1']['fleiss5']), f2(h3['M_R3_1']['fleiss2'])
+M['hvThreeFleissBinLo'], M['hvThreeFleissBinHi'] = (f2(x) for x in h3['M_R3_1']['fleiss2_ci'])
+M['hvThreeMaj'], M['hvThreeNoMaj'], M['hvThreeUnan'] = h3['M_R3_2']['with_majority'], h3['M_R3_2']['no_majority'], h3['M_R3_2']['unanimous']
+M['hvThreeKappaAIfive'], M['hvThreeKappaAIbin'] = f2(h3['M_R3_3']['kappa5']), f2(h3['M_R3_3']['kappa2'])
+M['hvThreeKappaAIbinLo'], M['hvThreeKappaAIbinHi'] = (f2(x) for x in h3['M_R3_3']['kappa2_ci'])
+hy = h3['hypotheses']
+M['hvThreeImpOne'], M['hvThreeMajOne'] = hy['H-R3-3']['stage1']
+M['hvThreeImpTwo'], M['hvThreeMajTwo'] = hy['H-R3-3']['stage2']
+M['hvThreePThree'] = f"{hy['H-R3-3']['p_one_sided']:.4f}"
+M['hvThreeErrHumTwo'], M['hvThreeErrAITwo'] = hy['H-R3-4']['majority_pred_error'], hy['H-R3-4']['ai_pred_error']
+M['hvThreePFour'] = f"{hy['H-R3-4']['p_two_sided']:.4f}"
+M['hvThreeKappaBCbin'] = f2(h3['sensitivity_without_A']['kappa2_B_C'])
+M['hvThreeImpAI'] = h3['labels']['ai'].get('implausible_data', 0)
+M['hvThreeImpA'], M['hvThreeImpB'], M['hvThreeImpC'] = (h3['labels'][w].get('implausible_data', 0) for w in 'ABC')
+for st, tier in ((1, 'Onef'), (2, 'R')):
+    sh = h3['M_R3_4'][f'stage{st}']
+    hm, am = sh['majority']['pred_error'], sh['ai']['pred_error']
+    M[f'humThreeErrPct{tier}'] = f"{100 * hm['share']:.0f}"
+    M[f'humThreeErrPct{tier}Lo'], M[f'humThreeErrPct{tier}Hi'] = (f"{100 * x:.0f}" for x in hm['ci'])
+    M[f'aiThreeErrPct{tier}'] = f"{100 * am['share']:.0f}"
+    M[f'aiThreeErrPct{tier}Lo'], M[f'aiThreeErrPct{tier}Hi'] = (f"{100 * x:.0f}" for x in am['ci'])
+    for nm, share in (('ptsHumThree', hm['share']), ('ptsAIThree', am['share'])):
+        M[f'{nm}{tier}Min'] = f"{_v(f'ptsCount{tier}Min') * share:.1f}"
+        M[f'{nm}{tier}Max'] = f"{_v(f'ptsCount{tier}Max') * share:.1f}"
+    M[f'ptsHumThree{tier}MinLo'] = f"{_v(f'ptsCount{tier}Min') * hm['ci'][0]:.1f}"
+    M[f'ptsHumThree{tier}MaxHi'] = f"{_v(f'ptsCount{tier}Max') * hm['ci'][1]:.1f}"
+# SpotIt re-run (docs/en/17d)
+sg = json.load(open(os.path.join(R, 'spotit', 's3g_spotit.json')))
+rr = sg['counts']['SpotIt (re-run)']
+M['srClaims'] = f"{sg['counts']['SpotIt (re-run claims)']:,}"
+M['srLzero'], M['srLonef'], M['srRq'], M['srR'] = rr['L0'], rr['L1f'], rr['Rq'], rr['R']
+for t in sg['tests']:
+    nm = 'srOne' if t['label'] == 'H-SP1' else 'srTwo'
+    M[nm + 'Diff'] = f"{t['diff']:+,}"
+    M[nm + 'CI'] = f"[{t['ci95'][0]:+,}, {t['ci95'][1]:+,}]"
+    M[nm + 'CGonly'], M[nm + 'SIonly'] = f"{t['cg_only']:,}", t['spotit_only']
+ag = sg['agreement']
+M['srAgreeDev'] = pct(*ag['dev']['agree_over_decided'])
+M['srAgreeTest'] = pct(*ag['test']['agree_over_decided'])
+M['srRefoundTest'], M['srRelCETest'] = f"{ag['test']['released_ce_found_again'][0]:,}", f"{ag['test']['released_ce_found_again'][1]:,}"
+M['srRefoundPct'] = pct(*ag['test']['released_ce_found_again'])
+dt = sg['describe']['test']
+M['srKilledPct'] = pct(dt['killed'], dt['n'])
+M['srErr'] = dt['verdicts'].get('error', 0)
+M['srMedCE'] = f"{dt['time_to_ce']['median']:.1f}"
 fam = json.load(open(os.path.join(R, 's3f_family.json')))
 
 

@@ -1,7 +1,7 @@
 % ICDE: pre-registered hypotheses and outcomes; numbers are macros from numbers.tex / numbers_icde.tex
 \begin{table}[t]
 \centering\scriptsize
-\caption{Pre-registered hypotheses and outcomes on the test pairs. $\Delta$: difference in pairs (H6: estimated meaningful witnesses) with 95\,\% CI from a bootstrap over questions; $p$: exact McNemar (H1--H5), Holm-adjusted within H1--H3 and (post hoc) across the four H4 components; one-sided bootstrap over questions for H6--H7. Stage~3: one-sided tests, Holm-adjusted over its eight tests (C1 and C2 share a row; C2: \V{arcApct} vs.\ \V{arcANpct}\,\%, adjusted $p$ \V{holmCTwo}); R2 was pre-registered separately and is not adjusted; $\kappa_2$: Cohen's $\kappa$ on implausible vs.\ other.}\label{tab:hypotheses}
+\caption{Pre-registered hypotheses and outcomes on the test pairs. $\Delta$: difference in pairs (H6: estimated meaningful witnesses) with 95\,\% CI from a bootstrap over questions; $p$: exact McNemar (H1--H5), Holm-adjusted within H1--H3 and (post hoc) across the four H4 components; one-sided bootstrap over questions for H6--H7. Stage~3: one-sided tests, Holm-adjusted over its eight tests (C1 and C2 share a row; C2: \V{arcApct} vs.\ \V{arcANpct}\,\%, adjusted $p$ \V{holmCTwo}); R2 and R3 were pre-registered separately and are not adjusted; SP1--SP2 were pre-registered separately and are Holm-adjusted together; $\kappa_2$: Cohen's $\kappa$ on implausible vs.\ other.}\label{tab:hypotheses}
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}l p{27mm} l l c@{}}
 \toprule
@@ -27,6 +27,12 @@ S1 & Spider: CG-R vs fuzzing-R at $\mathcal A_R$ & \V{spRCG} vs \V{spRFZ} & \V{h
 S2 & Spider: implausible, CG-R vs CG & \V{spImpCGR} vs \V{spImpCG} of 60 & \V{holmSTwo} & no\\
 S3 & Spider: est.\ meaningful, CG-R vs fuzzing-R & \V{spEstCGR} vs \V{spEstFZR} & \V{holmSThree} & rev.\\
 E1 & 13 new BIRD systems: CG-R vs fuzzing-R & \V{mdDiff} [\V{mdLo}, \V{mdHi}] & \V{holmEOne} & yes\\
+R3-1 & three humans agree (Fleiss) & $\kappa_2$ \V{hvThreeFleissBin} & & no\\
+R3-2 & \quad majority vs AI & $\kappa_2$ \V{hvThreeKappaAIbin} & & no\\
+R3-3 & \quad majority: tier gap & \V{hvThreeImpOne}/\V{hvThreeMajOne} vs \V{hvThreeImpTwo}/\V{hvThreeMajTwo} & \V{hvThreePThree} & yes\\
+R3-4 & \quad pred.\ errors at $\mathcal A_R$, majority vs AI & \V{hvThreeErrHumTwo} vs \V{hvThreeErrAITwo} of \V{hvThreeMajTwo} & \V{hvThreePFour} & yes\\
+SP1 & CG vs SpotIt re-run, $\mathcal A_{1f}$ & \V{srOneDiff} \V{srOneCI} & $<10^{-10}$ & yes\\
+SP2 & \quad at $\mathcal A_0$ & \V{srTwoDiff} \V{srTwoCI} & $<10^{-10}$ & yes\\
 \bottomrule
 \end{tabular}
 \end{table}

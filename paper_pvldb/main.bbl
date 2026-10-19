@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{53}
+\begin{thebibliography}{52}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -607,19 +607,6 @@
 \urldef\tempurl%
 \url{https://doi.org/10.1109/ICDE65706.2026.00196}
 \showDOI{\tempurl}
-
-
-\bibitem[\protect\citeauthoryear{Ni, Zhang, Miao, Zhao, Wu, Wang, and Yin}{Ni
-  et~al\mbox{.}}{2025}]%
-        {ni2025zeroed}
-\bibfield{author}{\bibinfo{person}{Wei Ni}, \bibinfo{person}{Kaihang Zhang},
-  \bibinfo{person}{Xiaoye Miao}, \bibinfo{person}{Xiangyu Zhao},
-  \bibinfo{person}{Yangyang Wu}, \bibinfo{person}{Yaoshu Wang}, {and}
-  \bibinfo{person}{Jianwei Yin}.} \bibinfo{year}{2025}\natexlab{}.
-\newblock \showarticletitle{{ZeroED}: Hybrid Zero-Shot Error Detection with
-  Large Language Model Reasoning}. In \bibinfo{booktitle}{\emph{Proceedings of
-  the IEEE 41st International Conference on Data Engineering (ICDE)}}.
-\newblock
 
 
 \bibitem[\protect\citeauthoryear{Papenbrock, Kruse, Quian{\'e}-Ruiz, and
