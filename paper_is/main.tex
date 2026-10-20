@@ -4,7 +4,7 @@
 \usepackage{libertine}
 \usepackage[libertine]{newtxmath}
 \usepackage[varqu]{zi4}
-\usepackage{booktabs,array,tabularx,multirow,rotating}
+\usepackage{booktabs,array,tabularx,multirow,xltabular}
 \usepackage{graphicx,xcolor,url,xspace}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
@@ -55,7 +55,7 @@
 \input{sections/abstract}
 
 \begin{keyword}
-Text-to-SQL evaluation \sep SQL query equivalence \sep test database generation \sep data profiling \sep counterexample certification \sep benchmark reliability \sep pre-registration
+Text-to-SQL evaluation \sep SQL query equivalence \sep test database generation \sep data profiling \sep counterexample certification \sep benchmark reliability
 \end{keyword}
 \end{frontmatter}
 
@@ -75,16 +75,20 @@ Text-to-SQL evaluation \sep SQL query equivalence \sep test database generation 
 All code, data, raw outputs, witness databases with certifier reports, AI and human annotations (every sheet as returned, with its key), the pre-registrations with their amendment log and freeze hashes, and the scripts that regenerate every number, table and figure are publicly available at \artifacturl{} under the Apache License 2.0 for our code and generated data. Material derived from BIRD and Spider is shared under CC BY-SA 4.0; third-party predictions and tools are used under their licences, listed in \texttt{THIRD\_PARTY\_NOTICES.md}. The BIRD and Spider databases themselves and the SpotIt/VeriEQL code are not redistributed.
 
 \section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
-During the preparation of this work the authors used Claude Opus~5.5 (Anthropic) to draft and edit the manuscript text. The use of AI models in the research itself (study design, implementation, experiments and annotation) is described in Section~\ref{sec:aiuse}. After using this tool, the authors reviewed and edited the content as needed and take full responsibility for the content of the published article.
+During the preparation of this work the authors used Claude Opus~5.5 (Anthropic) to draft and edit the manuscript text. The use of AI models in the research itself is described in Section~\ref{sec:aiuse}. After using this tool, the authors reviewed and edited the content as needed and take full responsibility for the content of the published article.
 
 \section*{CRediT authorship contribution statement}
-\textbf{Hongsheng Wang:} Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Resources, Data curation, Writing -- original draft, Writing -- review \& editing, Project administration. The software, the analyses and the original draft were produced with an AI model under the author's direction and responsibility, as described in Section~\ref{sec:aiuse}. \textbf{Dazhen Deng:} Supervision, Writing -- review \& editing.
+\textbf{Hongsheng Wang:} Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Resources, Data curation, Writing -- original draft, Writing -- review \& editing, Project administration. The software, the experiments, the analyses and the original draft were produced with an AI model under Hongsheng Wang's direction and responsibility (Section~\ref{sec:aiuse}). \textbf{Dazhen Deng:} Supervision, Writing -- review \& editing.
+
 
 \section*{Funding}
 This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
 
+\section*{Ethics statement}
+The three human annotation rounds (Section~\ref{sec:attrresults}) involved five adult volunteers: two annotators in rounds~1 and~2 and three different annotators in round~3. All five are colleagues of the first author at Loctek Ergonomic Technology Corp.; none of them took part in designing the study, the tools or the hypotheses. They labeled published benchmark material, namely questions and SQL queries from BIRD and witness databases derived from the BIRD schema and data. The study involved no intervention, no sensitive information and no identifiable personal data, and it was exempt from ethics review. All annotators gave oral informed consent after being told the purpose of the study and that participation was voluntary and unpaid. We recorded only the annotators' professions; the released annotation sheets identify them by letters or numbers only.
+
 \section*{Declaration of competing interest}
-The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper. Hongsheng Wang is also affiliated with Loctek Ergonomic Technology Corp., whose employees volunteered as human annotators (see the Ethics statement).
 
 \section*{Acknowledgements}
 We thank the human annotators, who volunteered their time.

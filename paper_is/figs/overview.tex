@@ -11,15 +11,15 @@
 \node[box,below=4mm of iso] (ev) {\textbf{Search loop}: SQLite evaluation in a savepoint; mutation};
 \node[box,dashed,right=3mm of ev] (rs) {\textbf{Real sub-databases} (CaliberGraph-R): anchored retrieval, join completion, real growth from $D_0$, $\Pi$};
 \node[cert,below=5mm of ev] (ce) {\textbf{Independent certifier}: original DDL + SQL; contracts; tiers $\mathcal A_0$--$\mathcal A_2$, $\mathcal A_R$};
-\node[io,right=3mm of ce] (out) {certified witness, or none within budget};
+\node[io,right=11mm of ce] (out) {certified witness, or none within budget};
 \draw[->] (in)--(an);
 \draw[->] (an)--(jg);
 \draw[->] (jg)--(iso);
 \draw[->] (iso)--(ev);
 \draw[->,dashed] (rs)--(ev);
 \draw[->] (ev)-- node[right,font=\scriptsize]{results differ} (ce);
-\draw[->] (ce)-- node[below,font=\scriptsize]{acc.} (out);
-\draw[->,dashed] (ce.west) -- ++(-2mm,0) |- node[pos=0.25,left,font=\scriptsize,align=right]{rej.} (ev.west);
+\draw[->] (ce)-- node[above,font=\scriptsize]{accept} (out);
+\draw[->,dashed] (ce.west) -- ++(-2mm,0) |- node[pos=0.25,left,font=\scriptsize,align=right]{reject} (ev.west);
 \end{tikzpicture}
 \caption{CaliberGraph pipeline. Candidates built from join-graph probes are evaluated by SQLite; a candidate that separates the queries is returned only if the independent certifier accepts it at the target tier. CaliberGraph-R (dashed) first searches real sub-databases of the benchmark database.}
 \label{fig:overview}

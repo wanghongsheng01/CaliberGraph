@@ -47,7 +47,7 @@ def dumbbell(S, out):
 def cdf(S, out):
     tt = S['time_to_witness']
     bins = [0.01, 0.03, 0.1, 0.3, 1, 2, 3, 4, 5]
-    fig, ax = plt.subplots(figsize=(3.45, 2.15) if COLUMN else (4.2, 2.6))
+    fig, ax = plt.subplots(figsize=(3.45, 2.5) if COLUMN else (4.2, 2.9))
     for name, col in (('CaliberGraph', BLUE), ('ParSEval-L1', ORANGE), ('Random fuzzing', AQUA)):
         if name in tt:
             ax.plot(bins, tt[name]['curve'], color=col, lw=2, marker='o', ms=4, label=name)
@@ -57,9 +57,11 @@ def cdf(S, out):
     ax.set_ylabel('Distinct pairs with witness' if COLUMN else 'Certified witnesses found')
     ax.grid(color=GRID, lw=0.6)
     ax.set_axisbelow(True)
-    ax.legend(frameon=False, fontsize=7.5, loc='lower right' if COLUMN else 'upper left')
+    # legend below the axes, so that it covers no curve
+    ax.legend(frameon=False, fontsize=7.5, loc='upper center', bbox_to_anchor=(0.5, -0.32), ncol=3,
+              handlelength=1.5, columnspacing=1.0)
     fig.tight_layout()
-    fig.savefig(os.path.join(out, 'time_to_witness.pdf'))
+    fig.savefig(os.path.join(out, 'time_to_witness.pdf'), bbox_inches='tight')
     plt.close(fig)
 
 

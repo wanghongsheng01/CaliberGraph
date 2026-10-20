@@ -109,6 +109,13 @@ L.~Sheng, S.-S. Xu, {SLM-SQL}: An exploration of small language models for
 \newblock \href {https://doi.org/10.18653/v1/2025.findings-ijcnlp.92}
   {\path{doi:10.18653/v1/2025.findings-ijcnlp.92}}.
 
+\bibitem{demoura2008z3}
+L.~de~Moura, N.~Bj{\o}rner, {Z3}: An efficient {SMT} solver, in: Tools and
+  Algorithms for the Construction and Analysis of Systems ({TACAS}), Lecture
+  Notes in Computer Science, Springer, Berlin, Heidelberg, 2008, pp. 337--340.
+\newblock \href {https://doi.org/10.1007/978-3-540-78800-3_24}
+  {\path{doi:10.1007/978-3-540-78800-3_24}}.
+
 \bibitem{ding2023sqlsolver}
 H.~Ding, Z.~Wang, Y.~Yang, D.~Zhang, Z.~Xu, H.~Chen, R.~Piskac, J.~Li, Proving
   query equivalence using linear integer arithmetic, Proceedings of the ACM on
@@ -151,6 +158,14 @@ H.~Kim, T.~Jeon, S.~Choi, S.~Choi, H.~Cho, {FLEX}: Expert-level false-less
 \newblock \href {https://doi.org/10.18653/v1/2025.naacl-long.228}
   {\path{doi:10.18653/v1/2025.naacl-long.228}}.
 
+\bibitem{sqlglot}
+{SQLGlot}: {SQL} parser, transpiler, and optimizer for {Python},
+  \url{https://github.com/tobymao/sqlglot}, version 30.22.0, MIT License,
+  accessed October 2026 (2026).
+
+\bibitem{sqlite}
+{SQLite}, \url{https://www.sqlite.org}, version 3.45 (2024).
+
 \bibitem{gao2024dailsql}
 D.~Gao, H.~Wang, Y.~Li, X.~Sun, Y.~Qian, B.~Ding, J.~Zhou, Text-to-{SQL}
   empowered by large language models: A benchmark evaluation, Proceedings of
@@ -171,19 +186,29 @@ M.~Pourreza, D.~Rafiei, {DIN-SQL}: Decomposed in-context learning of
   text-to-{SQL} with self-correction, in: Advances in Neural Information
   Processing Systems (NeurIPS), 2023.
 
+\bibitem{birdminidev}
+{BIRD Mini-Dev}, \url{https://github.com/bird-bench/mini_dev}, commit abd11b6,
+  directory \texttt{llm/exp\_result}, CC BY-SA 4.0, accessed October 2026
+  (2026).
+
 \bibitem{fan2011cfd}
 W.~Fan, F.~Geerts, J.~Li, M.~Xiong, Discovering conditional functional
   dependencies, IEEE Transactions on Knowledge and Data Engineering 23~(5)
   (2011) 683--698.
+\newblock \href {https://doi.org/10.1109/TKDE.2010.154}
+  {\path{doi:10.1109/TKDE.2010.154}}.
 
 \bibitem{chu2013dc}
 X.~Chu, I.~F. Ilyas, P.~Papotti, Discovering denial constraints, Proceedings of
   the VLDB Endowment 6~(13) (2013) 1498--1509.
+\newblock \href {https://doi.org/10.14778/2536258.2536262}
+  {\path{doi:10.14778/2536258.2536262}}.
 
 \bibitem{malekpour2026sqlmorph}
 M.~Malekpour, M.~Riahi, M.~Lamothe, A.~Mhedhbi, {SQLMorph}: Query mutation and
   fine-grained metrics for text-to-{SQL} evaluation, in: Proceedings of the
-  IEEE 42nd International Conference on Data Engineering (ICDE), 2026.
+  IEEE 42nd International Conference on Data Engineering (ICDE), 2026, pp.
+  2628--2640.
 \newblock \href {https://doi.org/10.1109/ICDE65706.2026.00196}
   {\path{doi:10.1109/ICDE65706.2026.00196}}.
 
@@ -205,7 +230,8 @@ T.~Pham, T.~T. Nguyen, V.~Huynh, H.~Yin, Q.~V.~H. Nguyen, An efficient and
 \bibitem{fan2025cyclesql}
 Y.~Fan, T.~Ren, C.~Huang, Z.~He, X.~S. Wang, Grounding natural language to
   {SQL} translation with data-based self-explanations, in: Proceedings of the
-  IEEE 41st International Conference on Data Engineering (ICDE), 2025.
+  IEEE 41st International Conference on Data Engineering (ICDE), 2025, pp.
+  29--42.
 \newblock \href {https://doi.org/10.1109/ICDE65448.2025.00010}
   {\path{doi:10.1109/ICDE65448.2025.00010}}.
 
@@ -288,11 +314,15 @@ S.~Cohen, Few rows tell them apart: Equivalence of queries mixing set and bag
 A.~V. Aho, Y.~Sagiv, J.~D. Ullman, Efficient optimization of a class of
   relational expressions, ACM Transactions on Database Systems 4~(4) (1979)
   435--454.
+\newblock \href {https://doi.org/10.1145/320107.320112}
+  {\path{doi:10.1145/320107.320112}}.
 
 \bibitem{johnson1984containment}
 D.~S. Johnson, A.~Klug, Testing containment of conjunctive queries under
   functional and inclusion dependencies, Journal of Computer and System
-  Sciences 28 (1984) 167--189.
+  Sciences 28~(1) (1984) 167--189.
+\newblock \href {https://doi.org/10.1016/0022-0000(84)90081-3}
+  {\path{doi:10.1016/0022-0000(84)90081-3}}.
 
 \bibitem{binnig2007qagen}
 C.~Binnig, D.~Kossmann, E.~Lo, M.~T. {\"O}zsu, {QAGen}: Generating query-aware
@@ -319,6 +349,8 @@ C.~Chen, Z.~Miao, Y.~Zhang, J.~Wang, {ParSEval}: Interactive
 A.~Arasu, R.~Kaushik, J.~Li, Data generation using declarative constraints, in:
   Proceedings of the ACM SIGMOD International Conference on Management of Data,
   2011, pp. 685--696.
+\newblock \href {https://doi.org/10.1145/1989323.1989395}
+  {\path{doi:10.1145/1989323.1989395}}.
 
 \bibitem{li2018touchstone}
 Y.~Li, R.~Zhang, X.~Yang, Z.~Zhang, A.~Zhou, Touchstone: Generating enormous
@@ -328,9 +360,21 @@ Y.~Li, R.~Zhang, X.~Yang, Z.~Zhang, A.~Zhou, Touchstone: Generating enormous
 \bibitem{yang2022sam}
 J.~Yang, P.~Wu, G.~Cong, T.~Zhang, X.~He, {SAM}: Database generation from query
   workloads with supervised autoregressive models, in: Proceedings of the ACM
-  SIGMOD International Conference on Management of Data, 2022.
+  SIGMOD International Conference on Management of Data, 2022, pp. 1542--1555.
 \newblock \href {https://doi.org/10.1145/3514221.3526168}
   {\path{doi:10.1145/3514221.3526168}}.
+
+\bibitem{miao2019ratest}
+Z.~Miao, S.~Roy, J.~Yang, Explaining wrong queries using small examples, in:
+  Proceedings of the 2019 International Conference on Management of Data
+  ({SIGMOD}), ACM, 2019, pp. 503--520.
+\newblock \href {https://doi.org/10.1145/3299869.3319866}
+  {\path{doi:10.1145/3299869.3319866}}.
+
+\bibitem{jailer}
+Jailer: Database subsetting and relational data browsing tool,
+  \url{https://github.com/Wisser/Jailer}, open-source software, Apache License
+  2.0, accessed 20 October 2026 (2026).
 
 \bibitem{tuya2016reduction}
 J.~Tuya, C.~de~la Riva, M.~J. Su{\'a}rez-Cabal, R.~Blanco, Coverage-aware test
@@ -343,16 +387,22 @@ J.~Tuya, C.~de~la Riva, M.~J. Su{\'a}rez-Cabal, R.~Blanco, Coverage-aware test
 T.~Papenbrock, F.~Naumann, A hybrid approach to functional dependency
   discovery, in: Proceedings of the ACM SIGMOD International Conference on
   Management of Data, 2016, pp. 821--833.
+\newblock \href {https://doi.org/10.1145/2882903.2915203}
+  {\path{doi:10.1145/2882903.2915203}}.
 
 \bibitem{papenbrock2015binder}
 T.~Papenbrock, S.~Kruse, J.-A. Quian{\'e}-Ruiz, F.~Naumann, Divide \&
   conquer-based inclusion dependency discovery, Proceedings of the VLDB
   Endowment 8~(7) (2015) 774--785.
+\newblock \href {https://doi.org/10.14778/2752939.2752946}
+  {\path{doi:10.14778/2752939.2752946}}.
 
 \bibitem{ni2025zeroed}
 W.~Ni, K.~Zhang, X.~Miao, X.~Zhao, Y.~Wu, Y.~Wang, J.~Yin, {ZeroED}: Hybrid
-  zero-shot error detection with large language model reasoning, in:
+  zero-shot error detection through large language model reasoning, in:
   Proceedings of the IEEE 41st International Conference on Data Engineering
-  (ICDE), 2025.
+  (ICDE), 2025, pp. 3126--3139.
+\newblock \href {https://doi.org/10.1109/ICDE65448.2025.00234}
+  {\path{doi:10.1109/ICDE65448.2025.00234}}.
 
 \end{thebibliography}

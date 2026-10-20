@@ -16,12 +16,12 @@ N.\ Eredivisie & 3 & 10\\
 N.\ Eredivisie & \textcolor{red}{\texttt{NULL}} & 10\\
 \bottomrule
 \end{tabular}\\[2pt]
-$Q_g\mapsto 23$, \ $Q_p\mapsto 13$: \emph{non-equivalent}. Found by CaliberGraph (0.2\,s), random fuzzing and ParSEval; satisfies the DDL, types and formats.
+$Q_g\mapsto 23$, \ $Q_p\mapsto 13$: \emph{non-equivalent}. Found by CaliberGraph in 0.2\,s, and by random fuzzing and ParSEval. It satisfies the DDL, types and formats.
 \end{minipage}\hfill
 \begin{minipage}[t]{0.47\linewidth}\raggedright
 \textbf{(b) Against the data profile}\\[1pt]
-In BIRD, \texttt{home\_team\_goal} is \texttt{NULL} in \textbf{0 of 25,979} matches. On \texttt{NULL}-free data $\textsc{sum}(a){+}\textsc{sum}(b)=\textsc{sum}(a{+}b)$ for every group, so the queries compute the same totals; CaliberGraph-R and fuzzing-R find no $\mathcal A_R$ witness. Both annotation passes: \emph{implausible data}.
+In BIRD, \texttt{home\_team\_goal} is \texttt{NULL} in \textbf{0 of 25,979} matches. On \texttt{NULL}-free data, $\textsc{sum}(a){+}\textsc{sum}(b)=\textsc{sum}(a{+}b)$ for every group, so the queries compute the same totals. CaliberGraph-R and fuzzing-R find no $\mathcal A_R$ witness. Both annotation passes label it \emph{implausible data}.
 \end{minipage}
 \end{minipage}}
-\caption{A certified counterexample that says little about the question. Under DDL- and format-derived admissibility, three tools ``disprove'' an accepted prediction; the difference needs a played match without a goal count, which never occurs in BIRD. By the AI attribution, \V{attrImplMin}--\V{attrImplMax}\,\% of the sampled witnesses of every tool rest on such data (round-3 human majority: \V{hvThreeImpOne} of \V{hvThreeMajOne} schema-tier witnesses).}\label{fig:example}
+\caption{A certified counterexample that says little about the question. Under DDL- and format-derived admissibility, three tools ``disprove'' an accepted prediction. The difference requires a played match without a goal count, which never occurs in BIRD. By the AI attribution, \V{attrImplMin}--\V{attrImplMax}\,\% of the sampled witnesses of every tool rest on such data (round-3 human majority: \V{hvThreeImpOne} of \V{hvThreeMajOne} schema-tier witnesses).}\label{fig:example}
 \end{figure}
