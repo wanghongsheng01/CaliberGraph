@@ -45,7 +45,7 @@ def main(out):
         shutil.copy2(src, dst)
         total += os.path.getsize(src)
     for name, dst in (('release/README.md', 'README.md'), ('release/THIRD_PARTY_NOTICES.md', 'THIRD_PARTY_NOTICES.md'), ('release/requirements.txt', 'requirements.txt'),
-                      ('release/LICENSE', 'LICENSE'), ('release/AI_USE.md', 'AI_USE.md')):
+                      ('release/LICENSE', 'LICENSE'), ('release/AI_USE.md', 'AI_USE.md'), ('release/.zenodo.json', '.zenodo.json')):
         src = os.path.join(ROOT, name)
         if os.path.exists(src):
             shutil.copy2(src, os.path.join(out, dst))

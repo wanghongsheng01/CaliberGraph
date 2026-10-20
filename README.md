@@ -28,7 +28,7 @@ The repository contains:
 | `spider/`, `minidev/`, `spider_smoke/` | Stage-3 data roots: `data/` (pairs, EX labels, mined profiles; databases and code copies are rebuilt, not stored) and `results/` (raw outputs). Each root runs byte-identical copies of the frozen `src/` and `src_r/`. |
 | `results/stage3/` | Stage-3 outputs: annotation batches and passes, summaries; `results/audit/human_validation*/` holds the three human rounds (sheets as received, keys included) |
 | `paper_is/` | LaTeX sources of the manuscript submitted to *Information Systems* (Elsevier `elsarticle`). `numbers*.tex` and `tables/` are generated. |
-| `paper_pvldb/` | Earlier version of the same paper in the PVLDB template (not submitted); kept because the generator scripts write there first. |
+| `paper_pvldb/` | Earlier version of the same paper in the PVLDB template, prepared but never submitted. Kept for the record only; the submitted manuscript is `paper_is/`. |
 | `tools/` | `verify_freeze.py` (checks the code against the freeze hash lists) and `build_release.py` |
 
 ## Setup
@@ -57,15 +57,15 @@ python ablation_r_tests.py --summary ../results/test_r/summary_r.json --ids ../d
        "--abl=-synthesis=../results/test_r/abl_cgx_r_nosyn.jsonl" "--abl=-anchoring=../results/test_r/abl_cgx_r_noanchor.jsonl" \
        "--abl=-join completion=../results/test_r/abl_cgx_r_nojoin.jsonl"
 python profile_stats.py --out ../results/test/profile_stats.json            # needs the BIRD databases' profile only
-python make_profile_table.py ../results/test/profile_stats.json ../paper_pvldb/tables/profile_icde.tex
+python make_profile_table.py ../results/test/profile_stats.json ../paper_is/tables/profile_icde.tex
 python make_system_table.py ../results/test/summary.json ../results/test_r/summary_r.json \
-       ../results/audit/test_v4_attribution_summary.json ../paper_pvldb/tables/systems_icde.tex
-python icde_posthoc.py --out ../results/test_r/icde_posthoc.json --tex ../paper_pvldb/numbers_icde.tex   # post-hoc re-analyses
+       ../results/audit/test_v4_attribution_summary.json ../paper_is/tables/systems_icde.tex
+python icde_posthoc.py --out ../results/test_r/icde_posthoc.json --tex ../paper_is/numbers_icde.tex   # post-hoc re-analyses
 cd ../src
-python make_numbers.py --summary ../results/test/summary.json --taxonomy ../results/test/taxonomy.json --paper ../paper_pvldb \
+python make_numbers.py --summary ../results/test/summary.json --taxonomy ../results/test/taxonomy.json --paper ../paper_is \
        --summary-r ../results/test_r/summary_r.json --attr-v4 ../results/audit/test_v4_attribution_summary.json \
        --recert-r ../results/test/recert_r_counts.json --issues ../results/audit/benchmark_issues.json
-python make_figures.py --summary ../results/test/summary.json --out ../paper_pvldb/figs --column \
+python make_figures.py --summary ../results/test/summary.json --out ../paper_is/figs --column \
        --attr-v4 ../results/audit/test_v4_attribution_summary.json --summary-r ../results/test_r/summary_r.json
 ```
 
@@ -81,10 +81,11 @@ cd src_r && python run_method.py --method cgx_r --split test --subset exc --dedu
 The exact commands of every reported run (methods, ablations with `--ids ../data/test_subsample.json`, the 10 s budget) are in `results/queue_test.sh` and `results/queue_test_r.sh`. Witness search is randomised with fixed seeds, but wall-clock budgets make reruns on other hardware differ slightly; the stored outputs are the ones reported.
 
 ## Stage 3 (replication and attribution validity)
-- **Pre-registration:** `docs/en/17_stage3_preregistration.md`, with amendments E1–E13 in `docs/en/17a_stage3_amendments.md`. The second and third human rounds were pre-registered separately in `docs/en/17b_human_round2_preregistration.md` and `docs/en/17c_human_round3_preregistration.md`; the local SpotIt re-run in `docs/en/17d_spotit_rerun_preregistration.md`.
+- **Pre-registration:** `docs/en/17_stage3_preregistration.md`, with amendments E1–E20 in `docs/en/17a_stage3_amendments.md`. The second and third human rounds were pre-registered separately in `docs/en/17b_human_round2_preregistration.md` and `docs/en/17c_human_round3_preregistration.md`; the local SpotIt re-run in `docs/en/17d_spotit_rerun_preregistration.md`.
 - **Spider 1.0** (CC BY-SA 4.0) is not redistributed. Download it, then run `python src_s3/spider_build.py --spider PATH/spider --out spider --mode dev` followed by `src_s3/queue_spider.sh`; the builder re-creates the database copies, profiles and pairs. The six prediction files come from the DAIL-SQL and DIN-SQL repositories (see `THIRD_PARTY_NOTICES.md`).
 - **Mini-Dev:** `python src_s3/minidev_build.py --out minidev`, then `src_s3/queue_minidev.sh`. The root links to the BIRD data under `data/`.
-- **Analyses:** `python src_s3/s3a_human.py` (round 1) and `python src_s3/s3a_human.py results/audit/human_validation_r2 sheet_r2_annotator1.md sheet_r2_annotator2.md results/stage3/s3a_human_r2.json` (round 2); `python src_s3/hv3_check.py results/audit/human_validation_r3 results/stage3/s3a_human_r3_check.json` and `python src_s3/s3a_human_r3.py` (round 3: process check, then scoring); `s3b_score.py`, `s3c_arcwise.py`, `x1_repair.py`, `s3d_profile.py`, `s3d_analysis.py`, `s3f_family.py`, then `make_numbers_s3.py`.
+- **Analyses:** `python src_s3/s3a_human.py` (round 1) and `python src_s3/s3a_human.py results/audit/human_validation_r2 sheet_r2_annotator1.md sheet_r2_annotator2.md results/stage3/s3a_human_r2.json` (round 2); `python src_s3/hv3_check.py results/audit/human_validation_r3 results/stage3/s3a_human_r3_check.json` and `python src_s3/s3a_human_r3.py` (round 3: process check, then scoring); `s3b_score.py`, `s3c_arcwise.py`, `x1_repair.py`, `s3d_profile.py`, `s3d_analysis.py`, `s3f_family.py`, then `make_numbers_s3.py`. Three human annotation rounds are released (two annotators in rounds 1–2, three different annotators in round 3), each with its sheets as returned and its key.
+- **Post hoc analyses for the journal review (amendment E20):** `results/posthoc_rev/queue.sh` (rerun variance and the 60 s SpotIt run), then `python src_s3/rev_posthoc.py`.
 - **SpotIt re-run:** check out https://github.com/atremante26/VeriEQL at commit `66d8343f3` (CC BY-NC-SA 4.0, not redistributed here) and install Z3 4.16.0; set `SPOTIT_ROOT` and `SPOTIT_PYLIBS` as described in the header of `src_s3/spotit_run.py`; run `src_s3/queue_spotit.sh`, then `python src_s3/s3g_spotit.py --out results/stage3/spotit/s3g_spotit.json`.
 
 ## Pre-registration, freezes and deviations
@@ -92,7 +93,7 @@ The exact commands of every reported run (methods, ablations with `--ids ../data
 - **Second freeze.** Commit `676cab9`, recorded in `docs/FREEZE_R.md` and `docs/FREEZE_R_SHA256.txt`.
 - **What can be checked here.** This repository is a snapshot of the development repository; `RELEASE_INFO.txt` gives the snapshot commit.
   - The hash lists let anyone verify that the released method code is the frozen code (`tools/verify_freeze.py`).
-  - The commit history, which timestamps each amendment, is available to the program committee on request.
+  - The commit history, which timestamps each amendment, is available to the editors and reviewers on request.
 - **Analysis-only scripts changed after a freeze.** None of these is imported by a method or baseline.
 
   | Script | Changed for |

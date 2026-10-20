@@ -1,0 +1,23 @@
+{
+ "title": "CaliberGraph: artifact of 'What Do Counterexamples Prove? Certified, Data-Grounded Witnesses for Auditing Text-to-SQL Execution Accuracy'",
+ "upload_type": "software",
+ "license": "Apache-2.0",
+ "creators": [
+  {
+   "name": "Wang, Hongsheng",
+   "affiliation": "Zhejiang University; Loctek Ergonomic Technology Corp."
+  },
+  {
+   "name": "Deng, Dazhen",
+   "affiliation": "School of Software Technology, Zhejiang University"
+  }
+ ],
+ "description": "Code, data, raw outputs, witness databases, annotations, pre-registrations and amendment log of the study. See README.md and AI_USE.md.",
+ "keywords": [
+  "Text-to-SQL evaluation",
+  "SQL query equivalence",
+  "test database generation",
+  "data profiling",
+  "benchmark reliability"
+ ]
+}

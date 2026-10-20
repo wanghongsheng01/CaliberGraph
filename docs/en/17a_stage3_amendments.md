@@ -249,3 +249,40 @@ No Spider dev EX label, witness or count had been seen when these were written.
 - **Manuscript.** The manuscript was moved to the `elsarticle` template (`paper_is/`). Passages cut only to fit PVLDB's 12-page limit were restored, and the journal's front matter and declarations were added.
 - **What did not change.** No result, analysis or pre-registered rule changed.
 - **PVLDB version.** The PVLDB version (`paper_pvldb/`) is kept, unsubmitted.
+
+## E20 (2026-10-20 14:40) Post hoc analyses requested by the pre-submission review for *Information Systems*
+None of the following analyses was pre-registered. They were defined before any of their results were seen, and the paper labels them post hoc.
+1. **Rerun variance.** CaliberGraph and CaliberGraph-R are re-run on the first 500 pairs of `data/test_subsample.json`, using the same frozen code and the same 5 s budget. The re-runs are compared with the stored outputs: certified at A_1f and at A_R, and the changes in either direction.
+2. **SpotIt budget sensitivity.** SpotIt is re-run with a 60 s budget on 150 random pairs of the subsample (seed 20261020). The certified counts at A_0 and A_1f and the claims are compared with the 5 s run on the same pairs.
+3. **Entity-missing witnesses.** H6, F3 and the A_R error estimates are re-computed with empty-vs-NULL witnesses counted as not meaningful.
+4. **Leave-one-class-out profile ablation.** The stored first-stage and second-stage witnesses are re-certified with each class of the profile disabled in turn, and with the classes added cumulatively. This also extends the threshold sensitivity to the never-NULL and dependency classes.
+5. **Duplication-weighted estimates.** The estimated meaningful witnesses are re-computed with the attribution sample weighted by the number of (system, question) pairs that share each distinct pair.
+6. **Uncertainty.** Wilson intervals are added for the Spider attribution shares and for the bars of the attribution figure.
+7. **Round-3 sensitivity.** All round-3 outcomes are reported without annotator A.
+
+### E20 results (2026-10-20 15:45; `src_s3/rev_posthoc.py` → `results/posthoc_rev/rev_posthoc.json`)
+1. **Rerun variance** (500 pairs). CaliberGraph certified the same 153 pairs at A_1f, with 0 lost and 0 gained. CaliberGraph-R certified 97 of its 99 pairs at A_R, with 2 lost and 0 gained.
+   - Deviation: during both reruns, short LaTeX builds and one figure generation ran on the same 2-core machine, each taking a few CPU-seconds. This contention may explain the 2 pairs CaliberGraph-R lost.
+2. **SpotIt with a 60 s budget** (150 pairs). Compared with 5 s:
+   - budget-exhausted pairs fall from 100 to 30;
+   - claims rise from 30 to 33;
+   - certified pairs rise from 18 to 19 at A_0 and stay at 4 at A_1f;
+   - CaliberGraph certifies 47 of the same pairs.
+3. **Entity-missing witnesses counted as not meaningful.** 13 such witnesses for CaliberGraph-R, 16 for fuzzing-R.
+   - Meaningful share: 62 % for CaliberGraph-R and 65 % for fuzzing-R.
+   - Estimated meaningful witnesses: 811 against 681. The difference is 130 (95 % CI −59 to 323, one-sided p = 0.09), so H6 is not supported under this reading.
+   - Estimated prediction errors: 144 against 220.
+4. **Profile ablation on the 1,774 distinct first-stage CaliberGraph witnesses.** None passes the full profile.
+   - Leaving out one class: without the never-NULL class 24 pass, without the domain class 16 pass, and without any other class none passes.
+   - Cumulative: with the never-NULL class alone 319 pass; adding the domain class leaves none.
+   - Fuzzing and ParSEval-L1 behave similarly.
+5. **Duplication weighting.** The meaningful shares change by at most 4 points. Estimated meaningful witnesses: 978 for CaliberGraph-R against 852 for fuzzing-R.
+6. **Wilson intervals for the Spider implausible shares:**
+   - CaliberGraph: 36–61 %;
+   - CaliberGraph-R: 19–41 %;
+   - fuzzing-R: 0–9 %.
+7. **Round 3 without annotator A.**
+   - B and C agree on 72 items. Their five-label κ is 0.31 and their binary κ is 0.05.
+   - Their consensus agrees with the AI with κ2 = 0.04.
+   - Implausible: 2 of 30 first-stage items and 0 of 42 second-stage items.
+   - Prediction errors at stage 2: 14 of 42, against 9 for the AI on the same items.

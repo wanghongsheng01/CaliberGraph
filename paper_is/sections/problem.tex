@@ -1,5 +1,51 @@
 \section{Problem Definition}\label{sec:problem}
 
+This section defines witnesses, the admissibility tiers and what makes a witness meaningful. Table~\ref{tab:nomenclature} summarizes the main symbols, terms and tools used in the rest of the paper.
+
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Main symbols, terms and tools. Each entry restates the definition given in the section indicated or in Sections~\ref{sec:protocol}--\ref{sec:setup}.}\label{tab:nomenclature}
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}X@{}}
+\toprule
+Symbol or term & Definition\\
+\midrule
+$D_0$ & The benchmark database, on which EX is computed.\\
+$Q_g$, $Q_p$ & The gold query and the predicted query, or prediction.\\
+$\Pi$ & The data profile extracted from $D_0$: column domains, unique column combinations, inclusion dependencies, lookup tables and value dependencies (Section~\ref{sec:profile}).\\
+EX & Execution accuracy. A prediction counts as correct if it returns the gold query's result on $D_0$.\\
+EX-correct pair & A (prediction, gold) pair whose results on $D_0$ are equal under $\mathcal C_{\mathrm{set}}$.\\
+Known positive & An EX-incorrect prediction that executes; $D_0$ separates it, so it is non-equivalent. Used to measure recall.\\
+\midrule
+$\mathcal C_{\mathrm{set}}$ & Primary comparison contract: set equality of the two results, the test under which BIRD defines EX.\\
+$\mathcal C_{\mathrm{bag}}$ & Multiset equality of the two results.\\
+$\mathcal C_{\mathrm{len}}$ & Lenient contract: equates an empty result with one all-\texttt{NULL} row and compares numbers to nine significant digits.\\
+\midrule
+$\mathcal A_0$ & The database satisfies the declared constraints, and both queries execute.\\
+$\mathcal A_1$ & $\mathcal A_0$ with type-faithful values, non-\texttt{NULL} primary keys and non-empty referenced tables.\\
+$\mathcal A_{1f}$ & $\mathcal A_1$ with format-faithful text: values follow a lexical shape observed for their column.\\
+$\mathcal A_2$ & $\mathcal A_{1f}$ with the column-level constraints that SpotIt+ mined from the official databases and validated with an LLM, on referenced columns.\\
+$\mathcal A_{Rq}$ & The conditions of $\Pi$, checked only on columns referenced by either query.\\
+$\mathcal A_R$ & The data-profile tier: $\mathcal A_{1f}$ with every condition of $\Pi$ (Section~\ref{sec:profile}).\\
+\midrule
+Witness & A database in the tier on which the two results differ under the contract; a replayable certificate of non-equivalence.\\
+Certified & Accepted by our independent certifier, which runs the original DDL and query strings on SQLite, at the evaluated tier.\\
+Attribution & The classification of the difference a witness shows as a prediction error, a gold error, an ambiguity or implausible data (Section~\ref{sec:attribution}).\\
+Implausible & The difference arises only on data that satisfies every recorded constraint but does not occur in $D_0$ and, in the annotators' judgment, would not occur in the domain of the question.\\
+Meaningful & A witness that exposes a prediction error, a gold error or an ambiguity (Section~\ref{sec:meaningful}).\\
+\midrule
+CaliberGraph & Our SQLite-native disprover, which builds candidate databases along the join graph (Section~\ref{sec:method}).\\
+CaliberGraph-R & CaliberGraph for $\mathcal A_R$, which searches real sub-databases of $D_0$ before synthesis (Section~\ref{sec:realsearch}).\\
+CaliberGraph+SC & CaliberGraph that also uses the SpotIt+ constraints for value pools and acceptance.\\
+ParSEval-L1 & ParSEval's symbolic generator, accepting only certified databases and restarting with new seeds until the budget is spent.\\
+ParSEval-R & ParSEval with a value provider that returns observed values first, used as a baseline at $\mathcal A_R$.\\
+Fuzzing & Random fuzzing in the style of test-suite accuracy, with keys from a three-value domain.\\
+Fuzzing-R & Random fuzzing with real rows from $D_0$ or template rows, and the same data access as CaliberGraph-R.\\
+SpotIt & A bounded verifier without mined constraints; we use its released outputs and a re-run under our budget.\\
+SpotIt+ & SpotIt with LLM-validated mined constraints; we use its released outputs.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \subsection{Witnesses of non-equivalence}
 Let $\mathcal S$ be a relational schema given as SQLite DDL with declared constraints $\Sigma$: primary keys, \texttt{NOT NULL}, \texttt{UNIQUE} and foreign keys. For a query string $Q$ and a database $D$, $Q(D)$ is the list of rows SQLite returns, or an error. A \emph{comparison contract} $\mathcal C$ decides whether two results are equal. Our primary contract is $\mathcal C_{\mathrm{set}}$, defined as $\mathrm{set}(R_1)=\mathrm{set}(R_2)$, which is the test under which BIRD defines execution accuracy. We also report multiset equality $\mathcal C_{\mathrm{bag}}$ and a lenient contract $\mathcal C_{\mathrm{len}}$, which equates an empty result with one all-\texttt{NULL} row and compares numbers to nine significant digits.
 
@@ -27,6 +73,8 @@ Benchmark maintainers have the benchmark database $D_0$, and its data constrain 
 \item \emph{Value dependencies}: functional dependencies between categorical columns, one-to-one maps between identifier columns, cross-key dependencies (a child column that equals a parent column on $\ge$99.5\,\% of joined rows), and year--date agreement.
 \end{itemize}
 A witness $W$ is in $\mathcal A_R$ if every value lies in its column's domain, \texttt{NULL} occurs only in columns that contain \texttt{NULL} in $D_0$, and $W$ satisfies the dependencies and lookup contents of $\Pi$. $\mathcal A_{Rq}$ checks these conditions only on columns referenced by either query. On BIRD, mining $\Pi$ for eleven databases with 3.9\,M rows takes 258\,s on one core (Table~\ref{tab:profile}). The 66\,s for value dependencies were timed in a re-run that reproduced the frozen profile exactly.
+
+\textbf{Tiers as levels of instance knowledge.} The tiers form a ladder of how much knowledge about the benchmark instance $D_0$ they use. $\mathcal A_0$ uses only the declared schema, and $\mathcal A_1$ adds type faithfulness to the declared column types. $\mathcal A_{1f}$ adds the value formats observed in $D_0$. $\mathcal A_2$ adds column-level constraints mined from $D_0$. $\mathcal A_{Rq}$ and $\mathcal A_R$ use the full data profile $\Pi$ of $D_0$, on the referenced columns and on all columns, respectively. The distinction between schema-derived tiers and the data-profile tier is therefore one of degree: from $\mathcal A_{1f}$ on, every tier uses knowledge of $D_0$.
 
 \subsection{Meaningful witnesses}\label{sec:meaningful}
 A witness shows that two queries differ on some admissible database, not that the prediction is wrong. With respect to the question, the difference can expose a \emph{prediction error}, a \emph{gold error} or an \emph{ambiguity} of the question. Alternatively, it can arise only on \emph{implausible data}. Such data satisfies every recorded constraint but does not occur in the benchmark instance and, in the annotators' judgment, would not occur in the domain the question is about (e.g., a played match without a score). The last judgment goes beyond the instance and is made by annotators with read access to $D_0$ (Section~\ref{sec:attribution}). We call a witness \emph{meaningful} if it falls into one of the first three classes. The share of implausible witnesses measures how far a tier is from the data the questions are about. We call an EX-correct prediction with a witness a \emph{certified EX false positive}: it is certified non-equivalent. As Section~\ref{sec:attrresults} shows, this is not the same as being wrong.

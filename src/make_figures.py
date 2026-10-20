@@ -102,6 +102,18 @@ def attribution(rows, out):
             if w >= 6:
                 ax.text(left + w / 2, y, f'{w:.0f}', ha='center', va='center', fontsize=7 if COLUMN else 6.5, color=INK if col != ORANGE else 'white')
             left += w
+        # 95% Wilson interval of the implausible share, drawn at the boundary meaningful | implausible
+        k = c.get('implausible_data', 0)
+        if n:
+            z = 1.96
+            ph = k / n
+            d = 1 + z * z / n
+            cen = (ph + z * z / (2 * n)) / d
+            h = z * ((ph * (1 - ph) / n + z * z / (4 * n * n)) ** 0.5) / d
+            lo, hi = max(0.0, cen - h), min(1.0, cen + h)
+            x0 = 100 - 100 * ph
+            ax.errorbar([x0], [y - 0.41], xerr=[[100 * (hi - ph)], [100 * (ph - lo)]], fmt='none', ecolor=INK,
+                        elinewidth=0.7, capsize=1.5, capthick=0.7)
     ax.set_yticks(range(len(rows)))
     ax.set_yticklabels([r[0] for r in rows])
     ax.invert_yaxis()
