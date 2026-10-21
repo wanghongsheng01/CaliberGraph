@@ -115,6 +115,7 @@ The exact commands of every reported run (methods, ablations with `--ids ../data
 - **Validation (Stage 3):**
   - a second model (Claude Sonnet 5.5) on 200 items (`results/stage3/s3b/`);
   - two rounds of blind human annotation, 60 new items each: round 1 without and round 2 with facts from the real databases (`results/audit/human_validation*/`);
+  - a third round with three further annotators on 150 items, with facts from the real databases (`results/audit/human_validation_r3/`);
   - an annotator-free repair test (`results/stage3/x1_repair*`).
 - **Earlier hand checks.** The first author's two non-blind checks of 30 items each are in `results/audit/human_check*_filled.md`.
 - **Replay.** Every item has its `pair_id`, so each judgement can be replayed against the stored witness.

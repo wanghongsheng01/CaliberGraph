@@ -45,7 +45,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-## Stage-3 material (added for the PVLDB version)
+## Stage-3 material
 
 | Material | Where it appears here | Source | Licence |
 |---|---|---|---|
