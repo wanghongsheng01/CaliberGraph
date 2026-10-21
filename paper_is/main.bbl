@@ -405,4 +405,10 @@ W.~Ni, K.~Zhang, X.~Miao, X.~Zhao, Y.~Wu, Y.~Wang, J.~Yin, {ZeroED}: Hybrid
 \newblock \href {https://doi.org/10.1109/ICDE65448.2025.00234}
   {\path{doi:10.1109/ICDE65448.2025.00234}}.
 
+\bibitem{calibergraph_artifact}
+H.~Wang, D.~Deng, {CaliberGraph: Artifact of ``What Do Counterexamples Prove?
+  Certified, Data-Grounded Witnesses for Auditing Text-to-SQL Execution
+  Accuracy''}, Zenodo, version v1.0,
+  \url{https://doi.org/10.5281/zenodo.23522621} (2026).
+
 \end{thebibliography}
