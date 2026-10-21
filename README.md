@@ -2,6 +2,8 @@
 
 Artifacts of the paper *"What Do Counterexamples Prove? Certified, Data-Grounded Witnesses for Auditing Text-to-SQL Execution Accuracy"* (Hongsheng Wang, Dazhen Deng), submitted to the journal *Information Systems* (Elsevier).
 
+Archived on Zenodo: [https://doi.org/10.5281/zenodo.23522621](https://doi.org/10.5281/zenodo.23522621) (version v1.0, release tag `v1.0`). To cite the artifact, please cite this DOI together with the paper.
+
 The repository contains:
 - **Code:** CaliberGraph and CaliberGraph-R, the independent certifier, the data-profile miner and checker, and the baseline harnesses.
 - **Inputs:** the held-out split and the data profile of the BIRD databases.
@@ -9,7 +11,7 @@ The repository contains:
 - **Attribution study:** blind samples, both annotation passes, the adjudication and the authors' hand checks.
 - **Benchmark issues:** a list of BIRD questions to revisit.
 - **Pre-registrations and freeze records.**
-- **Stage 3:** human validation (two rounds), cross-model annotation, repair test, cross-check with Arcwise-Plat, replication on Spider 1.0 dev and on 13 BIRD Mini-Dev systems.
+- **Stage 3:** human validation (three rounds), cross-model annotation, repair test, cross-check with Arcwise-Plat, replication on Spider 1.0 dev and on 13 BIRD Mini-Dev systems.
 - **Scripts** that regenerate every number, table and figure of the paper.
 
 ## Layout
